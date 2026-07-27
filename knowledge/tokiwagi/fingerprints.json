@@ -1,7 +1,7 @@
 {
   "version": "1.0.0",
-  "gitCommitHash": "745b8c5037374df44552ce04208fcda863092cf1",
-  "generatedAt": "2026-07-01T07:29:48.183Z",
+  "gitCommitHash": "7824cfbd722a786697259daf9837876bf3f43031",
+  "generatedAt": "2026-07-27T02:40:28.730Z",
   "files": {
     ".dockerignore": {
       "filePath": ".dockerignore",
@@ -1470,12 +1470,12 @@
     },
     "prisma/schema.prisma": {
       "filePath": "prisma/schema.prisma",
-      "contentHash": "09390a6d973f80b68bcbc1ff83df34ca98fd0ff9e96c17b7b31c423e9f487bf4",
+      "contentHash": "594fd0804a28d0767cd52eed5659c43c745273c13b32ab8ab93b82fe7e3007b5",
       "functions": [],
       "classes": [],
       "imports": [],
       "exports": [],
-      "totalLines": 695,
+      "totalLines": 700,
       "hasStructuralAnalysis": false
     },
     "prisma/seed.ts": {
@@ -3196,7 +3196,7 @@
     },
     "src/components/BarcodeScanner/ScanStatusPanel/index.tsx": {
       "filePath": "src/components/BarcodeScanner/ScanStatusPanel/index.tsx",
-      "contentHash": "7e927e16b47a28b18bf2b3688ab9c9c7de071168e031579936ae230a9f9a261e",
+      "contentHash": "c02a75781adce3f96fd1a93e2141cd512feb9c1847fc4dca2d51ffd5c6b23bd2",
       "functions": [
         {
           "name": "isSuccessStatus",
@@ -3217,10 +3217,10 @@
         {
           "name": "ScanStatusPanel",
           "params": [
-            "{ status, errorMsg, result }"
+            "{ status, errorMsg, result, isV2 = false }"
           ],
           "exported": false,
-          "lineCount": 182
+          "lineCount": 222
         }
       ],
       "classes": [],
@@ -3318,12 +3318,12 @@
         }
       ],
       "exports": [],
-      "totalLines": 218,
+      "totalLines": 259,
       "hasStructuralAnalysis": true
     },
     "src/components/BarcodeScanner/barcode-scanner.hooks.ts": {
       "filePath": "src/components/BarcodeScanner/barcode-scanner.hooks.ts",
-      "contentHash": "8c78c0c2fe8d848d2ae903d0c14e7c75fa20ed94bdddb29ca535e0d496d6981c",
+      "contentHash": "d53c3810979ec1ff693b6243555800a9ea2504e294d3893eb835b4fa174c804f",
       "functions": [
         {
           "name": "useBarcodeScanner",
@@ -3331,7 +3331,7 @@
             "onScan"
           ],
           "exported": true,
-          "lineCount": 140
+          "lineCount": 134
         }
       ],
       "classes": [],
@@ -3348,12 +3348,12 @@
       "exports": [
         "useBarcodeScanner"
       ],
-      "totalLines": 143,
+      "totalLines": 137,
       "hasStructuralAnalysis": true
     },
     "src/components/BarcodeScanner/barcode-scanner.styles.tsx": {
       "filePath": "src/components/BarcodeScanner/barcode-scanner.styles.tsx",
-      "contentHash": "5c077f7b503d40f2cfded31afc3051f7e686f24bb899e3b28409effa33b09236",
+      "contentHash": "708b867f90b2248f712b7176b825ee572f47dafadebc99753aed27e57abd606f",
       "functions": [],
       "classes": [],
       "imports": [
@@ -3400,30 +3400,37 @@
         "DetailLabel",
         "DetailValue",
         "DetailExtendedPrices",
+        "TicketNoLabel",
+        "PartialCheckoutEntry",
+        "PartialCheckoutTime",
+        "PartialCheckoutQuantity",
+        "TotalAmountBlock",
         "ResetBtn"
       ],
-      "totalLines": 467,
+      "totalLines": 498,
       "hasStructuralAnalysis": true
     },
     "src/components/BarcodeScanner/barcode-scanner.types.ts": {
       "filePath": "src/components/BarcodeScanner/barcode-scanner.types.ts",
-      "contentHash": "76bda1e207d1a9ce281366ca2bf4b74020d81049b8865ad47ffdabc66b5b1e5e",
+      "contentHash": "709f98c5efa2e85ef5cbd3e3940e4c8582d3a502d4c28df3fed578efc7064889",
       "functions": [],
       "classes": [],
       "imports": [],
       "exports": [],
-      "totalLines": 30,
+      "totalLines": 42,
       "hasStructuralAnalysis": true
     },
     "src/components/BarcodeScanner/index.tsx": {
       "filePath": "src/components/BarcodeScanner/index.tsx",
-      "contentHash": "6afff392f88049fd11504a29f79eb98ceaf240bfd11afd951baf885be4fef445",
+      "contentHash": "175b12abb74c5da8a43d6da60415451923d6ce863d64793aa67d0970b11cef5c",
       "functions": [
         {
           "name": "BarcodeScanner",
-          "params": [],
+          "params": [
+            "{ isV2 = false }"
+          ],
           "exported": false,
-          "lineCount": 304
+          "lineCount": 326
         }
       ],
       "classes": [],
@@ -3500,6 +3507,12 @@
           ]
         },
         {
+          "source": "constants/common",
+          "specifiers": [
+            "SCAN_RESULT_DISPLAY_SECONDS"
+          ]
+        },
+        {
           "source": "./ScanStatusPanel",
           "specifiers": [
             "ScanStatusPanel"
@@ -3527,7 +3540,7 @@
         }
       ],
       "exports": [],
-      "totalLines": 328,
+      "totalLines": 351,
       "hasStructuralAnalysis": true
     },
     "src/components/BookingQueue/Calling.tsx": {
@@ -10280,7 +10293,7 @@
     },
     "src/components/Tenant/CreateOrUpdateTenant/index.tsx": {
       "filePath": "src/components/Tenant/CreateOrUpdateTenant/index.tsx",
-      "contentHash": "3fa643eb5d9c4220edc4765cf85d661746dc512d922ade5f7f2a65529262e6b8",
+      "contentHash": "667241dce400e4f08815844754dbdb8c056c599aa6c6ee37dea08130561b4f0b",
       "functions": [
         {
           "name": "CreateOrUpdateTenant",
@@ -10288,7 +10301,7 @@
             "{ tenant, onCancel, onSuccess }"
           ],
           "exported": true,
-          "lineCount": 613
+          "lineCount": 614
         }
       ],
       "classes": [],
@@ -10475,7 +10488,7 @@
       "exports": [
         "CreateOrUpdateTenant"
       ],
-      "totalLines": 680,
+      "totalLines": 681,
       "hasStructuralAnalysis": true
     },
     "src/components/Tenant/ViewTenant/index.tsx": {
@@ -10648,17 +10661,17 @@
     },
     "src/components/TenantVacancies/Vacancy.module.scss": {
       "filePath": "src/components/TenantVacancies/Vacancy.module.scss",
-      "contentHash": "c98d7d763b41c645718419c204060338ec11f1518f1bf84c90a96dd0ee02c72f",
+      "contentHash": "3972f8d8559f96566a049253437be91befba2b175865c39b82829f9859dea9b8",
       "functions": [],
       "classes": [],
       "imports": [],
       "exports": [],
-      "totalLines": 29,
+      "totalLines": 32,
       "hasStructuralAnalysis": false
     },
     "src/components/TenantVacancies/Vacancy.tsx": {
       "filePath": "src/components/TenantVacancies/Vacancy.tsx",
-      "contentHash": "389ba2dd1f0a49c164e3fcfe0ac389f14d3abd2fde31138de7c2132d5e041204",
+      "contentHash": "efc11be270f66684652b28ef7b74e8d56381ed0a5d9df0c54fb937886beab61d",
       "functions": [
         {
           "name": "VacancyItem",
@@ -10666,7 +10679,7 @@
             "{ vacancy, onShowVacancyDetail, isActive }"
           ],
           "exported": true,
-          "lineCount": 45
+          "lineCount": 58
         }
       ],
       "classes": [],
@@ -10705,30 +10718,30 @@
       "exports": [
         "VacancyItem"
       ],
-      "totalLines": 60,
+      "totalLines": 75,
       "hasStructuralAnalysis": true
     },
     "src/components/TenantVacancies/index.module.scss": {
       "filePath": "src/components/TenantVacancies/index.module.scss",
-      "contentHash": "7a83b97e7abe4246cdd028689bd85ff0249554d67917ca81036135dc18dea20f",
+      "contentHash": "ed0e1cd2935e4273d5e2418e2305d04b9d0f14cbd1cc38b115237be856616362",
       "functions": [],
       "classes": [],
       "imports": [],
       "exports": [],
-      "totalLines": 28,
+      "totalLines": 97,
       "hasStructuralAnalysis": false
     },
     "src/components/TenantVacancies/index.tsx": {
       "filePath": "src/components/TenantVacancies/index.tsx",
-      "contentHash": "03da88eb350d30fe2c6fb167bc44e45ce7a439720a6c31c775d3b80d2e703c1f",
+      "contentHash": "93739802e1b47ba59532aa083393c8fdfbf4d06a31f36bcaf45e215a081eda50",
       "functions": [
         {
           "name": "TenantVacancies",
           "params": [
-            "{ oneDay, useMonthlyTicketRef }"
+            "{ oneDay, useMonthlyTicketRef, bookingDays }"
           ],
           "exported": true,
-          "lineCount": 179
+          "lineCount": 208
         }
       ],
       "classes": [],
@@ -10834,6 +10847,14 @@
           ]
         },
         {
+          "source": "constants/booking",
+          "specifiers": [
+            "DEFAULT_ONLINE_BOOKING_ADVANCE_DAYS",
+            "ONLINE_BOOKING_ADVANCE_DAYS",
+            "shouldShowScrollNote"
+          ]
+        },
+        {
           "source": "./index.module.scss",
           "specifiers": [
             "styles"
@@ -10849,7 +10870,7 @@
       "exports": [
         "TenantVacancies"
       ],
-      "totalLines": 210,
+      "totalLines": 241,
       "hasStructuralAnalysis": true
     },
     "src/components/Ticket/CreateOrEditTicketStepper/ChooseTicketTypeRadioButtonsField/index.tsx": {
@@ -12183,7 +12204,7 @@
     },
     "src/components/TopPage/CheckInOutButtons/BookingListModal.tsx": {
       "filePath": "src/components/TopPage/CheckInOutButtons/BookingListModal.tsx",
-      "contentHash": "d3e73b3701abbc1cb434cea4e974f23810016e09291751a1c4fc424831f37c0a",
+      "contentHash": "f72a9666c397eb104014e8547f2130d543d2c11534b0ed931a91d6c2e35a8fbc",
       "functions": [
         {
           "name": "setDefaultCollapsedItem",
@@ -12200,7 +12221,7 @@
             "{ bookings, variant = \"checkin\", filterBarCode, onDismiss }"
           ],
           "exported": true,
-          "lineCount": 220
+          "lineCount": 231
         }
       ],
       "classes": [],
@@ -12232,6 +12253,7 @@
         {
           "source": "react",
           "specifiers": [
+            "useEffect",
             "useState"
           ]
         },
@@ -12240,6 +12262,12 @@
           "specifiers": [
             "BookingStatus",
             "PaymentStatus"
+          ]
+        },
+        {
+          "source": "@mui/icons-material/Login",
+          "specifiers": [
+            "LoginIcon"
           ]
         },
         {
@@ -12290,7 +12318,7 @@
       "exports": [
         "BookingListModal"
       ],
-      "totalLines": 264,
+      "totalLines": 276,
       "hasStructuralAnalysis": true
     },
     "src/components/TopPage/CheckInOutButtons/index.tsx": {
@@ -18102,7 +18130,7 @@
     },
     "src/components/common/UserLayout/Breadcrumb/index.tsx": {
       "filePath": "src/components/common/UserLayout/Breadcrumb/index.tsx",
-      "contentHash": "d5ca301a08f97e4c6f8de342e1205993a383f62c923a69f7a6335e86d1e0ac32",
+      "contentHash": "968ab5d839a0eaf6c861260362564973c16c64e19baf238cf5c6a71d00ffeae8",
       "functions": [
         {
           "name": "BreadcrumbLink",
@@ -18115,7 +18143,7 @@
         {
           "name": "Breadcrumb",
           "params": [
-            "{ title, link }"
+            "{ title }"
           ],
           "exported": false,
           "lineCount": 18
@@ -18176,15 +18204,15 @@
     },
     "src/components/common/UserLayout/UserPageHeading/index.tsx": {
       "filePath": "src/components/common/UserLayout/UserPageHeading/index.tsx",
-      "contentHash": "d234d58eaf1f9a5e605a656de49d90fc58b08302f9f4ccfe2280eda0116d48bb",
+      "contentHash": "b466ccf3ecd42e56844e3526085307bd91ba089b1704d85965da98c486a438d2",
       "functions": [
         {
           "name": "UserPageHeading",
           "params": [
-            "{ heading, title, link }"
+            "{ heading, title, link, breadcrumbItems }"
           ],
           "exported": true,
-          "lineCount": 20
+          "lineCount": 24
         }
       ],
       "classes": [],
@@ -18202,6 +18230,13 @@
           ]
         },
         {
+          "source": "../BreadcrumbList",
+          "specifiers": [
+            "BreadcrumbList",
+            "BreadcrumbItem"
+          ]
+        },
+        {
           "source": "./index.module.scss",
           "specifiers": [
             "styles"
@@ -18211,7 +18246,7 @@
       "exports": [
         "UserPageHeading"
       ],
-      "totalLines": 32,
+      "totalLines": 40,
       "hasStructuralAnalysis": true
     },
     "src/components/common/UserLayout/UserSideBarMobile/index.tsx": {
@@ -18407,15 +18442,15 @@
     },
     "src/components/common/UserLayout/index.tsx": {
       "filePath": "src/components/common/UserLayout/index.tsx",
-      "contentHash": "1987e48060c193ad003d7319cde8fcfd471976f51ff72e0c4f4e45187c7c4b58",
+      "contentHash": "a1e89ef75a02a4a84e359e0b5b0956d1b4616624ba35f177310ada1c30732ce1",
       "functions": [
         {
           "name": "UserLayout",
           "params": [
-            "{ children, heading, title, link }"
+            "{ children, heading, title, link, breadcrumbItems }"
           ],
           "exported": false,
-          "lineCount": 25
+          "lineCount": 30
         }
       ],
       "classes": [],
@@ -18480,10 +18515,16 @@
           "specifiers": [
             "UserPageHeading"
           ]
+        },
+        {
+          "source": "./BreadcrumbList",
+          "specifiers": [
+            "BreadcrumbItem"
+          ]
         }
       ],
       "exports": [],
-      "totalLines": 49,
+      "totalLines": 56,
       "hasStructuralAnalysis": true
     },
     "src/components/common/WarningDialog/index.tsx": {
@@ -18624,7 +18665,7 @@
     },
     "src/constants/common.ts": {
       "filePath": "src/constants/common.ts",
-      "contentHash": "97379ac9669262dcb424e4e215b1bf4a97297f867dee987d6e490bd265fc7431",
+      "contentHash": "be9c3e4d70befe36c5ed0ceefa5832bf02ae1d246ad65e9ac21cf3fea0cec584",
       "functions": [],
       "classes": [],
       "imports": [
@@ -18654,6 +18695,7 @@
         "QR_REDIRECT_QUERY_KEY",
         "CHECKOUT_BARCODE_QUERY_KEY",
         "CHECK_IN_OUT_TENANT_VERSION",
+        "SCAN_RESULT_DISPLAY_SECONDS",
         "NO_BOOKING_NOTIFICATION_MESSAGE",
         "GO_TO_SAME_DAY_BOOKING_LABEL",
         "MINUTES",
@@ -18705,7 +18747,7 @@
         "DEFAULT_TOTAL_BOOKINGS_PROCESS_IN_BATCH",
         "LIMIT_IP_ACCESSING_ROUTES"
       ],
-      "totalLines": 227,
+      "totalLines": 226,
       "hasStructuralAnalysis": true
     },
     "src/constants/csv.ts": {
@@ -20327,7 +20369,7 @@
     },
     "src/libs/validation/schemas.ts": {
       "filePath": "src/libs/validation/schemas.ts",
-      "contentHash": "7dde551a19280241e691f0d0124cb74f10e1e6a428ca5e8cd655a32258d431c0",
+      "contentHash": "a0ef977ae5d27b7bc484389c003a6c4425852e0e11835c147e40a9ca569d6a9a",
       "functions": [],
       "classes": [],
       "imports": [
@@ -20530,7 +20572,7 @@
     },
     "src/middleware.ts": {
       "filePath": "src/middleware.ts",
-      "contentHash": "7b054ca1f5804df6e9f76f87a1d0054f868a67348fe21dd0e62ee6c3738ead71",
+      "contentHash": "314e0cf9f6966eba70b4adaa450be2607f2746d48c28f774129ca7fc87a14eca",
       "functions": [
         {
           "name": "middleware",
@@ -20539,6 +20581,16 @@
           ],
           "exported": true,
           "lineCount": 14
+        },
+        {
+          "name": "isAdminCredentialsSignIn",
+          "params": [
+            "req",
+            "pathname"
+          ],
+          "returnType": "Promise<boolean>",
+          "exported": false,
+          "lineCount": 9
         },
         {
           "name": "buildForbiddenUrl",
@@ -20655,7 +20707,7 @@
         "middleware",
         "config"
       ],
-      "totalLines": 185,
+      "totalLines": 200,
       "hasStructuralAnalysis": true
     },
     "src/models/Booking.ts": {
@@ -21211,13 +21263,13 @@
     },
     "src/pages/admin/barcode-scanner.tsx": {
       "filePath": "src/pages/admin/barcode-scanner.tsx",
-      "contentHash": "c55d1c83413f3608345554040736419d92e572927e8c799169f708022d9d1c84",
+      "contentHash": "dd3c17ec54ddf928b63391ef91524dbb9e10345991c94bf4aecfaba2bda8487b",
       "functions": [
         {
           "name": "BarcodeScannerPage",
           "params": [],
           "exported": false,
-          "lineCount": 79
+          "lineCount": 83
         }
       ],
       "classes": [],
@@ -21290,7 +21342,7 @@
         }
       ],
       "exports": [],
-      "totalLines": 104,
+      "totalLines": 108,
       "hasStructuralAnalysis": true
     },
     "src/pages/admin/booking-management/details/[id].tsx": {
@@ -23861,7 +23913,7 @@
     },
     "src/pages/admin/revenue-management.tsx": {
       "filePath": "src/pages/admin/revenue-management.tsx",
-      "contentHash": "9d425a62c5516d0482fa687840dbdfbf8c134126fb5300ba6dc256e55ecba4da",
+      "contentHash": "4e9a836fa8be1894f9ab041989ca48caa06609c6982ddd1d0d21475c5d421772",
       "functions": [
         {
           "name": "RevenueManagement",
@@ -28013,7 +28065,7 @@
     },
     "src/pages/api/admin/bookings/cancel/[id].ts": {
       "filePath": "src/pages/api/admin/bookings/cancel/[id].ts",
-      "contentHash": "1efef338a52ceed19b142c7aef016cfa158bd255344bf6dd06b22d5464cffcfc",
+      "contentHash": "936a91e0abcfc5c4180236aa618ae1fcfcc5c98c58fd6a3a27dae10e8ee60fb7",
       "functions": [],
       "classes": [],
       "imports": [
@@ -28145,10 +28197,24 @@
             "formatEmailTime",
             "getDateOneYearAgo"
           ]
+        },
+        {
+          "source": "utils/server/sse-hub",
+          "specifiers": [
+            "registerSseNotification",
+            "getSseCancelAndRefundSuccessPayload"
+          ]
+        },
+        {
+          "source": "utils/server/smaregiSync",
+          "specifiers": [
+            "cancelConfirmedTransactionForBooking",
+            "enabledTenantSmaregiSetting"
+          ]
         }
       ],
       "exports": [],
-      "totalLines": 119,
+      "totalLines": 136,
       "hasStructuralAnalysis": true
     },
     "src/pages/api/admin/bookings/count.ts": {
@@ -28629,7 +28695,7 @@
     },
     "src/pages/api/admin/bookings/rollback-scan.ts": {
       "filePath": "src/pages/api/admin/bookings/rollback-scan.ts",
-      "contentHash": "7c3ee17347b0667072b6cb82ea4e4d3fa96c15d0dfe52cc112cb97e494cc45f9",
+      "contentHash": "11dfddcfc5c5c09661c5967595d70e37cf97920ca7b1eb3790555ffc59374a76",
       "functions": [
         {
           "name": "checkIsFirstTimeCheckedOut",
@@ -28653,7 +28719,7 @@
             "bookings"
           ],
           "exported": false,
-          "lineCount": 67
+          "lineCount": 77
         },
         {
           "name": "rollbackCheckedInBookings",
@@ -28661,7 +28727,7 @@
             "bookings"
           ],
           "exported": false,
-          "lineCount": 58
+          "lineCount": 62
         },
         {
           "name": "getBookingByIds",
@@ -28677,7 +28743,7 @@
             "b"
           ],
           "exported": false,
-          "lineCount": 12
+          "lineCount": 15
         }
       ],
       "classes": [],
@@ -28778,6 +28844,7 @@
         {
           "source": "utils/booking",
           "specifiers": [
+            "attachTicketNumbering",
             "countAdultQuantityInPartialCheckout",
             "countChildQuantityInPartialCheckout",
             "isHourlyBooking",
@@ -28799,37 +28866,25 @@
         {
           "source": "utils/server/smaregiSync",
           "specifiers": [
-            "rollbackBookingFromSmaregi"
+            "rollbackSmaregiForCheckoutCancel"
+          ]
+        },
+        {
+          "source": "utils/server/sse-hub",
+          "specifiers": [
+            "getSseCancelAndRefundSuccessPayload",
+            "registerSseNotification"
           ]
         }
       ],
       "exports": [],
-      "totalLines": 358,
+      "totalLines": 429,
       "hasStructuralAnalysis": true
     },
     "src/pages/api/admin/bookings/scan.ts": {
       "filePath": "src/pages/api/admin/bookings/scan.ts",
-      "contentHash": "4e42ac085b072b2b3afd653bd519a5e710a626250bc71226068c9d3be669a29b",
+      "contentHash": "2bc1c7c275ec188deba20ff631f1477facd17ac65f011ffe8888b9ddc8ab0bfe",
       "functions": [
-        {
-          "name": "getSseScanErrorPayload",
-          "params": [
-            "message"
-          ],
-          "returnType": "SsePayload",
-          "exported": false,
-          "lineCount": 3
-        },
-        {
-          "name": "getSseScanSuccessPayload",
-          "params": [
-            "message",
-            "extra"
-          ],
-          "returnType": "SsePayload",
-          "exported": false,
-          "lineCount": 14
-        },
         {
           "name": "ticketUseInDayCondition",
           "params": [],
@@ -28880,10 +28935,11 @@
             "bookings",
             "checkedOutAt",
             "tx",
-            "createdTemporaryHeadIds"
+            "createdTemporaryHeadIds",
+            "createdConfirmedHeadIds"
           ],
           "exported": false,
-          "lineCount": 209
+          "lineCount": 232
         },
         {
           "name": "formatBookingResult",
@@ -28891,15 +28947,24 @@
             "b"
           ],
           "exported": false,
-          "lineCount": 13
+          "lineCount": 16
+        },
+        {
+          "name": "buildPartialCheckoutTimeline",
+          "params": [
+            "booking"
+          ],
+          "exported": false,
+          "lineCount": 19
         },
         {
           "name": "formatCheckedOutBookings",
           "params": [
-            "checkedOutBookings"
+            "checkedOutBookings",
+            "isV2Tenant"
           ],
           "exported": false,
-          "lineCount": 23
+          "lineCount": 57
         }
       ],
       "classes": [],
@@ -28994,7 +29059,8 @@
             "getDateOneYearAgo",
             "calculateStayingDurationWithoutParsing",
             "truncateToMinute",
-            "newDateKeepLocalTime"
+            "newDateKeepLocalTime",
+            "isAfterTime"
           ]
         },
         {
@@ -29052,9 +29118,14 @@
         {
           "source": "utils/server/smaregiSync",
           "specifiers": [
+            "cancelConfirmedTransactionsAfterRollback",
+            "ConfirmedTransactionRequest",
             "createSmaregiTemporaryTransaction",
-            "generateTerminalTranId",
-            "SmaregiTemporaryGroupItem"
+            "enabledTenantSmaregiSetting",
+            "persistSmaregiTemporaryTransaction",
+            "resolvePrepaidChargeLines",
+            "SmaregiTemporaryGroupItem",
+            "syncConfirmedTransactionsForPrepaidBookings"
           ]
         },
         {
@@ -29066,12 +29137,19 @@
         {
           "source": "utils/booking",
           "specifiers": [
+            "attachTicketNumbering",
             "calculateBookingExtendedPrices",
             "calculateBookingsPriceMap",
             "calculateTotalBookingsPayAmount",
             "getFormattedTotalAmount",
             "isHourlyTicket",
             "isHourlyTimesLimitTicket"
+          ]
+        },
+        {
+          "source": "utils/common",
+          "specifiers": [
+            "formatThousands"
           ]
         },
         {
@@ -29083,9 +29161,8 @@
         {
           "source": "utils/server/sse-hub",
           "specifiers": [
-            "SseEvent",
-            "SseLogLevel",
-            "SsePayload",
+            "getSseScanErrorPayload",
+            "getSseScanSuccessPayload",
             "registerSseNotification"
           ]
         },
@@ -29117,12 +29194,12 @@
         }
       ],
       "exports": [],
-      "totalLines": 736,
+      "totalLines": 820,
       "hasStructuralAnalysis": true
     },
     "src/pages/api/admin/bookings/status.ts": {
       "filePath": "src/pages/api/admin/bookings/status.ts",
-      "contentHash": "ce471c852b951c670408cfa2cd7ed2da944035ff925024037cbb3ed6a86b9a03",
+      "contentHash": "555c6384ef9b15c0aa7850bc86963dc0ccd7e2c75c23f7f5a07655db0028a473",
       "functions": [
         {
           "name": "processRefund",
@@ -29266,10 +29343,24 @@
           "specifiers": [
             "Booking"
           ]
+        },
+        {
+          "source": "utils/server/sse-hub",
+          "specifiers": [
+            "getSseCancelAndRefundSuccessPayload",
+            "registerSseNotification"
+          ]
+        },
+        {
+          "source": "utils/server/smaregiSync",
+          "specifiers": [
+            "cancelConfirmedTransactionForBooking",
+            "enabledTenantSmaregiSetting"
+          ]
         }
       ],
       "exports": [],
-      "totalLines": 206,
+      "totalLines": 215,
       "hasStructuralAnalysis": true
     },
     "src/pages/api/admin/bookings/ticket-booking-schedules/[id].ts": {
@@ -37663,7 +37754,7 @@
     },
     "src/pages/api/user/bookings/[id]/index.ts": {
       "filePath": "src/pages/api/user/bookings/[id]/index.ts",
-      "contentHash": "1ad688e02eadbb4de04bae9df143875631de3ca8dc361958441a07bdaced42db",
+      "contentHash": "dfb2f0764740099977cd279b9c8daece344e3dfc8b538eb78f557757f67656c7",
       "functions": [
         {
           "name": "updateBookingToDB",
@@ -37811,6 +37902,7 @@
           "source": "utils/server/booking",
           "specifiers": [
             "calcTotalAmount",
+            "getLatestBarcodeByBookingBarCode",
             "getPaymentInfoAfterUpdate"
           ]
         },
@@ -37836,7 +37928,7 @@
         }
       ],
       "exports": [],
-      "totalLines": 244,
+      "totalLines": 250,
       "hasStructuralAnalysis": true
     },
     "src/pages/api/user/bookings/[id]/payment-status.ts": {
@@ -38066,17 +38158,8 @@
     },
     "src/pages/api/user/bookings/index.ts": {
       "filePath": "src/pages/api/user/bookings/index.ts",
-      "contentHash": "7096f8b89c2aff90d717942c50bbe4eae26f2e1ffb7f15c332722a5842ffaa40",
-      "functions": [
-        {
-          "name": "getLatestBarcodeByBookingBarCode",
-          "params": [
-            "bookings"
-          ],
-          "exported": false,
-          "lineCount": 20
-        }
-      ],
+      "contentHash": "20d2c597572808abab6df15cb4c1b3d8cebf6e366efbcecd2d18d005196f2ee7",
+      "functions": [],
       "classes": [],
       "imports": [
         {
@@ -38095,9 +38178,7 @@
         {
           "source": "@prisma/client",
           "specifiers": [
-            "Booking",
-            "PaymentStatus",
-            "SmaregiTemporaryStatus"
+            "PaymentStatus"
           ]
         },
         {
@@ -38143,10 +38224,16 @@
           "specifiers": [
             "attachFormattedTotalAmount"
           ]
+        },
+        {
+          "source": "utils/server/booking",
+          "specifiers": [
+            "getLatestBarcodeByBookingBarCode"
+          ]
         }
       ],
       "exports": [],
-      "totalLines": 95,
+      "totalLines": 75,
       "hasStructuralAnalysis": true
     },
     "src/pages/api/user/bookings/last-booking.ts": {
@@ -40262,13 +40349,13 @@
     },
     "src/pages/index.tsx": {
       "filePath": "src/pages/index.tsx",
-      "contentHash": "2049c91519730ebe97b3b7ebd2d4e64ffe8514e798eb1935f1191ce659953a26",
+      "contentHash": "1f93fbd3624dd364a47df10aa8a852b5695bce9cd61edf3a573964823b259029",
       "functions": [
         {
           "name": "Index",
           "params": [],
           "exported": true,
-          "lineCount": 407
+          "lineCount": 408
         }
       ],
       "classes": [],
@@ -40409,7 +40496,7 @@
       "exports": [
         "Index"
       ],
-      "totalLines": 431,
+      "totalLines": 432,
       "hasStructuralAnalysis": true
     },
     "src/pages/maintenance.tsx": {
@@ -41708,13 +41795,13 @@
     },
     "src/pages/user/my-page/booking-history/[id].tsx": {
       "filePath": "src/pages/user/my-page/booking-history/[id].tsx",
-      "contentHash": "03d5aca180687cb79a4b0b92d28cd9d7e7734e72af7fd0f5e2d8462c696ef6e7",
+      "contentHash": "007a73e7b1d4caec85000820dc8c9ea5db1fff3801433cc0b4b62f1262066076",
       "functions": [
         {
           "name": "BookingDetail",
           "params": [],
           "exported": false,
-          "lineCount": 918
+          "lineCount": 787
         }
       ],
       "classes": [],
@@ -41773,12 +41860,6 @@
           "source": "lodash",
           "specifiers": [
             "map"
-          ]
-        },
-        {
-          "source": "components/common/PaymentStatusSlider",
-          "specifiers": [
-            "PaymentStatusSlider"
           ]
         },
         {
@@ -41917,6 +41998,12 @@
           ]
         },
         {
+          "source": "components/User/SmaregiBarcodeSection",
+          "specifiers": [
+            "SmaregiBarcodeSection"
+          ]
+        },
+        {
           "source": "constants/messages",
           "specifiers": [
             "MESSAGES"
@@ -41940,7 +42027,6 @@
         {
           "source": "models/Booking",
           "specifiers": [
-            "BookingSmaregiQRCodeInfo",
             "SmaregiQRCodes"
           ]
         },
@@ -41952,18 +42038,18 @@
         }
       ],
       "exports": [],
-      "totalLines": 980,
+      "totalLines": 849,
       "hasStructuralAnalysis": true
     },
     "src/pages/user/my-page/booking-history/cancel-success.tsx": {
       "filePath": "src/pages/user/my-page/booking-history/cancel-success.tsx",
-      "contentHash": "4ad5e62720f8e97656057ebcedba2ae33e75dc6ac0b17acfb20814b327c9f114",
+      "contentHash": "a6d5455bd0bb462cd3d9af421ab583875925f35eb6738727c7c2a15caf24fb02",
       "functions": [
         {
           "name": "BookingHistory",
           "params": [],
           "exported": false,
-          "lineCount": 24
+          "lineCount": 38
         }
       ],
       "classes": [],
@@ -42006,7 +42092,7 @@
         }
       ],
       "exports": [],
-      "totalLines": 35,
+      "totalLines": 49,
       "hasStructuralAnalysis": true
     },
     "src/pages/user/my-page/booking-history/index.module.scss": {
@@ -42021,13 +42107,13 @@
     },
     "src/pages/user/my-page/booking-history/index.tsx": {
       "filePath": "src/pages/user/my-page/booking-history/index.tsx",
-      "contentHash": "268c7ac93ea413f663ecc28d6240b14f2376d1d9ccc2592f7d5e627bd1c37051",
+      "contentHash": "993238159370fab17b81ed47b0fbe39235a870e5a5fbee48f7b2091d66ca7359",
       "functions": [
         {
           "name": "BookingHistory",
           "params": [],
           "exported": false,
-          "lineCount": 250
+          "lineCount": 256
         }
       ],
       "classes": [],
@@ -42175,18 +42261,18 @@
         }
       ],
       "exports": [],
-      "totalLines": 277,
+      "totalLines": 283,
       "hasStructuralAnalysis": true
     },
     "src/pages/user/my-page/booking-history/partial-checkout/[id].tsx": {
       "filePath": "src/pages/user/my-page/booking-history/partial-checkout/[id].tsx",
-      "contentHash": "e4fe72d549361075e8a0f591971cbbfe416c7807c1d71bd7ed7bd71994ee1851",
+      "contentHash": "945c1d1fa8c03c521cd4f33b26588e6f7c7688d23ead6749015dae215fb394dc",
       "functions": [
         {
           "name": "PartialCheckOutBooking",
           "params": [],
           "exported": false,
-          "lineCount": 135
+          "lineCount": 150
         },
         {
           "name": "renderHeader",
@@ -42321,18 +42407,18 @@
         }
       ],
       "exports": [],
-      "totalLines": 172,
+      "totalLines": 187,
       "hasStructuralAnalysis": true
     },
     "src/pages/user/my-page/booking-history/partial-checkout/success.tsx": {
       "filePath": "src/pages/user/my-page/booking-history/partial-checkout/success.tsx",
-      "contentHash": "c8ed9f9c8f98dd17975c31b7f3e98d469a152109c75633e9119c9add9e184846",
+      "contentHash": "95d03303dc8afab82c5812d0b1caab444d7ff9fc97224a3f24c642f373b18eb9",
       "functions": [
         {
           "name": "PartialCheckoutBookingSuccessPage",
           "params": [],
           "exported": false,
-          "lineCount": 28
+          "lineCount": 41
         }
       ],
       "classes": [],
@@ -42375,7 +42461,7 @@
         }
       ],
       "exports": [],
-      "totalLines": 39,
+      "totalLines": 52,
       "hasStructuralAnalysis": true
     },
     "src/pages/user/my-page/booking-history/update/[id].module.scss": {
@@ -42390,13 +42476,13 @@
     },
     "src/pages/user/my-page/booking-history/update/[id].tsx": {
       "filePath": "src/pages/user/my-page/booking-history/update/[id].tsx",
-      "contentHash": "b28dcdd3f0c8e4671a8b531bba71aaea7cb98f966f51fa1b13ef7945568caade",
+      "contentHash": "12f1fc936ba592cca502309f25ad6d69c0fdec3d3c033b319b9cb7b626b9057a",
       "functions": [
         {
           "name": "BookingDetail",
           "params": [],
           "exported": false,
-          "lineCount": 578
+          "lineCount": 593
         },
         {
           "name": "renderHeader",
@@ -42709,22 +42795,28 @@
         }
       ],
       "exports": [],
-      "totalLines": 660,
+      "totalLines": 675,
       "hasStructuralAnalysis": true
     },
     "src/pages/user/my-page/booking-history/update/completed/index.tsx": {
       "filePath": "src/pages/user/my-page/booking-history/update/completed/index.tsx",
-      "contentHash": "c9fef336a3d8f2cc88a5714569c9d12a1fbde15ec503a0549ace258aed888f94",
+      "contentHash": "9d06a417c14918434f1e6c4effa204946045e0cc11952b2d2720582e7343b972",
       "functions": [
         {
           "name": "BookingDetail",
           "params": [],
           "exported": false,
-          "lineCount": 20
+          "lineCount": 35
         }
       ],
       "classes": [],
       "imports": [
+        {
+          "source": "next/router",
+          "specifiers": [
+            "useRouter"
+          ]
+        },
         {
           "source": "libs/hoc/withAuthentication",
           "specifiers": [
@@ -42757,7 +42849,7 @@
         }
       ],
       "exports": [],
-      "totalLines": 29,
+      "totalLines": 46,
       "hasStructuralAnalysis": true
     },
     "src/pages/user/my-page/booking-history/update/index.tsx": {
@@ -42800,13 +42892,13 @@
     },
     "src/pages/user/my-page/delete-account.tsx": {
       "filePath": "src/pages/user/my-page/delete-account.tsx",
-      "contentHash": "fa381337fbee1560c23daa6cdab11284abb5ce54259262f6d8f1a870448886fd",
+      "contentHash": "ce7e2f0f5ff77b43b12acbd5e086c2184456b2e179eccea21961fba3953b1818",
       "functions": [
         {
           "name": "StatusMonthlyTicket",
           "params": [],
           "exported": true,
-          "lineCount": 89
+          "lineCount": 95
         }
       ],
       "classes": [],
@@ -42864,18 +42956,18 @@
       "exports": [
         "StatusMonthlyTicket"
       ],
-      "totalLines": 105,
+      "totalLines": 111,
       "hasStructuralAnalysis": true
     },
     "src/pages/user/my-page/favorite-tenants.tsx": {
       "filePath": "src/pages/user/my-page/favorite-tenants.tsx",
-      "contentHash": "f33fd3670499929ed5c50938713bd05de94a3433d2c5da6528694c62a1e497cb",
+      "contentHash": "93d09b8d79e6e4a9c8170d7028304f8c178e595a5d216e80e8f06231b02c4b78",
       "functions": [
         {
           "name": "FavoriteTenants",
           "params": [],
           "exported": true,
-          "lineCount": 117
+          "lineCount": 123
         }
       ],
       "classes": [],
@@ -42957,6 +43049,12 @@
           ]
         },
         {
+          "source": "constants/route",
+          "specifiers": [
+            "ROUTE"
+          ]
+        },
+        {
           "source": "models/Vacancy",
           "specifiers": [
             "TenantVacancy"
@@ -42966,7 +43064,7 @@
       "exports": [
         "FavoriteTenants"
       ],
-      "totalLines": 135,
+      "totalLines": 142,
       "hasStructuralAnalysis": true
     },
     "src/pages/user/my-page/index.tsx": {
@@ -43038,13 +43136,13 @@
     },
     "src/pages/user/my-page/monthly-ticket-status.tsx": {
       "filePath": "src/pages/user/my-page/monthly-ticket-status.tsx",
-      "contentHash": "d1478653deb90cc1ce979256b427cb2d407a8ae876ada0047863a1f95ff5ea76",
+      "contentHash": "6b67396c8d055bf61a5aa44513281444abdc245f23951cf54470a96a564420c8",
       "functions": [
         {
           "name": "StatusMonthlyTicket",
           "params": [],
           "exported": true,
-          "lineCount": 126
+          "lineCount": 132
         }
       ],
       "classes": [],
@@ -43143,7 +43241,7 @@
       "exports": [
         "StatusMonthlyTicket"
       ],
-      "totalLines": 145,
+      "totalLines": 151,
       "hasStructuralAnalysis": true
     },
     "src/pages/user/my-page/personal-info/change-credit-card/delete.tsx": {
@@ -43192,13 +43290,13 @@
     },
     "src/pages/user/my-page/personal-info/change-credit-card/index.tsx": {
       "filePath": "src/pages/user/my-page/personal-info/change-credit-card/index.tsx",
-      "contentHash": "9f83993f487f98ad0352a54474c028f2b00a7ba8cc4bcde878bad3bdf8e1e4d3",
+      "contentHash": "005509e7fadab00d5c9aa3dc758dfa6a38f18722b291ef1df5fae169e602302c",
       "functions": [
         {
           "name": "ChangeCreditCard",
           "params": [],
           "exported": false,
-          "lineCount": 11
+          "lineCount": 19
         }
       ],
       "classes": [],
@@ -43222,6 +43320,12 @@
           ]
         },
         {
+          "source": "constants/route",
+          "specifiers": [
+            "ROUTE"
+          ]
+        },
+        {
           "source": "libs/hoc/withAuthentication",
           "specifiers": [
             "withAuthentication"
@@ -43229,7 +43333,7 @@
         }
       ],
       "exports": [],
-      "totalLines": 19,
+      "totalLines": 28,
       "hasStructuralAnalysis": true
     },
     "src/pages/user/my-page/personal-info/change-credit-card/success.tsx": {
@@ -43288,13 +43392,13 @@
     },
     "src/pages/user/my-page/personal-info/change-password.tsx": {
       "filePath": "src/pages/user/my-page/personal-info/change-password.tsx",
-      "contentHash": "04d3cbe2e18a02651a5c13db111197561698f57fe433866d97187944c32f2aeb",
+      "contentHash": "5e63ded12774e2ba354c7fe782f5336a8127bfb6d5acc23949950a27ca8dc4c3",
       "functions": [
         {
           "name": "ChangePassword",
           "params": [],
           "exported": false,
-          "lineCount": 119
+          "lineCount": 127
         }
       ],
       "classes": [],
@@ -43410,18 +43514,18 @@
         }
       ],
       "exports": [],
-      "totalLines": 150,
+      "totalLines": 158,
       "hasStructuralAnalysis": true
     },
     "src/pages/user/my-page/personal-info/index.tsx": {
       "filePath": "src/pages/user/my-page/personal-info/index.tsx",
-      "contentHash": "84117d1d87ed9b3dd5a26494e21a13f28de3f9dd1a0ac76281b7795c9ab105d8",
+      "contentHash": "40cda8ddb93235692967102d0fb8bfa7c4efa4f7f9e0bcee87b563c6709ac20b",
       "functions": [
         {
           "name": "PersonalInfo",
           "params": [],
           "exported": false,
-          "lineCount": 158
+          "lineCount": 164
         }
       ],
       "classes": [],
@@ -43529,18 +43633,18 @@
         }
       ],
       "exports": [],
-      "totalLines": 179,
+      "totalLines": 185,
       "hasStructuralAnalysis": true
     },
     "src/pages/user/my-page/personal-info/update-information/index.tsx": {
       "filePath": "src/pages/user/my-page/personal-info/update-information/index.tsx",
-      "contentHash": "ca4eb8e146258eaf512c9906e5d1ac43f31b1549cf0f0a4b8fc0232de687301f",
+      "contentHash": "f74f7780c3f4df226af75c5219249eeb75e263ed749e881ab2ce2a526775ae8b",
       "functions": [
         {
           "name": "UpdateInformationUser",
           "params": [],
           "exported": false,
-          "lineCount": 30
+          "lineCount": 38
         }
       ],
       "classes": [],
@@ -43571,6 +43675,12 @@
           ]
         },
         {
+          "source": "constants/route",
+          "specifiers": [
+            "ROUTE"
+          ]
+        },
+        {
           "source": "libs/hoc/withAuthentication",
           "specifiers": [
             "withAuthentication"
@@ -43590,7 +43700,7 @@
         }
       ],
       "exports": [],
-      "totalLines": 42,
+      "totalLines": 51,
       "hasStructuralAnalysis": true
     },
     "src/pages/user/my-page/personal-info/update-information/success.tsx": {
@@ -43868,13 +43978,13 @@
     },
     "src/pages/user/my-page/times-limit-ticket-status.tsx": {
       "filePath": "src/pages/user/my-page/times-limit-ticket-status.tsx",
-      "contentHash": "15df3ef5bb8fa4695a172fb3c595352f05c0f8fc7569d5b13279812a5583b3a6",
+      "contentHash": "4983d87b2b196885b9aa63d46fbbce2c7e861a8557fb22d862a133447e73a57b",
       "functions": [
         {
           "name": "StatusMonthlyTicket",
           "params": [],
           "exported": true,
-          "lineCount": 127
+          "lineCount": 133
         }
       ],
       "classes": [],
@@ -43973,18 +44083,18 @@
       "exports": [
         "StatusMonthlyTicket"
       ],
-      "totalLines": 146,
+      "totalLines": 152,
       "hasStructuralAnalysis": true
     },
     "src/pages/vacancy-status/index.tsx": {
       "filePath": "src/pages/vacancy-status/index.tsx",
-      "contentHash": "55a8e3b648084f15be0d3b49a4cdc4da511b4447201ecd1772923f2d3b51d15e",
+      "contentHash": "b4c332961eb700d260f4f7883a11d66ba10c8a2be91be6644820b14ec001a69d",
       "functions": [
         {
           "name": "VacancyStatus",
           "params": [],
           "exported": true,
-          "lineCount": 82
+          "lineCount": 104
         }
       ],
       "classes": [],
@@ -43995,6 +44105,12 @@
             "useEffect",
             "useRef",
             "useState"
+          ]
+        },
+        {
+          "source": "next/router",
+          "specifiers": [
+            "useRouter"
           ]
         },
         {
@@ -44056,12 +44172,18 @@
           "specifiers": [
             "Tenant"
           ]
+        },
+        {
+          "source": "constants/booking",
+          "specifiers": [
+            "getBookingDaysFromQuery"
+          ]
         }
       ],
       "exports": [
         "VacancyStatus"
       ],
-      "totalLines": 96,
+      "totalLines": 120,
       "hasStructuralAnalysis": true
     },
     "src/pages/verify/[token].tsx": {
@@ -46519,7 +46641,7 @@
     },
     "src/services/smaregi/smaregi.const.ts": {
       "filePath": "src/services/smaregi/smaregi.const.ts",
-      "contentHash": "438804c7153fc1c294337633859cbb5caa88bac26dc2a967991563121197ba0a",
+      "contentHash": "f430eaaf01b292c2c9327611e07135805ce8fb91d38f53ad2e61aa09922fbfb4",
       "functions": [],
       "classes": [],
       "imports": [],
@@ -46533,14 +46655,16 @@
         "SMAREGI_API",
         "SMAREGI_TEMPORARY",
         "SMAREGI_TEMPORARY_TERMINAL_ID",
+        "SMAREGI_CONFIRMED",
+        "SMAREGI_PREPAID_PAYMENT_METHOD",
         "SMAREGI_QUERY"
       ],
-      "totalLines": 114,
+      "totalLines": 147,
       "hasStructuralAnalysis": true
     },
     "src/services/smaregi/smaregi.service.ts": {
       "filePath": "src/services/smaregi/smaregi.service.ts",
-      "contentHash": "9937204717bcab688f17ff128515b114d6176227131ea7b61789ee23e5a0d968",
+      "contentHash": "6ba0f0ac8b62e14fbb02ef4bd0f73cc8d92ebed36c0576392318d4130f767e9e",
       "functions": [
         {
           "name": "buildApiBaseUrl",
@@ -46591,6 +46715,25 @@
           "lineCount": 3
         },
         {
+          "name": "changeTemporaryTransactionStatus",
+          "params": [
+            "contractId",
+            "id",
+            "status"
+          ],
+          "exported": true,
+          "lineCount": 3
+        },
+        {
+          "name": "createTransaction",
+          "params": [
+            "contractId",
+            "payload"
+          ],
+          "exported": true,
+          "lineCount": 9
+        },
+        {
           "name": "getTransaction",
           "params": [
             "contractId",
@@ -46599,7 +46742,7 @@
           ],
           "returnType": "Promise<SmaregiTransaction>",
           "exported": true,
-          "lineCount": 13
+          "lineCount": 14
         },
         {
           "name": "listTransactions",
@@ -46617,7 +46760,34 @@
             "transactionId"
           ],
           "exported": true,
+          "lineCount": 5
+        },
+        {
+          "name": "getPaymentMethods",
+          "params": [
+            "contractId",
+            "params"
+          ],
+          "exported": true,
           "lineCount": 3
+        },
+        {
+          "name": "createPaymentMethod",
+          "params": [
+            "contractId",
+            "payload"
+          ],
+          "exported": true,
+          "lineCount": 3
+        },
+        {
+          "name": "resolvePrepaidPaymentMethodId",
+          "params": [
+            "contractId"
+          ],
+          "returnType": "Promise<string>",
+          "exported": true,
+          "lineCount": 22
         }
       ],
       "classes": [],
@@ -46636,6 +46806,12 @@
           ]
         },
         {
+          "source": "utils/date-time",
+          "specifiers": [
+            "formatJpTz"
+          ]
+        },
+        {
           "source": "utils/logger",
           "specifiers": [
             "logger"
@@ -46645,7 +46821,9 @@
           "source": "./smaregi.const",
           "specifiers": [
             "SMAREGI_API",
+            "SMAREGI_CONFIRMED",
             "SMAREGI_GRANT_TYPE",
+            "SMAREGI_PREPAID_PAYMENT_METHOD",
             "SMAREGI_QUERY",
             "SMAREGI_TEMPORARY",
             "SMAREGI_TEMPORARY_TERMINAL_ID",
@@ -46658,6 +46836,8 @@
         {
           "source": "./smaregi.types",
           "specifiers": [
+            "SmaregiConfirmedInput",
+            "SmaregiPaymentMethod",
             "SmaregiTemporaryInput",
             "SmaregiTransaction",
             "TokenCache",
@@ -46669,16 +46849,21 @@
         "getAccessToken",
         "createTemporaryTransaction",
         "deleteTemporaryTransaction",
+        "changeTemporaryTransactionStatus",
+        "createTransaction",
         "getTransaction",
         "listTransactions",
-        "cancelTransaction"
+        "cancelTransaction",
+        "getPaymentMethods",
+        "createPaymentMethod",
+        "resolvePrepaidPaymentMethodId"
       ],
-      "totalLines": 140,
+      "totalLines": 222,
       "hasStructuralAnalysis": true
     },
     "src/services/smaregi/smaregi.types.ts": {
       "filePath": "src/services/smaregi/smaregi.types.ts",
-      "contentHash": "b48e524c075db1be423a8441f94a86ce2ba227bdcba44eb425276984d8050cf8",
+      "contentHash": "e309db79d7c83f08dfa0b8c0f634eece111ab3da2ecf570e2d8899ed39e10c78",
       "functions": [],
       "classes": [],
       "imports": [
@@ -46692,7 +46877,7 @@
         }
       ],
       "exports": [],
-      "totalLines": 89,
+      "totalLines": 138,
       "hasStructuralAnalysis": true
     },
     "src/statics/icons/check-in.svg": {
@@ -49264,6 +49449,20 @@
       ],
       "classes": [
         {
+          "name": "S3Handler",
+          "methods": [
+            "constructor",
+            "uploadFile",
+            "removeFile",
+            "buildUploadParams",
+            "buildKey",
+            "deleteLocalFile"
+          ],
+          "properties": [],
+          "exported": false,
+          "lineCount": 61
+        },
+        {
           "name": "TenantS3Handler",
           "methods": [
             "constructor"
@@ -49629,7 +49828,7 @@
     },
     "src/utils/booking.ts": {
       "filePath": "src/utils/booking.ts",
-      "contentHash": "9055a39543996eaa6fcd9b16fbce9cff3f17b0bee4e1508bb2a789cc9447a865",
+      "contentHash": "5ba43c68c8ff388c3cd3eca279fb914260e9d86bb9679fefaf456f6b3f26ea95",
       "functions": [
         {
           "name": "generateDefaultChildAges",
@@ -50127,6 +50326,15 @@
           "lineCount": 3
         },
         {
+          "name": "attachTicketNumbering",
+          "params": [
+            "bookings"
+          ],
+          "returnType": "(T & { shortBarCode: string; ticketIndex: number; ticketCount: number })[]",
+          "exported": true,
+          "lineCount": 13
+        },
+        {
           "name": "checkDoesAgreeAllTerms",
           "params": [
             "disclaimersValue"
@@ -50561,6 +50769,7 @@
         "isCancelledBooking",
         "checkIsFullOrNotAvailableDay",
         "getShortBarCode",
+        "attachTicketNumbering",
         "checkDoesAgreeAllTerms",
         "transformDisclaimerTermDefaultValue",
         "getPaymentStatus",
@@ -50584,7 +50793,7 @@
         "getFormattedTotalAmount",
         "attachFormattedTotalAmount"
       ],
-      "totalLines": 1162,
+      "totalLines": 1179,
       "hasStructuralAnalysis": true
     },
     "src/utils/client/booking.ts": {
@@ -50807,7 +51016,7 @@
     },
     "src/utils/date-time.ts": {
       "filePath": "src/utils/date-time.ts",
-      "contentHash": "3496366f7997e7e3004e240a14fa96acd42b89defd0e92a953d2cda4d241d586",
+      "contentHash": "65bc3b4877a01017210f977816ece53e9bc61cdb7ebbbf6b9cf189261d7d339c",
       "functions": [
         {
           "name": "isBeforeDay",
@@ -51094,7 +51303,7 @@
             "durationInMinute"
           ],
           "exported": true,
-          "lineCount": 4
+          "lineCount": 5
         },
         {
           "name": "toHoursAndMinutes",
@@ -51129,7 +51338,7 @@
             "endAt"
           ],
           "exported": true,
-          "lineCount": 3
+          "lineCount": 4
         },
         {
           "name": "formatJpTz",
@@ -51224,7 +51433,7 @@
         "formatJpTz",
         "truncateToMinute"
       ],
-      "totalLines": 227,
+      "totalLines": 229,
       "hasStructuralAnalysis": true
     },
     "src/utils/db.ts": {
@@ -51258,7 +51467,7 @@
     },
     "src/utils/discount.ts": {
       "filePath": "src/utils/discount.ts",
-      "contentHash": "8a378e5572f12c12bc1db7f4b69124d066ed1b86d7defd5cba03d15cae4513ff",
+      "contentHash": "0aafb5dd0ad24b160cbfa1fffd157a6e4ea9f168682e83790f0d30a98736ca0a",
       "functions": [
         {
           "name": "normalizeBookings",
@@ -51320,10 +51529,11 @@
           "name": "calculateExtraTimeDiscountForTicket",
           "params": [
             "hourlyBookings",
-            "hourlyExtraTimeInfos"
+            "hourlyExtraTimeInfos",
+            "extendedPriceOverride"
           ],
           "exported": true,
-          "lineCount": 56
+          "lineCount": 63
         },
         {
           "name": "extractOrderAndNumberOfExtraTimeBlocks",
@@ -51500,7 +51710,7 @@
         "getUseInDayBookingAmount",
         "getUseInDayBookingOriginalAmount"
       ],
-      "totalLines": 539,
+      "totalLines": 546,
       "hasStructuralAnalysis": true
     },
     "src/utils/email-setting.ts": {
@@ -52212,7 +52422,7 @@
     },
     "src/utils/server/booking.ts": {
       "filePath": "src/utils/server/booking.ts",
-      "contentHash": "73791fb144eda27811ec16ff7f87cdfd1b502915f3271f39ce310fa4ec1dc0cb",
+      "contentHash": "ce340a6713e9b9d245ce8697d6a2dd0689c6ca5725aee73d6a8055eb270d3972",
       "functions": [
         {
           "name": "getPaymentInfoAfterUpdate",
@@ -52307,6 +52517,14 @@
           ],
           "exported": true,
           "lineCount": 13
+        },
+        {
+          "name": "getLatestBarcodeByBookingBarCode",
+          "params": [
+            "bookings"
+          ],
+          "exported": true,
+          "lineCount": 23
         }
       ],
       "classes": [],
@@ -52315,6 +52533,8 @@
           "source": "@prisma/client",
           "specifiers": [
             "BookingStatus",
+            "SmaregiTemporaryStatus",
+            "Tenant",
             "TicketType"
           ]
         },
@@ -52387,6 +52607,7 @@
         {
           "source": "constants/common",
           "specifiers": [
+            "CHECK_IN_OUT_TENANT_VERSION",
             "JP_LONG_DATE_SLASH",
             "SHORT_DATE"
           ]
@@ -52465,14 +52686,15 @@
         "checkHasOnlineBookingFromTenant",
         "getSupportedTenantMonthlyBookings",
         "sendOnlineBookingEmail",
-        "getHiddenTenantTicketNames"
+        "getHiddenTenantTicketNames",
+        "getLatestBarcodeByBookingBarCode"
       ],
-      "totalLines": 353,
+      "totalLines": 377,
       "hasStructuralAnalysis": true
     },
     "src/utils/server/checkoutCharges.ts": {
       "filePath": "src/utils/server/checkoutCharges.ts",
-      "contentHash": "e6c370a132f4f9c8ae364a6fd3c56bef50e8dc015b99fdc8571aa960bfeae9a4",
+      "contentHash": "c529659a16fc979e12ff604bb1a28bf2d105d793df3a9f43b35b1e30772cf352",
       "functions": [
         {
           "name": "makeLines",
@@ -52593,7 +52815,7 @@
           ],
           "returnType": "ChargeLineDraft[]",
           "exported": false,
-          "lineCount": 109
+          "lineCount": 116
         },
         {
           "name": "sumSalesPrice",
@@ -52714,7 +52936,7 @@
         "toObicCodes",
         "toSmaregiQRCodes"
       ],
-      "totalLines": 814,
+      "totalLines": 821,
       "hasStructuralAnalysis": true
     },
     "src/utils/server/csv-export.ts": {
@@ -53226,7 +53448,7 @@
     },
     "src/utils/server/smaregiSync.ts": {
       "filePath": "src/utils/server/smaregiSync.ts",
-      "contentHash": "d0cca8e867e44ec34464ebeb0dd6f71fc0021c465f1e2d624fa83c49f90c0e7a",
+      "contentHash": "f3c19cb5b1612bd02485b347a3f0a5d6e534312329c2cde5d00654f487ccc153",
       "functions": [
         {
           "name": "buildDetailProductName",
@@ -53236,20 +53458,18 @@
           ],
           "returnType": "string",
           "exported": false,
-          "lineCount": 2
+          "lineCount": 4
         },
         {
           "name": "buildTemporaryPayload",
           "params": [
             "barCode",
             "items",
-            "storeId",
-            "terminalTranId",
-            "checkedOutAt"
+            "storeId"
           ],
           "returnType": "SmaregiTemporaryInput",
           "exported": true,
-          "lineCount": 44
+          "lineCount": 41
         },
         {
           "name": "createSmaregiTemporaryTransaction",
@@ -53257,29 +53477,160 @@
             "barCode",
             "items",
             "tenant",
-            "checkedOutAt",
-            "terminalTranId",
+            "checkedInAt",
             "db"
           ],
-          "returnType": "Promise<Prisma.SmaregiTemporaryTransactionUncheckedCreateInput | null>",
+          "returnType": "Promise<(Prisma.SmaregiTemporaryTransactionUncheckedCreateInput & { checkedInAt?: Date | null }) | null>",
           "exported": true,
-          "lineCount": 46
+          "lineCount": 51
+        },
+        {
+          "name": "persistSmaregiTemporaryTransaction",
+          "params": [
+            "smaregiTemporaryTransaction",
+            "tx",
+            "createdTemporaryHeadIds"
+          ],
+          "returnType": "Promise<void>",
+          "exported": true,
+          "lineCount": 13
+        },
+        {
+          "name": "buildRealAmountDetails",
+          "params": [
+            "ticketName",
+            "chargeLines"
+          ],
+          "returnType": "SmaregiConfirmedDetail[]",
+          "exported": false,
+          "lineCount": 23
+        },
+        {
+          "name": "buildFallbackSplitDetails",
+          "params": [
+            "ticketName",
+            "totalAmount",
+            "split"
+          ],
+          "returnType": "SmaregiConfirmedDetail[]",
+          "exported": false,
+          "lineCount": 25
+        },
+        {
+          "name": "buildConfirmedPayload",
+          "params": [
+            "ticketName",
+            "chargeLines",
+            "totalAmount",
+            "storeId",
+            "paymentMethodId",
+            "fallbackSplit"
+          ],
+          "returnType": "SmaregiConfirmedInput",
+          "exported": true,
+          "lineCount": 24
+        },
+        {
+          "name": "createSmaregiConfirmedTransaction",
+          "params": [
+            "booking",
+            "ticketName",
+            "chargeLines",
+            "tenant",
+            "fallbackSplit"
+          ],
+          "returnType": "Promise<{ transactionHeadId: string; total: number; rawPayload: any } | null>",
+          "exported": true,
+          "lineCount": 43
+        },
+        {
+          "name": "resolvePrepaidChargeLines",
+          "params": [
+            "booking",
+            "chargeLines",
+            "isFirstTimeUsingMonthlyTicket",
+            "parentBooking"
+          ],
+          "returnType": "{ temporaryChargeLines: CheckoutChargeLine[] | null; confirmedTransactionRequest: ConfirmedTransactionRequest | null }",
+          "exported": true,
+          "lineCount": 55
+        },
+        {
+          "name": "syncConfirmedTransactionsForPrepaidBookings",
+          "params": [
+            "requests",
+            "tenant",
+            "checkedOutAt",
+            "tx",
+            "createdConfirmedHeadIds"
+          ],
+          "returnType": "Promise<void>",
+          "exported": true,
+          "lineCount": 50
+        },
+        {
+          "name": "cancelConfirmedTransactionsAfterRollback",
+          "params": [
+            "contractId",
+            "headIds"
+          ],
+          "returnType": "Promise<unknown>",
+          "exported": true,
+          "lineCount": 11
+        },
+        {
+          "name": "cancelConfirmedTransactionForBooking",
+          "params": [
+            "contractId",
+            "parentBooking"
+          ],
+          "returnType": "Promise<void>",
+          "exported": true,
+          "lineCount": 21
         },
         {
           "name": "rollbackBookingFromSmaregi",
           "params": [
-            "bookingId"
+            "bookingId",
+            "isFirstCheckout",
+            "reCheckinAt"
           ],
           "returnType": "Promise<void>",
           "exported": true,
-          "lineCount": 46
+          "lineCount": 74
+        },
+        {
+          "name": "rollbackConfirmedTransactionForBooking",
+          "params": [
+            "bookingId",
+            "isFirstCheckout"
+          ],
+          "returnType": "Promise<void>",
+          "exported": true,
+          "lineCount": 44
+        },
+        {
+          "name": "rollbackSmaregiForCheckoutCancel",
+          "params": [
+            "temporaryTransactionTargets",
+            "confirmedTransactionTargets"
+          ],
+          "returnType": "Promise<void>",
+          "exported": true,
+          "lineCount": 11
         },
         {
           "name": "generateTerminalTranId",
-          "params": [
-            "smaregiBarCode"
-          ],
+          "params": [],
           "returnType": "string",
+          "exported": true,
+          "lineCount": 3
+        },
+        {
+          "name": "enabledTenantSmaregiSetting",
+          "params": [
+            "tenant"
+          ],
           "exported": true,
           "lineCount": 3
         }
@@ -53292,7 +53643,14 @@
             "Prisma",
             "PrismaClient",
             "SmaregiTemporaryStatus",
-            "Tenant"
+            "Tenant",
+            "TicketType"
+          ]
+        },
+        {
+          "source": "axios",
+          "specifiers": [
+            "AxiosError"
           ]
         },
         {
@@ -53311,13 +53669,17 @@
           "source": "services/smaregi/smaregi.service",
           "specifiers": [
             "cancelTransaction",
+            "changeTemporaryTransactionStatus",
             "createTemporaryTransaction",
-            "deleteTemporaryTransaction"
+            "createTransaction",
+            "resolvePrepaidPaymentMethodId"
           ]
         },
         {
           "source": "services/smaregi/smaregi.types",
           "specifiers": [
+            "SmaregiConfirmedDetail",
+            "SmaregiConfirmedInput",
             "SmaregiTemporaryDetail",
             "SmaregiTemporaryInput"
           ]
@@ -53325,14 +53687,19 @@
         {
           "source": "services/smaregi/smaregi.const",
           "specifiers": [
+            "SMAREGI_CONFIRMED",
             "SMAREGI_TEMPORARY",
             "SMAREGI_TEMPORARY_TERMINAL_ID",
-            "SmaregiTaxDivision"
+            "SmaregiTaxDivision",
+            "SmaregiTemporaryTransactionStatus",
+            "SmaregiTransactionAction",
+            "SmaregiTransactionSource"
           ]
         },
         {
           "source": "utils/server/checkoutCharges",
           "specifiers": [
+            "ChargeAudience",
             "CheckoutChargeLine",
             "sumSalesPrice"
           ]
@@ -53342,20 +53709,74 @@
           "specifiers": [
             "formatJpTz"
           ]
+        },
+        {
+          "source": "utils/number",
+          "specifiers": [
+            "getSafeNumberValue"
+          ]
+        },
+        {
+          "source": "utils/booking",
+          "specifiers": [
+            "isOnlineMonthlyTicket",
+            "isOnlineOneDayBooking",
+            "isOnlineTimesLimitTicket"
+          ]
+        },
+        {
+          "source": "utils/discount",
+          "specifiers": [
+            "calculateDiscountByQuantity"
+          ]
+        },
+        {
+          "source": "models/Entity",
+          "specifiers": [
+            "Booking"
+          ]
+        },
+        {
+          "source": "constants/errors",
+          "specifiers": [
+            "ERROR_MESSAGES"
+          ]
+        },
+        {
+          "source": "utils/server/booking",
+          "specifiers": [
+            "checkIsFirstTimeUsingMonthlyTicket"
+          ]
+        },
+        {
+          "source": "constants/common",
+          "specifiers": [
+            "CHECK_IN_OUT_TENANT_VERSION"
+          ]
         }
       ],
       "exports": [
         "buildTemporaryPayload",
         "createSmaregiTemporaryTransaction",
+        "persistSmaregiTemporaryTransaction",
+        "buildConfirmedPayload",
+        "createSmaregiConfirmedTransaction",
+        "resolvePrepaidChargeLines",
+        "syncConfirmedTransactionsForPrepaidBookings",
+        "cancelConfirmedTransactionsAfterRollback",
+        "cancelConfirmedTransactionForBooking",
         "rollbackBookingFromSmaregi",
-        "generateTerminalTranId"
+        "rollbackConfirmedTransactionForBooking",
+        "rollbackSmaregiForCheckoutCancel",
+        "generateTerminalTranId",
+        "enabledTenantSmaregiSetting"
       ],
-      "totalLines": 206,
+      "totalLines": 769,
       "hasStructuralAnalysis": true
     },
     "src/utils/server/smaregiTransaction.ts": {
       "filePath": "src/utils/server/smaregiTransaction.ts",
-      "contentHash": "605dd35fa7f3c109b635767d8a435706cd9c1a8742b9c097433cadfc3e7681dd",
+      "contentHash": "a40ed6cfa63d54ed12e1b0968d0537167fb16e8205142efce003eace4e268279",
       "functions": [
         {
           "name": "isRefundAction",
@@ -53401,7 +53822,7 @@
           ],
           "returnType": "Coupon[]",
           "exported": false,
-          "lineCount": 24
+          "lineCount": 37
         },
         {
           "name": "getSmaregiDiscount",
@@ -53424,24 +53845,24 @@
           "name": "setMappingStatus",
           "params": [
             "smaregiBarcodes",
-            "status"
+            "status",
+            "settledTransactionHeadId"
           ],
           "returnType": "Promise<void>",
           "exported": false,
-          "lineCount": 13
+          "lineCount": 15
         },
         {
           "name": "applyTransactionToBookings",
           "params": [
             "bookings",
             "detail",
-            "transactionHeadId",
             "paymentStatus",
             "mode"
           ],
           "returnType": "Promise<number[]>",
           "exported": false,
-          "lineCount": 57
+          "lineCount": 55
         },
         {
           "name": "processSmaregiTransaction",
@@ -53453,7 +53874,22 @@
           ],
           "returnType": "Promise<void>",
           "exported": true,
-          "lineCount": 84
+          "lineCount": 108
+        },
+        {
+          "name": "cancelInvalidSmaregiTransaction",
+          "params": [
+            "contractId",
+            "transactionHeadId",
+            "detail",
+            "source",
+            "smaregiBarcodes",
+            "storeId",
+            "headTotal"
+          ],
+          "returnType": "Promise<void>",
+          "exported": false,
+          "lineCount": 30
         },
         {
           "name": "upsertSmaregiTransaction",
@@ -53491,7 +53927,7 @@
           ],
           "returnType": "Promise<void>",
           "exported": false,
-          "lineCount": 71
+          "lineCount": 83
         },
         {
           "name": "reapplySmaregiTransaction",
@@ -53503,7 +53939,7 @@
           ],
           "returnType": "Promise<void>",
           "exported": false,
-          "lineCount": 51
+          "lineCount": 50
         }
       ],
       "classes": [],
@@ -53552,6 +53988,7 @@
         {
           "source": "services/smaregi/smaregi.service",
           "specifiers": [
+            "cancelTransaction",
             "getTransaction"
           ]
         },
@@ -53570,7 +54007,16 @@
           "source": "services/smaregi/smaregi.types",
           "specifiers": [
             "SmaregiTransaction",
-            "SmaregiTransactionCoupon"
+            "SmaregiTransactionCoupon",
+            "SmaregiTransactionDiscount"
+          ]
+        },
+        {
+          "source": "./sse-hub",
+          "specifiers": [
+            "SseEvent",
+            "SseLogLevel",
+            "registerSseNotification"
           ]
         }
       ],
@@ -53578,7 +54024,7 @@
         "processSmaregiTransaction",
         "handleSmaregiTransactionMutation"
       ],
-      "totalLines": 493,
+      "totalLines": 586,
       "hasStructuralAnalysis": true
     },
     "src/utils/server/sql.ts": {
@@ -53637,7 +54083,7 @@
     },
     "src/utils/server/sse-hub.ts": {
       "filePath": "src/utils/server/sse-hub.ts",
-      "contentHash": "6019ebb9644236e44ee9d63e402036c564c2c7455ba3be4b76c73ac42fbd1d9a",
+      "contentHash": "d54c4b0db23e779a760ed5d84d3b9f201eb1d68fcf85971fd53afdb9f736da65",
       "functions": [
         {
           "name": "registerSseNotification",
@@ -53647,7 +54093,7 @@
           ],
           "returnType": "Promise<void>",
           "exported": true,
-          "lineCount": 16
+          "lineCount": 19
         },
         {
           "name": "getLatestNotificationId",
@@ -53656,7 +54102,7 @@
           ],
           "returnType": "Promise<number>",
           "exported": true,
-          "lineCount": 8
+          "lineCount": 10
         },
         {
           "name": "fetchNotificationsAfter",
@@ -53673,7 +54119,33 @@
           "params": [],
           "returnType": "Promise<void>",
           "exported": true,
-          "lineCount": 10
+          "lineCount": 12
+        },
+        {
+          "name": "getSseScanErrorPayload",
+          "params": [
+            "message"
+          ],
+          "returnType": "SsePayload",
+          "exported": true,
+          "lineCount": 3
+        },
+        {
+          "name": "getSseScanSuccessPayload",
+          "params": [
+            "message",
+            "extra"
+          ],
+          "returnType": "SsePayload",
+          "exported": true,
+          "lineCount": 14
+        },
+        {
+          "name": "getSseCancelAndRefundSuccessPayload",
+          "params": [],
+          "returnType": "SsePayload",
+          "exported": true,
+          "lineCount": 6
         }
       ],
       "classes": [],
@@ -53701,9 +54173,12 @@
         "registerSseNotification",
         "getLatestNotificationId",
         "fetchNotificationsAfter",
-        "cleanupOldNotifications"
+        "cleanupOldNotifications",
+        "getSseScanErrorPayload",
+        "getSseScanSuccessPayload",
+        "getSseCancelAndRefundSuccessPayload"
       ],
-      "totalLines": 79,
+      "totalLines": 117,
       "hasStructuralAnalysis": true
     },
     "src/utils/server/tenant.ts": {
@@ -54552,7 +55027,7 @@
     },
     "src/utils/vacancy-status-ui.tsx": {
       "filePath": "src/utils/vacancy-status-ui.tsx",
-      "contentHash": "bab2ff27145e3584e04ba35f54f0d277d1fd914884f2e7df0816a01d4e90208b",
+      "contentHash": "0c6fa49f2a1e0e4deb49a869c25015ab428bbc8c882f2a0af439916cc4ec98ba",
       "functions": [
         {
           "name": "renderTicketOnlineVacancyStatusIcon",
