@@ -42,7 +42,8 @@ flowchart LR
   S3["Sửa Tenant"]
   S4["Xem Chi tiết Tenant"]
   S5["Lưu Tenant"]
-  S1 --> S2 --> S3 --> S4 --> S5
+  S6["Cấu hình smaregiTerminalId per-Tenant"]
+  S1 --> S2 --> S3 --> S4 --> S5 --> S6
 ```
 
 **Các bước:**
@@ -52,6 +53,7 @@ flowchart LR
 3. **Sửa Tenant** — Admin sửa cấu hình tenant hiện có.
 4. **Xem Chi tiết Tenant** — Admin xem đầy đủ chi tiết của một tenant cụ thể.
 5. **Lưu Tenant** — Dữ liệu tenant được lưu qua API admin tenants.
+6. **Cấu hình smaregiTerminalId per-Tenant** — Form tạo/sửa Tenant thêm field smaregiTerminalId — mỗi cơ sở lưu ID device thật của máy POS Smaregi (KIDOKIDO-2106).
 
 <details>
 <summary>Chi tiết kỹ thuật — file liên quan trong code (dành cho Dev/Techlead)</summary>
@@ -65,6 +67,7 @@ Endpoint/trigger: `GET /admin/tenant-management`
 | 3 | Sửa Tenant | `src/pages/admin/tenant-management/edit/[tenantCode].tsx` |
 | 4 | Xem Chi tiết Tenant | `src/pages/admin/tenant-management/view/[tenantCode].tsx` |
 | 5 | Lưu Tenant | `src/pages/api/admin/tenants/index.ts` |
+| 6 | Cấu hình smaregiTerminalId per-Tenant | `src/components/Tenant/CreateOrUpdateTenant/index.tsx` |
 
 </details>
 

@@ -170,6 +170,19 @@ VI = {
 "step:ticket-scan-management:update-booking-status": {"name": "Cập nhật Trạng thái Đặt vé", "summary": "Admin cập nhật thủ công trạng thái check-in/out của đặt vé khi cần."},
 "step:ticket-scan-management:bulk-booking-status": {"name": "Trạng thái Đặt vé Hàng loạt", "summary": "Hệ thống lấy thông tin trạng thái đặt vé hàng loạt cho dashboard."},
 "step:ticket-scan-management:view-vacancies-status-page": {"name": "Xem Trang Trạng thái Chỗ trống", "summary": "Admin xem trang trạng thái chỗ trống của cơ sở."},
+
+# ---- New steps added 2026-08 (13 commit KIDOKIDO-2063/2082/2085/2092/2095/2098/2104/2106) ----
+"step:barcode-checkin-checkout:confirm-duplicate-scan-dialog": {"name": "Xác nhận Quét Trùng (ConfirmDuplicateDialog)", "summary": "Khi mã vạch được quét lại trong khoảng cửa sổ scan gần đây, dialog ConfirmDuplicateDialog yêu cầu nhân viên xác nhận trước khi check-in tiếp — tránh quét trùng ngoài ý muốn (KIDOKIDO-2095)."},
+"step:barcode-checkin-checkout:gray-out-repeated-pass-scans": {"name": "Làm mờ Vé tháng/năm khi Quét lặp", "summary": "Từ lần quét thứ 2 trong ngày trở đi, entry vé tháng và vé năm hiển thị mờ (gray), phân biệt trực quan với lượt check-in mới (KIDOKIDO-2098)."},
+"step:barcode-checkin-checkout:track-first-check-in-out-duration": {"name": "Ghi nhận Check-in/out Lần đầu & Thời gian lưu lại", "summary": "Booking lưu firstCheckinAt, firstCheckoutAt, stayDuration ngay lần check-in/out đầu tiên và giữ nguyên sau khi recheck-in/out (KIDOKIDO-2085, migration 20260807_add_first_checkout_at_to_bookings)."},
+"step:smaregi-pos-integration:prepaid-transaction-tax-include": {"name": "Prepaid Transaction với taxInclude", "summary": "Prepaid Smaregi transaction gửi kèm taxInclude để giá gửi lên đã bao gồm thuế, khớp với số tiền khách thực sự trả (KIDOKIDO-2104)."},
+"step:smaregi-pos-integration:use-realistic-device-id": {"name": "Dùng deviceId Thật cho Terminal", "summary": "Smaregi transaction dùng deviceId thật của từng tenant thay cho terminalId tạm 999999999 — UI Smaregi POS hiển thị đúng các nút thao tác (KIDOKIDO-2106, migration 20260810_add_smaregi_terminal_id_to_tenants)."},
+"step:smaregi-pos-integration:default-playground-category": {"name": "Playground Category Mặc định cho Transaction", "summary": "Khi tạo Smaregi transaction, playground category mặc định tự động được chọn — admin không phải cấu hình thủ công cho từng loại vé (KIDOKIDO-2092)."},
+"step:manage-booking-history:view-first-checkin-checkout-duration": {"name": "Xem Check-in/out Lần đầu & Thời gian lưu lại", "summary": "Trang chi tiết và lịch sử đặt vé hiển thị firstCheckinAt, firstCheckoutAt, stayDuration — admin thấy được khung giờ khách đến lần đầu kể cả khi có recheck-in/out sau đó (KIDOKIDO-2085)."},
+"step:manage-booking-history:fix-fetch-bookings-crash": {"name": "Fetch Booking History Ổn định", "summary": "Fix crash ở API fetch bookings by user khi dữ liệu lớn, tăng timeout transaction để trang lịch sử load ổn định (KIDOKIDO-2082)."},
+"step:manage-booking-history:recheckin-multi-offline-tickets-total": {"name": "Tính đúng Tổng tiền khi Recheck-in nhiều Vé Offline", "summary": "Recheck-in nhiều vé offline cùng lúc tính lại tổng tiền chính xác (fix bug cộng dồn sai) (KIDOKIDO-2104)."},
+"step:login-password-recovery:store-line-user-id-on-login": {"name": "Lưu LINE userId khi Đăng nhập OAuth", "summary": "Khi user đăng nhập qua LINE OAuth, lineUserId được lưu vào User; kèm backfill tài khoản cũ và API export danh sách LINE user ID (KIDOKIDO-2063, migration 20260728_add_line_user_id_to_users)."},
+"step:tenant-management:configure-smaregi-terminal-id": {"name": "Cấu hình smaregiTerminalId per-Tenant", "summary": "Form tạo/sửa Tenant thêm field smaregiTerminalId — mỗi cơ sở lưu ID device thật của máy POS Smaregi (KIDOKIDO-2106)."},
 }
 
 # ---- Business rules / cross-domain interactions, keyed by exact English text ----

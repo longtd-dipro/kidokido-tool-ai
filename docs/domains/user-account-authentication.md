@@ -80,7 +80,8 @@ flowchart LR
   S4["Đặt lại Mật khẩu bằng Token"]
   S5["Yêu cầu Mở khóa Tài khoản"]
   S6["Mở khóa Tài khoản bằng Token"]
-  S1 --> S2 --> S3 --> S4 --> S5 --> S6
+  S7["Lưu LINE userId khi Đăng nhập OAuth"]
+  S1 --> S2 --> S3 --> S4 --> S5 --> S6 --> S7
 ```
 
 **Các bước:**
@@ -91,6 +92,7 @@ flowchart LR
 4. **Đặt lại Mật khẩu bằng Token** — Người dùng đặt mật khẩu mới bằng token đặt lại được gửi qua email.
 5. **Yêu cầu Mở khóa Tài khoản** — Người dùng bị khóa tài khoản yêu cầu email mở khóa sau nhiều lần đăng nhập thất bại.
 6. **Mở khóa Tài khoản bằng Token** — Người dùng mở khóa tài khoản bằng cách xác nhận link token mở khóa.
+7. **Lưu LINE userId khi Đăng nhập OAuth** — Khi user đăng nhập qua LINE OAuth, lineUserId được lưu vào User; kèm backfill tài khoản cũ và API export danh sách LINE user ID (KIDOKIDO-2063, migration 20260728_add_line_user_id_to_users).
 
 <details>
 <summary>Chi tiết kỹ thuật — file liên quan trong code (dành cho Dev/Techlead)</summary>
@@ -105,6 +107,7 @@ Endpoint/trigger: `POST /api/auth/[...nextauth]`
 | 4 | Đặt lại Mật khẩu bằng Token | `src/pages/api/auth/reset-password.ts` |
 | 5 | Yêu cầu Mở khóa Tài khoản | `src/pages/api/auth/request-unlock-account.ts` |
 | 6 | Mở khóa Tài khoản bằng Token | `src/pages/api/auth/unlock-account.ts` |
+| 7 | Lưu LINE userId khi Đăng nhập OAuth | `src/pages/api/auth/[...nextauth].ts` |
 
 </details>
 

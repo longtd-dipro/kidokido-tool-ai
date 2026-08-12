@@ -21,4 +21,14 @@ flowchart LR
     I -- Bị khóa --> M[Yêu cầu mở khóa\nrequest-unlock]
     M --> N[Email link mở khóa\nunlock-account]
     N --> H
+
+    H --> P{Đăng nhập\nqua LINE?}
+    P -- Có --> Q[LINE OAuth\nnextauth callback]
+    Q --> R[Lưu lineUserId\nvào User table]
+    R --> H
 ```
+
+## Ghi chú tính năng mới (2026-08)
+
+- **LINE user ID (KIDOKIDO-2063):** khi khách đăng nhập bằng LINE, `lineUserId` được lưu vào bảng `User` (migration `20260728000000_add_line_user_id_to_users`). Fix bug cũ: một user tiêu dùng nhầm `lineUserId` của user khác. Bổ sung API export danh sách LINE user ID và script backfill dữ liệu cũ.
+

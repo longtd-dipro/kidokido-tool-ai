@@ -21,3 +21,10 @@ flowchart LR
     N --> O[Thanh toán bổ sung\npartial-checkout API]
     O --> P([Thanh toán bổ sung hoàn tất])
 ```
+
+## Ghi chú tính năng mới (2026-08)
+
+- **Booking history mở rộng (KIDOKIDO-2085):** trang lịch sử đặt vé và chi tiết booking hiển thị thêm `firstCheckinAt`, `firstCheckoutAt`, và `stayDuration` — Admin xem được thời gian lưu lại đầu tiên của khách kể cả khi có recheck-in/recheck-out sau đó (migration `20260807000000_add_first_checkout_at_to_bookings`).
+- **Fix crash fetch bookings (KIDOKIDO-2082):** trước đây API fetch bookings by user có thể crash khi dữ liệu lớn — đã fix + tăng timeout transaction để trang lịch sử load ổn định hơn.
+- **Recheck-in offline multi-tickets đúng số tiền (KIDOKIDO-2104):** khi recheck-in nhiều vé offline cùng lúc, tổng tiền được tính lại chính xác (fix bug cộng dồn sai).
+

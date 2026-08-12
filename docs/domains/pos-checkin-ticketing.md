@@ -37,7 +37,10 @@ flowchart LR
   S3["Check-in Đặt vé"]
   S4["Check-out Đặt vé"]
   S5["Rollback Lượt Quét"]
-  S1 --> S2 --> S3 --> S4 --> S5
+  S6["Xác nhận Quét Trùng (ConfirmDuplicateDialog)"]
+  S7["Làm mờ Vé tháng/năm khi Quét lặp"]
+  S8["Ghi nhận Check-in/out Lần đầu & Thời gian lưu lại"]
+  S1 --> S2 --> S3 --> S4 --> S5 --> S6 --> S7 --> S8
 ```
 
 **Các bước:**
@@ -47,6 +50,9 @@ flowchart LR
 3. **Check-in Đặt vé** — Đặt vé được đánh dấu đã check-in tại máy POS.
 4. **Check-out Đặt vé** — Đặt vé được đánh dấu đã check-out tại máy POS.
 5. **Rollback Lượt Quét** — Nhân viên rollback lượt quét check-in/out bị nhầm.
+6. **Xác nhận Quét Trùng (ConfirmDuplicateDialog)** — Khi mã vạch được quét lại trong khoảng cửa sổ scan gần đây, dialog ConfirmDuplicateDialog yêu cầu nhân viên xác nhận trước khi check-in tiếp — tránh quét trùng ngoài ý muốn (KIDOKIDO-2095).
+7. **Làm mờ Vé tháng/năm khi Quét lặp** — Từ lần quét thứ 2 trong ngày trở đi, entry vé tháng và vé năm hiển thị mờ (gray), phân biệt trực quan với lượt check-in mới (KIDOKIDO-2098).
+8. **Ghi nhận Check-in/out Lần đầu & Thời gian lưu lại** — Booking lưu firstCheckinAt, firstCheckoutAt, stayDuration ngay lần check-in/out đầu tiên và giữ nguyên sau khi recheck-in/out (KIDOKIDO-2085, migration 20260807_add_first_checkout_at_to_bookings).
 
 <details>
 <summary>Chi tiết kỹ thuật — file liên quan trong code (dành cho Dev/Techlead)</summary>
@@ -60,6 +66,9 @@ Endpoint/trigger: `GET /admin/barcode-scanner`
 | 3 | Check-in Đặt vé | `src/pages/api/pos/bookings/check-in.ts` |
 | 4 | Check-out Đặt vé | `src/pages/api/pos/bookings/check-out.ts` |
 | 5 | Rollback Lượt Quét | `src/pages/api/admin/bookings/rollback-scan.ts` |
+| 6 | Xác nhận Quét Trùng (ConfirmDuplicateDialog) | `src/components/BarcodeScanner/ConfirmDuplicateDialog/index.tsx` |
+| 7 | Làm mờ Vé tháng/năm khi Quét lặp | `src/components/BarcodeScanner/index.tsx` |
+| 8 | Ghi nhận Check-in/out Lần đầu & Thời gian lưu lại | `src/pages/api/pos/bookings/check-in.ts` |
 
 </details>
 
@@ -76,7 +85,10 @@ flowchart LR
   S3["Hiển thị QR Code Smaregi"]
   S4["Tính Thanh toán POS"]
   S5["Ghi nhận Trạng thái Quét Smaregi"]
-  S1 --> S2 --> S3 --> S4 --> S5
+  S6["Prepaid Transaction với taxInclude"]
+  S7["Dùng deviceId Thật cho Terminal"]
+  S8["Playground Category Mặc định cho Transaction"]
+  S1 --> S2 --> S3 --> S4 --> S5 --> S6 --> S7 --> S8
 ```
 
 **Các bước:**
@@ -86,6 +98,9 @@ flowchart LR
 3. **Hiển thị QR Code Smaregi** — Hệ thống hiển thị mã QR Smaregi trên vé để quét tại POS.
 4. **Tính Thanh toán POS** — Hệ thống tính số tiền cần thanh toán tại máy POS Smaregi.
 5. **Ghi nhận Trạng thái Quét Smaregi** — Bản ghi đặt vé được cập nhật với trạng thái quét Smaregi.
+6. **Prepaid Transaction với taxInclude** — Prepaid Smaregi transaction gửi kèm taxInclude để giá gửi lên đã bao gồm thuế, khớp với số tiền khách thực sự trả (KIDOKIDO-2104).
+7. **Dùng deviceId Thật cho Terminal** — Smaregi transaction dùng deviceId thật của từng tenant thay cho terminalId tạm 999999999 — UI Smaregi POS hiển thị đúng các nút thao tác (KIDOKIDO-2106, migration 20260810_add_smaregi_terminal_id_to_tenants).
+8. **Playground Category Mặc định cho Transaction** — Khi tạo Smaregi transaction, playground category mặc định tự động được chọn — admin không phải cấu hình thủ công cho từng loại vé (KIDOKIDO-2092).
 
 <details>
 <summary>Chi tiết kỹ thuật — file liên quan trong code (dành cho Dev/Techlead)</summary>
@@ -99,6 +114,9 @@ Endpoint/trigger: `Tenant-gated feature (SmaregiEnabledContext)`
 | 3 | Hiển thị QR Code Smaregi | `src/components/Ticket/ViewTicket/components/SmaregiQRCode.tsx` |
 | 4 | Tính Thanh toán POS | `src/pages/api/pos/bookings/calculate-pay-amount.ts` |
 | 5 | Ghi nhận Trạng thái Quét Smaregi | `src/utils/server/booking-queue.ts` |
+| 6 | Prepaid Transaction với taxInclude | `src/services/smaregi/smaregi.service.ts` |
+| 7 | Dùng deviceId Thật cho Terminal | `src/services/smaregi/smaregi.service.ts` |
+| 8 | Playground Category Mặc định cho Transaction | `src/utils/server/smaregiSync.ts` |
 
 </details>
 

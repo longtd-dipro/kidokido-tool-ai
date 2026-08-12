@@ -134,7 +134,10 @@ flowchart LR
   S3["Cập nhật Thông tin Đặt vé"]
   S4["Hủy Đặt vé"]
   S5["Hiển thị Hủy Thành công"]
-  S1 --> S2 --> S3 --> S4 --> S5
+  S6["Xem Check-in/out Lần đầu & Thời gian lưu lại"]
+  S7["Fetch Booking History Ổn định"]
+  S8["Tính đúng Tổng tiền khi Recheck-in nhiều Vé Offline"]
+  S1 --> S2 --> S3 --> S4 --> S5 --> S6 --> S7 --> S8
 ```
 
 **Các bước:**
@@ -144,6 +147,9 @@ flowchart LR
 3. **Cập nhật Thông tin Đặt vé** — Người dùng cập nhật thông tin có thể chỉnh sửa trên đặt vé hiện có.
 4. **Hủy Đặt vé** — Người dùng hủy đặt vé qua API cancel bookings.
 5. **Hiển thị Hủy Thành công** — Hệ thống xác nhận với người dùng việc hủy đặt vé thành công.
+6. **Xem Check-in/out Lần đầu & Thời gian lưu lại** — Trang chi tiết và lịch sử đặt vé hiển thị firstCheckinAt, firstCheckoutAt, stayDuration — admin thấy được khung giờ khách đến lần đầu kể cả khi có recheck-in/out sau đó (KIDOKIDO-2085).
+7. **Fetch Booking History Ổn định** — Fix crash ở API fetch bookings by user khi dữ liệu lớn, tăng timeout transaction để trang lịch sử load ổn định (KIDOKIDO-2082).
+8. **Tính đúng Tổng tiền khi Recheck-in nhiều Vé Offline** — Recheck-in nhiều vé offline cùng lúc tính lại tổng tiền chính xác (fix bug cộng dồn sai) (KIDOKIDO-2104).
 
 <details>
 <summary>Chi tiết kỹ thuật — file liên quan trong code (dành cho Dev/Techlead)</summary>
@@ -157,6 +163,9 @@ Endpoint/trigger: `GET /user/my-page/booking-history`
 | 3 | Cập nhật Thông tin Đặt vé | `src/pages/user/my-page/booking-history/update/[id].tsx` |
 | 4 | Hủy Đặt vé | `src/pages/api/user/bookings/cancel.ts` |
 | 5 | Hiển thị Hủy Thành công | `src/pages/user/my-page/booking-history/cancel-success.tsx` |
+| 6 | Xem Check-in/out Lần đầu & Thời gian lưu lại | `src/pages/user/my-page/booking-history/[id].tsx` |
+| 7 | Fetch Booking History Ổn định | `src/pages/api/user/bookings/[id]/index.ts` |
+| 8 | Tính đúng Tổng tiền khi Recheck-in nhiều Vé Offline | `src/pages/api/admin/bookings/scan.ts` |
 
 </details>
 

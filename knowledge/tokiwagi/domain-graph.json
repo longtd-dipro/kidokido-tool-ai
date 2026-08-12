@@ -19,8 +19,8 @@
       "TailwindCSS"
     ],
     "description": "Ứng dụng Next.js full-stack quản lý đặt phòng/vé cho các cơ sở (tenant), tích hợp thanh toán GMO, tích hợp POS Smaregi, và bảng điều khiển admin để quản lý tenant, vé, nhân viên, tin tức và cài đặt hệ thống.",
-    "analyzedAt": "2026-07-01T03:59:51.000Z",
-    "gitCommitHash": "1f6bfea5ae09d7f91409b9f4c16f6e4ff1128f43"
+    "analyzedAt": "2026-08-12T04:15:00.000Z",
+    "gitCommitHash": "59486125143331297277d95f87797de6fa2d916c"
   },
   "nodes": [
     {
@@ -2273,6 +2273,193 @@
         0,
         0
       ]
+    },
+    {
+      "id": "step:barcode-checkin-checkout:confirm-duplicate-scan-dialog",
+      "type": "step",
+      "name": "Confirm Duplicate Scan Dialog",
+      "summary": "When a barcode is scanned again while still within the recent-scan window, ConfirmDuplicateDialog asks the staff to explicitly confirm before check-in proceeds (KIDOKIDO-2095).",
+      "tags": [
+        "barcode",
+        "duplicate-guard",
+        "ui"
+      ],
+      "complexity": "moderate",
+      "filePath": "src/components/BarcodeScanner/ConfirmDuplicateDialog/index.tsx",
+      "lineRange": [
+        0,
+        0
+      ]
+    },
+    {
+      "id": "step:barcode-checkin-checkout:gray-out-repeated-pass-scans",
+      "type": "step",
+      "name": "Gray-out Monthly/Yearly Pass on Repeat Scans",
+      "summary": "Monthly and yearly pass entries appear grayed out from the second scan of the day onward, visually distinguishing new from repeat check-ins (KIDOKIDO-2098).",
+      "tags": [
+        "barcode",
+        "pass",
+        "ui-state"
+      ],
+      "complexity": "simple",
+      "filePath": "src/components/BarcodeScanner/index.tsx",
+      "lineRange": [
+        0,
+        0
+      ]
+    },
+    {
+      "id": "step:barcode-checkin-checkout:track-first-check-in-out-duration",
+      "type": "step",
+      "name": "Track First Check-in / Check-out & Stay Duration",
+      "summary": "Booking now records firstCheckinAt, firstCheckoutAt, and stayDuration on the initial check-in/check-out, preserved across later recheck-in/out (KIDOKIDO-2085, migration 20260807_add_first_checkout_at_to_bookings).",
+      "tags": [
+        "booking",
+        "audit",
+        "stay-duration"
+      ],
+      "complexity": "moderate",
+      "filePath": "src/pages/api/pos/bookings/check-in.ts",
+      "lineRange": [
+        0,
+        0
+      ]
+    },
+    {
+      "id": "step:smaregi-pos-integration:prepaid-transaction-tax-include",
+      "type": "step",
+      "name": "Prepaid Transaction with taxInclude",
+      "summary": "Prepaid Smaregi transactions now send `taxInclude` so the price submitted is the tax-included amount, matching what the customer paid (KIDOKIDO-2104).",
+      "tags": [
+        "smaregi",
+        "prepaid",
+        "tax"
+      ],
+      "complexity": "moderate",
+      "filePath": "src/services/smaregi/smaregi.service.ts",
+      "lineRange": [
+        0,
+        0
+      ]
+    },
+    {
+      "id": "step:smaregi-pos-integration:use-realistic-device-id",
+      "type": "step",
+      "name": "Use Realistic deviceId for Terminal",
+      "summary": "Smaregi transactions use each tenant's real Smaregi `deviceId` instead of the shared temporary `terminalId` 999999999, so the Smaregi POS UI shows the correct action buttons (KIDOKIDO-2106, migration 20260810_add_smaregi_terminal_id_to_tenants).",
+      "tags": [
+        "smaregi",
+        "terminal",
+        "tenant-config"
+      ],
+      "complexity": "moderate",
+      "filePath": "src/services/smaregi/smaregi.service.ts",
+      "lineRange": [
+        0,
+        0
+      ]
+    },
+    {
+      "id": "step:smaregi-pos-integration:default-playground-category",
+      "type": "step",
+      "name": "Default Playground Category for Transactions",
+      "summary": "When creating a Smaregi transaction, the default playground category is auto-selected so admins no longer have to configure it manually per ticket type (KIDOKIDO-2092).",
+      "tags": [
+        "smaregi",
+        "category",
+        "default"
+      ],
+      "complexity": "simple",
+      "filePath": "src/utils/server/smaregiSync.ts",
+      "lineRange": [
+        0,
+        0
+      ]
+    },
+    {
+      "id": "step:manage-booking-history:view-first-checkin-checkout-duration",
+      "type": "step",
+      "name": "View First Check-in/out and Stay Duration",
+      "summary": "Booking detail and history pages display firstCheckinAt, firstCheckoutAt, and stayDuration so admins see the customer's original visit window even after recheck-in/out (KIDOKIDO-2085).",
+      "tags": [
+        "booking-history",
+        "audit",
+        "ui"
+      ],
+      "complexity": "simple",
+      "filePath": "src/pages/user/my-page/booking-history/[id].tsx",
+      "lineRange": [
+        0,
+        0
+      ]
+    },
+    {
+      "id": "step:manage-booking-history:fix-fetch-bookings-crash",
+      "type": "step",
+      "name": "Stable Booking History Fetch",
+      "summary": "Fixed a crash in the fetch-bookings-by-user API that occurred under heavy load and increased transaction timeout so booking history pages load reliably (KIDOKIDO-2082).",
+      "tags": [
+        "stability",
+        "timeout",
+        "api"
+      ],
+      "complexity": "moderate",
+      "filePath": "src/pages/api/user/bookings/[id]/index.ts",
+      "lineRange": [
+        0,
+        0
+      ]
+    },
+    {
+      "id": "step:manage-booking-history:recheckin-multi-offline-tickets-total",
+      "type": "step",
+      "name": "Correct Total on Recheck-in of Multiple Offline Tickets",
+      "summary": "When recheck-in of multiple offline tickets is performed, the total amount is now recalculated correctly (previously double-counted) (KIDOKIDO-2104).",
+      "tags": [
+        "booking",
+        "recheckin",
+        "total-amount"
+      ],
+      "complexity": "moderate",
+      "filePath": "src/pages/api/admin/bookings/scan.ts",
+      "lineRange": [
+        0,
+        0
+      ]
+    },
+    {
+      "id": "step:login-password-recovery:store-line-user-id-on-login",
+      "type": "step",
+      "name": "Store LINE userId on OAuth Login",
+      "summary": "When a user logs in via LINE OAuth, `lineUserId` is persisted on the User record. Includes backfill of legacy accounts and an export API for the LINE user ID list (KIDOKIDO-2063, migration 20260728_add_line_user_id_to_users).",
+      "tags": [
+        "auth",
+        "line-oauth",
+        "user-id"
+      ],
+      "complexity": "moderate",
+      "filePath": "src/pages/api/auth/[...nextauth].ts",
+      "lineRange": [
+        0,
+        0
+      ]
+    },
+    {
+      "id": "step:tenant-management:configure-smaregi-terminal-id",
+      "type": "step",
+      "name": "Configure per-Tenant smaregiTerminalId",
+      "summary": "Tenant create/edit form has a new `smaregiTerminalId` field so each facility's real POS device ID is stored per tenant (KIDOKIDO-2106).",
+      "tags": [
+        "tenant",
+        "smaregi",
+        "terminal-config"
+      ],
+      "complexity": "simple",
+      "filePath": "src/components/Tenant/CreateOrUpdateTenant/index.tsx",
+      "lineRange": [
+        0,
+        0
+      ]
     }
   ],
   "edges": [
@@ -3226,6 +3413,83 @@
       "direction": "forward",
       "description": "Admin manages staff and user accounts through the shared authentication system.",
       "weight": 0.4
+    },
+    {
+      "source": "flow:barcode-checkin-checkout",
+      "target": "step:barcode-checkin-checkout:confirm-duplicate-scan-dialog",
+      "type": "flow_step",
+      "direction": "forward",
+      "weight": 1.1
+    },
+    {
+      "source": "flow:barcode-checkin-checkout",
+      "target": "step:barcode-checkin-checkout:gray-out-repeated-pass-scans",
+      "type": "flow_step",
+      "direction": "forward",
+      "weight": 1.2000000000000002
+    },
+    {
+      "source": "flow:barcode-checkin-checkout",
+      "target": "step:barcode-checkin-checkout:track-first-check-in-out-duration",
+      "type": "flow_step",
+      "direction": "forward",
+      "weight": 1.3000000000000003
+    },
+    {
+      "source": "flow:smaregi-pos-integration",
+      "target": "step:smaregi-pos-integration:prepaid-transaction-tax-include",
+      "type": "flow_step",
+      "direction": "forward",
+      "weight": 1.1
+    },
+    {
+      "source": "flow:smaregi-pos-integration",
+      "target": "step:smaregi-pos-integration:use-realistic-device-id",
+      "type": "flow_step",
+      "direction": "forward",
+      "weight": 1.2000000000000002
+    },
+    {
+      "source": "flow:smaregi-pos-integration",
+      "target": "step:smaregi-pos-integration:default-playground-category",
+      "type": "flow_step",
+      "direction": "forward",
+      "weight": 1.3000000000000003
+    },
+    {
+      "source": "flow:manage-booking-history",
+      "target": "step:manage-booking-history:view-first-checkin-checkout-duration",
+      "type": "flow_step",
+      "direction": "forward",
+      "weight": 1.1
+    },
+    {
+      "source": "flow:manage-booking-history",
+      "target": "step:manage-booking-history:fix-fetch-bookings-crash",
+      "type": "flow_step",
+      "direction": "forward",
+      "weight": 1.2000000000000002
+    },
+    {
+      "source": "flow:manage-booking-history",
+      "target": "step:manage-booking-history:recheckin-multi-offline-tickets-total",
+      "type": "flow_step",
+      "direction": "forward",
+      "weight": 1.3000000000000003
+    },
+    {
+      "source": "flow:login-password-recovery",
+      "target": "step:login-password-recovery:store-line-user-id-on-login",
+      "type": "flow_step",
+      "direction": "forward",
+      "weight": 1.1
+    },
+    {
+      "source": "flow:tenant-management",
+      "target": "step:tenant-management:configure-smaregi-terminal-id",
+      "type": "flow_step",
+      "direction": "forward",
+      "weight": 1.1
     }
   ],
   "layers": [],

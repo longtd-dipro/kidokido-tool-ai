@@ -35,6 +35,13 @@ nav:
   - Màn hình thực tế:
       - Admin (Super Admin): screens/admin.md
       - User (Trang khách hàng): screens/user.md
+  - Màn hình theo Role (Fresh Crawl):
+      - Tổng quan: screens/index.md
+      - Super Admin: screens/roles/super-admin.md
+      - Admin POSS: screens/roles/poss.md
+      - Admin Smaregi V1: screens/roles/smaregi-v1.md
+      - Admin Smaregi V2 (Tenant): screens/roles/smaregi-v2.md
+      - User (Trang khách hàng): screens/roles/user.md
   - Features (SPEC):
       - Shop OBIC Aggregation:
           - SPEC: features/shop-obic-aggregation/SPEC.md
@@ -42,3 +49,11 @@ nav:
       - Group Booking:
           - SPEC: features/group-booking/SPEC.md
           - Status: features/group-booking/status.md
+      - Smaregi V2 — In Receipt Prepaid:
+          - SPEC: features/smaregi-v2-prepaid-receipt-print/SPEC.md
+          - Status: features/smaregi-v2-prepaid-receipt-print/status.md
+          - "Task 0 — Spike": features/smaregi-v2-prepaid-receipt-print/tasks/task-0.md
+          - "Task 1 — Service client": features/smaregi-v2-prepaid-receipt-print/tasks/task-1.md
+          - "Task 2 — Auto-in flow": features/smaregi-v2-prepaid-receipt-print/tasks/task-2.md
+          - "Task 3 — Reprint API": features/smaregi-v2-prepaid-receipt-print/tasks/task-3.md
+          - "Task 4 — UI nút": features/smaregi-v2-prepaid-receipt-print/tasks/task-4.md
