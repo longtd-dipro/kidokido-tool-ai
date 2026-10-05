@@ -1,7 +1,2 @@
 # Phien dang nhap Playwright — chua cookie/token, KHONG commit
 .auth/
-node_modules/
-.DS_Store
-~$*
-credentials.local.md
-*.dump
