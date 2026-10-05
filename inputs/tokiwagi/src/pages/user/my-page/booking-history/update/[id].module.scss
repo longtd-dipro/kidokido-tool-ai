@@ -1,0 +1,35 @@
+.header {
+  background-color: #f3faff;
+  padding: 23px 0;
+  font-size: 16px;
+}
+.col {
+  padding: 0 16px;
+}
+.titleEnd {
+  @extend .col;
+  border-left: 1px solid #949393;
+}
+.content {
+  margin: 0 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px dotted #979797;
+}
+.content_id {
+  padding-bottom: 40px;
+  border-top: 1px dotted #979797;
+  padding-top: 40px;
+}
+.footer {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 20px;
+}
+.card {
+  margin-bottom: 24px;
+  border: 1px solid #d9d9d9;
+}
+
+.buttonEnd {
+  margin-left: 24px !important;
+}

@@ -1,0 +1,35 @@
+.breadcrumb {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  font-size: 14px;
+  line-height: 16px;
+}
+
+.breadcrumb li span {
+  font-weight: 500;
+}
+
+.breadcrumb-item {
+  + .breadcrumb-item {
+    padding-left: 0.5rem;
+
+    &::before {
+      display: inline-block;
+      padding-right: 0.5rem;
+      content: quote("/");
+    }
+  }
+
+  + .breadcrumb-item:hover::before {
+    text-decoration: underline;
+  }
+
+  + .breadcrumb-item:hover::before {
+    text-decoration: none;
+  }
+
+  &.active {
+    color: #4b5563;
+  }
+}

@@ -1,316 +1,137 @@
-# KIDOKIDO — AI Agent System
+# system-to-doc — BA Kit
 
-Hệ thống AI Agent hỗ trợ phát triển dự án KIDOKIDO với 4 persona: **BA · Techlead · Dev · QA**.
-
----
-
-## Tổng quan
-
-```
-AI_AGENT_KIDOKIDO/              ← repo này (clone để dùng AI agents)
-├── CLAUDE.md                   ← Context tự động load cho mọi session
-├── POLICIES.md                 ← Luật bất biến cho mọi agent
-├── README.md                   ← File này
-├── knowledge/
-│   └── tokiwagi/               ← Knowledge graph (commit vào repo này)
-│       ├── knowledge-graph.json   ← Semantic memory (full, 884KB)
-│       ├── semantic-index.json    ← Semantic memory (compact, 6.7KB)
-│       ├── semantic-query.mjs     ← Query script
-│       └── How_To_Use.md         ← Hướng dẫn chạy graph server
-├── docs/
-│   └── features/
-│       └── <feature-slug>/     ← 1 folder / feature
-│           ├── SPEC.md         ← Output của BA Agent
-│           ├── status.md       ← Trạng thái pipeline (stage/spec/tasks + log), agent nào cũng đọc/ghi
-│           └── tasks/
-│               └── task-N.md   ← Output của Techlead Agent
-├── .claude/
-│   ├── agents/
-│   │   ├── ba-agent.md         ← BA persona
-│   │   ├── techlead-agent.md   ← Techlead persona
-│   │   ├── dev-agent.md        ← Dev persona
-│   │   └── qa-agent.md         ← QA persona
-│   ├── commands/
-│   │   ├── ba.md                ← /ba <mô tả|slug>
-│   │   ├── techlead.md          ← /techlead <slug>
-│   │   ├── dev.md               ← /dev <slug>/tasks/task-N.md
-│   │   └── qa.md                ← /qa <slug|module>
-│   └── skills/
-│       ├── business-analyst/
-│       │   └── SKILL.md        ← Discovery/SPEC-writing methodology cho BA
-│       ├── task-decomposition/
-│       │   └── SKILL.md        ← Methodology cắt task cho Techlead
-│       ├── tokiwagi-stack-conventions/
-│       │   └── SKILL.md        ← Quy ước code Next.js/Prisma cho Dev
-│       └── jest-testing-conventions/
-│           └── SKILL.md        ← Quy ước viết unit test Jest cho QA
-└── reponsitories/
-    └── tokiwagi/               ← Source code dự án (repo riêng)
-        └── .understand-anything → ../../knowledge/tokiwagi (symlink)
-```
-
-> `knowledge/` được commit vào `AI_AGENT_KIDOKIDO` — team clone repo này là có graph ngay.
-> `reponsitories/tokiwagi/.understand-anything` là symlink → data thực nằm ở `knowledge/tokiwagi/`.
-> Source code repo (`tokiwagi`) gitignore `.understand-anything` → không bị ảnh hưởng.
+> Nhận một **hệ thống đã có sẵn** (website đang chạy · source code · database · Figma) → AI tự khảo sát → dựng **bộ tài liệu baseline có version**. Về sau mỗi khi khách gửi **yêu cầu thay đổi (CR)**, AI đối chiếu baseline để trả lời CR ảnh hưởng tới đâu.
+>
+> Hướng dẫn có hình: [`docs/Hướng dẫn sử dụng System to Doc.docx`](docs/)
 
 ---
 
-## 4 AI Agents
+## Hai luồng
 
-Pipeline: **BA → Techlead → Dev → QA**, mỗi bước có gate người dùng duyệt trước khi qua bước tiếp theo (xem [Pipeline Flow](#pipeline-flow) bên dưới).
-
-| Agent | Dùng khi | Skill | Input | Output |
-|---|---|---|---|---|
-| BA | Có yêu cầu tính năng mới | `business-analyst` | Mô tả yêu cầu (lời) | `SPEC.md` |
-| Techlead | SPEC.md đã được duyệt | `task-decomposition` | `SPEC.md` | `tasks/task-N.md` |
-| Dev | Có task-N.md (hoặc SPEC.md) | `tokiwagi-stack-conventions` | `task-N.md` | Source code + unit test |
-| QA | Dev implement xong | `jest-testing-conventions` | `task-N.md` hoặc module | Unit test + QA report |
-
-Gọi agent bằng ngôn ngữ tự nhiên ("Bạn là ... Agent, ...") hoặc bằng slash command tương ứng (`/ba`, `/techlead`, `/dev`, `/qa` — xem `.claude/commands/`), cả hai cách đều tương đương, mọi agent tự đọc skill + semantic graph tương ứng khi được invoke (xem chi tiết từng agent bên dưới).
-
-**Slash command** chỉ là wrapper mỏng giúp gõ ngắn hơn (khỏi phải gõ full path SPEC.md/task-N.md tay) — vd. `/techlead huy-ve-thang-hoan-tien` thay vì "Bạn là Techlead Agent, đọc SPEC.md và tạo task: docs/features/huy-ve-thang-hoan-tien/SPEC.md". Toàn bộ logic gate-check và cập nhật trạng thái nằm trong file persona (`.claude/agents/*.md`), áp dụng như nhau dù gọi qua slash command hay gõ tay.
-
-**status.md** — mỗi feature có 1 file `docs/features/<feature-slug>/status.md` ghi `stage` (BA/Techlead/Dev/QA/Done), `spec` (draft/approved), `tasks`, và log lịch sử. Mỗi agent đọc file này trước khi bắt đầu (biết tiếp tục từ đâu, đúng theo nguyên tắc Stateless ở `POLICIES.md`) và ghi lại sau khi xong việc. Techlead sẽ dừng và hỏi lại nếu `spec: draft` (SPEC chưa được duyệt); Dev sẽ cảnh báo nếu `tasks: none` (Techlead chưa cắt task) trước khi nhận việc trực tiếp.
-
-### BA Agent — Phân tích yêu cầu
-
-**Dùng khi:** Có yêu cầu tính năng mới, cần viết SPEC, cần phân tích business logic.
-
-**Skill dùng:** `.claude/skills/business-analyst/SKILL.md` (discovery, phân biệt business rule vs UI rule, viết AC dạng Given-When-Then).
-
-**Cách gọi:**
-```
-Bạn là BA Agent. [Mô tả yêu cầu]
-```
-
-Ví dụ thực tế:
-```
-Bạn là BA Agent. Thêm tính năng cho phép user hủy vé tháng đang active
-và được hoàn lại một phần tiền theo tỷ lệ ngày chưa dùng.
-```
-
-Tương đương: `/ba Thêm tính năng cho phép user hủy vé tháng đang active và được hoàn lại một phần tiền theo tỷ lệ ngày chưa dùng.`
-
-**BA Agent sẽ:**
-1. Đọc skill `business-analyst`, query knowledge graph để hiểu những gì đã có trong codebase (vd. domain "Booking & Reservation Management" đã có sẵn luồng hủy vé thường, chỉ khác ở phần hoàn tiền)
-2. Hỏi 10 câu checklist (actor, trigger, happy path, edge case, data, API, UI, permission, integration, rollback) — vd. hỏi rõ "tỷ lệ hoàn tiền tính theo ngày hay theo lượt còn lại?"
-3. Viết SPEC.md theo cấu trúc cố định (Mô tả nghiệp vụ, Actors, Happy Path, Edge Cases, Acceptance Criteria, Screens, Out of Scope, Open Questions)
-
-**Output:** `docs/features/<feature-slug>/SPEC.md` — vd. `docs/features/huy-ve-thang-hoan-tien/SPEC.md`.
+| | Luồng 1 — Baseline | Luồng 2 — Change Request |
+|---|---|---|
+| Khi nào | Lần đầu nhận dự án · hệ thống đã đổi nhiều | Khách gửi yêu cầu thay đổi |
+| Lệnh | `/analyze-system` | `/change-request <file / link / nội dung>` |
+| Đọc | Website · Source · DB · Figma | Baseline mới nhất + nội dung CR |
+| Ra | `outputs/ver<N>_<DDMMYY>_<tên>/` — 7 output | `outputs/ver<N>_<DDMMYY>_CR-<id>-<tên>/` — impact 6 trục |
 
 ---
 
-### Techlead Agent — Phân rã task
+## Chuẩn bị (1 lần)
 
-**Dùng khi:** SPEC.md đã được user duyệt, cần cắt ra task cụ thể cho Dev.
-
-**Skill dùng:** `.claude/skills/task-decomposition/SKILL.md` (INVEST criteria, phân nhóm theo layer, dependency detection, estimation).
-
-**Cách gọi:**
-```
-Bạn là Techlead Agent. Đọc SPEC.md và tạo task: [đường dẫn SPEC.md]
-```
-
-Ví dụ thực tế:
-```
-Bạn là Techlead Agent. Đọc SPEC.md và tạo task: docs/features/huy-ve-thang-hoan-tien/SPEC.md
+```bash
+# 1. Copy toàn bộ folder system-to-doc vào folder dự án
+# 2. Cài dependency
+pip install openpyxl python-docx matplotlib
+npm i -D playwright && npx playwright install chromium
+# 3. (Vẽ Figma) kết nối Figma MCP
+claude mcp add --transport http figma https://mcp.figma.com/mcp
 ```
 
-Tương đương: `/techlead huy-ve-thang-hoan-tien`
-
-**Techlead Agent sẽ:**
-1. Đọc SPEC.md + skill `task-decomposition`
-2. Query knowledge graph để xác định chính xác file/module bị ảnh hưởng (vd. tìm ra `src/services/gmo.service.ts`, `src/pages/api/user/bookings/cancel.ts` liên quan tới luồng hủy vé/hoàn tiền)
-3. Check blast radius (`--dependents`) cho từng file dự kiến sửa — vd. nếu `cancel.ts` đang được nhiều luồng khác gọi, cảnh báo user trước
-4. Cắt task theo INVEST criteria, mỗi task implementable trong 1 session (~4-8h) — vd. tách "task-1: tính tỷ lệ hoàn tiền (service)" và "task-2: API endpoint gọi service + validate"
-5. Viết task file(s) kèm Context, Yêu cầu implement, Non-Regression Table, Definition of Done
-
-**Output:** `docs/features/<feature-slug>/tasks/task-N.md`.
-
-**Không được:** Sửa source code, commit/push.
-
----
-
-### Dev Agent — Implement code
-
-**Dùng khi:** Đã có task file từ Techlead (hoặc SPEC.md, nếu giao task trực tiếp), cần implement tính năng hoặc fix bug.
-
-**Skill dùng:** `.claude/skills/tokiwagi-stack-conventions/SKILL.md` (Prisma, API Routes, Service layer, Redux/TanStack Query — đúng stack thật của tokiwagi).
-
-**Cách gọi:**
 ```
-Bạn là Dev Agent. Implement task: [đường dẫn task-N.md]
-```
-
-Ví dụ thực tế:
-```
-Bạn là Dev Agent. Implement task: docs/features/huy-ve-thang-hoan-tien/tasks/task-1.md
-```
-
-Tương đương: `/dev docs/features/huy-ve-thang-hoan-tien/tasks/task-1.md`
-
-**Dev Agent sẽ:**
-1. Đọc skill `tokiwagi-stack-conventions` + task-N.md (hoặc SPEC.md nếu chưa có task file)
-2. Query knowledge graph tìm đúng file cần sửa
-3. Check blast radius trước khi thay đổi interface
-4. Implement trong scope — không refactor ngoài task, viết Unit Test kèm theo (theo yêu cầu trong task-N.md)
-5. Báo cáo khi xong, chờ user confirm trước khi commit
-
-**Không được:** Tự commit, tự push, sửa file ngoài scope.
-
----
-
-### QA Agent — Kiểm thử
-
-**Dùng khi:** Dev implement xong, cần viết test hoặc kiểm tra chất lượng.
-
-**Skill dùng:** `.claude/skills/jest-testing-conventions/SKILL.md` (mock strategy, cấu trúc AAA, map AC → test case).
-
-**Cách gọi:**
-```
-Bạn là QA Agent. Viết test cho: [tên module, đường dẫn file, hoặc task-N.md]
-```
-
-Ví dụ thực tế:
-```
-Bạn là QA Agent. Viết test cho: docs/features/huy-ve-thang-hoan-tien/tasks/task-1.md
-```
-
-Tương đương: `/qa docs/features/huy-ve-thang-hoan-tien/tasks/task-1.md`
-
-**QA Agent sẽ:**
-1. Đọc skill `jest-testing-conventions`, query knowledge graph tìm file implementation và test files đã có
-2. Query `--imports` để biết dependencies cần mock (vd. mock `gmo.service.ts` khi test hàm tính hoàn tiền, KHÔNG mock Prisma)
-3. Viết unit test với Jest, map từng Acceptance Criteria trong SPEC/task sang 1 test case
-4. Chạy test suite, báo cáo coverage
-5. Viết QA report nếu phát hiện bug
-
-**Không được:** Sửa source code logic, chỉ được sửa test files.
-
----
-
-
-## Khi có yêu cầu mới — Làm theo thứ tự này
-
-> Không bỏ qua bước nào. Không để Dev implement khi chưa có SPEC được confirm.
-
-## Pipeline Flow
-
-```
-┌─────────────────────────────────────────────────────────────────────┐
-│                        YÊU CẦU MỚI TỪ USER                         │
-└──────────────────────────────┬──────────────────────────────────────┘
-                               │
-                               ▼
-┌─────────────────────────────────────────────────────────────────────┐
-│  BƯỚC 1 · BA AGENT — Phân tích & Viết SPEC                         │
-│                                                                     │
-│  1. Query semantic graph     ←  "Đã có gì liên quan trong codebase?"│
-│  2. Hỏi 10 câu checklist    ←  actor / trigger / edge case / ...   │
-│  3. Viết SPEC.md             →  mô tả AC, data model, API, UI       │
-│                                                                     │
-│  OUTPUT: docs/features/<feature-slug>/SPEC.md                       │
-└──────────────────────────────┬──────────────────────────────────────┘
-                               │
-                        User review SPEC
-                               │
-                    ┌──────────┴──────────┐
-                    │ Cần chỉnh?          │ OK
-                    ▼                     ▼
-              BA Agent                   │
-              sửa SPEC   ───────────────►│
-                                         │
-                                         ▼
-┌─────────────────────────────────────────────────────────────────────┐
-│  BƯỚC 2 · TECHLEAD AGENT — Phân rã task                            │
-│                                                                     │
-│  1. Đọc SPEC.md + skill task-decomposition                          │
-│  2. Query semantic graph     ←  xác định chính xác file/module      │
-│  3. Check blast radius       ←  --dependents cho từng file dự kiến sửa│
-│  4. Cắt task theo INVEST     →  mỗi task ≤ 8h, testable             │
-│  5. Viết task-N.md           →  Context, Yêu cầu, Non-Regression, DoD│
-│                                                                     │
-│  OUTPUT: docs/features/<feature-slug>/tasks/task-N.md               │
-└──────────────────────────────┬──────────────────────────────────────┘
-                               │
-                        User review task(s)
-                               │
-                    ┌──────────┴──────────┐
-                    │ Cần chỉnh?          │ OK
-                    ▼                     ▼
-              Techlead Agent              │
-              sửa task    ───────────────►│
-                                         │
-                                         ▼
-┌─────────────────────────────────────────────────────────────────────┐
-│  BƯỚC 3 · DEV AGENT — Implement                                     │
-│                                                                     │
-│  1. Đọc task-N.md            ←  scope, file liên quan, blast radius │
-│  2. Query semantic graph     ←  tìm đúng file cần sửa               │
-│  3. Check blast radius       ←  --dependents trước khi đổi interface│
-│  4. Implement trong scope    →  code, không refactor ngoài task      │
-│  5. Báo cáo xong             →  chờ user confirm                    │
-│                                                                     │
-│  OUTPUT: source code đã implement                                   │
-└──────────────────────────────┬──────────────────────────────────────┘
-                               │
-                        User review code
-                               │
-                    ┌──────────┴──────────┐
-                    │ Cần sửa?            │ OK
-                    ▼                     ▼
-              Dev Agent                  │
-              sửa code   ───────────────►│
-                                         │
-                              User confirm commit
-                                         │
-                                         ▼
-┌─────────────────────────────────────────────────────────────────────┐
-│  BƯỚC 4 · QA AGENT — Kiểm thử                                      │
-│                                                                     │
-│  1. Query semantic graph     ←  tìm file impl + test files đã có    │
-│  2. Query --imports          ←  biết dependencies cần mock          │
-│  3. Viết unit test (Jest)    →  cover happy path + edge case        │
-│  4. Chạy test suite          →  pnpm test --coverage                │
-│  5. Viết QA report           →  pass / fail / bug found             │
-│                                                                     │
-│  OUTPUT: test files + QA report                                     │
-└──────────────────────────────┬──────────────────────────────────────┘
-                               │
-                    ┌──────────┴──────────┐
-                    │ Có bug?             │ All pass
-                    ▼                     ▼
-              Dev Agent            DONE ✅
-              fix bug
-              QA re-test
-```
-
-### Semantic Memory trong Pipeline
-
-```
-                    knowledge-graph.json  (884KB — không load thẳng)
-                           │
-         ┌─────────────┬───┴──────────┬─────────────┐
-         ▼             ▼              ▼             ▼
-      BA Agent   Techlead Agent    Dev Agent     QA Agent
-   query domain  query scope +   query scope   query deps
-   trước SPEC    blast radius    trước code    trước test
-                 trước task
-              │            │            │
-      semantic-query.mjs được gọi tự động
-      → chỉ trả về file liên quan (~500 tokens)
-      → agent đọc đúng file, không mò codebase
+my-project/
+├── CLAUDE.md · POLICIES.md · AGENTS.md · templates/ · .claude/    ← kit (không sửa)
+├── inputs/
+│   ├── db/schema.sql      ← (tuỳ chọn) dump CHỈ CẤU TRÚC, không dữ liệu
+│   └── cr/                ← nơi bỏ file yêu cầu thay đổi (Luồng 2)
+└── outputs/               ← AI tự tạo, mỗi lần chạy 1 folder version
 ```
 
 ---
 
-## Policies
+## Luồng 1 — chạy lần đầu
 
-Toàn bộ luật hoạt động của agents xem tại [`POLICIES.md`](POLICIES.md).
+```bash
+cd my-project && claude
+/analyze-system
+```
 
-Tóm tắt nhanh:
-- Chỉ **Dev** được sửa source code
-- Mọi agent phải **query knowledge graph trước** khi đọc file
-- Không ai được tự `git push`
-- Không đưa source code ra ngoài (public tools, external API)
-- Stack cứng: Prisma · REST · TanStack Query v5 · Redux Toolkit v2
+AI sẽ hỏi (chọn đáp án hoặc gõ vào ô *Other*):
+
+| Nhóm | AI hỏi | Chuẩn bị sẵn |
+|---|---|---|
+| **Website** | Bao nhiêu site · URL · staging/production · tài khoản role nào · **ai cấp, có được phép dùng để quét không** · chỉ ĐỌC hay được CREATE/UPDATE · vùng cấm | URL, tài khoản **test** |
+| **Source code** | Bao nhiêu repo · đường dẫn · FE/BE · repo FE thuộc website nào | Đường dẫn repo trên máy |
+| **Database** *(tuỳ chọn)* | Có file schema / quyền đọc DB / chỉ có migration / không có | `mysqldump --no-data` hoặc `pg_dump --schema-only` |
+| **Figma** *(tuỳ chọn)* | Link design hiện tại · **link file để vẽ flow** | Link `figma.com/design/...` |
+| Khác | Có làm bug list không · ngôn ngữ · nguồn có dữ liệu thật không | |
+
+> ⚠️ **Mật khẩu không gõ vào chat.**
+> - **Môi trường kiểm thử (dev / staging, tài khoản test):** AI tạo file `.auth/credentials.local.env` có sẵn chỗ trống → bạn mở file, điền tài khoản (+ Basic Auth nếu có) và ghi `ENV=TEST` → AI cho Playwright tự đăng nhập và quét toàn bộ màn, **tự đăng nhập lại** nếu app đá phiên. AI không đọc file này; script từ chối nếu không phải `TEST`.
+> - **Production / chưa chắc:** AI mở trình duyệt, bạn tự đăng nhập.
+> - `.auth/` không commit, không nằm trong output. Xong khảo sát thì xoá file và đổi mật khẩu test.
+> ⚠️ Mặc định AI **chỉ đọc** — mọi thao tác ghi bị chặn ở tầng mạng.
+> Thiếu thứ gì (không có DB, không có Figma…) → AI ghi lại và **chạy tiếp** phần còn lại.
+
+AI in **bảng tổng hợp** → bạn trả lời `OK` → AI khảo sát và sinh output. Phát hiện dữ liệu nhạy cảm (`.env`, key, dump có dữ liệu thật…) → AI **cảnh báo và dừng** chờ bạn xử lý.
+
+### Output Luồng 1
+
+| # | Output | File trong `outputs/ver<N>_.../` |
+|---|---|---|
+| **O1** | **Danh sách màn hình theo website** — tổng số màn, item từng màn, xử lý, lỗi hiển thị, liên kết giữa các màn (template Basic Design công ty) | `01_Screens/BasicDesign_WEB-01_ver<N>.xlsx` (1 file / website) |
+| **O2** | **API Documentation** — mọi API theo group (+ batch): làm gì, method, request, response; sheet tổng hợp có link tới từng API · **sơ đồ map code** FE ↔ BE ↔ DB | `02_API/API_Doc_….xlsx` · `02_API/CodeMap_….png` |
+| **O3** | **Database Documentation** — tổng quan bảng, quan hệ, từng bảng: field · kiểu · format · giới hạn · maxlength · mục đích · ERD | `03_DB/DB_Doc_….xlsx` · `03_DB/ERD_….png` |
+| **O4** | **Design System** hệ thống cũ (từ website / Figma + source) — **cùng chuẩn với `designer-kit`** và format artifact **Design System** của claude.ai: brand book, màu theo theme, thang chữ, spacing/radius/shadow/size, component có preview, logo/icon, cover; token đặt tên vai trò chuẩn, phần không quan sát được ghi TBD. Nhiều website: chỉ khác màu → 1 Design System mỗi site 1 theme; khác cả phong cách → mỗi website 1 Design System riêng. Đồng ý thì publish thành link private | `04_DesignSystem/` (`STATUS.md` + `project/`) |
+| **O5** | **Figma flow** — Output 1 Flow tổng quan + Output 2 Screen flow | link trong `05_Figma/figma-links.md` |
+| **O6** | **Tài liệu tổng hợp** — đã chạy gì, có gì, ở đâu | `06_Overview/Overview_….docx` |
+| **O7** | **Bug list hiện trạng** mức Medium–High *(nếu chọn)* | `07_BugList/BugList_….xlsx` |
+| — | **Mục lục version** — mọi output, số lượng, kết quả kiểm tra | `README.md` |
+
+Mọi dòng trong tài liệu gắn với bằng chứng (ảnh chụp, dòng code, schema). Không có bằng chứng → ghi `UNKNOWN` / "cần xác minh", **không viết đại cho đẹp**. Danh sách điểm chưa chắc nằm ở Phụ lục A của O6.
+
+---
+
+## Luồng 2 — khi có 1 yêu cầu thay đổi
+
+**Bước 1 — đưa yêu cầu vào** (1 trong 3 cách):
+
+| Cách | Làm gì |
+|---|---|
+| File *(khuyến nghị)* | Bỏ file (`.docx` `.pdf` `.xlsx` `.md` ảnh chụp) vào `inputs/cr/` → `/change-request inputs/cr/<tên-file>` |
+| Dán trực tiếp | `/change-request` rồi dán nội dung yêu cầu |
+| Link | `/change-request <link Backlog / Drive / Figma>` — không đọc được link thì AI nhờ bạn tải file về `inputs/cr/` |
+
+**Bước 2 — AI làm:** tìm baseline mới nhất → hỏi xác nhận + hỏi chỗ chưa rõ → phân tích **6 trục**:
+
+| Trục | Trả lời |
+|---|---|
+| Hệ thống | CR tác động tới site / module / repo / batch nào |
+| Database | Thêm gì? Xung đột với cái cũ không? |
+| Nghiệp vụ | Sửa gì? Ảnh hưởng nghiệp vụ hiện tại không? |
+| Màn hình | Thêm / sửa / xoá màn nào? Ảnh hưởng màn hiện tại không? |
+| Bên thứ 3 | Thêm liên kết nào? Ảnh hưởng liên kết hiện tại không? |
+| Mockup | Màn mới có nhất quán với Design System cũ không? |
+
+**Output Luồng 2** (`outputs/ver<N>_<DDMMYY>_CR-<id>-<tên>/`):
+- `CR-<id>_Impact.xlsx` — **2 sheet**, gửi khách được:
+  - `Summary`: **vì sao đây là CR** (đối chiếu hệ thống hiện tại, theo tiêu chí C1–C6) · **tổng MD** theo trục × loại · trục không ảnh hưởng · câu hỏi cần khách trả lời
+  - `Impact`: từng hạng mục — trục · loại (thêm / sửa / xoá / bị ảnh hưởng) · **vì sao phải sửa** · ảnh hưởng tới cái đang có · xung đột · rủi ro · **MD**
+- Figma **view CR mới** — chỉ phần thay đổi + phần bị ảnh hưởng, tô màu theo loại, không vẽ đè bản cũ.
+
+> MD = đơn giá trong `.claude/config/md-unit-rates.json` × số lượng (AI chỉ chọn loại hạng mục, không tự gõ số). Bảng đơn giá đang **DRAFT** — PM / Tech Lead duyệt rồi đổi `status` thành `APPROVED`.
+
+CR đã được làm xong trong hệ thống → chạy `/analyze-system` chọn **Delta** để có baseline mới.
+
+---
+
+## Version
+
+```
+outputs/
+├── ver1_011026_baseline/              Luồng 1
+├── ver2_151026_CR-001-them-coupon/    Luồng 2 — trỏ về ver1
+└── ver3_201026_baseline-delta/        Luồng 1 Delta sau khi CR-001 đã code xong
+```
+Không bao giờ sửa version cũ. Muốn góp ý → ghi vào mục **Feedback** trong `run-log.md` của version rồi chạy lại.
+
+---
+
+## Kit cam kết
+
+| Cam kết | Cách thực thi |
+|---|---|
+| **Không bịa** | Mọi khẳng định gắn bằng chứng; thiếu thì ghi `UNKNOWN` + câu hỏi |
+| **Không phá hệ thống** | Mặc định chỉ đọc; gặp nút xoá/thanh toán vẫn dừng hỏi; không bao giờ kết nối DB của khách |
+| **Không làm lộ dữ liệu** | Quét nhạy cảm trước khi đọc, hook chặn PII trước khi ghi/đẩy lên Figma, mật khẩu không bao giờ vào file |
+| **Tự chấm, không tự khen** | Mỗi output qua script kiểm tra, in số thật `N checks · X PASS · 0 FAIL` |

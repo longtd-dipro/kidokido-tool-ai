@@ -1,0 +1,18 @@
+@import "styles/_user-base.scss";
+
+.footer-list {
+  list-style-image: url("../../../statics/images/icon-type-list.svg");
+  color: $text-color;
+
+  li {
+    padding-left: 20px;
+  }
+}
+
+.footer-bg-white {
+  background-color: white;
+}
+
+.copy-right {
+  background-color: $bar-bg;
+}

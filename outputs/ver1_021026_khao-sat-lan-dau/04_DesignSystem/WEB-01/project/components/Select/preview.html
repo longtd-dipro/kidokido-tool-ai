@@ -1,0 +1,24 @@
+<!-- @dsCard group="Forms" height=200 -->
+<!doctype html>
+<html>
+<head><meta charset="utf-8"><style>
+body{margin:0;padding:16px;background:var(--page-bg);font-family:var(--font-sans)}
+.row{display:flex;flex-wrap:wrap;gap:16px;align-items:center}
+.stack{display:flex;flex-direction:column;gap:16px}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:16px 32px}
+.note{font-size:12px;line-height:20px;color:var(--text-low)}
+</style></head>
+<body>
+<div id="root" class="kka-root"></div>
+<script>
+var D = window.KidoKidoAdmin, h = React.createElement;
+ReactDOM.createRoot(document.getElementById('root')).render(
+h('div',{className:'grid2',style:{maxWidth:760}},
+ h(D.Select,{label:'施設名',placeholder:'施設名'}),
+ h(D.Select,{label:'ステータス',value:'入場中'}),
+ h(D.Select,{label:'商品名',placeholder:'ワンデーパス',disabled:true}),
+ h(D.Select,{label:'連携のGMOアカウント設定',required:true,boldLabel:true,placeholder:'施設名'}))
+);
+</script>
+</body>
+</html>

@@ -1,0 +1,16 @@
+.scrolldown {
+    position: absolute;
+    bottom: 1%;
+    right: 45%;
+    animation: arrowmove 2s linear infinite;
+}
+
+@keyframes arrowmove { 
+    0% {
+        bottom: 1%;
+    }
+
+    100% {
+        bottom: 33%;
+    }
+}

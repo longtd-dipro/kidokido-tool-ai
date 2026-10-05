@@ -1,0 +1,26 @@
+@import "styles/_user-base.scss";
+@import "styles/_mixins.scss";
+
+.monthlyBookingInfo {
+  .title {
+    background: $bar-bg-gray;
+  }
+  .info {
+    border: 1px solid $disable-bg;
+    border-top: none;
+  }
+  .item {
+    border-right: 1px solid $disable-bg;
+  }
+}
+
+@include media-xs() {
+  .monthlyBookingInfo {
+    color: $blue-color;
+
+    .info {
+      border: none;
+      color: $text-color;
+    }
+  }
+}

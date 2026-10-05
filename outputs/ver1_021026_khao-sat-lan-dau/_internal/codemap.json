@@ -1,0 +1,3272 @@
+{
+  "nodes": [
+    {
+      "id": "site:WEB-01",
+      "lane": 0,
+      "label": "WEB-01\nAdmin (管理画面)",
+      "kind": "normal"
+    },
+    {
+      "id": "site:WEB-02",
+      "lane": 0,
+      "label": "WEB-02\nUser site (予約・購入サイト)",
+      "kind": "normal"
+    },
+    {
+      "id": "fe:REPO-01",
+      "lane": 1,
+      "label": "REPO-01 (FULLSTACK)\nNext.js (pages router) · R",
+      "kind": "normal"
+    },
+    {
+      "id": "be:REPO-01",
+      "lane": 3,
+      "label": "REPO-01 (FULLSTACK)\nNext.js (pages router) · R",
+      "kind": "normal"
+    },
+    {
+      "id": "grp:A:REPO-01:admin",
+      "lane": 2,
+      "label": "admin\n61 API · REPO-01",
+      "kind": "normal",
+      "apis": [
+        "API-001",
+        "API-002",
+        "API-003",
+        "API-004",
+        "API-005",
+        "API-006",
+        "API-007",
+        "API-008",
+        "API-009",
+        "API-010",
+        "API-011",
+        "API-012",
+        "API-013",
+        "API-014",
+        "API-015",
+        "API-016",
+        "API-017",
+        "API-018",
+        "API-019",
+        "API-020",
+        "API-021",
+        "API-022",
+        "API-023",
+        "API-024",
+        "API-025",
+        "API-026",
+        "API-027",
+        "API-028",
+        "API-029",
+        "API-030",
+        "API-031",
+        "API-032",
+        "API-033",
+        "API-034",
+        "API-035",
+        "API-036",
+        "API-037",
+        "API-038",
+        "API-039",
+        "API-040",
+        "API-041",
+        "API-042",
+        "API-043",
+        "API-044",
+        "API-045",
+        "API-046",
+        "API-047",
+        "API-048",
+        "API-049",
+        "API-050",
+        "API-051",
+        "API-052",
+        "API-053",
+        "API-054",
+        "API-055",
+        "API-056",
+        "API-057",
+        "API-058",
+        "API-134",
+        "API-135",
+        "API-136"
+      ],
+      "repo": "REPO-01"
+    },
+    {
+      "id": "grp:A:REPO-01:app-settings",
+      "lane": 2,
+      "label": "app-settings\n2 API · REPO-01",
+      "kind": "normal",
+      "apis": [
+        "API-059",
+        "API-060"
+      ],
+      "repo": "REPO-01"
+    },
+    {
+      "id": "grp:A:REPO-01:auth",
+      "lane": 2,
+      "label": "auth\n14 API · REPO-01",
+      "kind": "normal",
+      "apis": [
+        "API-061",
+        "API-062",
+        "API-063",
+        "API-064",
+        "API-065",
+        "API-066",
+        "API-067",
+        "API-137",
+        "API-138",
+        "API-139",
+        "API-140",
+        "API-141",
+        "API-142",
+        "API-143"
+      ],
+      "repo": "REPO-01"
+    },
+    {
+      "id": "grp:A:REPO-01:bookings",
+      "lane": 2,
+      "label": "bookings\n8 API · REPO-01",
+      "kind": "normal",
+      "apis": [
+        "API-068",
+        "API-069",
+        "API-070",
+        "API-071",
+        "API-072",
+        "API-073",
+        "API-074",
+        "API-075"
+      ],
+      "repo": "REPO-01"
+    },
+    {
+      "id": "grp:A:REPO-01:cron-job",
+      "lane": 2,
+      "label": "cron-job\n7 API · REPO-01",
+      "kind": "normal",
+      "apis": [
+        "API-076",
+        "API-077",
+        "API-078",
+        "API-079",
+        "API-080",
+        "API-081",
+        "API-082"
+      ],
+      "repo": "REPO-01"
+    },
+    {
+      "id": "grp:A:REPO-01:disclaimers",
+      "lane": 2,
+      "label": "disclaimers\n1 API · REPO-01",
+      "kind": "normal",
+      "apis": [
+        "API-083"
+      ],
+      "repo": "REPO-01"
+    },
+    {
+      "id": "grp:A:REPO-01:error-report",
+      "lane": 2,
+      "label": "error-report\n1 API · REPO-01",
+      "kind": "normal",
+      "apis": [
+        "API-084"
+      ],
+      "repo": "REPO-01"
+    },
+    {
+      "id": "grp:A:REPO-01:gmo",
+      "lane": 2,
+      "label": "gmo\n1 API · REPO-01",
+      "kind": "normal",
+      "apis": [
+        "API-085"
+      ],
+      "repo": "REPO-01"
+    },
+    {
+      "id": "grp:A:REPO-01:health",
+      "lane": 2,
+      "label": "health\n1 API · REPO-01",
+      "kind": "normal",
+      "apis": [
+        "API-086"
+      ],
+      "repo": "REPO-01"
+    },
+    {
+      "id": "grp:A:REPO-01:migration",
+      "lane": 2,
+      "label": "migration\n7 API · REPO-01",
+      "kind": "normal",
+      "apis": [
+        "API-087",
+        "API-088",
+        "API-089",
+        "API-090",
+        "API-091",
+        "API-092",
+        "API-093"
+      ],
+      "repo": "REPO-01"
+    },
+    {
+      "id": "grp:A:REPO-01:news",
+      "lane": 2,
+      "label": "news\n1 API · REPO-01",
+      "kind": "normal",
+      "apis": [
+        "API-094"
+      ],
+      "repo": "REPO-01"
+    },
+    {
+      "id": "grp:A:REPO-01:pos",
+      "lane": 2,
+      "label": "pos\n5 API · REPO-01",
+      "kind": "normal",
+      "apis": [
+        "API-095",
+        "API-096",
+        "API-097",
+        "API-098",
+        "API-099"
+      ],
+      "repo": "REPO-01"
+    },
+    {
+      "id": "grp:A:REPO-01:smaregi",
+      "lane": 2,
+      "label": "smaregi\n1 API · REPO-01",
+      "kind": "normal",
+      "apis": [
+        "API-100"
+      ],
+      "repo": "REPO-01"
+    },
+    {
+      "id": "grp:A:REPO-01:status",
+      "lane": 2,
+      "label": "status\n1 API · REPO-01",
+      "kind": "normal",
+      "apis": [
+        "API-101"
+      ],
+      "repo": "REPO-01"
+    },
+    {
+      "id": "grp:A:REPO-01:tenants",
+      "lane": 2,
+      "label": "tenants\n3 API · REPO-01",
+      "kind": "normal",
+      "apis": [
+        "API-102",
+        "API-103",
+        "API-104"
+      ],
+      "repo": "REPO-01"
+    },
+    {
+      "id": "grp:A:REPO-01:tickets-supported",
+      "lane": 2,
+      "label": "tickets-supported\n1 API · REPO-01",
+      "kind": "normal",
+      "apis": [
+        "API-105"
+      ],
+      "repo": "REPO-01"
+    },
+    {
+      "id": "grp:A:REPO-01:tickets",
+      "lane": 2,
+      "label": "tickets\n2 API · REPO-01",
+      "kind": "normal",
+      "apis": [
+        "API-106",
+        "API-107"
+      ],
+      "repo": "REPO-01"
+    },
+    {
+      "id": "grp:A:REPO-01:upload",
+      "lane": 2,
+      "label": "upload\n1 API · REPO-01",
+      "kind": "normal",
+      "apis": [
+        "API-108"
+      ],
+      "repo": "REPO-01"
+    },
+    {
+      "id": "grp:A:REPO-01:user",
+      "lane": 2,
+      "label": "user\n24 API · REPO-01",
+      "kind": "normal",
+      "apis": [
+        "API-109",
+        "API-110",
+        "API-111",
+        "API-112",
+        "API-113",
+        "API-114",
+        "API-115",
+        "API-116",
+        "API-117",
+        "API-118",
+        "API-119",
+        "API-120",
+        "API-121",
+        "API-122",
+        "API-123",
+        "API-124",
+        "API-125",
+        "API-126",
+        "API-127",
+        "API-128",
+        "API-129",
+        "API-130",
+        "API-131",
+        "API-132"
+      ],
+      "repo": "REPO-01"
+    },
+    {
+      "id": "grp:A:REPO-01:other",
+      "lane": 2,
+      "label": "other\n1 API · REPO-01",
+      "kind": "normal",
+      "apis": [
+        "API-133"
+      ],
+      "repo": "REPO-01"
+    },
+    {
+      "id": "tbl:users",
+      "lane": 4,
+      "label": "users",
+      "kind": "normal"
+    },
+    {
+      "id": "tbl:accounts",
+      "lane": 4,
+      "label": "accounts",
+      "kind": "normal"
+    },
+    {
+      "id": "tbl:tenants",
+      "lane": 4,
+      "label": "tenants",
+      "kind": "normal"
+    },
+    {
+      "id": "tbl:admins_tenants",
+      "lane": 4,
+      "label": "admins_tenants",
+      "kind": "normal"
+    },
+    {
+      "id": "tbl:staffs",
+      "lane": 4,
+      "label": "staffs",
+      "kind": "normal"
+    },
+    {
+      "id": "tbl:admin_activity_logs",
+      "lane": 4,
+      "label": "admin_activity_logs",
+      "kind": "normal"
+    },
+    {
+      "id": "tbl:users_tenants_favorites",
+      "lane": 4,
+      "label": "users_tenants_favorites",
+      "kind": "normal"
+    },
+    {
+      "id": "tbl:tickets",
+      "lane": 4,
+      "label": "tickets",
+      "kind": "normal"
+    },
+    {
+      "id": "tbl:ticket_details",
+      "lane": 4,
+      "label": "ticket_details",
+      "kind": "normal"
+    },
+    {
+      "id": "tbl:ticket_discount_settings",
+      "lane": 4,
+      "label": "ticket_discount_settings",
+      "kind": "normal"
+    },
+    {
+      "id": "tbl:ticket_booking_schedules",
+      "lane": 4,
+      "label": "ticket_booking_schedules",
+      "kind": "normal"
+    },
+    {
+      "id": "tbl:bookings",
+      "lane": 4,
+      "label": "bookings",
+      "kind": "normal"
+    },
+    {
+      "id": "tbl:booking_child_age_infos",
+      "lane": 4,
+      "label": "booking_child_age_infos",
+      "kind": "normal"
+    },
+    {
+      "id": "tbl:partial_checkouts",
+      "lane": 4,
+      "label": "partial_checkouts",
+      "kind": "normal"
+    },
+    {
+      "id": "tbl:app_settings",
+      "lane": 4,
+      "label": "app_settings",
+      "kind": "normal"
+    },
+    {
+      "id": "tbl:email_settings",
+      "lane": 4,
+      "label": "email_settings",
+      "kind": "normal"
+    },
+    {
+      "id": "tbl:news",
+      "lane": 4,
+      "label": "news",
+      "kind": "normal"
+    },
+    {
+      "id": "tbl:disclaimers",
+      "lane": 4,
+      "label": "disclaimers",
+      "kind": "normal"
+    },
+    {
+      "id": "tbl:gmo_settings",
+      "lane": 4,
+      "label": "gmo_settings",
+      "kind": "normal"
+    },
+    {
+      "id": "tbl:security_questions",
+      "lane": 4,
+      "label": "security_questions",
+      "kind": "normal"
+    },
+    {
+      "id": "tbl:sse_notifications",
+      "lane": 4,
+      "label": "sse_notifications",
+      "kind": "normal"
+    },
+    {
+      "id": "tbl:booking_obic_codes",
+      "lane": 4,
+      "label": "booking_obic_codes",
+      "kind": "normal"
+    },
+    {
+      "id": "tbl:smaregi_temporary_transactions",
+      "lane": 4,
+      "label": "smaregi_temporary_transactions",
+      "kind": "normal"
+    },
+    {
+      "id": "tbl:smaregi_transactions",
+      "lane": 4,
+      "label": "smaregi_transactions",
+      "kind": "normal"
+    },
+    {
+      "id": "tbl:+more",
+      "lane": 4,
+      "label": "+3 more tables\n(xem bang chi tiet)",
+      "kind": "more"
+    }
+  ],
+  "edges": [
+    {
+      "from": "site:WEB-01",
+      "to": "fe:REPO-01",
+      "documented": 1,
+      "inferred": 0
+    },
+    {
+      "from": "site:WEB-02",
+      "to": "fe:REPO-01",
+      "documented": 1,
+      "inferred": 0
+    },
+    {
+      "from": "grp:A:REPO-01:admin",
+      "to": "be:REPO-01",
+      "documented": 61,
+      "inferred": 0
+    },
+    {
+      "from": "fe:REPO-01",
+      "to": "grp:A:REPO-01:admin",
+      "documented": 247,
+      "inferred": 31
+    },
+    {
+      "from": "be:REPO-01",
+      "to": "tbl:app_settings",
+      "documented": 10,
+      "inferred": 4
+    },
+    {
+      "from": "be:REPO-01",
+      "to": "tbl:bookings",
+      "documented": 72,
+      "inferred": 55
+    },
+    {
+      "from": "be:REPO-01",
+      "to": "tbl:users",
+      "documented": 60,
+      "inferred": 21
+    },
+    {
+      "from": "be:REPO-01",
+      "to": "tbl:tickets",
+      "documented": 60,
+      "inferred": 16
+    },
+    {
+      "from": "be:REPO-01",
+      "to": "tbl:ticket_booking_schedules",
+      "documented": 41,
+      "inferred": 3
+    },
+    {
+      "from": "be:REPO-01",
+      "to": "tbl:email_settings",
+      "documented": 30,
+      "inferred": 3
+    },
+    {
+      "from": "be:REPO-01",
+      "to": "tbl:tenants",
+      "documented": 45,
+      "inferred": 11
+    },
+    {
+      "from": "be:REPO-01",
+      "to": "tbl:ticket_details",
+      "documented": 30,
+      "inferred": 1
+    },
+    {
+      "from": "be:REPO-01",
+      "to": "tbl:ticket_discount_settings",
+      "documented": 20,
+      "inferred": 1
+    },
+    {
+      "from": "be:REPO-01",
+      "to": "tbl:booking_child_age_infos",
+      "documented": 14,
+      "inferred": 2
+    },
+    {
+      "from": "be:REPO-01",
+      "to": "tbl:partial_checkouts",
+      "documented": 11,
+      "inferred": 1
+    },
+    {
+      "from": "be:REPO-01",
+      "to": "tbl:booking_obic_codes",
+      "documented": 8,
+      "inferred": 4
+    },
+    {
+      "from": "be:REPO-01",
+      "to": "tbl:gmo_settings",
+      "documented": 12,
+      "inferred": 3
+    },
+    {
+      "from": "be:REPO-01",
+      "to": "tbl:sse_notifications",
+      "documented": 7,
+      "inferred": 0
+    },
+    {
+      "from": "be:REPO-01",
+      "to": "tbl:staffs",
+      "documented": 9,
+      "inferred": 3
+    },
+    {
+      "from": "be:REPO-01",
+      "to": "tbl:admin_activity_logs",
+      "documented": 5,
+      "inferred": 0
+    },
+    {
+      "from": "be:REPO-01",
+      "to": "tbl:smaregi_temporary_transactions",
+      "documented": 6,
+      "inferred": 1
+    },
+    {
+      "from": "be:REPO-01",
+      "to": "tbl:smaregi_transactions",
+      "documented": 3,
+      "inferred": 0
+    },
+    {
+      "from": "be:REPO-01",
+      "to": "tbl:disclaimers",
+      "documented": 2,
+      "inferred": 2
+    },
+    {
+      "from": "be:REPO-01",
+      "to": "tbl:news",
+      "documented": 3,
+      "inferred": 3
+    },
+    {
+      "from": "be:REPO-01",
+      "to": "tbl:admins_tenants",
+      "documented": 4,
+      "inferred": 1
+    },
+    {
+      "from": "be:REPO-01",
+      "to": "tbl:accounts",
+      "documented": 3,
+      "inferred": 0
+    },
+    {
+      "from": "grp:A:REPO-01:app-settings",
+      "to": "be:REPO-01",
+      "documented": 2,
+      "inferred": 0
+    },
+    {
+      "from": "grp:A:REPO-01:auth",
+      "to": "be:REPO-01",
+      "documented": 14,
+      "inferred": 0
+    },
+    {
+      "from": "be:REPO-01",
+      "to": "tbl:security_questions",
+      "documented": 3,
+      "inferred": 2
+    },
+    {
+      "from": "fe:REPO-01",
+      "to": "grp:A:REPO-01:auth",
+      "documented": 19,
+      "inferred": 10
+    },
+    {
+      "from": "grp:A:REPO-01:bookings",
+      "to": "be:REPO-01",
+      "documented": 8,
+      "inferred": 0
+    },
+    {
+      "from": "fe:REPO-01",
+      "to": "grp:A:REPO-01:bookings",
+      "documented": 107,
+      "inferred": 1
+    },
+    {
+      "from": "grp:A:REPO-01:cron-job",
+      "to": "be:REPO-01",
+      "documented": 7,
+      "inferred": 0
+    },
+    {
+      "from": "grp:A:REPO-01:disclaimers",
+      "to": "be:REPO-01",
+      "documented": 1,
+      "inferred": 0
+    },
+    {
+      "from": "fe:REPO-01",
+      "to": "grp:A:REPO-01:disclaimers",
+      "documented": 26,
+      "inferred": 0
+    },
+    {
+      "from": "grp:A:REPO-01:error-report",
+      "to": "be:REPO-01",
+      "documented": 1,
+      "inferred": 0
+    },
+    {
+      "from": "grp:A:REPO-01:gmo",
+      "to": "be:REPO-01",
+      "documented": 1,
+      "inferred": 0
+    },
+    {
+      "from": "grp:A:REPO-01:health",
+      "to": "be:REPO-01",
+      "documented": 1,
+      "inferred": 0
+    },
+    {
+      "from": "grp:A:REPO-01:migration",
+      "to": "be:REPO-01",
+      "documented": 7,
+      "inferred": 0
+    },
+    {
+      "from": "grp:A:REPO-01:news",
+      "to": "be:REPO-01",
+      "documented": 1,
+      "inferred": 0
+    },
+    {
+      "from": "fe:REPO-01",
+      "to": "grp:A:REPO-01:news",
+      "documented": 1,
+      "inferred": 0
+    },
+    {
+      "from": "grp:A:REPO-01:pos",
+      "to": "be:REPO-01",
+      "documented": 5,
+      "inferred": 0
+    },
+    {
+      "from": "grp:A:REPO-01:smaregi",
+      "to": "be:REPO-01",
+      "documented": 1,
+      "inferred": 0
+    },
+    {
+      "from": "grp:A:REPO-01:status",
+      "to": "be:REPO-01",
+      "documented": 1,
+      "inferred": 0
+    },
+    {
+      "from": "grp:A:REPO-01:tenants",
+      "to": "be:REPO-01",
+      "documented": 3,
+      "inferred": 0
+    },
+    {
+      "from": "fe:REPO-01",
+      "to": "grp:A:REPO-01:tenants",
+      "documented": 29,
+      "inferred": 1
+    },
+    {
+      "from": "grp:A:REPO-01:tickets-supported",
+      "to": "be:REPO-01",
+      "documented": 1,
+      "inferred": 0
+    },
+    {
+      "from": "fe:REPO-01",
+      "to": "grp:A:REPO-01:tickets-supported",
+      "documented": 4,
+      "inferred": 0
+    },
+    {
+      "from": "grp:A:REPO-01:tickets",
+      "to": "be:REPO-01",
+      "documented": 2,
+      "inferred": 0
+    },
+    {
+      "from": "fe:REPO-01",
+      "to": "grp:A:REPO-01:tickets",
+      "documented": 53,
+      "inferred": 0
+    },
+    {
+      "from": "grp:A:REPO-01:upload",
+      "to": "be:REPO-01",
+      "documented": 1,
+      "inferred": 0
+    },
+    {
+      "from": "fe:REPO-01",
+      "to": "grp:A:REPO-01:upload",
+      "documented": 4,
+      "inferred": 1
+    },
+    {
+      "from": "grp:A:REPO-01:user",
+      "to": "be:REPO-01",
+      "documented": 24,
+      "inferred": 0
+    },
+    {
+      "from": "fe:REPO-01",
+      "to": "grp:A:REPO-01:user",
+      "documented": 226,
+      "inferred": 18
+    },
+    {
+      "from": "be:REPO-01",
+      "to": "tbl:users_tenants_favorites",
+      "documented": 3,
+      "inferred": 3
+    },
+    {
+      "from": "grp:A:REPO-01:other",
+      "to": "be:REPO-01",
+      "documented": 1,
+      "inferred": 0
+    },
+    {
+      "from": "fe:REPO-01",
+      "to": "grp:A:REPO-01:error-report",
+      "documented": 0,
+      "inferred": 1
+    },
+    {
+      "from": "be:REPO-01",
+      "to": "tbl:+more",
+      "documented": 2,
+      "inferred": 2
+    }
+  ],
+  "screens": [
+    {
+      "screen": "SC-001",
+      "site": "WEB-01",
+      "route": "/admin",
+      "api_doc": [
+        "API-045",
+        "API-135",
+        "API-136"
+      ],
+      "api_inf": [],
+      "tables_doc": [
+        "admins_tenants",
+        "bookings",
+        "gmo_settings",
+        "staffs",
+        "tenants",
+        "users"
+      ],
+      "tables_inf": []
+    },
+    {
+      "screen": "SC-002",
+      "site": "WEB-01",
+      "route": "/admin/app-settings",
+      "api_doc": [
+        "API-001",
+        "API-002"
+      ],
+      "api_inf": [],
+      "tables_doc": [
+        "app_settings"
+      ],
+      "tables_inf": []
+    },
+    {
+      "screen": "SC-003",
+      "site": "WEB-01",
+      "route": "/admin/barcode-scanner",
+      "api_doc": [
+        "API-019",
+        "API-020",
+        "API-045",
+        "API-135",
+        "API-136"
+      ],
+      "api_inf": [],
+      "tables_doc": [
+        "admins_tenants",
+        "booking_child_age_infos",
+        "booking_obic_codes",
+        "bookings",
+        "email_settings",
+        "gmo_settings",
+        "partial_checkouts",
+        "smaregi_temporary_transactions",
+        "smaregi_transactions",
+        "sse_notifications",
+        "staffs",
+        "tenants",
+        "ticket_booking_schedules",
+        "ticket_details",
+        "ticket_discount_settings",
+        "tickets",
+        "users"
+      ],
+      "tables_inf": []
+    },
+    {
+      "screen": "SC-004",
+      "site": "WEB-01",
+      "route": "/admin/booking-management",
+      "api_doc": [
+        "API-013",
+        "API-014",
+        "API-017",
+        "API-018",
+        "API-021",
+        "API-045",
+        "API-047",
+        "API-071",
+        "API-072",
+        "API-073",
+        "API-074",
+        "API-075",
+        "API-083",
+        "API-104",
+        "API-106",
+        "API-107",
+        "API-112",
+        "API-113",
+        "API-114",
+        "API-116",
+        "API-117",
+        "API-121",
+        "API-123",
+        "API-135",
+        "API-136"
+      ],
+      "api_inf": [],
+      "tables_doc": [
+        "admin_activity_logs",
+        "admins_tenants",
+        "app_settings",
+        "booking_child_age_infos",
+        "bookings",
+        "disclaimer_options",
+        "disclaimers",
+        "email_settings",
+        "gmo_settings",
+        "partial_checkouts",
+        "smaregi_temporary_transactions",
+        "sse_notifications",
+        "staffs",
+        "tenants",
+        "ticket_booking_schedules",
+        "ticket_details",
+        "ticket_discount_settings",
+        "tickets",
+        "users"
+      ],
+      "tables_inf": []
+    },
+    {
+      "screen": "SC-005",
+      "site": "WEB-01",
+      "route": "/admin/booking-management/details/:id",
+      "api_doc": [
+        "API-009",
+        "API-017",
+        "API-045",
+        "API-070",
+        "API-071",
+        "API-074",
+        "API-075",
+        "API-083",
+        "API-104",
+        "API-106",
+        "API-107",
+        "API-112",
+        "API-113",
+        "API-114",
+        "API-116",
+        "API-117",
+        "API-121",
+        "API-123",
+        "API-135",
+        "API-136"
+      ],
+      "api_inf": [],
+      "tables_doc": [
+        "admin_activity_logs",
+        "admins_tenants",
+        "app_settings",
+        "booking_child_age_infos",
+        "bookings",
+        "disclaimer_options",
+        "disclaimers",
+        "email_settings",
+        "gmo_settings",
+        "partial_checkouts",
+        "smaregi_temporary_transactions",
+        "staffs",
+        "tenants",
+        "ticket_booking_schedules",
+        "ticket_details",
+        "ticket_discount_settings",
+        "tickets",
+        "users"
+      ],
+      "tables_inf": []
+    },
+    {
+      "screen": "SC-006",
+      "site": "WEB-01",
+      "route": "/admin/booking-management/partial-checkout/:id",
+      "api_doc": [
+        "API-009",
+        "API-017",
+        "API-045",
+        "API-070",
+        "API-071",
+        "API-074",
+        "API-075",
+        "API-083",
+        "API-104",
+        "API-106",
+        "API-107",
+        "API-112",
+        "API-113",
+        "API-114",
+        "API-116",
+        "API-117",
+        "API-118",
+        "API-121",
+        "API-123",
+        "API-135",
+        "API-136"
+      ],
+      "api_inf": [],
+      "tables_doc": [
+        "admin_activity_logs",
+        "admins_tenants",
+        "app_settings",
+        "booking_child_age_infos",
+        "bookings",
+        "disclaimer_options",
+        "disclaimers",
+        "email_settings",
+        "gmo_settings",
+        "partial_checkouts",
+        "smaregi_temporary_transactions",
+        "staffs",
+        "tenants",
+        "ticket_booking_schedules",
+        "ticket_details",
+        "ticket_discount_settings",
+        "tickets",
+        "users"
+      ],
+      "tables_inf": []
+    },
+    {
+      "screen": "SC-007",
+      "site": "WEB-01",
+      "route": "/admin/booking-management/update/:id",
+      "api_doc": [
+        "API-009",
+        "API-015",
+        "API-017",
+        "API-028",
+        "API-045",
+        "API-069",
+        "API-070",
+        "API-071",
+        "API-073",
+        "API-074",
+        "API-075",
+        "API-083",
+        "API-104",
+        "API-106",
+        "API-107",
+        "API-109",
+        "API-112",
+        "API-113",
+        "API-114",
+        "API-116",
+        "API-117",
+        "API-121",
+        "API-123",
+        "API-124",
+        "API-125",
+        "API-126",
+        "API-135",
+        "API-136"
+      ],
+      "api_inf": [],
+      "tables_doc": [
+        "admin_activity_logs",
+        "admins_tenants",
+        "app_settings",
+        "booking_child_age_infos",
+        "bookings",
+        "disclaimer_options",
+        "disclaimers",
+        "email_settings",
+        "gmo_settings",
+        "partial_checkouts",
+        "smaregi_temporary_transactions",
+        "staffs",
+        "tenants",
+        "ticket_booking_schedules",
+        "ticket_details",
+        "ticket_discount_settings",
+        "tickets",
+        "users"
+      ],
+      "tables_inf": []
+    },
+    {
+      "screen": "SC-008",
+      "site": "WEB-01",
+      "route": "/admin/booking-queue",
+      "api_doc": [
+        "API-003",
+        "API-004",
+        "API-005",
+        "API-006",
+        "API-007",
+        "API-017",
+        "API-045",
+        "API-071",
+        "API-074",
+        "API-075",
+        "API-083",
+        "API-104",
+        "API-106",
+        "API-107",
+        "API-112",
+        "API-113",
+        "API-114",
+        "API-116",
+        "API-117",
+        "API-121",
+        "API-123",
+        "API-135",
+        "API-136"
+      ],
+      "api_inf": [],
+      "tables_doc": [
+        "admin_activity_logs",
+        "admins_tenants",
+        "app_settings",
+        "booking_child_age_infos",
+        "bookings",
+        "disclaimer_options",
+        "disclaimers",
+        "email_settings",
+        "gmo_settings",
+        "partial_checkouts",
+        "smaregi_temporary_transactions",
+        "staffs",
+        "tenants",
+        "ticket_booking_schedules",
+        "ticket_details",
+        "ticket_discount_settings",
+        "tickets",
+        "users"
+      ],
+      "tables_inf": []
+    },
+    {
+      "screen": "SC-009",
+      "site": "WEB-01",
+      "route": "/admin/booking-vacancies",
+      "api_doc": [
+        "API-008",
+        "API-022",
+        "API-045",
+        "API-135",
+        "API-136"
+      ],
+      "api_inf": [],
+      "tables_doc": [
+        "admins_tenants",
+        "bookings",
+        "email_settings",
+        "gmo_settings",
+        "staffs",
+        "tenants",
+        "ticket_booking_schedules",
+        "tickets",
+        "users"
+      ],
+      "tables_inf": []
+    },
+    {
+      "screen": "SC-010",
+      "site": "WEB-01",
+      "route": "/admin/change-email",
+      "api_doc": [
+        "API-045",
+        "API-062",
+        "API-135",
+        "API-136"
+      ],
+      "api_inf": [],
+      "tables_doc": [
+        "admins_tenants",
+        "bookings",
+        "gmo_settings",
+        "staffs",
+        "tenants",
+        "users"
+      ],
+      "tables_inf": []
+    },
+    {
+      "screen": "SC-011",
+      "site": "WEB-01",
+      "route": "/admin/change-password",
+      "api_doc": [
+        "API-045",
+        "API-135",
+        "API-136",
+        "API-137"
+      ],
+      "api_inf": [],
+      "tables_doc": [
+        "admins_tenants",
+        "bookings",
+        "gmo_settings",
+        "staffs",
+        "tenants",
+        "users"
+      ],
+      "tables_inf": []
+    },
+    {
+      "screen": "SC-012",
+      "site": "WEB-01",
+      "route": "/admin/dashboard",
+      "api_doc": [
+        "API-017",
+        "API-023",
+        "API-024",
+        "API-025",
+        "API-026",
+        "API-027",
+        "API-045",
+        "API-047",
+        "API-054",
+        "API-071",
+        "API-074",
+        "API-075",
+        "API-083",
+        "API-104",
+        "API-106",
+        "API-107",
+        "API-112",
+        "API-113",
+        "API-114",
+        "API-116",
+        "API-117",
+        "API-121",
+        "API-123",
+        "API-135",
+        "API-136"
+      ],
+      "api_inf": [],
+      "tables_doc": [
+        "admin_activity_logs",
+        "admins_tenants",
+        "app_settings",
+        "booking_child_age_infos",
+        "bookings",
+        "disclaimer_options",
+        "disclaimers",
+        "email_settings",
+        "gmo_settings",
+        "partial_checkouts",
+        "smaregi_temporary_transactions",
+        "staffs",
+        "tenants",
+        "ticket_booking_schedules",
+        "ticket_details",
+        "ticket_discount_settings",
+        "tickets",
+        "users"
+      ],
+      "tables_inf": [
+        "TotalUserBookingsGroup",
+        "user_first_bookings"
+      ]
+    },
+    {
+      "screen": "SC-013",
+      "site": "WEB-01",
+      "route": "/admin/disclaimer-management",
+      "api_doc": [
+        "API-029",
+        "API-045",
+        "API-135",
+        "API-136"
+      ],
+      "api_inf": [],
+      "tables_doc": [
+        "admins_tenants",
+        "bookings",
+        "disclaimer_options",
+        "disclaimers",
+        "gmo_settings",
+        "staffs",
+        "tenants",
+        "users"
+      ],
+      "tables_inf": []
+    },
+    {
+      "screen": "SC-014",
+      "site": "WEB-01",
+      "route": "/admin/email-settings",
+      "api_doc": [
+        "API-030",
+        "API-031",
+        "API-045",
+        "API-135",
+        "API-136"
+      ],
+      "api_inf": [],
+      "tables_doc": [
+        "admins_tenants",
+        "bookings",
+        "email_settings",
+        "gmo_settings",
+        "staffs",
+        "tenants",
+        "users"
+      ],
+      "tables_inf": []
+    },
+    {
+      "screen": "SC-015",
+      "site": "WEB-01",
+      "route": "/admin/email-settings/edit/:emailKey",
+      "api_doc": [
+        "API-017",
+        "API-030",
+        "API-031",
+        "API-032",
+        "API-033",
+        "API-045",
+        "API-071",
+        "API-074",
+        "API-075",
+        "API-083",
+        "API-104",
+        "API-106",
+        "API-107",
+        "API-112",
+        "API-113",
+        "API-114",
+        "API-116",
+        "API-117",
+        "API-121",
+        "API-123",
+        "API-135",
+        "API-136"
+      ],
+      "api_inf": [],
+      "tables_doc": [
+        "admin_activity_logs",
+        "admins_tenants",
+        "app_settings",
+        "booking_child_age_infos",
+        "bookings",
+        "disclaimer_options",
+        "disclaimers",
+        "email_settings",
+        "gmo_settings",
+        "partial_checkouts",
+        "smaregi_temporary_transactions",
+        "staffs",
+        "tenants",
+        "ticket_booking_schedules",
+        "ticket_details",
+        "ticket_discount_settings",
+        "tickets",
+        "users"
+      ],
+      "tables_inf": []
+    },
+    {
+      "screen": "SC-016",
+      "site": "WEB-01",
+      "route": "/admin/forgot-password",
+      "api_doc": [
+        "API-140"
+      ],
+      "api_inf": [],
+      "tables_doc": [
+        "email_settings",
+        "users"
+      ],
+      "tables_inf": []
+    },
+    {
+      "screen": "SC-017",
+      "site": "WEB-01",
+      "route": "/admin/gmo-settings",
+      "api_doc": [
+        "API-034",
+        "API-035",
+        "API-045",
+        "API-135",
+        "API-136"
+      ],
+      "api_inf": [],
+      "tables_doc": [
+        "admins_tenants",
+        "bookings",
+        "gmo_settings",
+        "staffs",
+        "tenants",
+        "users"
+      ],
+      "tables_inf": []
+    },
+    {
+      "screen": "SC-018",
+      "site": "WEB-01",
+      "route": "/admin/gmo-settings/create",
+      "api_doc": [
+        "API-034",
+        "API-035",
+        "API-045",
+        "API-135",
+        "API-136"
+      ],
+      "api_inf": [],
+      "tables_doc": [
+        "admins_tenants",
+        "bookings",
+        "gmo_settings",
+        "staffs",
+        "tenants",
+        "users"
+      ],
+      "tables_inf": []
+    },
+    {
+      "screen": "SC-019",
+      "site": "WEB-01",
+      "route": "/admin/gmo-settings/edit/:id",
+      "api_doc": [
+        "API-034",
+        "API-035",
+        "API-045",
+        "API-135",
+        "API-136"
+      ],
+      "api_inf": [],
+      "tables_doc": [
+        "admins_tenants",
+        "bookings",
+        "gmo_settings",
+        "staffs",
+        "tenants",
+        "users"
+      ],
+      "tables_inf": []
+    },
+    {
+      "screen": "SC-020",
+      "site": "WEB-01",
+      "route": "/admin/gmo-settings/view/:id",
+      "api_doc": [
+        "API-034",
+        "API-045",
+        "API-135",
+        "API-136"
+      ],
+      "api_inf": [],
+      "tables_doc": [
+        "admins_tenants",
+        "bookings",
+        "gmo_settings",
+        "staffs",
+        "tenants",
+        "users"
+      ],
+      "tables_inf": []
+    },
+    {
+      "screen": "SC-021",
+      "site": "WEB-01",
+      "route": "/admin/news-management",
+      "api_doc": [
+        "API-036",
+        "API-037",
+        "API-045",
+        "API-135",
+        "API-136"
+      ],
+      "api_inf": [],
+      "tables_doc": [
+        "admins_tenants",
+        "bookings",
+        "gmo_settings",
+        "news",
+        "staffs",
+        "tenants",
+        "users"
+      ],
+      "tables_inf": []
+    },
+    {
+      "screen": "SC-022",
+      "site": "WEB-01",
+      "route": "/admin/news-management/create",
+      "api_doc": [
+        "API-036",
+        "API-037",
+        "API-045",
+        "API-135",
+        "API-136"
+      ],
+      "api_inf": [],
+      "tables_doc": [
+        "admins_tenants",
+        "bookings",
+        "gmo_settings",
+        "news",
+        "staffs",
+        "tenants",
+        "users"
+      ],
+      "tables_inf": []
+    },
+    {
+      "screen": "SC-023",
+      "site": "WEB-01",
+      "route": "/admin/news-management/edit/:newsId",
+      "api_doc": [
+        "API-036",
+        "API-037",
+        "API-045",
+        "API-135",
+        "API-136"
+      ],
+      "api_inf": [],
+      "tables_doc": [
+        "admins_tenants",
+        "bookings",
+        "gmo_settings",
+        "news",
+        "staffs",
+        "tenants",
+        "users"
+      ],
+      "tables_inf": []
+    },
+    {
+      "screen": "SC-024",
+      "site": "WEB-01",
+      "route": "/admin/reset-password/:token",
+      "api_doc": [
+        "API-141"
+      ],
+      "api_inf": [],
+      "tables_doc": [
+        "users"
+      ],
+      "tables_inf": []
+    },
+    {
+      "screen": "SC-025",
+      "site": "WEB-01",
+      "route": "/admin/revenue-management",
+      "api_doc": [
+        "API-017",
+        "API-039",
+        "API-041",
+        "API-045",
+        "API-047",
+        "API-054",
+        "API-071",
+        "API-074",
+        "API-075",
+        "API-083",
+        "API-104",
+        "API-106",
+        "API-107",
+        "API-112",
+        "API-113",
+        "API-114",
+        "API-116",
+        "API-117",
+        "API-121",
+        "API-123",
+        "API-135",
+        "API-136"
+      ],
+      "api_inf": [],
+      "tables_doc": [
+        "admin_activity_logs",
+        "admins_tenants",
+        "app_settings",
+        "booking_child_age_infos",
+        "bookings",
+        "disclaimer_options",
+        "disclaimers",
+        "email_settings",
+        "gmo_settings",
+        "partial_checkouts",
+        "smaregi_temporary_transactions",
+        "staffs",
+        "tenants",
+        "ticket_booking_schedules",
+        "ticket_details",
+        "ticket_discount_settings",
+        "tickets",
+        "users"
+      ],
+      "tables_inf": []
+    },
+    {
+      "screen": "SC-026",
+      "site": "WEB-01",
+      "route": "/admin/scan-management",
+      "api_doc": [
+        "API-011",
+        "API-013",
+        "API-014",
+        "API-017",
+        "API-018",
+        "API-045",
+        "API-047",
+        "API-071",
+        "API-073",
+        "API-074",
+        "API-075",
+        "API-083",
+        "API-104",
+        "API-106",
+        "API-107",
+        "API-112",
+        "API-113",
+        "API-114",
+        "API-116",
+        "API-117",
+        "API-121",
+        "API-123",
+        "API-135",
+        "API-136"
+      ],
+      "api_inf": [],
+      "tables_doc": [
+        "admin_activity_logs",
+        "admins_tenants",
+        "app_settings",
+        "booking_child_age_infos",
+        "bookings",
+        "disclaimer_options",
+        "disclaimers",
+        "email_settings",
+        "gmo_settings",
+        "partial_checkouts",
+        "smaregi_temporary_transactions",
+        "sse_notifications",
+        "staffs",
+        "tenants",
+        "ticket_booking_schedules",
+        "ticket_details",
+        "ticket_discount_settings",
+        "tickets",
+        "users"
+      ],
+      "tables_inf": []
+    },
+    {
+      "screen": "SC-027",
+      "site": "WEB-01",
+      "route": "/admin/signin",
+      "api_doc": [
+        "API-063",
+        "API-065",
+        "API-138"
+      ],
+      "api_inf": [],
+      "tables_doc": [
+        "admins_tenants",
+        "email_settings",
+        "security_questions",
+        "users"
+      ],
+      "tables_inf": []
+    },
+    {
+      "screen": "SC-028",
+      "site": "WEB-01",
+      "route": "/admin/staff-management",
+      "api_doc": [
+        "API-042",
+        "API-043",
+        "API-044",
+        "API-045",
+        "API-047",
+        "API-134",
+        "API-135",
+        "API-136"
+      ],
+      "api_inf": [],
+      "tables_doc": [
+        "admins_tenants",
+        "bookings",
+        "gmo_settings",
+        "staffs",
+        "tenants",
+        "users"
+      ],
+      "tables_inf": []
+    },
+    {
+      "screen": "SC-029",
+      "site": "WEB-01",
+      "route": "/admin/staff-management/create",
+      "api_doc": [
+        "API-042",
+        "API-044",
+        "API-045",
+        "API-047",
+        "API-135",
+        "API-136"
+      ],
+      "api_inf": [],
+      "tables_doc": [
+        "admins_tenants",
+        "bookings",
+        "gmo_settings",
+        "staffs",
+        "tenants",
+        "users"
+      ],
+      "tables_inf": []
+    },
+    {
+      "screen": "SC-030",
+      "site": "WEB-01",
+      "route": "/admin/staff-management/edit/:id",
+      "api_doc": [
+        "API-042",
+        "API-044",
+        "API-045",
+        "API-047",
+        "API-135",
+        "API-136"
+      ],
+      "api_inf": [],
+      "tables_doc": [
+        "admins_tenants",
+        "bookings",
+        "gmo_settings",
+        "staffs",
+        "tenants",
+        "users"
+      ],
+      "tables_inf": []
+    },
+    {
+      "screen": "SC-031",
+      "site": "WEB-01",
+      "route": "/admin/tenant-management",
+      "api_doc": [
+        "API-045",
+        "API-046",
+        "API-047",
+        "API-067",
+        "API-135",
+        "API-136"
+      ],
+      "api_inf": [],
+      "tables_doc": [
+        "admins_tenants",
+        "bookings",
+        "gmo_settings",
+        "staffs",
+        "tenants",
+        "users"
+      ],
+      "tables_inf": []
+    },
+    {
+      "screen": "SC-032",
+      "site": "WEB-01",
+      "route": "/admin/tenant-management/create",
+      "api_doc": [
+        "API-035",
+        "API-045",
+        "API-047",
+        "API-108",
+        "API-135",
+        "API-136"
+      ],
+      "api_inf": [],
+      "tables_doc": [
+        "admins_tenants",
+        "bookings",
+        "gmo_settings",
+        "staffs",
+        "tenants",
+        "users"
+      ],
+      "tables_inf": []
+    },
+    {
+      "screen": "SC-033",
+      "site": "WEB-01",
+      "route": "/admin/tenant-management/edit/:tenantCode",
+      "api_doc": [
+        "API-035",
+        "API-045",
+        "API-047",
+        "API-108",
+        "API-135",
+        "API-136"
+      ],
+      "api_inf": [],
+      "tables_doc": [
+        "admins_tenants",
+        "bookings",
+        "gmo_settings",
+        "staffs",
+        "tenants",
+        "users"
+      ],
+      "tables_inf": []
+    },
+    {
+      "screen": "SC-034",
+      "site": "WEB-01",
+      "route": "/admin/tenant-management/view/:tenantCode",
+      "api_doc": [
+        "API-045",
+        "API-135",
+        "API-136"
+      ],
+      "api_inf": [],
+      "tables_doc": [
+        "admins_tenants",
+        "bookings",
+        "gmo_settings",
+        "staffs",
+        "tenants",
+        "users"
+      ],
+      "tables_inf": []
+    },
+    {
+      "screen": "SC-035",
+      "site": "WEB-01",
+      "route": "/admin/ticket-management",
+      "api_doc": [
+        "API-017",
+        "API-045",
+        "API-047",
+        "API-050",
+        "API-052",
+        "API-054",
+        "API-071",
+        "API-074",
+        "API-075",
+        "API-083",
+        "API-104",
+        "API-106",
+        "API-107",
+        "API-112",
+        "API-113",
+        "API-114",
+        "API-116",
+        "API-117",
+        "API-121",
+        "API-123",
+        "API-135",
+        "API-136"
+      ],
+      "api_inf": [],
+      "tables_doc": [
+        "admin_activity_logs",
+        "admins_tenants",
+        "app_settings",
+        "booking_child_age_infos",
+        "booking_obic_codes",
+        "bookings",
+        "disclaimer_options",
+        "disclaimers",
+        "email_settings",
+        "gmo_settings",
+        "partial_checkouts",
+        "smaregi_temporary_transactions",
+        "staffs",
+        "tenants",
+        "ticket_booking_schedules",
+        "ticket_details",
+        "ticket_discount_settings",
+        "tickets",
+        "users"
+      ],
+      "tables_inf": []
+    },
+    {
+      "screen": "SC-036",
+      "site": "WEB-01",
+      "route": "/admin/ticket-management/create",
+      "api_doc": [
+        "API-017",
+        "API-045",
+        "API-047",
+        "API-048",
+        "API-049",
+        "API-050",
+        "API-053",
+        "API-054",
+        "API-071",
+        "API-074",
+        "API-075",
+        "API-083",
+        "API-104",
+        "API-106",
+        "API-107",
+        "API-108",
+        "API-112",
+        "API-113",
+        "API-114",
+        "API-116",
+        "API-117",
+        "API-121",
+        "API-123",
+        "API-135",
+        "API-136"
+      ],
+      "api_inf": [],
+      "tables_doc": [
+        "admin_activity_logs",
+        "admins_tenants",
+        "app_settings",
+        "booking_child_age_infos",
+        "booking_obic_codes",
+        "bookings",
+        "disclaimer_options",
+        "disclaimers",
+        "email_settings",
+        "gmo_settings",
+        "partial_checkouts",
+        "smaregi_temporary_transactions",
+        "staffs",
+        "tenants",
+        "ticket_booking_schedules",
+        "ticket_details",
+        "ticket_discount_settings",
+        "tickets",
+        "users"
+      ],
+      "tables_inf": []
+    },
+    {
+      "screen": "SC-037",
+      "site": "WEB-01",
+      "route": "/admin/ticket-management/edit/:ticketId",
+      "api_doc": [
+        "API-017",
+        "API-045",
+        "API-047",
+        "API-048",
+        "API-049",
+        "API-050",
+        "API-053",
+        "API-054",
+        "API-071",
+        "API-074",
+        "API-075",
+        "API-083",
+        "API-104",
+        "API-106",
+        "API-107",
+        "API-108",
+        "API-112",
+        "API-113",
+        "API-114",
+        "API-116",
+        "API-117",
+        "API-121",
+        "API-123",
+        "API-135",
+        "API-136"
+      ],
+      "api_inf": [],
+      "tables_doc": [
+        "admin_activity_logs",
+        "admins_tenants",
+        "app_settings",
+        "booking_child_age_infos",
+        "booking_obic_codes",
+        "bookings",
+        "disclaimer_options",
+        "disclaimers",
+        "email_settings",
+        "gmo_settings",
+        "partial_checkouts",
+        "smaregi_temporary_transactions",
+        "staffs",
+        "tenants",
+        "ticket_booking_schedules",
+        "ticket_details",
+        "ticket_discount_settings",
+        "tickets",
+        "users"
+      ],
+      "tables_inf": []
+    },
+    {
+      "screen": "SC-038",
+      "site": "WEB-01",
+      "route": "/admin/ticket-management/view/:ticketId",
+      "api_doc": [
+        "API-017",
+        "API-045",
+        "API-050",
+        "API-071",
+        "API-074",
+        "API-075",
+        "API-083",
+        "API-104",
+        "API-106",
+        "API-107",
+        "API-112",
+        "API-113",
+        "API-114",
+        "API-116",
+        "API-117",
+        "API-121",
+        "API-123",
+        "API-135",
+        "API-136"
+      ],
+      "api_inf": [],
+      "tables_doc": [
+        "admin_activity_logs",
+        "admins_tenants",
+        "app_settings",
+        "booking_child_age_infos",
+        "booking_obic_codes",
+        "bookings",
+        "disclaimer_options",
+        "disclaimers",
+        "email_settings",
+        "gmo_settings",
+        "partial_checkouts",
+        "smaregi_temporary_transactions",
+        "staffs",
+        "tenants",
+        "ticket_booking_schedules",
+        "ticket_details",
+        "ticket_discount_settings",
+        "tickets",
+        "users"
+      ],
+      "tables_inf": []
+    },
+    {
+      "screen": "SC-039",
+      "site": "WEB-01",
+      "route": "/admin/unlock-account/:token",
+      "api_doc": [
+        "API-067"
+      ],
+      "api_inf": [],
+      "tables_doc": [
+        "users"
+      ],
+      "tables_inf": []
+    },
+    {
+      "screen": "SC-040",
+      "site": "WEB-01",
+      "route": "/admin/user-management",
+      "api_doc": [
+        "API-017",
+        "API-045",
+        "API-056",
+        "API-057",
+        "API-058",
+        "API-071",
+        "API-074",
+        "API-075",
+        "API-083",
+        "API-104",
+        "API-106",
+        "API-107",
+        "API-112",
+        "API-113",
+        "API-114",
+        "API-116",
+        "API-117",
+        "API-121",
+        "API-123",
+        "API-135",
+        "API-136"
+      ],
+      "api_inf": [],
+      "tables_doc": [
+        "accounts",
+        "admin_activity_logs",
+        "admins_tenants",
+        "app_settings",
+        "booking_child_age_infos",
+        "bookings",
+        "disclaimer_options",
+        "disclaimers",
+        "email_settings",
+        "gmo_settings",
+        "partial_checkouts",
+        "smaregi_temporary_transactions",
+        "staffs",
+        "tenants",
+        "ticket_booking_schedules",
+        "ticket_details",
+        "ticket_discount_settings",
+        "tickets",
+        "users"
+      ],
+      "tables_inf": []
+    },
+    {
+      "screen": "SC-041",
+      "site": "WEB-01",
+      "route": "/admin/user-management/create",
+      "api_doc": [
+        "API-045",
+        "API-056",
+        "API-058",
+        "API-135",
+        "API-136"
+      ],
+      "api_inf": [],
+      "tables_doc": [
+        "accounts",
+        "admin_activity_logs",
+        "admins_tenants",
+        "bookings",
+        "email_settings",
+        "gmo_settings",
+        "staffs",
+        "tenants",
+        "users"
+      ],
+      "tables_inf": []
+    },
+    {
+      "screen": "SC-042",
+      "site": "WEB-01",
+      "route": "/admin/user-management/edit/:userId",
+      "api_doc": [
+        "API-045",
+        "API-056",
+        "API-058",
+        "API-135",
+        "API-136"
+      ],
+      "api_inf": [],
+      "tables_doc": [
+        "accounts",
+        "admin_activity_logs",
+        "admins_tenants",
+        "bookings",
+        "email_settings",
+        "gmo_settings",
+        "staffs",
+        "tenants",
+        "users"
+      ],
+      "tables_inf": []
+    },
+    {
+      "screen": "SC-043",
+      "site": "WEB-01",
+      "route": "/admin/user-management/view/:userId",
+      "api_doc": [
+        "API-045",
+        "API-056",
+        "API-135",
+        "API-136"
+      ],
+      "api_inf": [],
+      "tables_doc": [
+        "accounts",
+        "admins_tenants",
+        "bookings",
+        "gmo_settings",
+        "staffs",
+        "tenants",
+        "users"
+      ],
+      "tables_inf": []
+    },
+    {
+      "screen": "SC-044",
+      "site": "WEB-01",
+      "route": "/admin/vacancies-status",
+      "api_doc": [
+        "API-045",
+        "API-054",
+        "API-075",
+        "API-135",
+        "API-136"
+      ],
+      "api_inf": [],
+      "tables_doc": [
+        "admins_tenants",
+        "app_settings",
+        "bookings",
+        "gmo_settings",
+        "staffs",
+        "tenants",
+        "ticket_booking_schedules",
+        "ticket_details",
+        "ticket_discount_settings",
+        "tickets",
+        "users"
+      ],
+      "tables_inf": []
+    },
+    {
+      "screen": "SC-045",
+      "site": "WEB-01",
+      "route": "/admin/waiting-time-management",
+      "api_doc": [
+        "API-001",
+        "API-045",
+        "API-135",
+        "API-136"
+      ],
+      "api_inf": [],
+      "tables_doc": [
+        "admins_tenants",
+        "app_settings",
+        "bookings",
+        "gmo_settings",
+        "staffs",
+        "tenants",
+        "users"
+      ],
+      "tables_inf": []
+    },
+    {
+      "screen": "SC-046",
+      "site": "WEB-02",
+      "route": "/",
+      "api_doc": [
+        "API-017",
+        "API-071",
+        "API-074",
+        "API-075",
+        "API-083",
+        "API-094",
+        "API-104",
+        "API-106",
+        "API-107",
+        "API-112",
+        "API-113",
+        "API-114",
+        "API-116",
+        "API-117",
+        "API-121",
+        "API-123"
+      ],
+      "api_inf": [],
+      "tables_doc": [
+        "admin_activity_logs",
+        "app_settings",
+        "booking_child_age_infos",
+        "bookings",
+        "disclaimer_options",
+        "disclaimers",
+        "email_settings",
+        "news",
+        "partial_checkouts",
+        "smaregi_temporary_transactions",
+        "staffs",
+        "tenants",
+        "ticket_booking_schedules",
+        "ticket_details",
+        "ticket_discount_settings",
+        "tickets",
+        "users"
+      ],
+      "tables_inf": []
+    },
+    {
+      "screen": "SC-047",
+      "site": "WEB-02",
+      "route": "/403",
+      "api_doc": [],
+      "api_inf": [],
+      "tables_doc": [],
+      "tables_inf": []
+    },
+    {
+      "screen": "SC-048",
+      "site": "WEB-02",
+      "route": "/booking/buy-monthly-ticket",
+      "api_doc": [
+        "API-017",
+        "API-069",
+        "API-070",
+        "API-071",
+        "API-074",
+        "API-075",
+        "API-083",
+        "API-104",
+        "API-105",
+        "API-106",
+        "API-107",
+        "API-112",
+        "API-113",
+        "API-114",
+        "API-116",
+        "API-117",
+        "API-121",
+        "API-123",
+        "API-124",
+        "API-125",
+        "API-126"
+      ],
+      "api_inf": [],
+      "tables_doc": [
+        "admin_activity_logs",
+        "app_settings",
+        "booking_child_age_infos",
+        "bookings",
+        "disclaimer_options",
+        "disclaimers",
+        "email_settings",
+        "gmo_settings",
+        "partial_checkouts",
+        "smaregi_temporary_transactions",
+        "staffs",
+        "tenants",
+        "ticket_booking_schedules",
+        "ticket_details",
+        "ticket_discount_settings",
+        "tickets",
+        "users"
+      ],
+      "tables_inf": []
+    },
+    {
+      "screen": "SC-049",
+      "site": "WEB-02",
+      "route": "/booking/buy-times-limit-ticket",
+      "api_doc": [
+        "API-017",
+        "API-069",
+        "API-070",
+        "API-071",
+        "API-074",
+        "API-075",
+        "API-083",
+        "API-104",
+        "API-105",
+        "API-106",
+        "API-107",
+        "API-112",
+        "API-113",
+        "API-114",
+        "API-116",
+        "API-117",
+        "API-121",
+        "API-123",
+        "API-124",
+        "API-125",
+        "API-126"
+      ],
+      "api_inf": [],
+      "tables_doc": [
+        "admin_activity_logs",
+        "app_settings",
+        "booking_child_age_infos",
+        "bookings",
+        "disclaimer_options",
+        "disclaimers",
+        "email_settings",
+        "gmo_settings",
+        "partial_checkouts",
+        "smaregi_temporary_transactions",
+        "staffs",
+        "tenants",
+        "ticket_booking_schedules",
+        "ticket_details",
+        "ticket_discount_settings",
+        "tickets",
+        "users"
+      ],
+      "tables_inf": []
+    },
+    {
+      "screen": "SC-050",
+      "site": "WEB-02",
+      "route": "/booking/payment-online",
+      "api_doc": [
+        "API-017",
+        "API-069",
+        "API-070",
+        "API-071",
+        "API-074",
+        "API-075",
+        "API-083",
+        "API-104",
+        "API-106",
+        "API-107",
+        "API-112",
+        "API-113",
+        "API-114",
+        "API-116",
+        "API-117",
+        "API-121",
+        "API-123",
+        "API-124",
+        "API-125",
+        "API-126"
+      ],
+      "api_inf": [],
+      "tables_doc": [
+        "admin_activity_logs",
+        "app_settings",
+        "booking_child_age_infos",
+        "bookings",
+        "disclaimer_options",
+        "disclaimers",
+        "email_settings",
+        "gmo_settings",
+        "partial_checkouts",
+        "smaregi_temporary_transactions",
+        "staffs",
+        "tenants",
+        "ticket_booking_schedules",
+        "ticket_details",
+        "ticket_discount_settings",
+        "tickets",
+        "users"
+      ],
+      "tables_inf": []
+    },
+    {
+      "screen": "SC-051",
+      "site": "WEB-02",
+      "route": "/booking/payment-online-failure",
+      "api_doc": [],
+      "api_inf": [],
+      "tables_doc": [],
+      "tables_inf": []
+    },
+    {
+      "screen": "SC-052",
+      "site": "WEB-02",
+      "route": "/booking/payment-online-monthly-ticket-success",
+      "api_doc": [],
+      "api_inf": [],
+      "tables_doc": [],
+      "tables_inf": []
+    },
+    {
+      "screen": "SC-053",
+      "site": "WEB-02",
+      "route": "/booking/payment-online-success",
+      "api_doc": [],
+      "api_inf": [],
+      "tables_doc": [],
+      "tables_inf": []
+    },
+    {
+      "screen": "SC-054",
+      "site": "WEB-02",
+      "route": "/booking/use-in-day",
+      "api_doc": [
+        "API-017",
+        "API-071",
+        "API-074",
+        "API-075",
+        "API-083",
+        "API-104",
+        "API-106",
+        "API-107",
+        "API-112",
+        "API-113",
+        "API-114",
+        "API-116",
+        "API-117",
+        "API-121",
+        "API-123"
+      ],
+      "api_inf": [],
+      "tables_doc": [
+        "admin_activity_logs",
+        "app_settings",
+        "booking_child_age_infos",
+        "bookings",
+        "disclaimer_options",
+        "disclaimers",
+        "email_settings",
+        "partial_checkouts",
+        "smaregi_temporary_transactions",
+        "staffs",
+        "tenants",
+        "ticket_booking_schedules",
+        "ticket_details",
+        "ticket_discount_settings",
+        "tickets",
+        "users"
+      ],
+      "tables_inf": []
+    },
+    {
+      "screen": "SC-055",
+      "site": "WEB-02",
+      "route": "/commercial-law",
+      "api_doc": [],
+      "api_inf": [],
+      "tables_doc": [],
+      "tables_inf": []
+    },
+    {
+      "screen": "SC-056",
+      "site": "WEB-02",
+      "route": "/error",
+      "api_doc": [],
+      "api_inf": [],
+      "tables_doc": [],
+      "tables_inf": []
+    },
+    {
+      "screen": "SC-057",
+      "site": "WEB-02",
+      "route": "/forgot-password",
+      "api_doc": [
+        "API-140"
+      ],
+      "api_inf": [],
+      "tables_doc": [
+        "email_settings",
+        "users"
+      ],
+      "tables_inf": []
+    },
+    {
+      "screen": "SC-058",
+      "site": "WEB-02",
+      "route": "/maintenance",
+      "api_doc": [],
+      "api_inf": [],
+      "tables_doc": [],
+      "tables_inf": []
+    },
+    {
+      "screen": "SC-059",
+      "site": "WEB-02",
+      "route": "/price-list",
+      "api_doc": [
+        "API-017",
+        "API-071",
+        "API-074",
+        "API-075",
+        "API-083",
+        "API-104",
+        "API-106",
+        "API-107",
+        "API-112",
+        "API-113",
+        "API-114",
+        "API-116",
+        "API-117",
+        "API-121",
+        "API-123"
+      ],
+      "api_inf": [],
+      "tables_doc": [
+        "admin_activity_logs",
+        "app_settings",
+        "booking_child_age_infos",
+        "bookings",
+        "disclaimer_options",
+        "disclaimers",
+        "email_settings",
+        "partial_checkouts",
+        "smaregi_temporary_transactions",
+        "staffs",
+        "tenants",
+        "ticket_booking_schedules",
+        "ticket_details",
+        "ticket_discount_settings",
+        "tickets",
+        "users"
+      ],
+      "tables_inf": []
+    },
+    {
+      "screen": "SC-060",
+      "site": "WEB-02",
+      "route": "/privacy-policy",
+      "api_doc": [],
+      "api_inf": [],
+      "tables_doc": [],
+      "tables_inf": []
+    },
+    {
+      "screen": "SC-061",
+      "site": "WEB-02",
+      "route": "/reset-password/:token",
+      "api_doc": [
+        "API-141"
+      ],
+      "api_inf": [],
+      "tables_doc": [
+        "users"
+      ],
+      "tables_inf": []
+    },
+    {
+      "screen": "SC-062",
+      "site": "WEB-02",
+      "route": "/reset-password/success",
+      "api_doc": [],
+      "api_inf": [],
+      "tables_doc": [],
+      "tables_inf": []
+    },
+    {
+      "screen": "SC-063",
+      "site": "WEB-02",
+      "route": "/signin",
+      "api_doc": [
+        "API-064"
+      ],
+      "api_inf": [],
+      "tables_doc": [
+        "email_settings",
+        "users"
+      ],
+      "tables_inf": []
+    },
+    {
+      "screen": "SC-064",
+      "site": "WEB-02",
+      "route": "/signup",
+      "api_doc": [
+        "API-064",
+        "API-066",
+        "API-122"
+      ],
+      "api_inf": [],
+      "tables_doc": [
+        "email_settings",
+        "users"
+      ],
+      "tables_inf": []
+    },
+    {
+      "screen": "SC-065",
+      "site": "WEB-02",
+      "route": "/signup-success",
+      "api_doc": [
+        "API-064"
+      ],
+      "api_inf": [],
+      "tables_doc": [
+        "email_settings",
+        "users"
+      ],
+      "tables_inf": []
+    },
+    {
+      "screen": "SC-066",
+      "site": "WEB-02",
+      "route": "/tenant-list",
+      "api_doc": [
+        "API-075",
+        "API-104",
+        "API-130",
+        "API-132"
+      ],
+      "api_inf": [],
+      "tables_doc": [
+        "app_settings",
+        "bookings",
+        "tenants",
+        "ticket_booking_schedules",
+        "tickets",
+        "users_tenants_favorites"
+      ],
+      "tables_inf": []
+    },
+    {
+      "screen": "SC-067",
+      "site": "WEB-02",
+      "route": "/tenant/:code",
+      "api_doc": [
+        "API-075",
+        "API-102",
+        "API-107",
+        "API-130",
+        "API-132"
+      ],
+      "api_inf": [],
+      "tables_doc": [
+        "app_settings",
+        "bookings",
+        "tenants",
+        "ticket_booking_schedules",
+        "ticket_details",
+        "ticket_discount_settings",
+        "tickets",
+        "users_tenants_favorites"
+      ],
+      "tables_inf": []
+    },
+    {
+      "screen": "SC-068",
+      "site": "WEB-02",
+      "route": "/terms-of-use",
+      "api_doc": [],
+      "api_inf": [],
+      "tables_doc": [],
+      "tables_inf": []
+    },
+    {
+      "screen": "SC-069",
+      "site": "WEB-02",
+      "route": "/user/my-page",
+      "api_doc": [],
+      "api_inf": [],
+      "tables_doc": [],
+      "tables_inf": []
+    },
+    {
+      "screen": "SC-070",
+      "site": "WEB-02",
+      "route": "/user/my-page/booking-history",
+      "api_doc": [
+        "API-017",
+        "API-070",
+        "API-071",
+        "API-074",
+        "API-075",
+        "API-083",
+        "API-104",
+        "API-106",
+        "API-107",
+        "API-112",
+        "API-113",
+        "API-114",
+        "API-116",
+        "API-117",
+        "API-119",
+        "API-121",
+        "API-123"
+      ],
+      "api_inf": [],
+      "tables_doc": [
+        "admin_activity_logs",
+        "app_settings",
+        "booking_child_age_infos",
+        "bookings",
+        "disclaimer_options",
+        "disclaimers",
+        "email_settings",
+        "gmo_settings",
+        "partial_checkouts",
+        "smaregi_temporary_transactions",
+        "staffs",
+        "tenants",
+        "ticket_booking_schedules",
+        "ticket_details",
+        "ticket_discount_settings",
+        "tickets",
+        "users"
+      ],
+      "tables_inf": []
+    },
+    {
+      "screen": "SC-071",
+      "site": "WEB-02",
+      "route": "/user/my-page/booking-history/:id",
+      "api_doc": [
+        "API-017",
+        "API-070",
+        "API-071",
+        "API-072",
+        "API-073",
+        "API-074",
+        "API-075",
+        "API-083",
+        "API-104",
+        "API-106",
+        "API-107",
+        "API-109",
+        "API-110",
+        "API-111",
+        "API-112",
+        "API-113",
+        "API-114",
+        "API-116",
+        "API-117",
+        "API-121",
+        "API-123"
+      ],
+      "api_inf": [],
+      "tables_doc": [
+        "admin_activity_logs",
+        "app_settings",
+        "booking_child_age_infos",
+        "bookings",
+        "disclaimer_options",
+        "disclaimers",
+        "email_settings",
+        "gmo_settings",
+        "partial_checkouts",
+        "smaregi_temporary_transactions",
+        "staffs",
+        "tenants",
+        "ticket_booking_schedules",
+        "ticket_details",
+        "ticket_discount_settings",
+        "tickets",
+        "users"
+      ],
+      "tables_inf": []
+    },
+    {
+      "screen": "SC-072",
+      "site": "WEB-02",
+      "route": "/user/my-page/booking-history/cancel-success",
+      "api_doc": [],
+      "api_inf": [],
+      "tables_doc": [],
+      "tables_inf": []
+    },
+    {
+      "screen": "SC-073",
+      "site": "WEB-02",
+      "route": "/user/my-page/booking-history/partial-checkout/:id",
+      "api_doc": [
+        "API-017",
+        "API-070",
+        "API-071",
+        "API-074",
+        "API-075",
+        "API-083",
+        "API-104",
+        "API-106",
+        "API-107",
+        "API-109",
+        "API-112",
+        "API-113",
+        "API-114",
+        "API-116",
+        "API-117",
+        "API-118",
+        "API-121",
+        "API-123"
+      ],
+      "api_inf": [],
+      "tables_doc": [
+        "admin_activity_logs",
+        "app_settings",
+        "booking_child_age_infos",
+        "bookings",
+        "disclaimer_options",
+        "disclaimers",
+        "email_settings",
+        "gmo_settings",
+        "partial_checkouts",
+        "smaregi_temporary_transactions",
+        "staffs",
+        "tenants",
+        "ticket_booking_schedules",
+        "ticket_details",
+        "ticket_discount_settings",
+        "tickets",
+        "users"
+      ],
+      "tables_inf": []
+    },
+    {
+      "screen": "SC-074",
+      "site": "WEB-02",
+      "route": "/user/my-page/booking-history/partial-checkout/success",
+      "api_doc": [],
+      "api_inf": [],
+      "tables_doc": [],
+      "tables_inf": []
+    },
+    {
+      "screen": "SC-075",
+      "site": "WEB-02",
+      "route": "/user/my-page/booking-history/update",
+      "api_doc": [],
+      "api_inf": [],
+      "tables_doc": [],
+      "tables_inf": []
+    },
+    {
+      "screen": "SC-076",
+      "site": "WEB-02",
+      "route": "/user/my-page/booking-history/update/:id",
+      "api_doc": [
+        "API-017",
+        "API-069",
+        "API-070",
+        "API-071",
+        "API-073",
+        "API-074",
+        "API-075",
+        "API-083",
+        "API-104",
+        "API-106",
+        "API-107",
+        "API-109",
+        "API-112",
+        "API-113",
+        "API-114",
+        "API-116",
+        "API-117",
+        "API-121",
+        "API-123",
+        "API-124",
+        "API-125",
+        "API-126"
+      ],
+      "api_inf": [],
+      "tables_doc": [
+        "admin_activity_logs",
+        "app_settings",
+        "booking_child_age_infos",
+        "bookings",
+        "disclaimer_options",
+        "disclaimers",
+        "email_settings",
+        "gmo_settings",
+        "partial_checkouts",
+        "smaregi_temporary_transactions",
+        "staffs",
+        "tenants",
+        "ticket_booking_schedules",
+        "ticket_details",
+        "ticket_discount_settings",
+        "tickets",
+        "users"
+      ],
+      "tables_inf": []
+    },
+    {
+      "screen": "SC-077",
+      "site": "WEB-02",
+      "route": "/user/my-page/booking-history/update/completed",
+      "api_doc": [],
+      "api_inf": [],
+      "tables_doc": [],
+      "tables_inf": []
+    },
+    {
+      "screen": "SC-078",
+      "site": "WEB-02",
+      "route": "/user/my-page/delete-account",
+      "api_doc": [
+        "API-128"
+      ],
+      "api_inf": [],
+      "tables_doc": [
+        "accounts",
+        "email_settings",
+        "users"
+      ],
+      "tables_inf": []
+    },
+    {
+      "screen": "SC-079",
+      "site": "WEB-02",
+      "route": "/user/my-page/favorite-tenants",
+      "api_doc": [
+        "API-075",
+        "API-130",
+        "API-131",
+        "API-132"
+      ],
+      "api_inf": [],
+      "tables_doc": [
+        "app_settings",
+        "bookings",
+        "tenants",
+        "ticket_booking_schedules",
+        "tickets",
+        "users_tenants_favorites"
+      ],
+      "tables_inf": []
+    },
+    {
+      "screen": "SC-080",
+      "site": "WEB-02",
+      "route": "/user/my-page/monthly-ticket-status",
+      "api_doc": [
+        "API-017",
+        "API-068",
+        "API-071",
+        "API-074",
+        "API-075",
+        "API-083",
+        "API-104",
+        "API-105",
+        "API-106",
+        "API-107",
+        "API-112",
+        "API-113",
+        "API-114",
+        "API-115",
+        "API-116",
+        "API-117",
+        "API-121",
+        "API-123"
+      ],
+      "api_inf": [],
+      "tables_doc": [
+        "admin_activity_logs",
+        "app_settings",
+        "booking_child_age_infos",
+        "bookings",
+        "disclaimer_options",
+        "disclaimers",
+        "email_settings",
+        "partial_checkouts",
+        "smaregi_temporary_transactions",
+        "staffs",
+        "tenants",
+        "ticket_booking_schedules",
+        "ticket_details",
+        "ticket_discount_settings",
+        "tickets",
+        "users"
+      ],
+      "tables_inf": []
+    },
+    {
+      "screen": "SC-081",
+      "site": "WEB-02",
+      "route": "/user/my-page/personal-info",
+      "api_doc": [
+        "API-124",
+        "API-126",
+        "API-128"
+      ],
+      "api_inf": [],
+      "tables_doc": [
+        "accounts",
+        "email_settings",
+        "users"
+      ],
+      "tables_inf": []
+    },
+    {
+      "screen": "SC-082",
+      "site": "WEB-02",
+      "route": "/user/my-page/personal-info/change-credit-card",
+      "api_doc": [
+        "API-125",
+        "API-126"
+      ],
+      "api_inf": [],
+      "tables_doc": [
+        "email_settings",
+        "users"
+      ],
+      "tables_inf": []
+    },
+    {
+      "screen": "SC-083",
+      "site": "WEB-02",
+      "route": "/user/my-page/personal-info/change-credit-card/delete",
+      "api_doc": [],
+      "api_inf": [],
+      "tables_doc": [],
+      "tables_inf": []
+    },
+    {
+      "screen": "SC-084",
+      "site": "WEB-02",
+      "route": "/user/my-page/personal-info/change-credit-card/success",
+      "api_doc": [],
+      "api_inf": [],
+      "tables_doc": [],
+      "tables_inf": []
+    },
+    {
+      "screen": "SC-085",
+      "site": "WEB-02",
+      "route": "/user/my-page/personal-info/change-password",
+      "api_doc": [
+        "API-142"
+      ],
+      "api_inf": [],
+      "tables_doc": [
+        "email_settings",
+        "users"
+      ],
+      "tables_inf": []
+    },
+    {
+      "screen": "SC-086",
+      "site": "WEB-02",
+      "route": "/user/my-page/personal-info/update-information",
+      "api_doc": [
+        "API-122",
+        "API-128"
+      ],
+      "api_inf": [],
+      "tables_doc": [
+        "accounts",
+        "email_settings",
+        "users"
+      ],
+      "tables_inf": []
+    },
+    {
+      "screen": "SC-087",
+      "site": "WEB-02",
+      "route": "/user/my-page/personal-info/update-information/success",
+      "api_doc": [],
+      "api_inf": [],
+      "tables_doc": [],
+      "tables_inf": []
+    },
+    {
+      "screen": "SC-088",
+      "site": "WEB-02",
+      "route": "/user/my-page/personal-info/update-information/verify-edit-email/:token",
+      "api_doc": [
+        "API-127",
+        "API-143"
+      ],
+      "api_inf": [],
+      "tables_doc": [
+        "email_settings",
+        "users"
+      ],
+      "tables_inf": []
+    },
+    {
+      "screen": "SC-089",
+      "site": "WEB-02",
+      "route": "/user/my-page/personal-info/update-password/:token",
+      "api_doc": [
+        "API-141"
+      ],
+      "api_inf": [],
+      "tables_doc": [
+        "users"
+      ],
+      "tables_inf": []
+    },
+    {
+      "screen": "SC-090",
+      "site": "WEB-02",
+      "route": "/user/my-page/personal-info/update-password/success",
+      "api_doc": [],
+      "api_inf": [],
+      "tables_doc": [],
+      "tables_inf": []
+    },
+    {
+      "screen": "SC-091",
+      "site": "WEB-02",
+      "route": "/user/my-page/times-limit-ticket-status",
+      "api_doc": [
+        "API-017",
+        "API-068",
+        "API-071",
+        "API-074",
+        "API-075",
+        "API-083",
+        "API-104",
+        "API-105",
+        "API-106",
+        "API-107",
+        "API-112",
+        "API-113",
+        "API-114",
+        "API-116",
+        "API-117",
+        "API-120",
+        "API-121",
+        "API-123"
+      ],
+      "api_inf": [],
+      "tables_doc": [
+        "admin_activity_logs",
+        "app_settings",
+        "booking_child_age_infos",
+        "bookings",
+        "disclaimer_options",
+        "disclaimers",
+        "email_settings",
+        "partial_checkouts",
+        "smaregi_temporary_transactions",
+        "staffs",
+        "tenants",
+        "ticket_booking_schedules",
+        "ticket_details",
+        "ticket_discount_settings",
+        "tickets",
+        "users"
+      ],
+      "tables_inf": []
+    },
+    {
+      "screen": "SC-092",
+      "site": "WEB-02",
+      "route": "/vacancy-status",
+      "api_doc": [
+        "API-075",
+        "API-104"
+      ],
+      "api_inf": [],
+      "tables_doc": [
+        "app_settings",
+        "bookings",
+        "tenants",
+        "ticket_booking_schedules",
+        "tickets"
+      ],
+      "tables_inf": []
+    },
+    {
+      "screen": "SC-093",
+      "site": "WEB-02",
+      "route": "/verify/:token",
+      "api_doc": [
+        "API-127",
+        "API-143"
+      ],
+      "api_inf": [],
+      "tables_doc": [
+        "email_settings",
+        "users"
+      ],
+      "tables_inf": []
+    }
+  ],
+  "batch": [],
+  "hidden_tables": [
+    "tbl:disclaimer_options",
+    "tbl:TotalUserBookingsGroup",
+    "tbl:user_first_bookings"
+  ]
+}

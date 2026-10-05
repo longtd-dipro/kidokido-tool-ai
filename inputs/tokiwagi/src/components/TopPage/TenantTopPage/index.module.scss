@@ -1,0 +1,47 @@
+@import "styles/user-base";
+@import "styles/mixins";
+
+.card {
+  padding: 20px;
+  gap: 21px;
+  width: 100%;
+  background: $blue-card-color;
+  border-radius: 10px;
+
+  @include media-xs {
+    padding: 20px 0;
+  }
+}
+
+.cardHeaderUpdate {
+  border-bottom: 1px solid $blue-card-header-border-color;
+  padding-bottom: 16px;
+  margin-bottom: 16px;
+  position: relative;
+
+  @include media-xs {
+    padding-bottom: 10px;
+    align-items: unset;
+
+    &:after {
+      content: " ";
+      height: 1px;
+      width: 200px;
+      position: absolute;
+      bottom: -1px;
+      left: 0;
+      background: #0068b7;
+    }
+  }
+}
+
+.cardHeaderUrl {
+  width: 300px;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: unset;
+  white-space: pre;
+}

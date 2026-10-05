@@ -1,0 +1,18 @@
+@import "styles/_user-base.scss";
+@import "styles/_mixins.scss";
+
+.heading {
+  background: $bar-bg-gray;
+  padding: 20px;
+  color: $blue-color;
+}
+
+.vacancies {
+  border-bottom: 1px solid $disable-bg;
+}
+
+@include media-xs() {
+  .heading {
+    padding: 10px;
+  }
+}

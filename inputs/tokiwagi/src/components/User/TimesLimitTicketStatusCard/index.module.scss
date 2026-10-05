@@ -1,0 +1,62 @@
+@import "styles/_user-base.scss";
+@import "styles/_mixins.scss";
+
+.card {
+  padding: 20px;
+  gap: 21px;
+  max-width: 856px;
+  width: 100%;
+  border-radius: 10px;
+}
+.cardDisabled {
+  opacity: 0.5;
+}
+
+.backgroundEnableBlue {
+  background: $blue-card-color;
+}
+
+.backgroundEnableYellow {
+  background: $yellow-card-color;
+}
+
+.backgroundDisable {
+  background: #e6e1e1;
+}
+
+.cardHeader {
+  border-bottom: 1px solid $blue-card-header-border-color;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cardBody {
+  display: flex;
+}
+
+.bookingAvailable {
+  border: 0;
+  box-shadow: none;
+  font-weight: 400;
+
+  @include media-xs() {
+    padding: 5px 20px;
+    font-size: 14px;
+  }
+}
+
+.bookingExpired {
+  background: $disable-bg;
+  color: $disable-color;
+  border: 0;
+  box-shadow: none;
+  font-weight: 400;
+
+  @include media-xs() {
+    padding: 5px 20px;
+    font-size: 14px;
+  }
+}

@@ -1,0 +1,61 @@
+import { Prisma } from "@prisma/client";
+
+export const USER_BOOKING_SELECT_FIELDS: Prisma.BookingSelect = {
+  id: true,
+  tenantCode: true,
+  ticketId: true,
+  adultQuantity: true,
+  adultPrice: true,
+  childQuantity: true,
+  childPrice: true,
+  totalAmount: true,
+  status: true,
+  paymentStatus: true,
+  barCode: true,
+  subEmail: true,
+  createdAt: true,
+  updatedAt: true,
+  userId: true,
+  date: true,
+  parentBookingId: true,
+  ticketBookingScheduleId: true,
+  GMOTransactionId: true,
+  firstCheckedInAt: true,
+  checkedInAt: true,
+  checkedOutAt: true,
+  firstCheckoutAt: true,
+  stayDuration: true,
+  partialCheckedOutAdultQuantity: true,
+  partialCheckedOutChildQuantity: true,
+  smaregiQRCodes: true,
+  isSmaregiScanned: true,
+  reCheckInCount: true,
+  tempCheckoutAt: true,
+};
+
+export const USER_TICKET_WITHIN_INCLUDE_FIELDS: Prisma.TicketSelect = {
+  id: true,
+  name: true,
+  paymentType: true,
+  type: true,
+  visibility: true,
+  maxChildPerAdult: true,
+  createdAt: true,
+  updatedAt: true,
+  canBookInAdvance: true,
+  tenantCode: true,
+  masterTicketId: true,
+  childAgeLimitFrom: true,
+  childAgeLimitTo: true,
+};
+
+export const USER_TENANT_WITHIN_INCLUDE_FIELDS: Prisma.TenantSelect = {
+  code: true,
+  name: true,
+  active: true,
+  allowedVersion: true,
+  deleted: true,
+  createdAt: true,
+  updatedAt: true,
+};
+

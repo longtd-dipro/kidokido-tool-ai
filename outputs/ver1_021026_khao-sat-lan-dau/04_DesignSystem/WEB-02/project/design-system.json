@@ -1,0 +1,122 @@
+{
+  "v": 3,
+  "layout": "files",
+  "createdOnFiles": {
+    "v": 1,
+    "at": "2026-10-02T08:09:35Z"
+  },
+  "title": "KidoKido — 予約・購入サイト",
+  "namespace": "KidoKidoUser",
+  "libraries": [
+    {
+      "name": "react",
+      "version": "18"
+    },
+    {
+      "name": "react-dom",
+      "version": "18"
+    }
+  ],
+  "sections": {},
+  "groups": [
+    "Icons"
+  ],
+  "assetGroups": {
+    "Icons": {
+      "name": "Icons",
+      "tile": "xs",
+      "order": [
+        "ArrowDropDown.svg",
+        "Visibility.svg",
+        "Calendar.svg",
+        "RadioButtonUnchecked.svg",
+        "RadioButtonChecked.svg",
+        "CheckBox.svg",
+        "NavigateBefore.svg",
+        "NavigateNext.svg",
+        "FavoriteBorder.svg",
+        "NewWindow.svg",
+        "CircularProgress.svg"
+      ],
+      "files": {
+        "ArrowDropDown.svg": {
+          "name": "ArrowDropDown.svg",
+          "size": 245,
+          "type": "image/svg+xml",
+          "blob": "bbb0b000ecdd851f7ffea28f4a851b49"
+        },
+        "Visibility.svg": {
+          "name": "Visibility.svg",
+          "size": 437,
+          "type": "image/svg+xml",
+          "blob": "3cbf38ab92d38f60a267c4dfc880f6a9"
+        },
+        "Calendar.svg": {
+          "name": "Calendar.svg",
+          "size": 1401,
+          "type": "image/svg+xml",
+          "blob": "888098ae685b6fffcae6862e961031d3"
+        },
+        "RadioButtonUnchecked.svg": {
+          "name": "RadioButtonUnchecked.svg",
+          "size": 361,
+          "type": "image/svg+xml",
+          "blob": "16fa5e9fd77a0906f0f4754e7787b52c"
+        },
+        "RadioButtonChecked.svg": {
+          "name": "RadioButtonChecked.svg",
+          "size": 406,
+          "type": "image/svg+xml",
+          "blob": "3657c5a1348ed44268165f36377a2d45"
+        },
+        "CheckBox.svg": {
+          "name": "CheckBox.svg",
+          "size": 357,
+          "type": "image/svg+xml",
+          "blob": "d104173bc9d5fc1ca0aa25e80808fa72"
+        },
+        "NavigateBefore.svg": {
+          "name": "NavigateBefore.svg",
+          "size": 300,
+          "type": "image/svg+xml",
+          "blob": "edb7ca3d0450dd7ba13b57edf75f42a0"
+        },
+        "NavigateNext.svg": {
+          "name": "NavigateNext.svg",
+          "size": 299,
+          "type": "image/svg+xml",
+          "blob": "57210161ef4fc9e96bed6e445faf1dd4"
+        },
+        "FavoriteBorder.svg": {
+          "name": "FavoriteBorder.svg",
+          "size": 574,
+          "type": "image/svg+xml",
+          "blob": "754a074eff9576e4f3a35324090e4d40"
+        },
+        "NewWindow.svg": {
+          "name": "NewWindow.svg",
+          "size": 1149,
+          "type": "image/svg+xml",
+          "blob": "ed4124deb920b1768350e01d2ddec70b"
+        },
+        "CircularProgress.svg": {
+          "name": "CircularProgress.svg",
+          "size": 287,
+          "type": "image/svg+xml",
+          "blob": "3783ef6a89647ad7b949bb911aa04f03"
+        }
+      }
+    }
+  },
+  "blobs": {},
+  "docs": {
+    "readme": "project/README.md",
+    "sections": []
+  },
+  "lastChange": {
+    "by": "Claude",
+    "at": "2026-10-02T09:39:18Z",
+    "via": "Claude Code · system-to-doc ver1",
+    "note": "Publish AS-IS baseline ver1 (DRAFT)"
+  }
+}

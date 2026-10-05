@@ -1,0 +1,44 @@
+.header-list {
+  background-color: white;
+
+  li {
+    a {
+      color: #0068b7;
+
+      &:hover {
+        color: rgb(156 163 175);
+      }
+    }
+  }
+}
+
+.header-menu-list {
+  li {
+    &:hover {
+      color: rgb(29 78 216);
+    }
+  }
+}
+
+.btn-signup {
+  background-color: #fff100;
+
+  &:hover {
+    background-color: rgb(254 240 138);
+  }
+}
+
+.btn-signin {
+  background-color: #0068b7;
+
+  &:hover {
+    background-color: rgb(43, 120, 207);
+  }
+}
+
+.header-drawer {
+  :global(.MuiBackdrop-root) {
+    background-color: rgba(180, 180, 180, 0.2);
+    backdrop-filter: blur(3px);
+  }
+}

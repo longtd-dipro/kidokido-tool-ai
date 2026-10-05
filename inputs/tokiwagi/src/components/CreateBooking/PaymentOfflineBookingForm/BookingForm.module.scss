@@ -1,0 +1,41 @@
+@import "styles/_user-base.scss";
+
+.bookingForm {
+  background: $item-bg;
+  border-radius: 10px;
+
+  .ticket {
+    background: #fff;
+    padding: 10px 20px;
+    border-radius: 10px;
+  }
+
+  :global(.MuiAutocomplete-option) {
+    padding-top: 12px !important;
+    padding-bottom: 12px !important;
+
+    border-bottom: 1px solid #0068b773;
+
+    &:last-child {
+      padding-bottom: 6px;
+      border-bottom: none;
+    }
+  }
+}
+
+.quantityCard {
+  background: #fff;
+  border-radius: 10px;
+
+  .title {
+    border-bottom: 1px dotted $disable-color;
+  }
+}
+
+.iconButton {
+  padding: 0;
+}
+
+.iconButton:disabled {
+  opacity: 0.5;
+}

@@ -1,0 +1,6 @@
+<!doctype html><html><head><meta charset=utf-8><title>Detail</title><link rel=stylesheet href=style.css><link rel=icon href=favicon.svg type="image/svg+xml"></head><body><header><img src="logo.svg" alt="ShopDemo logo"><span>ShopDemo</span></header><div class="shell"><nav class="side"><a href="list.html">Danh sách</a><a href="detail.html" class="active" aria-current="page">Chi tiết</a></nav><main>
+<h1>Chi tiết</h1><div role="alert" class="alert alert-info">Đơn hàng đang chờ xử lý.</div><span class="badge badge-err">Đã huỷ</span><img src="/img/missing.png?x=1"><div style="width:2000px;background:#FFE0E0">wide</div>
+<form action="/api/save" method="POST"><label>Ghi chú <textarea name=note>private note</textarea></label><input type=submit class=btn value="Lưu"></form><div class="scrim"></div><div role="dialog" class="modal" aria-label="Xác nhận"><h2>Xác nhận xoá</h2><p>Bạn có chắc muốn xoá?</p><button class="btn btn-sub" type="button">Huỷ</button> <button class="btn btn-danger" type="button">Xoá</button></div>
+<script>fetch('/api/track',{method:'POST',body:'x'}).catch(()=>{}); console.error('boom test');</script>
+<a href="nope.html">broken</a>
+</main></div></body></html>

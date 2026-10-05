@@ -1,0 +1,43 @@
+@import "styles/_user-base.scss";
+@import "styles/_mixins.scss";
+
+.card {
+  border: 1px solid $text-color;
+  border-radius: 10px;
+
+  .title {
+    border-bottom: 1px dotted $text-color;
+  }
+
+  .footer {
+    border-top: 6px solid $blue-color;
+    background-color: $item-bg;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+
+    .detailPrices {
+      border-top: 4px dotted $text-color;
+    }
+    @include media-xs() {
+      .detailPrices {
+        border-top: 2px dotted $text-color;
+      }
+    }
+  }
+
+  .childAgeItem {
+    text-align: center;
+    background: rgba(217, 217, 217, 0.3);
+    border: 0.5px solid #313131;
+    border-radius: 10px;
+    width: 100px;
+    padding: 5px 0;
+    min-height: 36px;
+  }
+
+  @include media-xs() {
+    .childAgeItem {
+      width: 80px;
+    }
+  }
+}

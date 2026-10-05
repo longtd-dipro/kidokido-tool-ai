@@ -1,0 +1,5898 @@
+{
+ "source": "prisma/schema.prisma",
+ "tables": [
+  {
+   "model": "User",
+   "table": "users",
+   "start": 12,
+   "end": 57,
+   "columns": [
+    {
+     "field": "id",
+     "column": "id",
+     "type": "integer",
+     "prisma_type": "Int",
+     "nullable": "NO",
+     "pk": true,
+     "default": "autoincrement()",
+     "max_length": "",
+     "format": "",
+     "constraint": [],
+     "line": 13,
+     "list": false,
+     "fk": ""
+    },
+    {
+     "field": "password",
+     "column": "password",
+     "type": "text",
+     "prisma_type": "String?",
+     "nullable": "YES",
+     "pk": false,
+     "default": "",
+     "max_length": "",
+     "format": "",
+     "constraint": [],
+     "line": 14,
+     "list": false,
+     "fk": ""
+    },
+    {
+     "field": "name",
+     "column": "name",
+     "type": "text",
+     "prisma_type": "String?",
+     "nullable": "YES",
+     "pk": false,
+     "default": "",
+     "max_length": "",
+     "format": "",
+     "constraint": [],
+     "line": 15,
+     "list": false,
+     "fk": ""
+    },
+    {
+     "field": "firstName",
+     "column": "first_name",
+     "type": "text",
+     "prisma_type": "String?",
+     "nullable": "YES",
+     "pk": false,
+     "default": "",
+     "max_length": "",
+     "format": "",
+     "constraint": [],
+     "line": 16,
+     "list": false,
+     "fk": ""
+    },
+    {
+     "field": "lastName",
+     "column": "last_name",
+     "type": "text",
+     "prisma_type": "String?",
+     "nullable": "YES",
+     "pk": false,
+     "default": "",
+     "max_length": "",
+     "format": "",
+     "constraint": [],
+     "line": 17,
+     "list": false,
+     "fk": ""
+    },
+    {
+     "field": "firstNameFurigana",
+     "column": "first_name_furigana",
+     "type": "text",
+     "prisma_type": "String?",
+     "nullable": "YES",
+     "pk": false,
+     "default": "",
+     "max_length": "",
+     "format": "",
+     "constraint": [],
+     "line": 18,
+     "list": false,
+     "fk": ""
+    },
+    {
+     "field": "lastNameFurigana",
+     "column": "last_name_furigana",
+     "type": "text",
+     "prisma_type": "String?",
+     "nullable": "YES",
+     "pk": false,
+     "default": "",
+     "max_length": "",
+     "format": "",
+     "constraint": [],
+     "line": 19,
+     "list": false,
+     "fk": ""
+    },
+    {
+     "field": "email",
+     "column": "email",
+     "type": "text",
+     "prisma_type": "String?",
+     "nullable": "YES",
+     "pk": false,
+     "default": "",
+     "max_length": "",
+     "format": "",
+     "constraint": [
+      "UNIQUE"
+     ],
+     "line": 20,
+     "list": false,
+     "fk": ""
+    },
+    {
+     "field": "emailVerified",
+     "column": "email_verified",
+     "type": "timestamp(3)",
+     "prisma_type": "DateTime?",
+     "nullable": "YES",
+     "pk": false,
+     "default": "",
+     "max_length": "",
+     "format": "timestamp",
+     "constraint": [],
+     "line": 21,
+     "list": false,
+     "fk": ""
+    },
+    {
+     "field": "image",
+     "column": "image",
+     "type": "text",
+     "prisma_type": "String?",
+     "nullable": "YES",
+     "pk": false,
+     "default": "",
+     "max_length": "",
+     "format": "",
+     "constraint": [],
+     "line": 22,
+     "list": false,
+     "fk": ""
+    },
+    {
+     "field": "role",
+     "column": "role",
+     "type": "enum Role",
+     "prisma_type": "Role",
+     "nullable": "NO",
+     "pk": false,
+     "default": "User",
+     "max_length": "",
+     "format": "",
+     "constraint": [
+      "ENUM(User,Admin,SuperAdmin,Staff)"
+     ],
+     "line": 23,
+     "list": false,
+     "fk": ""
+    },
+    {
+     "field": "token",
+     "column": "token",
+     "type": "text",
+     "prisma_type": "String?",
+     "nullable": "YES",
+     "pk": false,
+     "default": "",
+     "max_length": "",
+     "format": "",
+     "constraint": [
+      "UNIQUE"
+     ],
+     "line": 24,
+     "list": false,
+     "fk": ""
+    },
+    {
+     "field": "phone",
+     "column": "phone",
+     "type": "text",
+     "prisma_type": "String?",
+     "nullable": "YES",
+     "pk": false,
+     "default": "",
+     "max_length": "",
+     "format": "",
+     "constraint": [],
+     "line": 25,
+     "list": false,
+     "fk": ""
+    },
+    {
+     "field": "postCode",
+     "column": "post_code",
+     "type": "text",
+     "prisma_type": "String?",
+     "nullable": "YES",
+     "pk": false,
+     "default": "",
+     "max_length": "",
+     "format": "",
+     "constraint": [],
+     "line": 26,
+     "list": false,
+     "fk": ""
+    },
+    {
+     "field": "province",
+     "column": "province",
+     "type": "text",
+     "prisma_type": "String?",
+     "nullable": "YES",
+     "pk": false,
+     "default": "",
+     "max_length": "",
+     "format": "",
+     "constraint": [],
+     "line": 27,
+     "list": false,
+     "fk": ""
+    },
+    {
+     "field": "address",
+     "column": "address",
+     "type": "text",
+     "prisma_type": "String?",
+     "nullable": "YES",
+     "pk": false,
+     "default": "",
+     "max_length": "",
+     "format": "",
+     "constraint": [],
+     "line": 28,
+     "list": false,
+     "fk": ""
+    },
+    {
+     "field": "birthday",
+     "column": "birthday",
+     "type": "date",
+     "prisma_type": "DateTime?",
+     "nullable": "YES",
+     "pk": false,
+     "default": "",
+     "max_length": "",
+     "format": "YYYY-MM-DD",
+     "constraint": [],
+     "line": 29,
+     "list": false,
+     "fk": ""
+    },
+    {
+     "field": "gender",
+     "column": "gender",
+     "type": "boolean",
+     "prisma_type": "Boolean?",
+     "nullable": "YES",
+     "pk": false,
+     "default": "true",
+     "max_length": "",
+     "format": "",
+     "constraint": [],
+     "line": 30,
+     "list": false,
+     "fk": ""
+    },
+    {
+     "field": "allowedNewsletter",
+     "column": "allowed_newsletter",
+     "type": "boolean",
+     "prisma_type": "Boolean",
+     "nullable": "NO",
+     "pk": false,
+     "default": "true",
+     "max_length": "",
+     "format": "",
+     "constraint": [],
+     "line": 31,
+     "list": false,
+     "fk": ""
+    },
+    {
+     "field": "isBlacklist",
+     "column": "is_blacklist",
+     "type": "boolean",
+     "prisma_type": "Boolean",
+     "nullable": "NO",
+     "pk": false,
+     "default": "false",
+     "max_length": "",
+     "format": "",
+     "constraint": [],
+     "line": 32,
+     "list": false,
+     "fk": ""
+    },
+    {
+     "field": "loginAttempts",
+     "column": "login_attempts",
+     "type": "integer",
+     "prisma_type": "Int?",
+     "nullable": "YES",
+     "pk": false,
+     "default": "",
+     "max_length": "",
+     "format": "",
+     "constraint": [],
+     "line": 33,
+     "list": false,
+     "fk": ""
+    },
+    {
+     "field": "locked",
+     "column": "locked",
+     "type": "boolean",
+     "prisma_type": "Boolean?",
+     "nullable": "YES",
+     "pk": false,
+     "default": "false",
+     "max_length": "",
+     "format": "",
+     "constraint": [],
+     "line": 34,
+     "list": false,
+     "fk": ""
+    },
+    {
+     "field": "firstCheckedOutBookingId",
+     "column": "first_checked_out_booking_id",
+     "type": "integer",
+     "prisma_type": "Int?",
+     "nullable": "YES",
+     "pk": false,
+     "default": "",
+     "max_length": "",
+     "format": "",
+     "constraint": [],
+     "line": 35,
+     "list": false,
+     "fk": ""
+    },
+    {
+     "field": "lineUserId",
+     "column": "line_user_id",
+     "type": "text",
+     "prisma_type": "String?",
+     "nullable": "YES",
+     "pk": false,
+     "default": "",
+     "max_length": "",
+     "format": "",
+     "constraint": [],
+     "line": 36,
+     "list": false,
+     "fk": ""
+    },
+    {
+     "field": "createdAt",
+     "column": "created_at",
+     "type": "timestamp(3)",
+     "prisma_type": "DateTime",
+     "nullable": "NO",
+     "pk": false,
+     "default": "now()",
+     "max_length": "",
+     "format": "timestamp",
+     "constraint": [],
+     "line": 38,
+     "list": false,
+     "fk": ""
+    },
+    {
+     "field": "updatedAt",
+     "column": "updated_at",
+     "type": "timestamp(3)",
+     "prisma_type": "DateTime",
+     "nullable": "NO",
+     "pk": false,
+     "default": "@updatedAt",
+     "max_length": "",
+     "format": "timestamp",
+     "constraint": [],
+     "line": 39,
+     "list": false,
+     "fk": ""
+    },
+    {
+     "field": "deleted",
+     "column": "deleted",
+     "type": "boolean",
+     "prisma_type": "Boolean?",
+     "nullable": "YES",
+     "pk": false,
+     "default": "false",
+     "max_length": "",
+     "format": "",
+     "constraint": [],
+     "line": 41,
+     "list": false,
+     "fk": ""
+    },
+    {
+     "field": "deletedAt",
+     "column": "deleted_at",
+     "type": "timestamp(3)",
+     "prisma_type": "DateTime?",
+     "nullable": "YES",
+     "pk": false,
+     "default": "",
+     "max_length": "",
+     "format": "timestamp",
+     "constraint": [],
+     "line": 42,
+     "list": false,
+     "fk": ""
+    },
+    {
+     "field": "deletedBy",
+     "column": "deleted_by",
+     "type": "text",
+     "prisma_type": "String?",
+     "nullable": "YES",
+     "pk": false,
+     "default": "",
+     "max_length": "",
+     "format": "",
+     "constraint": [],
+     "line": 43,
+     "list": false,
+     "fk": ""
+    }
+   ],
+   "relations": [],
+   "indexes": [
+    [
+     "name",
+     "phone"
+    ],
+    [
+     "role",
+     "deleted",
+     "created_at"
+    ],
+    [
+     "email"
+    ],
+    [
+     "token"
+    ],
+    [
+     "line_user_id"
+    ]
+   ],
+   "pk": [
+    "id"
+   ]
+  },
+  {
+   "model": "Account",
+   "table": "accounts",
+   "start": 59,
+   "end": 77,
+   "columns": [
+    {
+     "field": "id",
+     "column": "id",
+     "type": "text",
+     "prisma_type": "String",
+     "nullable": "NO",
+     "pk": true,
+     "default": "cuid()",
+     "max_length": "",
+     "format": "",
+     "constraint": [],
+     "line": 60,
+     "list": false,
+     "fk": ""
+    },
+    {
+     "field": "userId",
+     "column": "user_id",
+     "type": "integer",
+     "prisma_type": "Int",
+     "nullable": "NO",
+     "pk": false,
+     "default": "",
+     "max_length": "",
+     "format": "",
+     "constraint": [],
+     "line": 61,
+     "list": false,
+     "fk": "users.id"
+    },
+    {
+     "field": "type",
+     "column": "type",
+     "type": "text",
+     "prisma_type": "String",
+     "nullable": "NO",
+     "pk": false,
+     "default": "",
+     "max_length": "",
+     "format": "",
+     "constraint": [],
+     "line": 63,
+     "list": false,
+     "fk": ""
+    },
+    {
+     "field": "provider",
+     "column": "provider",
+     "type": "text",
+     "prisma_type": "String",
+     "nullable": "NO",
+     "pk": false,
+     "default": "",
+     "max_length": "",
+     "format": "",
+     "constraint": [
+      "UNIQUE(provider,provider_account_id)"
+     ],
+     "line": 64,
+     "list": false,
+     "fk": ""
+    },
+    {
+     "field": "providerAccountId",
+     "column": "provider_account_id",
+     "type": "text",
+     "prisma_type": "String",
+     "nullable": "NO",
+     "pk": false,
+     "default": "",
+     "max_length": "",
+     "format": "",
+     "constraint": [
+      "UNIQUE(provider,provider_account_id)"
+     ],
+     "line": 65,
+     "list": false,
+     "fk": ""
+    },
+    {
+     "field": "refresh_token",
+     "column": "refresh_token",
+     "type": "text",
+     "prisma_type": "String?",
+     "nullable": "YES",
+     "pk": false,
+     "default": "",
+     "max_length": "",
+     "format": "",
+     "constraint": [],
+     "line": 66,
+     "list": false,
+     "fk": ""
+    },
+    {
+     "field": "access_token",
+     "column": "access_token",
+     "type": "text",
+     "prisma_type": "String?",
+     "nullable": "YES",
+     "pk": false,
+     "default": "",
+     "max_length": "",
+     "format": "",
+     "constraint": [],
+     "line": 67,
+     "list": false,
+     "fk": ""
+    },
+    {
+     "field": "expires_at",
+     "column": "expires_at",
+     "type": "integer",
+     "prisma_type": "Int?",
+     "nullable": "YES",
+     "pk": false,
+     "default": "",
+     "max_length": "",
+     "format": "",
+     "constraint": [],
+     "line": 68,
+     "list": false,
+     "fk": ""
+    },
+    {
+     "field": "token_type",
+     "column": "token_type",
+     "type": "text",
+     "prisma_type": "String?",
+     "nullable": "YES",
+     "pk": false,
+     "default": "",
+     "max_length": "",
+     "format": "",
+     "constraint": [],
+     "line": 69,
+     "list": false,
+     "fk": ""
+    },
+    {
+     "field": "scope",
+     "column": "scope",
+     "type": "text",
+     "prisma_type": "String?",
+     "nullable": "YES",
+     "pk": false,
+     "default": "",
+     "max_length": "",
+     "format": "",
+     "constraint": [],
+     "line": 70,
+     "list": false,
+     "fk": ""
+    },
+    {
+     "field": "id_token",
+     "column": "id_token",
+     "type": "text",
+     "prisma_type": "String?",
+     "nullable": "YES",
+     "pk": false,
+     "default": "",
+     "max_length": "",
+     "format": "",
+     "constraint": [],
+     "line": 71,
+     "list": false,
+     "fk": ""
+    },
+    {
+     "field": "session_state",
+     "column": "session_state",
+     "type": "text",
+     "prisma_type": "String?",
+     "nullable": "YES",
+     "pk": false,
+     "default": "",
+     "max_length": "",
+     "format": "",
+     "constraint": [],
+     "line": 72,
+     "list": false,
+     "fk": ""
+    }
+   ],
+   "relations": [
+    {
+     "fields": [
+      "userId"
+     ],
+     "to_model": "User",
+     "to_table": "users",
+     "references": [
+      "id"
+     ],
+     "onDelete": "Cascade",
+     "line": 62,
+     "pairs": [
+      [
+       "user_id",
+       "id"
+      ]
+     ]
+    }
+   ],
+   "indexes": [
+    [
+     "user_id"
+    ]
+   ],
+   "pk": [
+    "id"
+   ]
+  },
+  {
+   "model": "Tenant",
+   "table": "tenants",
+   "start": 79,
+   "end": 112,
+   "columns": [
+    {
+     "field": "code",
+     "column": "code",
+     "type": "text",
+     "prisma_type": "String",
+     "nullable": "NO",
+     "pk": true,
+     "default": "",
+     "max_length": "",
+     "format": "",
+     "constraint": [
+      "UNIQUE"
+     ],
+     "line": 80,
+     "list": false,
+     "fk": ""
+    },
+    {
+     "field": "name",
+     "column": "name",
+     "type": "text",
+     "prisma_type": "String",
+     "nullable": "NO",
+     "pk": false,
+     "default": "",
+     "max_length": "",
+     "format": "",
+     "constraint": [],
+     "line": 81,
+     "list": false,
+     "fk": ""
+    },
+    {
+     "field": "imageUrl",
+     "column": "image_url",
+     "type": "text",
+     "prisma_type": "String?",
+     "nullable": "YES",
+     "pk": false,
+     "default": "",
+     "max_length": "",
+     "format": "",
+     "constraint": [],
+     "line": 82,
+     "list": false,
+     "fk": ""
+    },
+    {
+     "field": "siteUrl",
+     "column": "site_url",
+     "type": "text",
+     "prisma_type": "String?",
+     "nullable": "YES",
+     "pk": false,
+     "default": "",
+     "max_length": "",
+     "format": "",
+     "constraint": [],
+     "line": 83,
+     "list": false,
+     "fk": ""
+    },
+    {
+     "field": "postCode",
+     "column": "post_code",
+     "type": "text",
+     "prisma_type": "String?",
+     "nullable": "YES",
+     "pk": false,
+     "default": "",
+     "max_length": "",
+     "format": "",
+     "constraint": [],
+     "line": 84,
+     "list": false,
+     "fk": ""
+    },
+    {
+     "field": "province",
+     "column": "province",
+     "type": "text",
+     "prisma_type": "String?",
+     "nullable": "YES",
+     "pk": false,
+     "default": "",
+     "max_length": "",
+     "format": "",
+     "constraint": [],
+     "line": 85,
+     "list": false,
+     "fk": ""
+    },
+    {
+     "field": "address",
+     "column": "address",
+     "type": "text",
+     "prisma_type": "String",
+     "nullable": "NO",
+     "pk": false,
+     "default": "",
+     "max_length": "",
+     "format": "",
+     "constraint": [],
+     "line": 86,
+     "list": false,
+     "fk": ""
+    },
+    {
+     "field": "guide",
+     "column": "guide",
+     "type": "text",
+     "prisma_type": "String?",
+     "nullable": "YES",
+     "pk": false,
+     "default": "",
+     "max_length": "",
+     "format": "",
+     "constraint": [],
+     "line": 87,
+     "list": false,
+     "fk": ""
+    },
+    {
+     "field": "phone",
+     "column": "phone",
+     "type": "text",
+     "prisma_type": "String?",
+     "nullable": "YES",
+     "pk": false,
+     "default": "",
+     "max_length": "",
+     "format": "",
+     "constraint": [],
+     "line": 88,
+     "list": false,
+     "fk": ""
+    },
+    {
+     "field": "openedAt",
+     "column": "opened_at",
+     "type": "time",
+     "prisma_type": "DateTime?",
+     "nullable": "YES",
+     "pk": false,
+     "default": "",
+     "max_length": "",
+     "format": "HH:MM:SS",
+     "constraint": [],
+     "line": 89,
+     "list": false,
+     "fk": ""
+    },
+    {
+     "field": "closedAt",
+     "column": "closed_at",
+     "type": "time",
+     "prisma_type": "DateTime?",
+     "nullable": "YES",
+     "pk": false,
+     "default": "",
+     "max_length": "",
+     "format": "HH:MM:SS",
+     "constraint": [],
+     "line": 90,
+     "list": false,
+     "fk": ""
+    },
+    {
+     "field": "servedUtil",
+     "column": "served_util",
+     "type": "time",
+     "prisma_type": "DateTime?",
+     "nullable": "YES",
+     "pk": false,
+     "default": "",
+     "max_length": "",
+     "format": "HH:MM:SS",
+     "constraint": [],
+     "line": 91,
+     "list": false,
+     "fk": ""
+    },
+    {
+     "field": "active",
+     "column": "active",
+     "type": "boolean",
+     "prisma_type": "Boolean",
+     "nullable": "NO",
+     "pk": false,
+     "default": "true",
+     "max_length": "",
+     "format": "",
+     "constraint": [],
+     "line": 92,
+     "list": false,
+     "fk": ""
+    },
+    {
+     "field": "note",
+     "column": "note",
+     "type": "text",
+     "prisma_type": "String?",
+     "nullable": "YES",
+     "pk": false,
+     "default": "",
+     "max_length": "",
+     "format": "",
+     "constraint": [],
+     "line": 93,
+     "list": false,
+     "fk": ""
+    },
+    {
+     "field": "gmoId",
+     "column": "gmo_id",
+     "type": "integer",
+     "prisma_type": "Int?",
+     "nullable": "YES",
+     "pk": false,
+     "default": "",
+     "max_length": "",
+     "format": "",
+     "constraint": [],
+     "line": 94,
+     "list": false,
+     "fk": "gmo_settings.id"
+    },
+    {
+     "field": "allowedVersion",
+     "column": "allowed_version",
+     "type": "enum TenantVersion",
+     "prisma_type": "TenantVersion",
+     "nullable": "NO",
+     "pk": false,
+     "default": "v2",
+     "max_length": "",
+     "format": "",
+     "constraint": [
+      "ENUM(v0,v1,v2)"
+     ],
+     "line": 96,
+     "list": false,
+     "fk": ""
+    },
+    {
+     "field": "smaregiStoreId",
+     "column": "smaregi_store_id",
+     "type": "varchar(100)",
+     "prisma_type": "String?",
+     "nullable": "YES",
+     "pk": false,
+     "default": "",
+     "max_length": "100",
+     "format": "",
+     "constraint": [],
+     "line": 97,
+     "list": false,
+     "fk": ""
+    },
+    {
+     "field": "smaregiContractId",
+     "column": "smaregi_contract_id",
+     "type": "varchar(100)",
+     "prisma_type": "String?",
+     "nullable": "YES",
+     "pk": false,
+     "default": "",
+     "max_length": "100",
+     "format": "",
+     "constraint": [],
+     "line": 98,
+     "list": false,
+     "fk": ""
+    },
+    {
+     "field": "smaregiTerminalId",
+     "column": "smaregi_terminal_id",
+     "type": "varchar(100)",
+     "prisma_type": "String?",
+     "nullable": "YES",
+     "pk": false,
+     "default": "",
+     "max_length": "100",
+     "format": "",
+     "constraint": [],
+     "line": 99,
+     "list": false,
+     "fk": ""
+    },
+    {
+     "field": "createdAt",
+     "column": "created_at",
+     "type": "timestamp(3)",
+     "prisma_type": "DateTime",
+     "nullable": "NO",
+     "pk": false,
+     "default": "now()",
+     "max_length": "",
+     "format": "timestamp",
+     "constraint": [],
+     "line": 100,
+     "list": false,
+     "fk": ""
+    },
+    {
+     "field": "updatedAt",
+     "column": "updated_at",
+     "type": "timestamp(3)",
+     "prisma_type": "DateTime",
+     "nullable": "NO",
+     "pk": false,
+     "default": "@updatedAt",
+     "max_length": "",
+     "format": "timestamp",
+     "constraint": [],
+     "line": 101,
+     "list": false,
+     "fk": ""
+    },
+    {
+     "field": "deleted",
+     "column": "deleted",
+     "type": "boolean",
+     "prisma_type": "Boolean?",
+     "nullable": "YES",
+     "pk": false,
+     "default": "false",
+     "max_length": "",
+     "format": "",
+     "constraint": [],
+     "line": 102,
+     "list": false,
+     "fk": ""
+    }
+   ],
+   "relations": [
+    {
+     "fields": [
+      "gmoId"
+     ],
+     "to_model": "GMOSetting",
+     "to_table": "gmo_settings",
+     "references": [
+      "id"
+     ],
+     "onDelete": "",
+     "line": 95,
+     "pairs": [
+      [
+       "gmo_id",
+       "id"
+      ]
+     ]
+    }
+   ],
+   "indexes": [
+    [
+     "deleted"
+    ],
+    [
+     "active"
+    ]
+   ],
+   "pk": [
+    "code"
+   ]
+  },
+  {
+   "model": "AdminTenant",
+   "table": "admins_tenants",
+   "start": 114,
+   "end": 122,
+   "columns": [
+    {
+     "field": "userId",
+     "column": "user_id",
+     "type": "integer",
+     "prisma_type": "Int",
+     "nullable": "NO",
+     "pk": true,
+     "default": "",
+     "max_length": "",
+     "format": "",
+     "constraint": [
+      "UNIQUE"
+     ],
+     "line": 115,
+     "list": false,
+     "fk": "users.id"
+    },
+    {
+     "field": "tenantCode",
+     "column": "tenant_code",
+     "type": "text",
+     "prisma_type": "String",
+     "nullable": "NO",
+     "pk": true,
+     "default": "",
+     "max_length": "",
+     "format": "",
+     "constraint": [
+      "UNIQUE"
+     ],
+     "line": 117,
+     "list": false,
+     "fk": "tenants.code"
+    }
+   ],
+   "relations": [
+    {
+     "fields": [
+      "userId"
+     ],
+     "to_model": "User",
+     "to_table": "users",
+     "references": [
+      "id"
+     ],
+     "onDelete": "Cascade",
+     "line": 116,
+     "pairs": [
+      [
+       "user_id",
+       "id"
+      ]
+     ]
+    },
+    {
+     "fields": [
+      "tenantCode"
+     ],
+     "to_model": "Tenant",
+     "to_table": "tenants",
+     "references": [
+      "code"
+     ],
+     "onDelete": "Cascade",
+     "line": 118,
+     "pairs": [
+      [
+       "tenant_code",
+       "code"
+      ]
+     ]
+    }
+   ],
+   "indexes": [],
+   "pk": [
+    "user_id",
+    "tenant_code"
+   ]
+  },
+  {
+   "model": "Staff",
+   "table": "staffs",
+   "start": 124,
+   "end": 143,
+   "columns": [
+    {
+     "field": "id",
+     "column": "id",
+     "type": "text",
+     "prisma_type": "String",
+     "nullable": "NO",
+     "pk": true,
+     "default": "",
+     "max_length": "",
+     "format": "",
+     "constraint": [],
+     "line": 125,
+     "list": false,
+     "fk": ""
+    },
+    {
+     "field": "password",
+     "column": "password",
+     "type": "text",
+     "prisma_type": "String",
+     "nullable": "NO",
+     "pk": false,
+     "default": "",
+     "max_length": "",
+     "format": "",
+     "constraint": [],
+     "line": 126,
+     "list": false,
+     "fk": ""
+    },
+    {
+     "field": "name",
+     "column": "name",
+     "type": "text",
+     "prisma_type": "String?",
+     "nullable": "YES",
+     "pk": false,
+     "default": "",
+     "max_length": "",
+     "format": "",
+     "constraint": [],
+     "line": 127,
+     "list": false,
+     "fk": ""
+    },
+    {
+     "field": "firstName",
+     "column": "first_name",
+     "type": "text",
+     "prisma_type": "String?",
+     "nullable": "YES",
+     "pk": false,
+     "default": "",
+     "max_length": "",
+     "format": "",
+     "constraint": [],
+     "line": 128,
+     "list": false,
+     "fk": ""
+    },
+    {
+     "field": "lastName",
+     "column": "last_name",
+     "type": "text",
+     "prisma_type": "String?",
+     "nullable": "YES",
+     "pk": false,
+     "default": "",
+     "max_length": "",
+     "format": "",
+     "constraint": [],
+     "line": 129,
+     "list": false,
+     "fk": ""
+    },
+    {
+     "field": "firstNameFurigana",
+     "column": "first_name_furigana",
+     "type": "text",
+     "prisma_type": "String?",
+     "nullable": "YES",
+     "pk": false,
+     "default": "",
+     "max_length": "",
+     "format": "",
+     "constraint": [],
+     "line": 130,
+     "list": false,
+     "fk": ""
+    },
+    {
+     "field": "lastNameFurigana",
+     "column": "last_name_furigana",
+     "type": "text",
+     "prisma_type": "String?",
+     "nullable": "YES",
+     "pk": false,
+     "default": "",
+     "max_length": "",
+     "format": "",
+     "constraint": [],
+     "line": 131,
+     "list": false,
+     "fk": ""
+    },
+    {
+     "field": "role",
+     "column": "role",
+     "type": "enum Role",
+     "prisma_type": "Role",
+     "nullable": "NO",
+     "pk": false,
+     "default": "",
+     "max_length": "",
+     "format": "",
+     "constraint": [
+      "ENUM(User,Admin,SuperAdmin,Staff)"
+     ],
+     "line": 132,
+     "list": false,
+     "fk": ""
+    },
+    {
+     "field": "tenantCode",
+     "column": "tenant_code",
+     "type": "text",
+     "prisma_type": "String",
+     "nullable": "NO",
+     "pk": false,
+     "default": "",
+     "max_length": "",
+     "format": "",
+     "constraint": [],
+     "line": 134,
+     "list": false,
+     "fk": "tenants.code"
+    },
+    {
+     "field": "createdAt",
+     "column": "created_at",
+     "type": "timestamp(3)",
+     "prisma_type": "DateTime",
+     "nullable": "NO",
+     "pk": false,
+     "default": "now()",
+     "max_length": "",
+     "format": "timestamp",
+     "constraint": [],
+     "line": 137,
+     "list": false,
+     "fk": ""
+    },
+    {
+     "field": "updatedAt",
+     "column": "updated_at",
+     "type": "timestamp(3)",
+     "prisma_type": "DateTime",
+     "nullable": "NO",
+     "pk": false,
+     "default": "@updatedAt",
+     "max_length": "",
+     "format": "timestamp",
+     "constraint": [],
+     "line": 138,
+     "list": false,
+     "fk": ""
+    }
+   ],
+   "relations": [
+    {
+     "fields": [
+      "tenantCode"
+     ],
+     "to_model": "Tenant",
+     "to_table": "tenants",
+     "references": [
+      "code"
+     ],
+     "onDelete": "Cascade",
+     "line": 135,
+     "pairs": [
+      [
+       "tenant_code",
+       "code"
+      ]
+     ]
+    }
+   ],
+   "indexes": [],
+   "pk": [
+    "id"
+   ]
+  },
+  {
+   "model": "AdminActivityLog",
+   "table": "admin_activity_logs",
+   "start": 145,
+   "end": 157,
+   "columns": [
+    {
+     "field": "id",
+     "column": "id",
+     "type": "integer",
+     "prisma_type": "Int",
+     "nullable": "NO",
+     "pk": true,
+     "default": "autoincrement()",
+     "max_length": "",
+     "format": "",
+     "constraint": [],
+     "line": 146,
+     "list": false,
+     "fk": ""
+    },
+    {
+     "field": "userId",
+     "column": "user_id",
+     "type": "integer",
+     "prisma_type": "Int",
+     "nullable": "NO",
+     "pk": false,
+     "default": "",
+     "max_length": "",
+     "format": "",
+     "constraint": [],
+     "line": 147,
+     "list": false,
+     "fk": "users.id"
+    },
+    {
+     "field": "staffId",
+     "column": "staff_id",
+     "type": "text",
+     "prisma_type": "String?",
+     "nullable": "YES",
+     "pk": false,
+     "default": "",
+     "max_length": "",
+     "format": "",
+     "constraint": [],
+     "line": 149,
+     "list": false,
+     "fk": "staffs.id"
+    },
+    {
+     "field": "activityType",
+     "column": "activity_type",
+     "type": "text",
+     "prisma_type": "String",
+     "nullable": "NO",
+     "pk": false,
+     "default": "",
+     "max_length": "",
+     "format": "",
+     "constraint": [],
+     "line": 151,
+     "list": false,
+     "fk": ""
+    },
+    {
+     "field": "details",
+     "column": "details",
+     "type": "text",
+     "prisma_type": "String?",
+     "nullable": "YES",
+     "pk": false,
+     "default": "",
+     "max_length": "",
+     "format": "",
+     "constraint": [],
+     "line": 152,
+     "list": false,
+     "fk": ""
+    },
+    {
+     "field": "reference",
+     "column": "reference",
+     "type": "text",
+     "prisma_type": "String?",
+     "nullable": "YES",
+     "pk": false,
+     "default": "",
+     "max_length": "",
+     "format": "",
+     "constraint": [],
+     "line": 153,
+     "list": false,
+     "fk": ""
+    },
+    {
+     "field": "createdAt",
+     "column": "created_at",
+     "type": "timestamp(3)",
+     "prisma_type": "DateTime?",
+     "nullable": "YES",
+     "pk": false,
+     "default": "now()",
+     "max_length": "",
+     "format": "timestamp",
+     "constraint": [],
+     "line": 154,
+     "list": false,
+     "fk": ""
+    }
+   ],
+   "relations": [
+    {
+     "fields": [
+      "userId"
+     ],
+     "to_model": "User",
+     "to_table": "users",
+     "references": [
+      "id"
+     ],
+     "onDelete": "Cascade",
+     "line": 148,
+     "pairs": [
+      [
+       "user_id",
+       "id"
+      ]
+     ]
+    },
+    {
+     "fields": [
+      "staffId"
+     ],
+     "to_model": "Staff",
+     "to_table": "staffs",
+     "references": [
+      "id"
+     ],
+     "onDelete": "Cascade",
+     "line": 150,
+     "pairs": [
+      [
+       "staff_id",
+       "id"
+      ]
+     ]
+    }
+   ],
+   "indexes": [],
+   "pk": [
+    "id"
+   ]
+  },
+  {
+   "model": "UserTenantFavorite",
+   "table": "users_tenants_favorites",
+   "start": 159,
+   "end": 168,
+   "columns": [
+    {
+     "field": "userId",
+     "column": "user_id",
+     "type": "integer",
+     "prisma_type": "Int",
+     "nullable": "NO",
+     "pk": true,
+     "default": "",
+     "max_length": "",
+     "format": "",
+     "constraint": [],
+     "line": 160,
+     "list": false,
+     "fk": "users.id"
+    },
+    {
+     "field": "tenantCode",
+     "column": "tenant_code",
+     "type": "text",
+     "prisma_type": "String",
+     "nullable": "NO",
+     "pk": true,
+     "default": "",
+     "max_length": "",
+     "format": "",
+     "constraint": [],
+     "line": 162,
+     "list": false,
+     "fk": "tenants.code"
+    },
+    {
+     "field": "createdAt",
+     "column": "created_at",
+     "type": "timestamp(3)",
+     "prisma_type": "DateTime?",
+     "nullable": "YES",
+     "pk": false,
+     "default": "now()",
+     "max_length": "",
+     "format": "timestamp",
+     "constraint": [],
+     "line": 164,
+     "list": false,
+     "fk": ""
+    }
+   ],
+   "relations": [
+    {
+     "fields": [
+      "userId"
+     ],
+     "to_model": "User",
+     "to_table": "users",
+     "references": [
+      "id"
+     ],
+     "onDelete": "Cascade",
+     "line": 161,
+     "pairs": [
+      [
+       "user_id",
+       "id"
+      ]
+     ]
+    },
+    {
+     "fields": [
+      "tenantCode"
+     ],
+     "to_model": "Tenant",
+     "to_table": "tenants",
+     "references": [
+      "code"
+     ],
+     "onDelete": "Cascade",
+     "line": 163,
+     "pairs": [
+      [
+       "tenant_code",
+       "code"
+      ]
+     ]
+    }
+   ],
+   "indexes": [],
+   "pk": [
+    "user_id",
+    "tenant_code"
+   ]
+  },
+  {
+   "model": "Ticket",
+   "table": "tickets",
+   "start": 170,
+   "end": 209,
+   "columns": [
+    {
+     "field": "id",
+     "column": "id",
+     "type": "integer",
+     "prisma_type": "Int",
+     "nullable": "NO",
+     "pk": true,
+     "default": "autoincrement()",
+     "max_length": "",
+     "format": "",
+     "constraint": [],
+     "line": 171,
+     "list": false,
+     "fk": ""
+    },
+    {
+     "field": "name",
+     "column": "name",
+     "type": "text",
+     "prisma_type": "String",
+     "nullable": "NO",
+     "pk": false,
+     "default": "",
+     "max_length": "",
+     "format": "",
+     "constraint": [],
+     "line": 172,
+     "list": false,
+     "fk": ""
+    },
+    {
+     "field": "tenantCode",
+     "column": "tenant_code",
+     "type": "text",
+     "prisma_type": "String?",
+     "nullable": "YES",
+     "pk": false,
+     "default": "",
+     "max_length": "",
+     "format": "",
+     "constraint": [],
+     "line": 173,
+     "list": false,
+     "fk": "tenants.code"
+    },
+    {
+     "field": "videoUrl",
+     "column": "video_url",
+     "type": "text",
+     "prisma_type": "String?",
+     "nullable": "YES",
+     "pk": false,
+     "default": "",
+     "max_length": "",
+     "format": "",
+     "constraint": [],
+     "line": 175,
+     "list": false,
+     "fk": ""
+    },
+    {
+     "field": "visibility",
+     "column": "visibility",
+     "type": "boolean",
+     "prisma_type": "Boolean",
+     "nullable": "NO",
+     "pk": false,
+     "default": "true",
+     "max_length": "",
+     "format": "",
+     "constraint": [],
+     "line": 177,
+     "list": false,
+     "fk": ""
+    },
+    {
+     "field": "paymentType",
+     "column": "payment_type",
+     "type": "enum PaymentType",
+     "prisma_type": "PaymentType",
+     "nullable": "NO",
+     "pk": false,
+     "default": "",
+     "max_length": "",
+     "format": "",
+     "constraint": [
+      "ENUM(Online,Offline)"
+     ],
+     "line": 178,
+     "list": false,
+     "fk": ""
+    },
+    {
+     "field": "type",
+     "column": "ticket_type",
+     "type": "enum TicketType",
+     "prisma_type": "TicketType",
+     "nullable": "NO",
+     "pk": false,
+     "default": "",
+     "max_length": "",
+     "format": "",
+     "constraint": [
+      "ENUM(Hourly,Daily,Monthly,MasterMonthly,HourlyTimesLimit,DailyTimesLimit)"
+     ],
+     "line": 179,
+     "list": false,
+     "fk": ""
+    },
+    {
+     "field": "canBookInAdvance",
+     "column": "can_book_in_advance",
+     "type": "boolean",
+     "prisma_type": "Boolean",
+     "nullable": "NO",
+     "pk": false,
+     "default": "",
+     "max_length": "",
+     "format": "",
+     "constraint": [],
+     "line": 180,
+     "list": false,
+     "fk": ""
+    },
+    {
+     "field": "childAgeLimitFrom",
+     "column": "child_age_limit_from",
+     "type": "integer",
+     "prisma_type": "Int",
+     "nullable": "NO",
+     "pk": false,
+     "default": "",
+     "max_length": "",
+     "format": "",
+     "constraint": [],
+     "line": 182,
+     "list": false,
+     "fk": ""
+    },
+    {
+     "field": "childAgeLimitTo",
+     "column": "child_age_limit_to",
+     "type": "integer",
+     "prisma_type": "Int",
+     "nullable": "NO",
+     "pk": false,
+     "default": "",
+     "max_length": "",
+     "format": "",
+     "constraint": [],
+     "line": 183,
+     "list": false,
+     "fk": ""
+    },
+    {
+     "field": "maxChildPerAdult",
+     "column": "max_child_per_adult",
+     "type": "integer",
+     "prisma_type": "Int",
+     "nullable": "NO",
+     "pk": false,
+     "default": "",
+     "max_length": "",
+     "format": "",
+     "constraint": [],
+     "line": 184,
+     "list": false,
+     "fk": ""
+    },
+    {
+     "field": "adultTicketCode",
+     "column": "adult_ticket_code",
+     "type": "integer",
+     "prisma_type": "Int?",
+     "nullable": "YES",
+     "pk": false,
+     "default": "",
+     "max_length": "",
+     "format": "",
+     "constraint": [],
+     "line": 186,
+     "list": false,
+     "fk": ""
+    },
+    {
+     "field": "childTicketCode",
+     "column": "child_ticket_code",
+     "type": "integer",
+     "prisma_type": "Int?",
+     "nullable": "YES",
+     "pk": false,
+     "default": "",
+     "max_length": "",
+     "format": "",
+     "constraint": [],
+     "line": 187,
+     "list": false,
+     "fk": ""
+    },
+    {
+     "field": "displayOrder",
+     "column": "display_order",
+     "type": "integer",
+     "prisma_type": "Int?",
+     "nullable": "YES",
+     "pk": false,
+     "default": "",
+     "max_length": "",
+     "format": "",
+     "constraint": [],
+     "line": 189,
+     "list": false,
+     "fk": ""
+    },
+    {
+     "field": "isPromotion",
+     "column": "is_promotion",
+     "type": "boolean",
+     "prisma_type": "Boolean",
+     "nullable": "NO",
+     "pk": false,
+     "default": "false",
+     "max_length": "",
+     "format": "",
+     "constraint": [],
+     "line": 191,
+     "list": false,
+     "fk": ""
+    },
+    {
+     "field": "createdAt",
+     "column": "created_at",
+     "type": "timestamp(3)",
+     "prisma_type": "DateTime",
+     "nullable": "NO",
+     "pk": false,
+     "default": "now()",
+     "max_length": "",
+     "format": "timestamp",
+     "constraint": [],
+     "line": 193,
+     "list": false,
+     "fk": ""
+    },
+    {
+     "field": "updatedAt",
+     "column": "updated_at",
+     "type": "timestamp(3)",
+     "prisma_type": "DateTime",
+     "nullable": "NO",
+     "pk": false,
+     "default": "@updatedAt",
+     "max_length": "",
+     "format": "timestamp",
+     "constraint": [],
+     "line": 194,
+     "list": false,
+     "fk": ""
+    },
+    {
+     "field": "masterTicketId",
+     "column": "master_ticket_id",
+     "type": "integer",
+     "prisma_type": "Int?",
+     "nullable": "YES",
+     "pk": false,
+     "default": "",
+     "max_length": "",
+     "format": "",
+     "constraint": [],
+     "line": 196,
+     "list": false,
+     "fk": ""
+    },
+    {
+     "field": "groupId",
+     "column": "group_id",
+     "type": "text",
+     "prisma_type": "String?",
+     "nullable": "YES",
+     "pk": false,
+     "default": "",
+     "max_length": "",
+     "format": "",
+     "constraint": [],
+     "line": 197,
+     "list": false,
+     "fk": ""
+    }
+   ],
+   "relations": [
+    {
+     "fields": [
+      "tenantCode"
+     ],
+     "to_model": "Tenant",
+     "to_table": "tenants",
+     "references": [
+      "code"
+     ],
+     "onDelete": "Cascade",
+     "line": 174,
+     "pairs": [
+      [
+       "tenant_code",
+       "code"
+      ]
+     ]
+    }
+   ],
+   "indexes": [
+    [
+     "tenant_code"
+    ],
+    [
+     "ticket_type"
+    ],
+    [
+     "visibility"
+    ],
+    [
+     "master_ticket_id"
+    ]
+   ],
+   "pk": [
+    "id"
+   ]
+  },
+  {
+   "model": "TicketDetail",
+   "table": "ticket_details",
+   "start": 211,
+   "end": 251,
+   "columns": [
+    {
+     "field": "id",
+     "column": "id",
+     "type": "integer",
+     "prisma_type": "Int",
+     "nullable": "NO",
+     "pk": true,
+     "default": "autoincrement()",
+     "max_length": "",
+     "format": "",
+     "constraint": [],
+     "line": 212,
+     "list": false,
+     "fk": ""
+    },
+    {
+     "field": "ticketId",
+     "column": "ticket_id",
+     "type": "integer",
+     "prisma_type": "Int",
+     "nullable": "NO",
+     "pk": false,
+     "default": "",
+     "max_length": "",
+     "format": "",
+     "constraint": [
+      "UNIQUE"
+     ],
+     "line": 213,
+     "list": false,
+     "fk": "tickets.id"
+    },
+    {
+     "field": "totalDaysInUseFromStart",
+     "column": "total_days_in_use_from_start",
+     "type": "integer",
+     "prisma_type": "Int?",
+     "nullable": "YES",
+     "pk": false,
+     "default": "",
+     "max_length": "",
+     "format": "",
+     "constraint": [],
+     "line": 216,
+     "list": false,
+     "fk": ""
+    },
+    {
+     "field": "startSaleAt",
+     "column": "start_sale_at",
+     "type": "date",
+     "prisma_type": "DateTime?",
+     "nullable": "YES",
+     "pk": false,
+     "default": "",
+     "max_length": "",
+     "format": "YYYY-MM-DD",
+     "constraint": [],
+     "line": 217,
+     "list": false,
+     "fk": ""
+    },
+    {
+     "field": "endSaleAt",
+     "column": "end_sale_at",
+     "type": "date",
+     "prisma_type": "DateTime?",
+     "nullable": "YES",
+     "pk": false,
+     "default": "",
+     "max_length": "",
+     "format": "YYYY-MM-DD",
+     "constraint": [],
+     "line": 218,
+     "list": false,
+     "fk": ""
+    },
+    {
+     "field": "adultPrice",
+     "column": "adult_price",
+     "type": "decimal(65,30)",
+     "prisma_type": "Decimal?",
+     "nullable": "YES",
+     "pk": false,
+     "default": "",
+     "max_length": "",
+     "format": "decimal",
+     "constraint": [],
+     "line": 220,
+     "list": false,
+     "fk": ""
+    },
+    {
+     "field": "adultSmaregiQRCodeUrl",
+     "column": "adult_smaregi_qrcode_url",
+     "type": "varchar(255)",
+     "prisma_type": "String?",
+     "nullable": "YES",
+     "pk": false,
+     "default": "",
+     "max_length": "255",
+     "format": "",
+     "constraint": [],
+     "line": 221,
+     "list": false,
+     "fk": ""
+    },
+    {
+     "field": "adultObicCode",
+     "column": "adult_obic_code",
+     "type": "varchar(255)",
+     "prisma_type": "String?",
+     "nullable": "YES",
+     "pk": false,
+     "default": "",
+     "max_length": "255",
+     "format": "",
+     "constraint": [],
+     "line": 222,
+     "list": false,
+     "fk": ""
+    },
+    {
+     "field": "adultSmaregiQRCodeUrl1stBooking",
+     "column": "adult_smaregi_qrcode_url_1st_booking",
+     "type": "varchar(255)",
+     "prisma_type": "String?",
+     "nullable": "YES",
+     "pk": false,
+     "default": "",
+     "max_length": "255",
+     "format": "",
+     "constraint": [],
+     "line": 223,
+     "list": false,
+     "fk": ""
+    },
+    {
+     "field": "adultObicCode1stBooking",
+     "column": "adult_obic_code_1st_booking",
+     "type": "varchar(255)",
+     "prisma_type": "String?",
+     "nullable": "YES",
+     "pk": false,
+     "default": "",
+     "max_length": "255",
+     "format": "",
+     "constraint": [],
+     "line": 224,
+     "list": false,
+     "fk": ""
+    },
+    {
+     "field": "childPrice",
+     "column": "child_price",
+     "type": "decimal(65,30)",
+     "prisma_type": "Decimal?",
+     "nullable": "YES",
+     "pk": false,
+     "default": "",
+     "max_length": "",
+     "format": "decimal",
+     "constraint": [],
+     "line": 225,
+     "list": false,
+     "fk": ""
+    },
+    {
+     "field": "childSmaregiQRCodeUrl",
+     "column": "child_smaregi_qrcode_url",
+     "type": "varchar(255)",
+     "prisma_type": "String?",
+     "nullable": "YES",
+     "pk": false,
+     "default": "",
+     "max_length": "255",
+     "format": "",
+     "constraint": [],
+     "line": 226,
+     "list": false,
+     "fk": ""
+    },
+    {
+     "field": "childObicCode",
+     "column": "child_obic_code",
+     "type": "varchar(255)",
+     "prisma_type": "String?",
+     "nullable": "YES",
+     "pk": false,
+     "default": "",
+     "max_length": "255",
+     "format": "",
+     "constraint": [],
+     "line": 227,
+     "list": false,
+     "fk": ""
+    },
+    {
+     "field": "childSmaregiQRCodeUrl1stBooking",
+     "column": "child_smaregi_qrcode_url_1st_booking",
+     "type": "varchar(255)",
+     "prisma_type": "String?",
+     "nullable": "YES",
+     "pk": false,
+     "default": "",
+     "max_length": "255",
+     "format": "",
+     "constraint": [],
+     "line": 228,
+     "list": false,
+     "fk": ""
+    },
+    {
+     "field": "childObicCode1stBooking",
+     "column": "child_obic_code_1st_booking",
+     "type": "varchar(255)",
+     "prisma_type": "String?",
+     "nullable": "YES",
+     "pk": false,
+     "default": "",
+     "max_length": "255",
+     "format": "",
+     "constraint": [],
+     "line": 229,
+     "list": false,
+     "fk": ""
+    },
+    {
+     "field": "enableDiscount",
+     "column": "enable_discount",
+     "type": "boolean",
+     "prisma_type": "Boolean?",
+     "nullable": "YES",
+     "pk": false,
+     "default": "",
+     "max_length": "",
+     "format": "",
+     "constraint": [],
+     "line": 231,
+     "list": false,
+     "fk": ""
+    },
+    {
+     "field": "discountAdultThreshold",
+     "column": "discount_adult_threshold",
+     "type": "decimal(65,30)",
+     "prisma_type": "Decimal?",
+     "nullable": "YES",
+     "pk": false,
+     "default": "",
+     "max_length": "",
+     "format": "decimal",
+     "constraint": [],
+     "line": 232,
+     "list": false,
+     "fk": ""
+    },
+    {
+     "field": "discountAdultAmount",
+     "column": "discount_adult_amount",
+     "type": "decimal(65,30)",
+     "prisma_type": "Decimal?",
+     "nullable": "YES",
+     "pk": false,
+     "default": "",
+     "max_length": "",
+     "format": "decimal",
+     "constraint": [],
+     "line": 233,
+     "list": false,
+     "fk": ""
+    },
+    {
+     "field": "discountAdultSmaregiQRCodeUrl",
+     "column": "discount_adult_smaregi_qrcode_url",
+     "type": "varchar(255)",
+     "prisma_type": "String?",
+     "nullable": "YES",
+     "pk": false,
+     "default": "",
+     "max_length": "255",
+     "format": "",
+     "constraint": [],
+     "line": 234,
+     "list": false,
+     "fk": ""
+    },
+    {
+     "field": "discountAdultObicCode",
+     "column": "discount_adult_obic_code",
+     "type": "varchar(255)",
+     "prisma_type": "String?",
+     "nullable": "YES",
+     "pk": false,
+     "default": "",
+     "max_length": "255",
+     "format": "",
+     "constraint": [],
+     "line": 235,
+     "list": false,
+     "fk": ""
+    },
+    {
+     "field": "discountChildThreshold",
+     "column": "discount_child_threshold",
+     "type": "decimal(65,30)",
+     "prisma_type": "Decimal?",
+     "nullable": "YES",
+     "pk": false,
+     "default": "",
+     "max_length": "",
+     "format": "decimal",
+     "constraint": [],
+     "line": 237,
+     "list": false,
+     "fk": ""
+    },
+    {
+     "field": "discountChildAmount",
+     "column": "discount_child_amount",
+     "type": "decimal(65,30)",
+     "prisma_type": "Decimal?",
+     "nullable": "YES",
+     "pk": false,
+     "default": "",
+     "max_length": "",
+     "format": "decimal",
+     "constraint": [],
+     "line": 238,
+     "list": false,
+     "fk": ""
+    },
+    {
+     "field": "discountChildSmaregiQRCodeUrl",
+     "column": "discount_child_smaregi_qrcode_url",
+     "type": "varchar(255)",
+     "prisma_type": "String?",
+     "nullable": "YES",
+     "pk": false,
+     "default": "",
+     "max_length": "255",
+     "format": "",
+     "constraint": [],
+     "line": 239,
+     "list": false,
+     "fk": ""
+    },
+    {
+     "field": "discountChildObicCode",
+     "column": "discount_child_obic_code",
+     "type": "varchar(255)",
+     "prisma_type": "String?",
+     "nullable": "YES",
+     "pk": false,
+     "default": "",
+     "max_length": "255",
+     "format": "",
+     "constraint": [],
+     "line": 240,
+     "list": false,
+     "fk": ""
+    },
+    {
+     "field": "requiredAgreement",
+     "column": "required_agreement",
+     "type": "boolean",
+     "prisma_type": "Boolean?",
+     "nullable": "YES",
+     "pk": false,
+     "default": "",
+     "max_length": "",
+     "format": "",
+     "constraint": [],
+     "line": 242,
+     "list": false,
+     "fk": ""
+    },
+    {
+     "field": "limitTimes",
+     "column": "limit_times",
+     "type": "integer",
+     "prisma_type": "Int?",
+     "nullable": "YES",
+     "pk": false,
+     "default": "",
+     "max_length": "",
+     "format": "",
+     "constraint": [],
+     "line": 244,
+     "list": false,
+     "fk": ""
+    },
+    {
+     "field": "extraTimes",
+     "column": "extra_times",
+     "type": "integer",
+     "prisma_type": "Int?",
+     "nullable": "YES",
+     "pk": false,
+     "default": "",
+     "max_length": "",
+     "format": "",
+     "constraint": [],
+     "line": 245,
+     "list": false,
+     "fk": ""
+    },
+    {
+     "field": "createdAt",
+     "column": "created_at",
+     "type": "timestamp(3)",
+     "prisma_type": "DateTime",
+     "nullable": "NO",
+     "pk": false,
+     "default": "now()",
+     "max_length": "",
+     "format": "timestamp",
+     "constraint": [],
+     "line": 247,
+     "list": false,
+     "fk": ""
+    },
+    {
+     "field": "updatedAt",
+     "column": "updated_at",
+     "type": "timestamp(3)",
+     "prisma_type": "DateTime",
+     "nullable": "NO",
+     "pk": false,
+     "default": "@updatedAt",
+     "max_length": "",
+     "format": "timestamp",
+     "constraint": [],
+     "line": 248,
+     "list": false,
+     "fk": ""
+    }
+   ],
+   "relations": [
+    {
+     "fields": [
+      "ticketId"
+     ],
+     "to_model": "Ticket",
+     "to_table": "tickets",
+     "references": [
+      "id"
+     ],
+     "onDelete": "Cascade",
+     "line": 214,
+     "pairs": [
+      [
+       "ticket_id",
+       "id"
+      ]
+     ]
+    }
+   ],
+   "indexes": [],
+   "pk": [
+    "id"
+   ]
+  },
+  {
+   "model": "TicketDiscountSetting",
+   "table": "ticket_discount_settings",
+   "start": 253,
+   "end": 266,
+   "columns": [
+    {
+     "field": "id",
+     "column": "id",
+     "type": "integer",
+     "prisma_type": "Int",
+     "nullable": "NO",
+     "pk": true,
+     "default": "autoincrement()",
+     "max_length": "",
+     "format": "",
+     "constraint": [],
+     "line": 254,
+     "list": false,
+     "fk": ""
+    },
+    {
+     "field": "ticketId",
+     "column": "ticket_id",
+     "type": "integer",
+     "prisma_type": "Int",
+     "nullable": "NO",
+     "pk": false,
+     "default": "",
+     "max_length": "",
+     "format": "",
+     "constraint": [
+      "UNIQUE"
+     ],
+     "line": 255,
+     "list": false,
+     "fk": "tickets.id"
+    },
+    {
+     "field": "setting",
+     "column": "setting",
+     "type": "jsonb",
+     "prisma_type": "Json?",
+     "nullable": "YES",
+     "pk": false,
+     "default": "",
+     "max_length": "",
+     "format": "JSON",
+     "constraint": [],
+     "line": 258,
+     "list": false,
+     "fk": ""
+    },
+    {
+     "field": "hourlyExtraTimeSetting",
+     "column": "hourly_extra_time_setting",
+     "type": "jsonb",
+     "prisma_type": "Json?",
+     "nullable": "YES",
+     "pk": false,
+     "default": "",
+     "max_length": "",
+     "format": "JSON",
+     "constraint": [],
+     "line": 259,
+     "list": false,
+     "fk": ""
+    },
+    {
+     "field": "createdAt",
+     "column": "created_at",
+     "type": "timestamp(3)",
+     "prisma_type": "DateTime",
+     "nullable": "NO",
+     "pk": false,
+     "default": "now()",
+     "max_length": "",
+     "format": "timestamp",
+     "constraint": [],
+     "line": 261,
+     "list": false,
+     "fk": ""
+    },
+    {
+     "field": "updatedAt",
+     "column": "updated_at",
+     "type": "timestamp(3)",
+     "prisma_type": "DateTime",
+     "nullable": "NO",
+     "pk": false,
+     "default": "@updatedAt",
+     "max_length": "",
+     "format": "timestamp",
+     "constraint": [],
+     "line": 262,
+     "list": false,
+     "fk": ""
+    }
+   ],
+   "relations": [
+    {
+     "fields": [
+      "ticketId"
+     ],
+     "to_model": "Ticket",
+     "to_table": "tickets",
+     "references": [
+      "id"
+     ],
+     "onDelete": "Cascade",
+     "line": 256,
+     "pairs": [
+      [
+       "ticket_id",
+       "id"
+      ]
+     ]
+    }
+   ],
+   "indexes": [
+    [
+     "ticket_id"
+    ]
+   ],
+   "pk": [
+    "id"
+   ]
+  },
+  {
+   "model": "TicketBookingSchedule",
+   "table": "ticket_booking_schedules",
+   "start": 268,
+   "end": 337,
+   "columns": [
+    {
+     "field": "id",
+     "column": "id",
+     "type": "integer",
+     "prisma_type": "Int",
+     "nullable": "NO",
+     "pk": true,
+     "default": "autoincrement()",
+     "max_length": "",
+     "format": "",
+     "constraint": [],
+     "line": 269,
+     "list": false,
+     "fk": ""
+    },
+    {
+     "field": "ticketId",
+     "column": "ticket_id",
+     "type": "integer",
+     "prisma_type": "Int",
+     "nullable": "NO",
+     "pk": false,
+     "default": "",
+     "max_length": "",
+     "format": "",
+     "constraint": [],
+     "line": 270,
+     "list": false,
+     "fk": "tickets.id"
+    },
+    {
+     "field": "startSaleAt",
+     "column": "start_sale_at",
+     "type": "timestamp(3)",
+     "prisma_type": "DateTime",
+     "nullable": "NO",
+     "pk": false,
+     "default": "",
+     "max_length": "",
+     "format": "timestamp",
+     "constraint": [],
+     "line": 273,
+     "list": false,
+     "fk": ""
+    },
+    {
+     "field": "endSaleAt",
+     "column": "end_sale_at",
+     "type": "timestamp(3)",
+     "prisma_type": "DateTime?",
+     "nullable": "YES",
+     "pk": false,
+     "default": "",
+     "max_length": "",
+     "format": "timestamp",
+     "constraint": [],
+     "line": 274,
+     "list": false,
+     "fk": ""
+    },
+    {
+     "field": "dateFrom",
+     "column": "date_from",
+     "type": "date",
+     "prisma_type": "DateTime",
+     "nullable": "NO",
+     "pk": false,
+     "default": "",
+     "max_length": "",
+     "format": "YYYY-MM-DD",
+     "constraint": [],
+     "line": 275,
+     "list": false,
+     "fk": ""
+    },
+    {
+     "field": "dateTo",
+     "column": "date_to",
+     "type": "date",
+     "prisma_type": "DateTime?",
+     "nullable": "YES",
+     "pk": false,
+     "default": "",
+     "max_length": "",
+     "format": "YYYY-MM-DD",
+     "constraint": [],
+     "line": 276,
+     "list": false,
+     "fk": ""
+    },
+    {
+     "field": "timeFrom",
+     "column": "time_from",
+     "type": "time",
+     "prisma_type": "DateTime?",
+     "nullable": "YES",
+     "pk": false,
+     "default": "",
+     "max_length": "",
+     "format": "HH:MM:SS",
+     "constraint": [],
+     "line": 277,
+     "list": false,
+     "fk": ""
+    },
+    {
+     "field": "timeTo",
+     "column": "time_to",
+     "type": "time",
+     "prisma_type": "DateTime?",
+     "nullable": "YES",
+     "pk": false,
+     "default": "",
+     "max_length": "",
+     "format": "HH:MM:SS",
+     "constraint": [],
+     "line": 278,
+     "list": false,
+     "fk": ""
+    },
+    {
+     "field": "canBookingBeforeInDay",
+     "column": "can_booking_before_in_day",
+     "type": "integer",
+     "prisma_type": "Int",
+     "nullable": "NO",
+     "pk": false,
+     "default": "",
+     "max_length": "",
+     "format": "",
+     "constraint": [],
+     "line": 280,
+     "list": false,
+     "fk": ""
+    },
+    {
+     "field": "canBookingFrom",
+     "column": "can_booking_from",
+     "type": "time",
+     "prisma_type": "DateTime?",
+     "nullable": "YES",
+     "pk": false,
+     "default": "",
+     "max_length": "",
+     "format": "HH:MM:SS",
+     "constraint": [],
+     "line": 281,
+     "list": false,
+     "fk": ""
+    },
+    {
+     "field": "canBookingUtil",
+     "column": "can_booking_util",
+     "type": "time",
+     "prisma_type": "DateTime",
+     "nullable": "NO",
+     "pk": false,
+     "default": "",
+     "max_length": "",
+     "format": "HH:MM:SS",
+     "constraint": [],
+     "line": 282,
+     "list": false,
+     "fk": ""
+    },
+    {
+     "field": "canCancelOrChangeBeforeInDay",
+     "column": "can_cancel_or_change_before_in_day",
+     "type": "integer",
+     "prisma_type": "Int",
+     "nullable": "NO",
+     "pk": false,
+     "default": "",
+     "max_length": "",
+     "format": "",
+     "constraint": [],
+     "line": 283,
+     "list": false,
+     "fk": ""
+    },
+    {
+     "field": "canCancelOrChangeUtil",
+     "column": "can_cancel_or_change_util",
+     "type": "time",
+     "prisma_type": "DateTime",
+     "nullable": "NO",
+     "pk": false,
+     "default": "",
+     "max_length": "",
+     "format": "HH:MM:SS",
+     "constraint": [],
+     "line": 284,
+     "list": false,
+     "fk": ""
+    },
+    {
+     "field": "enableRemind",
+     "column": "enable_remind",
+     "type": "boolean",
+     "prisma_type": "Boolean",
+     "nullable": "NO",
+     "pk": false,
+     "default": "",
+     "max_length": "",
+     "format": "",
+     "constraint": [],
+     "line": 286,
+     "list": false,
+     "fk": ""
+    },
+    {
+     "field": "remindBeforeInDay",
+     "column": "remind_before_in_day",
+     "type": "integer",
+     "prisma_type": "Int?",
+     "nullable": "YES",
+     "pk": false,
+     "default": "",
+     "max_length": "",
+     "format": "",
+     "constraint": [],
+     "line": 287,
+     "list": false,
+     "fk": ""
+    },
+    {
+     "field": "remindAt",
+     "column": "remind_at",
+     "type": "time",
+     "prisma_type": "DateTime?",
+     "nullable": "YES",
+     "pk": false,
+     "default": "",
+     "max_length": "",
+     "format": "HH:MM:SS",
+     "constraint": [],
+     "line": 288,
+     "list": false,
+     "fk": ""
+    },
+    {
+     "field": "enableExpirationRemind",
+     "column": "enable_expiration_remind",
+     "type": "boolean",
+     "prisma_type": "Boolean?",
+     "nullable": "YES",
+     "pk": false,
+     "default": "",
+     "max_length": "",
+     "format": "",
+     "constraint": [],
+     "line": 290,
+     "list": false,
+     "fk": ""
+    },
+    {
+     "field": "expirationRemindBeforeInDay",
+     "column": "expiration_remind_before_in_day",
+     "type": "integer",
+     "prisma_type": "Int?",
+     "nullable": "YES",
+     "pk": false,
+     "default": "",
+     "max_length": "",
+     "format": "",
+     "constraint": [],
+     "line": 291,
+     "list": false,
+     "fk": ""
+    },
+    {
+     "field": "expirationRemindAt",
+     "column": "expiration_remind_at",
+     "type": "time",
+     "prisma_type": "DateTime?",
+     "nullable": "YES",
+     "pk": false,
+     "default": "",
+     "max_length": "",
+     "format": "HH:MM:SS",
+     "constraint": [],
+     "line": 292,
+     "list": false,
+     "fk": ""
+    },
+    {
+     "field": "maxBookingTimes",
+     "column": "max_booking_times",
+     "type": "integer",
+     "prisma_type": "Int?",
+     "nullable": "YES",
+     "pk": false,
+     "default": "",
+     "max_length": "",
+     "format": "",
+     "constraint": [],
+     "line": 294,
+     "list": false,
+     "fk": ""
+    },
+    {
+     "field": "maxBookingPeople",
+     "column": "max_booking_people",
+     "type": "integer",
+     "prisma_type": "Int?",
+     "nullable": "YES",
+     "pk": false,
+     "default": "",
+     "max_length": "",
+     "format": "",
+     "constraint": [],
+     "line": 295,
+     "list": false,
+     "fk": ""
+    },
+    {
+     "field": "maxBookingPeopleAccumulative",
+     "column": "max_booking_people_accumulative",
+     "type": "boolean",
+     "prisma_type": "Boolean?",
+     "nullable": "YES",
+     "pk": false,
+     "default": "",
+     "max_length": "",
+     "format": "",
+     "constraint": [],
+     "line": 296,
+     "list": false,
+     "fk": ""
+    },
+    {
+     "field": "invisibleWhenReachedMaxBookingPeople",
+     "column": "invisible_when_reached_max_booking_people",
+     "type": "boolean",
+     "prisma_type": "Boolean?",
+     "nullable": "YES",
+     "pk": false,
+     "default": "",
+     "max_length": "",
+     "format": "",
+     "constraint": [],
+     "line": 297,
+     "list": false,
+     "fk": ""
+    },
+    {
+     "field": "baseAdultPeriod",
+     "column": "base_adult_period",
+     "type": "decimal(65,30)",
+     "prisma_type": "Decimal?",
+     "nullable": "YES",
+     "pk": false,
+     "default": "",
+     "max_length": "",
+     "format": "decimal",
+     "constraint": [],
+     "line": 299,
+     "list": false,
+     "fk": ""
+    },
+    {
+     "field": "baseAdultPeriodUnit",
+     "column": "base_adult_period_unit",
+     "type": "enum PriceUnit",
+     "prisma_type": "PriceUnit?",
+     "nullable": "YES",
+     "pk": false,
+     "default": "",
+     "max_length": "",
+     "format": "",
+     "constraint": [
+      "ENUM(Minute,Hour,Day)"
+     ],
+     "line": 300,
+     "list": false,
+     "fk": ""
+    },
+    {
+     "field": "baseAdultPeriodPrice",
+     "column": "base_adult_period_price",
+     "type": "decimal(65,30)",
+     "prisma_type": "Decimal?",
+     "nullable": "YES",
+     "pk": false,
+     "default": "",
+     "max_length": "",
+     "format": "decimal",
+     "constraint": [],
+     "line": 301,
+     "list": false,
+     "fk": ""
+    },
+    {
+     "field": "baseAdultSmaregiQRCodeUrl",
+     "column": "base_adult_smaregi_qrcode_url",
+     "type": "varchar(255)",
+     "prisma_type": "String?",
+     "nullable": "YES",
+     "pk": false,
+     "default": "",
+     "max_length": "255",
+     "format": "",
+     "constraint": [],
+     "line": 302,
+     "list": false,
+     "fk": ""
+    },
+    {
+     "field": "baseAdultObicCode",
+     "column": "base_adult_obic_code",
+     "type": "varchar(255)",
+     "prisma_type": "String?",
+     "nullable": "YES",
+     "pk": false,
+     "default": "",
+     "max_length": "255",
+     "format": "",
+     "constraint": [],
+     "line": 303,
+     "list": false,
+     "fk": ""
+    },
+    {
+     "field": "baseChildPeriod",
+     "column": "base_child_period",
+     "type": "decimal(65,30)",
+     "prisma_type": "Decimal?",
+     "nullable": "YES",
+     "pk": false,
+     "default": "",
+     "max_length": "",
+     "format": "decimal",
+     "constraint": [],
+     "line": 305,
+     "list": false,
+     "fk": ""
+    },
+    {
+     "field": "baseChildPeriodUnit",
+     "column": "base_child_period_unit",
+     "type": "enum PriceUnit",
+     "prisma_type": "PriceUnit?",
+     "nullable": "YES",
+     "pk": false,
+     "default": "",
+     "max_length": "",
+     "format": "",
+     "constraint": [
+      "ENUM(Minute,Hour,Day)"
+     ],
+     "line": 306,
+     "list": false,
+     "fk": ""
+    },
+    {
+     "field": "baseChildPeriodPrice",
+     "column": "base_child_period_price",
+     "type": "decimal(65,30)",
+     "prisma_type": "Decimal?",
+     "nullable": "YES",
+     "pk": false,
+     "default": "",
+     "max_length": "",
+     "format": "decimal",
+     "constraint": [],
+     "line": 307,
+     "list": false,
+     "fk": ""
+    },
+    {
+     "field": "baseChildSmaregiQRCodeUrl",
+     "column": "base_child_smaregi_qrcode_url",
+     "type": "varchar(255)",
+     "prisma_type": "String?",
+     "nullable": "YES",
+     "pk": false,
+     "default": "",
+     "max_length": "255",
+     "format": "",
+     "constraint": [],
+     "line": 308,
+     "list": false,
+     "fk": ""
+    },
+    {
+     "field": "baseChildObicCode",
+     "column": "base_child_obic_code",
+     "type": "varchar(255)",
+     "prisma_type": "String?",
+     "nullable": "YES",
+     "pk": false,
+     "default": "",
+     "max_length": "255",
+     "format": "",
+     "constraint": [],
+     "line": 309,
+     "list": false,
+     "fk": ""
+    },
+    {
+     "field": "extendedAdultPeriod",
+     "column": "extended_adult_period",
+     "type": "decimal(65,30)",
+     "prisma_type": "Decimal?",
+     "nullable": "YES",
+     "pk": false,
+     "default": "",
+     "max_length": "",
+     "format": "decimal",
+     "constraint": [],
+     "line": 311,
+     "list": false,
+     "fk": ""
+    },
+    {
+     "field": "extendedAdultPeriodUnit",
+     "column": "extended_adult_period_unit",
+     "type": "enum PriceUnit",
+     "prisma_type": "PriceUnit?",
+     "nullable": "YES",
+     "pk": false,
+     "default": "",
+     "max_length": "",
+     "format": "",
+     "constraint": [
+      "ENUM(Minute,Hour,Day)"
+     ],
+     "line": 312,
+     "list": false,
+     "fk": ""
+    },
+    {
+     "field": "extendedAdultPeriodPrice",
+     "column": "extended_adult_period_price",
+     "type": "decimal(65,30)",
+     "prisma_type": "Decimal?",
+     "nullable": "YES",
+     "pk": false,
+     "default": "",
+     "max_length": "",
+     "format": "decimal",
+     "constraint": [],
+     "line": 313,
+     "list": false,
+     "fk": ""
+    },
+    {
+     "field": "extendedAdultSmaregiQRCodeUrl",
+     "column": "extended_adult_smaregi_qrcode_url",
+     "type": "varchar(255)",
+     "prisma_type": "String?",
+     "nullable": "YES",
+     "pk": false,
+     "default": "",
+     "max_length": "255",
+     "format": "",
+     "constraint": [],
+     "line": 314,
+     "list": false,
+     "fk": ""
+    },
+    {
+     "field": "extendedAdultObicCode",
+     "column": "extended_adult_obic_code",
+     "type": "varchar(255)",
+     "prisma_type": "String?",
+     "nullable": "YES",
+     "pk": false,
+     "default": "",
+     "max_length": "255",
+     "format": "",
+     "constraint": [],
+     "line": 315,
+     "list": false,
+     "fk": ""
+    },
+    {
+     "field": "extendedChildPeriod",
+     "column": "extended_child_period",
+     "type": "decimal(65,30)",
+     "prisma_type": "Decimal?",
+     "nullable": "YES",
+     "pk": false,
+     "default": "",
+     "max_length": "",
+     "format": "decimal",
+     "constraint": [],
+     "line": 317,
+     "list": false,
+     "fk": ""
+    },
+    {
+     "field": "extendedChildPeriodUnit",
+     "column": "extended_child_period_unit",
+     "type": "enum PriceUnit",
+     "prisma_type": "PriceUnit?",
+     "nullable": "YES",
+     "pk": false,
+     "default": "",
+     "max_length": "",
+     "format": "",
+     "constraint": [
+      "ENUM(Minute,Hour,Day)"
+     ],
+     "line": 318,
+     "list": false,
+     "fk": ""
+    },
+    {
+     "field": "extendedChildPeriodPrice",
+     "column": "extended_child_period_price",
+     "type": "decimal(65,30)",
+     "prisma_type": "Decimal?",
+     "nullable": "YES",
+     "pk": false,
+     "default": "",
+     "max_length": "",
+     "format": "decimal",
+     "constraint": [],
+     "line": 319,
+     "list": false,
+     "fk": ""
+    },
+    {
+     "field": "extendedChildSmaregiQRCodeUrl",
+     "column": "extended_child_smaregi_qrcode_url",
+     "type": "varchar(255)",
+     "prisma_type": "String?",
+     "nullable": "YES",
+     "pk": false,
+     "default": "",
+     "max_length": "255",
+     "format": "",
+     "constraint": [],
+     "line": 320,
+     "list": false,
+     "fk": ""
+    },
+    {
+     "field": "extendedChildObicCode",
+     "column": "extended_child_obic_code",
+     "type": "varchar(255)",
+     "prisma_type": "String?",
+     "nullable": "YES",
+     "pk": false,
+     "default": "",
+     "max_length": "255",
+     "format": "",
+     "constraint": [],
+     "line": 321,
+     "list": false,
+     "fk": ""
+    },
+    {
+     "field": "deleted",
+     "column": "deleted",
+     "type": "boolean",
+     "prisma_type": "Boolean?",
+     "nullable": "YES",
+     "pk": false,
+     "default": "false",
+     "max_length": "",
+     "format": "",
+     "constraint": [],
+     "line": 323,
+     "list": false,
+     "fk": ""
+    },
+    {
+     "field": "isScheduleInFutureDeleted",
+     "column": "is_schedule_in_future_deleted",
+     "type": "boolean",
+     "prisma_type": "Boolean?",
+     "nullable": "YES",
+     "pk": false,
+     "default": "false",
+     "max_length": "",
+     "format": "",
+     "constraint": [],
+     "line": 325,
+     "list": false,
+     "fk": ""
+    },
+    {
+     "field": "createdAt",
+     "column": "created_at",
+     "type": "timestamp(3)",
+     "prisma_type": "DateTime",
+     "nullable": "NO",
+     "pk": false,
+     "default": "now()",
+     "max_length": "",
+     "format": "timestamp",
+     "constraint": [],
+     "line": 327,
+     "list": false,
+     "fk": ""
+    },
+    {
+     "field": "updatedAt",
+     "column": "updated_at",
+     "type": "timestamp(3)",
+     "prisma_type": "DateTime",
+     "nullable": "NO",
+     "pk": false,
+     "default": "now()",
+     "max_length": "",
+     "format": "timestamp",
+     "constraint": [],
+     "line": 328,
+     "list": false,
+     "fk": ""
+    }
+   ],
+   "relations": [
+    {
+     "fields": [
+      "ticketId"
+     ],
+     "to_model": "Ticket",
+     "to_table": "tickets",
+     "references": [
+      "id"
+     ],
+     "onDelete": "Cascade",
+     "line": 271,
+     "pairs": [
+      [
+       "ticket_id",
+       "id"
+      ]
+     ]
+    }
+   ],
+   "indexes": [
+    [
+     "ticket_id",
+     "deleted",
+     "date_to"
+    ],
+    [
+     "ticket_id"
+    ],
+    [
+     "date_to"
+    ],
+    [
+     "deleted"
+    ]
+   ],
+   "pk": [
+    "id"
+   ]
+  },
+  {
+   "model": "Booking",
+   "table": "bookings",
+   "start": 339,
+   "end": 419,
+   "columns": [
+    {
+     "field": "id",
+     "column": "id",
+     "type": "integer",
+     "prisma_type": "Int",
+     "nullable": "NO",
+     "pk": true,
+     "default": "autoincrement()",
+     "max_length": "",
+     "format": "",
+     "constraint": [],
+     "line": 340,
+     "list": false,
+     "fk": ""
+    },
+    {
+     "field": "tenantCode",
+     "column": "tenant_code",
+     "type": "text",
+     "prisma_type": "String",
+     "nullable": "NO",
+     "pk": false,
+     "default": "",
+     "max_length": "",
+     "format": "",
+     "constraint": [],
+     "line": 341,
+     "list": false,
+     "fk": "tenants.code"
+    },
+    {
+     "field": "ticketId",
+     "column": "ticket_id",
+     "type": "integer",
+     "prisma_type": "Int",
+     "nullable": "NO",
+     "pk": false,
+     "default": "",
+     "max_length": "",
+     "format": "",
+     "constraint": [],
+     "line": 343,
+     "list": false,
+     "fk": "tickets.id"
+    },
+    {
+     "field": "userId",
+     "column": "user_id",
+     "type": "integer",
+     "prisma_type": "Int?",
+     "nullable": "YES",
+     "pk": false,
+     "default": "",
+     "max_length": "",
+     "format": "",
+     "constraint": [],
+     "line": 345,
+     "list": false,
+     "fk": "users.id"
+    },
+    {
+     "field": "adultQuantity",
+     "column": "adult_quantity",
+     "type": "integer",
+     "prisma_type": "Int",
+     "nullable": "NO",
+     "pk": false,
+     "default": "",
+     "max_length": "",
+     "format": "",
+     "constraint": [],
+     "line": 348,
+     "list": false,
+     "fk": ""
+    },
+    {
+     "field": "adultPrice",
+     "column": "adult_price",
+     "type": "decimal(65,30)",
+     "prisma_type": "Decimal?",
+     "nullable": "YES",
+     "pk": false,
+     "default": "",
+     "max_length": "",
+     "format": "decimal",
+     "constraint": [],
+     "line": 349,
+     "list": false,
+     "fk": ""
+    },
+    {
+     "field": "childQuantity",
+     "column": "child_quantity",
+     "type": "integer",
+     "prisma_type": "Int",
+     "nullable": "NO",
+     "pk": false,
+     "default": "",
+     "max_length": "",
+     "format": "",
+     "constraint": [],
+     "line": 350,
+     "list": false,
+     "fk": ""
+    },
+    {
+     "field": "childPrice",
+     "column": "child_price",
+     "type": "decimal(65,30)",
+     "prisma_type": "Decimal?",
+     "nullable": "YES",
+     "pk": false,
+     "default": "",
+     "max_length": "",
+     "format": "decimal",
+     "constraint": [],
+     "line": 351,
+     "list": false,
+     "fk": ""
+    },
+    {
+     "field": "totalAmount",
+     "column": "total_amount",
+     "type": "decimal(65,30)",
+     "prisma_type": "Decimal?",
+     "nullable": "YES",
+     "pk": false,
+     "default": "",
+     "max_length": "",
+     "format": "decimal",
+     "constraint": [],
+     "line": 353,
+     "list": false,
+     "fk": ""
+    },
+    {
+     "field": "webTotalAmount",
+     "column": "web_total_amount",
+     "type": "decimal(65,30)",
+     "prisma_type": "Decimal?",
+     "nullable": "YES",
+     "pk": false,
+     "default": "",
+     "max_length": "",
+     "format": "decimal",
+     "constraint": [],
+     "line": 354,
+     "list": false,
+     "fk": ""
+    },
+    {
+     "field": "posTotalAmount",
+     "column": "pos_total_amount",
+     "type": "decimal(65,30)",
+     "prisma_type": "Decimal?",
+     "nullable": "YES",
+     "pk": false,
+     "default": "",
+     "max_length": "",
+     "format": "decimal",
+     "constraint": [],
+     "line": 355,
+     "list": false,
+     "fk": ""
+    },
+    {
+     "field": "smaregiQRCodes",
+     "column": "smaregi_qr_codes",
+     "type": "jsonb",
+     "prisma_type": "Json?",
+     "nullable": "YES",
+     "pk": false,
+     "default": "",
+     "max_length": "",
+     "format": "JSON",
+     "constraint": [],
+     "line": 356,
+     "list": false,
+     "fk": ""
+    },
+    {
+     "field": "coupons",
+     "column": "coupons",
+     "type": "jsonb",
+     "prisma_type": "Json?",
+     "nullable": "YES",
+     "pk": false,
+     "default": "",
+     "max_length": "",
+     "format": "JSON",
+     "constraint": [],
+     "line": 357,
+     "list": false,
+     "fk": ""
+    },
+    {
+     "field": "status",
+     "column": "status",
+     "type": "enum BookingStatus",
+     "prisma_type": "BookingStatus",
+     "nullable": "NO",
+     "pk": false,
+     "default": "Successful",
+     "max_length": "",
+     "format": "",
+     "constraint": [
+      "ENUM(Successful,Cancelled,Waiting,CheckedIn,CheckedOut,Calling,SystemCancelled)"
+     ],
+     "line": 359,
+     "list": false,
+     "fk": ""
+    },
+    {
+     "field": "paymentStatus",
+     "column": "payment_status",
+     "type": "enum PaymentStatus",
+     "prisma_type": "PaymentStatus",
+     "nullable": "NO",
+     "pk": false,
+     "default": "Pending",
+     "max_length": "",
+     "format": "",
+     "constraint": [
+      "ENUM(Error,Pending,Completed,Refunded)"
+     ],
+     "line": 360,
+     "list": false,
+     "fk": ""
+    },
+    {
+     "field": "isSmaregiScanned",
+     "column": "is_smaregi_scanned",
+     "type": "boolean",
+     "prisma_type": "Boolean",
+     "nullable": "NO",
+     "pk": false,
+     "default": "false",
+     "max_length": "",
+     "format": "",
+     "constraint": [],
+     "line": 361,
+     "list": false,
+     "fk": ""
+    },
+    {
+     "field": "GMOTransactionId",
+     "column": "GMO_transaction_id",
+     "type": "text",
+     "prisma_type": "String?",
+     "nullable": "YES",
+     "pk": false,
+     "default": "",
+     "max_length": "",
+     "format": "",
+     "constraint": [],
+     "line": 363,
+     "list": false,
+     "fk": ""
+    },
+    {
+     "field": "smaregiConfirmedTransactionHeadId",
+     "column": "smaregi_confirmed_transaction_head_id",
+     "type": "text",
+     "prisma_type": "String?",
+     "nullable": "YES",
+     "pk": false,
+     "default": "",
+     "max_length": "",
+     "format": "",
+     "constraint": [],
+     "line": 365,
+     "list": false,
+     "fk": ""
+    },
+    {
+     "field": "smaregiConfirmedTransactionAt",
+     "column": "smaregi_confirmed_transaction_at",
+     "type": "timestamp(3)",
+     "prisma_type": "DateTime?",
+     "nullable": "YES",
+     "pk": false,
+     "default": "",
+     "max_length": "",
+     "format": "timestamp",
+     "constraint": [],
+     "line": 366,
+     "list": false,
+     "fk": ""
+    },
+    {
+     "field": "smaregiConfirmedTransactionCancelledAt",
+     "column": "smaregi_confirmed_transaction_cancelled_at",
+     "type": "timestamp(3)",
+     "prisma_type": "DateTime?",
+     "nullable": "YES",
+     "pk": false,
+     "default": "",
+     "max_length": "",
+     "format": "timestamp",
+     "constraint": [],
+     "line": 367,
+     "list": false,
+     "fk": ""
+    },
+    {
+     "field": "barCode",
+     "column": "bar_code",
+     "type": "text",
+     "prisma_type": "String",
+     "nullable": "NO",
+     "pk": false,
+     "default": "",
+     "max_length": "",
+     "format": "",
+     "constraint": [],
+     "line": 369,
+     "list": false,
+     "fk": ""
+    },
+    {
+     "field": "subEmail",
+     "column": "sub_email",
+     "type": "text",
+     "prisma_type": "String?",
+     "nullable": "YES",
+     "pk": false,
+     "default": "",
+     "max_length": "",
+     "format": "",
+     "constraint": [],
+     "line": 370,
+     "list": false,
+     "fk": ""
+    },
+    {
+     "field": "date",
+     "column": "date",
+     "type": "date",
+     "prisma_type": "DateTime?",
+     "nullable": "YES",
+     "pk": false,
+     "default": "",
+     "max_length": "",
+     "format": "YYYY-MM-DD",
+     "constraint": [],
+     "line": 372,
+     "list": false,
+     "fk": ""
+    },
+    {
+     "field": "firstCheckedInAt",
+     "column": "first_checked_in_at",
+     "type": "timestamp(3)",
+     "prisma_type": "DateTime?",
+     "nullable": "YES",
+     "pk": false,
+     "default": "",
+     "max_length": "",
+     "format": "timestamp",
+     "constraint": [],
+     "line": 374,
+     "list": false,
+     "fk": ""
+    },
+    {
+     "field": "checkedInAt",
+     "column": "checked_in_at",
+     "type": "timestamp(3)",
+     "prisma_type": "DateTime?",
+     "nullable": "YES",
+     "pk": false,
+     "default": "",
+     "max_length": "",
+     "format": "timestamp",
+     "constraint": [],
+     "line": 375,
+     "list": false,
+     "fk": ""
+    },
+    {
+     "field": "checkedOutAt",
+     "column": "checked_out_at",
+     "type": "timestamp(3)",
+     "prisma_type": "DateTime?",
+     "nullable": "YES",
+     "pk": false,
+     "default": "",
+     "max_length": "",
+     "format": "timestamp",
+     "constraint": [],
+     "line": 376,
+     "list": false,
+     "fk": ""
+    },
+    {
+     "field": "firstCheckoutAt",
+     "column": "first_checkout_at",
+     "type": "timestamp(3)",
+     "prisma_type": "DateTime?",
+     "nullable": "YES",
+     "pk": false,
+     "default": "",
+     "max_length": "",
+     "format": "timestamp",
+     "constraint": [],
+     "line": 377,
+     "list": false,
+     "fk": ""
+    },
+    {
+     "field": "tempCheckoutAt",
+     "column": "temp_checkout_at",
+     "type": "timestamp(3)",
+     "prisma_type": "DateTime?",
+     "nullable": "YES",
+     "pk": false,
+     "default": "",
+     "max_length": "",
+     "format": "timestamp",
+     "constraint": [],
+     "line": 378,
+     "list": false,
+     "fk": ""
+    },
+    {
+     "field": "parentBookingId",
+     "column": "parent_booking_id",
+     "type": "integer",
+     "prisma_type": "Int?",
+     "nullable": "YES",
+     "pk": false,
+     "default": "",
+     "max_length": "",
+     "format": "",
+     "constraint": [],
+     "line": 380,
+     "list": false,
+     "fk": ""
+    },
+    {
+     "field": "waitingOrder",
+     "column": "waiting_order",
+     "type": "integer",
+     "prisma_type": "Int?",
+     "nullable": "YES",
+     "pk": false,
+     "default": "",
+     "max_length": "",
+     "format": "",
+     "constraint": [],
+     "line": 382,
+     "list": false,
+     "fk": ""
+    },
+    {
+     "field": "waitingAt",
+     "column": "waiting_at",
+     "type": "timestamp(3)",
+     "prisma_type": "DateTime?",
+     "nullable": "YES",
+     "pk": false,
+     "default": "",
+     "max_length": "",
+     "format": "timestamp",
+     "constraint": [],
+     "line": 383,
+     "list": false,
+     "fk": ""
+    },
+    {
+     "field": "callingAt",
+     "column": "calling_at",
+     "type": "timestamp(3)",
+     "prisma_type": "DateTime?",
+     "nullable": "YES",
+     "pk": false,
+     "default": "",
+     "max_length": "",
+     "format": "timestamp",
+     "constraint": [],
+     "line": 384,
+     "list": false,
+     "fk": ""
+    },
+    {
+     "field": "remindedAt",
+     "column": "reminded_at",
+     "type": "timestamp(3)",
+     "prisma_type": "DateTime?",
+     "nullable": "YES",
+     "pk": false,
+     "default": "",
+     "max_length": "",
+     "format": "timestamp",
+     "constraint": [],
+     "line": 385,
+     "list": false,
+     "fk": ""
+    },
+    {
+     "field": "expirationRemindedAt",
+     "column": "expiration_reminded_at",
+     "type": "timestamp(3)",
+     "prisma_type": "DateTime?",
+     "nullable": "YES",
+     "pk": false,
+     "default": "",
+     "max_length": "",
+     "format": "timestamp",
+     "constraint": [],
+     "line": 386,
+     "list": false,
+     "fk": ""
+    },
+    {
+     "field": "cancelledAt",
+     "column": "cancelled_at",
+     "type": "timestamp(3)",
+     "prisma_type": "DateTime?",
+     "nullable": "YES",
+     "pk": false,
+     "default": "",
+     "max_length": "",
+     "format": "timestamp",
+     "constraint": [],
+     "line": 387,
+     "list": false,
+     "fk": ""
+    },
+    {
+     "field": "requestedReCheckInAt",
+     "column": "requested_re_check_in_at",
+     "type": "timestamp(3)",
+     "prisma_type": "DateTime?",
+     "nullable": "YES",
+     "pk": false,
+     "default": "",
+     "max_length": "",
+     "format": "timestamp",
+     "constraint": [],
+     "line": 388,
+     "list": false,
+     "fk": ""
+    },
+    {
+     "field": "reCheckInCount",
+     "column": "re_check_in_count",
+     "type": "integer",
+     "prisma_type": "Int?",
+     "nullable": "YES",
+     "pk": false,
+     "default": "0",
+     "max_length": "",
+     "format": "",
+     "constraint": [],
+     "line": 389,
+     "list": false,
+     "fk": ""
+    },
+    {
+     "field": "partialCheckedOutAdultQuantity",
+     "column": "partial_checked_out_adult_quantity",
+     "type": "integer",
+     "prisma_type": "Int?",
+     "nullable": "YES",
+     "pk": false,
+     "default": "",
+     "max_length": "",
+     "format": "",
+     "constraint": [],
+     "line": 391,
+     "list": false,
+     "fk": ""
+    },
+    {
+     "field": "partialCheckedOutChildQuantity",
+     "column": "partial_checked_out_child_quantity",
+     "type": "integer",
+     "prisma_type": "Int?",
+     "nullable": "YES",
+     "pk": false,
+     "default": "",
+     "max_length": "",
+     "format": "",
+     "constraint": [],
+     "line": 392,
+     "list": false,
+     "fk": ""
+    },
+    {
+     "field": "partialCheckedOutAt",
+     "column": "partial_checked_out_at",
+     "type": "timestamp(3)",
+     "prisma_type": "DateTime?",
+     "nullable": "YES",
+     "pk": false,
+     "default": "",
+     "max_length": "",
+     "format": "timestamp",
+     "constraint": [],
+     "line": 393,
+     "list": false,
+     "fk": ""
+    },
+    {
+     "field": "createdAt",
+     "column": "created_at",
+     "type": "timestamp(3)",
+     "prisma_type": "DateTime",
+     "nullable": "NO",
+     "pk": false,
+     "default": "now()",
+     "max_length": "",
+     "format": "timestamp",
+     "constraint": [],
+     "line": 395,
+     "list": false,
+     "fk": ""
+    },
+    {
+     "field": "updatedAt",
+     "column": "updated_at",
+     "type": "timestamp(3)",
+     "prisma_type": "DateTime",
+     "nullable": "NO",
+     "pk": false,
+     "default": "@updatedAt",
+     "max_length": "",
+     "format": "timestamp",
+     "constraint": [],
+     "line": 396,
+     "list": false,
+     "fk": ""
+    },
+    {
+     "field": "ticketBookingScheduleId",
+     "column": "ticket_booking_schedule_id",
+     "type": "integer",
+     "prisma_type": "Int?",
+     "nullable": "YES",
+     "pk": false,
+     "default": "",
+     "max_length": "",
+     "format": "",
+     "constraint": [],
+     "line": 402,
+     "list": false,
+     "fk": "ticket_booking_schedules.id"
+    },
+    {
+     "field": "stayDuration",
+     "column": "stay_duration",
+     "type": "integer",
+     "prisma_type": "Int?",
+     "nullable": "YES",
+     "pk": false,
+     "default": "",
+     "max_length": "",
+     "format": "",
+     "constraint": [],
+     "line": 405,
+     "list": false,
+     "fk": ""
+    },
+    {
+     "field": "lastStayDuration",
+     "column": "last_stay_duration",
+     "type": "integer",
+     "prisma_type": "Int?",
+     "nullable": "YES",
+     "pk": false,
+     "default": "",
+     "max_length": "",
+     "format": "",
+     "constraint": [],
+     "line": 406,
+     "list": false,
+     "fk": ""
+    }
+   ],
+   "relations": [
+    {
+     "fields": [
+      "tenantCode"
+     ],
+     "to_model": "Tenant",
+     "to_table": "tenants",
+     "references": [
+      "code"
+     ],
+     "onDelete": "Cascade",
+     "line": 342,
+     "pairs": [
+      [
+       "tenant_code",
+       "code"
+      ]
+     ]
+    },
+    {
+     "fields": [
+      "ticketId"
+     ],
+     "to_model": "Ticket",
+     "to_table": "tickets",
+     "references": [
+      "id"
+     ],
+     "onDelete": "Cascade",
+     "line": 344,
+     "pairs": [
+      [
+       "ticket_id",
+       "id"
+      ]
+     ]
+    },
+    {
+     "fields": [
+      "userId"
+     ],
+     "to_model": "User",
+     "to_table": "users",
+     "references": [
+      "id"
+     ],
+     "onDelete": "Cascade",
+     "line": 346,
+     "pairs": [
+      [
+       "user_id",
+       "id"
+      ]
+     ]
+    },
+    {
+     "fields": [
+      "ticketBookingScheduleId"
+     ],
+     "to_model": "TicketBookingSchedule",
+     "to_table": "ticket_booking_schedules",
+     "references": [
+      "id"
+     ],
+     "onDelete": "",
+     "line": 403,
+     "pairs": [
+      [
+       "ticket_booking_schedule_id",
+       "id"
+      ]
+     ]
+    }
+   ],
+   "indexes": [
+    [
+     "bar_code",
+     "created_at"
+    ],
+    [
+     "tenant_code",
+     "status",
+     "date"
+    ],
+    [
+     "user_id",
+     "status"
+    ],
+    [
+     "ticket_id"
+    ],
+    [
+     "parent_booking_id",
+     "status"
+    ],
+    [
+     "created_at"
+    ],
+    [
+     "date"
+    ],
+    [
+     "status"
+    ],
+    [
+     "payment_status",
+     "GMO_transaction_id",
+     "created_at"
+    ],
+    [
+     "payment_status",
+     "GMO_transaction_id",
+     "user_id"
+    ]
+   ],
+   "pk": [
+    "id"
+   ]
+  },
+  {
+   "model": "BookingChildAgeInfo",
+   "table": "booking_child_age_infos",
+   "start": 421,
+   "end": 432,
+   "columns": [
+    {
+     "field": "id",
+     "column": "id",
+     "type": "integer",
+     "prisma_type": "Int",
+     "nullable": "NO",
+     "pk": true,
+     "default": "autoincrement()",
+     "max_length": "",
+     "format": "",
+     "constraint": [],
+     "line": 422,
+     "list": false,
+     "fk": ""
+    },
+    {
+     "field": "bookingId",
+     "column": "booking_id",
+     "type": "integer",
+     "prisma_type": "Int",
+     "nullable": "NO",
+     "pk": false,
+     "default": "",
+     "max_length": "",
+     "format": "",
+     "constraint": [],
+     "line": 423,
+     "list": false,
+     "fk": "bookings.id"
+    },
+    {
+     "field": "childAgeInMonth",
+     "column": "child_age_in_month",
+     "type": "integer",
+     "prisma_type": "Int",
+     "nullable": "NO",
+     "pk": false,
+     "default": "",
+     "max_length": "",
+     "format": "",
+     "constraint": [],
+     "line": 426,
+     "list": false,
+     "fk": ""
+    }
+   ],
+   "relations": [
+    {
+     "fields": [
+      "bookingId"
+     ],
+     "to_model": "Booking",
+     "to_table": "bookings",
+     "references": [
+      "id"
+     ],
+     "onDelete": "Cascade",
+     "line": 424,
+     "pairs": [
+      [
+       "booking_id",
+       "id"
+      ]
+     ]
+    }
+   ],
+   "indexes": [
+    [
+     "booking_id"
+    ]
+   ],
+   "pk": [
+    "id"
+   ]
+  },
+  {
+   "model": "PartialCheckout",
+   "table": "partial_checkouts",
+   "start": 434,
+   "end": 450,
+   "columns": [
+    {
+     "field": "id",
+     "column": "id",
+     "type": "integer",
+     "prisma_type": "Int",
+     "nullable": "NO",
+     "pk": true,
+     "default": "autoincrement()",
+     "max_length": "",
+     "format": "",
+     "constraint": [],
+     "line": 435,
+     "list": false,
+     "fk": ""
+    },
+    {
+     "field": "bookingId",
+     "column": "booking_id",
+     "type": "integer",
+     "prisma_type": "Int",
+     "nullable": "NO",
+     "pk": false,
+     "default": "",
+     "max_length": "",
+     "format": "",
+     "constraint": [],
+     "line": 436,
+     "list": false,
+     "fk": "bookings.id"
+    },
+    {
+     "field": "checkedOutAt",
+     "column": "checked_out_at",
+     "type": "timestamp(3)",
+     "prisma_type": "DateTime",
+     "nullable": "NO",
+     "pk": false,
+     "default": "",
+     "max_length": "",
+     "format": "timestamp",
+     "constraint": [],
+     "line": 438,
+     "list": false,
+     "fk": ""
+    },
+    {
+     "field": "isAdult",
+     "column": "is_adult",
+     "type": "boolean",
+     "prisma_type": "Boolean",
+     "nullable": "NO",
+     "pk": false,
+     "default": "",
+     "max_length": "",
+     "format": "",
+     "constraint": [],
+     "line": 439,
+     "list": false,
+     "fk": ""
+    },
+    {
+     "field": "quantity",
+     "column": "quantity",
+     "type": "integer",
+     "prisma_type": "Int",
+     "nullable": "NO",
+     "pk": false,
+     "default": "",
+     "max_length": "",
+     "format": "",
+     "constraint": [],
+     "line": 440,
+     "list": false,
+     "fk": ""
+    },
+    {
+     "field": "bookingChildAgeInfoId",
+     "column": "booking_child_age_info_id",
+     "type": "integer",
+     "prisma_type": "Int?",
+     "nullable": "YES",
+     "pk": false,
+     "default": "",
+     "max_length": "",
+     "format": "",
+     "constraint": [],
+     "line": 442,
+     "list": false,
+     "fk": "booking_child_age_infos.id"
+    },
+    {
+     "field": "deleted",
+     "column": "deleted",
+     "type": "boolean",
+     "prisma_type": "Boolean?",
+     "nullable": "YES",
+     "pk": false,
+     "default": "false",
+     "max_length": "",
+     "format": "",
+     "constraint": [],
+     "line": 445,
+     "list": false,
+     "fk": ""
+    }
+   ],
+   "relations": [
+    {
+     "fields": [
+      "bookingId"
+     ],
+     "to_model": "Booking",
+     "to_table": "bookings",
+     "references": [
+      "id"
+     ],
+     "onDelete": "Cascade",
+     "line": 437,
+     "pairs": [
+      [
+       "booking_id",
+       "id"
+      ]
+     ]
+    },
+    {
+     "fields": [
+      "bookingChildAgeInfoId"
+     ],
+     "to_model": "BookingChildAgeInfo",
+     "to_table": "booking_child_age_infos",
+     "references": [
+      "id"
+     ],
+     "onDelete": "Cascade",
+     "line": 443,
+     "pairs": [
+      [
+       "booking_child_age_info_id",
+       "id"
+      ]
+     ]
+    }
+   ],
+   "indexes": [
+    [
+     "booking_id"
+    ],
+    [
+     "deleted"
+    ]
+   ],
+   "pk": [
+    "id"
+   ]
+  },
+  {
+   "model": "AppSetting",
+   "table": "app_settings",
+   "start": 452,
+   "end": 462,
+   "columns": [
+    {
+     "field": "settingKey",
+     "column": "setting_key",
+     "type": "text",
+     "prisma_type": "String",
+     "nullable": "NO",
+     "pk": true,
+     "default": "",
+     "max_length": "",
+     "format": "",
+     "constraint": [],
+     "line": 453,
+     "list": false,
+     "fk": ""
+    },
+    {
+     "field": "name",
+     "column": "name",
+     "type": "text",
+     "prisma_type": "String",
+     "nullable": "NO",
+     "pk": false,
+     "default": "",
+     "max_length": "",
+     "format": "",
+     "constraint": [],
+     "line": 454,
+     "list": false,
+     "fk": ""
+    },
+    {
+     "field": "value",
+     "column": "value",
+     "type": "text",
+     "prisma_type": "String",
+     "nullable": "NO",
+     "pk": false,
+     "default": "",
+     "max_length": "",
+     "format": "",
+     "constraint": [],
+     "line": 455,
+     "list": false,
+     "fk": ""
+    },
+    {
+     "field": "dataType",
+     "column": "data_type",
+     "type": "enum DataType",
+     "prisma_type": "DataType",
+     "nullable": "NO",
+     "pk": false,
+     "default": "",
+     "max_length": "",
+     "format": "",
+     "constraint": [
+      "ENUM(Text,Number,RichText)"
+     ],
+     "line": 456,
+     "list": false,
+     "fk": ""
+    },
+    {
+     "field": "createdAt",
+     "column": "created_at",
+     "type": "timestamp(3)",
+     "prisma_type": "DateTime",
+     "nullable": "NO",
+     "pk": false,
+     "default": "now()",
+     "max_length": "",
+     "format": "timestamp",
+     "constraint": [],
+     "line": 458,
+     "list": false,
+     "fk": ""
+    },
+    {
+     "field": "updatedAt",
+     "column": "updated_at",
+     "type": "timestamp(3)",
+     "prisma_type": "DateTime",
+     "nullable": "NO",
+     "pk": false,
+     "default": "@updatedAt",
+     "max_length": "",
+     "format": "timestamp",
+     "constraint": [],
+     "line": 459,
+     "list": false,
+     "fk": ""
+    }
+   ],
+   "relations": [],
+   "indexes": [],
+   "pk": [
+    "setting_key"
+   ]
+  },
+  {
+   "model": "EmailSetting",
+   "table": "email_settings",
+   "start": 464,
+   "end": 475,
+   "columns": [
+    {
+     "field": "emailKey",
+     "column": "email_key",
+     "type": "text",
+     "prisma_type": "String",
+     "nullable": "NO",
+     "pk": true,
+     "default": "",
+     "max_length": "",
+     "format": "",
+     "constraint": [],
+     "line": 465,
+     "list": false,
+     "fk": ""
+    },
+    {
+     "field": "name",
+     "column": "name",
+     "type": "text",
+     "prisma_type": "String",
+     "nullable": "NO",
+     "pk": false,
+     "default": "",
+     "max_length": "",
+     "format": "",
+     "constraint": [],
+     "line": 466,
+     "list": false,
+     "fk": ""
+    },
+    {
+     "field": "title",
+     "column": "title",
+     "type": "text",
+     "prisma_type": "String",
+     "nullable": "NO",
+     "pk": false,
+     "default": "",
+     "max_length": "",
+     "format": "",
+     "constraint": [],
+     "line": 467,
+     "list": false,
+     "fk": ""
+    },
+    {
+     "field": "content",
+     "column": "content",
+     "type": "text",
+     "prisma_type": "String",
+     "nullable": "NO",
+     "pk": false,
+     "default": "",
+     "max_length": "",
+     "format": "",
+     "constraint": [],
+     "line": 468,
+     "list": false,
+     "fk": ""
+    },
+    {
+     "field": "active",
+     "column": "active",
+     "type": "boolean",
+     "prisma_type": "Boolean?",
+     "nullable": "YES",
+     "pk": false,
+     "default": "true",
+     "max_length": "",
+     "format": "",
+     "constraint": [],
+     "line": 469,
+     "list": false,
+     "fk": ""
+    },
+    {
+     "field": "createdAt",
+     "column": "created_at",
+     "type": "timestamp(3)",
+     "prisma_type": "DateTime",
+     "nullable": "NO",
+     "pk": false,
+     "default": "now()",
+     "max_length": "",
+     "format": "timestamp",
+     "constraint": [],
+     "line": 471,
+     "list": false,
+     "fk": ""
+    },
+    {
+     "field": "updatedAt",
+     "column": "updated_at",
+     "type": "timestamp(3)",
+     "prisma_type": "DateTime",
+     "nullable": "NO",
+     "pk": false,
+     "default": "@updatedAt",
+     "max_length": "",
+     "format": "timestamp",
+     "constraint": [],
+     "line": 472,
+     "list": false,
+     "fk": ""
+    }
+   ],
+   "relations": [],
+   "indexes": [],
+   "pk": [
+    "email_key"
+   ]
+  },
+  {
+   "model": "News",
+   "table": "news",
+   "start": 477,
+   "end": 487,
+   "columns": [
+    {
+     "field": "id",
+     "column": "id",
+     "type": "integer",
+     "prisma_type": "Int",
+     "nullable": "NO",
+     "pk": true,
+     "default": "autoincrement()",
+     "max_length": "",
+     "format": "",
+     "constraint": [],
+     "line": 478,
+     "list": false,
+     "fk": ""
+    },
+    {
+     "field": "date",
+     "column": "date",
+     "type": "date",
+     "prisma_type": "DateTime",
+     "nullable": "NO",
+     "pk": false,
+     "default": "",
+     "max_length": "",
+     "format": "YYYY-MM-DD",
+     "constraint": [],
+     "line": 479,
+     "list": false,
+     "fk": ""
+    },
+    {
+     "field": "title",
+     "column": "title",
+     "type": "text",
+     "prisma_type": "String",
+     "nullable": "NO",
+     "pk": false,
+     "default": "",
+     "max_length": "",
+     "format": "",
+     "constraint": [],
+     "line": 480,
+     "list": false,
+     "fk": ""
+    },
+    {
+     "field": "content",
+     "column": "content",
+     "type": "text",
+     "prisma_type": "String",
+     "nullable": "NO",
+     "pk": false,
+     "default": "",
+     "max_length": "",
+     "format": "",
+     "constraint": [],
+     "line": 481,
+     "list": false,
+     "fk": ""
+    },
+    {
+     "field": "createdAt",
+     "column": "created_at",
+     "type": "timestamp(3)",
+     "prisma_type": "DateTime",
+     "nullable": "NO",
+     "pk": false,
+     "default": "now()",
+     "max_length": "",
+     "format": "timestamp",
+     "constraint": [],
+     "line": 483,
+     "list": false,
+     "fk": ""
+    },
+    {
+     "field": "updatedAt",
+     "column": "updated_at",
+     "type": "timestamp(3)",
+     "prisma_type": "DateTime",
+     "nullable": "NO",
+     "pk": false,
+     "default": "@updatedAt",
+     "max_length": "",
+     "format": "timestamp",
+     "constraint": [],
+     "line": 484,
+     "list": false,
+     "fk": ""
+    }
+   ],
+   "relations": [],
+   "indexes": [],
+   "pk": [
+    "id"
+   ]
+  },
+  {
+   "model": "Disclaimer",
+   "table": "disclaimers",
+   "start": 489,
+   "end": 499,
+   "columns": [
+    {
+     "field": "id",
+     "column": "id",
+     "type": "integer",
+     "prisma_type": "Int",
+     "nullable": "NO",
+     "pk": true,
+     "default": "autoincrement()",
+     "max_length": "",
+     "format": "",
+     "constraint": [],
+     "line": 490,
+     "list": false,
+     "fk": ""
+    },
+    {
+     "field": "title",
+     "column": "title",
+     "type": "text",
+     "prisma_type": "String",
+     "nullable": "NO",
+     "pk": false,
+     "default": "",
+     "max_length": "",
+     "format": "",
+     "constraint": [],
+     "line": 491,
+     "list": false,
+     "fk": ""
+    },
+    {
+     "field": "createdAt",
+     "column": "created_at",
+     "type": "timestamp(3)",
+     "prisma_type": "DateTime",
+     "nullable": "NO",
+     "pk": false,
+     "default": "now()",
+     "max_length": "",
+     "format": "timestamp",
+     "constraint": [],
+     "line": 493,
+     "list": false,
+     "fk": ""
+    },
+    {
+     "field": "updatedAt",
+     "column": "updated_at",
+     "type": "timestamp(3)",
+     "prisma_type": "DateTime",
+     "nullable": "NO",
+     "pk": false,
+     "default": "@updatedAt",
+     "max_length": "",
+     "format": "timestamp",
+     "constraint": [],
+     "line": 494,
+     "list": false,
+     "fk": ""
+    }
+   ],
+   "relations": [],
+   "indexes": [],
+   "pk": [
+    "id"
+   ]
+  },
+  {
+   "model": "DisclaimerOption",
+   "table": "disclaimer_options",
+   "start": 501,
+   "end": 511,
+   "columns": [
+    {
+     "field": "id",
+     "column": "id",
+     "type": "integer",
+     "prisma_type": "Int",
+     "nullable": "NO",
+     "pk": true,
+     "default": "autoincrement()",
+     "max_length": "",
+     "format": "",
+     "constraint": [],
+     "line": 502,
+     "list": false,
+     "fk": ""
+    },
+    {
+     "field": "disclaimerId",
+     "column": "disclaimer_id",
+     "type": "integer",
+     "prisma_type": "Int",
+     "nullable": "NO",
+     "pk": false,
+     "default": "",
+     "max_length": "",
+     "format": "",
+     "constraint": [],
+     "line": 503,
+     "list": false,
+     "fk": "disclaimers.id"
+    },
+    {
+     "field": "content",
+     "column": "content",
+     "type": "text",
+     "prisma_type": "String",
+     "nullable": "NO",
+     "pk": false,
+     "default": "",
+     "max_length": "",
+     "format": "",
+     "constraint": [],
+     "line": 505,
+     "list": false,
+     "fk": ""
+    },
+    {
+     "field": "createdAt",
+     "column": "created_at",
+     "type": "timestamp(3)",
+     "prisma_type": "DateTime",
+     "nullable": "NO",
+     "pk": false,
+     "default": "now()",
+     "max_length": "",
+     "format": "timestamp",
+     "constraint": [],
+     "line": 507,
+     "list": false,
+     "fk": ""
+    },
+    {
+     "field": "updatedAt",
+     "column": "updated_at",
+     "type": "timestamp(3)",
+     "prisma_type": "DateTime",
+     "nullable": "NO",
+     "pk": false,
+     "default": "@updatedAt",
+     "max_length": "",
+     "format": "timestamp",
+     "constraint": [],
+     "line": 508,
+     "list": false,
+     "fk": ""
+    }
+   ],
+   "relations": [
+    {
+     "fields": [
+      "disclaimerId"
+     ],
+     "to_model": "Disclaimer",
+     "to_table": "disclaimers",
+     "references": [
+      "id"
+     ],
+     "onDelete": "Cascade",
+     "line": 504,
+     "pairs": [
+      [
+       "disclaimer_id",
+       "id"
+      ]
+     ]
+    }
+   ],
+   "indexes": [],
+   "pk": [
+    "id"
+   ]
+  },
+  {
+   "model": "GMOSetting",
+   "table": "gmo_settings",
+   "start": 513,
+   "end": 525,
+   "columns": [
+    {
+     "field": "id",
+     "column": "id",
+     "type": "integer",
+     "prisma_type": "Int",
+     "nullable": "NO",
+     "pk": true,
+     "default": "autoincrement()",
+     "max_length": "",
+     "format": "",
+     "constraint": [],
+     "line": 514,
+     "list": false,
+     "fk": ""
+    },
+    {
+     "field": "name",
+     "column": "name",
+     "type": "text",
+     "prisma_type": "String",
+     "nullable": "NO",
+     "pk": false,
+     "default": "",
+     "max_length": "",
+     "format": "",
+     "constraint": [],
+     "line": 515,
+     "list": false,
+     "fk": ""
+    },
+    {
+     "field": "shopId",
+     "column": "shop_id",
+     "type": "text",
+     "prisma_type": "String",
+     "nullable": "NO",
+     "pk": false,
+     "default": "",
+     "max_length": "",
+     "format": "",
+     "constraint": [
+      "UNIQUE"
+     ],
+     "line": 516,
+     "list": false,
+     "fk": ""
+    },
+    {
+     "field": "shopPass",
+     "column": "shop_pass",
+     "type": "text",
+     "prisma_type": "String",
+     "nullable": "NO",
+     "pk": false,
+     "default": "",
+     "max_length": "",
+     "format": "",
+     "constraint": [],
+     "line": 517,
+     "list": false,
+     "fk": ""
+    },
+    {
+     "field": "createdAt",
+     "column": "created_at",
+     "type": "timestamp(3)",
+     "prisma_type": "DateTime",
+     "nullable": "NO",
+     "pk": false,
+     "default": "now()",
+     "max_length": "",
+     "format": "timestamp",
+     "constraint": [],
+     "line": 519,
+     "list": false,
+     "fk": ""
+    },
+    {
+     "field": "updatedAt",
+     "column": "updated_at",
+     "type": "timestamp(3)",
+     "prisma_type": "DateTime",
+     "nullable": "NO",
+     "pk": false,
+     "default": "@updatedAt",
+     "max_length": "",
+     "format": "timestamp",
+     "constraint": [],
+     "line": 520,
+     "list": false,
+     "fk": ""
+    }
+   ],
+   "relations": [],
+   "indexes": [],
+   "pk": [
+    "id"
+   ]
+  },
+  {
+   "model": "SecurityQuestion",
+   "table": "security_questions",
+   "start": 527,
+   "end": 533,
+   "columns": [
+    {
+     "field": "id",
+     "column": "id",
+     "type": "integer",
+     "prisma_type": "Int",
+     "nullable": "NO",
+     "pk": true,
+     "default": "autoincrement()",
+     "max_length": "",
+     "format": "",
+     "constraint": [],
+     "line": 528,
+     "list": false,
+     "fk": ""
+    },
+    {
+     "field": "question",
+     "column": "question",
+     "type": "text",
+     "prisma_type": "String",
+     "nullable": "NO",
+     "pk": false,
+     "default": "",
+     "max_length": "",
+     "format": "",
+     "constraint": [],
+     "line": 529,
+     "list": false,
+     "fk": ""
+    },
+    {
+     "field": "answer",
+     "column": "answer",
+     "type": "text",
+     "prisma_type": "String?",
+     "nullable": "YES",
+     "pk": false,
+     "default": "",
+     "max_length": "",
+     "format": "",
+     "constraint": [],
+     "line": 530,
+     "list": false,
+     "fk": ""
+    }
+   ],
+   "relations": [],
+   "indexes": [],
+   "pk": [
+    "id"
+   ]
+  },
+  {
+   "model": "SseNotification",
+   "table": "sse_notifications",
+   "start": 535,
+   "end": 544,
+   "columns": [
+    {
+     "field": "id",
+     "column": "id",
+     "type": "integer",
+     "prisma_type": "Int",
+     "nullable": "NO",
+     "pk": true,
+     "default": "autoincrement()",
+     "max_length": "",
+     "format": "",
+     "constraint": [],
+     "line": 536,
+     "list": false,
+     "fk": ""
+    },
+    {
+     "field": "userId",
+     "column": "user_id",
+     "type": "integer",
+     "prisma_type": "Int",
+     "nullable": "NO",
+     "pk": false,
+     "default": "",
+     "max_length": "",
+     "format": "",
+     "constraint": [],
+     "line": 537,
+     "list": false,
+     "fk": ""
+    },
+    {
+     "field": "payload",
+     "column": "payload",
+     "type": "jsonb",
+     "prisma_type": "Json",
+     "nullable": "NO",
+     "pk": false,
+     "default": "",
+     "max_length": "",
+     "format": "JSON",
+     "constraint": [],
+     "line": 538,
+     "list": false,
+     "fk": ""
+    },
+    {
+     "field": "createdAt",
+     "column": "created_at",
+     "type": "timestamp(3)",
+     "prisma_type": "DateTime",
+     "nullable": "NO",
+     "pk": false,
+     "default": "now()",
+     "max_length": "",
+     "format": "timestamp",
+     "constraint": [],
+     "line": 539,
+     "list": false,
+     "fk": ""
+    }
+   ],
+   "relations": [],
+   "indexes": [
+    [
+     "user_id",
+     "id"
+    ],
+    [
+     "created_at"
+    ]
+   ],
+   "pk": [
+    "id"
+   ]
+  },
+  {
+   "model": "BookingObicCode",
+   "table": "booking_obic_codes",
+   "start": 602,
+   "end": 628,
+   "columns": [
+    {
+     "field": "id",
+     "column": "id",
+     "type": "integer",
+     "prisma_type": "Int",
+     "nullable": "NO",
+     "pk": true,
+     "default": "autoincrement()",
+     "max_length": "",
+     "format": "",
+     "constraint": [],
+     "line": 603,
+     "list": false,
+     "fk": ""
+    },
+    {
+     "field": "bookingId",
+     "column": "booking_id",
+     "type": "integer",
+     "prisma_type": "Int",
+     "nullable": "NO",
+     "pk": false,
+     "default": "",
+     "max_length": "",
+     "format": "",
+     "constraint": [],
+     "line": 604,
+     "list": false,
+     "fk": "bookings.id"
+    },
+    {
+     "field": "kind",
+     "column": "kind",
+     "type": "enum ObicCodeKind",
+     "prisma_type": "ObicCodeKind",
+     "nullable": "NO",
+     "pk": false,
+     "default": "",
+     "max_length": "",
+     "format": "",
+     "constraint": [
+      "ENUM(Base,ExtendedPeriod,Discount,HourlyExtraTimeDiscount)"
+     ],
+     "line": 607,
+     "list": false,
+     "fk": ""
+    },
+    {
+     "field": "audience",
+     "column": "audience",
+     "type": "enum ObicAudience",
+     "prisma_type": "ObicAudience",
+     "nullable": "NO",
+     "pk": false,
+     "default": "",
+     "max_length": "",
+     "format": "",
+     "constraint": [
+      "ENUM(Adult,Child)"
+     ],
+     "line": 608,
+     "list": false,
+     "fk": ""
+    },
+    {
+     "field": "obicCode",
+     "column": "obic_code",
+     "type": "varchar(255)",
+     "prisma_type": "String",
+     "nullable": "NO",
+     "pk": false,
+     "default": "",
+     "max_length": "255",
+     "format": "",
+     "constraint": [],
+     "line": 609,
+     "list": false,
+     "fk": ""
+    },
+    {
+     "field": "sourceField",
+     "column": "source_field",
+     "type": "enum ObicSourceField",
+     "prisma_type": "ObicSourceField",
+     "nullable": "NO",
+     "pk": false,
+     "default": "",
+     "max_length": "",
+     "format": "",
+     "constraint": [
+      "ENUM(TD_adultObicCode,TD_adultObicCode1stBooking,TD_childObicCode,TD_childObicCode1stBooking,TD_discountAdultObicCode,TD_discountChildObicCode,TBS_baseAdultObicCode,TBS_baseChildObicCode,TBS_extendedAdultObicCode,TBS_extendedChildObicCode,TDS_hourlyExtraTime_adultObicCode,TDS_hourlyExtraTime_childObicCode,TDS_discountTier_adultObicCode,TDS_discountTier_childObicCode)"
+     ],
+     "line": 611,
+     "list": false,
+     "fk": ""
+    },
+    {
+     "field": "sourceTierIndex",
+     "column": "source_tier_index",
+     "type": "integer",
+     "prisma_type": "Int?",
+     "nullable": "YES",
+     "pk": false,
+     "default": "",
+     "max_length": "",
+     "format": "",
+     "constraint": [],
+     "line": 612,
+     "list": false,
+     "fk": ""
+    },
+    {
+     "field": "amount",
+     "column": "amount",
+     "type": "decimal(10, 2)",
+     "prisma_type": "Decimal",
+     "nullable": "NO",
+     "pk": false,
+     "default": "",
+     "max_length": "",
+     "format": "decimal",
+     "constraint": [],
+     "line": 614,
+     "list": false,
+     "fk": ""
+    },
+    {
+     "field": "quantity",
+     "column": "quantity",
+     "type": "integer",
+     "prisma_type": "Int",
+     "nullable": "NO",
+     "pk": false,
+     "default": "1",
+     "max_length": "",
+     "format": "",
+     "constraint": [],
+     "line": 615,
+     "list": false,
+     "fk": ""
+    },
+    {
+     "field": "lineIndex",
+     "column": "line_index",
+     "type": "integer",
+     "prisma_type": "Int",
+     "nullable": "NO",
+     "pk": false,
+     "default": "",
+     "max_length": "",
+     "format": "",
+     "constraint": [],
+     "line": 616,
+     "list": false,
+     "fk": ""
+    },
+    {
+     "field": "isPending",
+     "column": "is_pending",
+     "type": "boolean",
+     "prisma_type": "Boolean",
+     "nullable": "NO",
+     "pk": false,
+     "default": "false",
+     "max_length": "",
+     "format": "",
+     "constraint": [],
+     "line": 617,
+     "list": false,
+     "fk": ""
+    },
+    {
+     "field": "revision",
+     "column": "revision",
+     "type": "integer",
+     "prisma_type": "Int",
+     "nullable": "NO",
+     "pk": false,
+     "default": "1",
+     "max_length": "",
+     "format": "",
+     "constraint": [],
+     "line": 619,
+     "list": false,
+     "fk": ""
+    },
+    {
+     "field": "computedAt",
+     "column": "computed_at",
+     "type": "timestamp(3)",
+     "prisma_type": "DateTime",
+     "nullable": "NO",
+     "pk": false,
+     "default": "now()",
+     "max_length": "",
+     "format": "timestamp",
+     "constraint": [],
+     "line": 620,
+     "list": false,
+     "fk": ""
+    },
+    {
+     "field": "deleted",
+     "column": "deleted",
+     "type": "boolean",
+     "prisma_type": "Boolean",
+     "nullable": "NO",
+     "pk": false,
+     "default": "false",
+     "max_length": "",
+     "format": "",
+     "constraint": [],
+     "line": 621,
+     "list": false,
+     "fk": ""
+    }
+   ],
+   "relations": [
+    {
+     "fields": [
+      "bookingId"
+     ],
+     "to_model": "Booking",
+     "to_table": "bookings",
+     "references": [
+      "id"
+     ],
+     "onDelete": "Cascade",
+     "line": 605,
+     "pairs": [
+      [
+       "booking_id",
+       "id"
+      ]
+     ]
+    }
+   ],
+   "indexes": [
+    [
+     "booking_id"
+    ],
+    [
+     "booking_id",
+     "is_pending",
+     "source_field",
+     "source_tier_index"
+    ],
+    [
+     "booking_id",
+     "obic_code",
+     "quantity"
+    ],
+    [
+     "booking_id",
+     "deleted"
+    ]
+   ],
+   "pk": [
+    "id"
+   ]
+  },
+  {
+   "model": "SmaregiTemporaryTransaction",
+   "table": "smaregi_temporary_transactions",
+   "start": 659,
+   "end": 680,
+   "columns": [
+    {
+     "field": "id",
+     "column": "id",
+     "type": "integer",
+     "prisma_type": "Int",
+     "nullable": "NO",
+     "pk": true,
+     "default": "autoincrement()",
+     "max_length": "",
+     "format": "",
+     "constraint": [],
+     "line": 660,
+     "list": false,
+     "fk": ""
+    },
+    {
+     "field": "bookingBarCode",
+     "column": "bar_code",
+     "type": "text",
+     "prisma_type": "String",
+     "nullable": "NO",
+     "pk": false,
+     "default": "",
+     "max_length": "",
+     "format": "",
+     "constraint": [],
+     "line": 661,
+     "list": false,
+     "fk": ""
+    },
+    {
+     "field": "temporaryTransactionHeadId",
+     "column": "temporary_transaction_head_id",
+     "type": "text",
+     "prisma_type": "String?",
+     "nullable": "YES",
+     "pk": false,
+     "default": "",
+     "max_length": "",
+     "format": "",
+     "constraint": [],
+     "line": 662,
+     "list": false,
+     "fk": ""
+    },
+    {
+     "field": "temporaryTransactionBarcode",
+     "column": "temporary_transaction_barcode",
+     "type": "text",
+     "prisma_type": "String?",
+     "nullable": "YES",
+     "pk": false,
+     "default": "",
+     "max_length": "",
+     "format": "",
+     "constraint": [],
+     "line": 663,
+     "list": false,
+     "fk": ""
+    },
+    {
+     "field": "preRegistrationName",
+     "column": "pre_registration_name",
+     "type": "text",
+     "prisma_type": "String?",
+     "nullable": "YES",
+     "pk": false,
+     "default": "",
+     "max_length": "",
+     "format": "",
+     "constraint": [],
+     "line": 664,
+     "list": false,
+     "fk": ""
+    },
+    {
+     "field": "storeId",
+     "column": "store_id",
+     "type": "text",
+     "prisma_type": "String?",
+     "nullable": "YES",
+     "pk": false,
+     "default": "",
+     "max_length": "",
+     "format": "",
+     "constraint": [],
+     "line": 665,
+     "list": false,
+     "fk": ""
+    },
+    {
+     "field": "terminalId",
+     "column": "terminal_id",
+     "type": "text",
+     "prisma_type": "String?",
+     "nullable": "YES",
+     "pk": false,
+     "default": "",
+     "max_length": "",
+     "format": "",
+     "constraint": [],
+     "line": 666,
+     "list": false,
+     "fk": ""
+    },
+    {
+     "field": "total",
+     "column": "total",
+     "type": "decimal(10, 2)",
+     "prisma_type": "Decimal?",
+     "nullable": "YES",
+     "pk": false,
+     "default": "",
+     "max_length": "",
+     "format": "decimal",
+     "constraint": [],
+     "line": 667,
+     "list": false,
+     "fk": ""
+    },
+    {
+     "field": "status",
+     "column": "status",
+     "type": "enum SmaregiTemporaryStatus",
+     "prisma_type": "SmaregiTemporaryStatus",
+     "nullable": "NO",
+     "pk": false,
+     "default": "Normal",
+     "max_length": "",
+     "format": "",
+     "constraint": [
+      "ENUM(Normal,Completed,Cancelled)"
+     ],
+     "line": 668,
+     "list": false,
+     "fk": ""
+    },
+    {
+     "field": "checkedInAt",
+     "column": "checked_in_at",
+     "type": "timestamp(3)",
+     "prisma_type": "DateTime?",
+     "nullable": "YES",
+     "pk": false,
+     "default": "",
+     "max_length": "",
+     "format": "timestamp",
+     "constraint": [],
+     "line": 669,
+     "list": false,
+     "fk": ""
+    },
+    {
+     "field": "settledTransactionHeadId",
+     "column": "settled_transaction_head_id",
+     "type": "text",
+     "prisma_type": "String?",
+     "nullable": "YES",
+     "pk": false,
+     "default": "",
+     "max_length": "",
+     "format": "",
+     "constraint": [],
+     "line": 670,
+     "list": false,
+     "fk": ""
+    },
+    {
+     "field": "syncError",
+     "column": "sync_error",
+     "type": "text",
+     "prisma_type": "String?",
+     "nullable": "YES",
+     "pk": false,
+     "default": "",
+     "max_length": "",
+     "format": "",
+     "constraint": [],
+     "line": 671,
+     "list": false,
+     "fk": ""
+    },
+    {
+     "field": "syncedAt",
+     "column": "synced_at",
+     "type": "timestamp(3)",
+     "prisma_type": "DateTime?",
+     "nullable": "YES",
+     "pk": false,
+     "default": "",
+     "max_length": "",
+     "format": "timestamp",
+     "constraint": [],
+     "line": 672,
+     "list": false,
+     "fk": ""
+    },
+    {
+     "field": "deletedAt",
+     "column": "deleted_at",
+     "type": "timestamp(3)",
+     "prisma_type": "DateTime?",
+     "nullable": "YES",
+     "pk": false,
+     "default": "",
+     "max_length": "",
+     "format": "timestamp",
+     "constraint": [],
+     "line": 673,
+     "list": false,
+     "fk": ""
+    },
+    {
+     "field": "createdAt",
+     "column": "created_at",
+     "type": "timestamp(3)",
+     "prisma_type": "DateTime",
+     "nullable": "NO",
+     "pk": false,
+     "default": "now()",
+     "max_length": "",
+     "format": "timestamp",
+     "constraint": [],
+     "line": 674,
+     "list": false,
+     "fk": ""
+    },
+    {
+     "field": "updatedAt",
+     "column": "updated_at",
+     "type": "timestamp(3)",
+     "prisma_type": "DateTime",
+     "nullable": "NO",
+     "pk": false,
+     "default": "@updatedAt",
+     "max_length": "",
+     "format": "timestamp",
+     "constraint": [],
+     "line": 675,
+     "list": false,
+     "fk": ""
+    }
+   ],
+   "relations": [],
+   "indexes": [
+    [
+     "status"
+    ]
+   ],
+   "pk": [
+    "id"
+   ]
+  },
+  {
+   "model": "SmaregiTransaction",
+   "table": "smaregi_transactions",
+   "start": 682,
+   "end": 696,
+   "columns": [
+    {
+     "field": "id",
+     "column": "id",
+     "type": "integer",
+     "prisma_type": "Int",
+     "nullable": "NO",
+     "pk": true,
+     "default": "autoincrement()",
+     "max_length": "",
+     "format": "",
+     "constraint": [],
+     "line": 683,
+     "list": false,
+     "fk": ""
+    },
+    {
+     "field": "transactionHeadId",
+     "column": "transaction_head_id",
+     "type": "text",
+     "prisma_type": "String",
+     "nullable": "NO",
+     "pk": false,
+     "default": "",
+     "max_length": "",
+     "format": "",
+     "constraint": [
+      "UNIQUE"
+     ],
+     "line": 684,
+     "list": false,
+     "fk": ""
+    },
+    {
+     "field": "contractId",
+     "column": "contract_id",
+     "type": "text",
+     "prisma_type": "String?",
+     "nullable": "YES",
+     "pk": false,
+     "default": "",
+     "max_length": "",
+     "format": "",
+     "constraint": [],
+     "line": 685,
+     "list": false,
+     "fk": ""
+    },
+    {
+     "field": "storeId",
+     "column": "store_id",
+     "type": "text",
+     "prisma_type": "String?",
+     "nullable": "YES",
+     "pk": false,
+     "default": "",
+     "max_length": "",
+     "format": "",
+     "constraint": [],
+     "line": 686,
+     "list": false,
+     "fk": ""
+    },
+    {
+     "field": "action",
+     "column": "action",
+     "type": "text",
+     "prisma_type": "String",
+     "nullable": "NO",
+     "pk": false,
+     "default": "",
+     "max_length": "",
+     "format": "",
+     "constraint": [],
+     "line": 687,
+     "list": false,
+     "fk": ""
+    },
+    {
+     "field": "total",
+     "column": "total",
+     "type": "decimal(65,30)",
+     "prisma_type": "Decimal?",
+     "nullable": "YES",
+     "pk": false,
+     "default": "",
+     "max_length": "",
+     "format": "decimal",
+     "constraint": [],
+     "line": 688,
+     "list": false,
+     "fk": ""
+    },
+    {
+     "field": "rawPayload",
+     "column": "raw_payload",
+     "type": "jsonb",
+     "prisma_type": "Json",
+     "nullable": "NO",
+     "pk": false,
+     "default": "",
+     "max_length": "",
+     "format": "JSON",
+     "constraint": [],
+     "line": 689,
+     "list": false,
+     "fk": ""
+    },
+    {
+     "field": "affectedBookingIds",
+     "column": "affected_booking_ids",
+     "type": "jsonb",
+     "prisma_type": "Json?",
+     "nullable": "YES",
+     "pk": false,
+     "default": "",
+     "max_length": "",
+     "format": "JSON",
+     "constraint": [],
+     "line": 690,
+     "list": false,
+     "fk": ""
+    },
+    {
+     "field": "source",
+     "column": "source",
+     "type": "text",
+     "prisma_type": "String",
+     "nullable": "NO",
+     "pk": false,
+     "default": "\"Webhook\"",
+     "max_length": "",
+     "format": "",
+     "constraint": [],
+     "line": 691,
+     "list": false,
+     "fk": ""
+    },
+    {
+     "field": "processedAt",
+     "column": "processed_at",
+     "type": "timestamp(3)",
+     "prisma_type": "DateTime",
+     "nullable": "NO",
+     "pk": false,
+     "default": "now()",
+     "max_length": "",
+     "format": "timestamp",
+     "constraint": [],
+     "line": 692,
+     "list": false,
+     "fk": ""
+    }
+   ],
+   "relations": [],
+   "indexes": [
+    [
+     "store_id"
+    ]
+   ],
+   "pk": [
+    "id"
+   ]
+  }
+ ],
+ "enums": {
+  "Role": [
+   "User",
+   "Admin",
+   "SuperAdmin",
+   "Staff"
+  ],
+  "BookingStatus": [
+   "Successful",
+   "Cancelled",
+   "Waiting",
+   "CheckedIn",
+   "CheckedOut",
+   "Calling",
+   "SystemCancelled"
+  ],
+  "PaymentStatus": [
+   "Error",
+   "Pending",
+   "Completed",
+   "Refunded"
+  ],
+  "TenantVersion": [
+   "v0",
+   "v1",
+   "v2"
+  ],
+  "PriceUnit": [
+   "Minute",
+   "Hour",
+   "Day"
+  ],
+  "PaymentType": [
+   "Online",
+   "Offline"
+  ],
+  "TicketType": [
+   "Hourly",
+   "Daily",
+   "Monthly",
+   "MasterMonthly",
+   "HourlyTimesLimit",
+   "DailyTimesLimit"
+  ],
+  "DataType": [
+   "Text",
+   "Number",
+   "RichText"
+  ],
+  "ObicCodeKind": [
+   "Base",
+   "ExtendedPeriod",
+   "Discount",
+   "HourlyExtraTimeDiscount"
+  ],
+  "ObicAudience": [
+   "Adult",
+   "Child"
+  ],
+  "ObicSourceField": [
+   "TD_adultObicCode",
+   "TD_adultObicCode1stBooking",
+   "TD_childObicCode",
+   "TD_childObicCode1stBooking",
+   "TD_discountAdultObicCode",
+   "TD_discountChildObicCode",
+   "TBS_baseAdultObicCode",
+   "TBS_baseChildObicCode",
+   "TBS_extendedAdultObicCode",
+   "TBS_extendedChildObicCode",
+   "TDS_hourlyExtraTime_adultObicCode",
+   "TDS_hourlyExtraTime_childObicCode",
+   "TDS_discountTier_adultObicCode",
+   "TDS_discountTier_childObicCode"
+  ],
+  "SmaregiTemporaryStatus": [
+   "Normal",
+   "Completed",
+   "Cancelled"
+  ]
+ },
+ "model_to_table": {
+  "User": "users",
+  "Account": "accounts",
+  "Tenant": "tenants",
+  "AdminTenant": "admins_tenants",
+  "Staff": "staffs",
+  "AdminActivityLog": "admin_activity_logs",
+  "UserTenantFavorite": "users_tenants_favorites",
+  "Ticket": "tickets",
+  "TicketDetail": "ticket_details",
+  "TicketDiscountSetting": "ticket_discount_settings",
+  "TicketBookingSchedule": "ticket_booking_schedules",
+  "Booking": "bookings",
+  "BookingChildAgeInfo": "booking_child_age_infos",
+  "PartialCheckout": "partial_checkouts",
+  "AppSetting": "app_settings",
+  "EmailSetting": "email_settings",
+  "News": "news",
+  "Disclaimer": "disclaimers",
+  "DisclaimerOption": "disclaimer_options",
+  "GMOSetting": "gmo_settings",
+  "SecurityQuestion": "security_questions",
+  "SseNotification": "sse_notifications",
+  "BookingObicCode": "booking_obic_codes",
+  "SmaregiTemporaryTransaction": "smaregi_temporary_transactions",
+  "SmaregiTransaction": "smaregi_transactions"
+ }
+}

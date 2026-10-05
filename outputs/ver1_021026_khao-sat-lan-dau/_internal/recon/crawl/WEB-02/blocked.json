@@ -1,0 +1,37 @@
+[
+  {
+    "kind": "seed-skipped",
+    "url": "https://dhxkf93d45vp4.cloudfront.net/booking/payment-online"
+  },
+  {
+    "kind": "seed-skipped",
+    "url": "https://dhxkf93d45vp4.cloudfront.net/booking/payment-online-failure"
+  },
+  {
+    "kind": "seed-skipped",
+    "url": "https://dhxkf93d45vp4.cloudfront.net/booking/payment-online-monthly-ticket-success"
+  },
+  {
+    "kind": "seed-skipped",
+    "url": "https://dhxkf93d45vp4.cloudfront.net/booking/payment-online-success"
+  },
+  {
+    "kind": "seed-skipped",
+    "url": "https://dhxkf93d45vp4.cloudfront.net/user/my-page/booking-history/partial-checkout/success"
+  },
+  {
+    "kind": "seed-skipped",
+    "url": "https://dhxkf93d45vp4.cloudfront.net/user/my-page/delete-account"
+  },
+  {
+    "kind": "seed-skipped",
+    "url": "https://dhxkf93d45vp4.cloudfront.net/user/my-page/personal-info/change-credit-card/delete"
+  },
+  {
+    "kind": "destructive-link",
+    "url": "https://dhxkf93d45vp4.cloudfront.net/booking/payment-online",
+    "text": "1DAYパス事前購入",
+    "keyword": "payment",
+    "page": "https://dhxkf93d45vp4.cloudfront.net"
+  }
+]

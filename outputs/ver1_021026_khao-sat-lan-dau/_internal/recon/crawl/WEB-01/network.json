@@ -1,0 +1,38 @@
+[
+  {
+    "page": "https://dhxkf93d45vp4.cloudfront.net/admin/user-management/create",
+    "url": "https://madefor.github.io/postal-code-api/api/v1//.json",
+    "status": 404,
+    "at": "2026-10-02T06:31:36.253Z"
+  },
+  {
+    "page": "https://dhxkf93d45vp4.cloudfront.net",
+    "url": "https://dhxkf93d45vp4.cloudfront.net/api/user/check-required-info",
+    "status": 403,
+    "at": "2026-10-02T06:31:42.250Z"
+  },
+  {
+    "page": "https://dhxkf93d45vp4.cloudfront.net/booking/use-in-day",
+    "url": "https://dhxkf93d45vp4.cloudfront.net/api/user/check-required-info",
+    "status": 403,
+    "at": "2026-10-02T06:31:43.972Z"
+  },
+  {
+    "page": "https://dhxkf93d45vp4.cloudfront.net/booking/buy-times-limit-ticket",
+    "url": "https://dhxkf93d45vp4.cloudfront.net/api/user/check-required-info",
+    "status": 403,
+    "at": "2026-10-02T06:31:45.634Z"
+  },
+  {
+    "page": "https://dhxkf93d45vp4.cloudfront.net/booking/buy-monthly-ticket",
+    "url": "https://dhxkf93d45vp4.cloudfront.net/api/user/check-required-info",
+    "status": 403,
+    "at": "2026-10-02T06:31:47.734Z"
+  },
+  {
+    "page": "https://dhxkf93d45vp4.cloudfront.net/tenant-list",
+    "url": "https://dhxkf93d45vp4.cloudfront.net/api/user/tenant-favorites?includeTenant=false",
+    "status": 403,
+    "at": "2026-10-02T06:31:57.692Z"
+  }
+]

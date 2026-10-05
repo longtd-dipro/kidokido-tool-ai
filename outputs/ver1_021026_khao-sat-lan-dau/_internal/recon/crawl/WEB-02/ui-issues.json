@@ -1,0 +1,16 @@
+[
+  {
+    "url": "https://dhxkf93d45vp4.cloudfront.net/user/my-page/personal-info/update-information",
+    "kind": "consoleErrors",
+    "detail": "1 console error(s) — xem console.json",
+    "evId": "EV-0565",
+    "count": 1
+  },
+  {
+    "url": "https://dhxkf93d45vp4.cloudfront.net/user/my-page/personal-info/update-information",
+    "kind": "httpErrors",
+    "detail": "1 response 4xx/5xx — xem network.json",
+    "evId": "EV-0565",
+    "count": 1
+  }
+]

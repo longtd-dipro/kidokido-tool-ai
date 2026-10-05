@@ -1,0 +1,277 @@
+@import "../styles/mixins";
+@import "../styles/user-base";
+
+/*****  Start Information   *****/
+.heading_information {
+  color: $text-color;
+  font-size: 40px;
+  line-height: 48px;
+  font-weight: 700;
+
+  @include media-xs() {
+    font-size: 32px;
+  }
+
+  @include media-md-only() {
+    font-size: 32px;
+  }
+}
+
+.information {
+  color: $blue-color;
+  font-size: 18px;
+  line-height: 24px !important;
+  font-weight: 500;
+
+  @include media-xs() {
+    font-weight: 300;
+    font-size: 14px;
+  }
+
+  @include media-md-only() {
+    font-weight: 300;
+    font-size: 14px;
+  }
+}
+
+/*****  End Information   *****/
+
+/*****  Start News   *****/
+
+.news {
+  max-width: 800px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 30px;
+  margin-top: 30px;
+
+  @include media-xs() {
+    gap: 15px;
+    margin-top: 8px;
+    margin-bottom: 30px;
+  }
+
+  @include media-md-only() {
+    gap: 25px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+  }
+}
+
+.news_date {
+  font-size: 16px;
+  font-weight: 500;
+  color: $text-color;
+
+  @include media-xs() {
+    font-size: 14px;
+  }
+
+  @include media-md-only() {
+    font-size: 14px;
+  }
+}
+
+.news_title {
+  color: $blue-color;
+  font-size: 18px;
+  font-weight: 500;
+  cursor: pointer;
+  text-align: left;
+
+  @include media-xs() {
+    font-size: 14px;
+    font-weight: 300;
+  }
+
+  @include media-md-only() {
+    font-size: 16px;
+  }
+}
+
+.news_breadcrumb {
+  border: 1px solid #d9d9d9;
+}
+
+/*****  End News   *****/
+
+/*****  Start Search Tenant area  *****/
+.search__tenant {
+  width: 100%;
+  z-index: 1;
+  position: relative;
+}
+
+.search_title {
+  background-color: $blue-color;
+  padding: 16px 57px;
+  color: white;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 28px;
+  max-width: 294px;
+  max-height: 60px;
+  width: 100%;
+  height: 100%;
+
+  @include media-md {
+    font-size: 18px;
+    max-width: 262px;
+    line-height: 24px;
+    padding: 15px 50px;
+  }
+  @include media-xs {
+    min-height: 42px;
+    max-width: 335px;
+    box-shadow: 0px 1.31638px 3.94915px rgba(19, 10, 46, 0.4);
+  }
+}
+
+.input_search {
+  font-size: 16px;
+  line-height: 20px;
+
+  &::placeholder {
+    /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: $disable-color;
+    opacity: 1; /* Firefox */
+  }
+
+  @include media-xs {
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 24px;
+    box-shadow: 1px 3px 4px rgba(38, 36, 44, 0.18);
+  }
+}
+
+.input_search:focus {
+  border: 1px solid #d9d9d9;
+}
+
+/*****  End Search Tenant area    *****/
+
+/*****  Start Ticket  *****/
+.ticket {
+  width: 100%;
+  background-color: #f8f7e1;
+}
+
+.ticket__item {
+  width: 100%;
+  background-color: #ffffff;
+}
+
+.ticket__title {
+  width: max-content;
+  inline-size: max-content;
+  position: relative;
+  font-size: 40px;
+  font-weight: 700;
+  color: $text-color;
+}
+
+.ticket__title::before {
+  content: "";
+  position: absolute;
+  left: 0px;
+  bottom: 4px;
+  width: 100%;
+  height: 5px;
+  background-color: #ffe732;
+  border-radius: 10px;
+}
+
+.ticket__type {
+  font-size: 18px;
+  font-weight: 500;
+  color: $blue-color;
+}
+
+.ticket__content {
+  width: 100%;
+  font-weight: 400;
+  font-size: 18px;
+  color: $text-color;
+  line-height: 40px;
+  @include media-md {
+    font-size: 16px !important;
+    line-height: 28px !important;
+  }
+}
+
+// Custom responsive
+.one__day__offline__ticket__content,
+.one__day__online__ticket__content {
+  @media (min-width: 888px) and (max-width: 951px) {
+    min-height: 80px;
+  }
+
+  @media (min-width: 952px) and (max-width: 1439px) {
+    min-height: 60px;
+  }
+}
+
+.ticket__content__footer {
+  @media (min-width: 892px) and (max-width: 951px) {
+    margin-top: 35px;
+  }
+
+  @media (min-width: 768px) and (max-width: 891px) {
+    margin-top: 55px;
+  }
+}
+
+.button__ticket {
+  width: 100%;
+  background-color: $blue-color;
+  color: #ffffff;
+}
+
+.button__title {
+  font-weight: 700;
+}
+
+.ticket__step {
+  color: $blue-color;
+  font-weight: 700;
+  font-size: 24px;
+  padding-top: 48px;
+  padding-bottom: 24px;
+}
+
+.booking__title {
+  color: $blue-color;
+  font-weight: 700;
+  line-height: 20px;
+  font-size: 16px;
+}
+
+.booking__description {
+  font-weight: 700;
+  line-height: 20px;
+  width: 100%;
+  text-align: left;
+}
+
+.line__title {
+  display: inline-block;
+  position: relative;
+  font-size: 18px;
+  font-weight: 700;
+  color: $blue-color;
+}
+
+.line__title::before {
+  content: "";
+  position: absolute;
+  left: -4px;
+  bottom: -4px;
+  height: 2px;
+  width: 100%;
+  background-color: #ffe732;
+  border-radius: 10px;
+}
+/*****  End Ticket  *****/

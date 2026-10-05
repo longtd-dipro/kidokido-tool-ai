@@ -1,0 +1,218 @@
+[
+  {
+    "url": "https://dhxkf93d45vp4.cloudfront.net/admin/booking-management",
+    "kind": "slowLoad",
+    "detail": "loadMs 5875 > 5000",
+    "evId": "EV-0643"
+  },
+  {
+    "url": "https://dhxkf93d45vp4.cloudfront.net/admin",
+    "kind": "consoleErrors",
+    "detail": "4 console error(s) — xem console.json",
+    "evId": "EV-0640",
+    "count": 4
+  },
+  {
+    "url": "https://dhxkf93d45vp4.cloudfront.net/admin/app-settings",
+    "kind": "consoleErrors",
+    "detail": "3 console error(s) — xem console.json",
+    "evId": "EV-0641",
+    "count": 3
+  },
+  {
+    "url": "https://dhxkf93d45vp4.cloudfront.net/admin/barcode-scanner",
+    "kind": "consoleErrors",
+    "detail": "2 console error(s) — xem console.json",
+    "evId": "EV-0642",
+    "count": 2
+  },
+  {
+    "url": "https://dhxkf93d45vp4.cloudfront.net/admin/booking-management",
+    "kind": "consoleErrors",
+    "detail": "2 console error(s) — xem console.json",
+    "evId": "EV-0643",
+    "count": 2
+  },
+  {
+    "url": "https://dhxkf93d45vp4.cloudfront.net/admin/booking-queue",
+    "kind": "consoleErrors",
+    "detail": "2 console error(s) — xem console.json",
+    "evId": "EV-0644",
+    "count": 2
+  },
+  {
+    "url": "https://dhxkf93d45vp4.cloudfront.net/admin/booking-vacancies",
+    "kind": "consoleErrors",
+    "detail": "2 console error(s) — xem console.json",
+    "evId": "EV-0645",
+    "count": 2
+  },
+  {
+    "url": "https://dhxkf93d45vp4.cloudfront.net/admin/change-email",
+    "kind": "consoleErrors",
+    "detail": "3 console error(s) — xem console.json",
+    "evId": "EV-0646",
+    "count": 3
+  },
+  {
+    "url": "https://dhxkf93d45vp4.cloudfront.net/admin/change-password",
+    "kind": "consoleErrors",
+    "detail": "3 console error(s) — xem console.json",
+    "evId": "EV-0647",
+    "count": 3
+  },
+  {
+    "url": "https://dhxkf93d45vp4.cloudfront.net/admin/dashboard",
+    "kind": "consoleErrors",
+    "detail": "3 console error(s) — xem console.json",
+    "evId": "EV-0648",
+    "count": 3
+  },
+  {
+    "url": "https://dhxkf93d45vp4.cloudfront.net/admin/disclaimer-management",
+    "kind": "consoleErrors",
+    "detail": "3 console error(s) — xem console.json",
+    "evId": "EV-0649",
+    "count": 3
+  },
+  {
+    "url": "https://dhxkf93d45vp4.cloudfront.net/admin/email-settings",
+    "kind": "consoleErrors",
+    "detail": "3 console error(s) — xem console.json",
+    "evId": "EV-0650",
+    "count": 3
+  },
+  {
+    "url": "https://dhxkf93d45vp4.cloudfront.net/admin/forgot-password",
+    "kind": "consoleErrors",
+    "detail": "2 console error(s) — xem console.json",
+    "evId": "EV-0651",
+    "count": 2
+  },
+  {
+    "url": "https://dhxkf93d45vp4.cloudfront.net/admin/gmo-settings",
+    "kind": "consoleErrors",
+    "detail": "3 console error(s) — xem console.json",
+    "evId": "EV-0652",
+    "count": 3
+  },
+  {
+    "url": "https://dhxkf93d45vp4.cloudfront.net/admin/gmo-settings/create",
+    "kind": "consoleErrors",
+    "detail": "2 console error(s) — xem console.json",
+    "evId": "EV-0653",
+    "count": 2
+  },
+  {
+    "url": "https://dhxkf93d45vp4.cloudfront.net/admin/news-management",
+    "kind": "consoleErrors",
+    "detail": "3 console error(s) — xem console.json",
+    "evId": "EV-0654",
+    "count": 3
+  },
+  {
+    "url": "https://dhxkf93d45vp4.cloudfront.net/admin/news-management/create",
+    "kind": "consoleErrors",
+    "detail": "2 console error(s) — xem console.json",
+    "evId": "EV-0655",
+    "count": 2
+  },
+  {
+    "url": "https://dhxkf93d45vp4.cloudfront.net/admin/revenue-management",
+    "kind": "consoleErrors",
+    "detail": "2 console error(s) — xem console.json",
+    "evId": "EV-0656",
+    "count": 2
+  },
+  {
+    "url": "https://dhxkf93d45vp4.cloudfront.net/admin/scan-management",
+    "kind": "consoleErrors",
+    "detail": "2 console error(s) — xem console.json",
+    "evId": "EV-0657",
+    "count": 2
+  },
+  {
+    "url": "https://dhxkf93d45vp4.cloudfront.net/admin/signin",
+    "kind": "consoleErrors",
+    "detail": "6 console error(s) — xem console.json",
+    "evId": "EV-0658",
+    "count": 6
+  },
+  {
+    "url": "https://dhxkf93d45vp4.cloudfront.net/admin/staff-management",
+    "kind": "consoleErrors",
+    "detail": "2 console error(s) — xem console.json",
+    "evId": "EV-0659",
+    "count": 2
+  },
+  {
+    "url": "https://dhxkf93d45vp4.cloudfront.net/admin/staff-management/create",
+    "kind": "consoleErrors",
+    "detail": "2 console error(s) — xem console.json",
+    "evId": "EV-0660",
+    "count": 2
+  },
+  {
+    "url": "https://dhxkf93d45vp4.cloudfront.net/admin/tenant-management",
+    "kind": "consoleErrors",
+    "detail": "3 console error(s) — xem console.json",
+    "evId": "EV-0661",
+    "count": 3
+  },
+  {
+    "url": "https://dhxkf93d45vp4.cloudfront.net/admin/tenant-management/create",
+    "kind": "consoleErrors",
+    "detail": "3 console error(s) — xem console.json",
+    "evId": "EV-0662",
+    "count": 3
+  },
+  {
+    "url": "https://dhxkf93d45vp4.cloudfront.net/admin/ticket-management",
+    "kind": "consoleErrors",
+    "detail": "2 console error(s) — xem console.json",
+    "evId": "EV-0663",
+    "count": 2
+  },
+  {
+    "url": "https://dhxkf93d45vp4.cloudfront.net/admin/ticket-management/create",
+    "kind": "consoleErrors",
+    "detail": "2 console error(s) — xem console.json",
+    "evId": "EV-0664",
+    "count": 2
+  },
+  {
+    "url": "https://dhxkf93d45vp4.cloudfront.net/admin/user-management",
+    "kind": "consoleErrors",
+    "detail": "2 console error(s) — xem console.json",
+    "evId": "EV-0665",
+    "count": 2
+  },
+  {
+    "url": "https://dhxkf93d45vp4.cloudfront.net/admin/user-management/create",
+    "kind": "consoleErrors",
+    "detail": "3 console error(s) — xem console.json",
+    "evId": "EV-0666",
+    "count": 3
+  },
+  {
+    "url": "https://dhxkf93d45vp4.cloudfront.net/admin/user-management/create",
+    "kind": "httpErrors",
+    "detail": "1 response 4xx/5xx — xem network.json",
+    "evId": "EV-0666",
+    "count": 1
+  },
+  {
+    "url": "https://dhxkf93d45vp4.cloudfront.net/admin/vacancies-status",
+    "kind": "consoleErrors",
+    "detail": "2 console error(s) — xem console.json",
+    "evId": "EV-0667",
+    "count": 2
+  },
+  {
+    "url": "https://dhxkf93d45vp4.cloudfront.net/admin/waiting-time-management",
+    "kind": "consoleErrors",
+    "detail": "3 console error(s) — xem console.json",
+    "evId": "EV-0668",
+    "count": 3
+  }
+]

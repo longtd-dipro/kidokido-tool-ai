@@ -1,0 +1,12 @@
+.bookingVacancies {
+  :global(.MuiDataGrid-columnHeaders) {
+    :global(.MuiDataGrid-columnHeaderTitle) {
+      white-space: normal !important;
+      word-wrap: break-word !important;
+    }
+  }
+
+  :global(.ticket-cell.MuiDataGrid-cell) {
+    padding: 0;
+  }
+}

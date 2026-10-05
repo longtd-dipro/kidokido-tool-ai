@@ -1,0 +1,2018 @@
+{
+  "note": "GOI Y suy luan tu regex (sql/orm) — khong phai bang chung Confirmed",
+  "models": {
+    "User": {
+      "table": "users",
+      "locator": "REPO-01:prisma/schema.prisma#L12",
+      "how": "prisma @@map"
+    },
+    "Account": {
+      "table": "accounts",
+      "locator": "REPO-01:prisma/schema.prisma#L59",
+      "how": "prisma @@map"
+    },
+    "Tenant": {
+      "table": "tenants",
+      "locator": "REPO-01:prisma/schema.prisma#L79",
+      "how": "prisma @@map"
+    },
+    "AdminTenant": {
+      "table": "admins_tenants",
+      "locator": "REPO-01:prisma/schema.prisma#L114",
+      "how": "prisma @@map"
+    },
+    "Staff": {
+      "table": "staffs",
+      "locator": "REPO-01:prisma/schema.prisma#L124",
+      "how": "prisma @@map"
+    },
+    "AdminActivityLog": {
+      "table": "admin_activity_logs",
+      "locator": "REPO-01:prisma/schema.prisma#L145",
+      "how": "prisma @@map"
+    },
+    "UserTenantFavorite": {
+      "table": "users_tenants_favorites",
+      "locator": "REPO-01:prisma/schema.prisma#L159",
+      "how": "prisma @@map"
+    },
+    "Ticket": {
+      "table": "tickets",
+      "locator": "REPO-01:prisma/schema.prisma#L170",
+      "how": "prisma @@map"
+    },
+    "TicketDetail": {
+      "table": "ticket_details",
+      "locator": "REPO-01:prisma/schema.prisma#L211",
+      "how": "prisma @@map"
+    },
+    "TicketDiscountSetting": {
+      "table": "ticket_discount_settings",
+      "locator": "REPO-01:prisma/schema.prisma#L253",
+      "how": "prisma @@map"
+    },
+    "TicketBookingSchedule": {
+      "table": "ticket_booking_schedules",
+      "locator": "REPO-01:prisma/schema.prisma#L268",
+      "how": "prisma @@map"
+    },
+    "Booking": {
+      "table": "bookings",
+      "locator": "REPO-01:prisma/schema.prisma#L339",
+      "how": "prisma @@map"
+    },
+    "BookingChildAgeInfo": {
+      "table": "booking_child_age_infos",
+      "locator": "REPO-01:prisma/schema.prisma#L421",
+      "how": "prisma @@map"
+    },
+    "PartialCheckout": {
+      "table": "partial_checkouts",
+      "locator": "REPO-01:prisma/schema.prisma#L434",
+      "how": "prisma @@map"
+    },
+    "AppSetting": {
+      "table": "app_settings",
+      "locator": "REPO-01:prisma/schema.prisma#L452",
+      "how": "prisma @@map"
+    },
+    "EmailSetting": {
+      "table": "email_settings",
+      "locator": "REPO-01:prisma/schema.prisma#L464",
+      "how": "prisma @@map"
+    },
+    "News": {
+      "table": "news",
+      "locator": "REPO-01:prisma/schema.prisma#L477",
+      "how": "prisma @@map"
+    },
+    "Disclaimer": {
+      "table": "disclaimers",
+      "locator": "REPO-01:prisma/schema.prisma#L489",
+      "how": "prisma @@map"
+    },
+    "DisclaimerOption": {
+      "table": "disclaimer_options",
+      "locator": "REPO-01:prisma/schema.prisma#L501",
+      "how": "prisma @@map"
+    },
+    "GMOSetting": {
+      "table": "gmo_settings",
+      "locator": "REPO-01:prisma/schema.prisma#L513",
+      "how": "prisma @@map"
+    },
+    "SecurityQuestion": {
+      "table": "security_questions",
+      "locator": "REPO-01:prisma/schema.prisma#L527",
+      "how": "prisma @@map"
+    },
+    "SseNotification": {
+      "table": "sse_notifications",
+      "locator": "REPO-01:prisma/schema.prisma#L535",
+      "how": "prisma @@map"
+    },
+    "BookingObicCode": {
+      "table": "booking_obic_codes",
+      "locator": "REPO-01:prisma/schema.prisma#L602",
+      "how": "prisma @@map"
+    },
+    "SmaregiTemporaryTransaction": {
+      "table": "smaregi_temporary_transactions",
+      "locator": "REPO-01:prisma/schema.prisma#L659",
+      "how": "prisma @@map"
+    },
+    "SmaregiTransaction": {
+      "table": "smaregi_transactions",
+      "locator": "REPO-01:prisma/schema.prisma#L682",
+      "how": "prisma @@map"
+    }
+  },
+  "files": {
+    "prisma/seed.ts": {
+      "tables": [
+        {
+          "table": "email_settings",
+          "locator": "REPO-01:prisma/seed.ts#L17",
+          "how": "prisma.emailSetting"
+        },
+        {
+          "table": "app_settings",
+          "locator": "REPO-01:prisma/seed.ts#L23",
+          "how": "prisma.appSetting"
+        },
+        {
+          "table": "tenants",
+          "locator": "REPO-01:prisma/seed.ts#L29",
+          "how": "prisma.tenant"
+        },
+        {
+          "table": "users",
+          "locator": "REPO-01:prisma/seed.ts#L35",
+          "how": "prisma.user"
+        },
+        {
+          "table": "admins_tenants",
+          "locator": "REPO-01:prisma/seed.ts#L41",
+          "how": "prisma.adminTenant"
+        },
+        {
+          "table": "disclaimers",
+          "locator": "REPO-01:prisma/seed.ts#L47",
+          "how": "prisma.disclaimer"
+        },
+        {
+          "table": "gmo_settings",
+          "locator": "REPO-01:prisma/seed.ts#L53",
+          "how": "prisma.gMOSetting"
+        }
+      ],
+      "imports": [
+        "prisma/seeds/admins_tenants.ts",
+        "prisma/seeds/app-settings.ts",
+        "prisma/seeds/disclaimers.ts",
+        "prisma/seeds/email-settings.ts",
+        "prisma/seeds/gmo-settings.ts",
+        "prisma/seeds/tenants.ts",
+        "prisma/seeds/users.ts"
+      ]
+    },
+    "prisma/seeds/gmo-settings.ts": {
+      "tables": [],
+      "imports": [
+        "src/config.ts"
+      ]
+    },
+    "src/server.js": {
+      "tables": [],
+      "imports": [
+        "src/utils/bigint.js",
+        "src/utils/logger-custom-server.js"
+      ]
+    },
+    "src/components/AdminCancelBookingDialog/index.tsx": {
+      "tables": [],
+      "imports": [
+        "src/components/AdminCancelBookingDialog/AdminCancelBookingReviewDialog.tsx"
+      ]
+    },
+    "src/components/AdminUpdateBookingFormBeforeCheckIn/index.tsx": {
+      "tables": [],
+      "imports": [
+        "src/components/AdminUpdateBookingFormBeforeCheckIn/AdminBookingConfirmDialog.tsx",
+        "src/components/AdminUpdateBookingFormBeforeCheckIn/AdminBookingCreditCardDialog.tsx",
+        "src/components/AdminUpdateBookingFormBeforeCheckIn/AdminUpdateBookingReviewDialog.tsx"
+      ]
+    },
+    "src/components/BarcodeScanner/barcode-scanner.styles.tsx": {
+      "tables": [],
+      "imports": [
+        "src/components/BarcodeScanner/barcode-scanner.types.ts"
+      ]
+    },
+    "src/components/BarcodeScanner/index.tsx": {
+      "tables": [],
+      "imports": [
+        "src/components/BarcodeScanner/ConfirmDuplicateDialog/index.tsx",
+        "src/components/BarcodeScanner/ScanStatusPanel/index.tsx",
+        "src/components/BarcodeScanner/barcode-scanner.hooks.ts",
+        "src/components/BarcodeScanner/barcode-scanner.styles.tsx",
+        "src/components/BarcodeScanner/barcode-scanner.types.ts"
+      ]
+    },
+    "src/components/BarcodeScanner/ScanStatusPanel/index.tsx": {
+      "tables": [],
+      "imports": [
+        "src/components/BarcodeScanner/barcode-scanner.styles.tsx",
+        "src/components/BarcodeScanner/barcode-scanner.types.ts"
+      ]
+    },
+    "src/components/CreateBooking/MonthlyBookingForm/index.tsx": {
+      "tables": [],
+      "imports": [
+        "src/components/CreateBooking/BookingCompletion/BookingCompletionMonthly.tsx"
+      ]
+    },
+    "src/components/CreateBooking/PaymentOfflineBookingForm/index.tsx": {
+      "tables": [],
+      "imports": [
+        "src/components/CreateBooking/PaymentOfflineBookingForm/UserTimesLimitBookingForm.tsx"
+      ]
+    },
+    "src/components/CreateBooking/TimesLimitBookingForm/index.tsx": {
+      "tables": [],
+      "imports": [
+        "src/components/CreateBooking/BookingCompletion/BookingCompletionTimesLimit.tsx"
+      ]
+    },
+    "src/components/InDayVacancies/index.tsx": {
+      "tables": [],
+      "imports": [
+        "src/components/InDayVacancies/DetailVacancyDialog/index.tsx"
+      ]
+    },
+    "src/components/InDayVacancies/DetailVacancyDialog/index.tsx": {
+      "tables": [],
+      "imports": [
+        "src/components/InDayVacancies/InformationDialog/index.tsx"
+      ]
+    },
+    "src/components/TenantVacancies/index.tsx": {
+      "tables": [],
+      "imports": [
+        "src/components/TenantVacancies/Vacancy.tsx"
+      ]
+    },
+    "src/components/Ticket/ViewTicket/index.tsx": {
+      "tables": [],
+      "imports": [
+        "src/components/Ticket/ViewTicket/components/BookingScheduleRow.tsx",
+        "src/components/Ticket/ViewTicket/components/DiscountSetting.tsx",
+        "src/components/Ticket/ViewTicket/components/GroupTicketPrice.tsx"
+      ]
+    },
+    "src/components/Ticket/ViewTicket/components/BookingSchedulePrice.tsx": {
+      "tables": [],
+      "imports": [
+        "src/components/Ticket/ViewTicket/components/SmaregiQRCode.tsx"
+      ]
+    },
+    "src/components/Ticket/ViewTicket/components/BookingScheduleRow.tsx": {
+      "tables": [],
+      "imports": [
+        "src/components/Ticket/ViewTicket/components/BookingSchedulePrice.tsx"
+      ]
+    },
+    "src/components/Ticket/ViewTicket/components/DiscountSetting.tsx": {
+      "tables": [],
+      "imports": [
+        "src/components/Ticket/ViewTicket/components/SmaregiQRCode.tsx"
+      ]
+    },
+    "src/components/TopPage/CheckInOutButtons/index.tsx": {
+      "tables": [],
+      "imports": [
+        "src/components/TopPage/CheckInOutButtons/BookingListModal.tsx"
+      ]
+    },
+    "src/components/User/CreateOrUpdateUser/index.tsx": {
+      "tables": [],
+      "imports": [
+        "src/components/User/ConfirmInfoUserAdmin/index.tsx"
+      ]
+    },
+    "src/components/User/TimesLimitTicketStatusCard/index.tsx": {
+      "tables": [],
+      "imports": [
+        "src/components/User/TimesLimitTicketStatusCard/TimesLimitTicketStamps/index.tsx"
+      ]
+    },
+    "src/components/User/UpdateUserForm/index.tsx": {
+      "tables": [],
+      "imports": [
+        "src/components/User/ConfirmInfoUserMyPage/index.tsx"
+      ]
+    },
+    "src/components/common/AdminLayout/index.tsx": {
+      "tables": [],
+      "imports": [
+        "src/components/common/AdminLayout/AdminHeader/index.tsx"
+      ]
+    },
+    "src/components/common/AdminLayout/AdminHeader/index.tsx": {
+      "tables": [],
+      "imports": [
+        "src/components/common/AdminLayout/AdminSidebar/index.tsx"
+      ]
+    },
+    "src/components/common/ConfirmationDialog/index.tsx": {
+      "tables": [],
+      "imports": [
+        "src/components/common/Buttons/AdminButton/index.tsx"
+      ]
+    },
+    "src/components/common/ExpiredCreditCardDialog/index.tsx": {
+      "tables": [],
+      "imports": [
+        "src/components/common/Buttons/AdminButton/index.tsx"
+      ]
+    },
+    "src/components/common/PaymentStatusSlider/index.tsx": {
+      "tables": [],
+      "imports": [
+        "src/components/common/PaymentStatusSlider/payment-status-slider.styles.tsx"
+      ]
+    },
+    "src/components/common/UserLayout/index.tsx": {
+      "tables": [],
+      "imports": [
+        "src/components/common/Footer/index.tsx",
+        "src/components/common/Header/index.tsx",
+        "src/components/common/UserLayout/BreadcrumbList/index.tsx",
+        "src/components/common/UserLayout/UserPageHeading/index.tsx",
+        "src/components/common/UserLayout/UserSidebar/index.tsx"
+      ]
+    },
+    "src/components/common/UserLayout/UserPageHeading/index.tsx": {
+      "tables": [],
+      "imports": [
+        "src/components/common/UserLayout/Breadcrumb/index.tsx",
+        "src/components/common/UserLayout/BreadcrumbList/index.tsx"
+      ]
+    },
+    "src/pages/admin/revenue-management.tsx": {
+      "tables": [
+        {
+          "table": "users",
+          "locator": "REPO-01:src/pages/admin/revenue-management.tsx#L817",
+          "how": "orm User"
+        }
+      ],
+      "imports": []
+    },
+    "src/pages/admin/booking-management/details/[id].tsx": {
+      "tables": [
+        {
+          "table": "users",
+          "locator": "REPO-01:src/pages/admin/booking-management/details/[id].tsx#L160",
+          "how": "orm User"
+        }
+      ],
+      "imports": []
+    },
+    "src/pages/admin/ticket-management/create.tsx": {
+      "tables": [
+        {
+          "table": "ticket_details",
+          "locator": "REPO-01:src/pages/admin/ticket-management/create.tsx#L32",
+          "how": "orm TicketDetail"
+        }
+      ],
+      "imports": []
+    },
+    "src/pages/api/disclaimers.ts": {
+      "tables": [
+        {
+          "table": "disclaimers",
+          "locator": "REPO-01:src/pages/api/disclaimers.ts#L12",
+          "how": "prisma.disclaimer"
+        }
+      ],
+      "imports": []
+    },
+    "src/pages/api/admin/disclaimers.ts": {
+      "tables": [
+        {
+          "table": "disclaimers",
+          "locator": "REPO-01:src/pages/api/admin/disclaimers.ts#L24",
+          "how": "prisma.disclaimer"
+        }
+      ],
+      "imports": []
+    },
+    "src/pages/api/admin/app-settings/[settingKey].ts": {
+      "tables": [
+        {
+          "table": "app_settings",
+          "locator": "REPO-01:src/pages/api/admin/app-settings/[settingKey].ts#L25",
+          "how": "prisma.appSetting"
+        }
+      ],
+      "imports": []
+    },
+    "src/pages/api/admin/app-settings/index.ts": {
+      "tables": [
+        {
+          "table": "app_settings",
+          "locator": "REPO-01:src/pages/api/admin/app-settings/index.ts#L24",
+          "how": "prisma.appSetting"
+        }
+      ],
+      "imports": []
+    },
+    "src/pages/api/admin/booking-queue/[id].ts": {
+      "tables": [
+        {
+          "table": "bookings",
+          "locator": "REPO-01:src/pages/api/admin/booking-queue/[id].ts#L35",
+          "how": "prisma.booking"
+        }
+      ],
+      "imports": []
+    },
+    "src/pages/api/admin/booking-queue/calling.ts": {
+      "tables": [
+        {
+          "table": "bookings",
+          "locator": "REPO-01:src/pages/api/admin/booking-queue/calling.ts#L22",
+          "how": "prisma.booking"
+        }
+      ],
+      "imports": []
+    },
+    "src/pages/api/admin/booking-queue/index.ts": {
+      "tables": [
+        {
+          "table": "bookings",
+          "locator": "REPO-01:src/pages/api/admin/booking-queue/index.ts#L27",
+          "how": "prisma.booking"
+        }
+      ],
+      "imports": []
+    },
+    "src/pages/api/admin/booking-queue/system-cancelled.ts": {
+      "tables": [
+        {
+          "table": "bookings",
+          "locator": "REPO-01:src/pages/api/admin/booking-queue/system-cancelled.ts#L19",
+          "how": "prisma.booking"
+        }
+      ],
+      "imports": []
+    },
+    "src/pages/api/admin/booking-queue/waiting.ts": {
+      "tables": [
+        {
+          "table": "tickets",
+          "locator": "REPO-01:src/pages/api/admin/booking-queue/waiting.ts#L28",
+          "how": "prisma.ticket"
+        },
+        {
+          "table": "bookings",
+          "locator": "REPO-01:src/pages/api/admin/booking-queue/waiting.ts#L45",
+          "how": "prisma.booking"
+        }
+      ],
+      "imports": []
+    },
+    "src/pages/api/admin/booking-vacancies/index.ts": {
+      "tables": [
+        {
+          "table": "tickets",
+          "locator": "REPO-01:src/pages/api/admin/booking-vacancies/index.ts#L29",
+          "how": "prisma.ticket"
+        },
+        {
+          "table": "bookings",
+          "locator": "REPO-01:src/pages/api/admin/booking-vacancies/index.ts#L46",
+          "how": "prisma.booking"
+        }
+      ],
+      "imports": []
+    },
+    "src/pages/api/admin/bookings/[id].ts": {
+      "tables": [
+        {
+          "table": "bookings",
+          "locator": "REPO-01:src/pages/api/admin/bookings/[id].ts#L18",
+          "how": "prisma.booking"
+        }
+      ],
+      "imports": []
+    },
+    "src/pages/api/admin/bookings/blacklist.ts": {
+      "tables": [
+        {
+          "table": "bookings",
+          "locator": "REPO-01:src/pages/api/admin/bookings/blacklist.ts#L13",
+          "how": "prisma.booking"
+        }
+      ],
+      "imports": []
+    },
+    "src/pages/api/admin/bookings/count.ts": {
+      "tables": [
+        {
+          "table": "bookings",
+          "locator": "REPO-01:src/pages/api/admin/bookings/count.ts#L19",
+          "how": "prisma.booking"
+        }
+      ],
+      "imports": []
+    },
+    "src/pages/api/admin/bookings/export.ts": {
+      "tables": [
+        {
+          "table": "bookings",
+          "locator": "REPO-01:src/pages/api/admin/bookings/export.ts#L95",
+          "how": "prisma.booking"
+        }
+      ],
+      "imports": []
+    },
+    "src/pages/api/admin/bookings/index.ts": {
+      "tables": [
+        {
+          "table": "bookings",
+          "locator": "REPO-01:src/pages/api/admin/bookings/index.ts#L31",
+          "how": "prisma.booking"
+        }
+      ],
+      "imports": []
+    },
+    "src/pages/api/admin/bookings/rollback-scan.ts": {
+      "tables": [
+        {
+          "table": "bookings",
+          "locator": "REPO-01:src/pages/api/admin/bookings/rollback-scan.ts#L67",
+          "how": "prisma.booking"
+        },
+        {
+          "table": "users",
+          "locator": "REPO-01:src/pages/api/admin/bookings/rollback-scan.ts#L321",
+          "how": "prisma.user"
+        }
+      ],
+      "imports": []
+    },
+    "src/pages/api/admin/bookings/scan.ts": {
+      "tables": [
+        {
+          "table": "users",
+          "locator": "REPO-01:src/pages/api/admin/bookings/scan.ts#L708",
+          "how": "orm User"
+        },
+        {
+          "table": "bookings",
+          "locator": "REPO-01:src/pages/api/admin/bookings/scan.ts#L114",
+          "how": "prisma.booking"
+        },
+        {
+          "table": "booking_obic_codes",
+          "locator": "REPO-01:src/pages/api/admin/bookings/scan.ts#L689",
+          "how": "prisma.bookingObicCode"
+        }
+      ],
+      "imports": []
+    },
+    "src/pages/api/admin/bookings/status.ts": {
+      "tables": [
+        {
+          "table": "users",
+          "locator": "REPO-01:src/pages/api/admin/bookings/status.ts#L106",
+          "how": "orm User"
+        },
+        {
+          "table": "bookings",
+          "locator": "REPO-01:src/pages/api/admin/bookings/status.ts#L47",
+          "how": "prisma.booking"
+        },
+        {
+          "table": "users",
+          "locator": "REPO-01:src/pages/api/admin/bookings/status.ts#L107",
+          "how": "prisma.user"
+        }
+      ],
+      "imports": []
+    },
+    "src/pages/api/admin/bookings/[id]/status.ts": {
+      "tables": [
+        {
+          "table": "bookings",
+          "locator": "REPO-01:src/pages/api/admin/bookings/[id]/status.ts#L23",
+          "how": "prisma.booking"
+        }
+      ],
+      "imports": []
+    },
+    "src/pages/api/admin/bookings/cancel/[id].ts": {
+      "tables": [
+        {
+          "table": "bookings",
+          "locator": "REPO-01:src/pages/api/admin/bookings/cancel/[id].ts#L33",
+          "how": "prisma.booking"
+        },
+        {
+          "table": "tickets",
+          "locator": "REPO-01:src/pages/api/admin/bookings/cancel/[id].ts#L34",
+          "how": "prisma.ticket"
+        }
+      ],
+      "imports": []
+    },
+    "src/pages/api/admin/bookings/decrease-quantity/[id].ts": {
+      "tables": [
+        {
+          "table": "bookings",
+          "locator": "REPO-01:src/pages/api/admin/bookings/decrease-quantity/[id].ts#L22",
+          "how": "prisma.booking"
+        },
+        {
+          "table": "tickets",
+          "locator": "REPO-01:src/pages/api/admin/bookings/decrease-quantity/[id].ts#L26",
+          "how": "prisma.ticket"
+        }
+      ],
+      "imports": []
+    },
+    "src/pages/api/admin/bookings/monthly-tickets/extra-info.ts": {
+      "tables": [
+        {
+          "table": "bookings",
+          "locator": "REPO-01:src/pages/api/admin/bookings/monthly-tickets/extra-info.ts#L23",
+          "how": "prisma.booking"
+        }
+      ],
+      "imports": []
+    },
+    "src/pages/api/admin/bookings/ticket-booking-schedules/[id].ts": {
+      "tables": [
+        {
+          "table": "ticket_booking_schedules",
+          "locator": "REPO-01:src/pages/api/admin/bookings/ticket-booking-schedules/[id].ts#L27",
+          "how": "prisma.ticketBookingSchedule"
+        }
+      ],
+      "imports": []
+    },
+    "src/pages/api/admin/charts/average-booking-times.ts": {
+      "tables": [
+        {
+          "table": "bookings",
+          "locator": "REPO-01:src/pages/api/admin/charts/average-booking-times.ts#L21",
+          "how": "sql"
+        },
+        {
+          "table": "TotalUserBookingsGroup",
+          "locator": "REPO-01:src/pages/api/admin/charts/average-booking-times.ts#L24",
+          "how": "sql"
+        }
+      ],
+      "imports": []
+    },
+    "src/pages/api/admin/charts/total-bookings-with-ticket.ts": {
+      "tables": [
+        {
+          "table": "bookings",
+          "locator": "REPO-01:src/pages/api/admin/charts/total-bookings-with-ticket.ts#L21",
+          "how": "sql"
+        }
+      ],
+      "imports": []
+    },
+    "src/pages/api/admin/charts/total-bookings-with-times.ts": {
+      "tables": [
+        {
+          "table": "bookings",
+          "locator": "REPO-01:src/pages/api/admin/charts/total-bookings-with-times.ts#L22",
+          "how": "sql"
+        }
+      ],
+      "imports": []
+    },
+    "src/pages/api/admin/charts/total-new-and-old-booking-users.ts": {
+      "tables": [
+        {
+          "table": "user_first_bookings",
+          "locator": "REPO-01:src/pages/api/admin/charts/total-new-and-old-booking-users.ts#L41",
+          "how": "sql"
+        }
+      ],
+      "imports": []
+    },
+    "src/pages/api/admin/email-settings/[emailKey].ts": {
+      "tables": [
+        {
+          "table": "email_settings",
+          "locator": "REPO-01:src/pages/api/admin/email-settings/[emailKey].ts#L24",
+          "how": "prisma.emailSetting"
+        }
+      ],
+      "imports": []
+    },
+    "src/pages/api/admin/email-settings/index.ts": {
+      "tables": [
+        {
+          "table": "email_settings",
+          "locator": "REPO-01:src/pages/api/admin/email-settings/index.ts#L24",
+          "how": "prisma.emailSetting"
+        }
+      ],
+      "imports": []
+    },
+    "src/pages/api/admin/gmo-settings/[id].ts": {
+      "tables": [
+        {
+          "table": "gmo_settings",
+          "locator": "REPO-01:src/pages/api/admin/gmo-settings/[id].ts#L29",
+          "how": "prisma.gMOSetting"
+        }
+      ],
+      "imports": []
+    },
+    "src/pages/api/admin/gmo-settings/index.ts": {
+      "tables": [
+        {
+          "table": "gmo_settings",
+          "locator": "REPO-01:src/pages/api/admin/gmo-settings/index.ts#L26",
+          "how": "prisma.gMOSetting"
+        }
+      ],
+      "imports": []
+    },
+    "src/pages/api/admin/news/[id].ts": {
+      "tables": [
+        {
+          "table": "news",
+          "locator": "REPO-01:src/pages/api/admin/news/[id].ts#L24",
+          "how": "prisma.news"
+        }
+      ],
+      "imports": []
+    },
+    "src/pages/api/admin/news/index.ts": {
+      "tables": [
+        {
+          "table": "news",
+          "locator": "REPO-01:src/pages/api/admin/news/index.ts#L24",
+          "how": "prisma.news"
+        }
+      ],
+      "imports": []
+    },
+    "src/pages/api/admin/obic-codes/index.ts": {
+      "tables": [
+        {
+          "table": "tickets",
+          "locator": "REPO-01:src/pages/api/admin/obic-codes/index.ts#L59",
+          "how": "prisma.ticket"
+        }
+      ],
+      "imports": []
+    },
+    "src/pages/api/admin/revenue-management/count.ts": {
+      "tables": [
+        {
+          "table": "tickets",
+          "locator": "REPO-01:src/pages/api/admin/revenue-management/count.ts#L44",
+          "how": "sql"
+        },
+        {
+          "table": "bookings",
+          "locator": "REPO-01:src/pages/api/admin/revenue-management/count.ts#L65",
+          "how": "sql"
+        }
+      ],
+      "imports": []
+    },
+    "src/pages/api/admin/staffs/[id].ts": {
+      "tables": [
+        {
+          "table": "staffs",
+          "locator": "REPO-01:src/pages/api/admin/staffs/[id].ts#L29",
+          "how": "prisma.staff"
+        },
+        {
+          "table": "users",
+          "locator": "REPO-01:src/pages/api/admin/staffs/[id].ts#L48",
+          "how": "prisma.user"
+        }
+      ],
+      "imports": []
+    },
+    "src/pages/api/admin/staffs/count.ts": {
+      "tables": [
+        {
+          "table": "staffs",
+          "locator": "REPO-01:src/pages/api/admin/staffs/count.ts#L20",
+          "how": "prisma.staff"
+        }
+      ],
+      "imports": []
+    },
+    "src/pages/api/admin/staffs/index.ts": {
+      "tables": [
+        {
+          "table": "staffs",
+          "locator": "REPO-01:src/pages/api/admin/staffs/index.ts#L31",
+          "how": "prisma.staff"
+        },
+        {
+          "table": "users",
+          "locator": "REPO-01:src/pages/api/admin/staffs/index.ts#L63",
+          "how": "prisma.user"
+        }
+      ],
+      "imports": []
+    },
+    "src/pages/api/admin/tenants/[code].ts": {
+      "tables": [
+        {
+          "table": "tenants",
+          "locator": "REPO-01:src/pages/api/admin/tenants/[code].ts#L25",
+          "how": "prisma.tenant"
+        },
+        {
+          "table": "admins_tenants",
+          "locator": "REPO-01:src/pages/api/admin/tenants/[code].ts#L62",
+          "how": "prisma.adminTenant"
+        }
+      ],
+      "imports": []
+    },
+    "src/pages/api/admin/tenants/count.ts": {
+      "tables": [
+        {
+          "table": "tenants",
+          "locator": "REPO-01:src/pages/api/admin/tenants/count.ts#L19",
+          "how": "prisma.tenant"
+        }
+      ],
+      "imports": []
+    },
+    "src/pages/api/admin/tenants/index.ts": {
+      "tables": [
+        {
+          "table": "tenants",
+          "locator": "REPO-01:src/pages/api/admin/tenants/index.ts#L31",
+          "how": "prisma.tenant"
+        }
+      ],
+      "imports": []
+    },
+    "src/pages/api/admin/ticket-booking-schedules/has-booking.ts": {
+      "tables": [
+        {
+          "table": "bookings",
+          "locator": "REPO-01:src/pages/api/admin/ticket-booking-schedules/has-booking.ts#L19",
+          "how": "prisma.booking"
+        }
+      ],
+      "imports": []
+    },
+    "src/pages/api/admin/ticket-booking-schedules/index.ts": {
+      "tables": [
+        {
+          "table": "ticket_booking_schedules",
+          "locator": "REPO-01:src/pages/api/admin/ticket-booking-schedules/index.ts#L30",
+          "how": "prisma.ticketBookingSchedule"
+        },
+        {
+          "table": "bookings",
+          "locator": "REPO-01:src/pages/api/admin/ticket-booking-schedules/index.ts#L58",
+          "how": "prisma.booking"
+        }
+      ],
+      "imports": []
+    },
+    "src/pages/api/admin/tickets/[id].ts": {
+      "tables": [
+        {
+          "table": "tickets",
+          "locator": "REPO-01:src/pages/api/admin/tickets/[id].ts#L35",
+          "how": "prisma.ticket"
+        },
+        {
+          "table": "users",
+          "locator": "REPO-01:src/pages/api/admin/tickets/[id].ts#L156",
+          "how": "prisma.user"
+        }
+      ],
+      "imports": []
+    },
+    "src/pages/api/admin/tickets/count.ts": {
+      "tables": [
+        {
+          "table": "tickets",
+          "locator": "REPO-01:src/pages/api/admin/tickets/count.ts#L23",
+          "how": "prisma.ticket"
+        }
+      ],
+      "imports": []
+    },
+    "src/pages/api/admin/tickets/index.ts": {
+      "tables": [
+        {
+          "table": "tickets",
+          "locator": "REPO-01:src/pages/api/admin/tickets/index.ts#L44",
+          "how": "prisma.ticket"
+        }
+      ],
+      "imports": []
+    },
+    "src/pages/api/admin/tickets/[id]/backfill-obic-codes.ts": {
+      "tables": [
+        {
+          "table": "booking_obic_codes",
+          "locator": "REPO-01:src/pages/api/admin/tickets/[id]/backfill-obic-codes.ts#L21",
+          "how": "prisma.bookingObicCode"
+        }
+      ],
+      "imports": []
+    },
+    "src/pages/api/admin/tickets/obic-codes/export.ts": {
+      "tables": [
+        {
+          "table": "booking_obic_codes",
+          "locator": "REPO-01:src/pages/api/admin/tickets/obic-codes/export.ts#L51",
+          "how": "prisma.bookingObicCode"
+        }
+      ],
+      "imports": []
+    },
+    "src/pages/api/admin/users/[id].ts": {
+      "tables": [
+        {
+          "table": "users",
+          "locator": "REPO-01:src/pages/api/admin/users/[id].ts#L37",
+          "how": "prisma.user"
+        }
+      ],
+      "imports": []
+    },
+    "src/pages/api/admin/users/count.ts": {
+      "tables": [
+        {
+          "table": "users",
+          "locator": "REPO-01:src/pages/api/admin/users/count.ts#L25",
+          "how": "prisma.user"
+        }
+      ],
+      "imports": []
+    },
+    "src/pages/api/admin/users/index.ts": {
+      "tables": [
+        {
+          "table": "users",
+          "locator": "REPO-01:src/pages/api/admin/users/index.ts#L47",
+          "how": "prisma.user"
+        }
+      ],
+      "imports": []
+    },
+    "src/pages/api/app-settings/[settingKey].ts": {
+      "tables": [
+        {
+          "table": "app_settings",
+          "locator": "REPO-01:src/pages/api/app-settings/[settingKey].ts#L13",
+          "how": "prisma.appSetting"
+        }
+      ],
+      "imports": []
+    },
+    "src/pages/api/auth/[...nextauth].ts": {
+      "tables": [
+        {
+          "table": "users",
+          "locator": "REPO-01:src/pages/api/auth/[...nextauth].ts#L53",
+          "how": "sql"
+        },
+        {
+          "table": "tenants",
+          "locator": "REPO-01:src/pages/api/auth/[...nextauth].ts#L144",
+          "how": "prisma.tenant"
+        }
+      ],
+      "imports": []
+    },
+    "src/pages/api/auth/change-email.ts": {
+      "tables": [
+        {
+          "table": "users",
+          "locator": "REPO-01:src/pages/api/auth/change-email.ts#L25",
+          "how": "prisma.user"
+        }
+      ],
+      "imports": []
+    },
+    "src/pages/api/auth/resend-verification-email.ts": {
+      "tables": [
+        {
+          "table": "users",
+          "locator": "REPO-01:src/pages/api/auth/resend-verification-email.ts#L25",
+          "how": "prisma.user"
+        }
+      ],
+      "imports": []
+    },
+    "src/pages/api/auth/security-questions.ts": {
+      "tables": [
+        {
+          "table": "security_questions",
+          "locator": "REPO-01:src/pages/api/auth/security-questions.ts#L12",
+          "how": "prisma.securityQuestion"
+        }
+      ],
+      "imports": []
+    },
+    "src/pages/api/auth/signup.ts": {
+      "tables": [
+        {
+          "table": "users",
+          "locator": "REPO-01:src/pages/api/auth/signup.ts#L41",
+          "how": "prisma.user"
+        }
+      ],
+      "imports": []
+    },
+    "src/pages/api/bookings/check-same-date-booking-exists.ts": {
+      "tables": [
+        {
+          "table": "tickets",
+          "locator": "REPO-01:src/pages/api/bookings/check-same-date-booking-exists.ts#L24",
+          "how": "prisma.ticket"
+        },
+        {
+          "table": "bookings",
+          "locator": "REPO-01:src/pages/api/bookings/check-same-date-booking-exists.ts#L38",
+          "how": "prisma.booking"
+        }
+      ],
+      "imports": []
+    },
+    "src/pages/api/bookings/index.ts": {
+      "tables": [
+        {
+          "table": "tickets",
+          "locator": "REPO-01:src/pages/api/bookings/index.ts#L42",
+          "how": "prisma.ticket"
+        },
+        {
+          "table": "bookings",
+          "locator": "REPO-01:src/pages/api/bookings/index.ts#L62",
+          "how": "prisma.booking"
+        },
+        {
+          "table": "booking_child_age_infos",
+          "locator": "REPO-01:src/pages/api/bookings/index.ts#L113",
+          "how": "prisma.bookingChildAgeInfo"
+        }
+      ],
+      "imports": []
+    },
+    "src/pages/api/bookings/status.ts": {
+      "tables": [
+        {
+          "table": "bookings",
+          "locator": "REPO-01:src/pages/api/bookings/status.ts#L15",
+          "how": "prisma.booking"
+        }
+      ],
+      "imports": []
+    },
+    "src/pages/api/bookings/use-in-day.ts": {
+      "tables": [
+        {
+          "table": "bookings",
+          "locator": "REPO-01:src/pages/api/bookings/use-in-day.ts#L47",
+          "how": "prisma.booking"
+        },
+        {
+          "table": "tickets",
+          "locator": "REPO-01:src/pages/api/bookings/use-in-day.ts#L57",
+          "how": "prisma.ticket"
+        },
+        {
+          "table": "users",
+          "locator": "REPO-01:src/pages/api/bookings/use-in-day.ts#L114",
+          "how": "prisma.user"
+        }
+      ],
+      "imports": []
+    },
+    "src/pages/api/bookings/main-bookings/[id].ts": {
+      "tables": [
+        {
+          "table": "bookings",
+          "locator": "REPO-01:src/pages/api/bookings/main-bookings/[id].ts#L18",
+          "how": "prisma.booking"
+        }
+      ],
+      "imports": []
+    },
+    "src/pages/api/bookings/transaction/[id].ts": {
+      "tables": [
+        {
+          "table": "bookings",
+          "locator": "REPO-01:src/pages/api/bookings/transaction/[id].ts#L25",
+          "how": "prisma.booking"
+        }
+      ],
+      "imports": []
+    },
+    "src/pages/api/cron-job/process-overdue-calling-booking.ts": {
+      "tables": [
+        {
+          "table": "bookings",
+          "locator": "REPO-01:src/pages/api/cron-job/process-overdue-calling-booking.ts#L46",
+          "how": "prisma.booking"
+        }
+      ],
+      "imports": []
+    },
+    "src/pages/api/cron-job/process-overdue-no-waiting-booking.ts": {
+      "tables": [
+        {
+          "table": "bookings",
+          "locator": "REPO-01:src/pages/api/cron-job/process-overdue-no-waiting-booking.ts#L51",
+          "how": "prisma.booking"
+        }
+      ],
+      "imports": []
+    },
+    "src/pages/api/cron-job/reconcile-smaregi-transactions.ts": {
+      "tables": [
+        {
+          "table": "smaregi_temporary_transactions",
+          "locator": "REPO-01:src/pages/api/cron-job/reconcile-smaregi-transactions.ts#L43",
+          "how": "prisma.smaregiTemporaryTransaction"
+        },
+        {
+          "table": "tenants",
+          "locator": "REPO-01:src/pages/api/cron-job/reconcile-smaregi-transactions.ts#L52",
+          "how": "prisma.tenant"
+        }
+      ],
+      "imports": []
+    },
+    "src/pages/api/cron-job/remind-booking-expired.ts": {
+      "tables": [
+        {
+          "table": "bookings",
+          "locator": "REPO-01:src/pages/api/cron-job/remind-booking-expired.ts#L23",
+          "how": "prisma.booking"
+        }
+      ],
+      "imports": []
+    },
+    "src/pages/api/cron-job/remind-one-day-booking.ts": {
+      "tables": [
+        {
+          "table": "bookings",
+          "locator": "REPO-01:src/pages/api/cron-job/remind-one-day-booking.ts#L23",
+          "how": "prisma.booking"
+        }
+      ],
+      "imports": []
+    },
+    "src/pages/api/cron-job/remind-using-booking.ts": {
+      "tables": [
+        {
+          "table": "bookings",
+          "locator": "REPO-01:src/pages/api/cron-job/remind-using-booking.ts#L24",
+          "how": "prisma.booking"
+        },
+        {
+          "table": "app_settings",
+          "locator": "REPO-01:src/pages/api/cron-job/remind-using-booking.ts#L44",
+          "how": "prisma.appSetting"
+        }
+      ],
+      "imports": []
+    },
+    "src/pages/api/gmo/callback.ts": {
+      "tables": [
+        {
+          "table": "bookings",
+          "locator": "REPO-01:src/pages/api/gmo/callback.ts#L40",
+          "how": "prisma.booking"
+        }
+      ],
+      "imports": []
+    },
+    "src/pages/api/migration/add-security-questions.ts": {
+      "tables": [
+        {
+          "table": "security_questions",
+          "locator": "REPO-01:src/pages/api/migration/add-security-questions.ts#L20",
+          "how": "prisma.securityQuestion"
+        }
+      ],
+      "imports": []
+    },
+    "src/pages/api/migration/fill-first-checked-out-booking-id-for-users.ts": {
+      "tables": [
+        {
+          "table": "users",
+          "locator": "REPO-01:src/pages/api/migration/fill-first-checked-out-booking-id-for-users.ts#L14",
+          "how": "prisma.user"
+        },
+        {
+          "table": "bookings",
+          "locator": "REPO-01:src/pages/api/migration/fill-first-checked-out-booking-id-for-users.ts#L22",
+          "how": "prisma.booking"
+        }
+      ],
+      "imports": []
+    },
+    "src/pages/api/migration/fill-gmo-id-for-tenant.ts": {
+      "tables": [
+        {
+          "table": "tenants",
+          "locator": "REPO-01:src/pages/api/migration/fill-gmo-id-for-tenant.ts#L13",
+          "how": "prisma.tenant"
+        },
+        {
+          "table": "gmo_settings",
+          "locator": "REPO-01:src/pages/api/migration/fill-gmo-id-for-tenant.ts#L25",
+          "how": "prisma.gMOSetting"
+        }
+      ],
+      "imports": []
+    },
+    "src/pages/api/migration/fill-ticket-booking-schedule-id-for-booking.ts": {
+      "tables": [
+        {
+          "table": "bookings",
+          "locator": "REPO-01:src/pages/api/migration/fill-ticket-booking-schedule-id-for-booking.ts#L13",
+          "how": "prisma.booking"
+        }
+      ],
+      "imports": []
+    },
+    "src/pages/api/migration/fill-ticket-group-id.ts": {
+      "tables": [
+        {
+          "table": "tickets",
+          "locator": "REPO-01:src/pages/api/migration/fill-ticket-group-id.ts#L13",
+          "how": "prisma.ticket"
+        }
+      ],
+      "imports": []
+    },
+    "src/pages/api/migration/migrate-discount-setting.ts": {
+      "tables": [
+        {
+          "table": "ticket_details",
+          "locator": "REPO-01:src/pages/api/migration/migrate-discount-setting.ts#L14",
+          "how": "prisma.ticketDetail"
+        },
+        {
+          "table": "ticket_discount_settings",
+          "locator": "REPO-01:src/pages/api/migration/migrate-discount-setting.ts#L20",
+          "how": "prisma.ticketDiscountSetting"
+        }
+      ],
+      "imports": []
+    },
+    "src/pages/api/migration/email-settings/add-unlock-account.ts": {
+      "tables": [
+        {
+          "table": "email_settings",
+          "locator": "REPO-01:src/pages/api/migration/email-settings/add-unlock-account.ts#L22",
+          "how": "prisma.emailSetting"
+        }
+      ],
+      "imports": []
+    },
+    "src/pages/api/news/index.ts": {
+      "tables": [
+        {
+          "table": "news",
+          "locator": "REPO-01:src/pages/api/news/index.ts#L18",
+          "how": "prisma.news"
+        }
+      ],
+      "imports": []
+    },
+    "src/pages/api/pos/bookings/calculate-pay-amount.ts": {
+      "tables": [
+        {
+          "table": "bookings",
+          "locator": "REPO-01:src/pages/api/pos/bookings/calculate-pay-amount.ts#L53",
+          "how": "prisma.booking"
+        }
+      ],
+      "imports": []
+    },
+    "src/pages/api/pos/bookings/check-in.ts": {
+      "tables": [
+        {
+          "table": "bookings",
+          "locator": "REPO-01:src/pages/api/pos/bookings/check-in.ts#L32",
+          "how": "prisma.booking"
+        }
+      ],
+      "imports": []
+    },
+    "src/pages/api/pos/bookings/check-out.ts": {
+      "tables": [
+        {
+          "table": "users",
+          "locator": "REPO-01:src/pages/api/pos/bookings/check-out.ts#L160",
+          "how": "orm User"
+        },
+        {
+          "table": "bookings",
+          "locator": "REPO-01:src/pages/api/pos/bookings/check-out.ts#L41",
+          "how": "prisma.booking"
+        },
+        {
+          "table": "booking_obic_codes",
+          "locator": "REPO-01:src/pages/api/pos/bookings/check-out.ts#L145",
+          "how": "prisma.bookingObicCode"
+        },
+        {
+          "table": "partial_checkouts",
+          "locator": "REPO-01:src/pages/api/pos/bookings/check-out.ts#L152",
+          "how": "prisma.partialCheckout"
+        },
+        {
+          "table": "users",
+          "locator": "REPO-01:src/pages/api/pos/bookings/check-out.ts#L162",
+          "how": "prisma.user"
+        }
+      ],
+      "imports": []
+    },
+    "src/pages/api/pos/bookings/index.ts": {
+      "tables": [
+        {
+          "table": "bookings",
+          "locator": "REPO-01:src/pages/api/pos/bookings/index.ts#L39",
+          "how": "prisma.booking"
+        }
+      ],
+      "imports": []
+    },
+    "src/pages/api/smaregi/webhook-transactions.ts": {
+      "tables": [
+        {
+          "table": "tenants",
+          "locator": "REPO-01:src/pages/api/smaregi/webhook-transactions.ts#L39",
+          "how": "prisma.tenant"
+        }
+      ],
+      "imports": []
+    },
+    "src/pages/api/tenants/[code].ts": {
+      "tables": [
+        {
+          "table": "tenants",
+          "locator": "REPO-01:src/pages/api/tenants/[code].ts#L13",
+          "how": "prisma.tenant"
+        }
+      ],
+      "imports": []
+    },
+    "src/pages/api/tenants/count.ts": {
+      "tables": [
+        {
+          "table": "tenants",
+          "locator": "REPO-01:src/pages/api/tenants/count.ts#L13",
+          "how": "prisma.tenant"
+        }
+      ],
+      "imports": []
+    },
+    "src/pages/api/tenants/index.ts": {
+      "tables": [
+        {
+          "table": "tenants",
+          "locator": "REPO-01:src/pages/api/tenants/index.ts#L15",
+          "how": "prisma.tenant"
+        }
+      ],
+      "imports": []
+    },
+    "src/pages/api/tickets/[id].ts": {
+      "tables": [
+        {
+          "table": "tickets",
+          "locator": "REPO-01:src/pages/api/tickets/[id].ts#L14",
+          "how": "prisma.ticket"
+        }
+      ],
+      "imports": []
+    },
+    "src/pages/api/tickets/index.ts": {
+      "tables": [
+        {
+          "table": "tickets",
+          "locator": "REPO-01:src/pages/api/tickets/index.ts#L33",
+          "how": "prisma.ticket"
+        }
+      ],
+      "imports": []
+    },
+    "src/pages/api/user/check-existing-email.ts": {
+      "tables": [
+        {
+          "table": "users",
+          "locator": "REPO-01:src/pages/api/user/check-existing-email.ts#L15",
+          "how": "prisma.user"
+        }
+      ],
+      "imports": []
+    },
+    "src/pages/api/user/check-required-info.ts": {
+      "tables": [
+        {
+          "table": "users",
+          "locator": "REPO-01:src/pages/api/user/check-required-info.ts#L16",
+          "how": "prisma.user"
+        }
+      ],
+      "imports": []
+    },
+    "src/pages/api/user/index.ts": {
+      "tables": [
+        {
+          "table": "users",
+          "locator": "REPO-01:src/pages/api/user/index.ts#L34",
+          "how": "prisma.user"
+        }
+      ],
+      "imports": []
+    },
+    "src/pages/api/user/bookings/cancel.ts": {
+      "tables": [
+        {
+          "table": "bookings",
+          "locator": "REPO-01:src/pages/api/user/bookings/cancel.ts#L31",
+          "how": "prisma.booking"
+        }
+      ],
+      "imports": []
+    },
+    "src/pages/api/user/bookings/index.ts": {
+      "tables": [
+        {
+          "table": "bookings",
+          "locator": "REPO-01:src/pages/api/user/bookings/index.ts#L20",
+          "how": "prisma.booking"
+        }
+      ],
+      "imports": []
+    },
+    "src/pages/api/user/bookings/last-booking.ts": {
+      "tables": [
+        {
+          "table": "bookings",
+          "locator": "REPO-01:src/pages/api/user/bookings/last-booking.ts#L19",
+          "how": "prisma.booking"
+        }
+      ],
+      "imports": []
+    },
+    "src/pages/api/user/bookings/request-re-check-in.ts": {
+      "tables": [
+        {
+          "table": "bookings",
+          "locator": "REPO-01:src/pages/api/user/bookings/request-re-check-in.ts#L25",
+          "how": "prisma.booking"
+        }
+      ],
+      "imports": []
+    },
+    "src/pages/api/user/bookings/[id]/index.ts": {
+      "tables": [
+        {
+          "table": "bookings",
+          "locator": "REPO-01:src/pages/api/user/bookings/[id]/index.ts#L42",
+          "how": "prisma.booking"
+        },
+        {
+          "table": "tenants",
+          "locator": "REPO-01:src/pages/api/user/bookings/[id]/index.ts#L100",
+          "how": "prisma.tenant"
+        },
+        {
+          "table": "tickets",
+          "locator": "REPO-01:src/pages/api/user/bookings/[id]/index.ts#L127",
+          "how": "prisma.ticket"
+        },
+        {
+          "table": "booking_child_age_infos",
+          "locator": "REPO-01:src/pages/api/user/bookings/[id]/index.ts#L243",
+          "how": "prisma.bookingChildAgeInfo"
+        }
+      ],
+      "imports": []
+    },
+    "src/pages/api/user/bookings/[id]/payment-status.ts": {
+      "tables": [
+        {
+          "table": "bookings",
+          "locator": "REPO-01:src/pages/api/user/bookings/[id]/payment-status.ts#L23",
+          "how": "prisma.booking"
+        }
+      ],
+      "imports": []
+    },
+    "src/pages/api/user/bookings/monthly-tickets/check-already-used-across-tenants.ts": {
+      "tables": [
+        {
+          "table": "bookings",
+          "locator": "REPO-01:src/pages/api/user/bookings/monthly-tickets/check-already-used-across-tenants.ts#L47",
+          "how": "prisma.booking"
+        }
+      ],
+      "imports": []
+    },
+    "src/pages/api/user/bookings/monthly-tickets/count.ts": {
+      "tables": [
+        {
+          "table": "bookings",
+          "locator": "REPO-01:src/pages/api/user/bookings/monthly-tickets/count.ts#L27",
+          "how": "prisma.booking"
+        }
+      ],
+      "imports": []
+    },
+    "src/pages/api/user/bookings/monthly-tickets/extra-info.ts": {
+      "tables": [
+        {
+          "table": "bookings",
+          "locator": "REPO-01:src/pages/api/user/bookings/monthly-tickets/extra-info.ts#L25",
+          "how": "prisma.booking"
+        },
+        {
+          "table": "ticket_booking_schedules",
+          "locator": "REPO-01:src/pages/api/user/bookings/monthly-tickets/extra-info.ts#L58",
+          "how": "prisma.ticketBookingSchedule"
+        }
+      ],
+      "imports": []
+    },
+    "src/pages/api/user/bookings/monthly-tickets/index.ts": {
+      "tables": [
+        {
+          "table": "bookings",
+          "locator": "REPO-01:src/pages/api/user/bookings/monthly-tickets/index.ts#L57",
+          "how": "prisma.booking"
+        }
+      ],
+      "imports": []
+    },
+    "src/pages/api/user/bookings/partial-checkout/[id].ts": {
+      "tables": [
+        {
+          "table": "bookings",
+          "locator": "REPO-01:src/pages/api/user/bookings/partial-checkout/[id].ts#L91",
+          "how": "prisma.booking"
+        }
+      ],
+      "imports": []
+    },
+    "src/pages/api/user/bookings/times-limit-tickets/count.ts": {
+      "tables": [
+        {
+          "table": "bookings",
+          "locator": "REPO-01:src/pages/api/user/bookings/times-limit-tickets/count.ts#L53",
+          "how": "prisma.booking"
+        }
+      ],
+      "imports": []
+    },
+    "src/pages/api/user/bookings/times-limit-tickets/index.ts": {
+      "tables": [
+        {
+          "table": "bookings",
+          "locator": "REPO-01:src/pages/api/user/bookings/times-limit-tickets/index.ts#L57",
+          "how": "prisma.booking"
+        }
+      ],
+      "imports": []
+    },
+    "src/pages/api/user/credit-card/save.ts": {
+      "tables": [
+        {
+          "table": "users",
+          "locator": "REPO-01:src/pages/api/user/credit-card/save.ts#L39",
+          "how": "prisma.user"
+        }
+      ],
+      "imports": []
+    },
+    "src/pages/api/user/edit-email/index.ts": {
+      "tables": [
+        {
+          "table": "users",
+          "locator": "REPO-01:src/pages/api/user/edit-email/index.ts#L23",
+          "how": "prisma.user"
+        }
+      ],
+      "imports": []
+    },
+    "src/pages/api/user/tenant-favorites/[tenantCode].ts": {
+      "tables": [
+        {
+          "table": "users_tenants_favorites",
+          "locator": "REPO-01:src/pages/api/user/tenant-favorites/[tenantCode].ts#L19",
+          "how": "prisma.userTenantFavorite"
+        }
+      ],
+      "imports": []
+    },
+    "src/pages/api/user/tenant-favorites/count.ts": {
+      "tables": [
+        {
+          "table": "users_tenants_favorites",
+          "locator": "REPO-01:src/pages/api/user/tenant-favorites/count.ts#L19",
+          "how": "prisma.userTenantFavorite"
+        }
+      ],
+      "imports": []
+    },
+    "src/pages/api/user/tenant-favorites/index.ts": {
+      "tables": [
+        {
+          "table": "users_tenants_favorites",
+          "locator": "REPO-01:src/pages/api/user/tenant-favorites/index.ts#L22",
+          "how": "prisma.userTenantFavorite"
+        }
+      ],
+      "imports": []
+    },
+    "src/pages/user/my-page/booking-history/update/[id].tsx": {
+      "tables": [
+        {
+          "table": "partial_checkouts",
+          "locator": "REPO-01:src/pages/user/my-page/booking-history/update/[id].tsx#L140",
+          "how": "orm PartialCheckout"
+        }
+      ],
+      "imports": []
+    },
+    "src/services/email.service.ts": {
+      "tables": [
+        {
+          "table": "email_settings",
+          "locator": "REPO-01:src/services/email.service.ts#L83",
+          "how": "prisma.emailSetting"
+        }
+      ],
+      "imports": []
+    },
+    "src/services/api-client/user.service.ts": {
+      "tables": [],
+      "imports": [
+        "src/services/api-client/ticket.service.ts"
+      ]
+    },
+    "src/services/smaregi/smaregi.service.ts": {
+      "tables": [],
+      "imports": [
+        "src/services/smaregi/smaregi.const.ts",
+        "src/services/smaregi/smaregi.types.ts"
+      ]
+    },
+    "src/services/smaregi/smaregi.types.ts": {
+      "tables": [],
+      "imports": [
+        "src/services/smaregi/smaregi.const.ts"
+      ]
+    },
+    "src/utils/app-setting.ts": {
+      "tables": [
+        {
+          "table": "app_settings",
+          "locator": "REPO-01:src/utils/app-setting.ts#L4",
+          "how": "prisma.appSetting"
+        }
+      ],
+      "imports": []
+    },
+    "src/utils/auth.ts": {
+      "tables": [
+        {
+          "table": "users",
+          "locator": "REPO-01:src/utils/auth.ts#L9",
+          "how": "sql"
+        },
+        {
+          "table": "users",
+          "locator": "REPO-01:src/utils/auth.ts#L22",
+          "how": "prisma.user"
+        },
+        {
+          "table": "admins_tenants",
+          "locator": "REPO-01:src/utils/auth.ts#L45",
+          "how": "prisma.adminTenant"
+        },
+        {
+          "table": "security_questions",
+          "locator": "REPO-01:src/utils/auth.ts#L119",
+          "how": "prisma.securityQuestion"
+        }
+      ],
+      "imports": []
+    },
+    "src/utils/booking.ts": {
+      "tables": [
+        {
+          "table": "bookings",
+          "locator": "REPO-01:src/utils/booking.ts#L701",
+          "how": "prisma.booking"
+        }
+      ],
+      "imports": [
+        "src/utils/number.ts",
+        "src/utils/ticket.ts"
+      ]
+    },
+    "src/utils/ticket.ts": {
+      "tables": [],
+      "imports": [
+        "src/utils/booking.ts"
+      ]
+    },
+    "src/utils/server/activity-log.ts": {
+      "tables": [
+        {
+          "table": "staffs",
+          "locator": "REPO-01:src/utils/server/activity-log.ts#L23",
+          "how": "prisma.staff"
+        },
+        {
+          "table": "users",
+          "locator": "REPO-01:src/utils/server/activity-log.ts#L39",
+          "how": "prisma.user"
+        },
+        {
+          "table": "admin_activity_logs",
+          "locator": "REPO-01:src/utils/server/activity-log.ts#L48",
+          "how": "prisma.adminActivityLog"
+        }
+      ],
+      "imports": []
+    },
+    "src/utils/server/barcode.ts": {
+      "tables": [
+        {
+          "table": "bookings",
+          "locator": "REPO-01:src/utils/server/barcode.ts#L40",
+          "how": "prisma.booking"
+        }
+      ],
+      "imports": []
+    },
+    "src/utils/server/booking-queue.ts": {
+      "tables": [
+        {
+          "table": "tickets",
+          "locator": "REPO-01:src/utils/server/booking-queue.ts#L15",
+          "how": "prisma.ticket"
+        },
+        {
+          "table": "bookings",
+          "locator": "REPO-01:src/utils/server/booking-queue.ts#L55",
+          "how": "prisma.booking"
+        }
+      ],
+      "imports": []
+    },
+    "src/utils/server/booking.ts": {
+      "tables": [
+        {
+          "table": "bookings",
+          "locator": "REPO-01:src/utils/server/booking.ts#L80",
+          "how": "prisma.booking"
+        },
+        {
+          "table": "gmo_settings",
+          "locator": "REPO-01:src/utils/server/booking.ts#L160",
+          "how": "prisma.gMOSetting"
+        },
+        {
+          "table": "tickets",
+          "locator": "REPO-01:src/utils/server/booking.ts#L242",
+          "how": "prisma.ticket"
+        },
+        {
+          "table": "smaregi_temporary_transactions",
+          "locator": "REPO-01:src/utils/server/booking.ts#L363",
+          "how": "prisma.smaregiTemporaryTransaction"
+        }
+      ],
+      "imports": []
+    },
+    "src/utils/server/gmo.ts": {
+      "tables": [
+        {
+          "table": "tenants",
+          "locator": "REPO-01:src/utils/server/gmo.ts#L8",
+          "how": "orm Tenant"
+        },
+        {
+          "table": "gmo_settings",
+          "locator": "REPO-01:src/utils/server/gmo.ts#L6",
+          "how": "prisma.gMOSetting"
+        }
+      ],
+      "imports": []
+    },
+    "src/utils/server/obicCodes.ts": {
+      "tables": [
+        {
+          "table": "booking_obic_codes",
+          "locator": "REPO-01:src/utils/server/obicCodes.ts#L239",
+          "how": "sql"
+        },
+        {
+          "table": "ticket_details",
+          "locator": "REPO-01:src/utils/server/obicCodes.ts#L242",
+          "how": "sql"
+        },
+        {
+          "table": "ticket_booking_schedules",
+          "locator": "REPO-01:src/utils/server/obicCodes.ts#L320",
+          "how": "sql"
+        },
+        {
+          "table": "tickets",
+          "locator": "REPO-01:src/utils/server/obicCodes.ts#L219",
+          "how": "prisma.ticket"
+        },
+        {
+          "table": "booking_obic_codes",
+          "locator": "REPO-01:src/utils/server/obicCodes.ts#L400",
+          "how": "prisma.bookingObicCode"
+        },
+        {
+          "table": "bookings",
+          "locator": "REPO-01:src/utils/server/obicCodes.ts#L417",
+          "how": "prisma.booking"
+        }
+      ],
+      "imports": []
+    },
+    "src/utils/server/revenue-management.ts": {
+      "tables": [
+        {
+          "table": "tickets",
+          "locator": "REPO-01:src/utils/server/revenue-management.ts#L37",
+          "how": "sql"
+        },
+        {
+          "table": "bookings",
+          "locator": "REPO-01:src/utils/server/revenue-management.ts#L62",
+          "how": "sql"
+        },
+        {
+          "table": "bookings",
+          "locator": "REPO-01:src/utils/server/revenue-management.ts#L82",
+          "how": "prisma.booking"
+        }
+      ],
+      "imports": []
+    },
+    "src/utils/server/smaregiSync.ts": {
+      "tables": [
+        {
+          "table": "bookings",
+          "locator": "REPO-01:src/utils/server/smaregiSync.ts#L608",
+          "how": "prisma.booking"
+        },
+        {
+          "table": "smaregi_temporary_transactions",
+          "locator": "REPO-01:src/utils/server/smaregiSync.ts#L668",
+          "how": "prisma.smaregiTemporaryTransaction"
+        }
+      ],
+      "imports": []
+    },
+    "src/utils/server/smaregiTransaction.ts": {
+      "tables": [
+        {
+          "table": "smaregi_temporary_transactions",
+          "locator": "REPO-01:src/utils/server/smaregiTransaction.ts#L127",
+          "how": "prisma.smaregiTemporaryTransaction"
+        },
+        {
+          "table": "bookings",
+          "locator": "REPO-01:src/utils/server/smaregiTransaction.ts#L211",
+          "how": "prisma.booking"
+        },
+        {
+          "table": "smaregi_transactions",
+          "locator": "REPO-01:src/utils/server/smaregiTransaction.ts#L228",
+          "how": "prisma.smaregiTransaction"
+        }
+      ],
+      "imports": [
+        "src/utils/server/sse-hub.ts"
+      ]
+    },
+    "src/utils/server/sql.ts": {
+      "tables": [
+        {
+          "table": "tickets",
+          "locator": "REPO-01:src/utils/server/sql.ts#L95",
+          "how": "sql"
+        },
+        {
+          "table": "tenants",
+          "locator": "REPO-01:src/utils/server/sql.ts#L96",
+          "how": "sql"
+        },
+        {
+          "table": "users",
+          "locator": "REPO-01:src/utils/server/sql.ts#L97",
+          "how": "sql"
+        },
+        {
+          "table": "OF",
+          "locator": "REPO-01:src/utils/server/sql.ts#L99",
+          "how": "sql"
+        }
+      ],
+      "imports": []
+    },
+    "src/utils/server/sse-hub.ts": {
+      "tables": [
+        {
+          "table": "sse_notifications",
+          "locator": "REPO-01:src/utils/server/sse-hub.ts#L46",
+          "how": "prisma.sseNotification"
+        }
+      ],
+      "imports": []
+    },
+    "src/utils/server/tenant.ts": {
+      "tables": [
+        {
+          "table": "tenants",
+          "locator": "REPO-01:src/utils/server/tenant.ts#L4",
+          "how": "prisma.tenant"
+        }
+      ],
+      "imports": []
+    },
+    "src/utils/server/ticket.ts": {
+      "tables": [
+        {
+          "table": "tickets",
+          "locator": "REPO-01:src/utils/server/ticket.ts#L8",
+          "how": "prisma.ticket"
+        },
+        {
+          "table": "bookings",
+          "locator": "REPO-01:src/utils/server/ticket.ts#L30",
+          "how": "prisma.booking"
+        }
+      ],
+      "imports": []
+    },
+    "src/utils/server/user.ts": {
+      "tables": [
+        {
+          "table": "users",
+          "locator": "REPO-01:src/utils/server/user.ts#L5",
+          "how": "prisma.user"
+        },
+        {
+          "table": "accounts",
+          "locator": "REPO-01:src/utils/server/user.ts#L22",
+          "how": "prisma.account"
+        }
+      ],
+      "imports": []
+    },
+    "src/utils/server/vacancy-status.ts": {
+      "tables": [
+        {
+          "table": "tickets",
+          "locator": "REPO-01:src/utils/server/vacancy-status.ts#L36",
+          "how": "prisma.ticket"
+        },
+        {
+          "table": "bookings",
+          "locator": "REPO-01:src/utils/server/vacancy-status.ts#L77",
+          "how": "prisma.booking"
+        }
+      ],
+      "imports": []
+    }
+  }
+}

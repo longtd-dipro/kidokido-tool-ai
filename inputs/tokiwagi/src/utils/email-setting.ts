@@ -1,0 +1,11 @@
+import { EMAIL_SETTING_KEY } from "constants/settings";
+
+export const checkIsRenderBarCodeImage = (emailKey: string) => {
+  return [
+    EMAIL_SETTING_KEY.BOOKING_SUCCESSFUL,
+    EMAIL_SETTING_KEY.BOOKING_UPDATE,
+    EMAIL_SETTING_KEY.BOOKING_WITH_WAITING_SUCCESSFUL,
+    EMAIL_SETTING_KEY.CALLING_NOTIFICATION,
+    EMAIL_SETTING_KEY.ONE_DAY_ONLINE_BOOKING_SUCCESSFUL,
+  ].includes(emailKey);
+};

@@ -1,0 +1,15 @@
+/* eslint-disable max-len */
+import React from "react";
+
+export const SelectArrowDownIcon = () => (
+  <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path
+      d="M26.5604 11.9336L17.8671 20.6269C16.8404 21.6536 15.1604 21.6536 14.1338 20.6269L5.44043 11.9336"
+      stroke="#0068B7"
+      strokeWidth="2"
+      strokeMiterlimit="10"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+  </svg>
+);

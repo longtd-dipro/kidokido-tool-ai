@@ -1,0 +1,47 @@
+.btnAction {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.tableHead {
+  white-space: nowrap;
+  background: #E9FAFF;
+  background: #E9FAFF;
+}
+.tableHead th {
+  font-size: 16px;
+  font-weight: 700 !important;
+  height: 54px;
+  line-height: 20px;
+  position: relative;
+  &::after {
+    position: absolute;
+    content: url(../statics/images/icon-separator.svg);
+    right: 0;
+  }
+  &:last-child {
+    &::after {
+      content: "";
+    }
+  }
+}
+
+//Multi Select
+.ad-select-field {
+  width: 120px;
+  border-radius: 10px !important;
+
+  :global(.MuiSelect-select) {
+    border-radius: 10px;
+    padding-right: 20px !important;
+    padding-left: 10px !important;
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 300;
+  }
+
+  :global(.MuiTableCell-root) {
+    padding-left: 20px;
+  }
+}

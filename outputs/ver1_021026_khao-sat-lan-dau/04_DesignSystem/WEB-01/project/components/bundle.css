@@ -1,0 +1,119 @@
+/* KidoKidoAdmin — style component đo trên Admin site (WEB-01). Chỉ dùng var(--token). */
+.kka-root, .kka-root * { box-sizing: border-box; font-family: var(--font-sans); }
+
+/* Button */
+.kka-btn { display: inline-flex; align-items: center; justify-content: center; gap: var(--space-8);
+  min-width: 200px; height: var(--control-md); padding: var(--space-10) var(--space-25);
+  border-radius: var(--radius-lg); border: 1px solid transparent; box-shadow: var(--shadow-button);
+  font-size: 16px; line-height: 20px; font-weight: 500; cursor: pointer; }
+.kka-btn--lg { min-width: 230px; height: var(--control-lg); font-weight: 700; }
+.kka-btn--contained { background: linear-gradient(180deg, var(--primary-gradient-top) 0%, var(--primary) 100%); color: var(--on-primary); }
+.kka-btn--outlined { background: var(--surface); border-color: var(--primary); color: var(--primary-text); }
+.kka-btn--add { width: 100%; min-width: 0; background: var(--action-add-bg); border-color: var(--text-label); color: var(--mui-primary);
+  border-radius: var(--radius-none); box-shadow: none; font-size: 20px; font-weight: 400; }
+.kka-btn[disabled] { background: var(--surface-disabled); border-color: var(--text-placeholder); color: var(--text-placeholder); box-shadow: none; cursor: default; }
+
+/* Field (TextField / Select) */
+.kka-field { display: flex; flex-direction: column; gap: var(--space-8); min-width: 0; }
+.kka-label { font-size: 14px; line-height: 20px; font-weight: 500; color: var(--text-label); }
+.kka-label--bold { font-weight: 700; }
+.kka-req { color: var(--negative-600); font-weight: 700; margin-left: var(--space-4); }
+.kka-input { display: flex; align-items: center; height: var(--control-md); padding: 0 var(--space-15);
+  background: var(--page-bg); border: 0; border-radius: var(--radius-md); box-shadow: var(--shadow-flat);
+  font-size: 16px; line-height: 20px; font-weight: 300; color: var(--text-middle); }
+.kka-input--pill { height: var(--control-sm); padding: 0 var(--space-16); border-radius: var(--radius-pill); font-size: 14px; }
+.kka-input__value { flex: 1; min-width: 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.kka-input__ph { color: var(--text-disabled); }
+.kka-input__icon { display: inline-flex; color: var(--icon-default); }
+.kka-input--disabled { background: var(--divider-middle); }
+.kka-helper { font-size: 12px; line-height: 20px; color: var(--text-label); }
+.kka-error { font-size: 16px; line-height: 24px; color: var(--negative-600); }
+
+/* Radio */
+.kka-radio-group { display: flex; flex-wrap: wrap; gap: var(--space-8) var(--space-16); }
+.kka-radio-group--column { flex-direction: column; }
+.kka-radio { display: inline-flex; align-items: center; gap: var(--space-8); font-size: 16px; line-height: 24px; color: var(--text-high); }
+.kka-radio__dot { width: 20px; height: 20px; border-radius: var(--radius-full); border: 2px solid var(--control-border); display: inline-flex; align-items: center; justify-content: center; }
+.kka-radio__dot--on { border-color: var(--control-checked); }
+.kka-radio__dot--on::after { content: ""; width: 10px; height: 10px; border-radius: var(--radius-full); background: var(--control-checked); }
+
+/* Switch (MUI mặc định) */
+.kka-switch { display: inline-flex; align-items: center; gap: var(--space-8); font-size: 16px; line-height: 24px; color: var(--text-middle); }
+.kka-switch__track { position: relative; width: 34px; height: 14px; border-radius: var(--radius-full); background: var(--text-disabled); }
+.kka-switch__thumb { position: absolute; top: -3px; left: -3px; width: 20px; height: 20px; border-radius: var(--radius-full); background: var(--white); box-shadow: var(--shadow-paper); }
+.kka-switch--on .kka-switch__track { background: var(--mui-primary-track); }
+.kka-switch--on .kka-switch__thumb { left: 17px; background: var(--mui-primary); }
+
+/* Tabs (segmented, SC-008) */
+.kka-tabs { display: flex; padding: var(--space-4); border: 2px solid var(--mui-primary); border-radius: var(--radius-lg); background: var(--surface); }
+.kka-tab { flex: 1; height: var(--tab-height); display: flex; align-items: center; justify-content: center; padding: var(--space-12) var(--space-16);
+  border-radius: var(--radius-lg); font-size: 14px; line-height: 17.5px; font-weight: 500; color: var(--primary-text); cursor: pointer; }
+.kka-tab--active { background: var(--mui-primary); color: var(--white); font-weight: 700; }
+
+/* Card */
+.kka-card { background: var(--surface); border-radius: var(--radius-lg); box-shadow: var(--shadow-raise); padding: var(--space-32) var(--space-40); }
+.kka-card__title { margin: 0 0 var(--space-24); font-size: 20px; line-height: 28px; font-weight: 600; color: var(--text-high); }
+
+/* Table (DataGrid) */
+.kka-table-wrap { background: var(--surface); border-radius: var(--radius-lg); box-shadow: var(--shadow-raise); padding-bottom: var(--space-25); overflow: hidden; }
+.kka-table { width: 100%; border-collapse: collapse; }
+.kka-table th { height: var(--table-header-height); background: var(--surface-subtle); text-align: left; padding: 0 var(--space-16);
+  font-size: 16px; line-height: 20px; font-weight: 700; color: var(--text-table-header); white-space: nowrap; }
+.kka-table th + th { border-left: 1px solid var(--divider-low); }
+.kka-table td { height: var(--table-row-height); padding: 0 var(--space-16); border-bottom: 1px solid var(--divider-low);
+  font-size: 16px; line-height: 20px; font-weight: 300; color: var(--text-middle); }
+.kka-table td.kka-num { text-align: right; font-variant-numeric: tabular-nums; }
+.kka-actions { display: inline-flex; align-items: center; gap: var(--space-4); }
+.kka-iconbtn { width: var(--icon-button-size); height: var(--icon-button-size); border-radius: var(--radius-circle); border: 0; background: transparent;
+  display: inline-flex; align-items: center; justify-content: center; color: var(--icon-default); cursor: pointer; }
+.kka-iconbtn[disabled] { color: var(--icon-disabled); cursor: default; }
+
+/* Pagination */
+.kka-pager { display: flex; align-items: center; justify-content: flex-end; gap: var(--space-8); font-size: 14px; line-height: 32px; color: var(--neutral-600); }
+.kka-pager__item { min-width: var(--pagination-item-size); height: var(--pagination-item-size); padding: 0 var(--space-6); border-radius: var(--radius-sm);
+  border: 1px solid transparent; background: var(--white); color: var(--text-middle); display: inline-flex; align-items: center; justify-content: center; font-size: 14px; line-height: 20.02px; }
+.kka-pager__item--outlined { background: transparent; border-color: var(--divider-outline); }
+.kka-pager__item--active { background: var(--primary-subtle); color: var(--text-high); }
+.kka-pager__size { height: var(--pagination-item-size); padding: 0 var(--space-12); border-radius: var(--radius-xs); background: var(--white); color: var(--text-table-header); display: inline-flex; align-items: center; }
+
+/* Breadcrumb / PageHeader */
+.kka-crumbs { display: flex; flex-wrap: wrap; margin: 0; padding: 0; list-style: none; font-size: 14px; line-height: 16px; color: var(--text-high); }
+.kka-crumbs li + li::before { content: "/"; padding: 0 var(--space-8); }
+.kka-crumbs li:last-child { color: var(--neutral-600); }
+.kka-pagehead { margin-bottom: var(--space-32); }
+.kka-pagehead h1 { margin: 0 0 var(--space-8); font-size: 20px; line-height: 28px; font-weight: 600; color: var(--text-high); }
+
+/* SideNav */
+.kka-sidenav { width: var(--sidebar-width); min-height: 100%; background: var(--page-bg); padding: var(--space-32) var(--space-8) var(--space-16) var(--space-20);
+  color: var(--text-low); font-size: 14px; line-height: 16px; font-weight: 500; }
+.kka-sidenav__logo { display: flex; justify-content: center; padding-bottom: var(--space-24); }
+.kka-sidenav__logo-box { width: 134px; height: 44px; border-radius: var(--radius-xs); background: var(--brand-blue); }
+.kka-nav { display: flex; align-items: center; gap: var(--space-16); height: var(--nav-item-height); margin-bottom: var(--space-8);
+  padding: 0 var(--space-4) 0 var(--space-16); border-radius: var(--radius-md); color: var(--text-low); cursor: pointer; }
+.kka-nav--active { background: linear-gradient(270deg, var(--nav-active-light) 0%, var(--primary) 100%); color: var(--on-nav-active); }
+.kka-nav--open { background: var(--nav-open-bg); }
+.kka-nav--logout { color: var(--negative-600); }
+.kka-subnav { display: flex; align-items: center; gap: var(--space-8); margin: 0 var(--space-16) var(--space-8) var(--space-32); padding: var(--space-4) var(--space-8);
+  border-radius: var(--radius-md); font-size: 14px; color: var(--text-low); }
+.kka-subnav--active { background: linear-gradient(270deg, var(--nav-active-light) 0%, var(--primary) 100%); color: var(--on-nav-active); }
+
+/* AppShell */
+.kka-shell { display: flex; min-height: 100%; background: var(--page-bg); }
+.kka-shell__main { flex: 1; min-width: 0; padding: var(--space-32) var(--space-32) var(--space-32) var(--space-20); }
+
+/* Modal */
+.kka-modal-scrim { display: flex; align-items: center; justify-content: center; padding: var(--space-24); }
+.kka-modal { width: 100%; max-width: var(--modal-width); background: var(--surface); border-radius: var(--radius-lg); box-shadow: var(--shadow-popout);
+  padding: var(--space-24); display: flex; flex-direction: column; align-items: center; gap: var(--space-24); text-align: center; }
+.kka-modal__title { margin: 0; font-size: 20px; line-height: 28px; font-weight: 700; color: var(--text-high); }
+.kka-modal__msg { margin: 0; font-size: 16px; line-height: 24px; font-weight: 500; color: var(--text-middle); }
+.kka-modal__actions { display: flex; gap: var(--space-16); }
+.kka-modal__actions .kka-btn { min-width: var(--modal-button-width); width: var(--modal-button-width); padding: 0; }
+
+/* Toast */
+.kka-toast { display: flex; gap: var(--space-12); align-items: flex-start; width: 360px; padding: var(--space-12) var(--space-16);
+  background: var(--surface); border-radius: var(--radius-lg); box-shadow: var(--shadow-popout); color: var(--text-middle); font-size: 14px; line-height: 20.02px; }
+.kka-toast__title { margin: 0; font-weight: 500; color: var(--text-high); }
+
+/* Icon */
+.kka-icon { display: inline-block; flex: none; fill: currentColor; }

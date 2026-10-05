@@ -1,0 +1,31 @@
+@import "styles/_user-base.scss";
+
+.normal.active {
+  background-color: $text-highlight-color !important;
+}
+
+.normal.saturday.active {
+  background-color: $text-highlight-color !important;
+}
+
+.normal.sunday.active {
+  background-color: $text-highlight-color !important;
+}
+
+.normal.saturday {
+  background-color: #f3faff !important;
+}
+
+.normal.sunday {
+  background-color: #ffebeb !important;
+}
+
+.normal {
+  background-color: #fffaf5 !important;
+  border-color: $disable-bg !important;
+  border-radius: 8px !important;
+  box-shadow: none !important;
+  color: #4a4a4a;
+  font-size: 16px !important;
+  font-weight: 500 !important;
+}

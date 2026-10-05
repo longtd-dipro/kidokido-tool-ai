@@ -1,29 +1,7 @@
-# understand-anything build artifacts (large, not needed for sharing)
-knowledge/*/intermediate/
-knowledge/*/tmp/
-knowledge/*/.trash-*/
-
-# OS
+# Phien dang nhap Playwright — chua cookie/token, KHONG commit
+.auth/
+node_modules/
 .DS_Store
-
-# Memory files (personal, not team)
-memory/
-
-# MkDocs build output
-site/
-
-# Local credentials, never commit
-screen-flow/credentials.local.md
-
-# Screen-flow crawl output: may contain real-looking customer PII from test data
-screen-flow/admin/
-screen-flow/admin-*/
-screen-flow/user/
-screen-flow/user-*/
-screen-flow/*-poss-*/
-screen-flow/*-smageri-*/
-screen-flow/_explore-*
-
-# Screenshots copied into mkdocs from screen-flow — same PII caution as above,
-# view locally via `mkdocs serve` only, do not commit
-docs/screens/
+~$*
+credentials.local.md
+*.dump

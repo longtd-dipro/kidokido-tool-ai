@@ -1,0 +1,33 @@
+body{background:#F5F6FA;color:#222222;font-family:"Noto Sans JP",Arial,sans-serif;font-size:14px;margin:0}
+h1{font-size:24px;font-weight:700;color:#1A2B4C}
+h2{font-size:18px;font-weight:600;color:#1A2B4C}
+.btn{background:#0057B8;color:#FFFFFF;border-radius:6px;padding:8px 16px;font-size:14px;border:1px solid #0057B8;box-shadow:0 1px 2px rgba(0,0,0,.2)}
+.btn-sub{background:#FFFFFF;color:#0057B8}
+input,select{border:1px solid #CCCCCC;border-radius:4px;height:32px;padding:4px 8px;font-size:14px}
+a{color:#0057B8}
+.card{background:#FFFFFF;border:1px solid #E0E0E0;padding:16px}
+header{background:#1A2B4C;color:#FFFFFF;height:56px;display:flex;align-items:center;gap:12px;padding:0 24px}
+header img{height:32px}
+nav.side{background:#FFFFFF;border-right:1px solid #E0E0E0;padding:8px 0}
+nav.side a{display:block;color:#222222;padding:8px 16px;text-decoration:none}
+nav.side a.active{background:#E6EEF8;color:#0057B8;font-weight:600}
+.card{border-radius:8px;box-shadow:0 1px 3px rgba(0,0,0,.12)}
+.badge{display:inline-block;background:#E3F4E8;color:#1E6B34;border-radius:999px;padding:2px 8px;font-size:12px;font-weight:600}
+.badge-warn{background:#FFF1D6;color:#8A5300}
+th{background:#F0F2F5;color:#1A2B4C;font-weight:600;padding:8px 12px;text-align:left}
+td{border-bottom:1px solid #E0E0E0;padding:8px 12px}
+.btn svg{vertical-align:middle;margin-right:4px}
+.shell{display:flex;align-items:flex-start}
+nav.side{width:220px;min-height:600px;flex:none}
+main{flex:1;max-width:1200px;padding:24px}
+header{box-shadow:0 1px 2px rgba(0,0,0,.16)}
+.btn-danger{background:#CF222E;border-color:#CF222E}
+.alert{border-radius:4px;padding:8px 12px;margin:8px 0}
+.alert-info{background:#E6F0FB;color:#0B4A8B}
+.badge-err{background:#FFEBE9;color:#A40E26}
+.pagination{display:flex;gap:4px;margin-top:12px}
+.pg{display:inline-block;padding:4px 10px;border:1px solid #E0E0E0;border-radius:4px;color:#222222}
+.pg.active{background:#0057B8;color:#FFFFFF;border-color:#0057B8}
+.scrim{position:fixed;inset:0;background:rgba(0,0,0,.4)}
+.modal{position:fixed;top:120px;left:480px;width:480px;background:#FFFFFF;border-radius:12px;padding:24px;box-shadow:0 8px 24px rgba(0,0,0,.2)}
+.meta{font-size:12px;color:#6B7280}

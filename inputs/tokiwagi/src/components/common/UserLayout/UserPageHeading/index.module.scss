@@ -1,0 +1,20 @@
+@import "styles/_user-base.scss";
+
+.title {
+  position: relative;
+}
+
+.title::before {
+  content: "";
+  position: absolute;
+  bottom: -19px;
+  width: 98%;
+  height: 2px;
+  background-color: $blue-color;
+  border-radius: 10px;
+
+  @include media-xs() {
+    width: 100%;
+    bottom: 0;
+  }
+}

@@ -1,0 +1,38 @@
+.header-list {
+  background-color: #68b5ff;
+
+  li {
+    a {
+      color: #0068b7;
+
+      &:hover {
+        color: rgb(156 163 175);
+      }
+    }
+  }
+}
+
+.header-menu-list {
+  background-color: #f4faff;
+  li {
+    &:hover {
+      color: rgb(29 78 216);
+    }
+  }
+}
+
+.btn-signup {
+  background-color: #fff100;
+
+  &:hover {
+    background-color: rgb(254 240 138);
+  }
+}
+
+.btn-signin {
+  background-color: #0068b7;
+
+  &:hover {
+    background-color: rgb(43, 120, 207);
+  }
+}

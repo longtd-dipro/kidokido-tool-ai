@@ -1,0 +1,17 @@
+{
+  "project_name": "KidoKido",
+  "customer": "UNKNOWN — chưa khai ở P0 (tiêu đề trang quan sát được: 「ボーネルンドあそび場予約・購入サイト」)",
+  "product_overview": "KidoKido là hệ thống đặt chỗ và bán vé cho khu vui chơi theo cửa hàng (施設). Website người dùng (WEB-02) cho xem danh sách cửa hàng, tình trạng chờ/chỗ trống, bảng giá, mua vé dùng trong ngày, vé lượt (回数券) và vé tháng (フリーパス), quản lý lịch sử đặt chỗ và tài khoản. Website quản trị (WEB-01) cho Super Admin quản lý cửa hàng, sản phẩm vé, người dùng, nhân viên, tin tức, email tự động, GMO và cài đặt; cho admin cửa hàng vận hành đặt chỗ, hàng chờ, check-in/check-out bằng barcode và doanh thu. Thanh toán online qua GMO, đồng bộ giao dịch với POS Smaregi, gửi mail qua SES/SMTP, lưu file trên S3, đăng nhập LINE cho người dùng. Mục đích nghiệp vụ chi tiết từng màn chưa được khách hàng xác nhận — xem Phụ lục A.",
+  "actors": [
+    {"actor": "Khách (chưa đăng nhập)", "role": "anonymous", "main_usage": "Xem trang công khai: cửa hàng, giá, tình trạng chờ, điều khoản; đăng ký / đăng nhập"},
+    {"actor": "User", "role": "User", "main_usage": "Mua vé, xem lịch sử đặt chỗ, vé lượt / vé tháng, cửa hàng yêu thích, tài khoản"},
+    {"actor": "Super Admin", "role": "SuperAdmin", "main_usage": "Dashboard, quản lý cửa hàng, vé, người dùng, nhân viên, tin tức, email, GMO, cài đặt hệ thống"},
+    {"actor": "Admin cửa hàng (Tenant / POSS / Smaregi V1 / V2)", "role": "Admin", "main_usage": "Danh sách đặt chỗ, hàng chờ, điều chỉnh tồn, trạng thái chỗ trống, check-in, doanh thu, nhân viên, vé, người dùng của cửa hàng"},
+    {"actor": "Hệ thống", "role": "cron / webhook / POS API", "main_usage": "Cron đối soát Smaregi, nhắc hạn, migration; webhook Smaregi; callback GMO; API cho POS"}
+  ],
+  "system_composition": [
+    "REPO-01: 1 repo Next.js (pages router) chứa cả FE của 2 website và BE (API routes), Prisma ORM với PostgreSQL.",
+    "WEB-01 Admin (/admin) và WEB-02 User site (/) cùng một domain, môi trường dev, phía trước có HTTP Basic Auth của CloudFront.",
+    "Tích hợp ngoài: GMO Payment Gateway, POS Smaregi, AWS SES / Nodemailer, AWS S3, LINE Login."
+  ]
+}

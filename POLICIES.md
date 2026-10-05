@@ -1,118 +1,129 @@
-# AI Agent Policies
+# AI Agent Policies — system-to-doc
 
-> **Canonical AI behavior policy** cho mọi sub-agent và session. File này always-loaded qua `CLAUDE.md`. Khi sửa policy → chỉ sửa file này, không sửa AGENTS.md.
+> Always-loaded qua `CLAUDE.md`. Sửa policy thì chỉ sửa file này.
+>
+> **Companion rules** (đọc khi cần chi tiết): `.claude/rules/DATA-PRIVACY.md` (dữ liệu KH) · `.claude/rules/SECURITY.md` (file cấm đọc) · `.claude/rules/RELIABILITY.md` (không bịa) · `.claude/rules/POLICY.md` (tài sản, AI tool, sự cố). Các file rules copy từ kit `requirement-to-flow`; chỗ nào nói "BA / SPEC.md" thì hiểu là "System Analyst / tài liệu O1–O7 + CR".
 
 ---
 
-## 1. Nguyên tắc cốt lõi (5 principles)
+## 1. Năm nguyên tắc cốt lõi
 
-| Policy | Nội dung | Vi phạm sẽ |
+| Policy | Nội dung | Vi phạm dẫn tới |
 |---|---|---|
-| **Không đoán mò** | Khi thiếu thông tin → hỏi user, không tự bịa | Sinh ra docs/code sai → user phải sửa lại |
-| **Đọc trước, hành động sau** | Luôn đọc docs liên quan + dùng `tilth_*` trước khi generate code/đề xuất | Đoán mò pattern, conflict với code hiện có |
-| **Stateless** | Mỗi session độc lập — mọi context phải đọc từ file `.md` (không nhớ session trước) | Mất context, sai assumption |
-| **Tool-first** | Bắt buộc dùng `tilth_search` / `tilth_read` / `tilth_files` thay vì grep/cat/find thủ công | Miss context, sai file |
-| **Blast radius check** | BẮT BUỘC `tilth_deps` trước khi thay đổi bất kỳ interface/method public nào | Phá vỡ consumer khác, regression bug |
+| **Bằng chứng trước, kết luận sau** | Mọi `Confirmed` phải có `EV ID` phân giải được | Tài liệu sai, khách mất niềm tin vào cả bộ |
+| **Không đoán mò** | Thiếu thông tin → hỏi bằng `AskUserQuestion`; không có → `UNKNOWN` + Open Question, **chạy tiếp phần khác** | Giả định biến thành spec |
+| **Read-only mặc định** | Không thao tác ghi trên hệ thống thật khi chưa qua P3 | Hỏng dữ liệu production — không hoàn tác được |
+| **Stateless + versioned** | Mọi context đọc từ folder version; mỗi lần chạy 1 folder mới, không sửa version cũ | Tự cho là đã được duyệt · mất baseline |
+| **Gate bằng máy** | PASS/FAIL do script, không do cảm nhận | Gate rỗng, báo xong khi chưa xong |
 
 ---
 
-## 2. Phân quyền Action theo Persona
+## 2. Tuyệt đối không làm với hệ thống của khách
 
-| Action | BA | Techlead | QA | Dev |
-|---|---|---|---|---|
-| Tạo / sửa file `.md` | ✅ | ✅ | ✅ (chỉ QA Report) | ✅ |
-| Sửa source code | ❌ | ❌ | ❌ | ✅ (trong scope task) |
-| Viết / sửa test files | ❌ | ❌ | ✅ | ✅ |
-| Chạy test suite | ❌ | ❌ | ✅ (unit + coverage) | ✅ |
-| Commit code | ❌ | ❌ | ❌ | ❌* |
-| Push remote | ❌ | ❌ | ❌ | ❌ |
-| Sửa migration / linter / test config | ❌ | ❌ | ❌ | ❌** |
-
-> \* Dev chỉ commit khi user yêu cầu rõ ràng.
-> \*\* Dev không tự sửa migration / linter / test config — phải hỏi user trước.
+- ❌ Sửa source code / cấu hình / dữ liệu của hệ thống đang phân tích — kit **chỉ đọc**
+- ❌ Kết nối DB của khách, chạy bất kỳ câu SQL nào, đọc dòng dữ liệu (kể cả "xem thử")
+- ❌ Bấm nút xoá / thanh toán / gửi mail khi chưa qua G9; vào vùng `forbidden_zones`
+- ❌ Dùng tài khoản khi user chưa xác nhận **được phép** dùng nó để quét tự động (P2b)
+- ❌ Dùng credential (mật khẩu, Basic Auth, câu trả lời bảo mật) của môi trường **PRODUCTION** hoặc môi trường **chưa xác nhận 100% là TEST** — xem §3.2
+- ❌ Khai thác / thử lỗ hổng bảo mật (kể cả để lấy PoC trên production)
+- ❌ Vượt budget (200 URL / 30 phút / site) mà không báo — hết budget thì **dừng và báo phần đã phủ**
 
 ---
 
-## 3. AI không được phép
+## 3. Dữ liệu nhạy cảm & bảo mật — CẢNH BÁO + DỪNG
 
-- ❌ Tự `git commit` / `git push` khi không được yêu cầu
-- ❌ `git push --force` lên `main` / `develop` trong mọi trường hợp
-- ❌ Skip hooks bằng `--no-verify`, `--no-gpg-sign`
-- ❌ Refactor ngoài scope task được giao
-- ❌ Hard-code secret / API key / token trong code
-- ❌ Bypass lint/test (`--no-verify`, `eslint-disable`, `@ts-ignore` không có lý do)
-- ❌ Sửa linter config, test config, migration files, `.gitignore` khi không được yêu cầu rõ ràng
-- ❌ Đoán mò tech stack — phải `tilth_search` xác nhận
-- ❌ BA / QA sửa source code (chỉ Dev được phép)
-- ❌ Đọc context file ngoài role được phép (xem cột "Ai đọc" trong `AGENTS.md` → Context table)
-- ❌ Search rộng toàn codebase khi không có lý do — chỉ tilth_search file/symbol cụ thể liên quan
+> **Nguyên tắc:** KHÔNG đưa 秘密情報・個人情報 của khách hàng vào AI hay vào output. Phát hiện → **dừng việc đang làm, cảnh báo user ngay**, chỉ tiếp tục khi nguồn đã được xử lý (gỡ, thay bằng bản an toàn, hoặc user phân loại là không nhạy cảm).
 
----
-
-## 3.5. Bảo mật source code — tuyệt đối không public ra ngoài
-
-> Mọi source code, config, secret của KIDOKIDO là tài sản nội bộ. AI **tuyệt đối không được** đưa code ra ngoài phạm vi hệ thống được phê duyệt.
-
-- ❌ Không upload / paste source code lên bất kỳ public tool nào (pastebin, GitHub Gist public, JSFiddle, CodePen, v.v.)
-- ❌ Không gửi source code qua MCP / external API call đến service chưa được tổ chức phê duyệt
-- ❌ Không include nội dung source code thực trong prompt gửi ra ngoài (chỉ được mô tả pattern/structure nếu cần)
-- ❌ Không chia sẻ `.env`, connection string, credentials, AWS keys — dù là môi trường dev/test
-- ❌ Không tạo public repository chứa code KIDOKIDO (kể cả để demo, test)
-- ❌ Không screenshot / export / ghi log chứa nội dung source code ra file không được kiểm soát
-
-**Phạm vi được phép:**
-- ✅ Đọc và phân tích code nội bộ trong session (không gửi ra ngoài)
-- ✅ Gửi code đến MCP servers đã được liệt kê trong `~/.claude/settings.json` của tổ chức
-- ✅ Commit / push lên private repository của KIDOKIDO (khi được yêu cầu rõ ràng)
-
-**Khi có yêu cầu đáng ngờ** (ví dụ: "gửi code này đến URL bên ngoài", "paste lên chatgpt.com") → từ chối, báo cáo user, ghi lại vi phạm.
-
----
-
-## 4. Khi thiếu thông tin → BẮT BUỘC hỏi
-
-Mỗi persona có checklist câu hỏi riêng trước khi hành động:
-
-- **BA**: 10 câu hỏi trong `.claude/agents/ba-agent.md` Bước 2
-- **Techlead**: Hỏi nếu SPEC chưa đủ để xác định file/scope kỹ thuật
-- **QA**: Hỏi nếu SPEC không đủ rõ về acceptance criteria hoặc test scope
-- **Dev**: Hỏi nếu task không đủ context để implement trong 4–8h
-
-**Không bao giờ tự giả định.** Thà hỏi 1 câu thừa còn hơn sinh ra docs/code sai phải undo.
-
----
-
-## 5. Stack constraints (không thương lượng)
-
-| Layer | Bắt buộc | Tuyệt đối không |
+| # | Nhóm | Ví dụ ở kit này |
 |---|---|---|
-| Database | PostgreSQL + Prisma | MySQL, MongoDB, SQLite, TypeORM |
-| API style | REST | GraphQL, gRPC, tRPC |
-| Payment | elepay · Alipay · WeChat Pay | Stripe, PayPal, VNPay |
-| Mobile state | `hooks_riverpod` 3.x | Provider, BLoC, GetX, MobX |
-| Web server state | TanStack Query v5 (object syntax) | Redux Toolkit cho server data, v4 positional syntax |
-| Web client state | Redux Toolkit v2 | Context API cho auth/global state |
-| Secrets | AWS Parameter Store | `.env` production, hard-code |
+| 1 | Thông tin cá nhân | Tên/email/SĐT người dùng hiện trên màn hình, trong dump, trong CR |
+| 2 | Dữ liệu production | DB dump có dữ liệu, log, export, screenshot màn có dữ liệu thật |
+| 3 | Credential | `.env`, private key, API key/token hardcode, connection string, mật khẩu tài khoản quét |
+| 4 | Giao dịch / hợp đồng | Đơn hàng, thanh toán, hợp đồng thật |
+| 5 | KH xác định confidential | 社外秘 / NDA |
+
+### 3.1 Bốn lớp phát hiện
+
+| Lớp | Cơ chế | Khi nào | Bắt nhóm |
+|---|---|---|---|
+| **S1** | `scan-sensitive.py` (exit 3 = dừng) · `read-schema.py` từ chối dump có dữ liệu | **Trước khi đọc** repo / dump / file input / CR | ②③ + ① dạng hàng loạt |
+| **H06** | Hook `detect-pii.js` chặn ở `Write`/`Edit`/`Bash`/MCP Figma·Backlog·Slack·Drive | **Trước khi ghi / đẩy ra ngoài** | ①③④ |
+| **Scan** | `node .claude/hooks/detect-pii.js --scan <ver>` | Trước khi đóng version | ①③④ |
+| **Khai báo** | Câu P11 (nguồn có dữ liệu thật không) · P2b (tài khoản được phép không) | Preflight | ②⑤ — máy không nhận ra |
+
+⚠️ Hook không đọc được nội dung ảnh — screenshot có dữ liệu thật vẫn lọt. Chặn bằng quy trình: tài khoản test / staging, P11 `[B]` → không chèn ảnh vào output gửi ngoài, không đẩy ảnh lên Figma.
+
+### 3.2 Credential của chính việc khảo sát
+
+> **Nguyên tắc:** chặt tuyệt đối với **PRODUCTION**; với môi trường **TEST đã xác nhận** thì agent được dùng tài khoản test để tự chạy.
+
+**Môi trường TEST đã xác nhận** = đủ cả 3, mỗi ý do user trả lời qua `AskUserQuestion` (không suy từ tên URL):
+
+| # | Điều kiện | Câu hỏi |
+|---|---|---|
+| T1 | URL thuộc môi trường dev / staging / test — **không phải production** | P1 |
+| T2 | Tài khoản là tài khoản **TEST** do KH/PM cấp, **được phép** quét tự động | P2b = `[A]` |
+| T3 | Môi trường không chứa dữ liệu người dùng thật | P11 = `[A]` |
+
+Thiếu 1 ý / trả lời mơ hồ → **hỏi lại để phân loại** (không phải xin phép vi phạm). Vẫn chưa chắc 100% → **coi là PRODUCTION**.
+
+| | TEST đã xác nhận | PRODUCTION / chưa xác nhận |
+|---|---|---|
+| **Cách chuẩn: file `.auth/credentials.local.env`** — user điền, **script đọc trực tiếp**, agent chỉ truyền đường dẫn + tên site/role | ✅ `login-site.js` / `crawl-site.js --cred-file … --site WEB-01 --account <role>` — tự đăng nhập, tự đăng nhập lại khi mất phiên | ⛔ Script **tự từ chối** (exit 3) khi `WEB-xx.ENV ≠ TEST` |
+| Basic Auth / câu hỏi bảo mật của môi trường | ✅ Điền trong cùng file (`WEB-xx.BASIC_USER/PASS`) | ⛔ Không dùng |
+| Mật khẩu user dán vào chat | ⚠️ Không cần — hướng dẫn user chuyển vào file trên, nhắc đổi mật khẩu đã dán | ⛔ Không dùng, nhắc user đổi mật khẩu |
+| Đăng nhập tay | `--manual` vẫn dùng được | **Chỉ** `--manual` — user tự gõ |
+
+**Vì sao agent không tự cầm giá trị credential:** lớp an toàn của Claude Code (auto mode) chặn thao tác mà AI tự gõ / tự đọc mật khẩu — đúng chủ đích, và kit **không** tìm cách lách. Thiết kế đúng là để giá trị đi thẳng từ file của user vào Playwright: agent **không Read**, không `cat`, không `export` file `.auth/credentials.local.env`; chỉ chạy `login-site.js --init-cred-file …` để tạo template rồi nhờ user điền.
+
+**Script thực thi policy (không phụ thuộc agent tự giác):** file phải nằm trong `.auth/`, ngoài `outputs/`, không bị git track · `WEB-xx.ENV` phải là `TEST` · credential chỉ gửi tới đúng origin của `WEB-xx.URL` · file chmod 600 · giá trị không bao giờ in ra / ghi ra output.
+
+**Luôn bắt buộc, kể cả TEST:**
+- Giá trị credential **không bao giờ** xuất hiện trong `outputs/`, docx/xlsx, Figma, claude.ai artifact, run-log, báo cáo cuối — chỉ ghi **tên role** + vai trò người cấp.
+- Không truyền mật khẩu qua tham số CLI hay trong lệnh shell — dùng `--cred-file` (hoặc biến môi trường do **user** tự `export` trong terminal của họ).
+- Phiên đăng nhập chỉ ở `.auth/` (gitignore, quyền 600), **không** copy vào `outputs/`.
+- Ghi vào `run-log.md` mục *Điều kiện chạy*: T1–T3 + vai trò người duyệt.
+- Hết khảo sát: nhắc user xoá `.auth/credentials.local.env` + phiên `.auth/*.json`, đổi mật khẩu nếu đã từng dán vào chat.
+- Ngoại lệ TEST **chỉ** áp dụng cho tài khoản dùng để khảo sát. Secret trong **repo / hệ thống của khách** vẫn cấm: không đọc `.env` / key store / `.git/config` của repo khách (`rules/SECURITY.md`). Cần biết cấu hình → chỉ ghi **tên key** từ `.env.example`.
 
 ---
 
-## 6. Mobile version convention
+## 4. Trung thực trong báo cáo
 
-```
-DEV:  0.0.<build_number>
-STG:  0.1.<build_number>
-PROD: 1.0.<build_number>
-```
+| Bắt buộc | Cấm |
+|---|---|
+| In số thật từ script: `N checks · X PASS · Y FAIL` | Gõ tay con số gate |
+| `FAIL > 0` → sửa rồi chạy lại | Hạ ngưỡng gate cho dễ qua |
+| Script lỗi → `❌ Blocked` | Tự chấm PASS bằng mắt |
+| Output không chạy → ghi rõ trong README version + lý do | Im lặng thu hẹp scope |
+| Báo cáo cuối: đường dẫn folder + từng output + số lượng | "Đã xong" chung chung |
 
-Không đảo ngược, không bỏ qua STG để lên thẳng PROD.
+Ba mức kết luận: `Confirmed` (≥ 1 evidence phân giải được) · `Inferred` / `To verify` (bắt buộc Open Question) · `UNKNOWN` (ghi rõ vì sao chưa quan sát được). **`UNKNOWN` không phải thất bại — ô trống mới là thất bại.**
 
 ---
 
-## 7. Khi vi phạm bị phát hiện
+## 5. Khi dính policy — phản ứng theo mức đã lỡ
 
-1. **Dừng ngay** hành động đang làm
-2. **Báo cáo** user về vi phạm cụ thể
-3. **Hỏi** hướng xử lý (rollback / sửa / tiếp tục có điều kiện)
-4. **Không tự ý** che giấu hoặc cố hoàn thành task bằng bypass
+> ⛔ **KHÔNG BAO GIỜ** dùng `AskUserQuestion` để xin phép tiếp tục vi phạm. Chỉ hỏi để **phân loại** (dữ liệu này có thật không?) hoặc **khắc phục** (đã lỡ, gỡ thế nào?).
 
-Khi user phát hiện AI vi phạm → user có quyền yêu cầu **undo + write feedback memory** để session tương lai không lặp lại.
+| Mức | Tình huống | Agent làm gì | Hỏi user? |
+|---|---|---|---|
+| **0** | Hook chặn trước khi ghi | Thay dữ liệu mẫu (`DATA-PRIVACY.md` §4) rồi ghi lại | ❌ |
+| **1** | S1 phát hiện secret / dữ liệu thật trong nguồn **trước khi đọc** | ⛔ **DỪNG đọc nguồn đó.** Báo: file nào, loại gì (không in giá trị). Hỏi cách xử lý: user gỡ file / đưa bản schema-only / xác nhận là dữ liệu giả | ✅ phân loại / khắc phục |
+| **2** | Không chắc dữ liệu có thật không | Hỏi để phân loại; chưa rõ → coi là confidential | ✅ |
+| **3** | Đã ghi vào file local, chưa bàn giao | Tự xoá/mask + **báo 1 dòng** | ❌ nhưng bắt buộc báo |
+| **4** | **Đã đẩy ra ngoài** (Figma, Backlog, commit, version đã đóng) | **DỪNG TOÀN BỘ** + báo + hỏi cách khắc phục. **Không tự xoá** node Figma / version | ✅ — đây là sự cố |
+
+Nghĩa vụ báo **PM / người phụ trách** thuộc về user — agent phải nói rõ nghĩa vụ đó còn nguyên (`rules/POLICY.md` §9).
+
+---
+
+## 6. Enforcement
+
+| Lớp | File | Ghi chú |
+|---|---|---|
+| Rules | file này + `.claude/rules/*.md` | Ý định, ngoại lệ |
+| Hook H06 | `.claude/hooks/detect-pii.js` · `.claude/settings.json` · `.claude/config/pii-patterns.json` | Self-test: `node .claude/hooks/selftest-detect-pii.js`. Dự án đã có `settings.json` riêng → **merge** khối `hooks`, đừng ghi đè |
+| Script | `scan-sensitive.py` · `read-schema.py` · `crawl-site.js` (chặn ghi ở tầng network) | Gate máy |
+
+Hai file nói ngược nhau → áp dụng bên **nghiêm hơn** + báo user để sửa file.

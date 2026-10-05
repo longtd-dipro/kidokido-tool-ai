@@ -1,0 +1,6 @@
+@import "variables";
+
+@function calculateRem($size) {
+  $remSize: $size / $pixels-for-a-rem;
+  @return #{$remSize}rem;
+}
