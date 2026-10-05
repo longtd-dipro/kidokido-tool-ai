@@ -1,0 +1,1700 @@
+[
+ {
+  "api_id": "API-001",
+  "path": "/api/admin/app-settings/:settingKey",
+  "obs": "PUT không có validation, req.body được đưa thẳng vào prisma update (mass assignment mọi cột)",
+  "loc": "REPO-01:src/pages/api/admin/app-settings/[settingKey].ts#L15-L43"
+ },
+ {
+  "api_id": "API-001",
+  "path": "/api/admin/app-settings/:settingKey",
+  "obs": "PUT lấy settingKey từ body chứ không từ path param — path param bị bỏ qua",
+  "loc": "REPO-01:src/pages/api/admin/app-settings/[settingKey].ts#L15-L43"
+ },
+ {
+  "api_id": "API-001",
+  "path": "/api/admin/app-settings/:settingKey",
+  "obs": "GET: getAppSettingByKey truy cập .value của kết quả findUnique không kiểm null → settingKey không tồn tại sẽ gây lỗi 500 (REPO-01:src/utils/app-setting.ts#L4-L8)",
+  "loc": "REPO-01:src/pages/api/admin/app-settings/[settingKey].ts#L15-L43"
+ },
+ {
+  "api_id": "API-002",
+  "path": "/api/admin/app-settings",
+  "obs": "POST: req.body (có thể chứa field ngoài schema) được truyền thẳng vào prisma create",
+  "loc": "REPO-01:src/pages/api/admin/app-settings/index.ts#L23-L34"
+ },
+ {
+  "api_id": "API-003",
+  "path": "/api/admin/booking-queue/:id",
+  "obs": "Không kiểm tra booking thuộc tenant của Admin đang đăng nhập (chỉ tìm theo id)",
+  "loc": "REPO-01:src/pages/api/admin/booking-queue/[id].ts#L20-L76"
+ },
+ {
+  "api_id": "API-003",
+  "path": "/api/admin/booking-queue/:id",
+  "obs": "Không validate body.status; BookingStatus[newStatus] không hợp lệ → undefined",
+  "loc": "REPO-01:src/pages/api/admin/booking-queue/[id].ts#L20-L76"
+ },
+ {
+  "api_id": "API-003",
+  "path": "/api/admin/booking-queue/:id",
+  "obs": "Không kiểm tra booking tồn tại trước khi đọc currentBooking.status (null → lỗi 500)",
+  "loc": "REPO-01:src/pages/api/admin/booking-queue/[id].ts#L20-L76"
+ },
+ {
+  "api_id": "API-004",
+  "path": "/api/admin/booking-queue/calling",
+  "obs": "Response chứa name/email/phone của user",
+  "loc": "REPO-01:src/pages/api/admin/booking-queue/calling.ts#L19-L84"
+ },
+ {
+  "api_id": "API-005",
+  "path": "/api/admin/booking-queue",
+  "obs": "Không kiểm tra booking thuộc tenant của Admin",
+  "loc": "REPO-01:src/pages/api/admin/booking-queue/index.ts#L22-L39"
+ },
+ {
+  "api_id": "API-005",
+  "path": "/api/admin/booking-queue",
+  "obs": "Schema không bắt buộc field id",
+  "loc": "REPO-01:src/pages/api/admin/booking-queue/index.ts#L22-L39"
+ },
+ {
+  "api_id": "API-007",
+  "path": "/api/admin/booking-queue/waiting",
+  "obs": "Response chứa name/email/phone của user",
+  "loc": "REPO-01:src/pages/api/admin/booking-queue/waiting.ts#L25-L151"
+ },
+ {
+  "api_id": "API-009",
+  "path": "/api/admin/bookings/:id",
+  "obs": "Không lọc theo tenant — Admin có thể đọc booking của tenant khác theo id",
+  "loc": "REPO-01:src/pages/api/admin/bookings/[id].ts#L16-L39"
+ },
+ {
+  "api_id": "API-009",
+  "path": "/api/admin/bookings/:id",
+  "obs": "Include User: true trả về toàn bộ cột bảng users",
+  "loc": "REPO-01:src/pages/api/admin/bookings/[id].ts#L16-L39"
+ },
+ {
+  "api_id": "API-010",
+  "path": "/api/admin/bookings/:id/force-recompute-obic",
+  "obs": "Không kiểm tra booking thuộc tenant của Admin",
+  "loc": "REPO-01:src/pages/api/admin/bookings/[id]/force-recompute-obic.ts#L16-L22"
+ },
+ {
+  "api_id": "API-010",
+  "path": "/api/admin/bookings/:id/force-recompute-obic",
+  "obs": "Không xoá/đánh dấu revision cũ, chỉ createMany revision mới (REPO-01:src/utils/server/obicCodes.ts#L478-L485)",
+  "loc": "REPO-01:src/pages/api/admin/bookings/[id]/force-recompute-obic.ts#L16-L22"
+ },
+ {
+  "api_id": "API-011",
+  "path": "/api/admin/bookings/:id/status",
+  "obs": "Không validate body",
+  "loc": "REPO-01:src/pages/api/admin/bookings/[id]/status.ts#L19-L73"
+ },
+ {
+  "api_id": "API-011",
+  "path": "/api/admin/bookings/:id/status",
+  "obs": "Không kiểm tra booking thuộc tenant của user (Staff/Admin)",
+  "loc": "REPO-01:src/pages/api/admin/bookings/[id]/status.ts#L19-L73"
+ },
+ {
+  "api_id": "API-012",
+  "path": "/api/admin/bookings/blacklist",
+  "obs": "Endpoint dưới /api/admin nhưng không gắn checkAuth/roleAuth — truy cập công khai",
+  "loc": "REPO-01:src/pages/api/admin/bookings/blacklist.ts#L12-L29"
+ },
+ {
+  "api_id": "API-012",
+  "path": "/api/admin/bookings/blacklist",
+  "obs": "Trả về toàn bộ cột bảng users (PII) của booking mọi tenant",
+  "loc": "REPO-01:src/pages/api/admin/bookings/blacklist.ts#L12-L29"
+ },
+ {
+  "api_id": "API-013",
+  "path": "/api/admin/bookings/cancel/:id",
+  "obs": "Không kiểm tra booking thuộc tenant của Admin",
+  "loc": "REPO-01:src/pages/api/admin/bookings/cancel/[id].ts#L29-L133"
+ },
+ {
+  "api_id": "API-013",
+  "path": "/api/admin/bookings/cancel/:id",
+  "obs": "Không validate body; specificBookingBarCodeShouldCancelAll.includes() gọi không kiểm null khi huỷ vé tháng/vé lượt",
+  "loc": "REPO-01:src/pages/api/admin/bookings/cancel/[id].ts#L29-L133"
+ },
+ {
+  "api_id": "API-013",
+  "path": "/api/admin/bookings/cancel/:id",
+  "obs": "Không kiểm tra booking tồn tại trước khi dùng booking.ticketId",
+  "loc": "REPO-01:src/pages/api/admin/bookings/cancel/[id].ts#L29-L133"
+ },
+ {
+  "api_id": "API-013",
+  "path": "/api/admin/bookings/cancel/:id",
+  "obs": "Huỷ GMO thành công nhưng cập nhật DB không nằm trong transaction",
+  "loc": "REPO-01:src/pages/api/admin/bookings/cancel/[id].ts#L29-L133"
+ },
+ {
+  "api_id": "API-015",
+  "path": "/api/admin/bookings/decrease-quantity/:id",
+  "obs": "Không validate body: không chặn số lượng âm hoặc giảm quá số hiện có",
+  "loc": "REPO-01:src/pages/api/admin/bookings/decrease-quantity/[id].ts#L18-L71"
+ },
+ {
+  "api_id": "API-015",
+  "path": "/api/admin/bookings/decrease-quantity/:id",
+  "obs": "childAges.length gọi không kiểm undefined",
+  "loc": "REPO-01:src/pages/api/admin/bookings/decrease-quantity/[id].ts#L18-L71"
+ },
+ {
+  "api_id": "API-015",
+  "path": "/api/admin/bookings/decrease-quantity/:id",
+  "obs": "Không kiểm tra booking thuộc tenant của Admin",
+  "loc": "REPO-01:src/pages/api/admin/bookings/decrease-quantity/[id].ts#L18-L71"
+ },
+ {
+  "api_id": "API-015",
+  "path": "/api/admin/bookings/decrease-quantity/:id",
+  "obs": "Đổi tiền GMO xảy ra trước, cập nhật DB sau — không nhất quán nếu DB lỗi",
+  "loc": "REPO-01:src/pages/api/admin/bookings/decrease-quantity/[id].ts#L18-L71"
+ },
+ {
+  "api_id": "API-016",
+  "path": "/api/admin/bookings/export",
+  "obs": "Bộ cột CSV được chọn theo exportingRole do client gửi, không theo role thật trong token — Admin/Staff có thể lấy bộ cột SuperAdmin (gồm LINEユーザーID)",
+  "loc": "REPO-01:src/pages/api/admin/bookings/export.ts#L87-L173"
+ },
+ {
+  "api_id": "API-016",
+  "path": "/api/admin/bookings/export",
+  "obs": "ID ghi activity log (userOrStaffId) lấy từ query client gửi",
+  "loc": "REPO-01:src/pages/api/admin/bookings/export.ts#L87-L173"
+ },
+ {
+  "api_id": "API-016",
+  "path": "/api/admin/bookings/export",
+  "obs": "Không phân trang — xuất toàn bộ kết quả lọc",
+  "loc": "REPO-01:src/pages/api/admin/bookings/export.ts#L87-L173"
+ },
+ {
+  "api_id": "API-017",
+  "path": "/api/admin/bookings",
+  "obs": "ID ghi activity log (userOrStaffId) lấy từ query client gửi",
+  "loc": "REPO-01:src/pages/api/admin/bookings/index.ts#L23-L121"
+ },
+ {
+  "api_id": "API-017",
+  "path": "/api/admin/bookings",
+  "obs": "Include User: true trả toàn bộ cột users",
+  "loc": "REPO-01:src/pages/api/admin/bookings/index.ts#L23-L121"
+ },
+ {
+  "api_id": "API-018",
+  "path": "/api/admin/bookings/monthly-tickets/extra-info",
+  "obs": "Không kiểm tra booking thuộc tenant của Admin",
+  "loc": "REPO-01:src/pages/api/admin/bookings/monthly-tickets/extra-info.ts#L19-L61"
+ },
+ {
+  "api_id": "API-018",
+  "path": "/api/admin/bookings/monthly-tickets/extra-info",
+  "obs": "Truy vấn findMany trong vòng lặp (N+1)",
+  "loc": "REPO-01:src/pages/api/admin/bookings/monthly-tickets/extra-info.ts#L19-L61"
+ },
+ {
+  "api_id": "API-019",
+  "path": "/api/admin/bookings/rollback-scan",
+  "obs": "Lọc booking theo tenantCode của token; nếu tenantCode của user không có (vd. SuperAdmin) thì điều kiện tenant có thể bị bỏ qua — cần xác minh",
+  "loc": "REPO-01:src/pages/api/admin/bookings/rollback-scan.ts#L52-L432"
+ },
+ {
+  "api_id": "API-019",
+  "path": "/api/admin/bookings/rollback-scan",
+  "obs": "prisma.user.update trong rollbackCheckedOutBookings dùng client ngoài transaction tx",
+  "loc": "REPO-01:src/pages/api/admin/bookings/rollback-scan.ts#L52-L432"
+ },
+ {
+  "api_id": "API-019",
+  "path": "/api/admin/bookings/rollback-scan",
+  "obs": "Rollback Smaregi chạy fire-and-forget (void), lỗi không trả về client",
+  "loc": "REPO-01:src/pages/api/admin/bookings/rollback-scan.ts#L52-L432"
+ },
+ {
+  "api_id": "API-020",
+  "path": "/api/admin/bookings/scan",
+  "obs": "Lọc booking theo tenantCode của token; nếu tenantCode của user không có (vd. SuperAdmin) thì điều kiện tenant có thể bị bỏ qua — cần xác minh",
+  "loc": "REPO-01:src/pages/api/admin/bookings/scan.ts#L95-L864"
+ },
+ {
+  "api_id": "API-020",
+  "path": "/api/admin/bookings/scan",
+  "obs": "prisma.bookingObicCode.updateMany trong performCheckOut dùng client ngoài transaction tx (L689-L692)",
+  "loc": "REPO-01:src/pages/api/admin/bookings/scan.ts#L95-L864"
+ },
+ {
+  "api_id": "API-020",
+  "path": "/api/admin/bookings/scan",
+  "obs": "Không validate performedAt",
+  "loc": "REPO-01:src/pages/api/admin/bookings/scan.ts#L95-L864"
+ },
+ {
+  "api_id": "API-021",
+  "path": "/api/admin/bookings/status",
+  "obs": "Không validate body; không kiểm tra booking thuộc tenant của Admin; không kiểm tra booking tồn tại",
+  "loc": "REPO-01:src/pages/api/admin/bookings/status.ts#L28-L219"
+ },
+ {
+  "api_id": "API-021",
+  "path": "/api/admin/bookings/status",
+  "obs": "Hoàn tiền GMO trước, cập nhật DB sau, không trong transaction",
+  "loc": "REPO-01:src/pages/api/admin/bookings/status.ts#L28-L219"
+ },
+ {
+  "api_id": "API-022",
+  "path": "/api/admin/bookings/ticket-booking-schedules/:id",
+  "obs": "Không kiểm tra schedule thuộc tenant của Admin",
+  "loc": "REPO-01:src/pages/api/admin/bookings/ticket-booking-schedules/[id].ts#L23-L45"
+ },
+ {
+  "api_id": "API-023",
+  "path": "/api/admin/charts/average-booking-times",
+  "obs": "Không validate dateFrom/dateTo",
+  "loc": "REPO-01:src/pages/api/admin/charts/average-booking-times.ts#L17-L30"
+ },
+ {
+  "api_id": "API-023",
+  "path": "/api/admin/charts/average-booking-times",
+  "obs": "Không lọc tenant — role Admin nhận số liệu của mọi tenant",
+  "loc": "REPO-01:src/pages/api/admin/charts/average-booking-times.ts#L17-L30"
+ },
+ {
+  "api_id": "API-024",
+  "path": "/api/admin/charts/average-stay-duration",
+  "obs": "Không validate dateFrom/dateTo",
+  "loc": "REPO-01:src/pages/api/admin/charts/average-stay-duration.ts#L19-L71"
+ },
+ {
+  "api_id": "API-024",
+  "path": "/api/admin/charts/average-stay-duration",
+  "obs": "Không lọc tenant — role Admin nhận số liệu của mọi tenant",
+  "loc": "REPO-01:src/pages/api/admin/charts/average-stay-duration.ts#L19-L71"
+ },
+ {
+  "api_id": "API-025",
+  "path": "/api/admin/charts/total-bookings-with-ticket",
+  "obs": "Không validate dateFrom/dateTo",
+  "loc": "REPO-01:src/pages/api/admin/charts/total-bookings-with-ticket.ts#L17-L27"
+ },
+ {
+  "api_id": "API-025",
+  "path": "/api/admin/charts/total-bookings-with-ticket",
+  "obs": "tenantCode lấy từ query, không đối chiếu với tenant của Admin — Admin xem được số liệu tenant khác",
+  "loc": "REPO-01:src/pages/api/admin/charts/total-bookings-with-ticket.ts#L17-L27"
+ },
+ {
+  "api_id": "API-026",
+  "path": "/api/admin/charts/total-bookings-with-times",
+  "obs": "Không validate dateFrom/dateTo",
+  "loc": "REPO-01:src/pages/api/admin/charts/total-bookings-with-times.ts#L18-L33"
+ },
+ {
+  "api_id": "API-026",
+  "path": "/api/admin/charts/total-bookings-with-times",
+  "obs": "tenantCode lấy từ query, không đối chiếu với tenant của Admin — Admin xem được số liệu tenant khác",
+  "loc": "REPO-01:src/pages/api/admin/charts/total-bookings-with-times.ts#L18-L33"
+ },
+ {
+  "api_id": "API-027",
+  "path": "/api/admin/charts/total-new-and-old-booking-users",
+  "obs": "Không validate dateFrom/dateTo",
+  "loc": "REPO-01:src/pages/api/admin/charts/total-new-and-old-booking-users.ts#L18-L61"
+ },
+ {
+  "api_id": "API-027",
+  "path": "/api/admin/charts/total-new-and-old-booking-users",
+  "obs": "tenantCode lấy từ query, không đối chiếu với tenant của Admin — Admin xem được số liệu tenant khác",
+  "loc": "REPO-01:src/pages/api/admin/charts/total-new-and-old-booking-users.ts#L18-L61"
+ },
+ {
+  "api_id": "API-028",
+  "path": "/api/admin/credit-cards/search/:userId",
+  "obs": "Không kiểm tra user thuộc tenant của Admin — có thể tra thẻ của user bất kỳ",
+  "loc": "REPO-01:src/pages/api/admin/credit-cards/search/[userId].ts#L17-L24"
+ },
+ {
+  "api_id": "API-029",
+  "path": "/api/admin/disclaimers",
+  "obs": "POST thay thế toàn bộ (deleteMany không điều kiện) — options được create nguyên payload, field ngoài schema cũng được truyền vào",
+  "loc": "REPO-01:src/pages/api/admin/disclaimers.ts#L23-L44"
+ },
+ {
+  "api_id": "API-030",
+  "path": "/api/admin/email-settings/:emailKey",
+  "obs": "PUT dùng req.body.emailKey làm where thay vì emailKey trên path",
+  "loc": "REPO-01:src/pages/api/admin/email-settings/[emailKey].ts#L19-L51"
+ },
+ {
+  "api_id": "API-030",
+  "path": "/api/admin/email-settings/:emailKey",
+  "obs": "PUT truyền nguyên req.body vào prisma update (không whitelist field)",
+  "loc": "REPO-01:src/pages/api/admin/email-settings/[emailKey].ts#L19-L51"
+ },
+ {
+  "api_id": "API-030",
+  "path": "/api/admin/email-settings/:emailKey",
+  "obs": "DELETE xoá cứng mẫu email, không kiểm tra mẫu có đang được hệ thống dùng hay không",
+  "loc": "REPO-01:src/pages/api/admin/email-settings/[emailKey].ts#L19-L51"
+ },
+ {
+  "api_id": "API-031",
+  "path": "/api/admin/email-settings",
+  "obs": "POST truyền nguyên req.body vào prisma create (không whitelist field)",
+  "loc": "REPO-01:src/pages/api/admin/email-settings/index.ts#L19-L31"
+ },
+ {
+  "api_id": "API-032",
+  "path": "/api/admin/email-settings/preview",
+  "obs": "Nội dung template do client gửi được render bằng ejs.render phía server (src/utils/email.ts#L13-L18) — template EJS có thể thực thi biểu thức JS phía server; hiện chỉ giới hạn cho SuperAdmin",
+  "loc": "REPO-01:src/pages/api/admin/email-settings/preview.ts#L21-L32"
+ },
+ {
+  "api_id": "API-033",
+  "path": "/api/admin/email-settings/send-preview-email",
+  "obs": "EmailService.sendEmailWithPredefinedContent không được await → lỗi gửi mail không phản hồi về client, luôn trả 200",
+  "loc": "REPO-01:src/pages/api/admin/email-settings/send-preview-email.ts#L22-L38"
+ },
+ {
+  "api_id": "API-033",
+  "path": "/api/admin/email-settings/send-preview-email",
+  "obs": "Template do client gửi được render bằng ejs phía server (src/services/email.service.ts#L100-L108 → src/utils/email.ts#L13-L18)",
+  "loc": "REPO-01:src/pages/api/admin/email-settings/send-preview-email.ts#L22-L38"
+ },
+ {
+  "api_id": "API-033",
+  "path": "/api/admin/email-settings/send-preview-email",
+  "obs": "Transport: AWS SES nếu serverConfig.email.enable_aws_ses, ngược lại SMTP nodemailer (src/services/email.service.ts#L24-L38)",
+  "loc": "REPO-01:src/pages/api/admin/email-settings/send-preview-email.ts#L22-L38"
+ },
+ {
+  "api_id": "API-034",
+  "path": "/api/admin/gmo-settings/:id",
+  "obs": "Response GET/PUT/DELETE trả nguyên bản ghi gmo_settings, bao gồm trường shopPass (mật khẩu shop GMO) về client",
+  "loc": "REPO-01:src/pages/api/admin/gmo-settings/[id].ts#L22-L86"
+ },
+ {
+  "api_id": "API-034",
+  "path": "/api/admin/gmo-settings/:id",
+  "obs": "PUT dùng id trong body thay vì id trên path; truyền nguyên req.body vào prisma update",
+  "loc": "REPO-01:src/pages/api/admin/gmo-settings/[id].ts#L22-L86"
+ },
+ {
+  "api_id": "API-034",
+  "path": "/api/admin/gmo-settings/:id",
+  "obs": "PUT không kiểm tra bản ghi tồn tại trước khi đọc currentGMOSetting.shopId → id sai gây lỗi 500",
+  "loc": "REPO-01:src/pages/api/admin/gmo-settings/[id].ts#L22-L86"
+ },
+ {
+  "api_id": "API-035",
+  "path": "/api/admin/gmo-settings",
+  "obs": "GET trả danh sách kèm trường shopPass của tất cả tài khoản GMO",
+  "loc": "REPO-01:src/pages/api/admin/gmo-settings/index.ts#L21-L37"
+ },
+ {
+  "api_id": "API-035",
+  "path": "/api/admin/gmo-settings",
+  "obs": "POST truyền nguyên req.body vào prisma create",
+  "loc": "REPO-01:src/pages/api/admin/gmo-settings/index.ts#L21-L37"
+ },
+ {
+  "api_id": "API-036",
+  "path": "/api/admin/news/:id",
+  "obs": "PUT dùng id trong body thay vì id trên path; truyền nguyên req.body vào prisma update",
+  "loc": "REPO-01:src/pages/api/admin/news/[id].ts#L19-L51"
+ },
+ {
+  "api_id": "API-037",
+  "path": "/api/admin/news",
+  "obs": "POST truyền nguyên req.body vào prisma create",
+  "loc": "REPO-01:src/pages/api/admin/news/index.ts#L19-L31"
+ },
+ {
+  "api_id": "API-037",
+  "path": "/api/admin/news",
+  "obs": "GET findMany không phân trang",
+  "loc": "REPO-01:src/pages/api/admin/news/index.ts#L19-L31"
+ },
+ {
+  "api_id": "API-038",
+  "path": "/api/admin/obic-codes",
+  "obs": "tenantCode lấy từ form, không đối chiếu với req.user.tenantCode → Admin/Staff của tenant này có thể cập nhật vé của tenant khác",
+  "loc": "REPO-01:src/pages/api/admin/obic-codes/index.ts#L141-L186"
+ },
+ {
+  "api_id": "API-038",
+  "path": "/api/admin/obic-codes",
+  "obs": "Role Staff cũng được phép import hàng loạt mã OBIC",
+  "loc": "REPO-01:src/pages/api/admin/obic-codes/index.ts#L141-L186"
+ },
+ {
+  "api_id": "API-038",
+  "path": "/api/admin/obic-codes",
+  "obs": "Khớp vé bằng name contains (insensitive) + findFirst → tên ngắn có thể khớp nhầm vé khác",
+  "loc": "REPO-01:src/pages/api/admin/obic-codes/index.ts#L141-L186"
+ },
+ {
+  "api_id": "API-038",
+  "path": "/api/admin/obic-codes",
+  "obs": "Không kiểm tra định dạng/kích thước file; parser CSV tự viết (không xử lý dấu ngoặc kép escape)",
+  "loc": "REPO-01:src/pages/api/admin/obic-codes/index.ts#L141-L186"
+ },
+ {
+  "api_id": "API-038",
+  "path": "/api/admin/obic-codes",
+  "obs": "Edge middleware (src/middleware.ts#L106-L111) chỉ loại trừ /api/upload khỏi matcher; comment tại đó nói middleware làm hỏng multipart body — endpoint multipart này vẫn đi qua middleware (cần xác minh có ảnh hưởng không)",
+  "loc": "REPO-01:src/pages/api/admin/obic-codes/index.ts#L141-L186"
+ },
+ {
+  "api_id": "API-039",
+  "path": "/api/admin/revenue-management/count",
+  "obs": "Raw SQL dựng bằng nối chuỗi trong Prisma.sql([string]) — tenantCode từ query được chèn trực tiếp vào câu SQL (không bind parameter) → rủi ro SQL injection",
+  "loc": "REPO-01:src/pages/api/admin/revenue-management/count.ts#L21-L81"
+ },
+ {
+  "api_id": "API-039",
+  "path": "/api/admin/revenue-management/count",
+  "obs": "Kiểm tra tenant chỉ khi cả req.user.tenantCode và query tenantCode cùng có; Admin bỏ trống tenantCode sẽ đếm toàn bộ tenant",
+  "loc": "REPO-01:src/pages/api/admin/revenue-management/count.ts#L21-L81"
+ },
+ {
+  "api_id": "API-040",
+  "path": "/api/admin/revenue-management/export",
+  "obs": "Raw SQL trong getRevenueBookings nối chuỗi tenantCode từ query trực tiếp (src/utils/server/revenue-management.ts#L60-L73) → rủi ro SQL injection",
+  "loc": "REPO-01:src/pages/api/admin/revenue-management/export.ts#L130-L319"
+ },
+ {
+  "api_id": "API-040",
+  "path": "/api/admin/revenue-management/export",
+  "obs": "Kiểm tra tenant chỉ khi query có tenantCode; Admin bỏ trống tenantCode sẽ xuất doanh thu mọi tenant",
+  "loc": "REPO-01:src/pages/api/admin/revenue-management/export.ts#L130-L319"
+ },
+ {
+  "api_id": "API-040",
+  "path": "/api/admin/revenue-management/export",
+  "obs": "exportingRole do client quyết định bộ cột (ADMIN gồm tên khách, GMOTransactionId, LINE user ID) — server không đối chiếu với role thật",
+  "loc": "REPO-01:src/pages/api/admin/revenue-management/export.ts#L130-L319"
+ },
+ {
+  "api_id": "API-040",
+  "path": "/api/admin/revenue-management/export",
+  "obs": "Không có page → skip = NaN → mệnh đề 'LIMIT ... OFFSET NaN' trong raw SQL (cần xác minh có lỗi không)",
+  "loc": "REPO-01:src/pages/api/admin/revenue-management/export.ts#L130-L319"
+ },
+ {
+  "api_id": "API-040",
+  "path": "/api/admin/revenue-management/export",
+  "obs": "Trong map dữ liệu, nhánh vé không Online có posTotalAmount 'return' chuỗi tiền thay vì object dòng (L229-L231) → dòng CSV đó bị sai",
+  "loc": "REPO-01:src/pages/api/admin/revenue-management/export.ts#L130-L319"
+ },
+ {
+  "api_id": "API-040",
+  "path": "/api/admin/revenue-management/export",
+  "obs": "userOrStaffId lấy từ query để ghi log hoạt động → người gọi tự khai danh tính trong log",
+  "loc": "REPO-01:src/pages/api/admin/revenue-management/export.ts#L130-L319"
+ },
+ {
+  "api_id": "API-041",
+  "path": "/api/admin/revenue-management",
+  "obs": "Raw SQL trong getRevenueBookings nối chuỗi tenantCode từ query trực tiếp (src/utils/server/revenue-management.ts#L60-L73) → rủi ro SQL injection",
+  "loc": "REPO-01:src/pages/api/admin/revenue-management/index.ts#L19-L48"
+ },
+ {
+  "api_id": "API-041",
+  "path": "/api/admin/revenue-management",
+  "obs": "Kiểm tra tenant chỉ khi query có tenantCode; Admin bỏ trống tenantCode sẽ xem doanh thu mọi tenant",
+  "loc": "REPO-01:src/pages/api/admin/revenue-management/index.ts#L19-L48"
+ },
+ {
+  "api_id": "API-041",
+  "path": "/api/admin/revenue-management",
+  "obs": "Response include User: true (src/utils/server/revenue-management.ts#L88-L96) → trả nguyên bản ghi users, gồm cả cột password (hash) và thông tin cá nhân",
+  "loc": "REPO-01:src/pages/api/admin/revenue-management/index.ts#L19-L48"
+ },
+ {
+  "api_id": "API-042",
+  "path": "/api/admin/staffs/:id",
+  "obs": "Không kiểm tra staff thuộc tenant của Admin đang đăng nhập → Admin có thể xem/sửa/xoá staff của tenant khác",
+  "loc": "REPO-01:src/pages/api/admin/staffs/[id].ts#L22-L79"
+ },
+ {
+  "api_id": "API-042",
+  "path": "/api/admin/staffs/:id",
+  "obs": "Response GET/PUT/DELETE trả nguyên bản ghi staffs gồm cột password (hash); logic PUT so sánh password với hash → client đang giữ và gửi lại hash",
+  "loc": "REPO-01:src/pages/api/admin/staffs/[id].ts#L22-L79"
+ },
+ {
+  "api_id": "API-042",
+  "path": "/api/admin/staffs/:id",
+  "obs": "PUT spread nguyên req.body vào update → role và tenantCode đổi được tuỳ ý",
+  "loc": "REPO-01:src/pages/api/admin/staffs/[id].ts#L22-L79"
+ },
+ {
+  "api_id": "API-043",
+  "path": "/api/admin/staffs/count",
+  "obs": "Lọc tenantCode bằng contains thay vì equals → Admin có thể đếm cả staff của tenant có mã chứa mã tenant mình",
+  "loc": "REPO-01:src/pages/api/admin/staffs/count.ts#L16-L41"
+ },
+ {
+  "api_id": "API-044",
+  "path": "/api/admin/staffs",
+  "obs": "POST không đối chiếu body.tenantCode với tenant của Admin → Admin tạo được staff cho tenant khác; role lấy từ body không giới hạn giá trị",
+  "loc": "REPO-01:src/pages/api/admin/staffs/index.ts#L22-L85"
+ },
+ {
+  "api_id": "API-044",
+  "path": "/api/admin/staffs",
+  "obs": "Response GET/POST trả cột password (hash) của staff",
+  "loc": "REPO-01:src/pages/api/admin/staffs/index.ts#L22-L85"
+ },
+ {
+  "api_id": "API-044",
+  "path": "/api/admin/staffs",
+  "obs": "Lọc tenantCode bằng contains thay vì equals",
+  "loc": "REPO-01:src/pages/api/admin/staffs/index.ts#L22-L85"
+ },
+ {
+  "api_id": "API-045",
+  "path": "/api/admin/tenants/:code",
+  "obs": "NGHIÊM TRỌNG: handler không dùng checkAuth/roleAuth (L21) — GET/PUT/DELETE/PATCH tenant không yêu cầu session; chỉ phụ thuộc Basic Auth edge (tắt nếu thiếu env)",
+  "loc": "REPO-01:src/pages/api/admin/tenants/[code].ts#L21-L139"
+ },
+ {
+  "api_id": "API-045",
+  "path": "/api/admin/tenants/:code",
+  "obs": "GET trả AdminTenant.User (gồm cột password hash) và GMOSetting (gồm shopPass)",
+  "loc": "REPO-01:src/pages/api/admin/tenants/[code].ts#L21-L139"
+ },
+ {
+  "api_id": "API-045",
+  "path": "/api/admin/tenants/:code",
+  "obs": "DELETE xoá cứng tenant (không soft delete) và không kiểm tra booking",
+  "loc": "REPO-01:src/pages/api/admin/tenants/[code].ts#L21-L139"
+ },
+ {
+  "api_id": "API-045",
+  "path": "/api/admin/tenants/:code",
+  "obs": "PUT dùng code trong body làm where thay vì code trên path; spread req.body vào update",
+  "loc": "REPO-01:src/pages/api/admin/tenants/[code].ts#L21-L139"
+ },
+ {
+  "api_id": "API-046",
+  "path": "/api/admin/tenants/count",
+  "obs": "Role Admin (tenant) cũng đếm được toàn bộ tenant",
+  "loc": "REPO-01:src/pages/api/admin/tenants/count.ts#L16-L35"
+ },
+ {
+  "api_id": "API-047",
+  "path": "/api/admin/tenants",
+  "obs": "Role Admin (tenant) cũng được list toàn bộ tenant và tạo tenant mới",
+  "loc": "REPO-01:src/pages/api/admin/tenants/index.ts#L23-L101"
+ },
+ {
+  "api_id": "API-047",
+  "path": "/api/admin/tenants",
+  "obs": "Response GET/POST include AdminTenant.User → trả cột password (hash) của admin user",
+  "loc": "REPO-01:src/pages/api/admin/tenants/index.ts#L23-L101"
+ },
+ {
+  "api_id": "API-047",
+  "path": "/api/admin/tenants",
+  "obs": "GET không lọc tenant đã xoá (deleted)",
+  "loc": "REPO-01:src/pages/api/admin/tenants/index.ts#L23-L101"
+ },
+ {
+  "api_id": "API-047",
+  "path": "/api/admin/tenants",
+  "obs": "checkExistingTenantCode lọc deleted: { not: null } (src/utils/server/tenant.ts#L3-L12) — cần xác minh ý đồ",
+  "loc": "REPO-01:src/pages/api/admin/tenants/index.ts#L23-L101"
+ },
+ {
+  "api_id": "API-048",
+  "path": "/api/admin/ticket-booking-schedules/has-booking",
+  "obs": "Không truyền ticketBookingScheduleId → where { ticketBookingScheduleId: undefined } (Prisma bỏ qua điều kiện) → trả true nếu hệ thống có bất kỳ booking nào",
+  "loc": "REPO-01:src/pages/api/admin/ticket-booking-schedules/has-booking.ts#L16-L24"
+ },
+ {
+  "api_id": "API-049",
+  "path": "/api/admin/ticket-booking-schedules",
+  "obs": "Không kiểm tra vé thuộc tenant của Admin đang đăng nhập",
+  "loc": "REPO-01:src/pages/api/admin/ticket-booking-schedules/index.ts#L27-L110"
+ },
+ {
+  "api_id": "API-049",
+  "path": "/api/admin/ticket-booking-schedules",
+  "obs": "PUT không bọc transaction: soft delete/upsert từng khung riêng lẻ → có thể dừng giữa chừng khi trả 400",
+  "loc": "REPO-01:src/pages/api/admin/ticket-booking-schedules/index.ts#L27-L110"
+ },
+ {
+  "api_id": "API-049",
+  "path": "/api/admin/ticket-booking-schedules",
+  "obs": "PUT với mảng rỗng → payloads[0].ticketId lỗi 500",
+  "loc": "REPO-01:src/pages/api/admin/ticket-booking-schedules/index.ts#L27-L110"
+ },
+ {
+  "api_id": "API-050",
+  "path": "/api/admin/tickets/:id",
+  "obs": "Không kiểm tra vé thuộc tenant của Admin đang đăng nhập (GET/PUT/PATCH)",
+  "loc": "REPO-01:src/pages/api/admin/tickets/[id].ts#L31-L244"
+ },
+ {
+  "api_id": "API-050",
+  "path": "/api/admin/tickets/:id",
+  "obs": "Lỗi nghiệp vụ 'vé con đã có booking' được throw → trả 500 thay vì 400",
+  "loc": "REPO-01:src/pages/api/admin/tickets/[id].ts#L31-L244"
+ },
+ {
+  "api_id": "API-050",
+  "path": "/api/admin/tickets/:id",
+  "obs": "DELETE vé không tồn tại → deleteTicket undefined → truy cập .id gây 500 (L210)",
+  "loc": "REPO-01:src/pages/api/admin/tickets/[id].ts#L31-L244"
+ },
+ {
+  "api_id": "API-050",
+  "path": "/api/admin/tickets/:id",
+  "obs": "PATCH không validate videoUrl; PUT spread payload body vào update",
+  "loc": "REPO-01:src/pages/api/admin/tickets/[id].ts#L31-L244"
+ },
+ {
+  "api_id": "API-050",
+  "path": "/api/admin/tickets/:id",
+  "obs": "Gửi mail thông báo SuperAdmin không await (L157)",
+  "loc": "REPO-01:src/pages/api/admin/tickets/[id].ts#L31-L244"
+ },
+ {
+  "api_id": "API-051",
+  "path": "/api/admin/tickets/:id/backfill-obic-codes",
+  "obs": "backfillObicCodesForTicket không có lệnh return sau vòng lặp (src/utils/server/obicCodes.ts#L215-L228) → rowsUpdated trả về undefined",
+  "loc": "REPO-01:src/pages/api/admin/tickets/[id]/backfill-obic-codes.ts#L18-L42"
+ },
+ {
+  "api_id": "API-051",
+  "path": "/api/admin/tickets/:id/backfill-obic-codes",
+  "obs": "Không kiểm tra vé thuộc tenant của Admin đang đăng nhập",
+  "loc": "REPO-01:src/pages/api/admin/tickets/[id]/backfill-obic-codes.ts#L18-L42"
+ },
+ {
+  "api_id": "API-051",
+  "path": "/api/admin/tickets/:id/backfill-obic-codes",
+  "obs": "Nhánh TD_adultObicCode1stBooking cập nhật obic_code từ td.adult_obic_code (src/utils/server/obicCodes.ts#L250-L260), giống nhánh TD_adultObicCode — cần xác minh có đúng cột mã lần đầu không",
+  "loc": "REPO-01:src/pages/api/admin/tickets/[id]/backfill-obic-codes.ts#L18-L42"
+ },
+ {
+  "api_id": "API-052",
+  "path": "/api/admin/tickets/count",
+  "obs": "tenantCode từ query ghi đè tenant của Admin (tenantCode || admin.tenantCode) → Admin đếm được vé tenant khác; lọc bằng contains",
+  "loc": "REPO-01:src/pages/api/admin/tickets/count.ts#L18-L36"
+ },
+ {
+  "api_id": "API-053",
+  "path": "/api/admin/tickets/has-booking",
+  "obs": "Không truyền ticketId → hasBooking(undefined) → where { ticketId: undefined } bị Prisma bỏ qua → true nếu có bất kỳ booking nào (src/utils/server/ticket.ts#L29-L35)",
+  "loc": "REPO-01:src/pages/api/admin/tickets/has-booking.ts#L16-L22"
+ },
+ {
+  "api_id": "API-054",
+  "path": "/api/admin/tickets",
+  "obs": "GET: tenantCode từ query ghi đè tenant của Admin → Admin xem được vé tenant khác; lọc contains",
+  "loc": "REPO-01:src/pages/api/admin/tickets/index.ts#L26-L100"
+ },
+ {
+  "api_id": "API-054",
+  "path": "/api/admin/tickets",
+  "obs": "POST: không đối chiếu body.tenantCode với tenant của Admin",
+  "loc": "REPO-01:src/pages/api/admin/tickets/index.ts#L26-L100"
+ },
+ {
+  "api_id": "API-054",
+  "path": "/api/admin/tickets",
+  "obs": "POST: tạo vé master và vé con không nằm trong transaction",
+  "loc": "REPO-01:src/pages/api/admin/tickets/index.ts#L26-L100"
+ },
+ {
+  "api_id": "API-055",
+  "path": "/api/admin/tickets/obic-codes/export",
+  "obs": "tenantCode không đối chiếu với tenant của Admin; bỏ trống → xuất mọi tenant",
+  "loc": "REPO-01:src/pages/api/admin/tickets/obic-codes/export.ts#L26-L80"
+ },
+ {
+  "api_id": "API-056",
+  "path": "/api/admin/users/:id",
+  "obs": "Không giới hạn role/tenant của user đích → Admin tenant có thể xem/sửa/xoá bất kỳ user nào theo id (kể cả tài khoản Admin/SuperAdmin)",
+  "loc": "REPO-01:src/pages/api/admin/users/[id].ts#L20-L83"
+ },
+ {
+  "api_id": "API-056",
+  "path": "/api/admin/users/:id",
+  "obs": "GET/PUT trả nguyên bản ghi users gồm cột password (hash); logic PUT so sánh password với hash → client giữ và gửi lại hash",
+  "loc": "REPO-01:src/pages/api/admin/users/[id].ts#L20-L83"
+ },
+ {
+  "api_id": "API-056",
+  "path": "/api/admin/users/:id",
+  "obs": "PUT spread nguyên req.body vào update (yup validate không strip field lạ) → có thể ghi các cột ngoài schema",
+  "loc": "REPO-01:src/pages/api/admin/users/[id].ts#L20-L83"
+ },
+ {
+  "api_id": "API-056",
+  "path": "/api/admin/users/:id",
+  "obs": "PUT không gửi password → password !== hash → hashPassword(undefined) (cần xác minh hành vi)",
+  "loc": "REPO-01:src/pages/api/admin/users/[id].ts#L20-L83"
+ },
+ {
+  "api_id": "API-057",
+  "path": "/api/admin/users/count",
+  "obs": "count lọc deleted=false và endDate dùng utc(true) không endOf('day'), trong khi list (/api/admin/users) không lọc deleted và dùng endOf('day') → số đếm có thể lệch với danh sách",
+  "loc": "REPO-01:src/pages/api/admin/users/count.ts#L18-L52"
+ },
+ {
+  "api_id": "API-058",
+  "path": "/api/admin/users",
+  "obs": "GET/POST trả nguyên bản ghi users gồm cột password (hash) và token",
+  "loc": "REPO-01:src/pages/api/admin/users/index.ts#L32-L145"
+ },
+ {
+  "api_id": "API-058",
+  "path": "/api/admin/users",
+  "obs": "GET không lọc user đã xoá (deleted) trong khi /users/count có lọc → lệch số liệu",
+  "loc": "REPO-01:src/pages/api/admin/users/index.ts#L32-L145"
+ },
+ {
+  "api_id": "API-058",
+  "path": "/api/admin/users",
+  "obs": "POST spread nguyên req.body vào create (yup không strip field lạ) → có thể ghi cột ngoài schema",
+  "loc": "REPO-01:src/pages/api/admin/users/index.ts#L32-L145"
+ },
+ {
+  "api_id": "API-058",
+  "path": "/api/admin/users",
+  "obs": "sendSuccessfulRegisterUserEmail không await (src/utils/email.ts#L38-L40)",
+  "loc": "REPO-01:src/pages/api/admin/users/index.ts#L32-L145"
+ },
+ {
+  "api_id": "API-058",
+  "path": "/api/admin/users",
+  "obs": "Raw query $queryRawUnsafe dùng placeholder $n cho userId (bind parameter) — không nối chuỗi giá trị",
+  "loc": "REPO-01:src/pages/api/admin/users/index.ts#L32-L145"
+ },
+ {
+  "api_id": "API-059",
+  "path": "/api/app-settings/:settingKey",
+  "obs": "Không kiểm tra auth: mọi khoá trong app_settings đều đọc được công khai theo settingKey (không có whitelist khoá).",
+  "loc": "REPO-01:src/pages/api/app-settings/[settingKey].ts#L11-L19"
+ },
+ {
+  "api_id": "API-060",
+  "path": "/api/app-settings/ip-whitelist",
+  "obs": "Không kiểm tra auth: danh sách IP/quốc gia whitelist được công bố công khai.",
+  "loc": "REPO-01:src/pages/api/app-settings/ip-whitelist.ts#L10-L13"
+ },
+ {
+  "api_id": "API-060",
+  "path": "/api/app-settings/ip-whitelist",
+  "obs": "Khi đọc S3 lỗi và chưa có cache thì trả {countries:[],ips:[]} (fail-open) — REPO-01:src/utils/server/ipWhitelist.ts#L24-L28.",
+  "loc": "REPO-01:src/pages/api/app-settings/ip-whitelist.ts#L10-L13"
+ },
+ {
+  "api_id": "API-061",
+  "path": "/api/auth/:nextauth*",
+  "obs": "authorize (credentials) không thấy kiểm tra cờ users.locked; khoá chỉ được tăng khi trả lời sai câu hỏi bảo mật.",
+  "loc": "REPO-01:src/pages/api/auth/[...nextauth].ts#L37-L253"
+ },
+ {
+  "api_id": "API-061",
+  "path": "/api/auth/:nextauth*",
+  "obs": "Câu hỏi bảo mật chỉ được kiểm tra khi client gửi questionId — không gửi thì bỏ qua bước này (L95).",
+  "loc": "REPO-01:src/pages/api/auth/[...nextauth].ts#L37-L253"
+ },
+ {
+  "api_id": "API-061",
+  "path": "/api/auth/:nextauth*",
+  "obs": "callbacks.redirect trả nguyên url nhận vào, không kiểm tra domain (L249-L251) — nguy cơ open redirect, cần xác minh.",
+  "loc": "REPO-01:src/pages/api/auth/[...nextauth].ts#L37-L253"
+ },
+ {
+  "api_id": "API-061",
+  "path": "/api/auth/:nextauth*",
+  "obs": "Provider 'token' đăng nhập chỉ bằng users.token (cùng token dùng cho xác thực email / mở khoá) — không yêu cầu mật khẩu.",
+  "loc": "REPO-01:src/pages/api/auth/[...nextauth].ts#L37-L253"
+ },
+ {
+  "api_id": "API-061",
+  "path": "/api/auth/:nextauth*",
+  "obs": "Middleware edge áp IP whitelist cho /api/auth/callback/credentials (trừ admin), /api/auth/signin/line, /api/auth/callback/line — REPO-01:src/constants/common.ts#L210-L230.",
+  "loc": "REPO-01:src/pages/api/auth/[...nextauth].ts#L37-L253"
+ },
+ {
+  "api_id": "API-062",
+  "path": "/api/auth/change-email",
+  "obs": "Response trả nguyên bản ghi users (gồm cả password hash, token) — không có select/sanitize.",
+  "loc": "REPO-01:src/pages/api/auth/change-email.ts#L24-L27"
+ },
+ {
+  "api_id": "API-062",
+  "path": "/api/auth/change-email",
+  "obs": "Không kiểm tra trùng email trước khi update (lỗi unique sẽ rơi vào onError 500).",
+  "loc": "REPO-01:src/pages/api/auth/change-email.ts#L24-L27"
+ },
+ {
+  "api_id": "API-063",
+  "path": "/api/auth/request-unlock-account",
+  "obs": "Endpoint không xác thực nhưng trả về users.token của SuperAdmin trong response (L44); token này cũng được dùng ở unlock-account và provider đăng nhập 'token' của NextAuth — rủi ro bảo mật cao, cần review.",
+  "loc": "REPO-01:src/pages/api/auth/request-unlock-account.ts#L23-L45"
+ },
+ {
+  "api_id": "API-063",
+  "path": "/api/auth/request-unlock-account",
+  "obs": "Phản hồi khác nhau giữa email không tồn tại / không phải SuperAdmin cho phép dò tài khoản.",
+  "loc": "REPO-01:src/pages/api/auth/request-unlock-account.ts#L23-L45"
+ },
+ {
+  "api_id": "API-063",
+  "path": "/api/auth/request-unlock-account",
+  "obs": "sendEmail không await — lỗi gửi mail không được báo về client.",
+  "loc": "REPO-01:src/pages/api/auth/request-unlock-account.ts#L23-L45"
+ },
+ {
+  "api_id": "API-064",
+  "path": "/api/auth/resend-verification-email",
+  "obs": "Không kiểm tra user null: email/token không tồn tại gây 500 (khác 200) — cho phép dò tài khoản.",
+  "loc": "REPO-01:src/pages/api/auth/resend-verification-email.ts#L16-L41"
+ },
+ {
+  "api_id": "API-064",
+  "path": "/api/auth/resend-verification-email",
+  "obs": "Khi gửi kèm token, mail chứa token của user đó được gửi tới email do client cung cấp, không phải email của user.",
+  "loc": "REPO-01:src/pages/api/auth/resend-verification-email.ts#L16-L41"
+ },
+ {
+  "api_id": "API-064",
+  "path": "/api/auth/resend-verification-email",
+  "obs": "Không kiểm tra tài khoản đã xác thực hay chưa.",
+  "loc": "REPO-01:src/pages/api/auth/resend-verification-email.ts#L16-L41"
+ },
+ {
+  "api_id": "API-065",
+  "path": "/api/auth/security-questions",
+  "obs": "findMany({}) không select — cột answer (dùng để xác thực đăng nhập admin) bị trả công khai cho client không đăng nhập. Rủi ro bảo mật cao (schema: REPO-01:prisma/schema.prisma#L527-L533).",
+  "loc": "REPO-01:src/pages/api/auth/security-questions.ts#L11-L15"
+ },
+ {
+  "api_id": "API-066",
+  "path": "/api/auth/signup",
+  "obs": "systemCreated lấy từ body của client không xác thực => client có thể tự đánh dấu emailVerified và bỏ qua xác thực email (L48).",
+  "loc": "REPO-01:src/pages/api/auth/signup.ts#L25-L70"
+ },
+ {
+  "api_id": "API-066",
+  "path": "/api/auth/signup",
+  "obs": "Spread ...req.body vào prisma.user.create; validateSync của yup không strip field lạ => có thể ghi các cột ngoài form (vd role) — cần xác minh (mass assignment).",
+  "loc": "REPO-01:src/pages/api/auth/signup.ts#L25-L70"
+ },
+ {
+  "api_id": "API-066",
+  "path": "/api/auth/signup",
+  "obs": "logRequest (withLogging) ghi toàn bộ headers vào log — REPO-01:src/utils/server/request.ts#L26-L34.",
+  "loc": "REPO-01:src/pages/api/auth/signup.ts#L25-L70"
+ },
+ {
+  "api_id": "API-067",
+  "path": "/api/auth/unlock-account",
+  "obs": "Token không có hạn và không được xoay vòng sau khi mở khoá (không thấy cập nhật token).",
+  "loc": "REPO-01:src/pages/api/auth/unlock-account.ts#L20-L34"
+ },
+ {
+  "api_id": "API-067",
+  "path": "/api/auth/unlock-account",
+  "obs": "Không giới hạn role — mở khoá được mọi user có token hợp lệ.",
+  "loc": "REPO-01:src/pages/api/auth/unlock-account.ts#L20-L34"
+ },
+ {
+  "api_id": "API-068",
+  "path": "/api/bookings/check-monthly-ticket-already-used",
+  "obs": "Không kiểm tra booking cha thuộc user đang đăng nhập.",
+  "loc": "REPO-01:src/pages/api/bookings/check-monthly-ticket-already-used.ts#L12-L17"
+ },
+ {
+  "api_id": "API-070",
+  "path": "/api/bookings",
+  "obs": "GET không kiểm tra role/quyền sở hữu: user đăng nhập bất kỳ có thể lấy booking của người khác theo tenantCode/date/barCode (chỉ ticketId mới bị giới hạn userId).",
+  "loc": "REPO-01:src/pages/api/bookings/index.ts#L37-L185"
+ },
+ {
+  "api_id": "API-070",
+  "path": "/api/bookings",
+  "obs": "POST spread phần còn lại của body (gồm giá/tổng tiền do client gửi) vào booking.create; totalAmount đưa sang GMO lấy từ booking vừa tạo — cần xác minh validateBooking có tính lại giá hay không.",
+  "loc": "REPO-01:src/pages/api/bookings/index.ts#L37-L185"
+ },
+ {
+  "api_id": "API-070",
+  "path": "/api/bookings",
+  "obs": "Khi GMO lỗi, booking bị xoá nhưng booking_child_age_infos vừa tạo không thấy xoá tường minh (phụ thuộc cascade).",
+  "loc": "REPO-01:src/pages/api/bookings/index.ts#L37-L185"
+ },
+ {
+  "api_id": "API-070",
+  "path": "/api/bookings",
+  "obs": "logRequest ghi toàn bộ headers vào log.",
+  "loc": "REPO-01:src/pages/api/bookings/index.ts#L37-L185"
+ },
+ {
+  "api_id": "API-071",
+  "path": "/api/bookings/main-bookings/:id",
+  "obs": "Không kiểm tra booking thuộc user đang đăng nhập (IDOR theo id).",
+  "loc": "REPO-01:src/pages/api/bookings/main-bookings/[id].ts#L15-L37"
+ },
+ {
+  "api_id": "API-071",
+  "path": "/api/bookings/main-bookings/:id",
+  "obs": "Không xử lý trường hợp không tìm thấy booking -> 500.",
+  "loc": "REPO-01:src/pages/api/bookings/main-bookings/[id].ts#L15-L37"
+ },
+ {
+  "api_id": "API-072",
+  "path": "/api/bookings/status",
+  "obs": "Không kiểm tra quyền sở hữu booking.",
+  "loc": "REPO-01:src/pages/api/bookings/status.ts#L12-L22"
+ },
+ {
+  "api_id": "API-073",
+  "path": "/api/bookings/transaction/:id",
+  "obs": "Role Admin không bị giới hạn theo tenantCode — admin tenant A xem được giao dịch booking tenant B.",
+  "loc": "REPO-01:src/pages/api/bookings/transaction/[id].ts#L19-L39"
+ },
+ {
+  "api_id": "API-073",
+  "path": "/api/bookings/transaction/:id",
+  "obs": "Không xử lý booking null -> 500.",
+  "loc": "REPO-01:src/pages/api/bookings/transaction/[id].ts#L19-L39"
+ },
+ {
+  "api_id": "API-074",
+  "path": "/api/bookings/use-in-day",
+  "obs": "Không kiểm tra mainBookingId/parentBookingId thuộc user đang đăng nhập.",
+  "loc": "REPO-01:src/pages/api/bookings/use-in-day.ts#L39-L149"
+ },
+ {
+  "api_id": "API-074",
+  "path": "/api/bookings/use-in-day",
+  "obs": "Spread field từ body vào booking.create (các field ngoài schema không bị strip).",
+  "loc": "REPO-01:src/pages/api/bookings/use-in-day.ts#L39-L149"
+ },
+ {
+  "api_id": "API-074",
+  "path": "/api/bookings/use-in-day",
+  "obs": "getWaitingOrderBookings cập nhật waitingOrder của booking khác ngoài transaction tạo booking (L205-L212).",
+  "loc": "REPO-01:src/pages/api/bookings/use-in-day.ts#L39-L149"
+ },
+ {
+  "api_id": "API-075",
+  "path": "/api/bookings/vacancies/status",
+  "obs": "sortTicketsBy đưa thẳng tên field vào orderBy Prisma (không whitelist) — field sai gây 500.",
+  "loc": "REPO-01:src/pages/api/bookings/vacancies/status.ts#L13-L32"
+ },
+ {
+  "api_id": "API-076",
+  "path": "/api/cron-job/daily",
+  "obs": "Endpoint cron công khai, không có secret/token xác thực người gọi.",
+  "loc": "REPO-01:src/pages/api/cron-job/daily.ts#L18-L26"
+ },
+ {
+  "api_id": "API-076",
+  "path": "/api/cron-job/daily",
+  "obs": "cleanupOldNotifications không được await — response trả trước khi xoá xong.",
+  "loc": "REPO-01:src/pages/api/cron-job/daily.ts#L18-L26"
+ },
+ {
+  "api_id": "API-077",
+  "path": "/api/cron-job/process-overdue-calling-booking",
+  "obs": "Endpoint cron công khai, không xác thực người gọi; gọi tuỳ ý sẽ kích hoạt huỷ booking quá hạn và gửi mail.",
+  "loc": "REPO-01:src/pages/api/cron-job/process-overdue-calling-booking.ts#L26-L131"
+ },
+ {
+  "api_id": "API-078",
+  "path": "/api/cron-job/process-overdue-no-waiting-booking",
+  "obs": "Endpoint cron công khai, không xác thực người gọi.",
+  "loc": "REPO-01:src/pages/api/cron-job/process-overdue-no-waiting-booking.ts#L26-L127"
+ },
+ {
+  "api_id": "API-078",
+  "path": "/api/cron-job/process-overdue-no-waiting-booking",
+  "obs": "Dùng khoá cấu hình CALLING_TIME_LIMIT_IN_MINUTES cho biến tên waitingTimeLimitInMinute (L28) — cần xác nhận đúng ý đồ.",
+  "loc": "REPO-01:src/pages/api/cron-job/process-overdue-no-waiting-booking.ts#L26-L127"
+ },
+ {
+  "api_id": "API-079",
+  "path": "/api/cron-job/reconcile-smaregi-transactions",
+  "obs": "Comment mô tả: không tìm thấy giao dịch -> đánh dấu Cancelled, nhưng code không có nhánh này; biến cancelled luôn = 0 (L40, L79-L87). Hành vi thực tế: dòng giữ nguyên Normal.",
+  "loc": "REPO-01:src/pages/api/cron-job/reconcile-smaregi-transactions.ts#L33-L94"
+ },
+ {
+  "api_id": "API-079",
+  "path": "/api/cron-job/reconcile-smaregi-transactions",
+  "obs": "Endpoint cron công khai, không xác thực người gọi.",
+  "loc": "REPO-01:src/pages/api/cron-job/reconcile-smaregi-transactions.ts#L33-L94"
+ },
+ {
+  "api_id": "API-080",
+  "path": "/api/cron-job/remind-booking-expired",
+  "obs": "Endpoint cron công khai, không xác thực người gọi.",
+  "loc": "REPO-01:src/pages/api/cron-job/remind-booking-expired.ts#L21-L113"
+ },
+ {
+  "api_id": "API-081",
+  "path": "/api/cron-job/remind-one-day-booking",
+  "obs": "Endpoint cron công khai, không xác thực người gọi.",
+  "loc": "REPO-01:src/pages/api/cron-job/remind-one-day-booking.ts#L21-L75"
+ },
+ {
+  "api_id": "API-081",
+  "path": "/api/cron-job/remind-one-day-booking",
+  "obs": "Tải toàn bộ booking từ hôm nay trở đi (kèm User/Tenant/Ticket) mỗi phút rồi lọc trong bộ nhớ — rủi ro hiệu năng.",
+  "loc": "REPO-01:src/pages/api/cron-job/remind-one-day-booking.ts#L21-L75"
+ },
+ {
+  "api_id": "API-082",
+  "path": "/api/cron-job/remind-using-booking",
+  "obs": "Endpoint cron công khai, không xác thực người gọi.",
+  "loc": "REPO-01:src/pages/api/cron-job/remind-using-booking.ts#L22-L79"
+ },
+ {
+  "api_id": "API-082",
+  "path": "/api/cron-job/remind-using-booking",
+  "obs": "Đọc 2 app_settings trong vòng lặp cho từng booking (L43-L45) — truy vấn lặp.",
+  "loc": "REPO-01:src/pages/api/cron-job/remind-using-booking.ts#L22-L79"
+ },
+ {
+  "api_id": "API-084",
+  "path": "/api/error-report",
+  "obs": "Công khai, không giới hạn kích thước/tần suất — có thể bị lạm dụng để ghi log tuỳ ý (log injection/đầy log).",
+  "loc": "REPO-01:src/pages/api/error-report.ts#L11-L15"
+ },
+ {
+  "api_id": "API-085",
+  "path": "/api/gmo/callback",
+  "obs": "AccessPass được truyền trên query string của RetUrl (REPO-01:src/services/gmo.service.ts#L83-L84) — có thể lộ qua log/history.",
+  "loc": "REPO-01:src/pages/api/gmo/callback.ts#L34-L165"
+ },
+ {
+  "api_id": "API-085",
+  "path": "/api/gmo/callback",
+  "obs": "Không thấy kiểm tra chữ ký/nguồn gọi; khi thiếu bookingId thì bỏ qua kiểm tra Pending.",
+  "loc": "REPO-01:src/pages/api/gmo/callback.ts#L34-L165"
+ },
+ {
+  "api_id": "API-085",
+  "path": "/api/gmo/callback",
+  "obs": "Nhánh SecureTran lỗi dùng deleteMany xoá hẳn booking, nhánh khác chỉ set SystemCancelled — xử lý không đồng nhất.",
+  "loc": "REPO-01:src/pages/api/gmo/callback.ts#L34-L165"
+ },
+ {
+  "api_id": "API-086",
+  "path": "/api/health",
+  "obs": "Công khai thông tin tài nguyên server và số kết nối DB.",
+  "loc": "REPO-01:src/pages/api/health.ts#L17-L106"
+ },
+ {
+  "api_id": "API-086",
+  "path": "/api/health",
+  "obs": "Khi DB lỗi, trả nguyên stack trace lỗi trong DB.message (L96-L102).",
+  "loc": "REPO-01:src/pages/api/health.ts#L17-L106"
+ },
+ {
+  "api_id": "API-087",
+  "path": "/api/migration/add-security-questions",
+  "obs": "Endpoint migration công khai bằng GET, thao tác GHI DB; gọi lại sẽ chèn trùng câu hỏi.",
+  "loc": "REPO-01:src/pages/api/migration/add-security-questions.ts#L19-L27"
+ },
+ {
+  "api_id": "API-087",
+  "path": "/api/migration/add-security-questions",
+  "obs": "Câu trả lời bảo mật (dùng cho đăng nhập admin) được hardcode trong source (L11-L17) — giá trị không chép vào tài liệu.",
+  "loc": "REPO-01:src/pages/api/migration/add-security-questions.ts#L19-L27"
+ },
+ {
+  "api_id": "API-088",
+  "path": "/api/migration/email-settings/add-unlock-account",
+  "obs": "Endpoint migration công khai, thao tác GHI DB bằng method GET, không kiểm tra auth",
+  "loc": "REPO-01:src/pages/api/migration/email-settings/add-unlock-account.ts#L11-L29"
+ },
+ {
+  "api_id": "API-088",
+  "path": "/api/migration/email-settings/add-unlock-account",
+  "obs": "Gọi lặp lại sẽ tạo thêm bản ghi (không kiểm tra tồn tại trước khi create)",
+  "loc": "REPO-01:src/pages/api/migration/email-settings/add-unlock-account.ts#L11-L29"
+ },
+ {
+  "api_id": "API-089",
+  "path": "/api/migration/fill-first-checked-out-booking-id-for-users",
+  "obs": "Endpoint migration công khai, ghi DB bằng GET, không kiểm tra auth",
+  "loc": "REPO-01:src/pages/api/migration/fill-first-checked-out-booking-id-for-users.ts#L12-L58"
+ },
+ {
+  "api_id": "API-089",
+  "path": "/api/migration/fill-first-checked-out-booking-id-for-users",
+  "obs": "Truy vấn N+1 (1 findMany bookings cho mỗi user) — có thể chậm khi số user lớn",
+  "loc": "REPO-01:src/pages/api/migration/fill-first-checked-out-booking-id-for-users.ts#L12-L58"
+ },
+ {
+  "api_id": "API-090",
+  "path": "/api/migration/fill-gmo-id-for-tenant",
+  "obs": "Endpoint migration công khai, ghi DB (gmo_settings chứa shopId/shopPass) bằng GET, không kiểm tra auth",
+  "loc": "REPO-01:src/pages/api/migration/fill-gmo-id-for-tenant.ts#L12-L58"
+ },
+ {
+  "api_id": "API-090",
+  "path": "/api/migration/fill-gmo-id-for-tenant",
+  "obs": "Upsert ghi đè shopPass của gmo_settings trùng shopId bằng giá trị cấu hình mỗi lần gọi",
+  "loc": "REPO-01:src/pages/api/migration/fill-gmo-id-for-tenant.ts#L12-L58"
+ },
+ {
+  "api_id": "API-091",
+  "path": "/api/migration/fill-ticket-booking-schedule-id-for-booking",
+  "obs": "Endpoint migration công khai, ghi DB bằng GET, không kiểm tra auth",
+  "loc": "REPO-01:src/pages/api/migration/fill-ticket-booking-schedule-id-for-booking.ts#L12-L48"
+ },
+ {
+  "api_id": "API-091",
+  "path": "/api/migration/fill-ticket-booking-schedule-id-for-booking",
+  "obs": "Đọc toàn bộ booking chưa điền vào bộ nhớ và cập nhật tuần tự — có thể chậm/timeout với dữ liệu lớn",
+  "loc": "REPO-01:src/pages/api/migration/fill-ticket-booking-schedule-id-for-booking.ts#L12-L48"
+ },
+ {
+  "api_id": "API-092",
+  "path": "/api/migration/fill-ticket-group-id",
+  "obs": "Endpoint migration công khai, ghi DB bằng GET, không kiểm tra auth",
+  "loc": "REPO-01:src/pages/api/migration/fill-ticket-group-id.ts#L12-L46"
+ },
+ {
+  "api_id": "API-092",
+  "path": "/api/migration/fill-ticket-group-id",
+  "obs": "Ticket slave có masterTicketId nhưng master không nằm trong tập groupId null (hoặc master không phải vé tháng) sẽ không được điền groupId",
+  "loc": "REPO-01:src/pages/api/migration/fill-ticket-group-id.ts#L12-L46"
+ },
+ {
+  "api_id": "API-093",
+  "path": "/api/migration/migrate-discount-setting",
+  "obs": "Endpoint migration công khai, ghi DB bằng GET, không kiểm tra auth",
+  "loc": "REPO-01:src/pages/api/migration/migrate-discount-setting.ts#L11-L57"
+ },
+ {
+  "api_id": "API-094",
+  "path": "/api/news",
+  "obs": "sort_by không whitelist field — giá trị sai gây lỗi 500",
+  "loc": "REPO-01:src/pages/api/news/index.ts#L11-L25"
+ },
+ {
+  "api_id": "API-094",
+  "path": "/api/news",
+  "obs": "page có mà limit không có → skip = NaN (Number(undefined))",
+  "loc": "REPO-01:src/pages/api/news/index.ts#L11-L25"
+ },
+ {
+  "api_id": "API-095",
+  "path": "/api/pos/bookings/calculate-pay-amount",
+  "obs": "Lỗi nghiệp vụ trả lẫn lộn HTTP 200 và 400 với cùng resultCode E00000400",
+  "loc": "REPO-01:src/pages/api/pos/bookings/calculate-pay-amount.ts#L27-L59"
+ },
+ {
+  "api_id": "API-095",
+  "path": "/api/pos/bookings/calculate-pay-amount",
+  "obs": "So sánh api-key bằng !== (không constant-time)",
+  "loc": "REPO-01:src/pages/api/pos/bookings/calculate-pay-amount.ts#L27-L59"
+ },
+ {
+  "api_id": "API-096",
+  "path": "/api/pos/bookings/check-in",
+  "obs": "DELETE dùng body (barCode) — một số proxy/client có thể bỏ body của DELETE",
+  "loc": "REPO-01:src/pages/api/pos/bookings/check-in.ts#L27-L179"
+ },
+ {
+  "api_id": "API-096",
+  "path": "/api/pos/bookings/check-in",
+  "obs": "DELETE không khoá bản ghi như POST (không SELECT FOR UPDATE)",
+  "loc": "REPO-01:src/pages/api/pos/bookings/check-in.ts#L27-L179"
+ },
+ {
+  "api_id": "API-097",
+  "path": "/api/pos/bookings/check-out",
+  "obs": "POST cập nhật từng booking trong vòng lặp với transaction riêng, và updateMany soft-delete OBIC nằm ngoài transaction — lỗi giữa chừng có thể để dữ liệu không nhất quán",
+  "loc": "REPO-01:src/pages/api/pos/bookings/check-out.ts#L32-L302"
+ },
+ {
+  "api_id": "API-097",
+  "path": "/api/pos/bookings/check-out",
+  "obs": "Email và processNextCallingBookings gọi không await (fire-and-forget) — lỗi không được báo về POS",
+  "loc": "REPO-01:src/pages/api/pos/bookings/check-out.ts#L32-L302"
+ },
+ {
+  "api_id": "API-097",
+  "path": "/api/pos/bookings/check-out",
+  "obs": "DELETE: trong transaction lại gọi prisma.user.update (ngoài tx) để xoá firstCheckedOutBookingId",
+  "loc": "REPO-01:src/pages/api/pos/bookings/check-out.ts#L32-L302"
+ },
+ {
+  "api_id": "API-098",
+  "path": "/api/pos/bookings",
+  "obs": "Tra cứu dùng method POST nhưng chỉ đọc DB",
+  "loc": "REPO-01:src/pages/api/pos/bookings/index.ts#L35-L213"
+ },
+ {
+  "api_id": "API-099",
+  "path": "/api/pos/test",
+  "obs": "Endpoint test còn tồn tại trong code production",
+  "loc": "REPO-01:src/pages/api/pos/test.ts#L21-L36"
+ },
+ {
+  "api_id": "API-100",
+  "path": "/api/smaregi/webhook-transactions",
+  "obs": "Webhook công khai không có shared secret/chữ ký (comment trong code xác nhận) — bất kỳ ai biết contractId hợp lệ có thể kích hoạt xử lý giao dịch (dù chi tiết giao dịch được lấy lại từ Smaregi API)",
+  "loc": "REPO-01:src/pages/api/smaregi/webhook-transactions.ts#L28-L65"
+ },
+ {
+  "api_id": "API-100",
+  "path": "/api/smaregi/webhook-transactions",
+  "obs": "Ghi log toàn bộ body webhook (logger.info)",
+  "loc": "REPO-01:src/pages/api/smaregi/webhook-transactions.ts#L28-L65"
+ },
+ {
+  "api_id": "API-100",
+  "path": "/api/smaregi/webhook-transactions",
+  "obs": "Lỗi từng giao dịch chỉ log, không retry",
+  "loc": "REPO-01:src/pages/api/smaregi/webhook-transactions.ts#L28-L65"
+ },
+ {
+  "api_id": "API-102",
+  "path": "/api/tenants/:code",
+  "obs": "Endpoint công khai trả toàn bộ cột tenant, gồm gmoId và các mã Smaregi (smaregiContractId được dùng làm điều kiện duy nhất của webhook Smaregi) và note nội bộ — trong khi /api/tenants có omit gmoId",
+  "loc": "REPO-01:src/pages/api/tenants/[code].ts#L11-L20"
+ },
+ {
+  "api_id": "API-103",
+  "path": "/api/tenants/count",
+  "obs": "Không lọc active/deleted, khác với /api/tenants (lọc active=true mặc định, có tìm cả guide) — số đếm có thể không khớp danh sách",
+  "loc": "REPO-01:src/pages/api/tenants/count.ts#L11-L33"
+ },
+ {
+  "api_id": "API-104",
+  "path": "/api/tenants",
+  "obs": "Không lọc deleted",
+  "loc": "REPO-01:src/pages/api/tenants/index.ts#L11-L53"
+ },
+ {
+  "api_id": "API-104",
+  "path": "/api/tenants",
+  "obs": "Trả cả các cột smaregi*/note của tenant cho client công khai",
+  "loc": "REPO-01:src/pages/api/tenants/index.ts#L11-L53"
+ },
+ {
+  "api_id": "API-105",
+  "path": "/api/tickets-supported/:masterTicketId",
+  "obs": "includeTenant=true trả toàn bộ cột Tenant (gồm gmoId, mã Smaregi) cho client không xác thực",
+  "loc": "REPO-01:src/pages/api/tickets-supported/[masterTicketId].ts#L12-L39"
+ },
+ {
+  "api_id": "API-106",
+  "path": "/api/tickets/:id",
+  "obs": "Không lọc visibility/deleted — ticket ẩn vẫn đọc được qua id",
+  "loc": "REPO-01:src/pages/api/tickets/[id].ts#L12-L26"
+ },
+ {
+  "api_id": "API-107",
+  "path": "/api/tickets",
+  "obs": "sort_by không whitelist field — giá trị sai gây lỗi 500",
+  "loc": "REPO-01:src/pages/api/tickets/index.ts#L16-L102"
+ },
+ {
+  "api_id": "API-107",
+  "path": "/api/tickets",
+  "obs": "Lỗi đọc hidden-tickets.json từ S3 bị nuốt (console.error) → trả về cả ticket lẽ ra bị ẩn",
+  "loc": "REPO-01:src/pages/api/tickets/index.ts#L16-L102"
+ },
+ {
+  "api_id": "API-108",
+  "path": "/api/upload",
+  "obs": "Upload file công khai không kiểm tra auth, không giới hạn loại/kích thước trong handler",
+  "loc": "REPO-01:src/pages/api/upload.ts#L22-L39"
+ },
+ {
+  "api_id": "API-108",
+  "path": "/api/upload",
+  "obs": "Chế độ lưu local: newFileName/originalFilename ghép thẳng vào đường dẫn ./public/uploads mà không làm sạch — rủi ro ghi đè/path traversal",
+  "loc": "REPO-01:src/pages/api/upload.ts#L22-L39"
+ },
+ {
+  "api_id": "API-108",
+  "path": "/api/upload",
+  "obs": "Bị loại khỏi edge middleware nên không qua basic auth/IP whitelist",
+  "loc": "REPO-01:src/pages/api/upload.ts#L22-L39"
+ },
+ {
+  "api_id": "API-109",
+  "path": "/api/user/bookings/:id",
+  "obs": "PUT tìm originalBooking theo body.id KHÔNG lọc userId — không thấy kiểm tra booking thuộc user đang đăng nhập",
+  "loc": "REPO-01:src/pages/api/user/bookings/[id]/index.ts#L41-L247"
+ },
+ {
+  "api_id": "API-109",
+  "path": "/api/user/bookings/:id",
+  "obs": "PUT ghi phần còn lại của body thẳng vào bookings (data: payload) — rủi ro mass assignment (vd. status, paymentStatus, userId, totalAmount)",
+  "loc": "REPO-01:src/pages/api/user/bookings/[id]/index.ts#L41-L247"
+ },
+ {
+  "api_id": "API-109",
+  "path": "/api/user/bookings/:id",
+  "obs": "GET: không tìm thấy booking → booking null nhưng vẫn truy cập booking.PartialCheckout → lỗi 500 thay vì 404",
+  "loc": "REPO-01:src/pages/api/user/bookings/[id]/index.ts#L41-L247"
+ },
+ {
+  "api_id": "API-109",
+  "path": "/api/user/bookings/:id",
+  "obs": "Email gửi không await",
+  "loc": "REPO-01:src/pages/api/user/bookings/[id]/index.ts#L41-L247"
+ },
+ {
+  "api_id": "API-110",
+  "path": "/api/user/bookings/:id/payment-status",
+  "obs": "Người dùng cuối tự đặt paymentStatus bất kỳ (kể cả Completed) cho booking của mình khi ticket Offline hoặc không phải Monthly/DailyTimesLimit",
+  "loc": "REPO-01:src/pages/api/user/bookings/[id]/payment-status.ts#L21-L50"
+ },
+ {
+  "api_id": "API-110",
+  "path": "/api/user/bookings/:id/payment-status",
+  "obs": "Không tìm thấy booking: trả 400 nhưng thiếu return → tiếp tục chạy và lỗi khi truy cập booking.Ticket",
+  "loc": "REPO-01:src/pages/api/user/bookings/[id]/payment-status.ts#L21-L50"
+ },
+ {
+  "api_id": "API-111",
+  "path": "/api/user/bookings/cancel",
+  "obs": "Tìm booking theo bookingId KHÔNG lọc userId — không thấy kiểm tra booking thuộc user đang đăng nhập trước khi huỷ (kể cả huỷ giao dịch GMO)",
+  "loc": "REPO-01:src/pages/api/user/bookings/cancel.ts#L28-L98"
+ },
+ {
+  "api_id": "API-111",
+  "path": "/api/user/bookings/cancel",
+  "obs": "Không validate body; bookingId không tồn tại → lỗi 500",
+  "loc": "REPO-01:src/pages/api/user/bookings/cancel.ts#L28-L98"
+ },
+ {
+  "api_id": "API-111",
+  "path": "/api/user/bookings/cancel",
+  "obs": "Huỷ GMO xong rồi mới cập nhật DB, không có transaction/bù trừ nếu bước DB lỗi",
+  "loc": "REPO-01:src/pages/api/user/bookings/cancel.ts#L28-L98"
+ },
+ {
+  "api_id": "API-111",
+  "path": "/api/user/bookings/cancel",
+  "obs": "roleAuth: khi !req.user gửi 401 nhưng không return (checkAuth đã chặn trước nên ít ảnh hưởng)",
+  "loc": "REPO-01:src/pages/api/user/bookings/cancel.ts#L28-L98"
+ },
+ {
+  "api_id": "API-112",
+  "path": "/api/user/bookings",
+  "obs": "Không phân trang — trả toàn bộ booking của user nếu không truyền date/fromDate",
+  "loc": "REPO-01:src/pages/api/user/bookings/index.ts#L16-L72"
+ },
+ {
+  "api_id": "API-113",
+  "path": "/api/user/bookings/last-booking",
+  "obs": "Truy vấn bước 2 lọc theo barCode nhưng không lọc userId — phụ thuộc giả định barCode chỉ thuộc 1 user",
+  "loc": "REPO-01:src/pages/api/user/bookings/last-booking.ts#L15-L67"
+ },
+ {
+  "api_id": "API-114",
+  "path": "/api/user/bookings/monthly-tickets/check-already-used-across-tenants",
+  "obs": "Tên endpoint 'check-already-used' nhưng data=true nghĩa là CÒN vé chưa dùng (theo code) — dễ hiểu nhầm",
+  "loc": "REPO-01:src/pages/api/user/bookings/monthly-tickets/check-already-used-across-tenants.ts#L21-L98"
+ },
+ {
+  "api_id": "API-114",
+  "path": "/api/user/bookings/monthly-tickets/check-already-used-across-tenants",
+  "obs": "Truy vấn N+1 (checkIfAlreadyUsedMonthlyTicket cho từng booking)",
+  "loc": "REPO-01:src/pages/api/user/bookings/monthly-tickets/check-already-used-across-tenants.ts#L21-L98"
+ },
+ {
+  "api_id": "API-115",
+  "path": "/api/user/bookings/monthly-tickets/count",
+  "obs": "includeCancelledStatus=false vẫn được coi là true (kiểm tra truthy chuỗi)",
+  "loc": "REPO-01:src/pages/api/user/bookings/monthly-tickets/count.ts#L17-L46"
+ },
+ {
+  "api_id": "API-116",
+  "path": "/api/user/bookings/monthly-tickets/extra-info",
+  "obs": "Không lọc userId — user đăng nhập có thể xem thông tin sử dụng vé tháng của booking bất kỳ theo id",
+  "loc": "REPO-01:src/pages/api/user/bookings/monthly-tickets/extra-info.ts#L21-L77"
+ },
+ {
+  "api_id": "API-116",
+  "path": "/api/user/bookings/monthly-tickets/extra-info",
+  "obs": "monthlyBookingId không tồn tại → lỗi 500 thay vì 4xx",
+  "loc": "REPO-01:src/pages/api/user/bookings/monthly-tickets/extra-info.ts#L21-L77"
+ },
+ {
+  "api_id": "API-116",
+  "path": "/api/user/bookings/monthly-tickets/extra-info",
+  "obs": "So sánh date equals new Date() (có giờ) — alreadyUsedInDay có thể không khớp nếu cột date lưu 00:00",
+  "loc": "REPO-01:src/pages/api/user/bookings/monthly-tickets/extra-info.ts#L21-L77"
+ },
+ {
+  "api_id": "API-117",
+  "path": "/api/user/bookings/monthly-tickets",
+  "obs": "includeCancelledStatus/isAvailable kiểm tra truthy nên chuỗi 'false' vẫn được hiểu là bật",
+  "loc": "REPO-01:src/pages/api/user/bookings/monthly-tickets/index.ts#L22-L111"
+ },
+ {
+  "api_id": "API-117",
+  "path": "/api/user/bookings/monthly-tickets",
+  "obs": "tenantCode không được validate; nếu thiếu, điều kiện tenantCode=undefined bị Prisma bỏ qua (lọc mọi tenant)",
+  "loc": "REPO-01:src/pages/api/user/bookings/monthly-tickets/index.ts#L22-L111"
+ },
+ {
+  "api_id": "API-118",
+  "path": "/api/user/bookings/partial-checkout/:id",
+  "obs": "Không kiểm tra role và không kiểm tra booking thuộc về user đang đăng nhập (chỉ dùng id từ URL)",
+  "loc": "REPO-01:src/pages/api/user/bookings/partial-checkout/[id].ts#L20-L88"
+ },
+ {
+  "api_id": "API-118",
+  "path": "/api/user/bookings/partial-checkout/:id",
+  "obs": "Gửi mail gọi khách (sendCallingNotificationEmail) không await trong vòng lặp chooseNextCallingBookingsAndSendNotifications",
+  "loc": "REPO-01:src/pages/api/user/bookings/partial-checkout/[id].ts#L20-L88"
+ },
+ {
+  "api_id": "API-119",
+  "path": "/api/user/bookings/request-re-check-in",
+  "obs": "Lọc booking chỉ theo barCode, không theo userId của người đăng nhập",
+  "loc": "REPO-01:src/pages/api/user/bookings/request-re-check-in.ts#L20-L53"
+ },
+ {
+  "api_id": "API-119",
+  "path": "/api/user/bookings/request-re-check-in",
+  "obs": "Message lỗi 400 là chuỗi placeholder '日本語で'",
+  "loc": "REPO-01:src/pages/api/user/bookings/request-re-check-in.ts#L20-L53"
+ },
+ {
+  "api_id": "API-119",
+  "path": "/api/user/bookings/request-re-check-in",
+  "obs": "Cập nhật từng booking trong vòng lặp không có transaction; có thể trả 400 sau khi đã cập nhật một phần",
+  "loc": "REPO-01:src/pages/api/user/bookings/request-re-check-in.ts#L20-L53"
+ },
+ {
+  "api_id": "API-120",
+  "path": "/api/user/bookings/times-limit-tickets/count",
+  "obs": "includeCancelledStatus kiểm tra truthy trên chuỗi query nên 'false' vẫn bật",
+  "loc": "REPO-01:src/pages/api/user/bookings/times-limit-tickets/count.ts#L23-L58"
+ },
+ {
+  "api_id": "API-121",
+  "path": "/api/user/bookings/times-limit-tickets",
+  "obs": "Thiếu tenantCode thì điều kiện tenantCode bị Prisma bỏ qua",
+  "loc": "REPO-01:src/pages/api/user/bookings/times-limit-tickets/index.ts#L24-L131"
+ },
+ {
+  "api_id": "API-122",
+  "path": "/api/user/check-existing-email",
+  "obs": "Endpoint công khai cho phép dò email đã đăng ký và trạng thái xác thực",
+  "loc": "REPO-01:src/pages/api/user/check-existing-email.ts#L13-L33"
+ },
+ {
+  "api_id": "API-124",
+  "path": "/api/user/credit-card/delete",
+  "obs": "Không xử lý ErrInfo từ GMO, luôn trả 200",
+  "loc": "REPO-01:src/pages/api/user/credit-card/delete.ts#L17-L25"
+ },
+ {
+  "api_id": "API-124",
+  "path": "/api/user/credit-card/delete",
+  "obs": "GMO gọi bằng site_id/site_pass từ serverConfig.gmo (src/services/gmo.service.ts#L161-L172)",
+  "loc": "REPO-01:src/pages/api/user/credit-card/delete.ts#L17-L25"
+ },
+ {
+  "api_id": "API-125",
+  "path": "/api/user/credit-card/save",
+  "obs": "Không validate body bằng schema",
+  "loc": "REPO-01:src/pages/api/user/credit-card/save.ts#L21-L48"
+ },
+ {
+  "api_id": "API-127",
+  "path": "/api/user/edit-email",
+  "obs": "Không yêu cầu đăng nhập; chỉ cần token",
+  "loc": "REPO-01:src/pages/api/user/edit-email/index.ts#L19-L41"
+ },
+ {
+  "api_id": "API-127",
+  "path": "/api/user/edit-email",
+  "obs": "Response trả toàn bộ bản ghi user (không loại bỏ password hash, token)",
+  "loc": "REPO-01:src/pages/api/user/edit-email/index.ts#L19-L41"
+ },
+ {
+  "api_id": "API-127",
+  "path": "/api/user/edit-email",
+  "obs": "Token không bị đổi sau khi dùng",
+  "loc": "REPO-01:src/pages/api/user/edit-email/index.ts#L19-L41"
+ },
+ {
+  "api_id": "API-128",
+  "path": "/api/user",
+  "obs": "GET: danh sách omit không có 'password' nên response có thể chứa password hash",
+  "loc": "REPO-01:src/pages/api/user/index.ts#L31-L108"
+ },
+ {
+  "api_id": "API-128",
+  "path": "/api/user",
+  "obs": "PUT: toàn bộ req.body được spread vào data update; yup chỉ validate, không loại field ngoài schema (kể cả token do client gửi)",
+  "loc": "REPO-01:src/pages/api/user/index.ts#L31-L108"
+ },
+ {
+  "api_id": "API-128",
+  "path": "/api/user",
+  "obs": "DELETE: deletedBy lưu role (user.role) chứ không phải id người xoá",
+  "loc": "REPO-01:src/pages/api/user/index.ts#L31-L108"
+ },
+ {
+  "api_id": "API-129",
+  "path": "/api/user/notifications/stream",
+  "obs": "Không dùng header access-token như checkAuth; chỉ đọc cookie session",
+  "loc": "REPO-01:src/pages/api/user/notifications/stream.ts#L20-L80"
+ },
+ {
+  "api_id": "API-130",
+  "path": "/api/user/tenant-favorites/:tenantCode",
+  "obs": "Không xử lý trùng / không tồn tại → trả 500",
+  "loc": "REPO-01:src/pages/api/user/tenant-favorites/[tenantCode].ts#L16-L42"
+ },
+ {
+  "api_id": "API-133",
+  "path": "/*",
+  "obs": "cors() dùng cấu hình mặc định (cho phép mọi origin)",
+  "loc": "REPO-01:src/server.js#L21-L76"
+ },
+ {
+  "api_id": "API-133",
+  "path": "/*",
+  "obs": "/uploads phục vụ tĩnh ./public/uploads không qua kiểm tra auth",
+  "loc": "REPO-01:src/server.js#L21-L76"
+ },
+ {
+  "api_id": "API-133",
+  "path": "/*",
+  "obs": "JSON.parse(body) khi log response POS không bọc try/catch",
+  "loc": "REPO-01:src/server.js#L21-L76"
+ },
+ {
+  "api_id": "API-134",
+  "path": "/api/admin/admin-credentials-confirmation",
+  "obs": "Không tăng loginAttempts khi sai mật khẩu",
+  "loc": "REPO-01:src/pages/api/admin/admin-credentials-confirmation.ts#L25-L43"
+ },
+ {
+  "api_id": "API-135",
+  "path": "/api/admin/credentials-confirmation",
+  "obs": "Response trả nguyên bản ghi staff/user, không loại bỏ trường password (hash)",
+  "loc": "REPO-01:src/pages/api/admin/credentials-confirmation.ts#L25-L58"
+ },
+ {
+  "api_id": "API-135",
+  "path": "/api/admin/credentials-confirmation",
+  "obs": "Không giới hạn số lần thử sai",
+  "loc": "REPO-01:src/pages/api/admin/credentials-confirmation.ts#L25-L58"
+ },
+ {
+  "api_id": "API-136",
+  "path": "/api/admin/password-confirmation",
+  "obs": "Response trả nguyên bản ghi user, không loại bỏ password hash/token",
+  "loc": "REPO-01:src/pages/api/admin/password-confirmation.ts#L25-L38"
+ },
+ {
+  "api_id": "API-137",
+  "path": "/api/auth/change-password",
+  "obs": "Không có session thì token null → truy cập token.email gây lỗi 500 thay vì 401",
+  "loc": "REPO-01:src/pages/api/auth/change-password.ts#L27-L55"
+ },
+ {
+  "api_id": "API-137",
+  "path": "/api/auth/change-password",
+  "obs": "Validate body áp dụng cho mọi method vì bọc ở export",
+  "loc": "REPO-01:src/pages/api/auth/change-password.ts#L27-L55"
+ },
+ {
+  "api_id": "API-138",
+  "path": "/api/auth/check-admin-credentials",
+  "obs": "Endpoint công khai trả message khác nhau theo trạng thái (không tồn tại / không phải admin / bị khoá) → có thể dò tài khoản admin",
+  "loc": "REPO-01:src/pages/api/auth/check-admin-credentials.ts#L22-L68"
+ },
+ {
+  "api_id": "API-138",
+  "path": "/api/auth/check-admin-credentials",
+  "obs": "Response trả nguyên bản ghi user, không loại bỏ password hash/token",
+  "loc": "REPO-01:src/pages/api/auth/check-admin-credentials.ts#L22-L68"
+ },
+ {
+  "api_id": "API-139",
+  "path": "/api/auth/fetch-access-token",
+  "obs": "Không kiểm tra locked / loginAttempts / role (khác với check-admin-credentials)",
+  "loc": "REPO-01:src/pages/api/auth/fetch-access-token.ts#L21-L51"
+ },
+ {
+  "api_id": "API-139",
+  "path": "/api/auth/fetch-access-token",
+  "obs": "Sai thông tin đăng nhập trả 500 thay vì 4xx",
+  "loc": "REPO-01:src/pages/api/auth/fetch-access-token.ts#L21-L51"
+ },
+ {
+  "api_id": "API-140",
+  "path": "/api/auth/forgot-password",
+  "obs": "Response trả về users.token — cùng token mà /api/auth/reset-password dùng để đặt lại mật khẩu — cho client chưa xác thực",
+  "loc": "REPO-01:src/pages/api/auth/forgot-password.ts#L24-L40"
+ },
+ {
+  "api_id": "API-140",
+  "path": "/api/auth/forgot-password",
+  "obs": "Message EMAIL_NOT_FOUND cho phép dò email đã đăng ký",
+  "loc": "REPO-01:src/pages/api/auth/forgot-password.ts#L24-L40"
+ },
+ {
+  "api_id": "API-141",
+  "path": "/api/auth/reset-password",
+  "obs": "Token không bị đổi/huỷ sau khi đặt lại mật khẩu, không có hạn dùng thấy trong code",
+  "loc": "REPO-01:src/pages/api/auth/reset-password.ts#L20-L33"
+ },
+ {
+  "api_id": "API-141",
+  "path": "/api/auth/reset-password",
+  "obs": "Schema server không áp quy tắc độ mạnh mật khẩu",
+  "loc": "REPO-01:src/pages/api/auth/reset-password.ts#L20-L33"
+ },
+ {
+  "api_id": "API-142",
+  "path": "/api/auth/update-password",
+  "obs": "Không yêu cầu đăng nhập dù dùng cho trang thông tin cá nhân",
+  "loc": "REPO-01:src/pages/api/auth/update-password.ts#L24-L40"
+ },
+ {
+  "api_id": "API-142",
+  "path": "/api/auth/update-password",
+  "obs": "Response trả về users.token cho client chưa xác thực",
+  "loc": "REPO-01:src/pages/api/auth/update-password.ts#L24-L40"
+ },
+ {
+  "api_id": "API-142",
+  "path": "/api/auth/update-password",
+  "obs": "Message EMAIL_NOT_FOUND cho phép dò email",
+  "loc": "REPO-01:src/pages/api/auth/update-password.ts#L24-L40"
+ },
+ {
+  "api_id": "API-143",
+  "path": "/api/auth/verify/:token",
+  "obs": "Token xác thực là cùng cột users.token dùng cho reset-password",
+  "loc": "REPO-01:src/pages/api/auth/verify/[token].ts#L16-L30"
+ }
+]

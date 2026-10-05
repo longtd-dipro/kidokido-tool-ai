@@ -1,0 +1,1232 @@
+[
+  {
+    "method": "GET",
+    "url": "/api/admin/tickets/obic-codes/export",
+    "path": "/api/admin/tickets/obic-codes/export",
+    "file": "src/middleware.ts",
+    "locator": "REPO-01:src/middleware.ts#L135",
+    "via": "fetch",
+    "note": "const serverConfig.external.url",
+    "ev": "EV-0227"
+  },
+  {
+    "method": "GET",
+    "url": "/api/admin/tickets/obic-codes/export",
+    "path": "/api/admin/tickets/obic-codes/export",
+    "file": "src/middleware.ts",
+    "locator": "REPO-01:src/middleware.ts#L155",
+    "via": "fetch",
+    "note": "const serverConfig.external.url",
+    "ev": "EV-0228"
+  },
+  {
+    "method": "GET",
+    "url": "/:settingKey",
+    "path": "/:settingKey",
+    "file": "src/services/api-client/admin/app-setting.service.ts",
+    "locator": "REPO-01:src/services/api-client/admin/app-setting.service.ts#L15",
+    "via": "axios.get",
+    "note": "",
+    "ev": "EV-0229"
+  },
+  {
+    "method": "PUT",
+    "url": "/:settingKey",
+    "path": "/:settingKey",
+    "file": "src/services/api-client/admin/app-setting.service.ts",
+    "locator": "REPO-01:src/services/api-client/admin/app-setting.service.ts#L25",
+    "via": "axios.put",
+    "note": "",
+    "ev": "EV-0230"
+  },
+  {
+    "method": "DELETE",
+    "url": "/:settingKey",
+    "path": "/:settingKey",
+    "file": "src/services/api-client/admin/app-setting.service.ts",
+    "locator": "REPO-01:src/services/api-client/admin/app-setting.service.ts#L30",
+    "via": "axios.delete",
+    "note": "",
+    "ev": "EV-0231"
+  },
+  {
+    "method": "POST",
+    "url": "/api/admin/password-confirmation",
+    "path": "/api/admin/password-confirmation",
+    "file": "src/services/api-client/admin/auth.service.ts",
+    "locator": "REPO-01:src/services/api-client/admin/auth.service.ts#L12",
+    "via": "axios.post",
+    "note": "const APIs.PASSWORD_CONFIRMATION",
+    "ev": "EV-0232"
+  },
+  {
+    "method": "POST",
+    "url": "/api/admin/admin-credentials-confirmation",
+    "path": "/api/admin/admin-credentials-confirmation",
+    "file": "src/services/api-client/admin/auth.service.ts",
+    "locator": "REPO-01:src/services/api-client/admin/auth.service.ts#L17",
+    "via": "axios.post",
+    "note": "const APIs.ADMIN_CREDENTIALS_CONFIRMATION",
+    "ev": "EV-0233"
+  },
+  {
+    "method": "POST",
+    "url": "/api/admin/credentials-confirmation",
+    "path": "/api/admin/credentials-confirmation",
+    "file": "src/services/api-client/admin/auth.service.ts",
+    "locator": "REPO-01:src/services/api-client/admin/auth.service.ts#L22",
+    "via": "axios.post",
+    "note": "const APIs.CREDENTIALS_CONFIRMATION",
+    "ev": "EV-0234"
+  },
+  {
+    "method": "GET",
+    "url": "/api/admin/booking-queue/waiting",
+    "path": "/api/admin/booking-queue/waiting",
+    "file": "src/services/api-client/admin/booking-queue.service.ts",
+    "locator": "REPO-01:src/services/api-client/admin/booking-queue.service.ts#L13",
+    "via": "axios.get",
+    "note": "const APIs.BOOKING_QUEUE_WAITING",
+    "ev": "EV-0235"
+  },
+  {
+    "method": "GET",
+    "url": "/api/admin/booking-queue/calling",
+    "path": "/api/admin/booking-queue/calling",
+    "file": "src/services/api-client/admin/booking-queue.service.ts",
+    "locator": "REPO-01:src/services/api-client/admin/booking-queue.service.ts#L18",
+    "via": "axios.get",
+    "note": "const APIs.BOOKING_QUEUE_CALLING",
+    "ev": "EV-0236"
+  },
+  {
+    "method": "GET",
+    "url": "/api/admin/booking-queue/system-cancelled",
+    "path": "/api/admin/booking-queue/system-cancelled",
+    "file": "src/services/api-client/admin/booking-queue.service.ts",
+    "locator": "REPO-01:src/services/api-client/admin/booking-queue.service.ts#L23",
+    "via": "axios.get",
+    "note": "const APIs.BOOKING_QUEUE_SYSTEM_CANCELLED",
+    "ev": "EV-0237"
+  },
+  {
+    "method": "PUT",
+    "url": "/:id",
+    "path": "/:id",
+    "file": "src/services/api-client/admin/booking-queue.service.ts",
+    "locator": "REPO-01:src/services/api-client/admin/booking-queue.service.ts#L33",
+    "via": "axios.put",
+    "note": "",
+    "ev": "EV-0238"
+  },
+  {
+    "method": "GET",
+    "url": "/:id",
+    "path": "/:id",
+    "file": "src/services/api-client/admin/booking.service.ts",
+    "locator": "REPO-01:src/services/api-client/admin/booking.service.ts#L61",
+    "via": "axios.get",
+    "note": "",
+    "ev": "EV-0239"
+  },
+  {
+    "method": "PUT",
+    "url": "/:id",
+    "path": "/:id",
+    "file": "src/services/api-client/admin/booking.service.ts",
+    "locator": "REPO-01:src/services/api-client/admin/booking.service.ts#L66",
+    "via": "axios.put",
+    "note": "",
+    "ev": "EV-0240"
+  },
+  {
+    "method": "PUT",
+    "url": "/:id",
+    "path": "/:id",
+    "file": "src/services/api-client/admin/booking.service.ts",
+    "locator": "REPO-01:src/services/api-client/admin/booking.service.ts#L71",
+    "via": "axios.put",
+    "note": "",
+    "ev": "EV-0241"
+  },
+  {
+    "method": "PUT",
+    "url": "/:id",
+    "path": "/:id",
+    "file": "src/services/api-client/admin/booking.service.ts",
+    "locator": "REPO-01:src/services/api-client/admin/booking.service.ts#L76",
+    "via": "axios.put",
+    "note": "",
+    "ev": "EV-0242"
+  },
+  {
+    "method": "GET",
+    "url": "/api/admin/bookings/blacklist",
+    "path": "/api/admin/bookings/blacklist",
+    "file": "src/services/api-client/admin/booking.service.ts",
+    "locator": "REPO-01:src/services/api-client/admin/booking.service.ts#L81",
+    "via": "axios.get",
+    "note": "const APIs.BLACKLIST_BOOKINGS",
+    "ev": "EV-0243"
+  },
+  {
+    "method": "GET",
+    "url": "/api/admin/bookings/count",
+    "path": "/api/admin/bookings/count",
+    "file": "src/services/api-client/admin/booking.service.ts",
+    "locator": "REPO-01:src/services/api-client/admin/booking.service.ts#L86",
+    "via": "axios.get",
+    "note": "const APIs.COUNT_BOOKINGS",
+    "ev": "EV-0244"
+  },
+  {
+    "method": "PATCH",
+    "url": "/:id",
+    "path": "/:id",
+    "file": "src/services/api-client/admin/booking.service.ts",
+    "locator": "REPO-01:src/services/api-client/admin/booking.service.ts#L96",
+    "via": "axios.patch",
+    "note": "",
+    "ev": "EV-0245"
+  },
+  {
+    "method": "PUT",
+    "url": "/api/admin/bookings/status",
+    "path": "/api/admin/bookings/status",
+    "file": "src/services/api-client/admin/booking.service.ts",
+    "locator": "REPO-01:src/services/api-client/admin/booking.service.ts#L101",
+    "via": "axios.put",
+    "note": "const APIs.UPDATE_BOOKING_STATUS",
+    "ev": "EV-0246"
+  },
+  {
+    "method": "POST",
+    "url": "/api/admin/bookings/scan",
+    "path": "/api/admin/bookings/scan",
+    "file": "src/services/api-client/admin/booking.service.ts",
+    "locator": "REPO-01:src/services/api-client/admin/booking.service.ts#L106",
+    "via": "axios.post",
+    "note": "const APIs.SCAN_BOOKING_BARCODE",
+    "ev": "EV-0247"
+  },
+  {
+    "method": "POST",
+    "url": "/api/admin/bookings/rollback-scan",
+    "path": "/api/admin/bookings/rollback-scan",
+    "file": "src/services/api-client/admin/booking.service.ts",
+    "locator": "REPO-01:src/services/api-client/admin/booking.service.ts#L111",
+    "via": "axios.post",
+    "note": "const APIs.ROLLBACK_SCAN_BOOKING_BARCODE",
+    "ev": "EV-0248"
+  },
+  {
+    "method": "PUT",
+    "url": "/:id/status",
+    "path": "/:id/status",
+    "file": "src/services/api-client/admin/booking.service.ts",
+    "locator": "REPO-01:src/services/api-client/admin/booking.service.ts#L116",
+    "via": "axios.put",
+    "note": "",
+    "ev": "EV-0249"
+  },
+  {
+    "method": "POST",
+    "url": "/:bookingId/force-recompute-obic",
+    "path": "/:bookingId/force-recompute-obic",
+    "file": "src/services/api-client/admin/booking.service.ts",
+    "locator": "REPO-01:src/services/api-client/admin/booking.service.ts#L121",
+    "via": "axios.post",
+    "note": "",
+    "ev": "EV-0250"
+  },
+  {
+    "method": "GET",
+    "url": "/api/admin/charts/average-stay-duration",
+    "path": "/api/admin/charts/average-stay-duration",
+    "file": "src/services/api-client/admin/chart.service.ts",
+    "locator": "REPO-01:src/services/api-client/admin/chart.service.ts#L20",
+    "via": "axios.get",
+    "note": "const APIs.CHARTS_AVERAGE_STAY_DURATION",
+    "ev": "EV-0251"
+  },
+  {
+    "method": "GET",
+    "url": "/api/admin/charts/average-booking-times",
+    "path": "/api/admin/charts/average-booking-times",
+    "file": "src/services/api-client/admin/chart.service.ts",
+    "locator": "REPO-01:src/services/api-client/admin/chart.service.ts#L25",
+    "via": "axios.get",
+    "note": "const APIs.CHARTS_AVERAGE_BOOKING_TIMES",
+    "ev": "EV-0252"
+  },
+  {
+    "method": "GET",
+    "url": "/api/admin/charts/total-bookings-with-times",
+    "path": "/api/admin/charts/total-bookings-with-times",
+    "file": "src/services/api-client/admin/chart.service.ts",
+    "locator": "REPO-01:src/services/api-client/admin/chart.service.ts#L30",
+    "via": "axios.get",
+    "note": "const APIs.CHARTS_TOTAL_BOOKINGS_WITH_TIMES",
+    "ev": "EV-0253"
+  },
+  {
+    "method": "GET",
+    "url": "/api/admin/charts/total-bookings-with-ticket",
+    "path": "/api/admin/charts/total-bookings-with-ticket",
+    "file": "src/services/api-client/admin/chart.service.ts",
+    "locator": "REPO-01:src/services/api-client/admin/chart.service.ts#L35",
+    "via": "axios.get",
+    "note": "const APIs.CHARTS_TOTAL_BOOKINGS_WITH_TICKET",
+    "ev": "EV-0254"
+  },
+  {
+    "method": "GET",
+    "url": "/api/admin/charts/total-new-and-old-booking-users",
+    "path": "/api/admin/charts/total-new-and-old-booking-users",
+    "file": "src/services/api-client/admin/chart.service.ts",
+    "locator": "REPO-01:src/services/api-client/admin/chart.service.ts#L40",
+    "via": "axios.get",
+    "note": "const APIs.CHARTS_TOTAL_NEW_AND_OLD_BOOKING_USERS",
+    "ev": "EV-0255"
+  },
+  {
+    "method": "GET",
+    "url": "/:userId",
+    "path": "/:userId",
+    "file": "src/services/api-client/admin/credit-card.service.ts",
+    "locator": "REPO-01:src/services/api-client/admin/credit-card.service.ts#L10",
+    "via": "axios.get",
+    "note": "",
+    "ev": "EV-0256"
+  },
+  {
+    "method": "GET",
+    "url": "/api/admin/email-settings",
+    "path": "/api/admin/email-settings",
+    "file": "src/services/api-client/admin/email-setting.service.ts",
+    "locator": "REPO-01:src/services/api-client/admin/email-setting.service.ts#L12",
+    "via": "axios.get",
+    "note": "const APIs.EMAIL_SETTINGS",
+    "ev": "EV-0257"
+  },
+  {
+    "method": "GET",
+    "url": "/:key",
+    "path": "/:key",
+    "file": "src/services/api-client/admin/email-setting.service.ts",
+    "locator": "REPO-01:src/services/api-client/admin/email-setting.service.ts#L17",
+    "via": "axios.get",
+    "note": "",
+    "ev": "EV-0258"
+  },
+  {
+    "method": "POST",
+    "url": "/api/admin/email-settings",
+    "path": "/api/admin/email-settings",
+    "file": "src/services/api-client/admin/email-setting.service.ts",
+    "locator": "REPO-01:src/services/api-client/admin/email-setting.service.ts#L22",
+    "via": "axios.post",
+    "note": "const APIs.EMAIL_SETTINGS",
+    "ev": "EV-0259"
+  },
+  {
+    "method": "PUT",
+    "url": "/:emailKey",
+    "path": "/:emailKey",
+    "file": "src/services/api-client/admin/email-setting.service.ts",
+    "locator": "REPO-01:src/services/api-client/admin/email-setting.service.ts#L27",
+    "via": "axios.put",
+    "note": "",
+    "ev": "EV-0260"
+  },
+  {
+    "method": "DELETE",
+    "url": "/:emailKey",
+    "path": "/:emailKey",
+    "file": "src/services/api-client/admin/email-setting.service.ts",
+    "locator": "REPO-01:src/services/api-client/admin/email-setting.service.ts#L32",
+    "via": "axios.delete",
+    "note": "",
+    "ev": "EV-0261"
+  },
+  {
+    "method": "GET",
+    "url": "/:id",
+    "path": "/:id",
+    "file": "src/services/api-client/admin/gmo-setting.service.ts",
+    "locator": "REPO-01:src/services/api-client/admin/gmo-setting.service.ts#L17",
+    "via": "axios.get",
+    "note": "",
+    "ev": "EV-0262"
+  },
+  {
+    "method": "PUT",
+    "url": "/:id",
+    "path": "/:id",
+    "file": "src/services/api-client/admin/gmo-setting.service.ts",
+    "locator": "REPO-01:src/services/api-client/admin/gmo-setting.service.ts#L27",
+    "via": "axios.put",
+    "note": "",
+    "ev": "EV-0263"
+  },
+  {
+    "method": "DELETE",
+    "url": "/:id",
+    "path": "/:id",
+    "file": "src/services/api-client/admin/gmo-setting.service.ts",
+    "locator": "REPO-01:src/services/api-client/admin/gmo-setting.service.ts#L32",
+    "via": "axios.delete",
+    "note": "",
+    "ev": "EV-0264"
+  },
+  {
+    "method": "GET",
+    "url": "/:id",
+    "path": "/:id",
+    "file": "src/services/api-client/admin/news.service.ts",
+    "locator": "REPO-01:src/services/api-client/admin/news.service.ts#L15",
+    "via": "axios.get",
+    "note": "",
+    "ev": "EV-0265"
+  },
+  {
+    "method": "PUT",
+    "url": "/:id",
+    "path": "/:id",
+    "file": "src/services/api-client/admin/news.service.ts",
+    "locator": "REPO-01:src/services/api-client/admin/news.service.ts#L25",
+    "via": "axios.put",
+    "note": "",
+    "ev": "EV-0266"
+  },
+  {
+    "method": "DELETE",
+    "url": "/:id",
+    "path": "/:id",
+    "file": "src/services/api-client/admin/news.service.ts",
+    "locator": "REPO-01:src/services/api-client/admin/news.service.ts#L30",
+    "via": "axios.delete",
+    "note": "",
+    "ev": "EV-0267"
+  },
+  {
+    "method": "GET",
+    "url": "/api/admin/revenue-management",
+    "path": "/api/admin/revenue-management",
+    "file": "src/services/api-client/admin/revenue-management.service.ts",
+    "locator": "REPO-01:src/services/api-client/admin/revenue-management.service.ts#L27",
+    "via": "axios.get",
+    "note": "const APIs.REVENUES_INFORMATION",
+    "ev": "EV-0268"
+  },
+  {
+    "method": "GET",
+    "url": "/api/admin/revenue-management/count",
+    "path": "/api/admin/revenue-management/count",
+    "file": "src/services/api-client/admin/revenue-management.service.ts",
+    "locator": "REPO-01:src/services/api-client/admin/revenue-management.service.ts#L32",
+    "via": "axios.get",
+    "note": "const APIs.COUNT_RECORD",
+    "ev": "EV-0269"
+  },
+  {
+    "method": "POST",
+    "url": "/api/admin/staffs",
+    "path": "/api/admin/staffs",
+    "file": "src/services/api-client/admin/staff.service.ts",
+    "locator": "REPO-01:src/services/api-client/admin/staff.service.ts#L12",
+    "via": "axios.post",
+    "note": "const APIs.STAFFS",
+    "ev": "EV-0270"
+  },
+  {
+    "method": "GET",
+    "url": "/api/admin/staffs",
+    "path": "/api/admin/staffs",
+    "file": "src/services/api-client/admin/staff.service.ts",
+    "locator": "REPO-01:src/services/api-client/admin/staff.service.ts#L17",
+    "via": "axios.get",
+    "note": "const APIs.STAFFS",
+    "ev": "EV-0271"
+  },
+  {
+    "method": "GET",
+    "url": "/api/admin/staffs/count",
+    "path": "/api/admin/staffs/count",
+    "file": "src/services/api-client/admin/staff.service.ts",
+    "locator": "REPO-01:src/services/api-client/admin/staff.service.ts#L22",
+    "via": "axios.get",
+    "note": "const APIs.COUNT_STAFFS",
+    "ev": "EV-0272"
+  },
+  {
+    "method": "DELETE",
+    "url": "/:id",
+    "path": "/:id",
+    "file": "src/services/api-client/admin/staff.service.ts",
+    "locator": "REPO-01:src/services/api-client/admin/staff.service.ts#L27",
+    "via": "axios.delete",
+    "note": "",
+    "ev": "EV-0273"
+  },
+  {
+    "method": "GET",
+    "url": "/:id",
+    "path": "/:id",
+    "file": "src/services/api-client/admin/staff.service.ts",
+    "locator": "REPO-01:src/services/api-client/admin/staff.service.ts#L32",
+    "via": "axios.get",
+    "note": "",
+    "ev": "EV-0274"
+  },
+  {
+    "method": "PUT",
+    "url": "/:id",
+    "path": "/:id",
+    "file": "src/services/api-client/admin/staff.service.ts",
+    "locator": "REPO-01:src/services/api-client/admin/staff.service.ts#L37",
+    "via": "axios.put",
+    "note": "",
+    "ev": "EV-0275"
+  },
+  {
+    "method": "GET",
+    "url": "/:tenantCode",
+    "path": "/:tenantCode",
+    "file": "src/services/api-client/admin/tenant.service.ts",
+    "locator": "REPO-01:src/services/api-client/admin/tenant.service.ts#L17",
+    "via": "axios.get",
+    "note": "",
+    "ev": "EV-0276"
+  },
+  {
+    "method": "PUT",
+    "url": "/:code",
+    "path": "/:code",
+    "file": "src/services/api-client/admin/tenant.service.ts",
+    "locator": "REPO-01:src/services/api-client/admin/tenant.service.ts#L27",
+    "via": "axios.put",
+    "note": "",
+    "ev": "EV-0277"
+  },
+  {
+    "method": "PATCH",
+    "url": "/:tenantCode",
+    "path": "/:tenantCode",
+    "file": "src/services/api-client/admin/tenant.service.ts",
+    "locator": "REPO-01:src/services/api-client/admin/tenant.service.ts#L32",
+    "via": "axios.patch",
+    "note": "",
+    "ev": "EV-0278"
+  },
+  {
+    "method": "DELETE",
+    "url": "/:code",
+    "path": "/:code",
+    "file": "src/services/api-client/admin/tenant.service.ts",
+    "locator": "REPO-01:src/services/api-client/admin/tenant.service.ts#L37",
+    "via": "axios.delete",
+    "note": "",
+    "ev": "EV-0279"
+  },
+  {
+    "method": "GET",
+    "url": "/api/admin/tenants/count",
+    "path": "/api/admin/tenants/count",
+    "file": "src/services/api-client/admin/tenant.service.ts",
+    "locator": "REPO-01:src/services/api-client/admin/tenant.service.ts#L42",
+    "via": "axios.get",
+    "note": "const APIs.COUNT_TENANTS",
+    "ev": "EV-0280"
+  },
+  {
+    "method": "GET",
+    "url": "/api/admin/tickets/count",
+    "path": "/api/admin/tickets/count",
+    "file": "src/services/api-client/admin/ticket.service.ts",
+    "locator": "REPO-01:src/services/api-client/admin/ticket.service.ts#L33",
+    "via": "axios.get",
+    "note": "const APIs.TICKETS_COUNT",
+    "ev": "EV-0281"
+  },
+  {
+    "method": "GET",
+    "url": "/:id",
+    "path": "/:id",
+    "file": "src/services/api-client/admin/ticket.service.ts",
+    "locator": "REPO-01:src/services/api-client/admin/ticket.service.ts#L38",
+    "via": "axios.get",
+    "note": "",
+    "ev": "EV-0282"
+  },
+  {
+    "method": "PUT",
+    "url": "/:ticketId",
+    "path": "/:ticketId",
+    "file": "src/services/api-client/admin/ticket.service.ts",
+    "locator": "REPO-01:src/services/api-client/admin/ticket.service.ts#L48",
+    "via": "axios.put",
+    "note": "",
+    "ev": "EV-0283"
+  },
+  {
+    "method": "PATCH",
+    "url": "/:ticketId",
+    "path": "/:ticketId",
+    "file": "src/services/api-client/admin/ticket.service.ts",
+    "locator": "REPO-01:src/services/api-client/admin/ticket.service.ts#L53",
+    "via": "axios.patch",
+    "note": "",
+    "ev": "EV-0284"
+  },
+  {
+    "method": "DELETE",
+    "url": "/:ticketId",
+    "path": "/:ticketId",
+    "file": "src/services/api-client/admin/ticket.service.ts",
+    "locator": "REPO-01:src/services/api-client/admin/ticket.service.ts#L58",
+    "via": "axios.delete",
+    "note": "",
+    "ev": "EV-0285"
+  },
+  {
+    "method": "POST",
+    "url": "/:ticketId/backfill-obic-codes",
+    "path": "/:ticketId/backfill-obic-codes",
+    "file": "src/services/api-client/admin/ticket.service.ts",
+    "locator": "REPO-01:src/services/api-client/admin/ticket.service.ts#L63",
+    "via": "axios.post",
+    "note": "",
+    "ev": "EV-0286"
+  },
+  {
+    "method": "GET",
+    "url": "/api/admin/tickets/has-booking",
+    "path": "/api/admin/tickets/has-booking",
+    "file": "src/services/api-client/admin/ticket.service.ts",
+    "locator": "REPO-01:src/services/api-client/admin/ticket.service.ts#L78",
+    "via": "axios.get",
+    "note": "const APIs.HAS_BOOKING",
+    "ev": "EV-0287"
+  },
+  {
+    "method": "GET",
+    "url": "/api/admin/ticket-booking-schedules/has-booking",
+    "path": "/api/admin/ticket-booking-schedules/has-booking",
+    "file": "src/services/api-client/admin/ticket.service.ts",
+    "locator": "REPO-01:src/services/api-client/admin/ticket.service.ts#L83",
+    "via": "axios.get",
+    "note": "const APIs.TICKET_BOOKING_SCHEDULES_HAS_BOOKING",
+    "ev": "EV-0288"
+  },
+  {
+    "method": "GET",
+    "url": "/api/admin/users",
+    "path": "/api/admin/users",
+    "file": "src/services/api-client/admin/user.service.ts",
+    "locator": "REPO-01:src/services/api-client/admin/user.service.ts#L11",
+    "via": "axios.get",
+    "note": "const APIs.USERS",
+    "ev": "EV-0289"
+  },
+  {
+    "method": "GET",
+    "url": "/:id",
+    "path": "/:id",
+    "file": "src/services/api-client/admin/user.service.ts",
+    "locator": "REPO-01:src/services/api-client/admin/user.service.ts#L16",
+    "via": "axios.get",
+    "note": "",
+    "ev": "EV-0290"
+  },
+  {
+    "method": "POST",
+    "url": "/api/admin/users",
+    "path": "/api/admin/users",
+    "file": "src/services/api-client/admin/user.service.ts",
+    "locator": "REPO-01:src/services/api-client/admin/user.service.ts#L21",
+    "via": "axios.post",
+    "note": "const APIs.USERS",
+    "ev": "EV-0291"
+  },
+  {
+    "method": "PUT",
+    "url": "/:id",
+    "path": "/:id",
+    "file": "src/services/api-client/admin/user.service.ts",
+    "locator": "REPO-01:src/services/api-client/admin/user.service.ts#L26",
+    "via": "axios.put",
+    "note": "",
+    "ev": "EV-0292"
+  },
+  {
+    "method": "DELETE",
+    "url": "/:id",
+    "path": "/:id",
+    "file": "src/services/api-client/admin/user.service.ts",
+    "locator": "REPO-01:src/services/api-client/admin/user.service.ts#L31",
+    "via": "axios.delete",
+    "note": "",
+    "ev": "EV-0293"
+  },
+  {
+    "method": "GET",
+    "url": "/api/admin/users/count",
+    "path": "/api/admin/users/count",
+    "file": "src/services/api-client/admin/user.service.ts",
+    "locator": "REPO-01:src/services/api-client/admin/user.service.ts#L36",
+    "via": "axios.get",
+    "note": "const APIs.COUNT_USERS",
+    "ev": "EV-0294"
+  },
+  {
+    "method": "GET",
+    "url": "/:settingKey",
+    "path": "/:settingKey",
+    "file": "src/services/api-client/app-setting.service.ts",
+    "locator": "REPO-01:src/services/api-client/app-setting.service.ts#L10",
+    "via": "axios.get",
+    "note": "",
+    "ev": "EV-0295"
+  },
+  {
+    "method": "POST",
+    "url": "/api/auth/signup",
+    "path": "/api/auth/signup",
+    "file": "src/services/api-client/auth.service.ts",
+    "locator": "REPO-01:src/services/api-client/auth.service.ts#L21",
+    "via": "axios.post",
+    "note": "const APIs.SIGNUP",
+    "ev": "EV-0296"
+  },
+  {
+    "method": "POST",
+    "url": "/api/auth/update-password",
+    "path": "/api/auth/update-password",
+    "file": "src/services/api-client/auth.service.ts",
+    "locator": "REPO-01:src/services/api-client/auth.service.ts#L31",
+    "via": "axios.post",
+    "note": "const APIs.UPDATE_PASSWORD",
+    "ev": "EV-0297"
+  },
+  {
+    "method": "POST",
+    "url": "/api/auth/reset-password",
+    "path": "/api/auth/reset-password",
+    "file": "src/services/api-client/auth.service.ts",
+    "locator": "REPO-01:src/services/api-client/auth.service.ts#L36",
+    "via": "axios.post",
+    "note": "const APIs.RESET_PASSWORD",
+    "ev": "EV-0298"
+  },
+  {
+    "method": "POST",
+    "url": "/api/auth/change-password",
+    "path": "/api/auth/change-password",
+    "file": "src/services/api-client/auth.service.ts",
+    "locator": "REPO-01:src/services/api-client/auth.service.ts#L41",
+    "via": "axios.post",
+    "note": "const APIs.CHANGE_PASSWORD",
+    "ev": "EV-0299"
+  },
+  {
+    "method": "GET",
+    "url": "/:token",
+    "path": "/:token",
+    "file": "src/services/api-client/auth.service.ts",
+    "locator": "REPO-01:src/services/api-client/auth.service.ts#L46",
+    "via": "axios.get",
+    "note": "",
+    "ev": "EV-0300"
+  },
+  {
+    "method": "PUT",
+    "url": "/api/auth/change-email",
+    "path": "/api/auth/change-email",
+    "file": "src/services/api-client/auth.service.ts",
+    "locator": "REPO-01:src/services/api-client/auth.service.ts#L51",
+    "via": "axios.put",
+    "note": "const APIs.CHANGE_EMAIL",
+    "ev": "EV-0301"
+  },
+  {
+    "method": "POST",
+    "url": "/api/auth/resend-verification-email",
+    "path": "/api/auth/resend-verification-email",
+    "file": "src/services/api-client/auth.service.ts",
+    "locator": "REPO-01:src/services/api-client/auth.service.ts#L56",
+    "via": "axios.post",
+    "note": "const APIs.RESEND_VERIFICATION_EMAIL",
+    "ev": "EV-0302"
+  },
+  {
+    "method": "POST",
+    "url": "/api/auth/request-unlock-account",
+    "path": "/api/auth/request-unlock-account",
+    "file": "src/services/api-client/auth.service.ts",
+    "locator": "REPO-01:src/services/api-client/auth.service.ts#L61",
+    "via": "axios.post",
+    "note": "const APIs.REQUEST_UNLOCK_ACCOUNT",
+    "ev": "EV-0303"
+  },
+  {
+    "method": "POST",
+    "url": "/api/auth/unlock-account",
+    "path": "/api/auth/unlock-account",
+    "file": "src/services/api-client/auth.service.ts",
+    "locator": "REPO-01:src/services/api-client/auth.service.ts#L66",
+    "via": "axios.post",
+    "note": "const APIs.UNLOCK_ACCOUNT",
+    "ev": "EV-0304"
+  },
+  {
+    "method": "POST",
+    "url": "/api/auth/check-admin-credentials",
+    "path": "/api/auth/check-admin-credentials",
+    "file": "src/services/api-client/auth.service.ts",
+    "locator": "REPO-01:src/services/api-client/auth.service.ts#L71",
+    "via": "axios.post",
+    "note": "const APIs.CHECK_ADMIN_CREDENTIALS",
+    "ev": "EV-0305"
+  },
+  {
+    "method": "GET",
+    "url": "/api/auth/security-questions",
+    "path": "/api/auth/security-questions",
+    "file": "src/services/api-client/auth.service.ts",
+    "locator": "REPO-01:src/services/api-client/auth.service.ts#L76",
+    "via": "axios.get",
+    "note": "const APIs.SECURITY_QUESTIONS",
+    "ev": "EV-0306"
+  },
+  {
+    "method": "GET",
+    "url": "/api/user/bookings",
+    "path": "/api/user/bookings",
+    "file": "src/services/api-client/booking.service.ts",
+    "locator": "REPO-01:src/services/api-client/booking.service.ts#L48",
+    "via": "axios.get",
+    "note": "const APIs.USER_BOOKINGS",
+    "ev": "EV-0307"
+  },
+  {
+    "method": "GET",
+    "url": "/:id",
+    "path": "/:id",
+    "file": "src/services/api-client/booking.service.ts",
+    "locator": "REPO-01:src/services/api-client/booking.service.ts#L53",
+    "via": "axios.get",
+    "note": "",
+    "ev": "EV-0308"
+  },
+  {
+    "method": "PUT",
+    "url": "/:id",
+    "path": "/:id",
+    "file": "src/services/api-client/booking.service.ts",
+    "locator": "REPO-01:src/services/api-client/booking.service.ts#L58",
+    "via": "axios.put",
+    "note": "",
+    "ev": "EV-0309"
+  },
+  {
+    "method": "GET",
+    "url": "/api/bookings/vacancies/status",
+    "path": "/api/bookings/vacancies/status",
+    "file": "src/services/api-client/booking.service.ts",
+    "locator": "REPO-01:src/services/api-client/booking.service.ts#L78",
+    "via": "axios.get",
+    "note": "const APIs.BOOKING_VACANCIES_STATUS",
+    "ev": "EV-0310"
+  },
+  {
+    "method": "GET",
+    "url": "/:id",
+    "path": "/:id",
+    "file": "src/services/api-client/booking.service.ts",
+    "locator": "REPO-01:src/services/api-client/booking.service.ts#L88",
+    "via": "axios.get",
+    "note": "",
+    "ev": "EV-0311"
+  },
+  {
+    "method": "PATCH",
+    "url": "/:id/payment-status",
+    "path": "/:id/payment-status",
+    "file": "src/services/api-client/booking.service.ts",
+    "locator": "REPO-01:src/services/api-client/booking.service.ts#L108",
+    "via": "axios.patch",
+    "note": "",
+    "ev": "EV-0312"
+  },
+  {
+    "method": "POST",
+    "url": "/api/error-report",
+    "path": "/api/error-report",
+    "file": "src/services/api-client/error-report.service.ts",
+    "locator": "REPO-01:src/services/api-client/error-report.service.ts#L10",
+    "via": "axios.post",
+    "note": "const APIs.ERROR_REPORT",
+    "ev": "EV-0313"
+  },
+  {
+    "method": "GET",
+    "url": "/api/tenants/count",
+    "path": "/api/tenants/count",
+    "file": "src/services/api-client/tenant.service.ts",
+    "locator": "REPO-01:src/services/api-client/tenant.service.ts#L26",
+    "via": "axios.get",
+    "note": "const APIs.TENANTS_COUNT",
+    "ev": "EV-0314"
+  },
+  {
+    "method": "GET",
+    "url": "/:value",
+    "path": "/:value",
+    "file": "src/services/api-client/tenant.service.ts",
+    "locator": "REPO-01:src/services/api-client/tenant.service.ts#L31",
+    "via": "axios.get",
+    "note": "",
+    "ev": "EV-0315"
+  },
+  {
+    "method": "GET",
+    "url": "/:id",
+    "path": "/:id",
+    "file": "src/services/api-client/ticket.service.ts",
+    "locator": "REPO-01:src/services/api-client/ticket.service.ts#L40",
+    "via": "axios.get",
+    "note": "",
+    "ev": "EV-0316"
+  },
+  {
+    "method": "GET",
+    "url": "/:masterTicketId",
+    "path": "/:masterTicketId",
+    "file": "src/services/api-client/ticket.service.ts",
+    "locator": "REPO-01:src/services/api-client/ticket.service.ts#L45",
+    "via": "axios.get",
+    "note": "",
+    "ev": "EV-0317"
+  },
+  {
+    "method": "POST",
+    "url": "/api/upload",
+    "path": "/api/upload",
+    "file": "src/services/api-client/upload.service.ts",
+    "locator": "REPO-01:src/services/api-client/upload.service.ts#L16",
+    "via": "axios.post",
+    "note": "const APIs.UPLOAD",
+    "ev": "EV-0318"
+  },
+  {
+    "method": "GET",
+    "url": "/api/user",
+    "path": "/api/user",
+    "file": "src/services/api-client/user.service.ts",
+    "locator": "REPO-01:src/services/api-client/user.service.ts#L79",
+    "via": "axios.get",
+    "note": "const APIs.USER",
+    "ev": "EV-0319"
+  },
+  {
+    "method": "PUT",
+    "url": "/api/user",
+    "path": "/api/user",
+    "file": "src/services/api-client/user.service.ts",
+    "locator": "REPO-01:src/services/api-client/user.service.ts#L84",
+    "via": "axios.put",
+    "note": "const APIs.USER",
+    "ev": "EV-0320"
+  },
+  {
+    "method": "DELETE",
+    "url": "/api/user",
+    "path": "/api/user",
+    "file": "src/services/api-client/user.service.ts",
+    "locator": "REPO-01:src/services/api-client/user.service.ts#L89",
+    "via": "axios.delete",
+    "note": "const APIs.USER",
+    "ev": "EV-0321"
+  },
+  {
+    "method": "GET",
+    "url": "/api/user/bookings",
+    "path": "/api/user/bookings",
+    "file": "src/services/api-client/user.service.ts",
+    "locator": "REPO-01:src/services/api-client/user.service.ts#L95",
+    "via": "axios.get",
+    "note": "const APIs.HISTORY_LIST",
+    "ev": "EV-0322"
+  },
+  {
+    "method": "GET",
+    "url": "/:id",
+    "path": "/:id",
+    "file": "src/services/api-client/user.service.ts",
+    "locator": "REPO-01:src/services/api-client/user.service.ts#L100",
+    "via": "axios.get",
+    "note": "",
+    "ev": "EV-0323"
+  },
+  {
+    "method": "GET",
+    "url": "/api/user/bookings/monthly-tickets",
+    "path": "/api/user/bookings/monthly-tickets",
+    "file": "src/services/api-client/user.service.ts",
+    "locator": "REPO-01:src/services/api-client/user.service.ts#L105",
+    "via": "axios.get",
+    "note": "const APIs.MONTHLY_TICKETS",
+    "ev": "EV-0324"
+  },
+  {
+    "method": "GET",
+    "url": "/api/user/bookings/monthly-tickets/check-already-used-across-tenants",
+    "path": "/api/user/bookings/monthly-tickets/check-already-used-across-tenants",
+    "file": "src/services/api-client/user.service.ts",
+    "locator": "REPO-01:src/services/api-client/user.service.ts#L110",
+    "via": "axios.get",
+    "note": "const APIs.MONTHLY_TICKET_CHECK_ALREADY_USED",
+    "ev": "EV-0325"
+  },
+  {
+    "method": "GET",
+    "url": "/api/user/bookings/monthly-tickets/count",
+    "path": "/api/user/bookings/monthly-tickets/count",
+    "file": "src/services/api-client/user.service.ts",
+    "locator": "REPO-01:src/services/api-client/user.service.ts#L115",
+    "via": "axios.get",
+    "note": "const APIs.MONTHLY_TICKETS_COUNT",
+    "ev": "EV-0326"
+  },
+  {
+    "method": "GET",
+    "url": "/api/user/bookings/times-limit-tickets",
+    "path": "/api/user/bookings/times-limit-tickets",
+    "file": "src/services/api-client/user.service.ts",
+    "locator": "REPO-01:src/services/api-client/user.service.ts#L120",
+    "via": "axios.get",
+    "note": "const APIs.TIMES_LIMIT_TICKETS",
+    "ev": "EV-0327"
+  },
+  {
+    "method": "GET",
+    "url": "/api/user/bookings/times-limit-tickets/count",
+    "path": "/api/user/bookings/times-limit-tickets/count",
+    "file": "src/services/api-client/user.service.ts",
+    "locator": "REPO-01:src/services/api-client/user.service.ts#L125",
+    "via": "axios.get",
+    "note": "const APIs.TIMES_LIMIT_TICKETS_COUNT",
+    "ev": "EV-0328"
+  },
+  {
+    "method": "POST",
+    "url": "/:tenantCode",
+    "path": "/:tenantCode",
+    "file": "src/services/api-client/user.service.ts",
+    "locator": "REPO-01:src/services/api-client/user.service.ts#L130",
+    "via": "axios.post",
+    "note": "",
+    "ev": "EV-0329"
+  },
+  {
+    "method": "DELETE",
+    "url": "/:tenantCode",
+    "path": "/:tenantCode",
+    "file": "src/services/api-client/user.service.ts",
+    "locator": "REPO-01:src/services/api-client/user.service.ts#L135",
+    "via": "axios.delete",
+    "note": "",
+    "ev": "EV-0330"
+  },
+  {
+    "method": "GET",
+    "url": "/api/user/tenant-favorites",
+    "path": "/api/user/tenant-favorites",
+    "file": "src/services/api-client/user.service.ts",
+    "locator": "REPO-01:src/services/api-client/user.service.ts#L140",
+    "via": "axios.get",
+    "note": "const APIs.TENANT_FAVORITES",
+    "ev": "EV-0331"
+  },
+  {
+    "method": "GET",
+    "url": "/api/user/tenant-favorites/count",
+    "path": "/api/user/tenant-favorites/count",
+    "file": "src/services/api-client/user.service.ts",
+    "locator": "REPO-01:src/services/api-client/user.service.ts#L145",
+    "via": "axios.get",
+    "note": "const APIs.COUNT_TENANT_FAVORITES",
+    "ev": "EV-0332"
+  },
+  {
+    "method": "POST",
+    "url": "/api/user/credit-card/save",
+    "path": "/api/user/credit-card/save",
+    "file": "src/services/api-client/user.service.ts",
+    "locator": "REPO-01:src/services/api-client/user.service.ts#L155",
+    "via": "axios.post",
+    "note": "const APIs.SAVE_CREDIT_CARD",
+    "ev": "EV-0333"
+  },
+  {
+    "method": "POST",
+    "url": "/api/user/credit-card/delete",
+    "path": "/api/user/credit-card/delete",
+    "file": "src/services/api-client/user.service.ts",
+    "locator": "REPO-01:src/services/api-client/user.service.ts#L160",
+    "via": "axios.post",
+    "note": "const APIs.DELETE_CREDIT_CARD",
+    "ev": "EV-0334"
+  },
+  {
+    "method": "GET",
+    "url": "/api/user/bookings/last-booking",
+    "path": "/api/user/bookings/last-booking",
+    "file": "src/services/api-client/user.service.ts",
+    "locator": "REPO-01:src/services/api-client/user.service.ts#L165",
+    "via": "axios.get",
+    "note": "const APIs.LAST_BOOKING",
+    "ev": "EV-0335"
+  },
+  {
+    "method": "POST",
+    "url": "/api/user/bookings/cancel",
+    "path": "/api/user/bookings/cancel",
+    "file": "src/services/api-client/user.service.ts",
+    "locator": "REPO-01:src/services/api-client/user.service.ts#L170",
+    "via": "axios.post",
+    "note": "const APIs.CANCEL_BOOKING",
+    "ev": "EV-0336"
+  },
+  {
+    "method": "GET",
+    "url": "/api/user/check-required-info",
+    "path": "/api/user/check-required-info",
+    "file": "src/services/api-client/user.service.ts",
+    "locator": "REPO-01:src/services/api-client/user.service.ts#L175",
+    "via": "axios.get",
+    "note": "const APIs.CHECK_REQUIRED_INFORMATION",
+    "ev": "EV-0337"
+  },
+  {
+    "method": "PUT",
+    "url": "/api/user/edit-email",
+    "path": "/api/user/edit-email",
+    "file": "src/services/api-client/user.service.ts",
+    "locator": "REPO-01:src/services/api-client/user.service.ts#L185",
+    "via": "axios.put",
+    "note": "const APIs.EDIT_EMAIL_USER",
+    "ev": "EV-0338"
+  },
+  {
+    "method": "PATCH",
+    "url": "/api/user/bookings/request-re-check-in",
+    "path": "/api/user/bookings/request-re-check-in",
+    "file": "src/services/api-client/user.service.ts",
+    "locator": "REPO-01:src/services/api-client/user.service.ts#L190",
+    "via": "axios.patch",
+    "note": "const APIs.REQUEST_RE_CHECK_IN",
+    "ev": "EV-0339"
+  },
+  {
+    "method": "POST",
+    "url": "/api/user/check-existing-email",
+    "path": "/api/user/check-existing-email",
+    "file": "src/services/api-client/user.service.ts",
+    "locator": "REPO-01:src/services/api-client/user.service.ts#L195",
+    "via": "axios.post",
+    "note": "const APIs.CHECK_EXISTING_EMAIL",
+    "ev": "EV-0340"
+  },
+  {
+    "method": "POST",
+    "url": "/:bookingId",
+    "path": "/:bookingId",
+    "file": "src/services/api-client/user.service.ts",
+    "locator": "REPO-01:src/services/api-client/user.service.ts#L200",
+    "via": "axios.post",
+    "note": "",
+    "ev": "EV-0341"
+  },
+  {
+    "method": "POST",
+    "url": "/api/admin/tickets/obic-codes/export",
+    "path": "/api/admin/tickets/obic-codes/export",
+    "file": "src/services/gmo.service.ts",
+    "locator": "REPO-01:src/services/gmo.service.ts#L145",
+    "via": "axios.post",
+    "note": "const url",
+    "ev": "EV-0342"
+  },
+  {
+    "method": "POST",
+    "url": "/api/admin/tickets/obic-codes/export",
+    "path": "/api/admin/tickets/obic-codes/export",
+    "file": "src/services/gmo.service.ts",
+    "locator": "REPO-01:src/services/gmo.service.ts#L157",
+    "via": "axios.post",
+    "note": "const url",
+    "ev": "EV-0343"
+  },
+  {
+    "method": "POST",
+    "url": "/api/admin/tickets/obic-codes/export",
+    "path": "/api/admin/tickets/obic-codes/export",
+    "file": "src/services/gmo.service.ts",
+    "locator": "REPO-01:src/services/gmo.service.ts#L170",
+    "via": "axios.post",
+    "note": "const url",
+    "ev": "EV-0344"
+  },
+  {
+    "method": "POST",
+    "url": "/api/admin/tickets/obic-codes/export",
+    "path": "/api/admin/tickets/obic-codes/export",
+    "file": "src/services/gmo.service.ts",
+    "locator": "REPO-01:src/services/gmo.service.ts#L182",
+    "via": "axios.post",
+    "note": "const url",
+    "ev": "EV-0345"
+  },
+  {
+    "method": "POST",
+    "url": "/api/admin/tickets/obic-codes/export",
+    "path": "/api/admin/tickets/obic-codes/export",
+    "file": "src/services/gmo.service.ts",
+    "locator": "REPO-01:src/services/gmo.service.ts#L194",
+    "via": "axios.post",
+    "note": "const url",
+    "ev": "EV-0346"
+  },
+  {
+    "method": "POST",
+    "url": "/api/admin/tickets/obic-codes/export",
+    "path": "/api/admin/tickets/obic-codes/export",
+    "file": "src/services/gmo.service.ts",
+    "locator": "REPO-01:src/services/gmo.service.ts#L206",
+    "via": "axios.post",
+    "note": "const url",
+    "ev": "EV-0347"
+  },
+  {
+    "method": "POST",
+    "url": "/api/admin/tickets/obic-codes/export",
+    "path": "/api/admin/tickets/obic-codes/export",
+    "file": "src/services/gmo.service.ts",
+    "locator": "REPO-01:src/services/gmo.service.ts#L217",
+    "via": "axios.post",
+    "note": "const url",
+    "ev": "EV-0348"
+  },
+  {
+    "method": "POST",
+    "url": "/api/admin/tickets/obic-codes/export",
+    "path": "/api/admin/tickets/obic-codes/export",
+    "file": "src/services/gmo.service.ts",
+    "locator": "REPO-01:src/services/gmo.service.ts#L228",
+    "via": "axios.post",
+    "note": "const url",
+    "ev": "EV-0349"
+  }
+]

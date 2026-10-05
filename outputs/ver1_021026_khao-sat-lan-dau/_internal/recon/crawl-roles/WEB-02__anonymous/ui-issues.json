@@ -1,0 +1,156 @@
+[
+  {
+    "url": "https://dhxkf93d45vp4.cloudfront.net/booking/buy-monthly-ticket",
+    "kind": "consoleErrors",
+    "detail": "1 console error(s) — xem console.json",
+    "evId": "EV-0494",
+    "count": 1
+  },
+  {
+    "url": "https://dhxkf93d45vp4.cloudfront.net/booking/buy-monthly-ticket",
+    "kind": "httpErrors",
+    "detail": "1 response 4xx/5xx — xem network.json",
+    "evId": "EV-0494",
+    "count": 1
+  },
+  {
+    "url": "https://dhxkf93d45vp4.cloudfront.net/booking/buy-times-limit-ticket",
+    "kind": "consoleErrors",
+    "detail": "1 console error(s) — xem console.json",
+    "evId": "EV-0495",
+    "count": 1
+  },
+  {
+    "url": "https://dhxkf93d45vp4.cloudfront.net/booking/buy-times-limit-ticket",
+    "kind": "httpErrors",
+    "detail": "1 response 4xx/5xx — xem network.json",
+    "evId": "EV-0495",
+    "count": 1
+  },
+  {
+    "url": "https://dhxkf93d45vp4.cloudfront.net/booking/use-in-day",
+    "kind": "consoleErrors",
+    "detail": "1 console error(s) — xem console.json",
+    "evId": "EV-0496",
+    "count": 1
+  },
+  {
+    "url": "https://dhxkf93d45vp4.cloudfront.net/booking/use-in-day",
+    "kind": "httpErrors",
+    "detail": "1 response 4xx/5xx — xem network.json",
+    "evId": "EV-0496",
+    "count": 1
+  },
+  {
+    "url": "https://dhxkf93d45vp4.cloudfront.net/user/my-page/favorite-tenants",
+    "kind": "consoleErrors",
+    "detail": "1 console error(s) — xem console.json",
+    "evId": "EV-0514",
+    "count": 1
+  },
+  {
+    "url": "https://dhxkf93d45vp4.cloudfront.net/user/my-page/favorite-tenants",
+    "kind": "httpErrors",
+    "detail": "1 response 4xx/5xx — xem network.json",
+    "evId": "EV-0514",
+    "count": 1
+  },
+  {
+    "url": "https://dhxkf93d45vp4.cloudfront.net/user/my-page/monthly-ticket-status",
+    "kind": "consoleErrors",
+    "detail": "2 console error(s) — xem console.json",
+    "evId": "EV-0515",
+    "count": 2
+  },
+  {
+    "url": "https://dhxkf93d45vp4.cloudfront.net/user/my-page/monthly-ticket-status",
+    "kind": "httpErrors",
+    "detail": "2 response 4xx/5xx — xem network.json",
+    "evId": "EV-0515",
+    "count": 2
+  },
+  {
+    "url": "https://dhxkf93d45vp4.cloudfront.net/user/my-page/times-limit-ticket-status",
+    "kind": "consoleErrors",
+    "detail": "2 console error(s) — xem console.json",
+    "evId": "EV-0523",
+    "count": 2
+  },
+  {
+    "url": "https://dhxkf93d45vp4.cloudfront.net/user/my-page/times-limit-ticket-status",
+    "kind": "httpErrors",
+    "detail": "2 response 4xx/5xx — xem network.json",
+    "evId": "EV-0523",
+    "count": 2
+  },
+  {
+    "url": "https://dhxkf93d45vp4.cloudfront.net/booking/use-in-day?tenantCode=ST",
+    "kind": "consoleErrors",
+    "detail": "2 console error(s) — xem console.json",
+    "evId": "EV-0527",
+    "count": 2
+  },
+  {
+    "url": "https://dhxkf93d45vp4.cloudfront.net/booking/use-in-day?tenantCode=ST",
+    "kind": "httpErrors",
+    "detail": "2 response 4xx/5xx — xem network.json",
+    "evId": "EV-0527",
+    "count": 2
+  },
+  {
+    "url": "https://dhxkf93d45vp4.cloudfront.net/booking/use-in-day?tenantCode=KL",
+    "kind": "consoleErrors",
+    "detail": "2 console error(s) — xem console.json",
+    "evId": "EV-0529",
+    "count": 2
+  },
+  {
+    "url": "https://dhxkf93d45vp4.cloudfront.net/booking/use-in-day?tenantCode=KL",
+    "kind": "httpErrors",
+    "detail": "2 response 4xx/5xx — xem network.json",
+    "evId": "EV-0529",
+    "count": 2
+  },
+  {
+    "url": "https://dhxkf93d45vp4.cloudfront.net/booking/use-in-day?tenantCode=0702",
+    "kind": "consoleErrors",
+    "detail": "2 console error(s) — xem console.json",
+    "evId": "EV-0531",
+    "count": 2
+  },
+  {
+    "url": "https://dhxkf93d45vp4.cloudfront.net/booking/use-in-day?tenantCode=0702",
+    "kind": "httpErrors",
+    "detail": "2 response 4xx/5xx — xem network.json",
+    "evId": "EV-0531",
+    "count": 2
+  },
+  {
+    "url": "https://dhxkf93d45vp4.cloudfront.net/booking/use-in-day?tenantCode=SMAGE",
+    "kind": "consoleErrors",
+    "detail": "2 console error(s) — xem console.json",
+    "evId": "EV-0533",
+    "count": 2
+  },
+  {
+    "url": "https://dhxkf93d45vp4.cloudfront.net/booking/use-in-day?tenantCode=SMAGE",
+    "kind": "httpErrors",
+    "detail": "2 response 4xx/5xx — xem network.json",
+    "evId": "EV-0533",
+    "count": 2
+  },
+  {
+    "url": "https://dhxkf93d45vp4.cloudfront.net/booking/use-in-day?tenantCode=T",
+    "kind": "consoleErrors",
+    "detail": "2 console error(s) — xem console.json",
+    "evId": "EV-0535",
+    "count": 2
+  },
+  {
+    "url": "https://dhxkf93d45vp4.cloudfront.net/booking/use-in-day?tenantCode=T",
+    "kind": "httpErrors",
+    "detail": "2 response 4xx/5xx — xem network.json",
+    "evId": "EV-0535",
+    "count": 2
+  }
+]

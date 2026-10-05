@@ -1,0 +1,3254 @@
+{
+ "service_fn": {
+  "src/services/gmo.service.ts::executeTransaction": {
+   "paths": [
+    ":p/api/gmo/callback"
+   ],
+   "line": 61
+  },
+  "src/services/news.service.ts::fetchNews": {
+   "paths": [
+    "/api/news"
+   ],
+   "line": 15
+  },
+  "src/services/api-client/ticket.service.ts::fetchTickets": {
+   "paths": [
+    "/api/tickets"
+   ],
+   "line": 31
+  },
+  "src/services/api-client/ticket.service.ts::fetchTicketById": {
+   "paths": [
+    "/api/tickets/:p"
+   ],
+   "line": 39
+  },
+  "src/services/api-client/ticket.service.ts::fetchSupportedTicketsByMasterTicketId": {
+   "paths": [
+    "/api/tickets-supported/:p"
+   ],
+   "line": 44
+  },
+  "src/services/api-client/app-setting.service.ts::fetchAppSettingByKey": {
+   "paths": [
+    "/api/app-settings/:p"
+   ],
+   "line": 9
+  },
+  "src/services/api-client/auth.service.ts::signup": {
+   "paths": [
+    "/api/auth/signup"
+   ],
+   "line": 20
+  },
+  "src/services/api-client/auth.service.ts::forgotPassword": {
+   "paths": [
+    "/api/auth/forgot-password"
+   ],
+   "line": 25
+  },
+  "src/services/api-client/auth.service.ts::updatePassword": {
+   "paths": [
+    "/api/auth/update-password"
+   ],
+   "line": 30
+  },
+  "src/services/api-client/auth.service.ts::resetPassword": {
+   "paths": [
+    "/api/auth/reset-password"
+   ],
+   "line": 35
+  },
+  "src/services/api-client/auth.service.ts::changePassword": {
+   "paths": [
+    "/api/auth/change-password"
+   ],
+   "line": 40
+  },
+  "src/services/api-client/auth.service.ts::verifyToken": {
+   "paths": [
+    "/api/auth/verify/:p"
+   ],
+   "line": 45
+  },
+  "src/services/api-client/auth.service.ts::changeEmail": {
+   "paths": [
+    "/api/auth/change-email"
+   ],
+   "line": 50
+  },
+  "src/services/api-client/auth.service.ts::resendVerificationEmail": {
+   "paths": [
+    "/api/auth/resend-verification-email"
+   ],
+   "line": 55
+  },
+  "src/services/api-client/auth.service.ts::requestUnlockAccount": {
+   "paths": [
+    "/api/auth/request-unlock-account"
+   ],
+   "line": 60
+  },
+  "src/services/api-client/auth.service.ts::unlockAccount": {
+   "paths": [
+    "/api/auth/unlock-account"
+   ],
+   "line": 65
+  },
+  "src/services/api-client/auth.service.ts::checkCredentials": {
+   "paths": [
+    "/api/auth/check-admin-credentials"
+   ],
+   "line": 70
+  },
+  "src/services/api-client/auth.service.ts::fetchSecurityQuestions": {
+   "paths": [
+    "/api/auth/security-questions"
+   ],
+   "line": 75
+  },
+  "src/services/api-client/user.service.ts::fetchUser": {
+   "paths": [
+    "/api/user"
+   ],
+   "line": 78
+  },
+  "src/services/api-client/user.service.ts::updateUser": {
+   "paths": [
+    "/api/user"
+   ],
+   "line": 83
+  },
+  "src/services/api-client/user.service.ts::deleteUser": {
+   "paths": [
+    "/api/user"
+   ],
+   "line": 88
+  },
+  "src/services/api-client/user.service.ts::fetchHistoryList": {
+   "paths": [
+    "/api/user/bookings"
+   ],
+   "line": 93
+  },
+  "src/services/api-client/user.service.ts::fetchHistoryDetail": {
+   "paths": [
+    "/api/user/bookings/:p"
+   ],
+   "line": 99
+  },
+  "src/services/api-client/user.service.ts::fetchMonthlyTickets": {
+   "paths": [
+    "/api/user/bookings/monthly-tickets"
+   ],
+   "line": 104
+  },
+  "src/services/api-client/user.service.ts::checkMonthlyTicketCheckAlreadyUsed": {
+   "paths": [
+    "/api/user/bookings/monthly-tickets/check-already-used-across-tenants"
+   ],
+   "line": 109
+  },
+  "src/services/api-client/user.service.ts::fetchTotalMonthlyTickets": {
+   "paths": [
+    "/api/user/bookings/monthly-tickets/count"
+   ],
+   "line": 114
+  },
+  "src/services/api-client/user.service.ts::fetchTimesLimitTickets": {
+   "paths": [
+    "/api/user/bookings/times-limit-tickets"
+   ],
+   "line": 119
+  },
+  "src/services/api-client/user.service.ts::fetchTotalTimesLimitTickets": {
+   "paths": [
+    "/api/user/bookings/times-limit-tickets/count"
+   ],
+   "line": 124
+  },
+  "src/services/api-client/user.service.ts::addFavorite": {
+   "paths": [
+    "/api/user/tenant-favorites/:p"
+   ],
+   "line": 129
+  },
+  "src/services/api-client/user.service.ts::removeFavorite": {
+   "paths": [
+    "/api/user/tenant-favorites/:p"
+   ],
+   "line": 134
+  },
+  "src/services/api-client/user.service.ts::fetchTenantFavorites": {
+   "paths": [
+    "/api/user/tenant-favorites"
+   ],
+   "line": 139
+  },
+  "src/services/api-client/user.service.ts::fetchTotalTenantFavorites": {
+   "paths": [
+    "/api/user/tenant-favorites/count"
+   ],
+   "line": 144
+  },
+  "src/services/api-client/user.service.ts::fetchCreditCard": {
+   "paths": [
+    "/api/user/credit-card/search"
+   ],
+   "line": 149
+  },
+  "src/services/api-client/user.service.ts::saveCreditCard": {
+   "paths": [
+    "/api/user/credit-card/save"
+   ],
+   "line": 154
+  },
+  "src/services/api-client/user.service.ts::deleteCreditCard": {
+   "paths": [
+    "/api/user/credit-card/delete"
+   ],
+   "line": 159
+  },
+  "src/services/api-client/user.service.ts::fetchLastBooking": {
+   "paths": [
+    "/api/user/bookings/last-booking"
+   ],
+   "line": 164
+  },
+  "src/services/api-client/user.service.ts::cancelBooking": {
+   "paths": [
+    "/api/user/bookings/cancel"
+   ],
+   "line": 169
+  },
+  "src/services/api-client/user.service.ts::checkRequiredInformation": {
+   "paths": [
+    "/api/user/check-required-info"
+   ],
+   "line": 174
+  },
+  "src/services/api-client/user.service.ts::fetchMonthlyBookingExtraInfo": {
+   "paths": [
+    "/api/user/bookings/monthly-tickets/extra-info"
+   ],
+   "line": 179
+  },
+  "src/services/api-client/user.service.ts::editEmailUser": {
+   "paths": [
+    "/api/user/edit-email"
+   ],
+   "line": 184
+  },
+  "src/services/api-client/user.service.ts::requestReCheckIn": {
+   "paths": [
+    "/api/user/bookings/request-re-check-in"
+   ],
+   "line": 189
+  },
+  "src/services/api-client/user.service.ts::checkExistingEmail": {
+   "paths": [
+    "/api/user/check-existing-email"
+   ],
+   "line": 194
+  },
+  "src/services/api-client/user.service.ts::requestPartialCheckout": {
+   "paths": [
+    "/api/user/bookings/partial-checkout/:p"
+   ],
+   "line": 199
+  },
+  "src/services/api-client/disclaimer.service.ts::fetchDisclaimers": {
+   "paths": [
+    "/api/disclaimers"
+   ],
+   "line": 10
+  },
+  "src/services/api-client/booking.service.ts::fetchUserBookings": {
+   "paths": [
+    "/api/user/bookings"
+   ],
+   "line": 47
+  },
+  "src/services/api-client/booking.service.ts::fetchBookingById": {
+   "paths": [
+    "/api/user/bookings/:p"
+   ],
+   "line": 52
+  },
+  "src/services/api-client/booking.service.ts::updateBookingById": {
+   "paths": [
+    "/api/user/bookings/:p"
+   ],
+   "line": 57
+  },
+  "src/services/api-client/booking.service.ts::fetchBookings": {
+   "paths": [
+    "/api/bookings"
+   ],
+   "line": 62
+  },
+  "src/services/api-client/booking.service.ts::createBooking": {
+   "paths": [
+    "/api/bookings"
+   ],
+   "line": 67
+  },
+  "src/services/api-client/booking.service.ts::createUseInDayBooking": {
+   "paths": [
+    "/api/bookings/use-in-day"
+   ],
+   "line": 72
+  },
+  "src/services/api-client/booking.service.ts::fetchBookingVacanciesStatus": {
+   "paths": [
+    "/api/bookings/vacancies/status"
+   ],
+   "line": 77
+  },
+  "src/services/api-client/booking.service.ts::fetchBookingTransaction": {
+   "paths": [
+    "/api/bookings/transaction/[bookingId]"
+   ],
+   "line": 82
+  },
+  "src/services/api-client/booking.service.ts::fetchMainBookings": {
+   "paths": [
+    "/api/bookings/main-bookings/:p"
+   ],
+   "line": 87
+  },
+  "src/services/api-client/booking.service.ts::fetchBookingStatus": {
+   "paths": [
+    "/api/bookings/status"
+   ],
+   "line": 92
+  },
+  "src/services/api-client/booking.service.ts::checkMonthlyTicketAlreadyUsed": {
+   "paths": [
+    "/api/bookings/check-monthly-ticket-already-used"
+   ],
+   "line": 97
+  },
+  "src/services/api-client/booking.service.ts::checkSameDateBookingExists": {
+   "paths": [
+    "/api/bookings/check-same-date-booking-exists"
+   ],
+   "line": 102
+  },
+  "src/services/api-client/booking.service.ts::changePaymentStatus": {
+   "paths": [
+    "/api/user/bookings/:p/payment-status"
+   ],
+   "line": 107
+  },
+  "src/services/api-client/tenant.service.ts::fetchTenants": {
+   "paths": [
+    "/api/tenants"
+   ],
+   "line": 13
+  },
+  "src/services/api-client/tenant.service.ts::fetchTotalTenants": {
+   "paths": [
+    "/api/tenants/count"
+   ],
+   "line": 23
+  },
+  "src/services/api-client/tenant.service.ts::findTenant": {
+   "paths": [
+    "/api/tenants/:p"
+   ],
+   "line": 30
+  },
+  "src/services/api-client/tenant.service.ts::fetchTenantVacancies": {
+   "paths": [
+    "/api/tenant-vacancies"
+   ],
+   "line": 35
+  },
+  "src/services/api-client/upload.service.ts::upload": {
+   "paths": [
+    "/api/upload"
+   ],
+   "line": 9
+  },
+  "src/services/api-client/error-report.service.ts::reportError": {
+   "paths": [
+    "/api/error-report"
+   ],
+   "line": 9
+  },
+  "src/services/api-client/admin/ticket.service.ts::fetchTickets": {
+   "paths": [
+    "/api/admin/tickets"
+   ],
+   "line": 27
+  },
+  "src/services/api-client/admin/ticket.service.ts::fetchTicketsCount": {
+   "paths": [
+    "/api/admin/tickets/count"
+   ],
+   "line": 32
+  },
+  "src/services/api-client/admin/ticket.service.ts::fetchTicketById": {
+   "paths": [
+    "/api/admin/tickets/:p"
+   ],
+   "line": 37
+  },
+  "src/services/api-client/admin/ticket.service.ts::createTicket": {
+   "paths": [
+    "/api/admin/tickets"
+   ],
+   "line": 42
+  },
+  "src/services/api-client/admin/ticket.service.ts::updateTicket": {
+   "paths": [
+    "/api/admin/tickets/:p"
+   ],
+   "line": 47
+  },
+  "src/services/api-client/admin/ticket.service.ts::updateTicketVideoUrl": {
+   "paths": [
+    "/api/admin/tickets/:p"
+   ],
+   "line": 52
+  },
+  "src/services/api-client/admin/ticket.service.ts::deleteTicketById": {
+   "paths": [
+    "/api/admin/tickets/:p"
+   ],
+   "line": 57
+  },
+  "src/services/api-client/admin/ticket.service.ts::backfillObicCodesForTicket": {
+   "paths": [
+    "/api/admin/tickets/:p/backfill-obic-codes"
+   ],
+   "line": 62
+  },
+  "src/services/api-client/admin/ticket.service.ts::createTicketBookingSchedules": {
+   "paths": [
+    "/api/admin/ticket-booking-schedules"
+   ],
+   "line": 67
+  },
+  "src/services/api-client/admin/ticket.service.ts::updateTicketBookingSchedules": {
+   "paths": [
+    "/api/admin/ticket-booking-schedules"
+   ],
+   "line": 72
+  },
+  "src/services/api-client/admin/ticket.service.ts::checkHasBooking": {
+   "paths": [
+    "/api/admin/tickets/has-booking"
+   ],
+   "line": 77
+  },
+  "src/services/api-client/admin/ticket.service.ts::checkTicketBookingScheduleHasBooking": {
+   "paths": [
+    "/api/admin/ticket-booking-schedules/has-booking"
+   ],
+   "line": 82
+  },
+  "src/services/api-client/admin/app-setting.service.ts::fetchAppSettings": {
+   "paths": [
+    "/api/admin/app-settings"
+   ],
+   "line": 9
+  },
+  "src/services/api-client/admin/app-setting.service.ts::fetchAppSettingByKey": {
+   "paths": [
+    "/api/admin/app-settings/:p"
+   ],
+   "line": 14
+  },
+  "src/services/api-client/admin/app-setting.service.ts::createAppSetting": {
+   "paths": [
+    "/api/admin/app-settings"
+   ],
+   "line": 19
+  },
+  "src/services/api-client/admin/app-setting.service.ts::updateAppSetting": {
+   "paths": [
+    "/api/admin/app-settings/:p"
+   ],
+   "line": 24
+  },
+  "src/services/api-client/admin/app-setting.service.ts::deleteAppSetting": {
+   "paths": [
+    "/api/admin/app-settings/:p"
+   ],
+   "line": 29
+  },
+  "src/services/api-client/admin/auth.service.ts::confirmAdminPassword": {
+   "paths": [
+    "/api/admin/password-confirmation"
+   ],
+   "line": 11
+  },
+  "src/services/api-client/admin/auth.service.ts::confirmAdminCredentials": {
+   "paths": [
+    "/api/admin/admin-credentials-confirmation"
+   ],
+   "line": 16
+  },
+  "src/services/api-client/admin/auth.service.ts::confirmCredentials": {
+   "paths": [
+    "/api/admin/credentials-confirmation"
+   ],
+   "line": 21
+  },
+  "src/services/api-client/admin/chart.service.ts::fetchAverageStayDuration": {
+   "paths": [
+    "/api/admin/charts/average-stay-duration"
+   ],
+   "line": 19
+  },
+  "src/services/api-client/admin/chart.service.ts::fetchAverageBookingTimes": {
+   "paths": [
+    "/api/admin/charts/average-booking-times"
+   ],
+   "line": 24
+  },
+  "src/services/api-client/admin/chart.service.ts::fetchTotalBookingsWithTimes": {
+   "paths": [
+    "/api/admin/charts/total-bookings-with-times"
+   ],
+   "line": 29
+  },
+  "src/services/api-client/admin/chart.service.ts::fetchTotalBookingsWithTicket": {
+   "paths": [
+    "/api/admin/charts/total-bookings-with-ticket"
+   ],
+   "line": 34
+  },
+  "src/services/api-client/admin/chart.service.ts::fetchTotalNewAndOldBookingUsers": {
+   "paths": [
+    "/api/admin/charts/total-new-and-old-booking-users"
+   ],
+   "line": 39
+  },
+  "src/services/api-client/admin/booking-vacancies.service.ts::fetchBookingVacancies": {
+   "paths": [
+    "/api/admin/booking-vacancies"
+   ],
+   "line": 9
+  },
+  "src/services/api-client/admin/booking-queue.service.ts::fetchBookingQueueWaiting": {
+   "paths": [
+    "/api/admin/booking-queue/waiting"
+   ],
+   "line": 12
+  },
+  "src/services/api-client/admin/booking-queue.service.ts::fetchBookingQueueCalling": {
+   "paths": [
+    "/api/admin/booking-queue/calling"
+   ],
+   "line": 17
+  },
+  "src/services/api-client/admin/booking-queue.service.ts::fetchBookingQueueSystemCancelled": {
+   "paths": [
+    "/api/admin/booking-queue/system-cancelled"
+   ],
+   "line": 22
+  },
+  "src/services/api-client/admin/booking-queue.service.ts::updateWaitingOrderForBookingQueue": {
+   "paths": [
+    "/api/admin/booking-queue"
+   ],
+   "line": 27
+  },
+  "src/services/api-client/admin/booking-queue.service.ts::updateStatusBookingQueue": {
+   "paths": [
+    "/api/admin/booking-queue/:p"
+   ],
+   "line": 32
+  },
+  "src/services/api-client/admin/credit-card.service.ts::fetchCreditCardAdmin": {
+   "paths": [
+    "/api/admin/credit-cards/search/:p"
+   ],
+   "line": 9
+  },
+  "src/services/api-client/admin/email-setting.service.ts::fetchEmailSettings": {
+   "paths": [
+    "/api/admin/email-settings"
+   ],
+   "line": 11
+  },
+  "src/services/api-client/admin/email-setting.service.ts::fetchEmailSettingByKey": {
+   "paths": [
+    "/api/admin/email-settings/:p"
+   ],
+   "line": 16
+  },
+  "src/services/api-client/admin/email-setting.service.ts::createEmailSetting": {
+   "paths": [
+    "/api/admin/email-settings"
+   ],
+   "line": 21
+  },
+  "src/services/api-client/admin/email-setting.service.ts::updateEmailSetting": {
+   "paths": [
+    "/api/admin/email-settings/:p"
+   ],
+   "line": 26
+  },
+  "src/services/api-client/admin/email-setting.service.ts::deleteEmailSetting": {
+   "paths": [
+    "/api/admin/email-settings/:p"
+   ],
+   "line": 31
+  },
+  "src/services/api-client/admin/email-setting.service.ts::getPreviewEmailContent": {
+   "paths": [
+    "/api/admin/email-settings/preview"
+   ],
+   "line": 36
+  },
+  "src/services/api-client/admin/email-setting.service.ts::sendPreviewEmail": {
+   "paths": [
+    "/api/admin/email-settings/send-preview-email"
+   ],
+   "line": 41
+  },
+  "src/services/api-client/admin/news.service.ts::fetchNews": {
+   "paths": [
+    "/api/admin/news"
+   ],
+   "line": 9
+  },
+  "src/services/api-client/admin/news.service.ts::fetchNewsById": {
+   "paths": [
+    "/api/admin/news/:p"
+   ],
+   "line": 14
+  },
+  "src/services/api-client/admin/news.service.ts::createNews": {
+   "paths": [
+    "/api/admin/news"
+   ],
+   "line": 19
+  },
+  "src/services/api-client/admin/news.service.ts::updateNews": {
+   "paths": [
+    "/api/admin/news/:p"
+   ],
+   "line": 24
+  },
+  "src/services/api-client/admin/news.service.ts::deleteNewsById": {
+   "paths": [
+    "/api/admin/news/:p"
+   ],
+   "line": 29
+  },
+  "src/services/api-client/admin/user.service.ts::fetchUsers": {
+   "paths": [
+    "/api/admin/users"
+   ],
+   "line": 10
+  },
+  "src/services/api-client/admin/user.service.ts::fetchUserById": {
+   "paths": [
+    "/api/admin/users/:p"
+   ],
+   "line": 15
+  },
+  "src/services/api-client/admin/user.service.ts::createUser": {
+   "paths": [
+    "/api/admin/users"
+   ],
+   "line": 20
+  },
+  "src/services/api-client/admin/user.service.ts::updateUser": {
+   "paths": [
+    "/api/admin/users/:p"
+   ],
+   "line": 25
+  },
+  "src/services/api-client/admin/user.service.ts::deleteUserById": {
+   "paths": [
+    "/api/admin/users/:p"
+   ],
+   "line": 30
+  },
+  "src/services/api-client/admin/user.service.ts::countUsers": {
+   "paths": [
+    "/api/admin/users/count"
+   ],
+   "line": 35
+  },
+  "src/services/api-client/admin/disclaimer.service.ts::fetchDisclaimers": {
+   "paths": [
+    "/api/admin/disclaimers"
+   ],
+   "line": 10
+  },
+  "src/services/api-client/admin/disclaimer.service.ts::upsertDisclaimers": {
+   "paths": [
+    "/api/admin/disclaimers"
+   ],
+   "line": 15
+  },
+  "src/services/api-client/admin/booking.service.ts::fetchBookings": {
+   "paths": [
+    "/api/admin/bookings"
+   ],
+   "line": 55
+  },
+  "src/services/api-client/admin/booking.service.ts::fetchBookingById": {
+   "paths": [
+    "/api/admin/bookings/:p"
+   ],
+   "line": 60
+  },
+  "src/services/api-client/admin/booking.service.ts::updateBookingById": {
+   "paths": [
+    "/api/user/bookings/:p"
+   ],
+   "line": 65
+  },
+  "src/services/api-client/admin/booking.service.ts::cancelBooking": {
+   "paths": [
+    "/api/admin/bookings/cancel/:p"
+   ],
+   "line": 70
+  },
+  "src/services/api-client/admin/booking.service.ts::updateTicketBookingScheduleById": {
+   "paths": [
+    "/api/admin/bookings/ticket-booking-schedules/:p"
+   ],
+   "line": 75
+  },
+  "src/services/api-client/admin/booking.service.ts::fetchBlacklistBookings": {
+   "paths": [
+    "/api/admin/bookings/blacklist"
+   ],
+   "line": 80
+  },
+  "src/services/api-client/admin/booking.service.ts::countBookings": {
+   "paths": [
+    "/api/admin/bookings/count"
+   ],
+   "line": 85
+  },
+  "src/services/api-client/admin/booking.service.ts::fetchMonthlyBookingExtraInfo": {
+   "paths": [
+    "/api/admin/bookings/monthly-tickets/extra-info"
+   ],
+   "line": 90
+  },
+  "src/services/api-client/admin/booking.service.ts::updateDecreaseQuantityBooking": {
+   "paths": [
+    "/api/admin/bookings/decrease-quantity/:p"
+   ],
+   "line": 95
+  },
+  "src/services/api-client/admin/booking.service.ts::updateBookingStatus": {
+   "paths": [
+    "/api/admin/bookings/status"
+   ],
+   "line": 100
+  },
+  "src/services/api-client/admin/booking.service.ts::scanBookingBarCode": {
+   "paths": [
+    "/api/admin/bookings/scan"
+   ],
+   "line": 105
+  },
+  "src/services/api-client/admin/booking.service.ts::rollbackScanBookingBarCode": {
+   "paths": [
+    "/api/admin/bookings/rollback-scan"
+   ],
+   "line": 110
+  },
+  "src/services/api-client/admin/booking.service.ts::updateBookingIsolatedPaymentData": {
+   "paths": [
+    "/api/admin/bookings/:p/status"
+   ],
+   "line": 115
+  },
+  "src/services/api-client/admin/booking.service.ts::forceRecomputeObicForBooking": {
+   "paths": [
+    "/api/admin/bookings/:p/force-recompute-obic"
+   ],
+   "line": 120
+  },
+  "src/services/api-client/admin/staff.service.ts::createStaff": {
+   "paths": [
+    "/api/admin/staffs"
+   ],
+   "line": 11
+  },
+  "src/services/api-client/admin/staff.service.ts::fetchStaffs": {
+   "paths": [
+    "/api/admin/staffs"
+   ],
+   "line": 16
+  },
+  "src/services/api-client/admin/staff.service.ts::countStaffs": {
+   "paths": [
+    "/api/admin/staffs/count"
+   ],
+   "line": 21
+  },
+  "src/services/api-client/admin/staff.service.ts::deleteStaffById": {
+   "paths": [
+    "/api/admin/staffs/:p"
+   ],
+   "line": 26
+  },
+  "src/services/api-client/admin/staff.service.ts::fetchStaffById": {
+   "paths": [
+    "/api/admin/staffs/:p"
+   ],
+   "line": 31
+  },
+  "src/services/api-client/admin/staff.service.ts::updateStaff": {
+   "paths": [
+    "/api/admin/staffs/:p"
+   ],
+   "line": 36
+  },
+  "src/services/api-client/admin/revenue-management.service.ts::fetchBookings": {
+   "paths": [
+    "/api/admin/revenue-management"
+   ],
+   "line": 26
+  },
+  "src/services/api-client/admin/revenue-management.service.ts::fetchRecordCount": {
+   "paths": [
+    "/api/admin/revenue-management/count"
+   ],
+   "line": 31
+  },
+  "src/services/api-client/admin/revenue-management.service.ts::fetchTickets": {
+   "paths": [
+    "/api/admin/tickets"
+   ],
+   "line": 36
+  },
+  "src/services/api-client/admin/tenant.service.ts::fetchTenants": {
+   "paths": [
+    "/api/admin/tenants"
+   ],
+   "line": 11
+  },
+  "src/services/api-client/admin/tenant.service.ts::fetchTenantByCode": {
+   "paths": [
+    "/api/admin/tenants/:p"
+   ],
+   "line": 16
+  },
+  "src/services/api-client/admin/tenant.service.ts::createTenant": {
+   "paths": [
+    "/api/admin/tenants"
+   ],
+   "line": 21
+  },
+  "src/services/api-client/admin/tenant.service.ts::updateTenant": {
+   "paths": [
+    "/api/admin/tenants/:p"
+   ],
+   "line": 26
+  },
+  "src/services/api-client/admin/tenant.service.ts::updateTenantImageUrl": {
+   "paths": [
+    "/api/admin/tenants/:p"
+   ],
+   "line": 31
+  },
+  "src/services/api-client/admin/tenant.service.ts::deleteTenant": {
+   "paths": [
+    "/api/admin/tenants/:p"
+   ],
+   "line": 36
+  },
+  "src/services/api-client/admin/tenant.service.ts::countTenants": {
+   "paths": [
+    "/api/admin/tenants/count"
+   ],
+   "line": 41
+  },
+  "src/services/api-client/admin/gmo-setting.service.ts::fetchGMOSettings": {
+   "paths": [
+    "/api/admin/gmo-settings"
+   ],
+   "line": 11
+  },
+  "src/services/api-client/admin/gmo-setting.service.ts::fetchGMOSettingById": {
+   "paths": [
+    "/api/admin/gmo-settings/:p"
+   ],
+   "line": 16
+  },
+  "src/services/api-client/admin/gmo-setting.service.ts::createGMOSetting": {
+   "paths": [
+    "/api/admin/gmo-settings"
+   ],
+   "line": 21
+  },
+  "src/services/api-client/admin/gmo-setting.service.ts::updateGMOSetting": {
+   "paths": [
+    "/api/admin/gmo-settings/:p"
+   ],
+   "line": 26
+  },
+  "src/services/api-client/admin/gmo-setting.service.ts::deleteGMOSetting": {
+   "paths": [
+    "/api/admin/gmo-settings/:p"
+   ],
+   "line": 31
+  }
+ },
+ "page_api": {
+  "src/pages/index.tsx": {
+   "/api/user/check-required-info": [
+    "src/services/api-client/user.service.ts#L174"
+   ],
+   "/api/user/bookings": [
+    "src/services/api-client/booking.service.ts#L47",
+    "src/services/api-client/user.service.ts#L93"
+   ],
+   "/api/admin/bookings": [
+    "src/services/api-client/admin/booking.service.ts#L55"
+   ],
+   "/api/bookings/vacancies/status": [
+    "src/services/api-client/booking.service.ts#L77"
+   ],
+   "/api/bookings/main-bookings/:p": [
+    "src/services/api-client/booking.service.ts#L87"
+   ],
+   "/api/bookings/use-in-day": [
+    "src/services/api-client/booking.service.ts#L72"
+   ],
+   "/api/tenants": [
+    "src/services/api-client/tenant.service.ts#L13"
+   ],
+   "/api/tickets": [
+    "src/services/api-client/ticket.service.ts#L31"
+   ],
+   "/api/user/bookings/last-booking": [
+    "src/services/api-client/user.service.ts#L164"
+   ],
+   "/api/user/bookings/times-limit-tickets": [
+    "src/services/api-client/user.service.ts#L119"
+   ],
+   "/api/user/bookings/monthly-tickets": [
+    "src/services/api-client/user.service.ts#L104"
+   ],
+   "/api/user/bookings/monthly-tickets/check-already-used-across-tenants": [
+    "src/services/api-client/user.service.ts#L109"
+   ],
+   "/api/user/bookings/monthly-tickets/extra-info": [
+    "src/services/api-client/user.service.ts#L179"
+   ],
+   "/api/disclaimers": [
+    "src/services/api-client/disclaimer.service.ts#L10"
+   ],
+   "/api/tickets/:p": [
+    "src/services/api-client/ticket.service.ts#L39"
+   ],
+   "/api/news": [
+    "src/services/news.service.ts#L15"
+   ]
+  },
+  "src/pages/403.tsx": {},
+  "src/pages/maintenance.tsx": {},
+  "src/pages/tenant-list.tsx": {
+   "/api/tenants": [
+    "src/services/api-client/tenant.service.ts#L13"
+   ],
+   "/api/user/tenant-favorites": [
+    "src/services/api-client/user.service.ts#L139"
+   ],
+   "/api/bookings/vacancies/status": [
+    "src/services/api-client/booking.service.ts#L77"
+   ],
+   "/api/user/tenant-favorites/:p": [
+    "src/services/api-client/user.service.ts#L129",
+    "src/services/api-client/user.service.ts#L134"
+   ]
+  },
+  "src/pages/signup.tsx": {
+   "/api/auth/signup": [
+    "src/services/api-client/auth.service.ts#L20"
+   ],
+   "/api/user/check-existing-email": [
+    "src/services/api-client/user.service.ts#L194"
+   ],
+   "/api/auth/resend-verification-email": [
+    "src/services/api-client/auth.service.ts#L55"
+   ]
+  },
+  "src/pages/privacy-policy.tsx": {},
+  "src/pages/error.tsx": {},
+  "src/pages/signup-success.tsx": {
+   "/api/auth/resend-verification-email": [
+    "src/services/api-client/auth.service.ts#L55"
+   ]
+  },
+  "src/pages/forgot-password.tsx": {
+   "/api/auth/forgot-password": [
+    "src/services/api-client/auth.service.ts#L25"
+   ]
+  },
+  "src/pages/signin.tsx": {
+   "/api/auth/resend-verification-email": [
+    "src/services/api-client/auth.service.ts#L55"
+   ]
+  },
+  "src/pages/tenant/[code].tsx": {
+   "/api/bookings/vacancies/status": [
+    "src/services/api-client/booking.service.ts#L77"
+   ],
+   "/api/tenants/:p": [
+    "src/services/api-client/tenant.service.ts#L30"
+   ],
+   "/api/tickets": [
+    "src/services/api-client/ticket.service.ts#L31"
+   ],
+   "/api/user/tenant-favorites/:p": [
+    "src/services/api-client/user.service.ts#L129",
+    "src/services/api-client/user.service.ts#L134"
+   ],
+   "/api/user/tenant-favorites": [
+    "src/services/api-client/user.service.ts#L139"
+   ]
+  },
+  "src/pages/terms-of-use/index.tsx": {},
+  "src/pages/verify/[token].tsx": {
+   "/api/auth/verify/:p": [
+    "src/services/api-client/auth.service.ts#L45"
+   ],
+   "/api/user/edit-email": [
+    "src/services/api-client/user.service.ts#L184"
+   ]
+  },
+  "src/pages/booking/payment-online-monthly-ticket-success.tsx": {},
+  "src/pages/booking/use-in-day.tsx": {
+   "/api/bookings/vacancies/status": [
+    "src/services/api-client/booking.service.ts#L77"
+   ],
+   "/api/bookings/main-bookings/:p": [
+    "src/services/api-client/booking.service.ts#L87"
+   ],
+   "/api/bookings/use-in-day": [
+    "src/services/api-client/booking.service.ts#L72"
+   ],
+   "/api/tenants": [
+    "src/services/api-client/tenant.service.ts#L13"
+   ],
+   "/api/tickets": [
+    "src/services/api-client/ticket.service.ts#L31"
+   ],
+   "/api/user/bookings/last-booking": [
+    "src/services/api-client/user.service.ts#L164"
+   ],
+   "/api/user/bookings/times-limit-tickets": [
+    "src/services/api-client/user.service.ts#L119"
+   ],
+   "/api/user/bookings/monthly-tickets": [
+    "src/services/api-client/user.service.ts#L104"
+   ],
+   "/api/user/bookings/monthly-tickets/check-already-used-across-tenants": [
+    "src/services/api-client/user.service.ts#L109"
+   ],
+   "/api/user/bookings/monthly-tickets/extra-info": [
+    "src/services/api-client/user.service.ts#L179"
+   ],
+   "/api/user/check-required-info": [
+    "src/services/api-client/user.service.ts#L174"
+   ],
+   "/api/user/bookings": [
+    "src/services/api-client/user.service.ts#L93"
+   ],
+   "/api/disclaimers": [
+    "src/services/api-client/disclaimer.service.ts#L10"
+   ],
+   "/api/admin/bookings": [
+    "src/services/api-client/admin/booking.service.ts#L55"
+   ],
+   "/api/tickets/:p": [
+    "src/services/api-client/ticket.service.ts#L39"
+   ]
+  },
+  "src/pages/booking/buy-times-limit-ticket.tsx": {
+   "/api/bookings": [
+    "src/services/api-client/booking.service.ts#L62",
+    "src/services/api-client/booking.service.ts#L67"
+   ],
+   "/api/tenants": [
+    "src/services/api-client/tenant.service.ts#L13"
+   ],
+   "/api/tickets-supported/:p": [
+    "src/services/api-client/ticket.service.ts#L44"
+   ],
+   "/api/tickets": [
+    "src/services/api-client/ticket.service.ts#L31"
+   ],
+   "/api/user/check-required-info": [
+    "src/services/api-client/user.service.ts#L174"
+   ],
+   "/api/user/credit-card/delete": [
+    "src/services/api-client/user.service.ts#L159"
+   ],
+   "/api/admin/bookings": [
+    "src/services/api-client/admin/booking.service.ts#L55"
+   ],
+   "/api/bookings/vacancies/status": [
+    "src/services/api-client/booking.service.ts#L77"
+   ],
+   "/api/bookings/main-bookings/:p": [
+    "src/services/api-client/booking.service.ts#L87"
+   ],
+   "/api/bookings/use-in-day": [
+    "src/services/api-client/booking.service.ts#L72"
+   ],
+   "/api/user/bookings/last-booking": [
+    "src/services/api-client/user.service.ts#L164"
+   ],
+   "/api/user/bookings/times-limit-tickets": [
+    "src/services/api-client/user.service.ts#L119"
+   ],
+   "/api/user/bookings/monthly-tickets": [
+    "src/services/api-client/user.service.ts#L104"
+   ],
+   "/api/user/bookings/monthly-tickets/check-already-used-across-tenants": [
+    "src/services/api-client/user.service.ts#L109"
+   ],
+   "/api/user/bookings/monthly-tickets/extra-info": [
+    "src/services/api-client/user.service.ts#L179"
+   ],
+   "/api/user/bookings": [
+    "src/services/api-client/user.service.ts#L93"
+   ],
+   "/api/disclaimers": [
+    "src/services/api-client/disclaimer.service.ts#L10"
+   ],
+   "/api/tickets/:p": [
+    "src/services/api-client/ticket.service.ts#L39"
+   ],
+   "/api/bookings/check-same-date-booking-exists": [
+    "src/services/api-client/booking.service.ts#L102"
+   ],
+   "/api/user/credit-card/search": [
+    "src/services/api-client/user.service.ts#L149"
+   ],
+   "/api/user/credit-card/save": [
+    "src/services/api-client/user.service.ts#L154"
+   ]
+  },
+  "src/pages/booking/payment-online.tsx": {
+   "/api/bookings": [
+    "src/services/api-client/booking.service.ts#L62",
+    "src/services/api-client/booking.service.ts#L67"
+   ],
+   "/api/bookings/check-same-date-booking-exists": [
+    "src/services/api-client/booking.service.ts#L102"
+   ],
+   "/api/tenants": [
+    "src/services/api-client/tenant.service.ts#L13"
+   ],
+   "/api/tickets": [
+    "src/services/api-client/ticket.service.ts#L31"
+   ],
+   "/api/user/check-required-info": [
+    "src/services/api-client/user.service.ts#L174"
+   ],
+   "/api/user/credit-card/delete": [
+    "src/services/api-client/user.service.ts#L159"
+   ],
+   "/api/disclaimers": [
+    "src/services/api-client/disclaimer.service.ts#L10"
+   ],
+   "/api/admin/bookings": [
+    "src/services/api-client/admin/booking.service.ts#L55"
+   ],
+   "/api/bookings/vacancies/status": [
+    "src/services/api-client/booking.service.ts#L77"
+   ],
+   "/api/bookings/main-bookings/:p": [
+    "src/services/api-client/booking.service.ts#L87"
+   ],
+   "/api/bookings/use-in-day": [
+    "src/services/api-client/booking.service.ts#L72"
+   ],
+   "/api/user/bookings/last-booking": [
+    "src/services/api-client/user.service.ts#L164"
+   ],
+   "/api/user/bookings/times-limit-tickets": [
+    "src/services/api-client/user.service.ts#L119"
+   ],
+   "/api/user/bookings/monthly-tickets": [
+    "src/services/api-client/user.service.ts#L104"
+   ],
+   "/api/user/bookings/monthly-tickets/check-already-used-across-tenants": [
+    "src/services/api-client/user.service.ts#L109"
+   ],
+   "/api/user/bookings/monthly-tickets/extra-info": [
+    "src/services/api-client/user.service.ts#L179"
+   ],
+   "/api/user/bookings": [
+    "src/services/api-client/user.service.ts#L93"
+   ],
+   "/api/tickets/:p": [
+    "src/services/api-client/ticket.service.ts#L39"
+   ],
+   "/api/user/credit-card/search": [
+    "src/services/api-client/user.service.ts#L149"
+   ],
+   "/api/user/credit-card/save": [
+    "src/services/api-client/user.service.ts#L154"
+   ]
+  },
+  "src/pages/booking/buy-monthly-ticket.tsx": {
+   "/api/bookings": [
+    "src/services/api-client/booking.service.ts#L62",
+    "src/services/api-client/booking.service.ts#L67"
+   ],
+   "/api/bookings/check-same-date-booking-exists": [
+    "src/services/api-client/booking.service.ts#L102"
+   ],
+   "/api/tenants": [
+    "src/services/api-client/tenant.service.ts#L13"
+   ],
+   "/api/tickets-supported/:p": [
+    "src/services/api-client/ticket.service.ts#L44"
+   ],
+   "/api/tickets": [
+    "src/services/api-client/ticket.service.ts#L31"
+   ],
+   "/api/user/check-required-info": [
+    "src/services/api-client/user.service.ts#L174"
+   ],
+   "/api/user/credit-card/delete": [
+    "src/services/api-client/user.service.ts#L159"
+   ],
+   "/api/admin/bookings": [
+    "src/services/api-client/admin/booking.service.ts#L55"
+   ],
+   "/api/bookings/vacancies/status": [
+    "src/services/api-client/booking.service.ts#L77"
+   ],
+   "/api/bookings/main-bookings/:p": [
+    "src/services/api-client/booking.service.ts#L87"
+   ],
+   "/api/bookings/use-in-day": [
+    "src/services/api-client/booking.service.ts#L72"
+   ],
+   "/api/user/bookings/last-booking": [
+    "src/services/api-client/user.service.ts#L164"
+   ],
+   "/api/user/bookings/times-limit-tickets": [
+    "src/services/api-client/user.service.ts#L119"
+   ],
+   "/api/user/bookings/monthly-tickets": [
+    "src/services/api-client/user.service.ts#L104"
+   ],
+   "/api/user/bookings/monthly-tickets/check-already-used-across-tenants": [
+    "src/services/api-client/user.service.ts#L109"
+   ],
+   "/api/user/bookings/monthly-tickets/extra-info": [
+    "src/services/api-client/user.service.ts#L179"
+   ],
+   "/api/user/bookings": [
+    "src/services/api-client/user.service.ts#L93"
+   ],
+   "/api/disclaimers": [
+    "src/services/api-client/disclaimer.service.ts#L10"
+   ],
+   "/api/tickets/:p": [
+    "src/services/api-client/ticket.service.ts#L39"
+   ],
+   "/api/user/credit-card/search": [
+    "src/services/api-client/user.service.ts#L149"
+   ],
+   "/api/user/credit-card/save": [
+    "src/services/api-client/user.service.ts#L154"
+   ]
+  },
+  "src/pages/booking/payment-online-failure.tsx": {},
+  "src/pages/booking/payment-online-success.tsx": {},
+  "src/pages/commercial-law/index.tsx": {},
+  "src/pages/admin/index.tsx": {
+   "/api/admin/tenants/:p": [
+    "src/services/api-client/admin/tenant.service.ts#L16"
+   ],
+   "/api/admin/credentials-confirmation": [
+    "src/services/api-client/admin/auth.service.ts#L21"
+   ],
+   "/api/admin/password-confirmation": [
+    "src/services/api-client/admin/auth.service.ts#L11"
+   ]
+  },
+  "src/pages/admin/waiting-time-management.tsx": {
+   "/api/admin/app-settings/:p": [
+    "src/services/api-client/admin/app-setting.service.ts#L14",
+    "src/services/api-client/admin/app-setting.service.ts#L24"
+   ],
+   "/api/admin/tenants/:p": [
+    "src/services/api-client/admin/tenant.service.ts#L16"
+   ],
+   "/api/admin/credentials-confirmation": [
+    "src/services/api-client/admin/auth.service.ts#L21"
+   ],
+   "/api/admin/password-confirmation": [
+    "src/services/api-client/admin/auth.service.ts#L11"
+   ]
+  },
+  "src/pages/admin/dashboard.tsx": {
+   "/api/admin/tenants": [
+    "src/services/api-client/admin/tenant.service.ts#L11"
+   ],
+   "/api/admin/tenants/:p": [
+    "src/services/api-client/admin/tenant.service.ts#L16"
+   ],
+   "/api/admin/credentials-confirmation": [
+    "src/services/api-client/admin/auth.service.ts#L21"
+   ],
+   "/api/admin/password-confirmation": [
+    "src/services/api-client/admin/auth.service.ts#L11"
+   ],
+   "/api/admin/charts/total-new-and-old-booking-users": [
+    "src/services/api-client/admin/chart.service.ts#L39"
+   ],
+   "/api/admin/charts/total-bookings-with-times": [
+    "src/services/api-client/admin/chart.service.ts#L29"
+   ],
+   "/api/admin/charts/total-bookings-with-ticket": [
+    "src/services/api-client/admin/chart.service.ts#L34"
+   ],
+   "/api/admin/tickets": [
+    "src/services/api-client/admin/ticket.service.ts#L27"
+   ],
+   "/api/admin/bookings": [
+    "src/services/api-client/admin/booking.service.ts#L55"
+   ],
+   "/api/bookings/vacancies/status": [
+    "src/services/api-client/booking.service.ts#L77"
+   ],
+   "/api/bookings/main-bookings/:p": [
+    "src/services/api-client/booking.service.ts#L87"
+   ],
+   "/api/bookings/use-in-day": [
+    "src/services/api-client/booking.service.ts#L72"
+   ],
+   "/api/tenants": [
+    "src/services/api-client/tenant.service.ts#L13"
+   ],
+   "/api/tickets": [
+    "src/services/api-client/ticket.service.ts#L31"
+   ],
+   "/api/user/bookings/last-booking": [
+    "src/services/api-client/user.service.ts#L164"
+   ],
+   "/api/user/bookings/times-limit-tickets": [
+    "src/services/api-client/user.service.ts#L119"
+   ],
+   "/api/user/bookings/monthly-tickets": [
+    "src/services/api-client/user.service.ts#L104"
+   ],
+   "/api/user/bookings/monthly-tickets/check-already-used-across-tenants": [
+    "src/services/api-client/user.service.ts#L109"
+   ],
+   "/api/user/bookings/monthly-tickets/extra-info": [
+    "src/services/api-client/user.service.ts#L179"
+   ],
+   "/api/user/check-required-info": [
+    "src/services/api-client/user.service.ts#L174"
+   ],
+   "/api/user/bookings": [
+    "src/services/api-client/user.service.ts#L93"
+   ],
+   "/api/disclaimers": [
+    "src/services/api-client/disclaimer.service.ts#L10"
+   ],
+   "/api/tickets/:p": [
+    "src/services/api-client/ticket.service.ts#L39"
+   ],
+   "/api/admin/charts/average-stay-duration": [
+    "src/services/api-client/admin/chart.service.ts#L19"
+   ],
+   "/api/admin/charts/average-booking-times": [
+    "src/services/api-client/admin/chart.service.ts#L24"
+   ]
+  },
+  "src/pages/admin/change-password.tsx": {
+   "/api/auth/change-password": [
+    "src/services/api-client/auth.service.ts#L40"
+   ],
+   "/api/admin/tenants/:p": [
+    "src/services/api-client/admin/tenant.service.ts#L16"
+   ],
+   "/api/admin/credentials-confirmation": [
+    "src/services/api-client/admin/auth.service.ts#L21"
+   ],
+   "/api/admin/password-confirmation": [
+    "src/services/api-client/admin/auth.service.ts#L11"
+   ]
+  },
+  "src/pages/admin/change-email.tsx": {
+   "/api/auth/change-email": [
+    "src/services/api-client/auth.service.ts#L50"
+   ],
+   "/api/admin/tenants/:p": [
+    "src/services/api-client/admin/tenant.service.ts#L16"
+   ],
+   "/api/admin/credentials-confirmation": [
+    "src/services/api-client/admin/auth.service.ts#L21"
+   ],
+   "/api/admin/password-confirmation": [
+    "src/services/api-client/admin/auth.service.ts#L11"
+   ]
+  },
+  "src/pages/admin/forgot-password.tsx": {
+   "/api/auth/forgot-password": [
+    "src/services/api-client/auth.service.ts#L25"
+   ]
+  },
+  "src/pages/admin/revenue-management.tsx": {
+   "/api/admin/revenue-management": [
+    "src/services/api-client/admin/revenue-management.service.ts#L26"
+   ],
+   "/api/admin/revenue-management/count": [
+    "src/services/api-client/admin/revenue-management.service.ts#L31"
+   ],
+   "/api/admin/tickets": [
+    "src/services/api-client/admin/revenue-management.service.ts#L36"
+   ],
+   "/api/admin/tenants": [
+    "src/services/api-client/admin/tenant.service.ts#L11"
+   ],
+   "/api/admin/bookings": [
+    "src/services/api-client/admin/booking.service.ts#L55"
+   ],
+   "/api/bookings/vacancies/status": [
+    "src/services/api-client/booking.service.ts#L77"
+   ],
+   "/api/bookings/main-bookings/:p": [
+    "src/services/api-client/booking.service.ts#L87"
+   ],
+   "/api/bookings/use-in-day": [
+    "src/services/api-client/booking.service.ts#L72"
+   ],
+   "/api/tenants": [
+    "src/services/api-client/tenant.service.ts#L13"
+   ],
+   "/api/tickets": [
+    "src/services/api-client/ticket.service.ts#L31"
+   ],
+   "/api/user/bookings/last-booking": [
+    "src/services/api-client/user.service.ts#L164"
+   ],
+   "/api/user/bookings/times-limit-tickets": [
+    "src/services/api-client/user.service.ts#L119"
+   ],
+   "/api/user/bookings/monthly-tickets": [
+    "src/services/api-client/user.service.ts#L104"
+   ],
+   "/api/user/bookings/monthly-tickets/check-already-used-across-tenants": [
+    "src/services/api-client/user.service.ts#L109"
+   ],
+   "/api/user/bookings/monthly-tickets/extra-info": [
+    "src/services/api-client/user.service.ts#L179"
+   ],
+   "/api/user/check-required-info": [
+    "src/services/api-client/user.service.ts#L174"
+   ],
+   "/api/user/bookings": [
+    "src/services/api-client/user.service.ts#L93"
+   ],
+   "/api/disclaimers": [
+    "src/services/api-client/disclaimer.service.ts#L10"
+   ],
+   "/api/tickets/:p": [
+    "src/services/api-client/ticket.service.ts#L39"
+   ],
+   "/api/admin/tenants/:p": [
+    "src/services/api-client/admin/tenant.service.ts#L16"
+   ],
+   "/api/admin/credentials-confirmation": [
+    "src/services/api-client/admin/auth.service.ts#L21"
+   ],
+   "/api/admin/password-confirmation": [
+    "src/services/api-client/admin/auth.service.ts#L11"
+   ]
+  },
+  "src/pages/admin/app-settings.tsx": {
+   "/api/admin/app-settings/:p": [
+    "src/services/api-client/admin/app-setting.service.ts#L24",
+    "src/services/api-client/admin/app-setting.service.ts#L29"
+   ],
+   "/api/admin/app-settings": [
+    "src/services/api-client/admin/app-setting.service.ts#L19",
+    "src/services/api-client/admin/app-setting.service.ts#L9"
+   ]
+  },
+  "src/pages/admin/signin.tsx": {
+   "/api/auth/request-unlock-account": [
+    "src/services/api-client/auth.service.ts#L60"
+   ],
+   "/api/auth/check-admin-credentials": [
+    "src/services/api-client/auth.service.ts#L70"
+   ],
+   "/api/auth/security-questions": [
+    "src/services/api-client/auth.service.ts#L75"
+   ]
+  },
+  "src/pages/admin/barcode-scanner.tsx": {
+   "/api/admin/tenants/:p": [
+    "src/services/api-client/admin/tenant.service.ts#L16"
+   ],
+   "/api/admin/credentials-confirmation": [
+    "src/services/api-client/admin/auth.service.ts#L21"
+   ],
+   "/api/admin/password-confirmation": [
+    "src/services/api-client/admin/auth.service.ts#L11"
+   ],
+   "/api/admin/bookings/rollback-scan": [
+    "src/services/api-client/admin/booking.service.ts#L110"
+   ],
+   "/api/admin/bookings/scan": [
+    "src/services/api-client/admin/booking.service.ts#L105"
+   ]
+  },
+  "src/pages/admin/disclaimer-management.tsx": {
+   "/api/admin/disclaimers": [
+    "src/services/api-client/admin/disclaimer.service.ts#L10",
+    "src/services/api-client/admin/disclaimer.service.ts#L15"
+   ],
+   "/api/admin/tenants/:p": [
+    "src/services/api-client/admin/tenant.service.ts#L16"
+   ],
+   "/api/admin/credentials-confirmation": [
+    "src/services/api-client/admin/auth.service.ts#L21"
+   ],
+   "/api/admin/password-confirmation": [
+    "src/services/api-client/admin/auth.service.ts#L11"
+   ]
+  },
+  "src/pages/admin/unlock-account/[token].tsx": {
+   "/api/auth/unlock-account": [
+    "src/services/api-client/auth.service.ts#L65"
+   ]
+  },
+  "src/pages/admin/vacancies-status/index.tsx": {
+   "/api/bookings/vacancies/status": [
+    "src/services/api-client/booking.service.ts#L77"
+   ],
+   "/api/admin/tickets": [
+    "src/services/api-client/admin/ticket.service.ts#L27"
+   ],
+   "/api/admin/tenants/:p": [
+    "src/services/api-client/admin/tenant.service.ts#L16"
+   ],
+   "/api/admin/credentials-confirmation": [
+    "src/services/api-client/admin/auth.service.ts#L21"
+   ],
+   "/api/admin/password-confirmation": [
+    "src/services/api-client/admin/auth.service.ts#L11"
+   ]
+  },
+  "src/pages/admin/news-management/index.tsx": {
+   "/api/admin/news": [
+    "src/services/api-client/admin/news.service.ts#L9"
+   ],
+   "/api/admin/news/:p": [
+    "src/services/api-client/admin/news.service.ts#L29"
+   ],
+   "/api/admin/tenants/:p": [
+    "src/services/api-client/admin/tenant.service.ts#L16"
+   ],
+   "/api/admin/credentials-confirmation": [
+    "src/services/api-client/admin/auth.service.ts#L21"
+   ],
+   "/api/admin/password-confirmation": [
+    "src/services/api-client/admin/auth.service.ts#L11"
+   ]
+  },
+  "src/pages/admin/news-management/create.tsx": {
+   "/api/admin/news": [
+    "src/services/api-client/admin/news.service.ts#L19"
+   ],
+   "/api/admin/news/:p": [
+    "src/services/api-client/admin/news.service.ts#L24"
+   ],
+   "/api/admin/tenants/:p": [
+    "src/services/api-client/admin/tenant.service.ts#L16"
+   ],
+   "/api/admin/credentials-confirmation": [
+    "src/services/api-client/admin/auth.service.ts#L21"
+   ],
+   "/api/admin/password-confirmation": [
+    "src/services/api-client/admin/auth.service.ts#L11"
+   ]
+  },
+  "src/pages/admin/news-management/edit/[newsId].tsx": {
+   "/api/admin/news/:p": [
+    "src/services/api-client/admin/news.service.ts#L14",
+    "src/services/api-client/admin/news.service.ts#L24"
+   ],
+   "/api/admin/news": [
+    "src/services/api-client/admin/news.service.ts#L19"
+   ],
+   "/api/admin/tenants/:p": [
+    "src/services/api-client/admin/tenant.service.ts#L16"
+   ],
+   "/api/admin/credentials-confirmation": [
+    "src/services/api-client/admin/auth.service.ts#L21"
+   ],
+   "/api/admin/password-confirmation": [
+    "src/services/api-client/admin/auth.service.ts#L11"
+   ]
+  },
+  "src/pages/admin/email-settings/index.tsx": {
+   "/api/admin/email-settings/:p": [
+    "src/services/api-client/admin/email-setting.service.ts#L26"
+   ],
+   "/api/admin/email-settings": [
+    "src/services/api-client/admin/email-setting.service.ts#L11"
+   ],
+   "/api/admin/tenants/:p": [
+    "src/services/api-client/admin/tenant.service.ts#L16"
+   ],
+   "/api/admin/credentials-confirmation": [
+    "src/services/api-client/admin/auth.service.ts#L21"
+   ],
+   "/api/admin/password-confirmation": [
+    "src/services/api-client/admin/auth.service.ts#L11"
+   ]
+  },
+  "src/pages/admin/email-settings/edit/[emailKey].tsx": {
+   "/api/admin/email-settings/:p": [
+    "src/services/api-client/admin/email-setting.service.ts#L16",
+    "src/services/api-client/admin/email-setting.service.ts#L26"
+   ],
+   "/api/admin/email-settings": [
+    "src/services/api-client/admin/email-setting.service.ts#L21"
+   ],
+   "/api/admin/email-settings/send-preview-email": [
+    "src/services/api-client/admin/email-setting.service.ts#L41"
+   ],
+   "/api/admin/email-settings/preview": [
+    "src/services/api-client/admin/email-setting.service.ts#L36"
+   ],
+   "/api/admin/bookings": [
+    "src/services/api-client/admin/booking.service.ts#L55"
+   ],
+   "/api/bookings/vacancies/status": [
+    "src/services/api-client/booking.service.ts#L77"
+   ],
+   "/api/bookings/main-bookings/:p": [
+    "src/services/api-client/booking.service.ts#L87"
+   ],
+   "/api/bookings/use-in-day": [
+    "src/services/api-client/booking.service.ts#L72"
+   ],
+   "/api/tenants": [
+    "src/services/api-client/tenant.service.ts#L13"
+   ],
+   "/api/tickets": [
+    "src/services/api-client/ticket.service.ts#L31"
+   ],
+   "/api/user/bookings/last-booking": [
+    "src/services/api-client/user.service.ts#L164"
+   ],
+   "/api/user/bookings/times-limit-tickets": [
+    "src/services/api-client/user.service.ts#L119"
+   ],
+   "/api/user/bookings/monthly-tickets": [
+    "src/services/api-client/user.service.ts#L104"
+   ],
+   "/api/user/bookings/monthly-tickets/check-already-used-across-tenants": [
+    "src/services/api-client/user.service.ts#L109"
+   ],
+   "/api/user/bookings/monthly-tickets/extra-info": [
+    "src/services/api-client/user.service.ts#L179"
+   ],
+   "/api/user/check-required-info": [
+    "src/services/api-client/user.service.ts#L174"
+   ],
+   "/api/user/bookings": [
+    "src/services/api-client/user.service.ts#L93"
+   ],
+   "/api/disclaimers": [
+    "src/services/api-client/disclaimer.service.ts#L10"
+   ],
+   "/api/tickets/:p": [
+    "src/services/api-client/ticket.service.ts#L39"
+   ],
+   "/api/admin/tenants/:p": [
+    "src/services/api-client/admin/tenant.service.ts#L16"
+   ],
+   "/api/admin/credentials-confirmation": [
+    "src/services/api-client/admin/auth.service.ts#L21"
+   ],
+   "/api/admin/password-confirmation": [
+    "src/services/api-client/admin/auth.service.ts#L11"
+   ]
+  },
+  "src/pages/admin/ticket-management/index.tsx": {
+   "/api/admin/tickets/:p": [
+    "src/services/api-client/admin/ticket.service.ts#L57"
+   ],
+   "/api/admin/tickets": [
+    "src/services/api-client/admin/ticket.service.ts#L27"
+   ],
+   "/api/admin/tickets/count": [
+    "src/services/api-client/admin/ticket.service.ts#L32"
+   ],
+   "/api/admin/tenants": [
+    "src/services/api-client/admin/tenant.service.ts#L11"
+   ],
+   "/api/admin/bookings": [
+    "src/services/api-client/admin/booking.service.ts#L55"
+   ],
+   "/api/bookings/vacancies/status": [
+    "src/services/api-client/booking.service.ts#L77"
+   ],
+   "/api/bookings/main-bookings/:p": [
+    "src/services/api-client/booking.service.ts#L87"
+   ],
+   "/api/bookings/use-in-day": [
+    "src/services/api-client/booking.service.ts#L72"
+   ],
+   "/api/tenants": [
+    "src/services/api-client/tenant.service.ts#L13"
+   ],
+   "/api/tickets": [
+    "src/services/api-client/ticket.service.ts#L31"
+   ],
+   "/api/user/bookings/last-booking": [
+    "src/services/api-client/user.service.ts#L164"
+   ],
+   "/api/user/bookings/times-limit-tickets": [
+    "src/services/api-client/user.service.ts#L119"
+   ],
+   "/api/user/bookings/monthly-tickets": [
+    "src/services/api-client/user.service.ts#L104"
+   ],
+   "/api/user/bookings/monthly-tickets/check-already-used-across-tenants": [
+    "src/services/api-client/user.service.ts#L109"
+   ],
+   "/api/user/bookings/monthly-tickets/extra-info": [
+    "src/services/api-client/user.service.ts#L179"
+   ],
+   "/api/user/check-required-info": [
+    "src/services/api-client/user.service.ts#L174"
+   ],
+   "/api/user/bookings": [
+    "src/services/api-client/user.service.ts#L93"
+   ],
+   "/api/disclaimers": [
+    "src/services/api-client/disclaimer.service.ts#L10"
+   ],
+   "/api/tickets/:p": [
+    "src/services/api-client/ticket.service.ts#L39"
+   ],
+   "/api/admin/tenants/:p": [
+    "src/services/api-client/admin/tenant.service.ts#L16"
+   ],
+   "/api/admin/credentials-confirmation": [
+    "src/services/api-client/admin/auth.service.ts#L21"
+   ],
+   "/api/admin/password-confirmation": [
+    "src/services/api-client/admin/auth.service.ts#L11"
+   ]
+  },
+  "src/pages/admin/ticket-management/create.tsx": {
+   "/api/admin/tickets/:p": [
+    "src/services/api-client/admin/ticket.service.ts#L37",
+    "src/services/api-client/admin/ticket.service.ts#L47",
+    "src/services/api-client/admin/ticket.service.ts#L52"
+   ],
+   "/api/admin/bookings": [
+    "src/services/api-client/admin/booking.service.ts#L55"
+   ],
+   "/api/bookings/vacancies/status": [
+    "src/services/api-client/booking.service.ts#L77"
+   ],
+   "/api/bookings/main-bookings/:p": [
+    "src/services/api-client/booking.service.ts#L87"
+   ],
+   "/api/bookings/use-in-day": [
+    "src/services/api-client/booking.service.ts#L72"
+   ],
+   "/api/tenants": [
+    "src/services/api-client/tenant.service.ts#L13"
+   ],
+   "/api/tickets": [
+    "src/services/api-client/ticket.service.ts#L31"
+   ],
+   "/api/user/bookings/last-booking": [
+    "src/services/api-client/user.service.ts#L164"
+   ],
+   "/api/user/bookings/times-limit-tickets": [
+    "src/services/api-client/user.service.ts#L119"
+   ],
+   "/api/user/bookings/monthly-tickets": [
+    "src/services/api-client/user.service.ts#L104"
+   ],
+   "/api/user/bookings/monthly-tickets/check-already-used-across-tenants": [
+    "src/services/api-client/user.service.ts#L109"
+   ],
+   "/api/user/bookings/monthly-tickets/extra-info": [
+    "src/services/api-client/user.service.ts#L179"
+   ],
+   "/api/user/check-required-info": [
+    "src/services/api-client/user.service.ts#L174"
+   ],
+   "/api/user/bookings": [
+    "src/services/api-client/user.service.ts#L93"
+   ],
+   "/api/disclaimers": [
+    "src/services/api-client/disclaimer.service.ts#L10"
+   ],
+   "/api/tickets/:p": [
+    "src/services/api-client/ticket.service.ts#L39"
+   ],
+   "/api/admin/ticket-booking-schedules": [
+    "src/services/api-client/admin/ticket.service.ts#L67",
+    "src/services/api-client/admin/ticket.service.ts#L72"
+   ],
+   "/api/admin/tickets": [
+    "src/services/api-client/admin/ticket.service.ts#L42"
+   ],
+   "/api/upload": [
+    "src/services/api-client/upload.service.ts#L9"
+   ],
+   "/api/admin/ticket-booking-schedules/has-booking": [
+    "src/services/api-client/admin/ticket.service.ts#L82"
+   ],
+   "/api/admin/tenants/:p": [
+    "src/services/api-client/admin/tenant.service.ts#L16"
+   ],
+   "/api/admin/tenants": [
+    "src/services/api-client/admin/tenant.service.ts#L11"
+   ],
+   "/api/admin/tickets/has-booking": [
+    "src/services/api-client/admin/ticket.service.ts#L77"
+   ],
+   "/api/admin/credentials-confirmation": [
+    "src/services/api-client/admin/auth.service.ts#L21"
+   ],
+   "/api/admin/password-confirmation": [
+    "src/services/api-client/admin/auth.service.ts#L11"
+   ]
+  },
+  "src/pages/admin/ticket-management/edit/[ticketId].tsx": {
+   "/api/admin/tickets/:p": [
+    "src/services/api-client/admin/ticket.service.ts#L37",
+    "src/services/api-client/admin/ticket.service.ts#L47",
+    "src/services/api-client/admin/ticket.service.ts#L52"
+   ],
+   "/api/admin/ticket-booking-schedules": [
+    "src/services/api-client/admin/ticket.service.ts#L67",
+    "src/services/api-client/admin/ticket.service.ts#L72"
+   ],
+   "/api/admin/tickets": [
+    "src/services/api-client/admin/ticket.service.ts#L42"
+   ],
+   "/api/upload": [
+    "src/services/api-client/upload.service.ts#L9"
+   ],
+   "/api/admin/bookings": [
+    "src/services/api-client/admin/booking.service.ts#L55"
+   ],
+   "/api/bookings/vacancies/status": [
+    "src/services/api-client/booking.service.ts#L77"
+   ],
+   "/api/bookings/main-bookings/:p": [
+    "src/services/api-client/booking.service.ts#L87"
+   ],
+   "/api/bookings/use-in-day": [
+    "src/services/api-client/booking.service.ts#L72"
+   ],
+   "/api/tenants": [
+    "src/services/api-client/tenant.service.ts#L13"
+   ],
+   "/api/tickets": [
+    "src/services/api-client/ticket.service.ts#L31"
+   ],
+   "/api/user/bookings/last-booking": [
+    "src/services/api-client/user.service.ts#L164"
+   ],
+   "/api/user/bookings/times-limit-tickets": [
+    "src/services/api-client/user.service.ts#L119"
+   ],
+   "/api/user/bookings/monthly-tickets": [
+    "src/services/api-client/user.service.ts#L104"
+   ],
+   "/api/user/bookings/monthly-tickets/check-already-used-across-tenants": [
+    "src/services/api-client/user.service.ts#L109"
+   ],
+   "/api/user/bookings/monthly-tickets/extra-info": [
+    "src/services/api-client/user.service.ts#L179"
+   ],
+   "/api/user/check-required-info": [
+    "src/services/api-client/user.service.ts#L174"
+   ],
+   "/api/user/bookings": [
+    "src/services/api-client/user.service.ts#L93"
+   ],
+   "/api/disclaimers": [
+    "src/services/api-client/disclaimer.service.ts#L10"
+   ],
+   "/api/tickets/:p": [
+    "src/services/api-client/ticket.service.ts#L39"
+   ],
+   "/api/admin/ticket-booking-schedules/has-booking": [
+    "src/services/api-client/admin/ticket.service.ts#L82"
+   ],
+   "/api/admin/tenants/:p": [
+    "src/services/api-client/admin/tenant.service.ts#L16"
+   ],
+   "/api/admin/tenants": [
+    "src/services/api-client/admin/tenant.service.ts#L11"
+   ],
+   "/api/admin/tickets/has-booking": [
+    "src/services/api-client/admin/ticket.service.ts#L77"
+   ],
+   "/api/admin/credentials-confirmation": [
+    "src/services/api-client/admin/auth.service.ts#L21"
+   ],
+   "/api/admin/password-confirmation": [
+    "src/services/api-client/admin/auth.service.ts#L11"
+   ]
+  },
+  "src/pages/admin/ticket-management/view/[ticketId].tsx": {
+   "/api/admin/tickets/:p": [
+    "src/services/api-client/admin/ticket.service.ts#L37"
+   ],
+   "/api/admin/bookings": [
+    "src/services/api-client/admin/booking.service.ts#L55"
+   ],
+   "/api/bookings/vacancies/status": [
+    "src/services/api-client/booking.service.ts#L77"
+   ],
+   "/api/bookings/main-bookings/:p": [
+    "src/services/api-client/booking.service.ts#L87"
+   ],
+   "/api/bookings/use-in-day": [
+    "src/services/api-client/booking.service.ts#L72"
+   ],
+   "/api/tenants": [
+    "src/services/api-client/tenant.service.ts#L13"
+   ],
+   "/api/tickets": [
+    "src/services/api-client/ticket.service.ts#L31"
+   ],
+   "/api/user/bookings/last-booking": [
+    "src/services/api-client/user.service.ts#L164"
+   ],
+   "/api/user/bookings/times-limit-tickets": [
+    "src/services/api-client/user.service.ts#L119"
+   ],
+   "/api/user/bookings/monthly-tickets": [
+    "src/services/api-client/user.service.ts#L104"
+   ],
+   "/api/user/bookings/monthly-tickets/check-already-used-across-tenants": [
+    "src/services/api-client/user.service.ts#L109"
+   ],
+   "/api/user/bookings/monthly-tickets/extra-info": [
+    "src/services/api-client/user.service.ts#L179"
+   ],
+   "/api/user/check-required-info": [
+    "src/services/api-client/user.service.ts#L174"
+   ],
+   "/api/user/bookings": [
+    "src/services/api-client/user.service.ts#L93"
+   ],
+   "/api/disclaimers": [
+    "src/services/api-client/disclaimer.service.ts#L10"
+   ],
+   "/api/tickets/:p": [
+    "src/services/api-client/ticket.service.ts#L39"
+   ],
+   "/api/admin/tenants/:p": [
+    "src/services/api-client/admin/tenant.service.ts#L16"
+   ],
+   "/api/admin/credentials-confirmation": [
+    "src/services/api-client/admin/auth.service.ts#L21"
+   ],
+   "/api/admin/password-confirmation": [
+    "src/services/api-client/admin/auth.service.ts#L11"
+   ]
+  },
+  "src/pages/admin/scan-management/index.tsx": {
+   "/api/admin/bookings": [
+    "src/services/api-client/admin/booking.service.ts#L55"
+   ],
+   "/api/admin/bookings/count": [
+    "src/services/api-client/admin/booking.service.ts#L85"
+   ],
+   "/api/admin/tenants": [
+    "src/services/api-client/admin/tenant.service.ts#L11"
+   ],
+   "/api/tickets": [
+    "src/services/api-client/ticket.service.ts#L31"
+   ],
+   "/api/bookings/vacancies/status": [
+    "src/services/api-client/booking.service.ts#L77"
+   ],
+   "/api/bookings/main-bookings/:p": [
+    "src/services/api-client/booking.service.ts#L87"
+   ],
+   "/api/bookings/use-in-day": [
+    "src/services/api-client/booking.service.ts#L72"
+   ],
+   "/api/tenants": [
+    "src/services/api-client/tenant.service.ts#L13"
+   ],
+   "/api/user/bookings/last-booking": [
+    "src/services/api-client/user.service.ts#L164"
+   ],
+   "/api/user/bookings/times-limit-tickets": [
+    "src/services/api-client/user.service.ts#L119"
+   ],
+   "/api/user/bookings/monthly-tickets": [
+    "src/services/api-client/user.service.ts#L104"
+   ],
+   "/api/user/bookings/monthly-tickets/check-already-used-across-tenants": [
+    "src/services/api-client/user.service.ts#L109"
+   ],
+   "/api/user/bookings/monthly-tickets/extra-info": [
+    "src/services/api-client/user.service.ts#L179"
+   ],
+   "/api/user/check-required-info": [
+    "src/services/api-client/user.service.ts#L174"
+   ],
+   "/api/user/bookings": [
+    "src/services/api-client/user.service.ts#L93"
+   ],
+   "/api/disclaimers": [
+    "src/services/api-client/disclaimer.service.ts#L10"
+   ],
+   "/api/tickets/:p": [
+    "src/services/api-client/ticket.service.ts#L39"
+   ],
+   "/api/admin/tenants/:p": [
+    "src/services/api-client/admin/tenant.service.ts#L16"
+   ],
+   "/api/admin/bookings/:p/status": [
+    "src/services/api-client/admin/booking.service.ts#L115"
+   ],
+   "/api/admin/credentials-confirmation": [
+    "src/services/api-client/admin/auth.service.ts#L21"
+   ],
+   "/api/admin/password-confirmation": [
+    "src/services/api-client/admin/auth.service.ts#L11"
+   ],
+   "/api/admin/bookings/cancel/:p": [
+    "src/services/api-client/admin/booking.service.ts#L70"
+   ],
+   "/api/admin/bookings/monthly-tickets/extra-info": [
+    "src/services/api-client/admin/booking.service.ts#L90"
+   ],
+   "/api/bookings/transaction/[bookingId]": [
+    "src/services/api-client/booking.service.ts#L82"
+   ]
+  },
+  "src/pages/admin/booking-vacancies/index.tsx": {
+   "/api/admin/booking-vacancies": [
+    "src/services/api-client/admin/booking-vacancies.service.ts#L9"
+   ],
+   "/api/admin/bookings/ticket-booking-schedules/:p": [
+    "src/services/api-client/admin/booking.service.ts#L75"
+   ],
+   "/api/admin/tenants/:p": [
+    "src/services/api-client/admin/tenant.service.ts#L16"
+   ],
+   "/api/admin/credentials-confirmation": [
+    "src/services/api-client/admin/auth.service.ts#L21"
+   ],
+   "/api/admin/password-confirmation": [
+    "src/services/api-client/admin/auth.service.ts#L11"
+   ]
+  },
+  "src/pages/admin/gmo-settings/index.tsx": {
+   "/api/admin/gmo-settings": [
+    "src/services/api-client/admin/gmo-setting.service.ts#L11"
+   ],
+   "/api/admin/gmo-settings/:p": [
+    "src/services/api-client/admin/gmo-setting.service.ts#L31"
+   ],
+   "/api/admin/tenants/:p": [
+    "src/services/api-client/admin/tenant.service.ts#L16"
+   ],
+   "/api/admin/credentials-confirmation": [
+    "src/services/api-client/admin/auth.service.ts#L21"
+   ],
+   "/api/admin/password-confirmation": [
+    "src/services/api-client/admin/auth.service.ts#L11"
+   ]
+  },
+  "src/pages/admin/gmo-settings/create.tsx": {
+   "/api/admin/tenants/:p": [
+    "src/services/api-client/admin/tenant.service.ts#L16"
+   ],
+   "/api/admin/credentials-confirmation": [
+    "src/services/api-client/admin/auth.service.ts#L21"
+   ],
+   "/api/admin/password-confirmation": [
+    "src/services/api-client/admin/auth.service.ts#L11"
+   ],
+   "/api/admin/gmo-settings/:p": [
+    "src/services/api-client/admin/gmo-setting.service.ts#L26"
+   ],
+   "/api/admin/gmo-settings": [
+    "src/services/api-client/admin/gmo-setting.service.ts#L21"
+   ]
+  },
+  "src/pages/admin/gmo-settings/edit/[id].tsx": {
+   "/api/admin/gmo-settings/:p": [
+    "src/services/api-client/admin/gmo-setting.service.ts#L16",
+    "src/services/api-client/admin/gmo-setting.service.ts#L26"
+   ],
+   "/api/admin/tenants/:p": [
+    "src/services/api-client/admin/tenant.service.ts#L16"
+   ],
+   "/api/admin/credentials-confirmation": [
+    "src/services/api-client/admin/auth.service.ts#L21"
+   ],
+   "/api/admin/password-confirmation": [
+    "src/services/api-client/admin/auth.service.ts#L11"
+   ],
+   "/api/admin/gmo-settings": [
+    "src/services/api-client/admin/gmo-setting.service.ts#L21"
+   ]
+  },
+  "src/pages/admin/gmo-settings/view/[id].tsx": {
+   "/api/admin/gmo-settings/:p": [
+    "src/services/api-client/admin/gmo-setting.service.ts#L16"
+   ],
+   "/api/admin/tenants/:p": [
+    "src/services/api-client/admin/tenant.service.ts#L16"
+   ],
+   "/api/admin/credentials-confirmation": [
+    "src/services/api-client/admin/auth.service.ts#L21"
+   ],
+   "/api/admin/password-confirmation": [
+    "src/services/api-client/admin/auth.service.ts#L11"
+   ]
+  },
+  "src/pages/admin/booking-queue/index.tsx": {
+   "/api/admin/booking-queue": [
+    "src/services/api-client/admin/booking-queue.service.ts#L27"
+   ],
+   "/api/admin/booking-queue/system-cancelled": [
+    "src/services/api-client/admin/booking-queue.service.ts#L22"
+   ],
+   "/api/admin/booking-queue/waiting": [
+    "src/services/api-client/admin/booking-queue.service.ts#L12"
+   ],
+   "/api/admin/booking-queue/:p": [
+    "src/services/api-client/admin/booking-queue.service.ts#L32"
+   ],
+   "/api/admin/booking-queue/calling": [
+    "src/services/api-client/admin/booking-queue.service.ts#L17"
+   ],
+   "/api/admin/bookings": [
+    "src/services/api-client/admin/booking.service.ts#L55"
+   ],
+   "/api/bookings/vacancies/status": [
+    "src/services/api-client/booking.service.ts#L77"
+   ],
+   "/api/bookings/main-bookings/:p": [
+    "src/services/api-client/booking.service.ts#L87"
+   ],
+   "/api/bookings/use-in-day": [
+    "src/services/api-client/booking.service.ts#L72"
+   ],
+   "/api/tenants": [
+    "src/services/api-client/tenant.service.ts#L13"
+   ],
+   "/api/tickets": [
+    "src/services/api-client/ticket.service.ts#L31"
+   ],
+   "/api/user/bookings/last-booking": [
+    "src/services/api-client/user.service.ts#L164"
+   ],
+   "/api/user/bookings/times-limit-tickets": [
+    "src/services/api-client/user.service.ts#L119"
+   ],
+   "/api/user/bookings/monthly-tickets": [
+    "src/services/api-client/user.service.ts#L104"
+   ],
+   "/api/user/bookings/monthly-tickets/check-already-used-across-tenants": [
+    "src/services/api-client/user.service.ts#L109"
+   ],
+   "/api/user/bookings/monthly-tickets/extra-info": [
+    "src/services/api-client/user.service.ts#L179"
+   ],
+   "/api/user/check-required-info": [
+    "src/services/api-client/user.service.ts#L174"
+   ],
+   "/api/user/bookings": [
+    "src/services/api-client/user.service.ts#L93"
+   ],
+   "/api/disclaimers": [
+    "src/services/api-client/disclaimer.service.ts#L10"
+   ],
+   "/api/tickets/:p": [
+    "src/services/api-client/ticket.service.ts#L39"
+   ],
+   "/api/admin/tenants/:p": [
+    "src/services/api-client/admin/tenant.service.ts#L16"
+   ],
+   "/api/admin/credentials-confirmation": [
+    "src/services/api-client/admin/auth.service.ts#L21"
+   ],
+   "/api/admin/password-confirmation": [
+    "src/services/api-client/admin/auth.service.ts#L11"
+   ]
+  },
+  "src/pages/admin/reset-password/[token].tsx": {
+   "/api/auth/reset-password": [
+    "src/services/api-client/auth.service.ts#L35"
+   ]
+  },
+  "src/pages/admin/user-management/index.tsx": {
+   "/api/admin/users/:p": [
+    "src/services/api-client/admin/user.service.ts#L25",
+    "src/services/api-client/admin/user.service.ts#L30"
+   ],
+   "/api/admin/users/count": [
+    "src/services/api-client/admin/user.service.ts#L35"
+   ],
+   "/api/admin/users": [
+    "src/services/api-client/admin/user.service.ts#L10"
+   ],
+   "/api/admin/bookings": [
+    "src/services/api-client/admin/booking.service.ts#L55"
+   ],
+   "/api/bookings/vacancies/status": [
+    "src/services/api-client/booking.service.ts#L77"
+   ],
+   "/api/bookings/main-bookings/:p": [
+    "src/services/api-client/booking.service.ts#L87"
+   ],
+   "/api/bookings/use-in-day": [
+    "src/services/api-client/booking.service.ts#L72"
+   ],
+   "/api/tenants": [
+    "src/services/api-client/tenant.service.ts#L13"
+   ],
+   "/api/tickets": [
+    "src/services/api-client/ticket.service.ts#L31"
+   ],
+   "/api/user/bookings/last-booking": [
+    "src/services/api-client/user.service.ts#L164"
+   ],
+   "/api/user/bookings/times-limit-tickets": [
+    "src/services/api-client/user.service.ts#L119"
+   ],
+   "/api/user/bookings/monthly-tickets": [
+    "src/services/api-client/user.service.ts#L104"
+   ],
+   "/api/user/bookings/monthly-tickets/check-already-used-across-tenants": [
+    "src/services/api-client/user.service.ts#L109"
+   ],
+   "/api/user/bookings/monthly-tickets/extra-info": [
+    "src/services/api-client/user.service.ts#L179"
+   ],
+   "/api/user/check-required-info": [
+    "src/services/api-client/user.service.ts#L174"
+   ],
+   "/api/user/bookings": [
+    "src/services/api-client/user.service.ts#L93"
+   ],
+   "/api/disclaimers": [
+    "src/services/api-client/disclaimer.service.ts#L10"
+   ],
+   "/api/tickets/:p": [
+    "src/services/api-client/ticket.service.ts#L39"
+   ],
+   "/api/admin/tenants/:p": [
+    "src/services/api-client/admin/tenant.service.ts#L16"
+   ],
+   "/api/admin/credentials-confirmation": [
+    "src/services/api-client/admin/auth.service.ts#L21"
+   ],
+   "/api/admin/password-confirmation": [
+    "src/services/api-client/admin/auth.service.ts#L11"
+   ]
+  },
+  "src/pages/admin/user-management/create.tsx": {
+   "/api/admin/users/:p": [
+    "src/services/api-client/admin/user.service.ts#L25"
+   ],
+   "/api/admin/users": [
+    "src/services/api-client/admin/user.service.ts#L20"
+   ],
+   "/api/admin/tenants/:p": [
+    "src/services/api-client/admin/tenant.service.ts#L16"
+   ],
+   "/api/admin/credentials-confirmation": [
+    "src/services/api-client/admin/auth.service.ts#L21"
+   ],
+   "/api/admin/password-confirmation": [
+    "src/services/api-client/admin/auth.service.ts#L11"
+   ]
+  },
+  "src/pages/admin/user-management/edit/[userId].tsx": {
+   "/api/admin/users/:p": [
+    "src/services/api-client/admin/user.service.ts#L15",
+    "src/services/api-client/admin/user.service.ts#L25"
+   ],
+   "/api/admin/users": [
+    "src/services/api-client/admin/user.service.ts#L20"
+   ],
+   "/api/admin/tenants/:p": [
+    "src/services/api-client/admin/tenant.service.ts#L16"
+   ],
+   "/api/admin/credentials-confirmation": [
+    "src/services/api-client/admin/auth.service.ts#L21"
+   ],
+   "/api/admin/password-confirmation": [
+    "src/services/api-client/admin/auth.service.ts#L11"
+   ]
+  },
+  "src/pages/admin/user-management/view/[userId].tsx": {
+   "/api/admin/users/:p": [
+    "src/services/api-client/admin/user.service.ts#L15"
+   ],
+   "/api/admin/tenants/:p": [
+    "src/services/api-client/admin/tenant.service.ts#L16"
+   ],
+   "/api/admin/credentials-confirmation": [
+    "src/services/api-client/admin/auth.service.ts#L21"
+   ],
+   "/api/admin/password-confirmation": [
+    "src/services/api-client/admin/auth.service.ts#L11"
+   ]
+  },
+  "src/pages/admin/booking-management/index.tsx": {
+   "/api/admin/bookings": [
+    "src/services/api-client/admin/booking.service.ts#L55"
+   ],
+   "/api/admin/bookings/status": [
+    "src/services/api-client/admin/booking.service.ts#L100"
+   ],
+   "/api/admin/bookings/count": [
+    "src/services/api-client/admin/booking.service.ts#L85"
+   ],
+   "/api/admin/tenants": [
+    "src/services/api-client/admin/tenant.service.ts#L11"
+   ],
+   "/api/bookings/status": [
+    "src/services/api-client/booking.service.ts#L92"
+   ],
+   "/api/tickets": [
+    "src/services/api-client/ticket.service.ts#L31"
+   ],
+   "/api/bookings/vacancies/status": [
+    "src/services/api-client/booking.service.ts#L77"
+   ],
+   "/api/bookings/main-bookings/:p": [
+    "src/services/api-client/booking.service.ts#L87"
+   ],
+   "/api/bookings/use-in-day": [
+    "src/services/api-client/booking.service.ts#L72"
+   ],
+   "/api/tenants": [
+    "src/services/api-client/tenant.service.ts#L13"
+   ],
+   "/api/user/bookings/last-booking": [
+    "src/services/api-client/user.service.ts#L164"
+   ],
+   "/api/user/bookings/times-limit-tickets": [
+    "src/services/api-client/user.service.ts#L119"
+   ],
+   "/api/user/bookings/monthly-tickets": [
+    "src/services/api-client/user.service.ts#L104"
+   ],
+   "/api/user/bookings/monthly-tickets/check-already-used-across-tenants": [
+    "src/services/api-client/user.service.ts#L109"
+   ],
+   "/api/user/bookings/monthly-tickets/extra-info": [
+    "src/services/api-client/user.service.ts#L179"
+   ],
+   "/api/user/check-required-info": [
+    "src/services/api-client/user.service.ts#L174"
+   ],
+   "/api/user/bookings": [
+    "src/services/api-client/user.service.ts#L93"
+   ],
+   "/api/disclaimers": [
+    "src/services/api-client/disclaimer.service.ts#L10"
+   ],
+   "/api/tickets/:p": [
+    "src/services/api-client/ticket.service.ts#L39"
+   ],
+   "/api/admin/password-confirmation": [
+    "src/services/api-client/admin/auth.service.ts#L11"
+   ],
+   "/api/admin/tenants/:p": [
+    "src/services/api-client/admin/tenant.service.ts#L16"
+   ],
+   "/api/admin/credentials-confirmation": [
+    "src/services/api-client/admin/auth.service.ts#L21"
+   ],
+   "/api/admin/bookings/monthly-tickets/extra-info": [
+    "src/services/api-client/admin/booking.service.ts#L90"
+   ],
+   "/api/bookings/transaction/[bookingId]": [
+    "src/services/api-client/booking.service.ts#L82"
+   ],
+   "/api/admin/bookings/cancel/:p": [
+    "src/services/api-client/admin/booking.service.ts#L70"
+   ]
+  },
+  "src/pages/admin/booking-management/update/[id].tsx": {
+   "/api/admin/bookings/:p": [
+    "src/services/api-client/admin/booking.service.ts#L60"
+   ],
+   "/api/admin/bookings/decrease-quantity/:p": [
+    "src/services/api-client/admin/booking.service.ts#L95"
+   ],
+   "/api/bookings/transaction/[bookingId]": [
+    "src/services/api-client/booking.service.ts#L82"
+   ],
+   "/api/admin/bookings": [
+    "src/services/api-client/admin/booking.service.ts#L55"
+   ],
+   "/api/bookings/vacancies/status": [
+    "src/services/api-client/booking.service.ts#L77"
+   ],
+   "/api/bookings/main-bookings/:p": [
+    "src/services/api-client/booking.service.ts#L87"
+   ],
+   "/api/bookings/use-in-day": [
+    "src/services/api-client/booking.service.ts#L72"
+   ],
+   "/api/tenants": [
+    "src/services/api-client/tenant.service.ts#L13"
+   ],
+   "/api/tickets": [
+    "src/services/api-client/ticket.service.ts#L31"
+   ],
+   "/api/user/bookings/last-booking": [
+    "src/services/api-client/user.service.ts#L164"
+   ],
+   "/api/user/bookings/times-limit-tickets": [
+    "src/services/api-client/user.service.ts#L119"
+   ],
+   "/api/user/bookings/monthly-tickets": [
+    "src/services/api-client/user.service.ts#L104"
+   ],
+   "/api/user/bookings/monthly-tickets/check-already-used-across-tenants": [
+    "src/services/api-client/user.service.ts#L109"
+   ],
+   "/api/user/bookings/monthly-tickets/extra-info": [
+    "src/services/api-client/user.service.ts#L179"
+   ],
+   "/api/user/check-required-info": [
+    "src/services/api-client/user.service.ts#L174"
+   ],
+   "/api/user/bookings": [
+    "src/services/api-client/user.service.ts#L93"
+   ],
+   "/api/disclaimers": [
+    "src/services/api-client/disclaimer.service.ts#L10"
+   ],
+   "/api/tickets/:p": [
+    "src/services/api-client/ticket.service.ts#L39"
+   ],
+   "/api/bookings": [
+    "src/services/api-client/booking.service.ts#L62",
+    "src/services/api-client/booking.service.ts#L67"
+   ],
+   "/api/user/bookings/:p": [
+    "src/services/api-client/admin/booking.service.ts#L65"
+   ],
+   "/api/admin/credit-cards/search/:p": [
+    "src/services/api-client/admin/credit-card.service.ts#L9"
+   ],
+   "/api/bookings/check-same-date-booking-exists": [
+    "src/services/api-client/booking.service.ts#L102"
+   ],
+   "/api/user/credit-card/delete": [
+    "src/services/api-client/user.service.ts#L159"
+   ],
+   "/api/user/credit-card/search": [
+    "src/services/api-client/user.service.ts#L149"
+   ],
+   "/api/user/credit-card/save": [
+    "src/services/api-client/user.service.ts#L154"
+   ],
+   "/api/admin/tenants/:p": [
+    "src/services/api-client/admin/tenant.service.ts#L16"
+   ],
+   "/api/admin/credentials-confirmation": [
+    "src/services/api-client/admin/auth.service.ts#L21"
+   ],
+   "/api/admin/password-confirmation": [
+    "src/services/api-client/admin/auth.service.ts#L11"
+   ]
+  },
+  "src/pages/admin/booking-management/details/[id].tsx": {
+   "/api/admin/bookings/:p": [
+    "src/services/api-client/admin/booking.service.ts#L60"
+   ],
+   "/api/bookings": [
+    "src/services/api-client/booking.service.ts#L62"
+   ],
+   "/api/admin/bookings": [
+    "src/services/api-client/admin/booking.service.ts#L55"
+   ],
+   "/api/bookings/vacancies/status": [
+    "src/services/api-client/booking.service.ts#L77"
+   ],
+   "/api/bookings/main-bookings/:p": [
+    "src/services/api-client/booking.service.ts#L87"
+   ],
+   "/api/bookings/use-in-day": [
+    "src/services/api-client/booking.service.ts#L72"
+   ],
+   "/api/tenants": [
+    "src/services/api-client/tenant.service.ts#L13"
+   ],
+   "/api/tickets": [
+    "src/services/api-client/ticket.service.ts#L31"
+   ],
+   "/api/user/bookings/last-booking": [
+    "src/services/api-client/user.service.ts#L164"
+   ],
+   "/api/user/bookings/times-limit-tickets": [
+    "src/services/api-client/user.service.ts#L119"
+   ],
+   "/api/user/bookings/monthly-tickets": [
+    "src/services/api-client/user.service.ts#L104"
+   ],
+   "/api/user/bookings/monthly-tickets/check-already-used-across-tenants": [
+    "src/services/api-client/user.service.ts#L109"
+   ],
+   "/api/user/bookings/monthly-tickets/extra-info": [
+    "src/services/api-client/user.service.ts#L179"
+   ],
+   "/api/user/check-required-info": [
+    "src/services/api-client/user.service.ts#L174"
+   ],
+   "/api/user/bookings": [
+    "src/services/api-client/user.service.ts#L93"
+   ],
+   "/api/disclaimers": [
+    "src/services/api-client/disclaimer.service.ts#L10"
+   ],
+   "/api/tickets/:p": [
+    "src/services/api-client/ticket.service.ts#L39"
+   ],
+   "/api/admin/tenants/:p": [
+    "src/services/api-client/admin/tenant.service.ts#L16"
+   ],
+   "/api/admin/credentials-confirmation": [
+    "src/services/api-client/admin/auth.service.ts#L21"
+   ],
+   "/api/admin/password-confirmation": [
+    "src/services/api-client/admin/auth.service.ts#L11"
+   ]
+  },
+  "src/pages/admin/booking-management/partial-checkout/[id].tsx": {
+   "/api/user/bookings/partial-checkout/:p": [
+    "src/services/api-client/user.service.ts#L199"
+   ],
+   "/api/bookings": [
+    "src/services/api-client/booking.service.ts#L62"
+   ],
+   "/api/admin/bookings/:p": [
+    "src/services/api-client/admin/booking.service.ts#L60"
+   ],
+   "/api/admin/bookings": [
+    "src/services/api-client/admin/booking.service.ts#L55"
+   ],
+   "/api/bookings/vacancies/status": [
+    "src/services/api-client/booking.service.ts#L77"
+   ],
+   "/api/bookings/main-bookings/:p": [
+    "src/services/api-client/booking.service.ts#L87"
+   ],
+   "/api/bookings/use-in-day": [
+    "src/services/api-client/booking.service.ts#L72"
+   ],
+   "/api/tenants": [
+    "src/services/api-client/tenant.service.ts#L13"
+   ],
+   "/api/tickets": [
+    "src/services/api-client/ticket.service.ts#L31"
+   ],
+   "/api/user/bookings/last-booking": [
+    "src/services/api-client/user.service.ts#L164"
+   ],
+   "/api/user/bookings/times-limit-tickets": [
+    "src/services/api-client/user.service.ts#L119"
+   ],
+   "/api/user/bookings/monthly-tickets": [
+    "src/services/api-client/user.service.ts#L104"
+   ],
+   "/api/user/bookings/monthly-tickets/check-already-used-across-tenants": [
+    "src/services/api-client/user.service.ts#L109"
+   ],
+   "/api/user/bookings/monthly-tickets/extra-info": [
+    "src/services/api-client/user.service.ts#L179"
+   ],
+   "/api/user/check-required-info": [
+    "src/services/api-client/user.service.ts#L174"
+   ],
+   "/api/user/bookings": [
+    "src/services/api-client/user.service.ts#L93"
+   ],
+   "/api/disclaimers": [
+    "src/services/api-client/disclaimer.service.ts#L10"
+   ],
+   "/api/tickets/:p": [
+    "src/services/api-client/ticket.service.ts#L39"
+   ],
+   "/api/admin/tenants/:p": [
+    "src/services/api-client/admin/tenant.service.ts#L16"
+   ],
+   "/api/admin/credentials-confirmation": [
+    "src/services/api-client/admin/auth.service.ts#L21"
+   ],
+   "/api/admin/password-confirmation": [
+    "src/services/api-client/admin/auth.service.ts#L11"
+   ]
+  },
+  "src/pages/admin/staff-management/index.tsx": {
+   "/api/admin/tenants/:p": [
+    "src/services/api-client/admin/tenant.service.ts#L16"
+   ],
+   "/api/admin/credentials-confirmation": [
+    "src/services/api-client/admin/auth.service.ts#L21"
+   ],
+   "/api/admin/password-confirmation": [
+    "src/services/api-client/admin/auth.service.ts#L11"
+   ],
+   "/api/admin/staffs/count": [
+    "src/services/api-client/admin/staff.service.ts#L21"
+   ],
+   "/api/admin/staffs/:p": [
+    "src/services/api-client/admin/staff.service.ts#L26"
+   ],
+   "/api/admin/staffs": [
+    "src/services/api-client/admin/staff.service.ts#L16"
+   ],
+   "/api/admin/tenants": [
+    "src/services/api-client/admin/tenant.service.ts#L11"
+   ],
+   "/api/admin/admin-credentials-confirmation": [
+    "src/services/api-client/admin/auth.service.ts#L16"
+   ]
+  },
+  "src/pages/admin/staff-management/create.tsx": {
+   "/api/admin/tenants/:p": [
+    "src/services/api-client/admin/tenant.service.ts#L16"
+   ],
+   "/api/admin/credentials-confirmation": [
+    "src/services/api-client/admin/auth.service.ts#L21"
+   ],
+   "/api/admin/password-confirmation": [
+    "src/services/api-client/admin/auth.service.ts#L11"
+   ],
+   "/api/admin/staffs": [
+    "src/services/api-client/admin/staff.service.ts#L11"
+   ],
+   "/api/admin/staffs/:p": [
+    "src/services/api-client/admin/staff.service.ts#L36"
+   ],
+   "/api/admin/tenants": [
+    "src/services/api-client/admin/tenant.service.ts#L11"
+   ]
+  },
+  "src/pages/admin/staff-management/edit/[id].tsx": {
+   "/api/admin/staffs/:p": [
+    "src/services/api-client/admin/staff.service.ts#L31",
+    "src/services/api-client/admin/staff.service.ts#L36"
+   ],
+   "/api/admin/tenants/:p": [
+    "src/services/api-client/admin/tenant.service.ts#L16"
+   ],
+   "/api/admin/credentials-confirmation": [
+    "src/services/api-client/admin/auth.service.ts#L21"
+   ],
+   "/api/admin/password-confirmation": [
+    "src/services/api-client/admin/auth.service.ts#L11"
+   ],
+   "/api/admin/staffs": [
+    "src/services/api-client/admin/staff.service.ts#L11"
+   ],
+   "/api/admin/tenants": [
+    "src/services/api-client/admin/tenant.service.ts#L11"
+   ]
+  },
+  "src/pages/admin/tenant-management/index.tsx": {
+   "/api/admin/tenants/:p": [
+    "src/services/api-client/admin/tenant.service.ts#L16",
+    "src/services/api-client/admin/tenant.service.ts#L36"
+   ],
+   "/api/admin/tenants/count": [
+    "src/services/api-client/admin/tenant.service.ts#L41"
+   ],
+   "/api/admin/tenants": [
+    "src/services/api-client/admin/tenant.service.ts#L11"
+   ],
+   "/api/auth/unlock-account": [
+    "src/services/api-client/auth.service.ts#L65"
+   ],
+   "/api/admin/credentials-confirmation": [
+    "src/services/api-client/admin/auth.service.ts#L21"
+   ],
+   "/api/admin/password-confirmation": [
+    "src/services/api-client/admin/auth.service.ts#L11"
+   ]
+  },
+  "src/pages/admin/tenant-management/create.tsx": {
+   "/api/admin/gmo-settings": [
+    "src/services/api-client/admin/gmo-setting.service.ts#L11"
+   ],
+   "/api/admin/tenants/:p": [
+    "src/services/api-client/admin/tenant.service.ts#L16",
+    "src/services/api-client/admin/tenant.service.ts#L26",
+    "src/services/api-client/admin/tenant.service.ts#L31"
+   ],
+   "/api/admin/tenants": [
+    "src/services/api-client/admin/tenant.service.ts#L21"
+   ],
+   "/api/upload": [
+    "src/services/api-client/upload.service.ts#L9"
+   ],
+   "/api/admin/credentials-confirmation": [
+    "src/services/api-client/admin/auth.service.ts#L21"
+   ],
+   "/api/admin/password-confirmation": [
+    "src/services/api-client/admin/auth.service.ts#L11"
+   ]
+  },
+  "src/pages/admin/tenant-management/edit/[tenantCode].tsx": {
+   "/api/admin/tenants/:p": [
+    "src/services/api-client/admin/tenant.service.ts#L16",
+    "src/services/api-client/admin/tenant.service.ts#L26",
+    "src/services/api-client/admin/tenant.service.ts#L31"
+   ],
+   "/api/admin/credentials-confirmation": [
+    "src/services/api-client/admin/auth.service.ts#L21"
+   ],
+   "/api/admin/password-confirmation": [
+    "src/services/api-client/admin/auth.service.ts#L11"
+   ],
+   "/api/admin/gmo-settings": [
+    "src/services/api-client/admin/gmo-setting.service.ts#L11"
+   ],
+   "/api/admin/tenants": [
+    "src/services/api-client/admin/tenant.service.ts#L21"
+   ],
+   "/api/upload": [
+    "src/services/api-client/upload.service.ts#L9"
+   ]
+  },
+  "src/pages/admin/tenant-management/view/[tenantCode].tsx": {
+   "/api/admin/tenants/:p": [
+    "src/services/api-client/admin/tenant.service.ts#L16"
+   ],
+   "/api/admin/credentials-confirmation": [
+    "src/services/api-client/admin/auth.service.ts#L21"
+   ],
+   "/api/admin/password-confirmation": [
+    "src/services/api-client/admin/auth.service.ts#L11"
+   ]
+  },
+  "src/pages/user/my-page/index.tsx": {},
+  "src/pages/user/my-page/times-limit-ticket-status.tsx": {
+   "/api/user/bookings/times-limit-tickets": [
+    "src/services/api-client/user.service.ts#L119"
+   ],
+   "/api/user/bookings/times-limit-tickets/count": [
+    "src/services/api-client/user.service.ts#L124"
+   ],
+   "/api/tickets-supported/:p": [
+    "src/services/api-client/ticket.service.ts#L44"
+   ],
+   "/api/bookings/check-monthly-ticket-already-used": [
+    "src/services/api-client/booking.service.ts#L97"
+   ],
+   "/api/admin/bookings": [
+    "src/services/api-client/admin/booking.service.ts#L55"
+   ],
+   "/api/bookings/vacancies/status": [
+    "src/services/api-client/booking.service.ts#L77"
+   ],
+   "/api/bookings/main-bookings/:p": [
+    "src/services/api-client/booking.service.ts#L87"
+   ],
+   "/api/bookings/use-in-day": [
+    "src/services/api-client/booking.service.ts#L72"
+   ],
+   "/api/tenants": [
+    "src/services/api-client/tenant.service.ts#L13"
+   ],
+   "/api/tickets": [
+    "src/services/api-client/ticket.service.ts#L31"
+   ],
+   "/api/user/bookings/last-booking": [
+    "src/services/api-client/user.service.ts#L164"
+   ],
+   "/api/user/bookings/monthly-tickets": [
+    "src/services/api-client/user.service.ts#L104"
+   ],
+   "/api/user/bookings/monthly-tickets/check-already-used-across-tenants": [
+    "src/services/api-client/user.service.ts#L109"
+   ],
+   "/api/user/bookings/monthly-tickets/extra-info": [
+    "src/services/api-client/user.service.ts#L179"
+   ],
+   "/api/user/check-required-info": [
+    "src/services/api-client/user.service.ts#L174"
+   ],
+   "/api/user/bookings": [
+    "src/services/api-client/user.service.ts#L93"
+   ],
+   "/api/disclaimers": [
+    "src/services/api-client/disclaimer.service.ts#L10"
+   ],
+   "/api/tickets/:p": [
+    "src/services/api-client/ticket.service.ts#L39"
+   ]
+  },
+  "src/pages/user/my-page/monthly-ticket-status.tsx": {
+   "/api/user/bookings/monthly-tickets": [
+    "src/services/api-client/user.service.ts#L104"
+   ],
+   "/api/user/bookings/monthly-tickets/count": [
+    "src/services/api-client/user.service.ts#L114"
+   ],
+   "/api/tickets-supported/:p": [
+    "src/services/api-client/ticket.service.ts#L44"
+   ],
+   "/api/bookings/check-monthly-ticket-already-used": [
+    "src/services/api-client/booking.service.ts#L97"
+   ],
+   "/api/admin/bookings": [
+    "src/services/api-client/admin/booking.service.ts#L55"
+   ],
+   "/api/bookings/vacancies/status": [
+    "src/services/api-client/booking.service.ts#L77"
+   ],
+   "/api/bookings/main-bookings/:p": [
+    "src/services/api-client/booking.service.ts#L87"
+   ],
+   "/api/bookings/use-in-day": [
+    "src/services/api-client/booking.service.ts#L72"
+   ],
+   "/api/tenants": [
+    "src/services/api-client/tenant.service.ts#L13"
+   ],
+   "/api/tickets": [
+    "src/services/api-client/ticket.service.ts#L31"
+   ],
+   "/api/user/bookings/last-booking": [
+    "src/services/api-client/user.service.ts#L164"
+   ],
+   "/api/user/bookings/times-limit-tickets": [
+    "src/services/api-client/user.service.ts#L119"
+   ],
+   "/api/user/bookings/monthly-tickets/check-already-used-across-tenants": [
+    "src/services/api-client/user.service.ts#L109"
+   ],
+   "/api/user/bookings/monthly-tickets/extra-info": [
+    "src/services/api-client/user.service.ts#L179"
+   ],
+   "/api/user/check-required-info": [
+    "src/services/api-client/user.service.ts#L174"
+   ],
+   "/api/user/bookings": [
+    "src/services/api-client/user.service.ts#L93"
+   ],
+   "/api/disclaimers": [
+    "src/services/api-client/disclaimer.service.ts#L10"
+   ],
+   "/api/tickets/:p": [
+    "src/services/api-client/ticket.service.ts#L39"
+   ]
+  },
+  "src/pages/user/my-page/favorite-tenants.tsx": {
+   "/api/user/tenant-favorites/count": [
+    "src/services/api-client/user.service.ts#L144"
+   ],
+   "/api/user/tenant-favorites": [
+    "src/services/api-client/user.service.ts#L139"
+   ],
+   "/api/bookings/vacancies/status": [
+    "src/services/api-client/booking.service.ts#L77"
+   ],
+   "/api/user/tenant-favorites/:p": [
+    "src/services/api-client/user.service.ts#L129",
+    "src/services/api-client/user.service.ts#L134"
+   ]
+  },
+  "src/pages/user/my-page/delete-account.tsx": {
+   "/api/user": [
+    "src/services/api-client/user.service.ts#L88"
+   ]
+  },
+  "src/pages/user/my-page/booking-history/index.tsx": {
+   "/api/bookings": [
+    "src/services/api-client/booking.service.ts#L62"
+   ],
+   "/api/bookings/vacancies/status": [
+    "src/services/api-client/booking.service.ts#L77"
+   ],
+   "/api/user/bookings/request-re-check-in": [
+    "src/services/api-client/user.service.ts#L189"
+   ],
+   "/api/user/bookings": [
+    "src/services/api-client/user.service.ts#L93"
+   ],
+   "/api/admin/bookings": [
+    "src/services/api-client/admin/booking.service.ts#L55"
+   ],
+   "/api/bookings/main-bookings/:p": [
+    "src/services/api-client/booking.service.ts#L87"
+   ],
+   "/api/bookings/use-in-day": [
+    "src/services/api-client/booking.service.ts#L72"
+   ],
+   "/api/tenants": [
+    "src/services/api-client/tenant.service.ts#L13"
+   ],
+   "/api/tickets": [
+    "src/services/api-client/ticket.service.ts#L31"
+   ],
+   "/api/user/bookings/last-booking": [
+    "src/services/api-client/user.service.ts#L164"
+   ],
+   "/api/user/bookings/times-limit-tickets": [
+    "src/services/api-client/user.service.ts#L119"
+   ],
+   "/api/user/bookings/monthly-tickets": [
+    "src/services/api-client/user.service.ts#L104"
+   ],
+   "/api/user/bookings/monthly-tickets/check-already-used-across-tenants": [
+    "src/services/api-client/user.service.ts#L109"
+   ],
+   "/api/user/bookings/monthly-tickets/extra-info": [
+    "src/services/api-client/user.service.ts#L179"
+   ],
+   "/api/user/check-required-info": [
+    "src/services/api-client/user.service.ts#L174"
+   ],
+   "/api/disclaimers": [
+    "src/services/api-client/disclaimer.service.ts#L10"
+   ],
+   "/api/tickets/:p": [
+    "src/services/api-client/ticket.service.ts#L39"
+   ]
+  },
+  "src/pages/user/my-page/booking-history/cancel-success.tsx": {},
+  "src/pages/user/my-page/booking-history/[id].tsx": {
+   "/api/user/bookings/:p": [
+    "src/services/api-client/user.service.ts#L99"
+   ],
+   "/api/user/bookings/cancel": [
+    "src/services/api-client/user.service.ts#L169"
+   ],
+   "/api/bookings/transaction/[bookingId]": [
+    "src/services/api-client/booking.service.ts#L82"
+   ],
+   "/api/user/bookings/:p/payment-status": [
+    "src/services/api-client/booking.service.ts#L107"
+   ],
+   "/api/bookings": [
+    "src/services/api-client/booking.service.ts#L62"
+   ],
+   "/api/bookings/status": [
+    "src/services/api-client/booking.service.ts#L92"
+   ],
+   "/api/admin/bookings": [
+    "src/services/api-client/admin/booking.service.ts#L55"
+   ],
+   "/api/bookings/vacancies/status": [
+    "src/services/api-client/booking.service.ts#L77"
+   ],
+   "/api/bookings/main-bookings/:p": [
+    "src/services/api-client/booking.service.ts#L87"
+   ],
+   "/api/bookings/use-in-day": [
+    "src/services/api-client/booking.service.ts#L72"
+   ],
+   "/api/tenants": [
+    "src/services/api-client/tenant.service.ts#L13"
+   ],
+   "/api/tickets": [
+    "src/services/api-client/ticket.service.ts#L31"
+   ],
+   "/api/user/bookings/last-booking": [
+    "src/services/api-client/user.service.ts#L164"
+   ],
+   "/api/user/bookings/times-limit-tickets": [
+    "src/services/api-client/user.service.ts#L119"
+   ],
+   "/api/user/bookings/monthly-tickets": [
+    "src/services/api-client/user.service.ts#L104"
+   ],
+   "/api/user/bookings/monthly-tickets/check-already-used-across-tenants": [
+    "src/services/api-client/user.service.ts#L109"
+   ],
+   "/api/user/bookings/monthly-tickets/extra-info": [
+    "src/services/api-client/user.service.ts#L179"
+   ],
+   "/api/user/check-required-info": [
+    "src/services/api-client/user.service.ts#L174"
+   ],
+   "/api/user/bookings": [
+    "src/services/api-client/user.service.ts#L93"
+   ],
+   "/api/disclaimers": [
+    "src/services/api-client/disclaimer.service.ts#L10"
+   ],
+   "/api/tickets/:p": [
+    "src/services/api-client/ticket.service.ts#L39"
+   ]
+  },
+  "src/pages/user/my-page/booking-history/update/index.tsx": {},
+  "src/pages/user/my-page/booking-history/update/[id].tsx": {
+   "/api/bookings/vacancies/status": [
+    "src/services/api-client/booking.service.ts#L77"
+   ],
+   "/api/bookings": [
+    "src/services/api-client/booking.service.ts#L62",
+    "src/services/api-client/booking.service.ts#L67"
+   ],
+   "/api/user/bookings/:p": [
+    "src/services/api-client/booking.service.ts#L52",
+    "src/services/api-client/booking.service.ts#L57",
+    "src/services/api-client/user.service.ts#L99"
+   ],
+   "/api/bookings/transaction/[bookingId]": [
+    "src/services/api-client/booking.service.ts#L82"
+   ],
+   "/api/tenants": [
+    "src/services/api-client/tenant.service.ts#L13"
+   ],
+   "/api/admin/bookings": [
+    "src/services/api-client/admin/booking.service.ts#L55"
+   ],
+   "/api/bookings/main-bookings/:p": [
+    "src/services/api-client/booking.service.ts#L87"
+   ],
+   "/api/bookings/use-in-day": [
+    "src/services/api-client/booking.service.ts#L72"
+   ],
+   "/api/tickets": [
+    "src/services/api-client/ticket.service.ts#L31"
+   ],
+   "/api/user/bookings/last-booking": [
+    "src/services/api-client/user.service.ts#L164"
+   ],
+   "/api/user/bookings/times-limit-tickets": [
+    "src/services/api-client/user.service.ts#L119"
+   ],
+   "/api/user/bookings/monthly-tickets": [
+    "src/services/api-client/user.service.ts#L104"
+   ],
+   "/api/user/bookings/monthly-tickets/check-already-used-across-tenants": [
+    "src/services/api-client/user.service.ts#L109"
+   ],
+   "/api/user/bookings/monthly-tickets/extra-info": [
+    "src/services/api-client/user.service.ts#L179"
+   ],
+   "/api/user/check-required-info": [
+    "src/services/api-client/user.service.ts#L174"
+   ],
+   "/api/user/bookings": [
+    "src/services/api-client/user.service.ts#L93"
+   ],
+   "/api/disclaimers": [
+    "src/services/api-client/disclaimer.service.ts#L10"
+   ],
+   "/api/tickets/:p": [
+    "src/services/api-client/ticket.service.ts#L39"
+   ],
+   "/api/bookings/check-same-date-booking-exists": [
+    "src/services/api-client/booking.service.ts#L102"
+   ],
+   "/api/user/credit-card/delete": [
+    "src/services/api-client/user.service.ts#L159"
+   ],
+   "/api/user/credit-card/search": [
+    "src/services/api-client/user.service.ts#L149"
+   ],
+   "/api/user/credit-card/save": [
+    "src/services/api-client/user.service.ts#L154"
+   ]
+  },
+  "src/pages/user/my-page/booking-history/update/completed/index.tsx": {},
+  "src/pages/user/my-page/booking-history/partial-checkout/success.tsx": {},
+  "src/pages/user/my-page/booking-history/partial-checkout/[id].tsx": {
+   "/api/user/bookings/:p": [
+    "src/services/api-client/user.service.ts#L99"
+   ],
+   "/api/user/bookings/partial-checkout/:p": [
+    "src/services/api-client/user.service.ts#L199"
+   ],
+   "/api/bookings": [
+    "src/services/api-client/booking.service.ts#L62"
+   ],
+   "/api/admin/bookings": [
+    "src/services/api-client/admin/booking.service.ts#L55"
+   ],
+   "/api/bookings/vacancies/status": [
+    "src/services/api-client/booking.service.ts#L77"
+   ],
+   "/api/bookings/main-bookings/:p": [
+    "src/services/api-client/booking.service.ts#L87"
+   ],
+   "/api/bookings/use-in-day": [
+    "src/services/api-client/booking.service.ts#L72"
+   ],
+   "/api/tenants": [
+    "src/services/api-client/tenant.service.ts#L13"
+   ],
+   "/api/tickets": [
+    "src/services/api-client/ticket.service.ts#L31"
+   ],
+   "/api/user/bookings/last-booking": [
+    "src/services/api-client/user.service.ts#L164"
+   ],
+   "/api/user/bookings/times-limit-tickets": [
+    "src/services/api-client/user.service.ts#L119"
+   ],
+   "/api/user/bookings/monthly-tickets": [
+    "src/services/api-client/user.service.ts#L104"
+   ],
+   "/api/user/bookings/monthly-tickets/check-already-used-across-tenants": [
+    "src/services/api-client/user.service.ts#L109"
+   ],
+   "/api/user/bookings/monthly-tickets/extra-info": [
+    "src/services/api-client/user.service.ts#L179"
+   ],
+   "/api/user/check-required-info": [
+    "src/services/api-client/user.service.ts#L174"
+   ],
+   "/api/user/bookings": [
+    "src/services/api-client/user.service.ts#L93"
+   ],
+   "/api/disclaimers": [
+    "src/services/api-client/disclaimer.service.ts#L10"
+   ],
+   "/api/tickets/:p": [
+    "src/services/api-client/ticket.service.ts#L39"
+   ]
+  },
+  "src/pages/user/my-page/personal-info/index.tsx": {
+   "/api/user/credit-card/search": [
+    "src/services/api-client/user.service.ts#L149"
+   ],
+   "/api/user": [
+    "src/services/api-client/user.service.ts#L78"
+   ],
+   "/api/user/credit-card/delete": [
+    "src/services/api-client/user.service.ts#L159"
+   ]
+  },
+  "src/pages/user/my-page/personal-info/change-password.tsx": {
+   "/api/auth/update-password": [
+    "src/services/api-client/auth.service.ts#L30"
+   ]
+  },
+  "src/pages/user/my-page/personal-info/change-credit-card/index.tsx": {
+   "/api/user/credit-card/search": [
+    "src/services/api-client/user.service.ts#L149"
+   ],
+   "/api/user/credit-card/save": [
+    "src/services/api-client/user.service.ts#L154"
+   ]
+  },
+  "src/pages/user/my-page/personal-info/change-credit-card/delete.tsx": {},
+  "src/pages/user/my-page/personal-info/change-credit-card/success.tsx": {},
+  "src/pages/user/my-page/personal-info/update-password/[token].tsx": {
+   "/api/auth/reset-password": [
+    "src/services/api-client/auth.service.ts#L35"
+   ]
+  },
+  "src/pages/user/my-page/personal-info/update-password/success.tsx": {},
+  "src/pages/user/my-page/personal-info/update-information/index.tsx": {
+   "/api/user": [
+    "src/services/api-client/user.service.ts#L78",
+    "src/services/api-client/user.service.ts#L83"
+   ],
+   "/api/user/check-existing-email": [
+    "src/services/api-client/user.service.ts#L194"
+   ]
+  },
+  "src/pages/user/my-page/personal-info/update-information/success.tsx": {},
+  "src/pages/user/my-page/personal-info/update-information/verify-edit-email/[token].tsx": {
+   "/api/auth/verify/:p": [
+    "src/services/api-client/auth.service.ts#L45"
+   ],
+   "/api/user/edit-email": [
+    "src/services/api-client/user.service.ts#L184"
+   ]
+  },
+  "src/pages/price-list/index.tsx": {
+   "/api/tenants": [
+    "src/services/api-client/tenant.service.ts#L13"
+   ],
+   "/api/tickets": [
+    "src/services/api-client/ticket.service.ts#L31"
+   ],
+   "/api/admin/bookings": [
+    "src/services/api-client/admin/booking.service.ts#L55"
+   ],
+   "/api/bookings/vacancies/status": [
+    "src/services/api-client/booking.service.ts#L77"
+   ],
+   "/api/bookings/main-bookings/:p": [
+    "src/services/api-client/booking.service.ts#L87"
+   ],
+   "/api/bookings/use-in-day": [
+    "src/services/api-client/booking.service.ts#L72"
+   ],
+   "/api/user/bookings/last-booking": [
+    "src/services/api-client/user.service.ts#L164"
+   ],
+   "/api/user/bookings/times-limit-tickets": [
+    "src/services/api-client/user.service.ts#L119"
+   ],
+   "/api/user/bookings/monthly-tickets": [
+    "src/services/api-client/user.service.ts#L104"
+   ],
+   "/api/user/bookings/monthly-tickets/check-already-used-across-tenants": [
+    "src/services/api-client/user.service.ts#L109"
+   ],
+   "/api/user/bookings/monthly-tickets/extra-info": [
+    "src/services/api-client/user.service.ts#L179"
+   ],
+   "/api/user/check-required-info": [
+    "src/services/api-client/user.service.ts#L174"
+   ],
+   "/api/user/bookings": [
+    "src/services/api-client/user.service.ts#L93"
+   ],
+   "/api/disclaimers": [
+    "src/services/api-client/disclaimer.service.ts#L10"
+   ],
+   "/api/tickets/:p": [
+    "src/services/api-client/ticket.service.ts#L39"
+   ]
+  },
+  "src/pages/reset-password/[token].tsx": {
+   "/api/auth/reset-password": [
+    "src/services/api-client/auth.service.ts#L35"
+   ]
+  },
+  "src/pages/reset-password/success.tsx": {},
+  "src/pages/vacancy-status/index.tsx": {
+   "/api/tenants": [
+    "src/services/api-client/tenant.service.ts#L13"
+   ],
+   "/api/bookings/vacancies/status": [
+    "src/services/api-client/booking.service.ts#L77"
+   ]
+  }
+ }
+}

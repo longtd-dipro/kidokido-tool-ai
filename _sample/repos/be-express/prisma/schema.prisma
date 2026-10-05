@@ -1,0 +1,20 @@
+model User {
+  id    Int    @id @default(autoincrement())
+  name  String
+  email String @unique
+  orders Order[]
+  @@map("users")
+}
+model Order {
+  id     Int    @id @default(autoincrement())
+  status String
+  note   String?
+  userId Int
+  items  OrderItem[]
+  @@map("orders")
+}
+model OrderItem {
+  id      Int @id
+  orderId Int
+  @@map("order_items")
+}
