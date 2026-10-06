@@ -1,7 +1,5 @@
 # Phien dang nhap Playwright — chua cookie/token, KHONG commit
 .auth/
+
+# Thu vien npm (Playwright) — ensure-env.py tu cai lai, KHONG commit
 node_modules/
-.DS_Store
-~$*
-credentials.local.md
-*.dump

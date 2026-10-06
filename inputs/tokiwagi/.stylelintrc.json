@@ -1,8 +1,0 @@
-{
-  "customSyntax": "postcss-scss",
-  "rules": {
-    "string-quotes": "double",
-    "indentation": 2,
-    "max-line-length": 160
-  }
-}

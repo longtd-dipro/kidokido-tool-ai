@@ -1,0 +1,1741 @@
+{
+ "arrows": [
+  {
+   "id": "16803:451",
+   "from": "16803:425",
+   "to": "16803:429"
+  },
+  {
+   "id": "16803:455",
+   "from": "16803:429",
+   "to": "16803:433"
+  },
+  {
+   "id": "16803:459",
+   "from": "16803:433",
+   "to": "16803:441"
+  },
+  {
+   "id": "16803:463",
+   "from": "16803:441",
+   "to": "16803:445"
+  },
+  {
+   "id": "16803:467",
+   "from": "16803:433",
+   "to": "16803:437"
+  },
+  {
+   "id": "16803:496",
+   "from": "16803:471",
+   "to": "16803:475"
+  },
+  {
+   "id": "16803:500",
+   "from": "16803:475",
+   "to": "16803:479"
+  },
+  {
+   "id": "16803:504",
+   "from": "16803:479",
+   "to": "16803:483"
+  },
+  {
+   "id": "16803:508",
+   "from": "16803:483",
+   "to": "16803:487"
+  },
+  {
+   "id": "16803:541",
+   "from": "16803:512",
+   "to": "16803:516"
+  },
+  {
+   "id": "16803:545",
+   "from": "16803:516",
+   "to": "16803:520"
+  },
+  {
+   "id": "16803:549",
+   "from": "16803:520",
+   "to": "16803:528"
+  },
+  {
+   "id": "16803:553",
+   "from": "16803:528",
+   "to": "16803:532"
+  },
+  {
+   "id": "16803:557",
+   "from": "16803:520",
+   "to": "16803:524"
+  },
+  {
+   "id": "16803:605",
+   "from": "16803:561",
+   "to": "16803:565"
+  },
+  {
+   "id": "16803:609",
+   "from": "16803:565",
+   "to": "16803:569"
+  },
+  {
+   "id": "16803:612",
+   "from": "16803:569",
+   "to": "16803:573"
+  },
+  {
+   "id": "16803:616",
+   "from": "16803:573",
+   "to": "16803:577"
+  },
+  {
+   "id": "16803:620",
+   "from": "16803:573",
+   "to": "16803:582"
+  },
+  {
+   "id": "16803:626",
+   "from": "16803:582",
+   "to": "16803:586"
+  },
+  {
+   "id": "16803:630",
+   "from": "16803:586",
+   "to": "16803:590"
+  },
+  {
+   "id": "16803:667",
+   "from": "16803:634",
+   "to": "16803:638"
+  },
+  {
+   "id": "16803:671",
+   "from": "16803:638",
+   "to": "16803:642"
+  },
+  {
+   "id": "16803:675",
+   "from": "16803:642",
+   "to": "16803:654"
+  },
+  {
+   "id": "16803:679",
+   "from": "16803:654",
+   "to": "16803:658"
+  },
+  {
+   "id": "16803:685",
+   "from": "16803:638",
+   "to": "16803:646"
+  },
+  {
+   "id": "16803:689",
+   "from": "16803:646",
+   "to": "16803:650"
+  },
+  {
+   "id": "16803:726",
+   "from": "16803:693",
+   "to": "16803:697"
+  },
+  {
+   "id": "16803:730",
+   "from": "16803:697",
+   "to": "16803:701"
+  },
+  {
+   "id": "16803:734",
+   "from": "16803:701",
+   "to": "16803:713"
+  },
+  {
+   "id": "16803:738",
+   "from": "16803:713",
+   "to": "16803:717"
+  },
+  {
+   "id": "16803:743",
+   "from": "16803:693",
+   "to": "16803:705"
+  },
+  {
+   "id": "16803:747",
+   "from": "16803:705",
+   "to": "16803:709"
+  },
+  {
+   "id": "16803:753",
+   "from": "16803:709",
+   "to": "16803:713"
+  },
+  {
+   "id": "16803:782",
+   "from": "16803:757",
+   "to": "16803:761"
+  },
+  {
+   "id": "16803:786",
+   "from": "16803:761",
+   "to": "16803:765"
+  },
+  {
+   "id": "16803:790",
+   "from": "16803:765",
+   "to": "16803:769"
+  },
+  {
+   "id": "16803:794",
+   "from": "16803:769",
+   "to": "16803:773"
+  },
+  {
+   "id": "16804:435",
+   "from": "16804:403",
+   "to": "16804:406"
+  },
+  {
+   "id": "16804:439",
+   "from": "16804:406",
+   "to": "16804:410"
+  },
+  {
+   "id": "16804:444",
+   "from": "16804:410",
+   "to": "16804:414"
+  },
+  {
+   "id": "16804:450",
+   "from": "16804:414",
+   "to": "16804:421"
+  },
+  {
+   "id": "16804:456",
+   "from": "16804:414",
+   "to": "16804:417"
+  },
+  {
+   "id": "16804:459",
+   "from": "16804:421",
+   "to": "16804:425"
+  },
+  {
+   "id": "16804:463",
+   "from": "16804:425",
+   "to": "16804:429"
+  },
+  {
+   "id": "16804:511",
+   "from": "16804:471",
+   "to": "16804:474"
+  },
+  {
+   "id": "16804:516",
+   "from": "16804:474",
+   "to": "16804:478"
+  },
+  {
+   "id": "16804:522",
+   "from": "16804:478",
+   "to": "16804:485"
+  },
+  {
+   "id": "16804:528",
+   "from": "16804:478",
+   "to": "16804:481"
+  },
+  {
+   "id": "16804:532",
+   "from": "16804:485",
+   "to": "16804:489"
+  },
+  {
+   "id": "16804:536",
+   "from": "16804:489",
+   "to": "16804:493"
+  },
+  {
+   "id": "16804:539",
+   "from": "16804:493",
+   "to": "16804:497"
+  },
+  {
+   "id": "16804:543",
+   "from": "16804:497",
+   "to": "16804:501"
+  },
+  {
+   "id": "16804:549",
+   "from": "16804:497",
+   "to": "16804:505"
+  },
+  {
+   "id": "16804:580",
+   "from": "16804:560",
+   "to": "16804:563"
+  },
+  {
+   "id": "16804:585",
+   "from": "16804:560",
+   "to": "16804:566"
+  },
+  {
+   "id": "16804:590",
+   "from": "16804:560",
+   "to": "16804:569"
+  },
+  {
+   "id": "16804:595",
+   "from": "16804:560",
+   "to": "16804:572"
+  },
+  {
+   "id": "16804:600",
+   "from": "16804:560",
+   "to": "16804:575"
+  },
+  {
+   "id": "16804:626",
+   "from": "16804:604",
+   "to": "16804:607"
+  },
+  {
+   "id": "16804:629",
+   "from": "16804:607",
+   "to": "16804:611"
+  },
+  {
+   "id": "16804:634",
+   "from": "16804:611",
+   "to": "16804:614"
+  },
+  {
+   "id": "16804:640",
+   "from": "16804:614",
+   "to": "16804:621"
+  },
+  {
+   "id": "16804:646",
+   "from": "16804:614",
+   "to": "16804:617"
+  },
+  {
+   "id": "16804:727",
+   "from": "16804:650",
+   "to": "16804:653"
+  },
+  {
+   "id": "16804:730",
+   "from": "16804:653",
+   "to": "16804:656"
+  },
+  {
+   "id": "16804:735",
+   "from": "16804:653",
+   "to": "16804:659"
+  },
+  {
+   "id": "16804:738",
+   "from": "16804:659",
+   "to": "16804:663"
+  },
+  {
+   "id": "16804:743",
+   "from": "16804:659",
+   "to": "16804:667"
+  },
+  {
+   "id": "16804:749",
+   "from": "16804:650",
+   "to": "16804:670"
+  },
+  {
+   "id": "16804:752",
+   "from": "16804:670",
+   "to": "16804:674"
+  },
+  {
+   "id": "16804:755",
+   "from": "16804:674",
+   "to": "16804:678"
+  },
+  {
+   "id": "16804:761",
+   "from": "16804:650",
+   "to": "16804:682"
+  },
+  {
+   "id": "16804:764",
+   "from": "16804:682",
+   "to": "16804:686"
+  },
+  {
+   "id": "16804:769",
+   "from": "16804:682",
+   "to": "16804:690"
+  },
+  {
+   "id": "16804:774",
+   "from": "16804:682",
+   "to": "16804:693"
+  },
+  {
+   "id": "16804:779",
+   "from": "16804:650",
+   "to": "16804:696"
+  },
+  {
+   "id": "16804:782",
+   "from": "16804:696",
+   "to": "16804:700"
+  },
+  {
+   "id": "16804:787",
+   "from": "16804:650",
+   "to": "16804:703"
+  },
+  {
+   "id": "16804:790",
+   "from": "16804:703",
+   "to": "16804:707"
+  },
+  {
+   "id": "16804:795",
+   "from": "16804:650",
+   "to": "16804:710"
+  },
+  {
+   "id": "16804:798",
+   "from": "16804:710",
+   "to": "16804:713"
+  },
+  {
+   "id": "16804:803",
+   "from": "16804:650",
+   "to": "16804:716"
+  },
+  {
+   "id": "16804:808",
+   "from": "16804:650",
+   "to": "16804:720"
+  }
+ ],
+ "stats": [
+  {
+   "name": "STAT · Màn hình · NEW",
+   "value": "13"
+  },
+  {
+   "name": "STAT · Màn hình · UPD",
+   "value": "12"
+  },
+  {
+   "name": "STAT · Màn hình · DEL",
+   "value": "0"
+  },
+  {
+   "name": "STAT · Màn hình · IMPACT",
+   "value": "13"
+  },
+  {
+   "name": "STAT · Màn hình · Tổng",
+   "value": "38"
+  },
+  {
+   "name": "STAT · Màn hình · 実装 MD",
+   "value": "51.75"
+  },
+  {
+   "name": "STAT · API · NEW",
+   "value": "17"
+  },
+  {
+   "name": "STAT · API · UPD",
+   "value": "12"
+  },
+  {
+   "name": "STAT · API · DEL",
+   "value": "0"
+  },
+  {
+   "name": "STAT · API · IMPACT",
+   "value": "13"
+  },
+  {
+   "name": "STAT · API · Tổng",
+   "value": "42"
+  },
+  {
+   "name": "STAT · API · 実装 MD",
+   "value": "26.25"
+  },
+  {
+   "name": "STAT · Batch / job · NEW",
+   "value": "1"
+  },
+  {
+   "name": "STAT · Batch / job · UPD",
+   "value": "0"
+  },
+  {
+   "name": "STAT · Batch / job · DEL",
+   "value": "0"
+  },
+  {
+   "name": "STAT · Batch / job · IMPACT",
+   "value": "0"
+  },
+  {
+   "name": "STAT · Batch / job · Tổng",
+   "value": "1"
+  },
+  {
+   "name": "STAT · Batch / job · 実装 MD",
+   "value": "1.5"
+  },
+  {
+   "name": "STAT · Bảng DB · NEW",
+   "value": "4"
+  },
+  {
+   "name": "STAT · Bảng DB · UPD",
+   "value": "0"
+  },
+  {
+   "name": "STAT · Bảng DB · DEL",
+   "value": "0"
+  },
+  {
+   "name": "STAT · Bảng DB · IMPACT",
+   "value": "4"
+  },
+  {
+   "name": "STAT · Bảng DB · Tổng",
+   "value": "8"
+  },
+  {
+   "name": "STAT · Bảng DB · 実装 MD",
+   "value": "3"
+  },
+  {
+   "name": "STAT · Cột DB · NEW",
+   "value": "8"
+  },
+  {
+   "name": "STAT · Cột DB · UPD",
+   "value": "0"
+  },
+  {
+   "name": "STAT · Cột DB · DEL",
+   "value": "0"
+  },
+  {
+   "name": "STAT · Cột DB · IMPACT",
+   "value": "0"
+  },
+  {
+   "name": "STAT · Cột DB · Tổng",
+   "value": "8"
+  },
+  {
+   "name": "STAT · Cột DB · 実装 MD",
+   "value": "2"
+  },
+  {
+   "name": "STAT · Rule nghiệp vụ · NEW",
+   "value": "12"
+  },
+  {
+   "name": "STAT · Rule nghiệp vụ · UPD",
+   "value": "2"
+  },
+  {
+   "name": "STAT · Rule nghiệp vụ · DEL",
+   "value": "0"
+  },
+  {
+   "name": "STAT · Rule nghiệp vụ · IMPACT",
+   "value": "3"
+  },
+  {
+   "name": "STAT · Rule nghiệp vụ · Tổng",
+   "value": "17"
+  },
+  {
+   "name": "STAT · Rule nghiệp vụ · 実装 MD",
+   "value": "13.75"
+  },
+  {
+   "name": "STAT · Liên kết bên thứ 3 · NEW",
+   "value": "1"
+  },
+  {
+   "name": "STAT · Liên kết bên thứ 3 · UPD",
+   "value": "1"
+  },
+  {
+   "name": "STAT · Liên kết bên thứ 3 · DEL",
+   "value": "0"
+  },
+  {
+   "name": "STAT · Liên kết bên thứ 3 · IMPACT",
+   "value": "2"
+  },
+  {
+   "name": "STAT · Liên kết bên thứ 3 · Tổng",
+   "value": "4"
+  },
+  {
+   "name": "STAT · Liên kết bên thứ 3 · 実装 MD",
+   "value": "5"
+  },
+  {
+   "name": "STAT · Mockup màn · NEW",
+   "value": "14"
+  },
+  {
+   "name": "STAT · Mockup màn · UPD",
+   "value": "12"
+  },
+  {
+   "name": "STAT · Mockup màn · DEL",
+   "value": "0"
+  },
+  {
+   "name": "STAT · Mockup màn · IMPACT",
+   "value": "0"
+  },
+  {
+   "name": "STAT · Mockup màn · Tổng",
+   "value": "26"
+  },
+  {
+   "name": "STAT · Mockup màn · 実装 MD",
+   "value": "10"
+  },
+  {
+   "name": "STAT · Token / component DS · NEW",
+   "value": "3"
+  },
+  {
+   "name": "STAT · Token / component DS · UPD",
+   "value": "0"
+  },
+  {
+   "name": "STAT · Token / component DS · DEL",
+   "value": "0"
+  },
+  {
+   "name": "STAT · Token / component DS · IMPACT",
+   "value": "0"
+  },
+  {
+   "name": "STAT · Token / component DS · Tổng",
+   "value": "3"
+  },
+  {
+   "name": "STAT · Token / component DS · 実装 MD",
+   "value": "1.5"
+  },
+  {
+   "name": "STAT · Tổng · NEW",
+   "value": "73"
+  },
+  {
+   "name": "STAT · Tổng · UPD",
+   "value": "39"
+  },
+  {
+   "name": "STAT · Tổng · DEL",
+   "value": "0"
+  },
+  {
+   "name": "STAT · Tổng · IMPACT",
+   "value": "35"
+  },
+  {
+   "name": "STAT · Tổng · Tổng",
+   "value": "147"
+  },
+  {
+   "name": "STAT · Tổng · 実装 MD",
+   "value": "114.75"
+  },
+  {
+   "name": "STAT · TOTAL · 実装 — MD theo bảng đơn giá",
+   "value": "114.75"
+  },
+  {
+   "name": "STAT · TOTAL · 総工数 — 人日 (要件定義 + UI/UX + 実装 + テスト + 管理)",
+   "value": "261.63"
+  },
+  {
+   "name": "STAT · TOTAL · 人月 (人日 / 20)",
+   "value": "13.08"
+  },
+  {
+   "name": "STAT · TOTAL · trong đó 最小改修案 — 実装",
+   "value": "100"
+  },
+  {
+   "name": "STAT · TOTAL · trong đó 拡張案 — 実装",
+   "value": "14.75"
+  }
+ ],
+ "legend": 1,
+ "unbadged": [],
+ "overlap": [],
+ "section": {
+  "id": "16803:398",
+  "x": 0,
+  "y": 9153,
+  "w": 3420,
+  "h": 15873
+ },
+ "nodes": [
+  {
+   "id": "16803:425",
+   "name": "AS-IS · FL-07 · Khách / User",
+   "badge": "AS-IS",
+   "ref": "FL-07",
+   "kind": "flow"
+  },
+  {
+   "id": "16803:429",
+   "name": "IMPACT · SC-059 · Mở 料金プラン / 店舗 / mua vé",
+   "badge": "IMPACT",
+   "ref": "SC-059",
+   "kind": "flow"
+  },
+  {
+   "id": "16803:433",
+   "name": "UPD · API-107 · Lấy danh sách vé",
+   "badge": "UPD",
+   "ref": "API-107",
+   "kind": "flow"
+  },
+  {
+   "id": "16803:437",
+   "name": "IMPACT · API-070 · Tạo booking cá nhân",
+   "badge": "IMPACT",
+   "ref": "API-070",
+   "kind": "flow"
+  },
+  {
+   "id": "16803:441",
+   "name": "AS-IS · FL-07 · Next.js API · Prisma · PostgreSQL",
+   "badge": "AS-IS",
+   "ref": "FL-07",
+   "kind": "flow"
+  },
+  {
+   "id": "16803:445",
+   "name": "IMPACT · SC-067 · Trang thường không thấy vé đoàn",
+   "badge": "IMPACT",
+   "ref": "SC-067",
+   "kind": "flow"
+  },
+  {
+   "id": "16803:471",
+   "name": "AS-IS · FL-03 · Super Admin / Admin",
+   "badge": "AS-IS",
+   "ref": "FL-03",
+   "kind": "flow"
+  },
+  {
+   "id": "16803:475",
+   "name": "UPD · SC-036 · Tạo / sửa vé (商品管理)",
+   "badge": "UPD",
+   "ref": "SC-036",
+   "kind": "flow"
+  },
+  {
+   "id": "16803:479",
+   "name": "UPD · API-050 · Lưu vé + 公開区分",
+   "badge": "UPD",
+   "ref": "API-050",
+   "kind": "flow"
+  },
+  {
+   "id": "16803:483",
+   "name": "NEW · column:tickets.audience · tickets.audience",
+   "badge": "NEW",
+   "ref": "column:tickets.audience",
+   "kind": "flow"
+  },
+  {
+   "id": "16803:487",
+   "name": "NEW · IMP-032 · Vé phân loại theo đối tượng",
+   "badge": "NEW",
+   "ref": "IMP-032",
+   "kind": "flow"
+  },
+  {
+   "id": "16803:491",
+   "name": "NEW · IMP-023 · Có 商品 dùng chung 一般・団体 không? — CQ-009",
+   "badge": "NEW",
+   "ref": "IMP-023",
+   "kind": "edge"
+  },
+  {
+   "id": "16803:512",
+   "name": "NEW · IMP-033 · Người phụ trách đoàn",
+   "badge": "NEW",
+   "ref": "IMP-033",
+   "kind": "flow"
+  },
+  {
+   "id": "16803:516",
+   "name": "NEW · IMP-046 · Đăng ký đoàn (団体登録)",
+   "badge": "NEW",
+   "ref": "IMP-046",
+   "kind": "flow"
+  },
+  {
+   "id": "16803:520",
+   "name": "NEW · IMP-003 · Tạo đoàn + tài khoản",
+   "badge": "NEW",
+   "ref": "IMP-003",
+   "kind": "flow"
+  },
+  {
+   "id": "16803:524",
+   "name": "IMPACT · table:users · users (role User)",
+   "badge": "IMPACT",
+   "ref": "table:users",
+   "kind": "flow"
+  },
+  {
+   "id": "16803:528",
+   "name": "NEW · IMP-024 · organizations · organization_members",
+   "badge": "NEW",
+   "ref": "IMP-024",
+   "kind": "flow"
+  },
+  {
+   "id": "16803:532",
+   "name": "NEW · IMP-049 · マイページ đoàn sẵn sàng",
+   "badge": "NEW",
+   "ref": "IMP-049",
+   "kind": "flow"
+  },
+  {
+   "id": "16803:536",
+   "name": "NEW · IMP-005 · Nhiều người phụ trách / phân quyền (拡張案) — CQ-015",
+   "badge": "NEW",
+   "ref": "IMP-005",
+   "kind": "edge"
+  },
+  {
+   "id": "16803:561",
+   "name": "UPD · SC-063 · Người phụ trách đoàn",
+   "badge": "UPD",
+   "ref": "SC-063",
+   "kind": "flow"
+  },
+  {
+   "id": "16803:565",
+   "name": "NEW · IMP-047 · Mở trang đặt chỗ đoàn",
+   "badge": "NEW",
+   "ref": "IMP-047",
+   "kind": "flow"
+  },
+  {
+   "id": "16803:569",
+   "name": "NEW · IMP-006 · Tạo đặt chỗ đoàn",
+   "badge": "NEW",
+   "ref": "IMP-006",
+   "kind": "flow"
+  },
+  {
+   "id": "16803:573",
+   "name": "IMPACT · table:ticket_booking_schedules · Còn chỗ (sức chứa chung)?",
+   "badge": "IMPACT",
+   "ref": "table:ticket_booking_schedules",
+   "kind": "flow"
+  },
+  {
+   "id": "16803:577",
+   "name": "IMPACT · API-008 · Hết chỗ → báo, chọn ngày khác",
+   "badge": "IMPACT",
+   "ref": "API-008",
+   "kind": "flow"
+  },
+  {
+   "id": "16803:582",
+   "name": "UPD · column:tickets.payment_type · Chọn cách thanh toán theo booking",
+   "badge": "UPD",
+   "ref": "column:tickets.payment_type",
+   "kind": "flow"
+  },
+  {
+   "id": "16803:586",
+   "name": "UPD · EXT-001 · GMO Payment Gateway",
+   "badge": "UPD",
+   "ref": "EXT-001",
+   "kind": "flow"
+  },
+  {
+   "id": "16803:590",
+   "name": "NEW · IMP-034 · Đặt chỗ đoàn được tạo",
+   "badge": "NEW",
+   "ref": "IMP-034",
+   "kind": "flow"
+  },
+  {
+   "id": "16803:594",
+   "name": "NEW · IMP-016 · 承認制 (拡張案) — admin duyệt? CQ-002",
+   "badge": "NEW",
+   "ref": "IMP-016",
+   "kind": "edge"
+  },
+  {
+   "id": "16803:597",
+   "name": "NEW · IMP-038 · キャンセル料 — mức & mốc thời gian? CQ-005",
+   "badge": "NEW",
+   "ref": "IMP-038",
+   "kind": "edge"
+  },
+  {
+   "id": "16803:600",
+   "name": "IMPACT · API-020 · 店頭払い qua POS — mã Smaregi / OBIC vé đoàn? CQ-017",
+   "badge": "IMPACT",
+   "ref": "API-020",
+   "kind": "edge"
+  },
+  {
+   "id": "16803:634",
+   "name": "AS-IS · FL-09 · Người phụ trách đoàn",
+   "badge": "AS-IS",
+   "ref": "FL-09",
+   "kind": "flow"
+  },
+  {
+   "id": "16803:638",
+   "name": "UPD · SC-070 · 予約履歴 — đặt chỗ đoàn",
+   "badge": "UPD",
+   "ref": "SC-070",
+   "kind": "flow"
+  },
+  {
+   "id": "16803:642",
+   "name": "NEW · IMP-011 · Phát hành / phát hành lại 領収書",
+   "badge": "NEW",
+   "ref": "IMP-011",
+   "kind": "flow"
+  },
+  {
+   "id": "16803:646",
+   "name": "UPD · API-111 · Huỷ / đổi số người",
+   "badge": "UPD",
+   "ref": "API-111",
+   "kind": "flow"
+  },
+  {
+   "id": "16803:650",
+   "name": "UPD · API-015 · Hoàn phần chênh lệch",
+   "badge": "UPD",
+   "ref": "API-015",
+   "kind": "flow"
+  },
+  {
+   "id": "16803:654",
+   "name": "NEW · IMP-027 · receipts · receipt_histories",
+   "badge": "NEW",
+   "ref": "IMP-027",
+   "kind": "flow"
+  },
+  {
+   "id": "16803:658",
+   "name": "NEW · IMP-041 · 領収書 có lịch sử, vô hiệu khi huỷ",
+   "badge": "NEW",
+   "ref": "IMP-041",
+   "kind": "flow"
+  },
+  {
+   "id": "16803:662",
+   "name": "NEW · IMP-079 · Nội dung 領収書 theo kế toán (税区分…) — CQ-008",
+   "badge": "NEW",
+   "ref": "IMP-079",
+   "kind": "edge"
+  },
+  {
+   "id": "16803:693",
+   "name": "AS-IS · FL-05 · Admin cửa hàng / Super Admin",
+   "badge": "AS-IS",
+   "ref": "FL-05",
+   "kind": "flow"
+  },
+  {
+   "id": "16803:697",
+   "name": "UPD · SC-004 · 予約管理 — lọc 一般 / 団体",
+   "badge": "UPD",
+   "ref": "SC-004",
+   "kind": "flow"
+  },
+  {
+   "id": "16803:701",
+   "name": "UPD · API-017 · Danh sách / CSV / đếm đặt chỗ",
+   "badge": "UPD",
+   "ref": "API-017",
+   "kind": "flow"
+  },
+  {
+   "id": "16803:705",
+   "name": "NEW · IMP-057 · Quản lý đoàn",
+   "badge": "NEW",
+   "ref": "IMP-057",
+   "kind": "flow"
+  },
+  {
+   "id": "16803:709",
+   "name": "NEW · IMP-012 · API quản lý đoàn (admin)",
+   "badge": "NEW",
+   "ref": "IMP-012",
+   "kind": "flow"
+  },
+  {
+   "id": "16803:713",
+   "name": "IMPACT · table:admin_activity_logs · admin_activity_logs",
+   "badge": "IMPACT",
+   "ref": "table:admin_activity_logs",
+   "kind": "flow"
+  },
+  {
+   "id": "16803:717",
+   "name": "NEW · IMP-015 · Xem 操作履歴",
+   "badge": "NEW",
+   "ref": "IMP-015",
+   "kind": "flow"
+  },
+  {
+   "id": "16803:721",
+   "name": "IMPACT · SC-009 · 在庫調整 / 空き状況 — sức chứa dùng chung CQ-010",
+   "badge": "IMPACT",
+   "ref": "SC-009",
+   "kind": "edge"
+  },
+  {
+   "id": "16803:757",
+   "name": "AS-IS · FL-01 · Admin (4 role)",
+   "badge": "AS-IS",
+   "ref": "FL-01",
+   "kind": "flow"
+  },
+  {
+   "id": "16803:761",
+   "name": "UPD · SC-027 · Đăng nhập admin",
+   "badge": "UPD",
+   "ref": "SC-027",
+   "kind": "flow"
+  },
+  {
+   "id": "16803:765",
+   "name": "UPD · API-061 · Xác thực admin",
+   "badge": "UPD",
+   "ref": "API-061",
+   "kind": "flow"
+  },
+  {
+   "id": "16803:769",
+   "name": "NEW · IMP-018 · Mã xác thực",
+   "badge": "NEW",
+   "ref": "IMP-018",
+   "kind": "flow"
+  },
+  {
+   "id": "16803:773",
+   "name": "NEW · IMP-062 · Vào admin sau khi nhập mã",
+   "badge": "NEW",
+   "ref": "IMP-062",
+   "kind": "flow"
+  },
+  {
+   "id": "16803:777",
+   "name": "NEW · IMP-080 · Xác thực bổ sung người phụ trách (拡張案) — CQ-007",
+   "badge": "NEW",
+   "ref": "IMP-080",
+   "kind": "edge"
+  },
+  {
+   "id": "16803:797",
+   "name": "UPD · EXT-001 · GMO Payment Gateway",
+   "badge": "UPD",
+   "ref": "EXT-001",
+   "kind": "tech"
+  },
+  {
+   "id": "16803:801",
+   "name": "IMPACT · EXT-002 · AWS SES / SMTP (EXT-002 · EXT-003)",
+   "badge": "IMPACT",
+   "ref": "EXT-002",
+   "kind": "tech"
+  },
+  {
+   "id": "16803:805",
+   "name": "IMPACT · EXT-006 · Smaregi POS",
+   "badge": "IMPACT",
+   "ref": "EXT-006",
+   "kind": "tech"
+  },
+  {
+   "id": "16803:809",
+   "name": "NEW · IMP-019 · Cron nhắc / quá hạn thanh toán",
+   "badge": "NEW",
+   "ref": "IMP-019",
+   "kind": "tech"
+  },
+  {
+   "id": "16803:813",
+   "name": "NEW · IMP-073 · Dịch vụ 請求書払い (拡張案)",
+   "badge": "NEW",
+   "ref": "IMP-073",
+   "kind": "tech"
+  },
+  {
+   "id": "16804:403",
+   "name": "AS-IS · FL-06 · Vào từ ログイン / link đăng ký đoàn",
+   "badge": "AS-IS",
+   "ref": "FL-06",
+   "kind": "flow-step"
+  },
+  {
+   "id": "16804:406",
+   "name": "UPD · SC-063 · ログイン方法を選択",
+   "badge": "UPD",
+   "ref": "SC-063",
+   "kind": "screen"
+  },
+  {
+   "id": "16804:410",
+   "name": "NEW · IMP-046 · 団体登録",
+   "badge": "NEW",
+   "ref": "IMP-046",
+   "kind": "screen"
+  },
+  {
+   "id": "16804:414",
+   "name": "NEW · IMP-033 · Xác thực email OK?",
+   "badge": "NEW",
+   "ref": "IMP-033",
+   "kind": "flow-step"
+  },
+  {
+   "id": "16804:417",
+   "name": "NEW · IMP-003 · Link hết hạn → gửi lại mail xác thực",
+   "badge": "NEW",
+   "ref": "IMP-003",
+   "kind": "flow-step"
+  },
+  {
+   "id": "16804:421",
+   "name": "NEW · IMP-049 · マイページ — 団体情報 / 請求先",
+   "badge": "NEW",
+   "ref": "IMP-049",
+   "kind": "screen"
+  },
+  {
+   "id": "16804:425",
+   "name": "NEW · IMP-051 · マイページ — 担当者 (拡張案)",
+   "badge": "NEW",
+   "ref": "IMP-051",
+   "kind": "screen"
+  },
+  {
+   "id": "16804:429",
+   "name": "NEW · IMP-052 · 追加認証 — nhập mã (拡張案)",
+   "badge": "NEW",
+   "ref": "IMP-052",
+   "kind": "screen"
+  },
+  {
+   "id": "16804:465",
+   "name": "NEW · IMP-005 · Phân quyền giữa các người phụ trách — CQ-015",
+   "badge": "NEW",
+   "ref": "IMP-005",
+   "kind": "edge"
+  },
+  {
+   "id": "16804:471",
+   "name": "AS-IS · SC-066 · Vào từ 店舗一覧 / URL đặt chỗ đoàn",
+   "badge": "AS-IS",
+   "ref": "SC-066",
+   "kind": "flow-step"
+  },
+  {
+   "id": "16804:474",
+   "name": "NEW · IMP-047 · 団体予約",
+   "badge": "NEW",
+   "ref": "IMP-047",
+   "kind": "screen"
+  },
+  {
+   "id": "16804:478",
+   "name": "IMPACT · table:ticket_booking_schedules · Còn chỗ (sức chứa chung)?",
+   "badge": "IMPACT",
+   "ref": "table:ticket_booking_schedules",
+   "kind": "flow-step"
+  },
+  {
+   "id": "16804:481",
+   "name": "IMPACT · API-008 · Hết chỗ → báo lỗi, chọn ngày khác",
+   "badge": "IMPACT",
+   "ref": "API-008",
+   "kind": "flow-step"
+  },
+  {
+   "id": "16804:485",
+   "name": "NEW · IMP-048 · 予約内容確認 + お支払い方法",
+   "badge": "NEW",
+   "ref": "IMP-048",
+   "kind": "screen"
+  },
+  {
+   "id": "16804:489",
+   "name": "UPD · EXT-001 · GMO — thanh toán thẻ",
+   "badge": "UPD",
+   "ref": "EXT-001",
+   "kind": "screen"
+  },
+  {
+   "id": "16804:493",
+   "name": "UPD · SC-070 · 予約履歴",
+   "badge": "UPD",
+   "ref": "SC-070",
+   "kind": "screen"
+  },
+  {
+   "id": "16804:497",
+   "name": "UPD · SC-071 · 予約履歴 chi tiết",
+   "badge": "UPD",
+   "ref": "SC-071",
+   "kind": "screen"
+  },
+  {
+   "id": "16804:501",
+   "name": "NEW · IMP-050 · マイページ — 領収書",
+   "badge": "NEW",
+   "ref": "IMP-050",
+   "kind": "screen"
+  },
+  {
+   "id": "16804:505",
+   "name": "UPD · SC-076 · 予約変更",
+   "badge": "UPD",
+   "ref": "SC-076",
+   "kind": "screen"
+  },
+  {
+   "id": "16804:551",
+   "name": "NEW · IMP-038 · Phí huỷ khi đổi / huỷ — CQ-005",
+   "badge": "NEW",
+   "ref": "IMP-038",
+   "kind": "edge"
+  },
+  {
+   "id": "16804:554",
+   "name": "NEW · IMP-016 · Chờ admin duyệt (拡張案) — CQ-002",
+   "badge": "NEW",
+   "ref": "IMP-016",
+   "kind": "edge"
+  },
+  {
+   "id": "16804:560",
+   "name": "AS-IS · SC-046 · Vào từ お知らせ / nav",
+   "badge": "AS-IS",
+   "ref": "SC-046",
+   "kind": "flow-step"
+  },
+  {
+   "id": "16804:563",
+   "name": "IMPACT · SC-059 · 料金プラン",
+   "badge": "IMPACT",
+   "ref": "SC-059",
+   "kind": "screen"
+  },
+  {
+   "id": "16804:566",
+   "name": "IMPACT · SC-067 · 店舗詳細 /tenant/:code",
+   "badge": "IMPACT",
+   "ref": "SC-067",
+   "kind": "screen"
+  },
+  {
+   "id": "16804:569",
+   "name": "IMPACT · SC-048 · フリーパス購入",
+   "badge": "IMPACT",
+   "ref": "SC-048",
+   "kind": "screen"
+  },
+  {
+   "id": "16804:572",
+   "name": "IMPACT · SC-049 · 回数券購入",
+   "badge": "IMPACT",
+   "ref": "SC-049",
+   "kind": "screen"
+  },
+  {
+   "id": "16804:575",
+   "name": "IMPACT · SC-054 · 当日利用 /booking/use-in-day",
+   "badge": "IMPACT",
+   "ref": "SC-054",
+   "kind": "screen"
+  },
+  {
+   "id": "16804:604",
+   "name": "AS-IS · FL-01 · Mở admin site",
+   "badge": "AS-IS",
+   "ref": "FL-01",
+   "kind": "flow-step"
+  },
+  {
+   "id": "16804:607",
+   "name": "UPD · SC-027 · ログイン (admin)",
+   "badge": "UPD",
+   "ref": "SC-027",
+   "kind": "screen"
+  },
+  {
+   "id": "16804:611",
+   "name": "NEW · IMP-062 · 二要素認証 — nhập mã",
+   "badge": "NEW",
+   "ref": "IMP-062",
+   "kind": "screen"
+  },
+  {
+   "id": "16804:614",
+   "name": "NEW · IMP-018 · Mã đúng?",
+   "badge": "NEW",
+   "ref": "IMP-018",
+   "kind": "flow-step"
+  },
+  {
+   "id": "16804:617",
+   "name": "UPD · API-061 · Sai mã → nhập lại / khoá như loginAttempts",
+   "badge": "UPD",
+   "ref": "API-061",
+   "kind": "flow-step"
+  },
+  {
+   "id": "16804:621",
+   "name": "AS-IS · SC-001 · ダッシュボード",
+   "badge": "AS-IS",
+   "ref": "SC-001",
+   "kind": "screen"
+  },
+  {
+   "id": "16804:650",
+   "name": "AS-IS · SC-001 · Menu admin (ダッシュボード)",
+   "badge": "AS-IS",
+   "ref": "SC-001",
+   "kind": "flow-step"
+  },
+  {
+   "id": "16804:653",
+   "name": "NEW · IMP-057 · 団体管理 — danh sách",
+   "badge": "NEW",
+   "ref": "IMP-057",
+   "kind": "screen"
+  },
+  {
+   "id": "16804:656",
+   "name": "NEW · IMP-058 · 団体登録 / 編集",
+   "badge": "NEW",
+   "ref": "IMP-058",
+   "kind": "screen"
+  },
+  {
+   "id": "16804:659",
+   "name": "NEW · IMP-059 · 団体詳細",
+   "badge": "NEW",
+   "ref": "IMP-059",
+   "kind": "screen"
+  },
+  {
+   "id": "16804:663",
+   "name": "NEW · IMP-060 · 領収書発行履歴",
+   "badge": "NEW",
+   "ref": "IMP-060",
+   "kind": "screen"
+  },
+  {
+   "id": "16804:667",
+   "name": "NEW · IMP-061 · 操作履歴",
+   "badge": "NEW",
+   "ref": "IMP-061",
+   "kind": "screen"
+  },
+  {
+   "id": "16804:670",
+   "name": "UPD · SC-004 · 予約管理",
+   "badge": "UPD",
+   "ref": "SC-004",
+   "kind": "screen"
+  },
+  {
+   "id": "16804:674",
+   "name": "UPD · SC-005 · 予約詳細",
+   "badge": "UPD",
+   "ref": "SC-005",
+   "kind": "screen"
+  },
+  {
+   "id": "16804:678",
+   "name": "UPD · SC-007 · 予約編集",
+   "badge": "UPD",
+   "ref": "SC-007",
+   "kind": "screen"
+  },
+  {
+   "id": "16804:682",
+   "name": "UPD · SC-035 · 商品管理 — danh sách",
+   "badge": "UPD",
+   "ref": "SC-035",
+   "kind": "screen"
+  },
+  {
+   "id": "16804:686",
+   "name": "UPD · SC-036 · 商品管理 — tạo",
+   "badge": "UPD",
+   "ref": "SC-036",
+   "kind": "screen"
+  },
+  {
+   "id": "16804:690",
+   "name": "UPD · SC-037 · 商品管理 — sửa",
+   "badge": "UPD",
+   "ref": "SC-037",
+   "kind": "screen"
+  },
+  {
+   "id": "16804:693",
+   "name": "UPD · SC-038 · 商品管理 — xem",
+   "badge": "UPD",
+   "ref": "SC-038",
+   "kind": "screen"
+  },
+  {
+   "id": "16804:696",
+   "name": "IMPACT · SC-009 · 在庫調整",
+   "badge": "IMPACT",
+   "ref": "SC-009",
+   "kind": "screen"
+  },
+  {
+   "id": "16804:700",
+   "name": "IMPACT · SC-044 · 空き状況",
+   "badge": "IMPACT",
+   "ref": "SC-044",
+   "kind": "screen"
+  },
+  {
+   "id": "16804:703",
+   "name": "IMPACT · SC-003 · バーコード読み取り",
+   "badge": "IMPACT",
+   "ref": "SC-003",
+   "kind": "screen"
+  },
+  {
+   "id": "16804:707",
+   "name": "IMPACT · SC-026 · 入場状況管理",
+   "badge": "IMPACT",
+   "ref": "SC-026",
+   "kind": "screen"
+  },
+  {
+   "id": "16804:710",
+   "name": "IMPACT · SC-012 · ダッシュボード (thống kê)",
+   "badge": "IMPACT",
+   "ref": "SC-012",
+   "kind": "screen"
+  },
+  {
+   "id": "16804:713",
+   "name": "IMPACT · SC-025 · 売上管理",
+   "badge": "IMPACT",
+   "ref": "SC-025",
+   "kind": "screen"
+  },
+  {
+   "id": "16804:716",
+   "name": "IMPACT · SC-040 · ユーザー管理",
+   "badge": "IMPACT",
+   "ref": "SC-040",
+   "kind": "screen"
+  },
+  {
+   "id": "16804:720",
+   "name": "IMPACT · SC-014 · 自動返信メール設定",
+   "badge": "IMPACT",
+   "ref": "SC-014",
+   "kind": "screen"
+  },
+  {
+   "id": "16806:403",
+   "name": "NEW · IMP-046 · [WEB-02] 団体登録",
+   "badge": "NEW",
+   "ref": "IMP-046",
+   "kind": "mockup",
+   "ds": "DS-component:WEB-02:Breadcrumb;DS-component:WEB-02:Button;DS-component:WEB-02:Checkbox;DS-component:WEB-02:PageHeader;DS-component:WEB-02:TextField",
+   "site": "WEB-02",
+   "colors": [
+    "#ffffff",
+    "#0068b7",
+    "#f4faff",
+    "#313131",
+    "#ffe732",
+    "#dc0404",
+    "#f3faff",
+    "#979797",
+    "#000000"
+   ]
+  },
+  {
+   "id": "16806:510",
+   "name": "NEW · IMP-047 · [WEB-02] 団体予約",
+   "badge": "NEW",
+   "ref": "IMP-047",
+   "kind": "mockup",
+   "ds": "DS-component:WEB-02:AppHeader;DS-component:WEB-02:Breadcrumb;DS-component:WEB-02:Button;DS-component:WEB-02:Card;DS-component:WEB-02:PageHeader;DS-component:WEB-02:Select;DS-component:WEB-02:TextField",
+   "site": "WEB-02",
+   "colors": [
+    "#ffffff",
+    "#0068b7",
+    "#f4faff",
+    "#313131",
+    "#ffe732",
+    "#e6e1e1",
+    "#979797",
+    "#dc0404",
+    "#f3faff",
+    "#000000"
+   ]
+  },
+  {
+   "id": "16807:400",
+   "name": "NEW · IMP-048 · [WEB-02] 予約内容確認・お支払い方法",
+   "badge": "NEW",
+   "ref": "IMP-048",
+   "kind": "mockup",
+   "ds": "DS-component:WEB-02:AppHeader;DS-component:WEB-02:Breadcrumb;DS-component:WEB-02:Button;DS-component:WEB-02:Card;DS-component:WEB-02:Checkbox;DS-component:WEB-02:PageHeader;DS-component:WEB-02:Radio",
+   "site": "WEB-02",
+   "colors": [
+    "#ffffff",
+    "#0068b7",
+    "#f4faff",
+    "#313131",
+    "#ffe732",
+    "#e6e1e1",
+    "#979797",
+    "#2563eb"
+   ]
+  },
+  {
+   "id": "16807:457",
+   "name": "NEW · IMP-049 · [WEB-02] マイページ — 団体情報",
+   "badge": "NEW",
+   "ref": "IMP-049",
+   "kind": "mockup",
+   "ds": "DS-component:WEB-02:AppHeader;DS-component:WEB-02:Button;DS-component:WEB-02:Card;DS-component:WEB-02:PageHeader;DS-component:WEB-02:SideNav",
+   "site": "WEB-02",
+   "colors": [
+    "#ffffff",
+    "#0068b7",
+    "#f4faff",
+    "#fffbf8",
+    "#000000",
+    "#313131"
+   ]
+  },
+  {
+   "id": "16807:500",
+   "name": "NEW · IMP-050 · [WEB-02] マイページ — 領収書",
+   "badge": "NEW",
+   "ref": "IMP-050",
+   "kind": "mockup",
+   "ds": "DS-component:WEB-01:Table;DS-component:WEB-02:AppHeader;DS-component:WEB-02:Button;DS-component:WEB-02:PageHeader;DS-component:WEB-02:SideNav;DS-component:WEB-02:TextField",
+   "site": "WEB-02",
+   "colors": [
+    "#ffffff",
+    "#0068b7",
+    "#f4faff",
+    "#fffbf8",
+    "#000000",
+    "#313131",
+    "#e9faff",
+    "#313035",
+    "#dc0404",
+    "#f3faff"
+   ]
+  },
+  {
+   "id": "16807:576",
+   "name": "NEW · IMP-051 · [WEB-02] マイページ — 担当者 (拡張案)",
+   "badge": "NEW",
+   "ref": "IMP-051",
+   "kind": "mockup",
+   "ds": "DS-component:WEB-01:Table;DS-component:WEB-02:AppHeader;DS-component:WEB-02:Button;DS-component:WEB-02:PageHeader;DS-component:WEB-02:SideNav",
+   "site": "WEB-02",
+   "colors": [
+    "#ffffff",
+    "#0068b7",
+    "#f4faff",
+    "#fffbf8",
+    "#000000",
+    "#e9faff",
+    "#313035",
+    "#313131"
+   ]
+  },
+  {
+   "id": "16808:400",
+   "name": "NEW · IMP-052 · [WEB-02] 追加認証 (拡張案)",
+   "badge": "NEW",
+   "ref": "IMP-052",
+   "kind": "mockup",
+   "ds": "DS-component:WEB-01:Modal;DS-component:WEB-02:PageHeader;DS-component:WEB-02:AppHeader",
+   "site": "WEB-02",
+   "colors": [
+    "#ffffff",
+    "#0068b7",
+    "#f4faff",
+    "#313131",
+    "#ffe732",
+    "#000000",
+    "#262627",
+    "#dc0404",
+    "#b4b2b7",
+    "#006dc6"
+   ]
+  },
+  {
+   "id": "16808:434",
+   "name": "NEW · IMP-057 · [WEB-01] 団体管理 — 一覧",
+   "badge": "NEW",
+   "ref": "IMP-057",
+   "kind": "mockup",
+   "ds": "DS-component:WEB-01:Breadcrumb;DS-component:WEB-01:Card;DS-component:WEB-01:PageHeader;DS-component:WEB-01:Pagination;DS-component:WEB-01:SideNav;DS-component:WEB-01:Table",
+   "site": "WEB-01",
+   "colors": [
+    "#f4faff",
+    "#006dc6",
+    "#676767",
+    "#68b5ff",
+    "#f5f5f5",
+    "#000000",
+    "#ffffff",
+    "#262627",
+    "#b4b2b7",
+    "#e9faff",
+    "#313035"
+   ]
+  },
+  {
+   "id": "16808:528",
+   "name": "NEW · IMP-058 · [WEB-01] 団体登録・編集",
+   "badge": "NEW",
+   "ref": "IMP-058",
+   "kind": "mockup",
+   "ds": "DS-component:WEB-01:Breadcrumb;DS-component:WEB-01:Button;DS-component:WEB-01:Card;DS-component:WEB-01:PageHeader;DS-component:WEB-01:SideNav;DS-component:WEB-01:TextField",
+   "site": "WEB-01",
+   "colors": [
+    "#f4faff",
+    "#006dc6",
+    "#676767",
+    "#68b5ff",
+    "#f5f5f5",
+    "#000000",
+    "#ffffff",
+    "#262627",
+    "#dc0404",
+    "#b4b2b7"
+   ]
+  },
+  {
+   "id": "16808:585",
+   "name": "NEW · IMP-059 · [WEB-01] 団体詳細",
+   "badge": "NEW",
+   "ref": "IMP-059",
+   "kind": "mockup",
+   "ds": "DS-component:WEB-01:Breadcrumb;DS-component:WEB-01:Button;DS-component:WEB-01:Card;DS-component:WEB-01:PageHeader;DS-component:WEB-01:SideNav;DS-component:WEB-01:Table;DS-component:WEB-02:Badge",
+   "site": "WEB-01",
+   "colors": [
+    "#f4faff",
+    "#006dc6",
+    "#676767",
+    "#68b5ff",
+    "#f5f5f5",
+    "#000000",
+    "#ffffff",
+    "#d9d9d9",
+    "#979797",
+    "#e9faff",
+    "#313035"
+   ]
+  },
+  {
+   "id": "16809:400",
+   "name": "NEW · IMP-060 · [WEB-01] 領収書発行履歴",
+   "badge": "NEW",
+   "ref": "IMP-060",
+   "kind": "mockup",
+   "ds": "DS-component:WEB-01:Breadcrumb;DS-component:WEB-01:Card;DS-component:WEB-01:PageHeader;DS-component:WEB-01:Pagination;DS-component:WEB-01:SideNav;DS-component:WEB-01:Table",
+   "site": "WEB-01",
+   "colors": [
+    "#f4faff",
+    "#006dc6",
+    "#676767",
+    "#68b5ff",
+    "#f5f5f5",
+    "#000000",
+    "#ffffff",
+    "#262627",
+    "#b4b2b7",
+    "#e9faff",
+    "#313035"
+   ]
+  },
+  {
+   "id": "16809:500",
+   "name": "NEW · IMP-061 · [WEB-01] 操作履歴",
+   "badge": "NEW",
+   "ref": "IMP-061",
+   "kind": "mockup",
+   "ds": "DS-component:WEB-01:Breadcrumb;DS-component:WEB-01:Card;DS-component:WEB-01:PageHeader;DS-component:WEB-01:Pagination;DS-component:WEB-01:SideNav;DS-component:WEB-01:Table",
+   "site": "WEB-01",
+   "colors": [
+    "#f4faff",
+    "#006dc6",
+    "#676767",
+    "#68b5ff",
+    "#f5f5f5",
+    "#000000",
+    "#ffffff",
+    "#262627",
+    "#b4b2b7",
+    "#e9faff",
+    "#313035"
+   ]
+  },
+  {
+   "id": "16809:588",
+   "name": "NEW · IMP-062 · [WEB-01] 二要素認証",
+   "badge": "NEW",
+   "ref": "IMP-062",
+   "kind": "mockup",
+   "ds": "DS-component:WEB-01:Button;DS-component:WEB-01:Card;DS-component:WEB-01:TextField;DS-component:WEB-02:Checkbox",
+   "site": "WEB-01",
+   "colors": [
+    "#ffffff",
+    "#000000",
+    "#262627",
+    "#dc0404",
+    "#f4faff",
+    "#b4b2b7",
+    "#313131",
+    "#006dc6"
+   ]
+  }
+ ]
+}

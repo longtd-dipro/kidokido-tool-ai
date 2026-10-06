@@ -147,22 +147,26 @@ Sau đó AI trả lời đủ **6 câu hỏi** cho CR — trục nào không ả
 
 ### Bước 5 — Nhận kết quả
 
-AI in: folder version mới · baseline đã dùng · số hạng mục theo trục × loại · **tổng MD** · xung đột · câu hỏi cần khách trả lời · link Figma (nếu vẽ).
+AI in: folder version mới · baseline đã dùng · **số đối tượng thay đổi** (màn / API / bảng DB …) × NEW / UPD / DEL / IMPACT · **実装 MD · 総工数 人日 · 人月** (最小改修案 / 拡張案) · xung đột · câu hỏi cần khách trả lời · link Figma (nếu vẽ).
 
 ```
 outputs/ver2_<DDMMYY>_CR-001-<tên-ngắn>/
 ├── README.md                  mục lục version
 ├── run-log.md                 ghi baseline đã dùng (ver1_021026_khao-sat-lan-dau)
 ├── input/                     CR nguyên văn (đã che dữ liệu cá nhân)
-├── CR-001_Impact.xlsx         2 sheet: Summary · Impact   ← gửi khách được
+├── CR-001_Impact.xlsx         7 sheet: Summary · Estimation · Screen · API · Database · Figma · Q&A   ← gửi khách được
 ├── 05_Figma/figma-links.md    link view CR (nếu vẽ)
 └── _internal/                 dữ liệu máy đọc + kết quả gate — không gửi khách
 ```
 
-#### `CR-<id>_Impact.xlsx` — 2 sheet
+#### `CR-<id>_Impact.xlsx` — 7 sheet
 
-- **`Summary`** — gửi khách được: thông tin CR · **① vì sao đây là CR** (đối chiếu hệ thống hiện tại theo C1–C6) · **② tổng MD** theo Trục × Loại · trục không ảnh hưởng + lý do · **③ câu hỏi cần khách trả lời** · mục không thuộc CR (BUG / QUESTION).
-- **`Impact`** — 1 dòng / hạng mục: Impact ID · Trục · Loại (`NEW` / `UPD` / `DEL` / `IMPACT`) · Baseline Ref · Nội dung thay đổi · **Vì sao phải sửa** · Ảnh hưởng tới hiện tại · Xung đột · Rủi ro · Mã đơn giá · Số lượng · **MD** · Evidence · Câu hỏi.
+- **`Summary`** — chỉ cơ bản: thông tin CR · **công số thay đổi** (実装 MD · 総工数 人日 · 人月 link sang Estimation · tách 最小改修案 / 拡張案) · **số đối tượng thay đổi** (màn hình / API / bảng DB / cột DB / rule / liên kết ngoài / mockup) × NEW / UPD / DEL / IMPACT · link tới từng sheet.
+- **`Estimation`** — đúng khung 見積書 của công ty (`templates/template_estimation.xlsx`): 1 section / mục CR, 1 dòng / hạng mục, 実装 = MD, 要件定義 / UI・UX / テスト / 管理 tính bằng công thức hệ số của template, 合計 人日 + 人月.
+- **`Screen`** · **`API`** · **`Database`** · **`Figma`** — 1 dòng / hạng mục của trục tương ứng: Impact ID · Loại (`NEW` / `UPD` / `DEL` / `IMPACT`) · Baseline Ref · Nội dung thay đổi · **Vì sao phải sửa** · Ảnh hưởng tới hiện tại · Xung đột · Rủi ro · Mã đơn giá · Số lượng · **MD** · Evidence · Câu hỏi.
+- **`Q&A`** — **vì sao đây là CR** (đối chiếu hệ thống hiện tại theo C1–C6) · **câu hỏi cần khách trả lời** · trục không ảnh hưởng · mục không thuộc CR (BUG / QUESTION).
+
+> Template Estimation bóc 1 lần từ 見積書 đã gửi khách: `python3 .claude/skills/system-analyst/scripts/extract-estimation-template.py --src "<見積書>.xlsx"`. Đổi hệ số công đoạn = sửa template, không sửa code.
 
 ![Sheet Summary của CR-001 (dữ liệu giả ShopDemo)](docs/images/g08_cr-summary-sheet.png)
 <sub>Ví dụ sheet Summary — dữ liệu giả ShopDemo.</sub>
@@ -172,7 +176,9 @@ outputs/ver2_<DDMMYY>_CR-001-<tên-ngắn>/
 #### Figma — view CR mới
 
 - 1 section **mới** đặt dưới bản baseline — **không vẽ đè, không sửa node cũ**.
-- Chỉ vẽ phần thay đổi + phần bị ảnh hưởng + màn bên cạnh 1 bước; tô màu theo badge, kèm **CR Change Table** (Impact ID · badge · Baseline Ref · nội dung · MD).
+- **CR-1 Flow** vẽ đúng khung Output 1 (lane FL-xx: Actor → Trigger → Function → Technology → Outcome) · **CR-2 Screen Flow** đúng khung Output 2 (Group, Start, màn, rẽ nhánh, NG, mũi tên thật, Screen Index) — chỉ phần thay đổi + phần bị ảnh hưởng + màn bên cạnh 1 bước.
+- **CR Change Table** = bảng **thống kê**: bao nhiêu màn / API / bảng … NEW / UPD / DEL / IMPACT + công số (chi tiết từng hạng mục nằm trong xlsx).
+- **CR-3 màn đề xuất** (AI hỏi phạm vi): dựng từ token + component Design System của baseline — AI đọc Design System trước khi vẽ, thiếu component thì hỏi bạn mượn site khác hay chờ designer.
 
 ![Ký hiệu trên Figma view CR](docs/images/g09_badge-cr.png)
 

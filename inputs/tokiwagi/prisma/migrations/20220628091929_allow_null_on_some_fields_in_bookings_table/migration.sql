@@ -1,2 +1,0 @@
--- AlterTable
-ALTER TABLE "bookings" ALTER COLUMN "total_amount" DROP NOT NULL;
