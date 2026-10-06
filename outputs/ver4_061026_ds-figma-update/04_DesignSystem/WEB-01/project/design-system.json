@@ -1,0 +1,495 @@
+{
+  "v": 3,
+  "layout": "files",
+  "createdOnFiles": {
+    "v": 1,
+    "at": "2026-10-02T08:12:19Z"
+  },
+  "title": "KidoKido 管理画面",
+  "namespace": "KidoKidoAdmin",
+  "libraries": [
+    {
+      "name": "react",
+      "version": "18"
+    },
+    {
+      "name": "react-dom",
+      "version": "18"
+    }
+  ],
+  "sections": {},
+  "groups": [
+    "Logos",
+    "Icons"
+  ],
+  "assetGroups": {
+    "Logos": {
+      "name": "Logos",
+      "tile": "l",
+      "order": [
+        "admin-logo.svg",
+        "logo-login-admin.svg"
+      ],
+      "files": {
+        "admin-logo.svg": {
+          "name": "admin-logo.svg",
+          "size": 35063,
+          "type": "image/svg+xml",
+          "blob": "afbe93ae05e950f562a522666d0c56a2"
+        },
+        "logo-login-admin.svg": {
+          "name": "logo-login-admin.svg",
+          "size": 35055,
+          "type": "image/svg+xml",
+          "blob": "004d30be2c7e7217d3861fc313867a27"
+        }
+      }
+    },
+    "Icons": {
+      "name": "Icons",
+      "tile": "xs",
+      "order": [
+        "dashboard-active.svg",
+        "dashboard-inactive.svg",
+        "house-active.svg",
+        "house-inactive.svg",
+        "Add.svg",
+        "AddCircleOutlineRounded.svg",
+        "ArrowDropDown-2.svg",
+        "ArrowDropDown-3.svg",
+        "ArrowDropDown-4.svg",
+        "ArrowDropDown.svg",
+        "CameraAltOutlined-2.svg",
+        "CameraAltOutlined.svg",
+        "CheckBox.svg",
+        "Circle.svg",
+        "CircleOutlined.svg",
+        "Clock.svg",
+        "Delete.svg",
+        "EditOutlined.svg",
+        "FavoriteBorder.svg",
+        "KeyboardArrowDown.svg",
+        "KeyboardArrowLeft.svg",
+        "KeyboardArrowRight.svg",
+        "KeyboardArrowUp.svg",
+        "NavigateBefore.svg",
+        "NavigateNext.svg",
+        "QrCodeScanner.svg",
+        "RadioButtonChecked-2.svg",
+        "RadioButtonChecked.svg",
+        "RadioButtonUnchecked-2.svg",
+        "RadioButtonUnchecked.svg",
+        "SaveAlt.svg",
+        "Separator.svg",
+        "Visibility.svg",
+        "calendar.svg",
+        "chart-active.svg",
+        "chart-inactive.svg",
+        "editor-302c61dc.svg",
+        "editor-36cc995e.svg",
+        "editor-3e6d7990.svg",
+        "editor-3e79fbfe.svg",
+        "editor-479514b8.svg",
+        "editor-4b347844.svg",
+        "editor-5df98aff.svg",
+        "editor-68da9ca3.svg",
+        "editor-72c762a0.svg",
+        "editor-766824e1.svg",
+        "editor-bcd18314.svg",
+        "editor-d4e86f9f.svg",
+        "editor-de46c015.svg",
+        "editor-ee8117a7.svg",
+        "editor-eed39f32.svg",
+        "editor-f68dc458.svg",
+        "kid-o-kid.svg",
+        "nav-2c9bf346.svg",
+        "nav-59dcf846.svg",
+        "nav-82b0dd51.svg",
+        "nav-9168aef2.svg",
+        "nav-a0e6e398.svg",
+        "nav-b33632ab.svg",
+        "shop-add-active.svg",
+        "shop-add-inactive.svg"
+      ],
+      "files": {
+        "dashboard-active.svg": {
+          "name": "dashboard-active.svg",
+          "size": 897,
+          "type": "image/svg+xml",
+          "blob": "12ddac6172403a8037dd91d27616fd06"
+        },
+        "dashboard-inactive.svg": {
+          "name": "dashboard-inactive.svg",
+          "size": 913,
+          "type": "image/svg+xml",
+          "blob": "39cd53fc3b531a246edd94199480c763"
+        },
+        "house-active.svg": {
+          "name": "house-active.svg",
+          "size": 1367,
+          "type": "image/svg+xml",
+          "blob": "0dfcca473305552584b1c5dff08309d2"
+        },
+        "house-inactive.svg": {
+          "name": "house-inactive.svg",
+          "size": 1370,
+          "type": "image/svg+xml",
+          "blob": "cf93f92bd1165827a8882fcd08b9afa2"
+        },
+        "Add.svg": {
+          "name": "Add.svg",
+          "size": 256,
+          "type": "image/svg+xml",
+          "blob": "f7974ae8a743ba7432de2f0818d84dda"
+        },
+        "AddCircleOutlineRounded.svg": {
+          "name": "AddCircleOutlineRounded.svg",
+          "size": 500,
+          "type": "image/svg+xml",
+          "blob": "b3902c88f8cc7dd8791d8982c5ba04b0"
+        },
+        "ArrowDropDown-2.svg": {
+          "name": "ArrowDropDown-2.svg",
+          "size": 314,
+          "type": "image/svg+xml",
+          "blob": "72c13ad97274d6e6245ed7ab09806ff3"
+        },
+        "ArrowDropDown-3.svg": {
+          "name": "ArrowDropDown-3.svg",
+          "size": 297,
+          "type": "image/svg+xml",
+          "blob": "77767b84151bdf0d81797079dfb5e592"
+        },
+        "ArrowDropDown-4.svg": {
+          "name": "ArrowDropDown-4.svg",
+          "size": 284,
+          "type": "image/svg+xml",
+          "blob": "cc3a5e0882cf532bf390f978794510b8"
+        },
+        "ArrowDropDown.svg": {
+          "name": "ArrowDropDown.svg",
+          "size": 245,
+          "type": "image/svg+xml",
+          "blob": "925017346205d051ae50816d5a1f9da1"
+        },
+        "CameraAltOutlined-2.svg": {
+          "name": "CameraAltOutlined-2.svg",
+          "size": 486,
+          "type": "image/svg+xml",
+          "blob": "3508eb85928cc87b00ff17976620cfd4"
+        },
+        "CameraAltOutlined.svg": {
+          "name": "CameraAltOutlined.svg",
+          "size": 487,
+          "type": "image/svg+xml",
+          "blob": "22c4f0f5915cf11eb3359619764581d5"
+        },
+        "CheckBox.svg": {
+          "name": "CheckBox.svg",
+          "size": 357,
+          "type": "image/svg+xml",
+          "blob": "f4bfe3ded06235caad46f381d9433028"
+        },
+        "Circle.svg": {
+          "name": "Circle.svg",
+          "size": 309,
+          "type": "image/svg+xml",
+          "blob": "1c073c5f44fa45c07faf4cea317b6746"
+        },
+        "CircleOutlined.svg": {
+          "name": "CircleOutlined.svg",
+          "size": 371,
+          "type": "image/svg+xml",
+          "blob": "634b816278e300df440b7cdcb691c266"
+        },
+        "Clock.svg": {
+          "name": "Clock.svg",
+          "size": 418,
+          "type": "image/svg+xml",
+          "blob": "2e844f544bd7506346b20bd13ad56261"
+        },
+        "Delete.svg": {
+          "name": "Delete.svg",
+          "size": 301,
+          "type": "image/svg+xml",
+          "blob": "c31f74c7b8353baaa6c9666b10190412"
+        },
+        "EditOutlined.svg": {
+          "name": "EditOutlined.svg",
+          "size": 437,
+          "type": "image/svg+xml",
+          "blob": "1ca9dd3b7957b7ecb72af13617b0ba08"
+        },
+        "FavoriteBorder.svg": {
+          "name": "FavoriteBorder.svg",
+          "size": 574,
+          "type": "image/svg+xml",
+          "blob": "bcc7293778e89c160609f184a5eafeef"
+        },
+        "KeyboardArrowDown.svg": {
+          "name": "KeyboardArrowDown.svg",
+          "size": 290,
+          "type": "image/svg+xml",
+          "blob": "9202bb2b6aed822555ccc497534c5019"
+        },
+        "KeyboardArrowLeft.svg": {
+          "name": "KeyboardArrowLeft.svg",
+          "size": 285,
+          "type": "image/svg+xml",
+          "blob": "070b97b0781e7935d0d9b66727e43b55"
+        },
+        "KeyboardArrowRight.svg": {
+          "name": "KeyboardArrowRight.svg",
+          "size": 284,
+          "type": "image/svg+xml",
+          "blob": "5db11b2e9ce86b12e1c006caabf0d89b"
+        },
+        "KeyboardArrowUp.svg": {
+          "name": "KeyboardArrowUp.svg",
+          "size": 279,
+          "type": "image/svg+xml",
+          "blob": "8247f7adae226483b37a799ab5ba465f"
+        },
+        "NavigateBefore.svg": {
+          "name": "NavigateBefore.svg",
+          "size": 300,
+          "type": "image/svg+xml",
+          "blob": "d59fa9c9c51e9be29414f805fcc03543"
+        },
+        "NavigateNext.svg": {
+          "name": "NavigateNext.svg",
+          "size": 299,
+          "type": "image/svg+xml",
+          "blob": "cd9eb6ca3b2eca6e577604304fcd8585"
+        },
+        "QrCodeScanner.svg": {
+          "name": "QrCodeScanner.svg",
+          "size": 588,
+          "type": "image/svg+xml",
+          "blob": "46d82bb9a9117219828d9a7f849b5068"
+        },
+        "RadioButtonChecked-2.svg": {
+          "name": "RadioButtonChecked-2.svg",
+          "size": 406,
+          "type": "image/svg+xml",
+          "blob": "74f646b2742627f37b5f25083cec0990"
+        },
+        "RadioButtonChecked.svg": {
+          "name": "RadioButtonChecked.svg",
+          "size": 406,
+          "type": "image/svg+xml",
+          "blob": "ce28f57297ecce98973f143558448621"
+        },
+        "RadioButtonUnchecked-2.svg": {
+          "name": "RadioButtonUnchecked-2.svg",
+          "size": 361,
+          "type": "image/svg+xml",
+          "blob": "d9d9dfcbec79a602b4d2cb6c2db10270"
+        },
+        "RadioButtonUnchecked.svg": {
+          "name": "RadioButtonUnchecked.svg",
+          "size": 361,
+          "type": "image/svg+xml",
+          "blob": "134ea69981c0b8b0b91967e036e03a78"
+        },
+        "SaveAlt.svg": {
+          "name": "SaveAlt.svg",
+          "size": 339,
+          "type": "image/svg+xml",
+          "blob": "58dafa46d8cc2e308d263b47ac75c594"
+        },
+        "Separator.svg": {
+          "name": "Separator.svg",
+          "size": 267,
+          "type": "image/svg+xml",
+          "blob": "6be0e8944b9d45261b799c513a4d1ee5"
+        },
+        "Visibility.svg": {
+          "name": "Visibility.svg",
+          "size": 437,
+          "type": "image/svg+xml",
+          "blob": "c4cda05b2c7b645e32dde7f22b5d47e7"
+        },
+        "calendar.svg": {
+          "name": "calendar.svg",
+          "size": 1401,
+          "type": "image/svg+xml",
+          "blob": "75329e95286726b865454be1f33bcd45"
+        },
+        "chart-active.svg": {
+          "name": "chart-active.svg",
+          "size": 711,
+          "type": "image/svg+xml",
+          "blob": "f2dd2a707e6bfa0a3bebb62c9f89936a"
+        },
+        "chart-inactive.svg": {
+          "name": "chart-inactive.svg",
+          "size": 711,
+          "type": "image/svg+xml",
+          "blob": "e555f81a47db1f3252cccb83d21f1d32"
+        },
+        "editor-302c61dc.svg": {
+          "name": "editor-302c61dc.svg",
+          "size": 360,
+          "type": "image/svg+xml",
+          "blob": "4c27b14c9f4848344f1f52891f6a356b"
+        },
+        "editor-36cc995e.svg": {
+          "name": "editor-36cc995e.svg",
+          "size": 321,
+          "type": "image/svg+xml",
+          "blob": "d44c6a5d67d042e8b56b9598d86d0f28"
+        },
+        "editor-3e6d7990.svg": {
+          "name": "editor-3e6d7990.svg",
+          "size": 323,
+          "type": "image/svg+xml",
+          "blob": "c85467e9c56966fc599cb24a4347092f"
+        },
+        "editor-3e79fbfe.svg": {
+          "name": "editor-3e79fbfe.svg",
+          "size": 252,
+          "type": "image/svg+xml",
+          "blob": "4b1026698a4d5566c3d8aa4589dabc47"
+        },
+        "editor-479514b8.svg": {
+          "name": "editor-479514b8.svg",
+          "size": 404,
+          "type": "image/svg+xml",
+          "blob": "8476cd3a4efd65f12794d79ba4f7996d"
+        },
+        "editor-4b347844.svg": {
+          "name": "editor-4b347844.svg",
+          "size": 465,
+          "type": "image/svg+xml",
+          "blob": "5100a63684ab1198e10f9167eee074ae"
+        },
+        "editor-5df98aff.svg": {
+          "name": "editor-5df98aff.svg",
+          "size": 258,
+          "type": "image/svg+xml",
+          "blob": "a47c36d8d979ab047e1777f9f71cfd8e"
+        },
+        "editor-68da9ca3.svg": {
+          "name": "editor-68da9ca3.svg",
+          "size": 282,
+          "type": "image/svg+xml",
+          "blob": "756fb7c9229a8e35a13bfb91412b6874"
+        },
+        "editor-72c762a0.svg": {
+          "name": "editor-72c762a0.svg",
+          "size": 577,
+          "type": "image/svg+xml",
+          "blob": "068247861763a8d9e5a7d81240db03ee"
+        },
+        "editor-766824e1.svg": {
+          "name": "editor-766824e1.svg",
+          "size": 256,
+          "type": "image/svg+xml",
+          "blob": "9af8e98614fa0348c15f3ef1e8931816"
+        },
+        "editor-bcd18314.svg": {
+          "name": "editor-bcd18314.svg",
+          "size": 789,
+          "type": "image/svg+xml",
+          "blob": "ed462af230ee146f4aa8e324e062a8e7"
+        },
+        "editor-d4e86f9f.svg": {
+          "name": "editor-d4e86f9f.svg",
+          "size": 421,
+          "type": "image/svg+xml",
+          "blob": "a7d75e663779762b6159662bd0f42d81"
+        },
+        "editor-de46c015.svg": {
+          "name": "editor-de46c015.svg",
+          "size": 766,
+          "type": "image/svg+xml",
+          "blob": "77a6715e4039bb5d66752bb58d65272d"
+        },
+        "editor-ee8117a7.svg": {
+          "name": "editor-ee8117a7.svg",
+          "size": 204,
+          "type": "image/svg+xml",
+          "blob": "7cee995e1b5f5537c665c28b0d04240d"
+        },
+        "editor-eed39f32.svg": {
+          "name": "editor-eed39f32.svg",
+          "size": 313,
+          "type": "image/svg+xml",
+          "blob": "ee8b5d7ffd59f4291cf708e65712785d"
+        },
+        "editor-f68dc458.svg": {
+          "name": "editor-f68dc458.svg",
+          "size": 296,
+          "type": "image/svg+xml",
+          "blob": "675467b62543c0660be373e7a499c4e2"
+        },
+        "kid-o-kid.svg": {
+          "name": "kid-o-kid.svg",
+          "size": 1149,
+          "type": "image/svg+xml",
+          "blob": "3a8fde048ea83605445112af6e6a2ce7"
+        },
+        "nav-2c9bf346.svg": {
+          "name": "nav-2c9bf346.svg",
+          "size": 1049,
+          "type": "image/svg+xml",
+          "blob": "3caa229a75f4ade1ed341d9816b74dc5"
+        },
+        "nav-59dcf846.svg": {
+          "name": "nav-59dcf846.svg",
+          "size": 840,
+          "type": "image/svg+xml",
+          "blob": "ae0ed9fd6d17d893eff476234e52cb81"
+        },
+        "nav-82b0dd51.svg": {
+          "name": "nav-82b0dd51.svg",
+          "size": 1493,
+          "type": "image/svg+xml",
+          "blob": "0d252c2feb26a981b957385d183e8556"
+        },
+        "nav-9168aef2.svg": {
+          "name": "nav-9168aef2.svg",
+          "size": 3094,
+          "type": "image/svg+xml",
+          "blob": "a7c3ae7e761ad5ce00a9a62a4b0cdc68"
+        },
+        "nav-a0e6e398.svg": {
+          "name": "nav-a0e6e398.svg",
+          "size": 1049,
+          "type": "image/svg+xml",
+          "blob": "6334735f3e7623708389c79db3276759"
+        },
+        "nav-b33632ab.svg": {
+          "name": "nav-b33632ab.svg",
+          "size": 1493,
+          "type": "image/svg+xml",
+          "blob": "3bb908ea61ef2bcbf32b8d325a8ebf8b"
+        },
+        "shop-add-active.svg": {
+          "name": "shop-add-active.svg",
+          "size": 2061,
+          "type": "image/svg+xml",
+          "blob": "e2874fb0b06df4647fd2156e53aed3d7"
+        },
+        "shop-add-inactive.svg": {
+          "name": "shop-add-inactive.svg",
+          "size": 2061,
+          "type": "image/svg+xml",
+          "blob": "884cd3fcfb3d67b34fad38dce4a9ec73"
+        }
+      }
+    }
+  },
+  "blobs": {},
+  "docs": {
+    "readme": "project/README.md",
+    "sections": []
+  },
+  "lastChange": {
+    "by": "Claude",
+    "at": "2026-10-06T03:00:00Z",
+    "via": "Claude Code · system-to-doc ver4",
+    "note": "Cập nhật theo Figma TOKIWAGI-PJ (DRAFT)"
+  }
+}
