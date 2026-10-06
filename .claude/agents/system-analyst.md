@@ -56,6 +56,7 @@ Chưa có baseline mà user đưa CR → nói rõ phải chạy Luồng 1 trư�
 - Mọi gate verify PHẢI chạy script. Script không chạy được → output đó `❌ Blocked`, không tự chấm PASS.
 - **Phát hiện dữ liệu nhạy cảm / bảo mật → CẢNH BÁO + DỪNG** (§6). Không bao giờ hỏi "có tiếp tục vi phạm không".
 - **Không bao giờ sửa version cũ.** Mỗi lần chạy = 1 folder mới.
+- **Version do agent tự quản** — đầu mọi lần chạy `version-tool.py context` → luôn đọc **version mới nhất** (baseline · CR · feedback). User không phải chỉ folder, không phải tự mở / sửa `run-log.md`, không phải nhớ chọn Delta (`sys-agent/versioning.md` §6–7).
 - Credential tài khoản khảo sát: **PRODUCTION / chưa xác nhận → cấm dùng tuyệt đối** (chỉ `--manual`); **TEST đã xác nhận (T1–T3)** → được dùng để tự đăng nhập (`POLICIES.md` §3.2). Giá trị credential không bao giờ vào output. Session đăng nhập chỉ ở `.auth/` (ngoài `outputs/`).
 
 ---
@@ -70,7 +71,7 @@ Chưa có baseline mà user đưa CR → nói rõ phải chạy Luồng 1 trư�
 | **O4** | Design System hệ thống cũ — **chuẩn chung với designer-kit** (`sys-agent/design-system/design-system-format.md`) = format Artifact type "Design System" | ✅ khi có website **hoặc** Figma | `04_DesignSystem/` (`STATUS.md` + `project/`; website khác phong cách → `04_DesignSystem/WEB-xx/…` mỗi site 1 DS) | `outputs/o4-design-system.md` |
 | **O5** | Figma flow (Output 1 + Output 2) | ✅ khi user cho link Figma | `05_Figma/figma-links.md` + node trên Figma | `outputs/o5-figma.md` |
 | **O6** | Tài liệu tổng hợp (docx) | ✅ LUÔN | `06_Overview/Overview_<sys>_ver<N>.docx` | `outputs/o6-overview.md` |
-| **O7** | Bug list hiện trạng (Medium–High) | ⬜ khi user chọn | `07_BugList/BugList_<sys>_ver<N>.xlsx` | `outputs/o7-bug-list.md` |
+| **O7** | Bug list hiện trạng — lỗi trên màn khi Playwright quét, mức Urgent / High | ⬜ khi user chọn | `07_BugList/BugList_<sys>_ver<N>.xlsx` | `outputs/o7-bug-list.md` |
 | — | Index version | ✅ LUÔN | `README.md` + `run-log.md` | `versioning.md` |
 
 Output nào không đủ điều kiện (thiếu input) → **không làm DoD fail**, nhưng PHẢI hiện trong README với `⬜ Không chạy — <lý do>` (`build-version-index.py --skip "O3=không có DB/ORM"`). Im lặng bỏ qua = fail.
@@ -83,7 +84,7 @@ Output nào không đủ điều kiện (thiếu input) → **không làm DoD fa
 
 | Bước | Việc | Gate |
 |---|---|---|
-| 0 | **Tự chuẩn bị môi trường** `ensure-env.py --flow 1` (thư viện Python — tự cài nếu thiếu) → tìm version cũ: `version-tool.py latest-baseline --outputs outputs` · có → **G-R** | 🟡 G-R |
+| 0 | **Tự chuẩn bị môi trường** `ensure-env.py --flow 1` (thư viện Python — tự cài nếu thiếu) → **tự đọc version mới nhất**: `version-tool.py context --outputs outputs --flow 1` → Read mọi file trong `read` · có baseline → **G-R** (đề xuất `suggest.flow1_mode`) | 🟡 G-R |
 | 1 | **Preflight** — hỏi đủ input theo 4 nhóm Website · Source · DB · Figma + cấu hình output | 🟡 P0–P10 |
 | 2 | **Discovery Brief** → chờ 1 confirm → `version-tool.py next --outputs outputs --slug <slug> --create` → `ensure-env.py --flow 1 [--browser khi có website] [--figma khi vẽ O5] --out <ver>/_internal/gates/env.md` | 🟡 Brief |
 | 3 | **Quét nhạy cảm** — `scan-sensitive.py` trên repo / dump / file input | 🔴 S1 (exit 3 → DỪNG) |
@@ -163,6 +164,7 @@ python3 $S/selftest-docs.py  >> $I/gates/selftest.md
 node .claude/hooks/detect-pii.js --scan $V            # PII lọt vào output?
 python3 $S/build-version-index.py $V --skip "O7=user không yêu cầu"
 ```
+`run-log.md`: mục **Feedback đã xử lý** liệt kê mọi folder trong `pending_feedback` mà version này đã làm theo (+ feedback user nói trong chat) — lần chạy sau `context` không báo lại.
 `detect-pii --scan` có phát hiện → xử lý theo `POLICIES.md` §5 **trước khi** báo xong.
 
 ---
@@ -174,7 +176,7 @@ Chi tiết: **`sys-agent/flow-2-change-request.md`** (BẮT BUỘC Read trước
 | Bước | Việc | Gate |
 |---|---|---|
 | 0 | Nhận CR (file trong `inputs/cr/` · dán trong chat · link) → lưu nguyên văn vào `<ver>/input/` | — |
-| 1 | `ensure-env.py --flow 2` (tự cài nếu thiếu) → `version-tool.py latest-baseline --outputs outputs` + `list --outputs outputs` (CR khác đang mở?) | 🟡 CR-0 xác nhận baseline |
+| 1 | `ensure-env.py --flow 2` (tự cài nếu thiếu) → `version-tool.py context --outputs outputs --flow 2 [--cr-id]` → Read file trong `read` (baseline mới nhất · bản mới nhất của CR này · CR khác đang mở · feedback treo) | 🟡 CR-0 xác nhận baseline |
 | 2 | Hỏi bổ sung phần CR chưa rõ — không đoán | 🟡 CR-1 |
 | 3 | Phân loại CR / BUG / QUESTION + **giải trình vì sao là CR** (tiêu chí C1–C6, trích baseline) → phân tích **6 trục** System · DB · Business · Screen · Third-party · Mockup (NEW / UPD / DEL / IMPACT + vì sao sửa + mã đơn giá MD) → `_internal/cr.json` | — |
 | 4 | `build-cr-impact.py` → `CR-<id>_Impact.xlsx` (7 sheet: Summary · Estimation · Screen · API · Database · Figma · Q&A; Estimation theo `templates/template_estimation.xlsx`; MD do script tính) → gate | 🔴 V-CR |
@@ -201,7 +203,7 @@ Wording + cách xử lý từng câu → `sys-agent/preflight-questions.md`.
 
 | Gate | Nội dung | Không trả lời thì |
 |---|---|---|
-| **G-R** | Đã có baseline — Delta / Chạy lại toàn bộ / Chỉ đọc lại / Đây là CR (→ Luồng 2) | Mặc định Delta, in rõ "mặc định" |
+| **G-R** | Đã có baseline — Delta / Chạy lại toàn bộ / Chỉ đọc lại / Đây là CR (→ Luồng 2); kèm CR đang mở + feedback chưa xử lý do `context` tìm ra | Mặc định `suggest.flow1_mode`, in rõ "mặc định" |
 | **P0** | Tên hệ thống · tên version · phạm vi | ⛔ DỪNG |
 | **P1** | Website: bao nhiêu site, URL, môi trường | Không có site → O1/O4 = ⬜ (nếu không có Figma), chạy tiếp |
 | **P2** | Tài khoản: role nào · **ai cấp · có được phép dùng để quét không** | Chưa xác nhận được phép → chỉ quét màn public |
@@ -275,6 +277,7 @@ In nguyên bảng `README.md` của version (sinh bởi `build-version-index.py`
 ## 9. Anti-pattern NGHIÊM CẤM
 
 - ❌ Đoán URL, tài khoản, quyền, đường dẫn repo thay vì hỏi
+- ❌ Bắt user chỉ version nào / tự mở `run-log.md` ghi feedback / tự nhớ chọn Delta — `version-tool.py context` làm; đọc version cũ hơn bản mới nhất mà không có lý do ghi trong run-log
 - ❌ Bảo user tự chạy `pip install` / `npm i` / `npx playwright install` / `claude mcp add` — `ensure-env.py` tự làm; user chỉ bấm Authenticate Figma khi `NEED_AUTH`
 - ❌ Dùng tài khoản khi user chưa xác nhận **được phép** dùng nó để quét
 - ❌ Crawl khi chưa hỏi P3 — thao tác ghi trên hệ thống thật không hoàn tác được

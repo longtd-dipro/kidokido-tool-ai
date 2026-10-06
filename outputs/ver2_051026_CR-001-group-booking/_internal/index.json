@@ -1,0 +1,64 @@
+{
+  "system": "KidoKido",
+  "version": "ver2",
+  "version_folder": "ver2_051026_CR-001-group-booking",
+  "version_type": "CR",
+  "date": "05/10/2026",
+  "baseline_ref": "ver1_021026_khao-sat-lan-dau",
+  "outputs": [
+    {
+      "id": "CR",
+      "name": "CR Impact",
+      "content": "Giải trình CR + ảnh hưởng 6 trục + MD (Summary · Impact)",
+      "files": [
+        "CR-001_Impact.xlsx"
+      ],
+      "count": "79 hạng mục · 114.75 MD (đơn giá DRAFT)",
+      "exists": true,
+      "count_value": 79,
+      "md": 114.75,
+      "rates_status": "DRAFT",
+      "gate": "WARN",
+      "gate_detail": "v-cr.md 23/24 PASS",
+      "status": "warn",
+      "reason": "gate có cảnh báo",
+      "status_text": "⚠️ gate có cảnh báo"
+    },
+    {
+      "id": "O5",
+      "name": "Figma (CR)",
+      "content": "Màn/luồng thay đổi theo CR (badge NEW/UPD/DEL/IMPACT/AS-IS)",
+      "files": [
+        "05_Figma/figma-links.md"
+      ],
+      "count": "5 link",
+      "exists": true,
+      "count_value": 5,
+      "gate": "PASS",
+      "gate_detail": "v-cr-figma.md 6/6 PASS",
+      "status": "ok",
+      "reason": "",
+      "status_text": "✅"
+    },
+    {
+      "id": "IN",
+      "name": "Input CR",
+      "content": "Tài liệu yêu cầu gốc",
+      "files": [
+        "input/"
+      ],
+      "count": "2 file",
+      "exists": true,
+      "count_value": 2,
+      "gate": "—",
+      "gate_detail": "chua chay gate",
+      "status": "ok",
+      "reason": "",
+      "status_text": "✅"
+    }
+  ],
+  "inventory_gate": {
+    "gate": "—",
+    "detail": "chua chay gate"
+  }
+}
