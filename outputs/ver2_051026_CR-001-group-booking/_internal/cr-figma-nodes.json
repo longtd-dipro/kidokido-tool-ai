@@ -1,0 +1,660 @@
+[
+ {
+  "id": "16795:403",
+  "name": "NEW · IMP-032 · Quy tắc 公開区分",
+  "badge": "NEW",
+  "ref": "IMP-032",
+  "kind": "flow"
+ },
+ {
+  "id": "16795:407",
+  "name": "NEW · IMP-033 · Đăng ký và trạng thái đoàn",
+  "badge": "NEW",
+  "ref": "IMP-033",
+  "kind": "flow"
+ },
+ {
+  "id": "16795:411",
+  "name": "NEW · IMP-034 · Quy tắc đặt chỗ đoàn",
+  "badge": "NEW",
+  "ref": "IMP-034",
+  "kind": "flow"
+ },
+ {
+  "id": "16795:415",
+  "name": "NEW · IMP-035 · Phê duyệt đặt chỗ đoàn (拡張案)",
+  "badge": "NEW",
+  "ref": "IMP-035",
+  "kind": "flow"
+ },
+ {
+  "id": "16795:419",
+  "name": "UPD · column:tickets.payment_type · Cách thanh toán",
+  "badge": "UPD",
+  "ref": "column:tickets.payment_type",
+  "kind": "flow"
+ },
+ {
+  "id": "16795:423",
+  "name": "NEW · IMP-037 · 支払期限",
+  "badge": "NEW",
+  "ref": "IMP-037",
+  "kind": "flow"
+ },
+ {
+  "id": "16795:427",
+  "name": "NEW · IMP-038 · キャンセル料",
+  "badge": "NEW",
+  "ref": "IMP-038",
+  "kind": "flow"
+ },
+ {
+  "id": "16795:431",
+  "name": "UPD · API-015 · Đổi số người / hoàn tiền một phần",
+  "badge": "UPD",
+  "ref": "API-015",
+  "kind": "flow"
+ },
+ {
+  "id": "16795:435",
+  "name": "NEW · IMP-040 · 請求書払い (拡張案)",
+  "badge": "NEW",
+  "ref": "IMP-040",
+  "kind": "flow"
+ },
+ {
+  "id": "16795:439",
+  "name": "NEW · IMP-041 · Quy tắc 領収書",
+  "badge": "NEW",
+  "ref": "IMP-041",
+  "kind": "flow"
+ },
+ {
+  "id": "16795:443",
+  "name": "NEW · IMP-042 · 二要素認証 và thông báo đổi thông tin quan trọng",
+  "badge": "NEW",
+  "ref": "IMP-042",
+  "kind": "flow"
+ },
+ {
+  "id": "16795:447",
+  "name": "IMPACT · API-017 · Giới hạn tenant của Admin",
+  "badge": "IMPACT",
+  "ref": "API-017",
+  "kind": "flow"
+ },
+ {
+  "id": "16795:451",
+  "name": "IMPACT · column:tickets.max_child_per_adult · Tỷ lệ trẻ / người lớn",
+  "badge": "IMPACT",
+  "ref": "column:tickets.max_child_per_adult",
+  "kind": "flow"
+ },
+ {
+  "id": "16795:455",
+  "name": "IMPACT · table:ticket_booking_schedules · Sức chứa dùng chung",
+  "badge": "IMPACT",
+  "ref": "table:ticket_booking_schedules",
+  "kind": "flow"
+ },
+ {
+  "id": "16795:464",
+  "name": "NEW · IMP-046 · Đăng ký đoàn (団体登録)",
+  "badge": "NEW",
+  "ref": "IMP-046",
+  "kind": "screen"
+ },
+ {
+  "id": "16795:468",
+  "name": "NEW · IMP-047 · Trang đặt chỗ đoàn (団体専用予約)",
+  "badge": "NEW",
+  "ref": "IMP-047",
+  "kind": "screen"
+ },
+ {
+  "id": "16795:472",
+  "name": "NEW · IMP-048 · Xác nhận đặt chỗ đoàn + chọn cách thanh toán",
+  "badge": "NEW",
+  "ref": "IMP-048",
+  "kind": "screen"
+ },
+ {
+  "id": "16795:476",
+  "name": "NEW · IMP-049 · マイページ đoàn — thông tin đoàn / 請求先",
+  "badge": "NEW",
+  "ref": "IMP-049",
+  "kind": "screen"
+ },
+ {
+  "id": "16795:480",
+  "name": "NEW · IMP-050 · マイページ đoàn — 領収書",
+  "badge": "NEW",
+  "ref": "IMP-050",
+  "kind": "screen"
+ },
+ {
+  "id": "16795:484",
+  "name": "NEW · IMP-051 · マイページ đoàn — người phụ trách (拡張案)",
+  "badge": "NEW",
+  "ref": "IMP-051",
+  "kind": "screen"
+ },
+ {
+  "id": "16795:488",
+  "name": "NEW · IMP-052 · Nhập mã xác thực bổ sung (拡張案)",
+  "badge": "NEW",
+  "ref": "IMP-052",
+  "kind": "screen"
+ },
+ {
+  "id": "16795:492",
+  "name": "UPD · SC-070 · 予約履歴",
+  "badge": "UPD",
+  "ref": "SC-070",
+  "kind": "screen"
+ },
+ {
+  "id": "16795:496",
+  "name": "UPD · SC-071 · 予約履歴",
+  "badge": "UPD",
+  "ref": "SC-071",
+  "kind": "screen"
+ },
+ {
+  "id": "16795:500",
+  "name": "UPD · SC-076 · 予約履歴",
+  "badge": "UPD",
+  "ref": "SC-076",
+  "kind": "screen"
+ },
+ {
+  "id": "16795:504",
+  "name": "UPD · SC-063 · ログイン方法を選択",
+  "badge": "UPD",
+  "ref": "SC-063",
+  "kind": "screen"
+ },
+ {
+  "id": "16795:508",
+  "name": "IMPACT · SC-067 · /tenant/:code",
+  "badge": "IMPACT",
+  "ref": "SC-067",
+  "kind": "screen"
+ },
+ {
+  "id": "16795:512",
+  "name": "IMPACT · SC-048 · フリーパス購入",
+  "badge": "IMPACT",
+  "ref": "SC-048",
+  "kind": "screen"
+ },
+ {
+  "id": "16795:516",
+  "name": "IMPACT · SC-049 · 回数券購入",
+  "badge": "IMPACT",
+  "ref": "SC-049",
+  "kind": "screen"
+ },
+ {
+  "id": "16795:520",
+  "name": "IMPACT · SC-054 · /booking/use-in-day",
+  "badge": "IMPACT",
+  "ref": "SC-054",
+  "kind": "screen"
+ },
+ {
+  "id": "16795:524",
+  "name": "IMPACT · SC-059 · 料金プラン",
+  "badge": "IMPACT",
+  "ref": "SC-059",
+  "kind": "screen"
+ },
+ {
+  "id": "16795:528",
+  "name": "AS-IS · SC-046 · お知らせ",
+  "badge": "AS-IS",
+  "ref": "SC-046",
+  "kind": "screen"
+ },
+ {
+  "id": "16795:532",
+  "name": "AS-IS · SC-066 · 店舗一覧",
+  "badge": "AS-IS",
+  "ref": "SC-066",
+  "kind": "screen"
+ },
+ {
+  "id": "16795:538",
+  "name": "NEW · IMP-057 · Admin — danh sách đoàn",
+  "badge": "NEW",
+  "ref": "IMP-057",
+  "kind": "screen"
+ },
+ {
+  "id": "16795:542",
+  "name": "NEW · IMP-058 · Admin — tạo / sửa đoàn",
+  "badge": "NEW",
+  "ref": "IMP-058",
+  "kind": "screen"
+ },
+ {
+  "id": "16795:546",
+  "name": "NEW · IMP-059 · Admin — chi tiết đoàn",
+  "badge": "NEW",
+  "ref": "IMP-059",
+  "kind": "screen"
+ },
+ {
+  "id": "16795:550",
+  "name": "NEW · IMP-060 · Admin — lịch sử 領収書",
+  "badge": "NEW",
+  "ref": "IMP-060",
+  "kind": "screen"
+ },
+ {
+  "id": "16795:554",
+  "name": "NEW · IMP-061 · Admin — 操作履歴",
+  "badge": "NEW",
+  "ref": "IMP-061",
+  "kind": "screen"
+ },
+ {
+  "id": "16795:558",
+  "name": "NEW · IMP-062 · Admin — nhập mã 二要素認証",
+  "badge": "NEW",
+  "ref": "IMP-062",
+  "kind": "screen"
+ },
+ {
+  "id": "16795:562",
+  "name": "UPD · SC-004 · 予約管理",
+  "badge": "UPD",
+  "ref": "SC-004",
+  "kind": "screen"
+ },
+ {
+  "id": "16795:566",
+  "name": "UPD · SC-005 · /admin/booking-management/details/:id",
+  "badge": "UPD",
+  "ref": "SC-005",
+  "kind": "screen"
+ },
+ {
+  "id": "16795:570",
+  "name": "UPD · SC-007 · /admin/booking-management/update/:id",
+  "badge": "UPD",
+  "ref": "SC-007",
+  "kind": "screen"
+ },
+ {
+  "id": "16795:574",
+  "name": "UPD · SC-035 · 商品管理",
+  "badge": "UPD",
+  "ref": "SC-035",
+  "kind": "screen"
+ },
+ {
+  "id": "16795:578",
+  "name": "UPD · SC-036 · 商品管理",
+  "badge": "UPD",
+  "ref": "SC-036",
+  "kind": "screen"
+ },
+ {
+  "id": "16795:582",
+  "name": "UPD · SC-037 · /admin/ticket-management/edit/:ticketId",
+  "badge": "UPD",
+  "ref": "SC-037",
+  "kind": "screen"
+ },
+ {
+  "id": "16795:586",
+  "name": "UPD · SC-038 · /admin/ticket-management/view/:ticketId",
+  "badge": "UPD",
+  "ref": "SC-038",
+  "kind": "screen"
+ },
+ {
+  "id": "16795:590",
+  "name": "UPD · SC-027 · /admin/signin",
+  "badge": "UPD",
+  "ref": "SC-027",
+  "kind": "screen"
+ },
+ {
+  "id": "16795:594",
+  "name": "IMPACT · SC-009 · 在庫調整",
+  "badge": "IMPACT",
+  "ref": "SC-009",
+  "kind": "screen"
+ },
+ {
+  "id": "16795:598",
+  "name": "IMPACT · SC-044 · 空き状況",
+  "badge": "IMPACT",
+  "ref": "SC-044",
+  "kind": "screen"
+ },
+ {
+  "id": "16795:602",
+  "name": "IMPACT · SC-003 · バーコード読み取り",
+  "badge": "IMPACT",
+  "ref": "SC-003",
+  "kind": "screen"
+ },
+ {
+  "id": "16795:606",
+  "name": "IMPACT · SC-026 · 入場状況管理",
+  "badge": "IMPACT",
+  "ref": "SC-026",
+  "kind": "screen"
+ },
+ {
+  "id": "16795:610",
+  "name": "IMPACT · SC-012 · ダッシュボード",
+  "badge": "IMPACT",
+  "ref": "SC-012",
+  "kind": "screen"
+ },
+ {
+  "id": "16795:614",
+  "name": "IMPACT · SC-025 · 売上管理",
+  "badge": "IMPACT",
+  "ref": "SC-025",
+  "kind": "screen"
+ },
+ {
+  "id": "16795:618",
+  "name": "IMPACT · SC-040 · ユーザー管理",
+  "badge": "IMPACT",
+  "ref": "SC-040",
+  "kind": "screen"
+ },
+ {
+  "id": "16795:622",
+  "name": "IMPACT · SC-014 · 自動返信メール設定",
+  "badge": "IMPACT",
+  "ref": "SC-014",
+  "kind": "screen"
+ },
+ {
+  "id": "16795:626",
+  "name": "AS-IS · SC-001 · ダッシュボード",
+  "badge": "AS-IS",
+  "ref": "SC-001",
+  "kind": "screen"
+ },
+ {
+  "id": "16795:640",
+  "name": "IMPACT · table:ticket_booking_schedules · IMP-028",
+  "badge": "IMPACT",
+  "ref": "table:ticket_booking_schedules",
+  "kind": "table-row"
+ },
+ {
+  "id": "16795:647",
+  "name": "NEW · IMP-032 · IMP-032",
+  "badge": "NEW",
+  "ref": "IMP-032",
+  "kind": "table-row"
+ },
+ {
+  "id": "16795:654",
+  "name": "NEW · IMP-033 · IMP-033",
+  "badge": "NEW",
+  "ref": "IMP-033",
+  "kind": "table-row"
+ },
+ {
+  "id": "16795:661",
+  "name": "NEW · IMP-034 · IMP-034",
+  "badge": "NEW",
+  "ref": "IMP-034",
+  "kind": "table-row"
+ },
+ {
+  "id": "16795:668",
+  "name": "NEW · IMP-035 · IMP-035",
+  "badge": "NEW",
+  "ref": "IMP-035",
+  "kind": "table-row"
+ },
+ {
+  "id": "16795:675",
+  "name": "UPD · column:tickets.payment_type · IMP-036",
+  "badge": "UPD",
+  "ref": "column:tickets.payment_type",
+  "kind": "table-row"
+ },
+ {
+  "id": "16795:682",
+  "name": "NEW · IMP-037 · IMP-037",
+  "badge": "NEW",
+  "ref": "IMP-037",
+  "kind": "table-row"
+ },
+ {
+  "id": "16795:689",
+  "name": "NEW · IMP-038 · IMP-038",
+  "badge": "NEW",
+  "ref": "IMP-038",
+  "kind": "table-row"
+ },
+ {
+  "id": "16795:696",
+  "name": "UPD · API-015 · IMP-039",
+  "badge": "UPD",
+  "ref": "API-015",
+  "kind": "table-row"
+ },
+ {
+  "id": "16795:703",
+  "name": "NEW · IMP-040 · IMP-040",
+  "badge": "NEW",
+  "ref": "IMP-040",
+  "kind": "table-row"
+ },
+ {
+  "id": "16795:710",
+  "name": "NEW · IMP-041 · IMP-041",
+  "badge": "NEW",
+  "ref": "IMP-041",
+  "kind": "table-row"
+ },
+ {
+  "id": "16795:717",
+  "name": "NEW · IMP-042 · IMP-042",
+  "badge": "NEW",
+  "ref": "IMP-042",
+  "kind": "table-row"
+ },
+ {
+  "id": "16795:724",
+  "name": "IMPACT · API-017 · IMP-043",
+  "badge": "IMPACT",
+  "ref": "API-017",
+  "kind": "table-row"
+ },
+ {
+  "id": "16795:731",
+  "name": "IMPACT · column:tickets.max_child_per_adult · IMP-044",
+  "badge": "IMPACT",
+  "ref": "column:tickets.max_child_per_adult",
+  "kind": "table-row"
+ },
+ {
+  "id": "16795:738",
+  "name": "IMPACT · table:ticket_booking_schedules · IMP-045",
+  "badge": "IMPACT",
+  "ref": "table:ticket_booking_schedules",
+  "kind": "table-row"
+ },
+ {
+  "id": "16795:745",
+  "name": "NEW · IMP-046 · IMP-046",
+  "badge": "NEW",
+  "ref": "IMP-046",
+  "kind": "table-row"
+ },
+ {
+  "id": "16795:752",
+  "name": "NEW · IMP-047 · IMP-047",
+  "badge": "NEW",
+  "ref": "IMP-047",
+  "kind": "table-row"
+ },
+ {
+  "id": "16795:759",
+  "name": "NEW · IMP-048 · IMP-048",
+  "badge": "NEW",
+  "ref": "IMP-048",
+  "kind": "table-row"
+ },
+ {
+  "id": "16795:766",
+  "name": "NEW · IMP-049 · IMP-049",
+  "badge": "NEW",
+  "ref": "IMP-049",
+  "kind": "table-row"
+ },
+ {
+  "id": "16795:773",
+  "name": "NEW · IMP-050 · IMP-050",
+  "badge": "NEW",
+  "ref": "IMP-050",
+  "kind": "table-row"
+ },
+ {
+  "id": "16795:780",
+  "name": "NEW · IMP-051 · IMP-051",
+  "badge": "NEW",
+  "ref": "IMP-051",
+  "kind": "table-row"
+ },
+ {
+  "id": "16795:787",
+  "name": "NEW · IMP-052 · IMP-052",
+  "badge": "NEW",
+  "ref": "IMP-052",
+  "kind": "table-row"
+ },
+ {
+  "id": "16795:794",
+  "name": "UPD · SC-070 · IMP-053",
+  "badge": "UPD",
+  "ref": "SC-070",
+  "kind": "table-row"
+ },
+ {
+  "id": "16795:801",
+  "name": "UPD · SC-076 · IMP-054",
+  "badge": "UPD",
+  "ref": "SC-076",
+  "kind": "table-row"
+ },
+ {
+  "id": "16795:808",
+  "name": "UPD · SC-063 · IMP-055",
+  "badge": "UPD",
+  "ref": "SC-063",
+  "kind": "table-row"
+ },
+ {
+  "id": "16795:815",
+  "name": "IMPACT · SC-067 · IMP-056",
+  "badge": "IMPACT",
+  "ref": "SC-067",
+  "kind": "table-row"
+ },
+ {
+  "id": "16795:822",
+  "name": "NEW · IMP-057 · IMP-057",
+  "badge": "NEW",
+  "ref": "IMP-057",
+  "kind": "table-row"
+ },
+ {
+  "id": "16795:829",
+  "name": "NEW · IMP-058 · IMP-058",
+  "badge": "NEW",
+  "ref": "IMP-058",
+  "kind": "table-row"
+ },
+ {
+  "id": "16795:836",
+  "name": "NEW · IMP-059 · IMP-059",
+  "badge": "NEW",
+  "ref": "IMP-059",
+  "kind": "table-row"
+ },
+ {
+  "id": "16795:843",
+  "name": "NEW · IMP-060 · IMP-060",
+  "badge": "NEW",
+  "ref": "IMP-060",
+  "kind": "table-row"
+ },
+ {
+  "id": "16795:850",
+  "name": "NEW · IMP-061 · IMP-061",
+  "badge": "NEW",
+  "ref": "IMP-061",
+  "kind": "table-row"
+ },
+ {
+  "id": "16795:857",
+  "name": "NEW · IMP-062 · IMP-062",
+  "badge": "NEW",
+  "ref": "IMP-062",
+  "kind": "table-row"
+ },
+ {
+  "id": "16795:864",
+  "name": "UPD · SC-004 · IMP-063",
+  "badge": "UPD",
+  "ref": "SC-004",
+  "kind": "table-row"
+ },
+ {
+  "id": "16795:871",
+  "name": "UPD · SC-005 · IMP-064",
+  "badge": "UPD",
+  "ref": "SC-005",
+  "kind": "table-row"
+ },
+ {
+  "id": "16795:878",
+  "name": "UPD · SC-035 · IMP-065",
+  "badge": "UPD",
+  "ref": "SC-035",
+  "kind": "table-row"
+ },
+ {
+  "id": "16795:885",
+  "name": "UPD · SC-027 · IMP-066",
+  "badge": "UPD",
+  "ref": "SC-027",
+  "kind": "table-row"
+ },
+ {
+  "id": "16795:892",
+  "name": "IMPACT · SC-009 · IMP-067",
+  "badge": "IMPACT",
+  "ref": "SC-009",
+  "kind": "table-row"
+ },
+ {
+  "id": "16795:899",
+  "name": "IMPACT · SC-003 · IMP-068",
+  "badge": "IMPACT",
+  "ref": "SC-003",
+  "kind": "table-row"
+ },
+ {
+  "id": "16795:906",
+  "name": "IMPACT · SC-012 · IMP-069",
+  "badge": "IMPACT",
+  "ref": "SC-012",
+  "kind": "table-row"
+ }
+]
