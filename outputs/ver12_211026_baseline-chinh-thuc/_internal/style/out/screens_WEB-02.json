@@ -1,0 +1,341 @@
+{
+ "SC-046": {
+  "B4": "■目的 / Mục đích\n• Mục đích nghiệp vụ: chưa xác định, chờ khách hàng xác nhận (tài liệu mô tả hiện trạng).\n• Tiêu đề trên màn: 「お知らせ」.\n\n■アクセス方法 / Cách truy cập\n• Địa chỉ: /\n• Ai xem được: người dùng đã đăng nhập, người chưa đăng nhập\n\n■トレーサビリティ / Traceability\n• Mã tra cứu: SC-046 · F-046 · Trạng thái: đã mở và xem được trên website",
+  "B5": "• API màn này có thể gọi để lấy / gửi dữ liệu (suy luận từ code, cần kiểm chứng): GET /api/admin/bookings, GET /api/bookings/main-bookings/:id, POST /api/bookings/use-in-day, GET /api/bookings/vacancies/status, GET /api/disclaimers, GET /api/news, GET /api/tenants, GET /api/tickets/:id, GET /api/tickets, GET /api/user/bookings, GET /api/user/bookings/last-booking, GET /api/user/bookings/monthly-tickets/check-already-used-across-tenants và 4 API khác.",
+  "B6": "• Gõ thẳng địa chỉ / trên trình duyệt.\n• Hoặc bấm link từ màn: 「Cài đặt ứng dụng (quản trị)」 (SC-002), 「Mua vé tháng (フリーパス)」 (SC-048), 「Mua vé nhiều lượt (回数券)」 (SC-049), 「Đặt chỗ dùng trong ngày」 (SC-054), 「Thông tin theo Luật giao dịch thương mại」 (SC-055).",
+  "B7": null,
+  "name_vi": "Trang chủ – Thông báo"
+ },
+ "SC-047": {
+  "B4": "■目的 / Mục đích\n• Mục đích nghiệp vụ: chưa xác định, chờ khách hàng xác nhận (tài liệu mô tả hiện trạng).\n• Chưa mở được màn nên chưa quan sát được nội dung.\n\n■アクセス方法 / Cách truy cập\n• Địa chỉ: /403\n• Ai xem được: chưa xác định\n\n■トレーサビリティ / Traceability\n• Mã tra cứu: SC-047 · F-047 · Trạng thái: cần kiểm chứng thêm",
+  "B5": "• Không thấy màn này gọi API nào (xét từ code).\n• Đã mở thử địa chỉ này nhưng không xem được màn (trang trống hoặc bị đưa về đăng nhập) với: người chưa đăng nhập, người dùng đã đăng nhập.",
+  "B6": "• Gõ thẳng địa chỉ /403 trên trình duyệt.",
+  "B7": null,
+  "name_vi": "Trang lỗi 403 (không có quyền)"
+ },
+ "SC-048": {
+  "B4": "■目的 / Mục đích\n• Mục đích nghiệp vụ: chưa xác định, chờ khách hàng xác nhận (tài liệu mô tả hiện trạng).\n• Tiêu đề trên màn: 「フリーパス購入」.\n\n■アクセス方法 / Cách truy cập\n• Địa chỉ: /booking/buy-monthly-ticket\n• Ai xem được: người dùng đã đăng nhập, người chưa đăng nhập\n\n■トレーサビリティ / Traceability\n• Mã tra cứu: SC-048 · F-048 · Trạng thái: đã mở và xem được trên website",
+  "B5": "• API màn này có thể gọi để lấy / gửi dữ liệu (suy luận từ code, cần kiểm chứng): GET /api/admin/bookings, GET /api/bookings/check-same-date-booking-exists, ANY /api/bookings, GET /api/bookings/main-bookings/:id, POST /api/bookings/use-in-day, GET /api/bookings/vacancies/status, GET /api/disclaimers, GET /api/tenants, GET /api/tickets-supported/:masterTicketId, GET /api/tickets/:id, GET /api/tickets, GET /api/user/bookings và 9 API khác.",
+  "B6": "• Gõ thẳng địa chỉ /booking/buy-monthly-ticket trên trình duyệt.\n• Hoặc bấm link từ màn: 「Cài đặt ứng dụng (quản trị)」 (SC-002), 「Trang chủ – Thông báo」 (SC-046), 「Mua vé nhiều lượt (回数券)」 (SC-049), 「Đặt chỗ dùng trong ngày」 (SC-054), 「Thông tin theo Luật giao dịch thương mại」 (SC-055).",
+  "B7": null,
+  "name_vi": "Mua vé tháng (フリーパス)"
+ },
+ "SC-049": {
+  "B4": "■目的 / Mục đích\n• Mục đích nghiệp vụ: chưa xác định, chờ khách hàng xác nhận (tài liệu mô tả hiện trạng).\n• Tiêu đề trên màn: 「回数券購入」.\n\n■アクセス方法 / Cách truy cập\n• Địa chỉ: /booking/buy-times-limit-ticket\n• Ai xem được: người dùng đã đăng nhập, người chưa đăng nhập\n\n■トレーサビリティ / Traceability\n• Mã tra cứu: SC-049 · F-049 · Trạng thái: đã mở và xem được trên website",
+  "B5": "• API màn này có thể gọi để lấy / gửi dữ liệu (suy luận từ code, cần kiểm chứng): GET /api/admin/bookings, GET /api/bookings/check-same-date-booking-exists, ANY /api/bookings, GET /api/bookings/main-bookings/:id, POST /api/bookings/use-in-day, GET /api/bookings/vacancies/status, GET /api/disclaimers, GET /api/tenants, GET /api/tickets-supported/:masterTicketId, GET /api/tickets/:id, GET /api/tickets, GET /api/user/bookings và 9 API khác.",
+  "B6": "• Gõ thẳng địa chỉ /booking/buy-times-limit-ticket trên trình duyệt.\n• Hoặc bấm link từ màn: 「Cài đặt ứng dụng (quản trị)」 (SC-002), 「Trang chủ – Thông báo」 (SC-046), 「Mua vé tháng (フリーパス)」 (SC-048), 「Đặt chỗ dùng trong ngày」 (SC-054), 「Thông tin theo Luật giao dịch thương mại」 (SC-055).",
+  "B7": null,
+  "name_vi": "Mua vé nhiều lượt (回数券)"
+ },
+ "SC-050": {
+  "B4": "■目的 / Mục đích\n• Mục đích nghiệp vụ: chưa xác định, chờ khách hàng xác nhận (tài liệu mô tả hiện trạng).\n• Chưa mở được màn nên chưa quan sát được nội dung.\n\n■アクセス方法 / Cách truy cập\n• Địa chỉ: /booking/payment-online\n• Ai xem được: chưa xác định\n\n■トレーサビリティ / Traceability\n• Mã tra cứu: SC-050 · F-050 · Trạng thái: cần kiểm chứng thêm",
+  "B5": "• API màn này có thể gọi để lấy / gửi dữ liệu (suy luận từ code, cần kiểm chứng): GET /api/admin/bookings, GET /api/bookings/check-same-date-booking-exists, ANY /api/bookings, GET /api/bookings/main-bookings/:id, POST /api/bookings/use-in-day, GET /api/bookings/vacancies/status, GET /api/disclaimers, GET /api/tenants, GET /api/tickets/:id, GET /api/tickets, GET /api/user/bookings, GET /api/user/bookings/last-booking và 8 API khác.\n• Màn có trong code nhưng công cụ khảo sát chưa đi tới được.",
+  "B6": "• Gõ thẳng địa chỉ /booking/payment-online trên trình duyệt.\n• Hoặc bấm link từ màn: 「Cài đặt ứng dụng (quản trị)」 (SC-002), 「Trang chủ – Thông báo」 (SC-046), 「Mua vé tháng (フリーパス)」 (SC-048), 「Mua vé nhiều lượt (回数券)」 (SC-049), 「Đặt chỗ dùng trong ngày」 (SC-054).",
+  "B7": null,
+  "name_vi": "Thanh toán online"
+ },
+ "SC-051": {
+  "B4": "■目的 / Mục đích\n• Mục đích nghiệp vụ: chưa xác định, chờ khách hàng xác nhận (tài liệu mô tả hiện trạng).\n• Chưa mở được màn nên chưa quan sát được nội dung.\n\n■アクセス方法 / Cách truy cập\n• Địa chỉ: /booking/payment-online-failure\n• Ai xem được: chưa xác định\n\n■トレーサビリティ / Traceability\n• Mã tra cứu: SC-051 · F-051 · Trạng thái: cần kiểm chứng thêm",
+  "B5": "• Không thấy màn này gọi API nào (xét từ code).\n• Màn có trong code nhưng công cụ khảo sát chưa đi tới được.",
+  "B6": "• Gõ thẳng địa chỉ /booking/payment-online-failure trên trình duyệt.",
+  "B7": null,
+  "name_vi": "Thanh toán online thất bại"
+ },
+ "SC-052": {
+  "B4": "■目的 / Mục đích\n• Mục đích nghiệp vụ: chưa xác định, chờ khách hàng xác nhận (tài liệu mô tả hiện trạng).\n• Chưa mở được màn nên chưa quan sát được nội dung.\n\n■アクセス方法 / Cách truy cập\n• Địa chỉ: /booking/payment-online-monthly-ticket-success\n• Ai xem được: chưa xác định\n\n■トレーサビリティ / Traceability\n• Mã tra cứu: SC-052 · F-052 · Trạng thái: cần kiểm chứng thêm",
+  "B5": "• Không thấy màn này gọi API nào (xét từ code).\n• Màn có trong code nhưng công cụ khảo sát chưa đi tới được.",
+  "B6": "• Gõ thẳng địa chỉ /booking/payment-online-monthly-ticket-success trên trình duyệt.",
+  "B7": null,
+  "name_vi": "Thanh toán vé tháng thành công"
+ },
+ "SC-053": {
+  "B4": "■目的 / Mục đích\n• Mục đích nghiệp vụ: chưa xác định, chờ khách hàng xác nhận (tài liệu mô tả hiện trạng).\n• Chưa mở được màn nên chưa quan sát được nội dung.\n\n■アクセス方法 / Cách truy cập\n• Địa chỉ: /booking/payment-online-success\n• Ai xem được: chưa xác định\n\n■トレーサビリティ / Traceability\n• Mã tra cứu: SC-053 · F-053 · Trạng thái: cần kiểm chứng thêm",
+  "B5": "• Không thấy màn này gọi API nào (xét từ code).\n• Màn có trong code nhưng công cụ khảo sát chưa đi tới được.",
+  "B6": "• Gõ thẳng địa chỉ /booking/payment-online-success trên trình duyệt.",
+  "B7": null,
+  "name_vi": "Thanh toán online thành công"
+ },
+ "SC-054": {
+  "B4": "■目的 / Mục đích\n• Mục đích nghiệp vụ: chưa xác định, chờ khách hàng xác nhận (tài liệu mô tả hiện trạng).\n• Trên màn không có tiêu đề.\n\n■アクセス方法 / Cách truy cập\n• Địa chỉ: /booking/use-in-day\n• Ai xem được: người dùng đã đăng nhập, người chưa đăng nhập\n\n■トレーサビリティ / Traceability\n• Mã tra cứu: SC-054 · F-054 · Trạng thái: đã mở và xem được trên website",
+  "B5": "• API màn này có thể gọi để lấy / gửi dữ liệu (suy luận từ code, cần kiểm chứng): GET /api/admin/bookings, GET /api/bookings/main-bookings/:id, POST /api/bookings/use-in-day, GET /api/bookings/vacancies/status, GET /api/disclaimers, GET /api/tenants, GET /api/tickets/:id, GET /api/tickets, GET /api/user/bookings, GET /api/user/bookings/last-booking, GET /api/user/bookings/monthly-tickets/check-already-used-across-tenants, GET /api/user/bookings/monthly-tickets/extra-info và 3 API khác.",
+  "B6": "• Gõ thẳng địa chỉ /booking/use-in-day trên trình duyệt.\n• Hoặc bấm link từ màn: 「Cài đặt ứng dụng (quản trị)」 (SC-002), 「Trang chủ – Thông báo」 (SC-046), 「Mua vé tháng (フリーパス)」 (SC-048), 「Mua vé nhiều lượt (回数券)」 (SC-049), 「Thông tin theo Luật giao dịch thương mại」 (SC-055).",
+  "B7": null,
+  "name_vi": "Đặt chỗ dùng trong ngày"
+ },
+ "SC-055": {
+  "B4": "■目的 / Mục đích\n• Mục đích nghiệp vụ: chưa xác định, chờ khách hàng xác nhận (tài liệu mô tả hiện trạng).\n• Tiêu đề trên màn: 「特定商取引法に基づく表示」.\n\n■アクセス方法 / Cách truy cập\n• Địa chỉ: /commercial-law\n• Ai xem được: người dùng đã đăng nhập, người chưa đăng nhập\n\n■トレーサビリティ / Traceability\n• Mã tra cứu: SC-055 · F-055 · Trạng thái: đã mở và xem được trên website",
+  "B5": "• Không thấy màn này gọi API nào (xét từ code).",
+  "B6": "• Gõ thẳng địa chỉ /commercial-law trên trình duyệt.\n• Hoặc bấm link từ màn: 「Cài đặt ứng dụng (quản trị)」 (SC-002), 「Trang chủ – Thông báo」 (SC-046), 「Mua vé tháng (フリーパス)」 (SC-048), 「Mua vé nhiều lượt (回数券)」 (SC-049), 「Đặt chỗ dùng trong ngày」 (SC-054).",
+  "B7": null,
+  "name_vi": "Thông tin theo Luật giao dịch thương mại"
+ },
+ "SC-056": {
+  "B4": "■目的 / Mục đích\n• Mục đích nghiệp vụ: chưa xác định, chờ khách hàng xác nhận (tài liệu mô tả hiện trạng).\n• Trên màn không có tiêu đề.\n\n■アクセス方法 / Cách truy cập\n• Địa chỉ: /error\n• Ai xem được: người dùng đã đăng nhập, người chưa đăng nhập\n\n■トレーサビリティ / Traceability\n• Mã tra cứu: SC-056 · F-056 · Trạng thái: đã mở và xem được trên website",
+  "B5": "• Không thấy màn này gọi API nào (xét từ code).",
+  "B6": "• Gõ thẳng địa chỉ /error trên trình duyệt.",
+  "B7": null,
+  "name_vi": "Trang lỗi"
+ },
+ "SC-057": {
+  "B4": "■目的 / Mục đích\n• Mục đích nghiệp vụ: chưa xác định, chờ khách hàng xác nhận (tài liệu mô tả hiện trạng).\n• Tiêu đề trên màn: 「パスワードを忘れた場合」.\n\n■アクセス方法 / Cách truy cập\n• Địa chỉ: /forgot-password\n• Ai xem được: người dùng đã đăng nhập, người chưa đăng nhập\n\n■トレーサビリティ / Traceability\n• Mã tra cứu: SC-057 · F-057 · Trạng thái: đã mở và xem được trên website",
+  "B5": "• API màn này có thể gọi để lấy / gửi dữ liệu (suy luận từ code, cần kiểm chứng): POST /api/auth/forgot-password.",
+  "B6": "• Gõ thẳng địa chỉ /forgot-password trên trình duyệt.\n• Hoặc bấm link từ màn: 「Đăng nhập」 (SC-063), 「Trang cá nhân – Lịch sử đặt chỗ」 (SC-069), 「Lịch sử đặt chỗ」 (SC-070), 「Chi tiết đặt chỗ」 (SC-071), 「Sửa đặt chỗ (theo từng đặt chỗ)」 (SC-076).",
+  "B7": null,
+  "name_vi": "Quên mật khẩu"
+ },
+ "SC-058": {
+  "B4": "■目的 / Mục đích\n• Mục đích nghiệp vụ: chưa xác định, chờ khách hàng xác nhận (tài liệu mô tả hiện trạng).\n• Chưa mở được màn nên chưa quan sát được nội dung.\n\n■アクセス方法 / Cách truy cập\n• Địa chỉ: /maintenance\n• Ai xem được: chưa xác định\n\n■トレーサビリティ / Traceability\n• Mã tra cứu: SC-058 · F-058 · Trạng thái: cần kiểm chứng thêm",
+  "B5": "• Không thấy màn này gọi API nào (xét từ code).\n• Đã mở thử địa chỉ này nhưng không xem được màn (trang trống hoặc bị đưa về đăng nhập) với: người chưa đăng nhập, người dùng đã đăng nhập.",
+  "B6": "• Gõ thẳng địa chỉ /maintenance trên trình duyệt.",
+  "B7": null,
+  "name_vi": "Trang bảo trì"
+ },
+ "SC-059": {
+  "B4": "■目的 / Mục đích\n• Mục đích nghiệp vụ: chưa xác định, chờ khách hàng xác nhận (tài liệu mô tả hiện trạng).\n• Tiêu đề trên màn: 「料金プラン」.\n\n■アクセス方法 / Cách truy cập\n• Địa chỉ: /price-list\n• Ai xem được: người dùng đã đăng nhập, người chưa đăng nhập\n\n■トレーサビリティ / Traceability\n• Mã tra cứu: SC-059 · F-059 · Trạng thái: đã mở và xem được trên website",
+  "B5": "• API màn này có thể gọi để lấy / gửi dữ liệu (suy luận từ code, cần kiểm chứng): GET /api/admin/bookings, GET /api/bookings/main-bookings/:id, POST /api/bookings/use-in-day, GET /api/bookings/vacancies/status, GET /api/disclaimers, GET /api/tenants, GET /api/tickets/:id, GET /api/tickets, GET /api/user/bookings, GET /api/user/bookings/last-booking, GET /api/user/bookings/monthly-tickets/check-already-used-across-tenants, GET /api/user/bookings/monthly-tickets/extra-info và 3 API khác.",
+  "B6": "• Gõ thẳng địa chỉ /price-list trên trình duyệt.\n• Hoặc bấm link từ màn: 「Cài đặt ứng dụng (quản trị)」 (SC-002), 「Trang chủ – Thông báo」 (SC-046), 「Mua vé tháng (フリーパス)」 (SC-048), 「Mua vé nhiều lượt (回数券)」 (SC-049), 「Đặt chỗ dùng trong ngày」 (SC-054).",
+  "B7": null,
+  "name_vi": "Bảng giá"
+ },
+ "SC-060": {
+  "B4": "■目的 / Mục đích\n• Mục đích nghiệp vụ: chưa xác định, chờ khách hàng xác nhận (tài liệu mô tả hiện trạng).\n• Tiêu đề trên màn: 「プライバシーポリシー」.\n\n■アクセス方法 / Cách truy cập\n• Địa chỉ: /privacy-policy\n• Ai xem được: người dùng đã đăng nhập, người chưa đăng nhập\n\n■トレーサビリティ / Traceability\n• Mã tra cứu: SC-060 · F-060 · Trạng thái: đã mở và xem được trên website",
+  "B5": "• Không thấy màn này gọi API nào (xét từ code).",
+  "B6": "• Gõ thẳng địa chỉ /privacy-policy trên trình duyệt.\n• Hoặc bấm link từ màn: 「Cài đặt ứng dụng (quản trị)」 (SC-002), 「Trang chủ – Thông báo」 (SC-046), 「Mua vé tháng (フリーパス)」 (SC-048), 「Mua vé nhiều lượt (回数券)」 (SC-049), 「Đặt chỗ dùng trong ngày」 (SC-054).",
+  "B7": null,
+  "name_vi": "Chính sách bảo mật"
+ },
+ "SC-061": {
+  "B4": "■目的 / Mục đích\n• Mục đích nghiệp vụ: chưa xác định, chờ khách hàng xác nhận (tài liệu mô tả hiện trạng).\n• Chưa mở được màn nên chưa quan sát được nội dung.\n\n■アクセス方法 / Cách truy cập\n• Địa chỉ: /reset-password/:token\n• Ai xem được: chưa xác định\n\n■トレーサビリティ / Traceability\n• Mã tra cứu: SC-061 · F-061 · Trạng thái: cần kiểm chứng thêm",
+  "B5": "• API màn này có thể gọi để lấy / gửi dữ liệu (suy luận từ code, cần kiểm chứng): POST /api/auth/reset-password.\n• Địa chỉ cần một mã riêng; công cụ khảo sát không có mã hợp lệ nên chưa mở được. Màn này mở khi bấm dòng / nút ở màn trước.",
+  "B6": "• Gõ thẳng địa chỉ /reset-password/:token trên trình duyệt.",
+  "B7": null,
+  "name_vi": "Đặt lại mật khẩu (từ link trong mail)"
+ },
+ "SC-062": {
+  "B4": "■目的 / Mục đích\n• Mục đích nghiệp vụ: chưa xác định, chờ khách hàng xác nhận (tài liệu mô tả hiện trạng).\n• Tiêu đề trên màn: 「パスワードを変更しました」.\n\n■アクセス方法 / Cách truy cập\n• Địa chỉ: /reset-password/success\n• Ai xem được: người dùng đã đăng nhập, người chưa đăng nhập\n\n■トレーサビリティ / Traceability\n• Mã tra cứu: SC-062 · F-062 · Trạng thái: đã mở và xem được trên website",
+  "B5": "• Không thấy màn này gọi API nào (xét từ code).",
+  "B6": "• Gõ thẳng địa chỉ /reset-password/success trên trình duyệt.",
+  "B7": null,
+  "name_vi": "Đổi mật khẩu thành công"
+ },
+ "SC-063": {
+  "B4": "■目的 / Mục đích\n• Mục đích nghiệp vụ: chưa xác định, chờ khách hàng xác nhận (tài liệu mô tả hiện trạng).\n• Tiêu đề trên màn: 「ログイン方法を選択」.\n\n■アクセス方法 / Cách truy cập\n• Địa chỉ: /signin\n• Ai xem được: người chưa đăng nhập\n\n■トレーサビリティ / Traceability\n• Mã tra cứu: SC-063 · F-063 · Trạng thái: đã mở và xem được trên website",
+  "B5": "• API màn này có thể gọi để lấy / gửi dữ liệu (suy luận từ code, cần kiểm chứng): POST /api/auth/resend-verification-email.",
+  "B6": "• Gõ thẳng địa chỉ /signin trên trình duyệt.\n• Hoặc bấm link từ màn: 「Trang chủ – Thông báo」 (SC-046), 「Mua vé tháng (フリーパス)」 (SC-048), 「Mua vé nhiều lượt (回数券)」 (SC-049), 「Đặt chỗ dùng trong ngày」 (SC-054), 「Thông tin theo Luật giao dịch thương mại」 (SC-055).",
+  "B7": null,
+  "name_vi": "Đăng nhập"
+ },
+ "SC-064": {
+  "B4": "■目的 / Mục đích\n• Mục đích nghiệp vụ: chưa xác định, chờ khách hàng xác nhận (tài liệu mô tả hiện trạng).\n• Tiêu đề trên màn: 「アカウント作成はこちら」.\n\n■アクセス方法 / Cách truy cập\n• Địa chỉ: /signup\n• Ai xem được: người dùng đã đăng nhập, người chưa đăng nhập\n\n■トレーサビリティ / Traceability\n• Mã tra cứu: SC-064 · F-064 · Trạng thái: đã mở và xem được trên website",
+  "B5": "• API màn này có thể gọi để lấy / gửi dữ liệu (suy luận từ code, cần kiểm chứng): POST /api/auth/resend-verification-email, POST /api/auth/signup, POST /api/user/check-existing-email.",
+  "B6": "• Gõ thẳng địa chỉ /signup trên trình duyệt.\n• Hoặc bấm link từ màn: 「Trang chủ – Thông báo」 (SC-046), 「Mua vé tháng (フリーパス)」 (SC-048), 「Mua vé nhiều lượt (回数券)」 (SC-049), 「Đặt chỗ dùng trong ngày」 (SC-054), 「Thông tin theo Luật giao dịch thương mại」 (SC-055).",
+  "B7": null,
+  "name_vi": "Đăng ký tài khoản"
+ },
+ "SC-065": {
+  "B4": "■目的 / Mục đích\n• Mục đích nghiệp vụ: chưa xác định, chờ khách hàng xác nhận (tài liệu mô tả hiện trạng).\n• Tiêu đề trên màn: 「仮登録を受付けました」.\n\n■アクセス方法 / Cách truy cập\n• Địa chỉ: /signup-success\n• Ai xem được: người dùng đã đăng nhập, người chưa đăng nhập\n\n■トレーサビリティ / Traceability\n• Mã tra cứu: SC-065 · F-065 · Trạng thái: đã mở và xem được trên website",
+  "B5": "• API màn này có thể gọi để lấy / gửi dữ liệu (suy luận từ code, cần kiểm chứng): POST /api/auth/resend-verification-email.",
+  "B6": "• Gõ thẳng địa chỉ /signup-success trên trình duyệt.",
+  "B7": null,
+  "name_vi": "Đăng ký tạm thành công"
+ },
+ "SC-066": {
+  "B4": "■目的 / Mục đích\n• Mục đích nghiệp vụ: chưa xác định, chờ khách hàng xác nhận (tài liệu mô tả hiện trạng).\n• Tiêu đề trên màn: 「店舗一覧」.\n\n■アクセス方法 / Cách truy cập\n• Địa chỉ: /tenant-list\n• Ai xem được: người dùng đã đăng nhập, người chưa đăng nhập\n\n■トレーサビリティ / Traceability\n• Mã tra cứu: SC-066 · F-066 · Trạng thái: đã mở và xem được trên website",
+  "B5": "• API màn này có thể gọi để lấy / gửi dữ liệu (suy luận từ code, cần kiểm chứng): GET /api/bookings/vacancies/status, GET /api/tenants, ANY /api/user/tenant-favorites/:tenantCode, GET /api/user/tenant-favorites.",
+  "B6": "• Gõ thẳng địa chỉ /tenant-list trên trình duyệt.\n• Hoặc bấm link từ màn: 「Cài đặt ứng dụng (quản trị)」 (SC-002), 「Trang chủ – Thông báo」 (SC-046), 「Mua vé tháng (フリーパス)」 (SC-048), 「Mua vé nhiều lượt (回数券)」 (SC-049), 「Đặt chỗ dùng trong ngày」 (SC-054).",
+  "B7": null,
+  "name_vi": "Danh sách cửa hàng"
+ },
+ "SC-067": {
+  "B4": "■目的 / Mục đích\n• Mục đích nghiệp vụ: chưa xác định, chờ khách hàng xác nhận (tài liệu mô tả hiện trạng).\n• Tiêu đề màn thay đổi theo dữ liệu đang xem.\n\n■アクセス方法 / Cách truy cập\n• Địa chỉ: /tenant/:code\n• Ai xem được: người dùng đã đăng nhập, người chưa đăng nhập\n\n■トレーサビリティ / Traceability\n• Mã tra cứu: SC-067 · F-067 · Trạng thái: đã mở và xem được trên website",
+  "B5": "• API màn này có thể gọi để lấy / gửi dữ liệu (suy luận từ code, cần kiểm chứng): GET /api/bookings/vacancies/status, GET /api/tenants/:code, GET /api/tickets, ANY /api/user/tenant-favorites/:tenantCode, GET /api/user/tenant-favorites.",
+  "B6": "• Gõ thẳng địa chỉ /tenant/:code trên trình duyệt.\n• Hoặc bấm link từ màn: 「Danh sách cửa hàng」 (SC-066).",
+  "B7": null,
+  "name_vi": "Chi tiết cửa hàng"
+ },
+ "SC-068": {
+  "B4": "■目的 / Mục đích\n• Mục đích nghiệp vụ: chưa xác định, chờ khách hàng xác nhận (tài liệu mô tả hiện trạng).\n• Tiêu đề trên màn: 「利用規約」.\n\n■アクセス方法 / Cách truy cập\n• Địa chỉ: /terms-of-use\n• Ai xem được: người dùng đã đăng nhập, người chưa đăng nhập\n\n■トレーサビリティ / Traceability\n• Mã tra cứu: SC-068 · F-068 · Trạng thái: đã mở và xem được trên website",
+  "B5": "• Không thấy màn này gọi API nào (xét từ code).",
+  "B6": "• Gõ thẳng địa chỉ /terms-of-use trên trình duyệt.\n• Hoặc bấm link từ màn: 「Cài đặt ứng dụng (quản trị)」 (SC-002), 「Trang chủ – Thông báo」 (SC-046), 「Mua vé tháng (フリーパス)」 (SC-048), 「Mua vé nhiều lượt (回数券)」 (SC-049), 「Đặt chỗ dùng trong ngày」 (SC-054).",
+  "B7": null,
+  "name_vi": "Điều khoản sử dụng"
+ },
+ "SC-069": {
+  "B4": "■目的 / Mục đích\n• Mục đích nghiệp vụ: chưa xác định, chờ khách hàng xác nhận (tài liệu mô tả hiện trạng).\n• Tiêu đề trên màn: 「予約履歴」.\n\n■アクセス方法 / Cách truy cập\n• Địa chỉ: /user/my-page\n• Ai xem được: người dùng đã đăng nhập\n\n■トレーサビリティ / Traceability\n• Mã tra cứu: SC-069 · F-069 · Trạng thái: đã mở và xem được trên website",
+  "B5": "• Không thấy màn này gọi API nào (xét từ code).\n• Người không có quyền mở màn này sẽ bị đăng xuất và đưa về màn đăng nhập (code: withAuthentication.tsx#L42-L44).\n• Người chưa đăng nhập không vào được (trang trống hoặc bị đưa về đăng nhập).",
+  "B6": "• Gõ thẳng địa chỉ /user/my-page trên trình duyệt.",
+  "B7": null,
+  "name_vi": "Trang cá nhân – Lịch sử đặt chỗ"
+ },
+ "SC-070": {
+  "B4": "■目的 / Mục đích\n• Mục đích nghiệp vụ: chưa xác định, chờ khách hàng xác nhận (tài liệu mô tả hiện trạng).\n• Tiêu đề trên màn: 「予約履歴」.\n\n■アクセス方法 / Cách truy cập\n• Địa chỉ: /user/my-page/booking-history\n• Ai xem được: người dùng đã đăng nhập\n\n■トレーサビリティ / Traceability\n• Mã tra cứu: SC-070 · F-070 · Trạng thái: đã mở và xem được trên website",
+  "B5": "• API màn này có thể gọi để lấy / gửi dữ liệu (suy luận từ code, cần kiểm chứng): GET /api/admin/bookings, ANY /api/bookings, GET /api/bookings/main-bookings/:id, POST /api/bookings/use-in-day, GET /api/bookings/vacancies/status, GET /api/disclaimers, GET /api/tenants, GET /api/tickets/:id, GET /api/tickets, GET /api/user/bookings, GET /api/user/bookings/last-booking, GET /api/user/bookings/monthly-tickets/check-already-used-across-tenants và 5 API khác.\n• Người không có quyền mở màn này sẽ bị đăng xuất và đưa về màn đăng nhập (code: withAuthentication.tsx#L42-L44).\n• Người chưa đăng nhập không vào được (trang trống hoặc bị đưa về đăng nhập).",
+  "B6": "• Gõ thẳng địa chỉ /user/my-page/booking-history trên trình duyệt.\n• Hoặc bấm link từ màn: 「Cài đặt ứng dụng (quản trị)」 (SC-002), 「Trang chủ – Thông báo」 (SC-046), 「Mua vé tháng (フリーパス)」 (SC-048), 「Mua vé nhiều lượt (回数券)」 (SC-049), 「Đặt chỗ dùng trong ngày」 (SC-054).",
+  "B7": null,
+  "name_vi": "Lịch sử đặt chỗ"
+ },
+ "SC-071": {
+  "B4": "■目的 / Mục đích\n• Mục đích nghiệp vụ: chưa xác định, chờ khách hàng xác nhận (tài liệu mô tả hiện trạng).\n• Tiêu đề trên màn: 「予約履歴」.\n\n■アクセス方法 / Cách truy cập\n• Địa chỉ: /user/my-page/booking-history/:id\n• Ai xem được: người dùng đã đăng nhập\n\n■トレーサビリティ / Traceability\n• Mã tra cứu: SC-071 · F-071 · Trạng thái: đã mở và xem được trên website",
+  "B5": "• API màn này có thể gọi để lấy / gửi dữ liệu (suy luận từ code, cần kiểm chứng): GET /api/admin/bookings, ANY /api/bookings, GET /api/bookings/main-bookings/:id, GET /api/bookings/status, GET /api/bookings/transaction/:id, POST /api/bookings/use-in-day, GET /api/bookings/vacancies/status, GET /api/disclaimers, GET /api/tenants, GET /api/tickets/:id, GET /api/tickets, ANY /api/user/bookings/:id và 9 API khác.\n• Người không có quyền mở màn này sẽ bị đăng xuất và đưa về màn đăng nhập (code: withAuthentication.tsx#L42-L44).\n• Người chưa đăng nhập không vào được (trang trống hoặc bị đưa về đăng nhập).",
+  "B6": "• Gõ thẳng địa chỉ /user/my-page/booking-history/:id trên trình duyệt.",
+  "B7": null,
+  "name_vi": "Chi tiết đặt chỗ"
+ },
+ "SC-072": {
+  "B4": "■目的 / Mục đích\n• Mục đích nghiệp vụ: chưa xác định, chờ khách hàng xác nhận (tài liệu mô tả hiện trạng).\n• Chưa mở được màn nên chưa quan sát được nội dung.\n\n■アクセス方法 / Cách truy cập\n• Địa chỉ: /user/my-page/booking-history/cancel-success\n• Ai xem được: chưa xác định\n\n■トレーサビリティ / Traceability\n• Mã tra cứu: SC-072 · F-072 · Trạng thái: cần kiểm chứng thêm",
+  "B5": "• Không thấy màn này gọi API nào (xét từ code).\n• Người không có quyền mở màn này sẽ bị đăng xuất và đưa về màn đăng nhập (code: withAuthentication.tsx#L42-L44).\n• Màn có trong code nhưng công cụ khảo sát chưa đi tới được.",
+  "B6": "• Gõ thẳng địa chỉ /user/my-page/booking-history/cancel-success trên trình duyệt.",
+  "B7": null,
+  "name_vi": "Huỷ đặt chỗ thành công"
+ },
+ "SC-073": {
+  "B4": "■目的 / Mục đích\n• Mục đích nghiệp vụ: chưa xác định, chờ khách hàng xác nhận (tài liệu mô tả hiện trạng).\n• Chưa mở được màn nên chưa quan sát được nội dung.\n\n■アクセス方法 / Cách truy cập\n• Địa chỉ: /user/my-page/booking-history/partial-checkout/:id\n• Ai xem được: chưa xác định\n\n■トレーサビリティ / Traceability\n• Mã tra cứu: SC-073 · F-073 · Trạng thái: cần kiểm chứng thêm",
+  "B5": "• API màn này có thể gọi để lấy / gửi dữ liệu (suy luận từ code, cần kiểm chứng): GET /api/admin/bookings, ANY /api/bookings, GET /api/bookings/main-bookings/:id, POST /api/bookings/use-in-day, GET /api/bookings/vacancies/status, GET /api/disclaimers, GET /api/tenants, GET /api/tickets/:id, GET /api/tickets, ANY /api/user/bookings/:id, GET /api/user/bookings, GET /api/user/bookings/last-booking và 6 API khác.\n• Người không có quyền mở màn này sẽ bị đăng xuất và đưa về màn đăng nhập (code: withAuthentication.tsx#L42-L44).\n• Địa chỉ cần một mã riêng; công cụ khảo sát không có mã hợp lệ nên chưa mở được. Màn này mở khi bấm dòng / nút ở màn trước.",
+  "B6": "• Gõ thẳng địa chỉ /user/my-page/booking-history/partial-checkout/:id trên trình duyệt.",
+  "B7": null,
+  "name_vi": "Thanh toán một phần đặt chỗ"
+ },
+ "SC-074": {
+  "B4": "■目的 / Mục đích\n• Mục đích nghiệp vụ: chưa xác định, chờ khách hàng xác nhận (tài liệu mô tả hiện trạng).\n• Chưa mở được màn nên chưa quan sát được nội dung.\n\n■アクセス方法 / Cách truy cập\n• Địa chỉ: /user/my-page/booking-history/partial-checkout/success\n• Ai xem được: chưa xác định\n\n■トレーサビリティ / Traceability\n• Mã tra cứu: SC-074 · F-074 · Trạng thái: cần kiểm chứng thêm",
+  "B5": "• Không thấy màn này gọi API nào (xét từ code).\n• Người không có quyền mở màn này sẽ bị đăng xuất và đưa về màn đăng nhập (code: withAuthentication.tsx#L42-L44).\n• Màn có trong code nhưng công cụ khảo sát chưa đi tới được.",
+  "B6": "• Gõ thẳng địa chỉ /user/my-page/booking-history/partial-checkout/success trên trình duyệt.",
+  "B7": null,
+  "name_vi": "Thanh toán một phần thành công"
+ },
+ "SC-075": {
+  "B4": "■目的 / Mục đích\n• Mục đích nghiệp vụ: chưa xác định, chờ khách hàng xác nhận (tài liệu mô tả hiện trạng).\n• Chưa mở được màn nên chưa quan sát được nội dung.\n\n■アクセス方法 / Cách truy cập\n• Địa chỉ: /user/my-page/booking-history/update\n• Ai xem được: chưa xác định\n\n■トレーサビリティ / Traceability\n• Mã tra cứu: SC-075 · F-075 · Trạng thái: cần kiểm chứng thêm",
+  "B5": "• Không thấy màn này gọi API nào (xét từ code).\n• Người không có quyền mở màn này sẽ bị đăng xuất và đưa về màn đăng nhập (code: withAuthentication.tsx#L42-L44).\n• Màn có trong code nhưng công cụ khảo sát chưa đi tới được.",
+  "B6": "• Gõ thẳng địa chỉ /user/my-page/booking-history/update trên trình duyệt.",
+  "B7": null,
+  "name_vi": "Sửa đặt chỗ"
+ },
+ "SC-076": {
+  "B4": "■目的 / Mục đích\n• Mục đích nghiệp vụ: chưa xác định, chờ khách hàng xác nhận (tài liệu mô tả hiện trạng).\n• Tiêu đề trên màn: 「予約履歴」.\n\n■アクセス方法 / Cách truy cập\n• Địa chỉ: /user/my-page/booking-history/update/:id\n• Ai xem được: người dùng đã đăng nhập\n\n■トレーサビリティ / Traceability\n• Mã tra cứu: SC-076 · F-076 · Trạng thái: đã mở và xem được trên website",
+  "B5": "• API màn này có thể gọi để lấy / gửi dữ liệu (suy luận từ code, cần kiểm chứng): GET /api/admin/bookings, GET /api/bookings/check-same-date-booking-exists, ANY /api/bookings, GET /api/bookings/main-bookings/:id, GET /api/bookings/transaction/:id, POST /api/bookings/use-in-day, GET /api/bookings/vacancies/status, GET /api/disclaimers, GET /api/tenants, GET /api/tickets/:id, GET /api/tickets, ANY /api/user/bookings/:id và 10 API khác.\n• Người không có quyền mở màn này sẽ bị đăng xuất và đưa về màn đăng nhập (code: withAuthentication.tsx#L42-L44).\n• Người chưa đăng nhập không vào được (trang trống hoặc bị đưa về đăng nhập).",
+  "B6": "• Gõ thẳng địa chỉ /user/my-page/booking-history/update/:id trên trình duyệt.",
+  "B7": null,
+  "name_vi": "Sửa đặt chỗ (theo từng đặt chỗ)"
+ },
+ "SC-077": {
+  "B4": "■目的 / Mục đích\n• Mục đích nghiệp vụ: chưa xác định, chờ khách hàng xác nhận (tài liệu mô tả hiện trạng).\n• Chưa mở được màn nên chưa quan sát được nội dung.\n\n■アクセス方法 / Cách truy cập\n• Địa chỉ: /user/my-page/booking-history/update/completed\n• Ai xem được: chưa xác định\n\n■トレーサビリティ / Traceability\n• Mã tra cứu: SC-077 · F-077 · Trạng thái: cần kiểm chứng thêm",
+  "B5": "• Không thấy màn này gọi API nào (xét từ code).\n• Người không có quyền mở màn này sẽ bị đăng xuất và đưa về màn đăng nhập (code: withAuthentication.tsx#L42-L44).\n• Màn có trong code nhưng công cụ khảo sát chưa đi tới được.",
+  "B6": "• Gõ thẳng địa chỉ /user/my-page/booking-history/update/completed trên trình duyệt.",
+  "B7": null,
+  "name_vi": "Sửa đặt chỗ hoàn tất"
+ },
+ "SC-078": {
+  "B4": "■目的 / Mục đích\n• Mục đích nghiệp vụ: chưa xác định, chờ khách hàng xác nhận (tài liệu mô tả hiện trạng).\n• Chưa mở được màn nên chưa quan sát được nội dung.\n\n■アクセス方法 / Cách truy cập\n• Địa chỉ: /user/my-page/delete-account\n• Ai xem được: chưa xác định\n\n■トレーサビリティ / Traceability\n• Mã tra cứu: SC-078 · F-078 · Trạng thái: cần kiểm chứng thêm",
+  "B5": "• API màn này có thể gọi để lấy / gửi dữ liệu (suy luận từ code, cần kiểm chứng): ANY /api/user.\n• Người không có quyền mở màn này sẽ bị đăng xuất và đưa về màn đăng nhập (code: withAuthentication.tsx#L42-L44).\n• Màn có trong code nhưng công cụ khảo sát chưa đi tới được.",
+  "B6": "• Gõ thẳng địa chỉ /user/my-page/delete-account trên trình duyệt.",
+  "B7": null,
+  "name_vi": "Xoá tài khoản"
+ },
+ "SC-079": {
+  "B4": "■目的 / Mục đích\n• Mục đích nghiệp vụ: chưa xác định, chờ khách hàng xác nhận (tài liệu mô tả hiện trạng).\n• Tiêu đề trên màn: 「お気に入り店舗一覧」.\n\n■アクセス方法 / Cách truy cập\n• Địa chỉ: /user/my-page/favorite-tenants\n• Ai xem được: người dùng đã đăng nhập\n\n■トレーサビリティ / Traceability\n• Mã tra cứu: SC-079 · F-079 · Trạng thái: đã mở và xem được trên website",
+  "B5": "• API màn này có thể gọi để lấy / gửi dữ liệu (suy luận từ code, cần kiểm chứng): GET /api/bookings/vacancies/status, ANY /api/user/tenant-favorites/:tenantCode, GET /api/user/tenant-favorites/count, GET /api/user/tenant-favorites.\n• Người không có quyền mở màn này sẽ bị đăng xuất và đưa về màn đăng nhập (code: withAuthentication.tsx#L42-L44).\n• Người chưa đăng nhập không vào được (trang trống hoặc bị đưa về đăng nhập).",
+  "B6": "• Gõ thẳng địa chỉ /user/my-page/favorite-tenants trên trình duyệt.",
+  "B7": null,
+  "name_vi": "Cửa hàng yêu thích"
+ },
+ "SC-080": {
+  "B4": "■目的 / Mục đích\n• Mục đích nghiệp vụ: chưa xác định, chờ khách hàng xác nhận (tài liệu mô tả hiện trạng).\n• Tiêu đề trên màn: 「フリーパスの確認」.\n\n■アクセス方法 / Cách truy cập\n• Địa chỉ: /user/my-page/monthly-ticket-status\n• Ai xem được: người dùng đã đăng nhập\n\n■トレーサビリティ / Traceability\n• Mã tra cứu: SC-080 · F-080 · Trạng thái: đã mở và xem được trên website",
+  "B5": "• API màn này có thể gọi để lấy / gửi dữ liệu (suy luận từ code, cần kiểm chứng): GET /api/admin/bookings, GET /api/bookings/check-monthly-ticket-already-used, GET /api/bookings/main-bookings/:id, POST /api/bookings/use-in-day, GET /api/bookings/vacancies/status, GET /api/disclaimers, GET /api/tenants, GET /api/tickets-supported/:masterTicketId, GET /api/tickets/:id, GET /api/tickets, GET /api/user/bookings, GET /api/user/bookings/last-booking và 6 API khác.\n• Người không có quyền mở màn này sẽ bị đăng xuất và đưa về màn đăng nhập (code: withAuthentication.tsx#L42-L44).\n• Người chưa đăng nhập không vào được (trang trống hoặc bị đưa về đăng nhập).",
+  "B6": "• Gõ thẳng địa chỉ /user/my-page/monthly-ticket-status trên trình duyệt.",
+  "B7": null,
+  "name_vi": "Xem vé tháng đã mua"
+ },
+ "SC-081": {
+  "B4": "■目的 / Mục đích\n• Mục đích nghiệp vụ: chưa xác định, chờ khách hàng xác nhận (tài liệu mô tả hiện trạng).\n• Tiêu đề trên màn: 「アカウント情報の確認・編集」.\n\n■アクセス方法 / Cách truy cập\n• Địa chỉ: /user/my-page/personal-info\n• Ai xem được: người dùng đã đăng nhập\n\n■トレーサビリティ / Traceability\n• Mã tra cứu: SC-081 · F-081 · Trạng thái: đã mở và xem được trên website",
+  "B5": "• API màn này có thể gọi để lấy / gửi dữ liệu (suy luận từ code, cần kiểm chứng): POST /api/user/credit-card/delete, GET /api/user/credit-card/search, ANY /api/user.\n• Người không có quyền mở màn này sẽ bị đăng xuất và đưa về màn đăng nhập (code: withAuthentication.tsx#L42-L44).\n• Người chưa đăng nhập không vào được (trang trống hoặc bị đưa về đăng nhập).",
+  "B6": "• Gõ thẳng địa chỉ /user/my-page/personal-info trên trình duyệt.",
+  "B7": null,
+  "name_vi": "Xem và sửa thông tin tài khoản"
+ },
+ "SC-082": {
+  "B4": "■目的 / Mục đích\n• Mục đích nghiệp vụ: chưa xác định, chờ khách hàng xác nhận (tài liệu mô tả hiện trạng).\n• Tiêu đề trên màn: 「クレジットカード情報の編集」.\n\n■アクセス方法 / Cách truy cập\n• Địa chỉ: /user/my-page/personal-info/change-credit-card\n• Ai xem được: người dùng đã đăng nhập\n\n■トレーサビリティ / Traceability\n• Mã tra cứu: SC-082 · F-082 · Trạng thái: đã mở và xem được trên website",
+  "B5": "• API màn này có thể gọi để lấy / gửi dữ liệu (suy luận từ code, cần kiểm chứng): POST /api/user/credit-card/save, GET /api/user/credit-card/search.\n• Người không có quyền mở màn này sẽ bị đăng xuất và đưa về màn đăng nhập (code: withAuthentication.tsx#L42-L44).\n• Người chưa đăng nhập không vào được (trang trống hoặc bị đưa về đăng nhập).",
+  "B6": "• Gõ thẳng địa chỉ /user/my-page/personal-info/change-credit-card trên trình duyệt.\n• Hoặc bấm link từ màn: 「Xem và sửa thông tin tài khoản」 (SC-081).",
+  "B7": null,
+  "name_vi": "Sửa thẻ tín dụng"
+ },
+ "SC-083": {
+  "B4": "■目的 / Mục đích\n• Mục đích nghiệp vụ: chưa xác định, chờ khách hàng xác nhận (tài liệu mô tả hiện trạng).\n• Chưa mở được màn nên chưa quan sát được nội dung.\n\n■アクセス方法 / Cách truy cập\n• Địa chỉ: /user/my-page/personal-info/change-credit-card/delete\n• Ai xem được: chưa xác định\n\n■トレーサビリティ / Traceability\n• Mã tra cứu: SC-083 · F-083 · Trạng thái: cần kiểm chứng thêm",
+  "B5": "• Không thấy màn này gọi API nào (xét từ code).\n• Người không có quyền mở màn này sẽ bị đăng xuất và đưa về màn đăng nhập (code: withAuthentication.tsx#L42-L44).\n• Màn có trong code nhưng công cụ khảo sát chưa đi tới được.",
+  "B6": "• Gõ thẳng địa chỉ /user/my-page/personal-info/change-credit-card/delete trên trình duyệt.",
+  "B7": null,
+  "name_vi": "Xoá thẻ tín dụng"
+ },
+ "SC-084": {
+  "B4": "■目的 / Mục đích\n• Mục đích nghiệp vụ: chưa xác định, chờ khách hàng xác nhận (tài liệu mô tả hiện trạng).\n• Tiêu đề trên màn: 「カード情報の編集」.\n\n■アクセス方法 / Cách truy cập\n• Địa chỉ: /user/my-page/personal-info/change-credit-card/success\n• Ai xem được: người dùng đã đăng nhập\n\n■トレーサビリティ / Traceability\n• Mã tra cứu: SC-084 · F-084 · Trạng thái: đã mở và xem được trên website",
+  "B5": "• Không thấy màn này gọi API nào (xét từ code).\n• Người không có quyền mở màn này sẽ bị đăng xuất và đưa về màn đăng nhập (code: withAuthentication.tsx#L42-L44).\n• Người chưa đăng nhập không vào được (trang trống hoặc bị đưa về đăng nhập).",
+  "B6": "• Gõ thẳng địa chỉ /user/my-page/personal-info/change-credit-card/success trên trình duyệt.",
+  "B7": null,
+  "name_vi": "Sửa thẻ tín dụng thành công"
+ },
+ "SC-085": {
+  "B4": "■目的 / Mục đích\n• Mục đích nghiệp vụ: chưa xác định, chờ khách hàng xác nhận (tài liệu mô tả hiện trạng).\n• Tiêu đề trên màn: 「アカウント情報の編集」.\n\n■アクセス方法 / Cách truy cập\n• Địa chỉ: /user/my-page/personal-info/change-password\n• Ai xem được: người dùng đã đăng nhập\n\n■トレーサビリティ / Traceability\n• Mã tra cứu: SC-085 · F-085 · Trạng thái: đã mở và xem được trên website",
+  "B5": "• API màn này có thể gọi để lấy / gửi dữ liệu (suy luận từ code, cần kiểm chứng): POST /api/auth/update-password.\n• Người không có quyền mở màn này sẽ bị đăng xuất và đưa về màn đăng nhập (code: withAuthentication.tsx#L42-L44).\n• Người chưa đăng nhập không vào được (trang trống hoặc bị đưa về đăng nhập).",
+  "B6": "• Gõ thẳng địa chỉ /user/my-page/personal-info/change-password trên trình duyệt.\n• Hoặc bấm link từ màn: 「Xem và sửa thông tin tài khoản」 (SC-081).",
+  "B7": null,
+  "name_vi": "Đổi mật khẩu (gửi mail đặt lại)"
+ },
+ "SC-086": {
+  "B4": "■目的 / Mục đích\n• Mục đích nghiệp vụ: chưa xác định, chờ khách hàng xác nhận (tài liệu mô tả hiện trạng).\n• Tiêu đề trên màn: 「アカウント情報の編集」.\n\n■アクセス方法 / Cách truy cập\n• Địa chỉ: /user/my-page/personal-info/update-information\n• Ai xem được: người dùng đã đăng nhập\n\n■トレーサビリティ / Traceability\n• Mã tra cứu: SC-086 · F-086 · Trạng thái: đã mở và xem được trên website",
+  "B5": "• API màn này có thể gọi để lấy / gửi dữ liệu (suy luận từ code, cần kiểm chứng): POST /api/user/check-existing-email, ANY /api/user.\n• Người không có quyền mở màn này sẽ bị đăng xuất và đưa về màn đăng nhập (code: withAuthentication.tsx#L42-L44).\n• Người chưa đăng nhập không vào được (trang trống hoặc bị đưa về đăng nhập).",
+  "B6": "• Gõ thẳng địa chỉ /user/my-page/personal-info/update-information trên trình duyệt.\n• Hoặc bấm link từ màn: 「Xem và sửa thông tin tài khoản」 (SC-081).",
+  "B7": null,
+  "name_vi": "Sửa thông tin cá nhân"
+ },
+ "SC-087": {
+  "B4": "■目的 / Mục đích\n• Mục đích nghiệp vụ: chưa xác định, chờ khách hàng xác nhận (tài liệu mô tả hiện trạng).\n• Tiêu đề trên màn: 「アカウント情報の編集」.\n\n■アクセス方法 / Cách truy cập\n• Địa chỉ: /user/my-page/personal-info/update-information/success\n• Ai xem được: người dùng đã đăng nhập\n\n■トレーサビリティ / Traceability\n• Mã tra cứu: SC-087 · F-087 · Trạng thái: đã mở và xem được trên website",
+  "B5": "• Không thấy màn này gọi API nào (xét từ code).\n• Người không có quyền mở màn này sẽ bị đăng xuất và đưa về màn đăng nhập (code: withAuthentication.tsx#L42-L44).\n• Người chưa đăng nhập không vào được (trang trống hoặc bị đưa về đăng nhập).",
+  "B6": "• Gõ thẳng địa chỉ /user/my-page/personal-info/update-information/success trên trình duyệt.",
+  "B7": null,
+  "name_vi": "Sửa thông tin cá nhân thành công"
+ },
+ "SC-088": {
+  "B4": "■目的 / Mục đích\n• Mục đích nghiệp vụ: chưa xác định, chờ khách hàng xác nhận (tài liệu mô tả hiện trạng).\n• Chưa mở được màn nên chưa quan sát được nội dung.\n\n■アクセス方法 / Cách truy cập\n• Địa chỉ: /user/my-page/personal-info/update-information/verify-edit-email/:token\n• Ai xem được: chưa xác định\n\n■トレーサビリティ / Traceability\n• Mã tra cứu: SC-088 · F-088 · Trạng thái: cần kiểm chứng thêm",
+  "B5": "• API màn này có thể gọi để lấy / gửi dữ liệu (suy luận từ code, cần kiểm chứng): PUT /api/user/edit-email, GET /api/auth/verify/:token.\n• Người không có quyền mở màn này sẽ bị đăng xuất và đưa về màn đăng nhập (code: withAuthentication.tsx#L42-L44).\n• Địa chỉ cần một mã riêng; công cụ khảo sát không có mã hợp lệ nên chưa mở được. Màn này mở khi bấm dòng / nút ở màn trước.",
+  "B6": "• Gõ thẳng địa chỉ /user/my-page/personal-info/update-information/verify-edit-email/:token trên trình duyệt.",
+  "B7": null,
+  "name_vi": "Xác nhận email mới (từ link trong mail)"
+ },
+ "SC-089": {
+  "B4": "■目的 / Mục đích\n• Mục đích nghiệp vụ: chưa xác định, chờ khách hàng xác nhận (tài liệu mô tả hiện trạng).\n• Chưa mở được màn nên chưa quan sát được nội dung.\n\n■アクセス方法 / Cách truy cập\n• Địa chỉ: /user/my-page/personal-info/update-password/:token\n• Ai xem được: chưa xác định\n\n■トレーサビリティ / Traceability\n• Mã tra cứu: SC-089 · F-089 · Trạng thái: cần kiểm chứng thêm",
+  "B5": "• API màn này có thể gọi để lấy / gửi dữ liệu (suy luận từ code, cần kiểm chứng): POST /api/auth/reset-password.\n• Người không có quyền mở màn này sẽ bị đăng xuất và đưa về màn đăng nhập (code: withAuthentication.tsx#L42-L44).\n• Địa chỉ cần một mã riêng; công cụ khảo sát không có mã hợp lệ nên chưa mở được. Màn này mở khi bấm dòng / nút ở màn trước.",
+  "B6": "• Gõ thẳng địa chỉ /user/my-page/personal-info/update-password/:token trên trình duyệt.",
+  "B7": null,
+  "name_vi": "Đặt mật khẩu mới (từ link trong mail)"
+ },
+ "SC-090": {
+  "B4": "■目的 / Mục đích\n• Mục đích nghiệp vụ: chưa xác định, chờ khách hàng xác nhận (tài liệu mô tả hiện trạng).\n• Tiêu đề trên màn: 「アカウント情報の編集」.\n\n■アクセス方法 / Cách truy cập\n• Địa chỉ: /user/my-page/personal-info/update-password/success\n• Ai xem được: người dùng đã đăng nhập\n\n■トレーサビリティ / Traceability\n• Mã tra cứu: SC-090 · F-090 · Trạng thái: đã mở và xem được trên website",
+  "B5": "• Không thấy màn này gọi API nào (xét từ code).\n• Người không có quyền mở màn này sẽ bị đăng xuất và đưa về màn đăng nhập (code: withAuthentication.tsx#L42-L44).\n• Người chưa đăng nhập không vào được (trang trống hoặc bị đưa về đăng nhập).",
+  "B6": "• Gõ thẳng địa chỉ /user/my-page/personal-info/update-password/success trên trình duyệt.",
+  "B7": null,
+  "name_vi": "Đặt mật khẩu mới thành công"
+ },
+ "SC-091": {
+  "B4": "■目的 / Mục đích\n• Mục đích nghiệp vụ: chưa xác định, chờ khách hàng xác nhận (tài liệu mô tả hiện trạng).\n• Tiêu đề trên màn: 「回数券の確認」.\n\n■アクセス方法 / Cách truy cập\n• Địa chỉ: /user/my-page/times-limit-ticket-status\n• Ai xem được: người dùng đã đăng nhập\n\n■トレーサビリティ / Traceability\n• Mã tra cứu: SC-091 · F-091 · Trạng thái: đã mở và xem được trên website",
+  "B5": "• API màn này có thể gọi để lấy / gửi dữ liệu (suy luận từ code, cần kiểm chứng): GET /api/admin/bookings, GET /api/bookings/check-monthly-ticket-already-used, GET /api/bookings/main-bookings/:id, POST /api/bookings/use-in-day, GET /api/bookings/vacancies/status, GET /api/disclaimers, GET /api/tenants, GET /api/tickets-supported/:masterTicketId, GET /api/tickets/:id, GET /api/tickets, GET /api/user/bookings, GET /api/user/bookings/last-booking và 6 API khác.\n• Người không có quyền mở màn này sẽ bị đăng xuất và đưa về màn đăng nhập (code: withAuthentication.tsx#L42-L44).\n• Người chưa đăng nhập không vào được (trang trống hoặc bị đưa về đăng nhập).",
+  "B6": "• Gõ thẳng địa chỉ /user/my-page/times-limit-ticket-status trên trình duyệt.",
+  "B7": null,
+  "name_vi": "Xem vé nhiều lượt đã mua"
+ },
+ "SC-092": {
+  "B4": "■目的 / Mục đích\n• Mục đích nghiệp vụ: chưa xác định, chờ khách hàng xác nhận (tài liệu mô tả hiện trạng).\n• Tiêu đề trên màn: 「待ち時間/販売状況」.\n\n■アクセス方法 / Cách truy cập\n• Địa chỉ: /vacancy-status\n• Ai xem được: người dùng đã đăng nhập, người chưa đăng nhập\n\n■トレーサビリティ / Traceability\n• Mã tra cứu: SC-092 · F-092 · Trạng thái: đã mở và xem được trên website",
+  "B5": "• API màn này có thể gọi để lấy / gửi dữ liệu (suy luận từ code, cần kiểm chứng): GET /api/bookings/vacancies/status, GET /api/tenants.",
+  "B6": "• Gõ thẳng địa chỉ /vacancy-status trên trình duyệt.\n• Hoặc bấm link từ màn: 「Cài đặt ứng dụng (quản trị)」 (SC-002), 「Trang chủ – Thông báo」 (SC-046), 「Mua vé tháng (フリーパス)」 (SC-048), 「Mua vé nhiều lượt (回数券)」 (SC-049), 「Đặt chỗ dùng trong ngày」 (SC-054).",
+  "B7": null,
+  "name_vi": "Thời gian chờ / tình trạng bán"
+ },
+ "SC-093": {
+  "B4": "■目的 / Mục đích\n• Mục đích nghiệp vụ: chưa xác định, chờ khách hàng xác nhận (tài liệu mô tả hiện trạng).\n• Chưa mở được màn nên chưa quan sát được nội dung.\n\n■アクセス方法 / Cách truy cập\n• Địa chỉ: /verify/:token\n• Ai xem được: chưa xác định\n\n■トレーサビリティ / Traceability\n• Mã tra cứu: SC-093 · F-093 · Trạng thái: cần kiểm chứng thêm",
+  "B5": "• API màn này có thể gọi để lấy / gửi dữ liệu (suy luận từ code, cần kiểm chứng): PUT /api/user/edit-email, GET /api/auth/verify/:token.\n• Địa chỉ cần một mã riêng; công cụ khảo sát không có mã hợp lệ nên chưa mở được. Màn này mở khi bấm dòng / nút ở màn trước.",
+  "B6": "• Gõ thẳng địa chỉ /verify/:token trên trình duyệt.",
+  "B7": null,
+  "name_vi": "Xác thực email đăng ký (từ link trong mail)"
+ },
+ "SC-094": {
+  "name_vi": "Trang giới hạn cho doanh nghiệp (限定公開ページ)"
+ }
+}

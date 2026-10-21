@@ -1,0 +1,1610 @@
+{
+ "Observations|OBS-001|Title": {
+  "text": "Vào URL không có quyền → bị đăng xuất ngay",
+  "ctx": "Observations · SC-001"
+ },
+ "Observations|OBS-001|Why suspicious": {
+  "text": "withAuthentication.tsx#L42-L44 gọi signOut() khi role không thuộc allowedRoles; tái hiện 4/4 role admin ở crawl lần 1",
+  "ctx": "Observations · SC-001"
+ },
+ "Observations|OBS-001|Suggested investigation": {
+  "text": "Xác nhận đây là spec mong muốn hay nên hiển thị 403",
+  "ctx": "Observations · SC-001"
+ },
+ "Observations|OBS-001|Note": {
+  "text": "/admin/* (mọi role admin)",
+  "ctx": "Observations · SC-001"
+ },
+ "Observations|OBS-002|Title": {
+  "text": "Màn admin gọi API mã bưu điện với mã rỗng khi tải trang",
+  "ctx": "Observations · SC-046"
+ },
+ "Observations|OBS-002|Why suspicious": {
+  "text": "404 tới madefor.github.io/postal-code-api/api/v1//.json trong network.json (mọi role admin)",
+  "ctx": "Observations · SC-046"
+ },
+ "Observations|OBS-002|Suggested investigation": {
+  "text": "Kiểm tra điều kiện gọi API mã bưu điện",
+  "ctx": "Observations · SC-046"
+ },
+ "Observations|OBS-002|Note": {
+  "text": "WEB-01 (nhiều màn)",
+  "ctx": "Observations · SC-046"
+ },
+ "Observations|OBS-003|Title": {
+  "text": "Trang công khai gọi API /api/user/* khi chưa đăng nhập → 401",
+  "ctx": "Observations · SC-046"
+ },
+ "Observations|OBS-003|Why suspicious": {
+  "text": "network.json role anonymous: 18 lần 401 (check-required-info, monthly-tickets…)",
+  "ctx": "Observations · SC-046"
+ },
+ "Observations|OBS-003|Suggested investigation": {
+  "text": "Xác nhận có cần gọi các API này khi chưa đăng nhập",
+  "ctx": "Observations · SC-046"
+ },
+ "Observations|OBS-003|Note": {
+  "text": "WEB-02 (anonymous)",
+  "ctx": "Observations · SC-046"
+ },
+ "Observations|OBS-004|Title": {
+  "text": "API-001 /api/admin/app-settings/:settingKey",
+  "ctx": "Observations · SC-002"
+ },
+ "Observations|OBS-004|Why suspicious": {
+  "text": "PUT không có validation, req.body được đưa thẳng vào prisma update (mass assignment mọi cột)",
+  "ctx": "Observations · SC-002"
+ },
+ "Observations|OBS-004|Suggested investigation": {
+  "text": "Dev / pentest xác nhận — KHÔNG tự khai thác trên hệ thống",
+  "ctx": "Observations · SC-002"
+ },
+ "Observations|OBS-004|Note": {
+  "text": "Code review (đọc handler)",
+  "ctx": "Observations · SC-002"
+ },
+ "Observations|OBS-005|Title": {
+  "text": "API-001 /api/admin/app-settings/:settingKey",
+  "ctx": "Observations · SC-002"
+ },
+ "Observations|OBS-005|Why suspicious": {
+  "text": "PUT lấy settingKey từ body chứ không từ path param — path param bị bỏ qua",
+  "ctx": "Observations · SC-002"
+ },
+ "Observations|OBS-005|Suggested investigation": {
+  "text": "Dev / pentest xác nhận — KHÔNG tự khai thác trên hệ thống",
+  "ctx": "Observations · SC-002"
+ },
+ "Observations|OBS-005|Note": {
+  "text": "Code review (đọc handler)",
+  "ctx": "Observations · SC-002"
+ },
+ "Observations|OBS-006|Title": {
+  "text": "API-001 /api/admin/app-settings/:settingKey",
+  "ctx": "Observations · SC-002"
+ },
+ "Observations|OBS-006|Why suspicious": {
+  "text": "GET: getAppSettingByKey truy cập .value của kết quả findUnique không kiểm null → settingKey không tồn tại sẽ gây lỗi 500 (REPO-01:src/utils/app-setting.ts#L4-L8)",
+  "ctx": "Observations · SC-002"
+ },
+ "Observations|OBS-006|Suggested investigation": {
+  "text": "Dev / pentest xác nhận — KHÔNG tự khai thác trên hệ thống",
+  "ctx": "Observations · SC-002"
+ },
+ "Observations|OBS-006|Note": {
+  "text": "Code review (đọc handler)",
+  "ctx": "Observations · SC-002"
+ },
+ "Observations|OBS-007|Title": {
+  "text": "API-002 /api/admin/app-settings",
+  "ctx": "Observations · SC-002"
+ },
+ "Observations|OBS-007|Why suspicious": {
+  "text": "POST: req.body (có thể chứa field ngoài schema) được truyền thẳng vào prisma create",
+  "ctx": "Observations · SC-002"
+ },
+ "Observations|OBS-007|Suggested investigation": {
+  "text": "Dev / pentest xác nhận — KHÔNG tự khai thác trên hệ thống",
+  "ctx": "Observations · SC-002"
+ },
+ "Observations|OBS-007|Note": {
+  "text": "Code review (đọc handler)",
+  "ctx": "Observations · SC-002"
+ },
+ "Observations|OBS-008|Title": {
+  "text": "API-003 /api/admin/booking-queue/:id",
+  "ctx": "Observations · SC-008"
+ },
+ "Observations|OBS-008|Why suspicious": {
+  "text": "Không kiểm tra booking thuộc tenant của Admin đang đăng nhập (chỉ tìm theo id)",
+  "ctx": "Observations · SC-008"
+ },
+ "Observations|OBS-008|Suggested investigation": {
+  "text": "Dev / pentest xác nhận — KHÔNG tự khai thác trên hệ thống",
+  "ctx": "Observations · SC-008"
+ },
+ "Observations|OBS-008|Note": {
+  "text": "Code review (đọc handler)",
+  "ctx": "Observations · SC-008"
+ },
+ "Observations|OBS-009|Title": {
+  "text": "API-003 /api/admin/booking-queue/:id",
+  "ctx": "Observations · SC-008"
+ },
+ "Observations|OBS-009|Why suspicious": {
+  "text": "Không validate body.status; BookingStatus[newStatus] không hợp lệ → undefined",
+  "ctx": "Observations · SC-008"
+ },
+ "Observations|OBS-009|Suggested investigation": {
+  "text": "Dev / pentest xác nhận — KHÔNG tự khai thác trên hệ thống",
+  "ctx": "Observations · SC-008"
+ },
+ "Observations|OBS-009|Note": {
+  "text": "Code review (đọc handler)",
+  "ctx": "Observations · SC-008"
+ },
+ "Observations|OBS-010|Title": {
+  "text": "API-003 /api/admin/booking-queue/:id",
+  "ctx": "Observations · SC-008"
+ },
+ "Observations|OBS-010|Why suspicious": {
+  "text": "Không kiểm tra booking tồn tại trước khi đọc currentBooking.status (null → lỗi 500)",
+  "ctx": "Observations · SC-008"
+ },
+ "Observations|OBS-010|Suggested investigation": {
+  "text": "Dev / pentest xác nhận — KHÔNG tự khai thác trên hệ thống",
+  "ctx": "Observations · SC-008"
+ },
+ "Observations|OBS-010|Note": {
+  "text": "Code review (đọc handler)",
+  "ctx": "Observations · SC-008"
+ },
+ "Observations|OBS-011|Title": {
+  "text": "API-004 /api/admin/booking-queue/calling",
+  "ctx": "Observations · SC-008"
+ },
+ "Observations|OBS-011|Why suspicious": {
+  "text": "Response chứa name/email/phone của user",
+  "ctx": "Observations · SC-008"
+ },
+ "Observations|OBS-011|Suggested investigation": {
+  "text": "Dev / pentest xác nhận — KHÔNG tự khai thác trên hệ thống",
+  "ctx": "Observations · SC-008"
+ },
+ "Observations|OBS-011|Note": {
+  "text": "Code review (đọc handler)",
+  "ctx": "Observations · SC-008"
+ },
+ "Observations|OBS-012|Title": {
+  "text": "API-005 /api/admin/booking-queue",
+  "ctx": "Observations · SC-008"
+ },
+ "Observations|OBS-012|Why suspicious": {
+  "text": "Không kiểm tra booking thuộc tenant của Admin",
+  "ctx": "Observations · SC-008"
+ },
+ "Observations|OBS-012|Suggested investigation": {
+  "text": "Dev / pentest xác nhận — KHÔNG tự khai thác trên hệ thống",
+  "ctx": "Observations · SC-008"
+ },
+ "Observations|OBS-012|Note": {
+  "text": "Code review (đọc handler)",
+  "ctx": "Observations · SC-008"
+ },
+ "Observations|OBS-013|Title": {
+  "text": "API-005 /api/admin/booking-queue",
+  "ctx": "Observations · SC-008"
+ },
+ "Observations|OBS-013|Why suspicious": {
+  "text": "Schema không bắt buộc field id",
+  "ctx": "Observations · SC-008"
+ },
+ "Observations|OBS-013|Suggested investigation": {
+  "text": "Dev / pentest xác nhận — KHÔNG tự khai thác trên hệ thống",
+  "ctx": "Observations · SC-008"
+ },
+ "Observations|OBS-013|Note": {
+  "text": "Code review (đọc handler)",
+  "ctx": "Observations · SC-008"
+ },
+ "Observations|OBS-014|Title": {
+  "text": "API-007 /api/admin/booking-queue/waiting",
+  "ctx": "Observations · SC-008"
+ },
+ "Observations|OBS-014|Why suspicious": {
+  "text": "Response chứa name/email/phone của user",
+  "ctx": "Observations · SC-008"
+ },
+ "Observations|OBS-014|Suggested investigation": {
+  "text": "Dev / pentest xác nhận — KHÔNG tự khai thác trên hệ thống",
+  "ctx": "Observations · SC-008"
+ },
+ "Observations|OBS-014|Note": {
+  "text": "Code review (đọc handler)",
+  "ctx": "Observations · SC-008"
+ },
+ "Observations|OBS-015|Title": {
+  "text": "API-009 /api/admin/bookings/:id",
+  "ctx": "Observations · SC-005"
+ },
+ "Observations|OBS-015|Why suspicious": {
+  "text": "Không lọc theo tenant — Admin có thể đọc booking của tenant khác theo id",
+  "ctx": "Observations · SC-005"
+ },
+ "Observations|OBS-015|Suggested investigation": {
+  "text": "Dev / pentest xác nhận — KHÔNG tự khai thác trên hệ thống",
+  "ctx": "Observations · SC-005"
+ },
+ "Observations|OBS-015|Note": {
+  "text": "Code review (đọc handler)",
+  "ctx": "Observations · SC-005"
+ },
+ "Observations|OBS-016|Title": {
+  "text": "API-009 /api/admin/bookings/:id",
+  "ctx": "Observations · SC-005"
+ },
+ "Observations|OBS-016|Why suspicious": {
+  "text": "Include User: true trả về toàn bộ cột bảng users",
+  "ctx": "Observations · SC-005"
+ },
+ "Observations|OBS-016|Suggested investigation": {
+  "text": "Dev / pentest xác nhận — KHÔNG tự khai thác trên hệ thống",
+  "ctx": "Observations · SC-005"
+ },
+ "Observations|OBS-016|Note": {
+  "text": "Code review (đọc handler)",
+  "ctx": "Observations · SC-005"
+ },
+ "Observations|OBS-017|Title": {
+  "text": "API-010 /api/admin/bookings/:id/force-recompute-obic",
+  "ctx": "Observations · F-001"
+ },
+ "Observations|OBS-017|Why suspicious": {
+  "text": "Không kiểm tra booking thuộc tenant của Admin",
+  "ctx": "Observations · F-001"
+ },
+ "Observations|OBS-017|Suggested investigation": {
+  "text": "Dev / pentest xác nhận — KHÔNG tự khai thác trên hệ thống",
+  "ctx": "Observations · F-001"
+ },
+ "Observations|OBS-017|Note": {
+  "text": "Code review (đọc handler)",
+  "ctx": "Observations · F-001"
+ },
+ "Observations|OBS-018|Title": {
+  "text": "API-010 /api/admin/bookings/:id/force-recompute-obic",
+  "ctx": "Observations · F-001"
+ },
+ "Observations|OBS-018|Why suspicious": {
+  "text": "Không xoá/đánh dấu revision cũ, chỉ createMany revision mới (REPO-01:src/utils/server/obicCodes.ts#L478-L485)",
+  "ctx": "Observations · F-001"
+ },
+ "Observations|OBS-018|Suggested investigation": {
+  "text": "Dev / pentest xác nhận — KHÔNG tự khai thác trên hệ thống",
+  "ctx": "Observations · F-001"
+ },
+ "Observations|OBS-018|Note": {
+  "text": "Code review (đọc handler)",
+  "ctx": "Observations · F-001"
+ },
+ "Observations|OBS-019|Title": {
+  "text": "API-011 /api/admin/bookings/:id/status",
+  "ctx": "Observations · SC-026"
+ },
+ "Observations|OBS-019|Why suspicious": {
+  "text": "Không validate body",
+  "ctx": "Observations · SC-026"
+ },
+ "Observations|OBS-019|Suggested investigation": {
+  "text": "Dev / pentest xác nhận — KHÔNG tự khai thác trên hệ thống",
+  "ctx": "Observations · SC-026"
+ },
+ "Observations|OBS-019|Note": {
+  "text": "Code review (đọc handler)",
+  "ctx": "Observations · SC-026"
+ },
+ "Observations|OBS-020|Title": {
+  "text": "API-011 /api/admin/bookings/:id/status",
+  "ctx": "Observations · SC-026"
+ },
+ "Observations|OBS-020|Why suspicious": {
+  "text": "Không kiểm tra booking thuộc tenant của user (Staff/Admin)",
+  "ctx": "Observations · SC-026"
+ },
+ "Observations|OBS-020|Suggested investigation": {
+  "text": "Dev / pentest xác nhận — KHÔNG tự khai thác trên hệ thống",
+  "ctx": "Observations · SC-026"
+ },
+ "Observations|OBS-020|Note": {
+  "text": "Code review (đọc handler)",
+  "ctx": "Observations · SC-026"
+ },
+ "Observations|OBS-021|Title": {
+  "text": "API-012 /api/admin/bookings/blacklist",
+  "ctx": "Observations · F-001"
+ },
+ "Observations|OBS-021|Why suspicious": {
+  "text": "Endpoint dưới /api/admin nhưng không gắn checkAuth/roleAuth — truy cập công khai",
+  "ctx": "Observations · F-001"
+ },
+ "Observations|OBS-021|Suggested investigation": {
+  "text": "Dev / pentest xác nhận — KHÔNG tự khai thác trên hệ thống",
+  "ctx": "Observations · F-001"
+ },
+ "Observations|OBS-021|Note": {
+  "text": "Code review (đọc handler)",
+  "ctx": "Observations · F-001"
+ },
+ "Observations|OBS-022|Title": {
+  "text": "API-012 /api/admin/bookings/blacklist",
+  "ctx": "Observations · F-001"
+ },
+ "Observations|OBS-022|Why suspicious": {
+  "text": "Trả về toàn bộ cột bảng users (PII) của booking mọi tenant",
+  "ctx": "Observations · F-001"
+ },
+ "Observations|OBS-022|Suggested investigation": {
+  "text": "Dev / pentest xác nhận — KHÔNG tự khai thác trên hệ thống",
+  "ctx": "Observations · F-001"
+ },
+ "Observations|OBS-022|Note": {
+  "text": "Code review (đọc handler)",
+  "ctx": "Observations · F-001"
+ },
+ "Observations|OBS-023|Title": {
+  "text": "API-013 /api/admin/bookings/cancel/:id",
+  "ctx": "Observations · SC-004"
+ },
+ "Observations|OBS-023|Why suspicious": {
+  "text": "Không kiểm tra booking thuộc tenant của Admin",
+  "ctx": "Observations · SC-004"
+ },
+ "Observations|OBS-023|Suggested investigation": {
+  "text": "Dev / pentest xác nhận — KHÔNG tự khai thác trên hệ thống",
+  "ctx": "Observations · SC-004"
+ },
+ "Observations|OBS-023|Note": {
+  "text": "Code review (đọc handler)",
+  "ctx": "Observations · SC-004"
+ },
+ "Observations|OBS-024|Title": {
+  "text": "API-013 /api/admin/bookings/cancel/:id",
+  "ctx": "Observations · SC-004"
+ },
+ "Observations|OBS-024|Why suspicious": {
+  "text": "Không validate body; specificBookingBarCodeShouldCancelAll.includes() gọi không kiểm null khi huỷ vé tháng/vé lượt",
+  "ctx": "Observations · SC-004"
+ },
+ "Observations|OBS-024|Suggested investigation": {
+  "text": "Dev / pentest xác nhận — KHÔNG tự khai thác trên hệ thống",
+  "ctx": "Observations · SC-004"
+ },
+ "Observations|OBS-024|Note": {
+  "text": "Code review (đọc handler)",
+  "ctx": "Observations · SC-004"
+ },
+ "Observations|OBS-025|Title": {
+  "text": "API-013 /api/admin/bookings/cancel/:id",
+  "ctx": "Observations · SC-004"
+ },
+ "Observations|OBS-025|Why suspicious": {
+  "text": "Không kiểm tra booking tồn tại trước khi dùng booking.ticketId",
+  "ctx": "Observations · SC-004"
+ },
+ "Observations|OBS-025|Suggested investigation": {
+  "text": "Dev / pentest xác nhận — KHÔNG tự khai thác trên hệ thống",
+  "ctx": "Observations · SC-004"
+ },
+ "Observations|OBS-025|Note": {
+  "text": "Code review (đọc handler)",
+  "ctx": "Observations · SC-004"
+ },
+ "Observations|OBS-026|Title": {
+  "text": "API-013 /api/admin/bookings/cancel/:id",
+  "ctx": "Observations · SC-004"
+ },
+ "Observations|OBS-026|Why suspicious": {
+  "text": "Huỷ GMO thành công nhưng cập nhật DB không nằm trong transaction",
+  "ctx": "Observations · SC-004"
+ },
+ "Observations|OBS-026|Suggested investigation": {
+  "text": "Dev / pentest xác nhận — KHÔNG tự khai thác trên hệ thống",
+  "ctx": "Observations · SC-004"
+ },
+ "Observations|OBS-026|Note": {
+  "text": "Code review (đọc handler)",
+  "ctx": "Observations · SC-004"
+ },
+ "Observations|OBS-027|Title": {
+  "text": "API-015 /api/admin/bookings/decrease-quantity/:id",
+  "ctx": "Observations · SC-007"
+ },
+ "Observations|OBS-027|Why suspicious": {
+  "text": "Không validate body: không chặn số lượng âm hoặc giảm quá số hiện có",
+  "ctx": "Observations · SC-007"
+ },
+ "Observations|OBS-027|Suggested investigation": {
+  "text": "Dev / pentest xác nhận — KHÔNG tự khai thác trên hệ thống",
+  "ctx": "Observations · SC-007"
+ },
+ "Observations|OBS-027|Note": {
+  "text": "Code review (đọc handler)",
+  "ctx": "Observations · SC-007"
+ },
+ "Observations|OBS-028|Title": {
+  "text": "API-015 /api/admin/bookings/decrease-quantity/:id",
+  "ctx": "Observations · SC-007"
+ },
+ "Observations|OBS-028|Why suspicious": {
+  "text": "childAges.length gọi không kiểm undefined",
+  "ctx": "Observations · SC-007"
+ },
+ "Observations|OBS-028|Suggested investigation": {
+  "text": "Dev / pentest xác nhận — KHÔNG tự khai thác trên hệ thống",
+  "ctx": "Observations · SC-007"
+ },
+ "Observations|OBS-028|Note": {
+  "text": "Code review (đọc handler)",
+  "ctx": "Observations · SC-007"
+ },
+ "Observations|OBS-029|Title": {
+  "text": "API-015 /api/admin/bookings/decrease-quantity/:id",
+  "ctx": "Observations · SC-007"
+ },
+ "Observations|OBS-029|Why suspicious": {
+  "text": "Không kiểm tra booking thuộc tenant của Admin",
+  "ctx": "Observations · SC-007"
+ },
+ "Observations|OBS-029|Suggested investigation": {
+  "text": "Dev / pentest xác nhận — KHÔNG tự khai thác trên hệ thống",
+  "ctx": "Observations · SC-007"
+ },
+ "Observations|OBS-029|Note": {
+  "text": "Code review (đọc handler)",
+  "ctx": "Observations · SC-007"
+ },
+ "Observations|OBS-030|Title": {
+  "text": "API-015 /api/admin/bookings/decrease-quantity/:id",
+  "ctx": "Observations · SC-007"
+ },
+ "Observations|OBS-030|Why suspicious": {
+  "text": "Đổi tiền GMO xảy ra trước, cập nhật DB sau — không nhất quán nếu DB lỗi",
+  "ctx": "Observations · SC-007"
+ },
+ "Observations|OBS-030|Suggested investigation": {
+  "text": "Dev / pentest xác nhận — KHÔNG tự khai thác trên hệ thống",
+  "ctx": "Observations · SC-007"
+ },
+ "Observations|OBS-030|Note": {
+  "text": "Code review (đọc handler)",
+  "ctx": "Observations · SC-007"
+ },
+ "Observations|OBS-031|Title": {
+  "text": "API-016 /api/admin/bookings/export",
+  "ctx": "Observations · F-001"
+ },
+ "Observations|OBS-031|Why suspicious": {
+  "text": "Bộ cột CSV được chọn theo exportingRole do client gửi, không theo role thật trong token — Admin/Staff có thể lấy bộ cột SuperAdmin (gồm LINEユーザーID)",
+  "ctx": "Observations · F-001"
+ },
+ "Observations|OBS-031|Suggested investigation": {
+  "text": "Dev / pentest xác nhận — KHÔNG tự khai thác trên hệ thống",
+  "ctx": "Observations · F-001"
+ },
+ "Observations|OBS-031|Note": {
+  "text": "Code review (đọc handler)",
+  "ctx": "Observations · F-001"
+ },
+ "Observations|OBS-032|Title": {
+  "text": "API-016 /api/admin/bookings/export",
+  "ctx": "Observations · F-001"
+ },
+ "Observations|OBS-032|Why suspicious": {
+  "text": "ID ghi activity log (userOrStaffId) lấy từ query client gửi",
+  "ctx": "Observations · F-001"
+ },
+ "Observations|OBS-032|Suggested investigation": {
+  "text": "Dev / pentest xác nhận — KHÔNG tự khai thác trên hệ thống",
+  "ctx": "Observations · F-001"
+ },
+ "Observations|OBS-032|Note": {
+  "text": "Code review (đọc handler)",
+  "ctx": "Observations · F-001"
+ },
+ "Observations|OBS-033|Title": {
+  "text": "API-016 /api/admin/bookings/export",
+  "ctx": "Observations · F-001"
+ },
+ "Observations|OBS-033|Why suspicious": {
+  "text": "Không phân trang — xuất toàn bộ kết quả lọc",
+  "ctx": "Observations · F-001"
+ },
+ "Observations|OBS-033|Suggested investigation": {
+  "text": "Dev / pentest xác nhận — KHÔNG tự khai thác trên hệ thống",
+  "ctx": "Observations · F-001"
+ },
+ "Observations|OBS-033|Note": {
+  "text": "Code review (đọc handler)",
+  "ctx": "Observations · F-001"
+ },
+ "Observations|OBS-034|Title": {
+  "text": "API-017 /api/admin/bookings",
+  "ctx": "Observations · SC-004"
+ },
+ "Observations|OBS-034|Why suspicious": {
+  "text": "ID ghi activity log (userOrStaffId) lấy từ query client gửi",
+  "ctx": "Observations · SC-004"
+ },
+ "Observations|OBS-034|Suggested investigation": {
+  "text": "Dev / pentest xác nhận — KHÔNG tự khai thác trên hệ thống",
+  "ctx": "Observations · SC-004"
+ },
+ "Observations|OBS-034|Note": {
+  "text": "Code review (đọc handler)",
+  "ctx": "Observations · SC-004"
+ },
+ "Observations|OBS-035|Title": {
+  "text": "API-017 /api/admin/bookings",
+  "ctx": "Observations · SC-004"
+ },
+ "Observations|OBS-035|Why suspicious": {
+  "text": "Include User: true trả toàn bộ cột users",
+  "ctx": "Observations · SC-004"
+ },
+ "Observations|OBS-035|Suggested investigation": {
+  "text": "Dev / pentest xác nhận — KHÔNG tự khai thác trên hệ thống",
+  "ctx": "Observations · SC-004"
+ },
+ "Observations|OBS-035|Note": {
+  "text": "Code review (đọc handler)",
+  "ctx": "Observations · SC-004"
+ },
+ "Observations|OBS-036|Title": {
+  "text": "API-018 /api/admin/bookings/monthly-tickets/extra-info",
+  "ctx": "Observations · SC-004"
+ },
+ "Observations|OBS-036|Why suspicious": {
+  "text": "Không kiểm tra booking thuộc tenant của Admin",
+  "ctx": "Observations · SC-004"
+ },
+ "Observations|OBS-036|Suggested investigation": {
+  "text": "Dev / pentest xác nhận — KHÔNG tự khai thác trên hệ thống",
+  "ctx": "Observations · SC-004"
+ },
+ "Observations|OBS-036|Note": {
+  "text": "Code review (đọc handler)",
+  "ctx": "Observations · SC-004"
+ },
+ "Observations|OBS-037|Title": {
+  "text": "API-018 /api/admin/bookings/monthly-tickets/extra-info",
+  "ctx": "Observations · SC-004"
+ },
+ "Observations|OBS-037|Why suspicious": {
+  "text": "Truy vấn findMany trong vòng lặp (N+1)",
+  "ctx": "Observations · SC-004"
+ },
+ "Observations|OBS-037|Suggested investigation": {
+  "text": "Dev / pentest xác nhận — KHÔNG tự khai thác trên hệ thống",
+  "ctx": "Observations · SC-004"
+ },
+ "Observations|OBS-037|Note": {
+  "text": "Code review (đọc handler)",
+  "ctx": "Observations · SC-004"
+ },
+ "Observations|OBS-038|Title": {
+  "text": "API-019 /api/admin/bookings/rollback-scan",
+  "ctx": "Observations · SC-003"
+ },
+ "Observations|OBS-038|Why suspicious": {
+  "text": "Lọc booking theo tenantCode của token; nếu tenantCode của user không có (vd. SuperAdmin) thì điều kiện tenant có thể bị bỏ qua — cần xác minh",
+  "ctx": "Observations · SC-003"
+ },
+ "Observations|OBS-038|Suggested investigation": {
+  "text": "Dev / pentest xác nhận — KHÔNG tự khai thác trên hệ thống",
+  "ctx": "Observations · SC-003"
+ },
+ "Observations|OBS-038|Note": {
+  "text": "Code review (đọc handler)",
+  "ctx": "Observations · SC-003"
+ },
+ "Observations|OBS-039|Title": {
+  "text": "API-019 /api/admin/bookings/rollback-scan",
+  "ctx": "Observations · SC-003"
+ },
+ "Observations|OBS-039|Why suspicious": {
+  "text": "prisma.user.update trong rollbackCheckedOutBookings dùng client ngoài transaction tx",
+  "ctx": "Observations · SC-003"
+ },
+ "Observations|OBS-039|Suggested investigation": {
+  "text": "Dev / pentest xác nhận — KHÔNG tự khai thác trên hệ thống",
+  "ctx": "Observations · SC-003"
+ },
+ "Observations|OBS-039|Note": {
+  "text": "Code review (đọc handler)",
+  "ctx": "Observations · SC-003"
+ },
+ "Observations|OBS-040|Title": {
+  "text": "API-019 /api/admin/bookings/rollback-scan",
+  "ctx": "Observations · SC-003"
+ },
+ "Observations|OBS-040|Why suspicious": {
+  "text": "Rollback Smaregi chạy fire-and-forget (void), lỗi không trả về client",
+  "ctx": "Observations · SC-003"
+ },
+ "Observations|OBS-040|Suggested investigation": {
+  "text": "Dev / pentest xác nhận — KHÔNG tự khai thác trên hệ thống",
+  "ctx": "Observations · SC-003"
+ },
+ "Observations|OBS-040|Note": {
+  "text": "Code review (đọc handler)",
+  "ctx": "Observations · SC-003"
+ },
+ "Observations|OBS-041|Title": {
+  "text": "API-020 /api/admin/bookings/scan",
+  "ctx": "Observations · SC-003"
+ },
+ "Observations|OBS-041|Why suspicious": {
+  "text": "Lọc booking theo tenantCode của token; nếu tenantCode của user không có (vd. SuperAdmin) thì điều kiện tenant có thể bị bỏ qua — cần xác minh",
+  "ctx": "Observations · SC-003"
+ },
+ "Observations|OBS-041|Suggested investigation": {
+  "text": "Dev / pentest xác nhận — KHÔNG tự khai thác trên hệ thống",
+  "ctx": "Observations · SC-003"
+ },
+ "Observations|OBS-041|Note": {
+  "text": "Code review (đọc handler)",
+  "ctx": "Observations · SC-003"
+ },
+ "Observations|OBS-042|Title": {
+  "text": "API-020 /api/admin/bookings/scan",
+  "ctx": "Observations · SC-003"
+ },
+ "Observations|OBS-042|Why suspicious": {
+  "text": "prisma.bookingObicCode.updateMany trong performCheckOut dùng client ngoài transaction tx (L689-L692)",
+  "ctx": "Observations · SC-003"
+ },
+ "Observations|OBS-042|Suggested investigation": {
+  "text": "Dev / pentest xác nhận — KHÔNG tự khai thác trên hệ thống",
+  "ctx": "Observations · SC-003"
+ },
+ "Observations|OBS-042|Note": {
+  "text": "Code review (đọc handler)",
+  "ctx": "Observations · SC-003"
+ },
+ "Observations|OBS-043|Title": {
+  "text": "API-020 /api/admin/bookings/scan",
+  "ctx": "Observations · SC-003"
+ },
+ "Observations|OBS-043|Why suspicious": {
+  "text": "Không validate performedAt",
+  "ctx": "Observations · SC-003"
+ },
+ "Observations|OBS-043|Suggested investigation": {
+  "text": "Dev / pentest xác nhận — KHÔNG tự khai thác trên hệ thống",
+  "ctx": "Observations · SC-003"
+ },
+ "Observations|OBS-043|Note": {
+  "text": "Code review (đọc handler)",
+  "ctx": "Observations · SC-003"
+ },
+ "Observations|OBS-044|Title": {
+  "text": "API-021 /api/admin/bookings/status",
+  "ctx": "Observations · SC-004"
+ },
+ "Observations|OBS-044|Why suspicious": {
+  "text": "Không validate body; không kiểm tra booking thuộc tenant của Admin; không kiểm tra booking tồn tại",
+  "ctx": "Observations · SC-004"
+ },
+ "Observations|OBS-044|Suggested investigation": {
+  "text": "Dev / pentest xác nhận — KHÔNG tự khai thác trên hệ thống",
+  "ctx": "Observations · SC-004"
+ },
+ "Observations|OBS-044|Note": {
+  "text": "Code review (đọc handler)",
+  "ctx": "Observations · SC-004"
+ },
+ "Observations|OBS-045|Title": {
+  "text": "API-021 /api/admin/bookings/status",
+  "ctx": "Observations · SC-004"
+ },
+ "Observations|OBS-045|Why suspicious": {
+  "text": "Hoàn tiền GMO trước, cập nhật DB sau, không trong transaction",
+  "ctx": "Observations · SC-004"
+ },
+ "Observations|OBS-045|Suggested investigation": {
+  "text": "Dev / pentest xác nhận — KHÔNG tự khai thác trên hệ thống",
+  "ctx": "Observations · SC-004"
+ },
+ "Observations|OBS-045|Note": {
+  "text": "Code review (đọc handler)",
+  "ctx": "Observations · SC-004"
+ },
+ "Observations|OBS-046|Title": {
+  "text": "API-022 /api/admin/bookings/ticket-booking-schedules/:id",
+  "ctx": "Observations · SC-009"
+ },
+ "Observations|OBS-046|Why suspicious": {
+  "text": "Không kiểm tra schedule thuộc tenant của Admin",
+  "ctx": "Observations · SC-009"
+ },
+ "Observations|OBS-046|Suggested investigation": {
+  "text": "Dev / pentest xác nhận — KHÔNG tự khai thác trên hệ thống",
+  "ctx": "Observations · SC-009"
+ },
+ "Observations|OBS-046|Note": {
+  "text": "Code review (đọc handler)",
+  "ctx": "Observations · SC-009"
+ },
+ "Observations|OBS-047|Title": {
+  "text": "API-023 /api/admin/charts/average-booking-times",
+  "ctx": "Observations · SC-012"
+ },
+ "Observations|OBS-047|Why suspicious": {
+  "text": "Không validate dateFrom/dateTo",
+  "ctx": "Observations · SC-012"
+ },
+ "Observations|OBS-047|Suggested investigation": {
+  "text": "Dev / pentest xác nhận — KHÔNG tự khai thác trên hệ thống",
+  "ctx": "Observations · SC-012"
+ },
+ "Observations|OBS-047|Note": {
+  "text": "Code review (đọc handler)",
+  "ctx": "Observations · SC-012"
+ },
+ "Observations|OBS-048|Title": {
+  "text": "API-023 /api/admin/charts/average-booking-times",
+  "ctx": "Observations · SC-012"
+ },
+ "Observations|OBS-048|Why suspicious": {
+  "text": "Không lọc tenant — role Admin nhận số liệu của mọi tenant",
+  "ctx": "Observations · SC-012"
+ },
+ "Observations|OBS-048|Suggested investigation": {
+  "text": "Dev / pentest xác nhận — KHÔNG tự khai thác trên hệ thống",
+  "ctx": "Observations · SC-012"
+ },
+ "Observations|OBS-048|Note": {
+  "text": "Code review (đọc handler)",
+  "ctx": "Observations · SC-012"
+ },
+ "Observations|OBS-049|Title": {
+  "text": "API-024 /api/admin/charts/average-stay-duration",
+  "ctx": "Observations · SC-012"
+ },
+ "Observations|OBS-049|Why suspicious": {
+  "text": "Không validate dateFrom/dateTo",
+  "ctx": "Observations · SC-012"
+ },
+ "Observations|OBS-049|Suggested investigation": {
+  "text": "Dev / pentest xác nhận — KHÔNG tự khai thác trên hệ thống",
+  "ctx": "Observations · SC-012"
+ },
+ "Observations|OBS-049|Note": {
+  "text": "Code review (đọc handler)",
+  "ctx": "Observations · SC-012"
+ },
+ "Observations|OBS-050|Title": {
+  "text": "API-024 /api/admin/charts/average-stay-duration",
+  "ctx": "Observations · SC-012"
+ },
+ "Observations|OBS-050|Why suspicious": {
+  "text": "Không lọc tenant — role Admin nhận số liệu của mọi tenant",
+  "ctx": "Observations · SC-012"
+ },
+ "Observations|OBS-050|Suggested investigation": {
+  "text": "Dev / pentest xác nhận — KHÔNG tự khai thác trên hệ thống",
+  "ctx": "Observations · SC-012"
+ },
+ "Observations|OBS-050|Note": {
+  "text": "Code review (đọc handler)",
+  "ctx": "Observations · SC-012"
+ },
+ "Observations|OBS-051|Title": {
+  "text": "API-025 /api/admin/charts/total-bookings-with-ticket",
+  "ctx": "Observations · SC-012"
+ },
+ "Observations|OBS-051|Why suspicious": {
+  "text": "Không validate dateFrom/dateTo",
+  "ctx": "Observations · SC-012"
+ },
+ "Observations|OBS-051|Suggested investigation": {
+  "text": "Dev / pentest xác nhận — KHÔNG tự khai thác trên hệ thống",
+  "ctx": "Observations · SC-012"
+ },
+ "Observations|OBS-051|Note": {
+  "text": "Code review (đọc handler)",
+  "ctx": "Observations · SC-012"
+ },
+ "Observations|OBS-052|Title": {
+  "text": "API-025 /api/admin/charts/total-bookings-with-ticket",
+  "ctx": "Observations · SC-012"
+ },
+ "Observations|OBS-052|Why suspicious": {
+  "text": "tenantCode lấy từ query, không đối chiếu với tenant của Admin — Admin xem được số liệu tenant khác",
+  "ctx": "Observations · SC-012"
+ },
+ "Observations|OBS-052|Suggested investigation": {
+  "text": "Dev / pentest xác nhận — KHÔNG tự khai thác trên hệ thống",
+  "ctx": "Observations · SC-012"
+ },
+ "Observations|OBS-052|Note": {
+  "text": "Code review (đọc handler)",
+  "ctx": "Observations · SC-012"
+ },
+ "Observations|OBS-053|Title": {
+  "text": "API-026 /api/admin/charts/total-bookings-with-times",
+  "ctx": "Observations · SC-012"
+ },
+ "Observations|OBS-053|Why suspicious": {
+  "text": "Không validate dateFrom/dateTo",
+  "ctx": "Observations · SC-012"
+ },
+ "Observations|OBS-053|Suggested investigation": {
+  "text": "Dev / pentest xác nhận — KHÔNG tự khai thác trên hệ thống",
+  "ctx": "Observations · SC-012"
+ },
+ "Observations|OBS-053|Note": {
+  "text": "Code review (đọc handler)",
+  "ctx": "Observations · SC-012"
+ },
+ "Observations|OBS-054|Title": {
+  "text": "API-026 /api/admin/charts/total-bookings-with-times",
+  "ctx": "Observations · SC-012"
+ },
+ "Observations|OBS-054|Why suspicious": {
+  "text": "tenantCode lấy từ query, không đối chiếu với tenant của Admin — Admin xem được số liệu tenant khác",
+  "ctx": "Observations · SC-012"
+ },
+ "Observations|OBS-054|Suggested investigation": {
+  "text": "Dev / pentest xác nhận — KHÔNG tự khai thác trên hệ thống",
+  "ctx": "Observations · SC-012"
+ },
+ "Observations|OBS-054|Note": {
+  "text": "Code review (đọc handler)",
+  "ctx": "Observations · SC-012"
+ },
+ "Observations|OBS-055|Title": {
+  "text": "API-027 /api/admin/charts/total-new-and-old-booking-users",
+  "ctx": "Observations · SC-012"
+ },
+ "Observations|OBS-055|Why suspicious": {
+  "text": "Không validate dateFrom/dateTo",
+  "ctx": "Observations · SC-012"
+ },
+ "Observations|OBS-055|Suggested investigation": {
+  "text": "Dev / pentest xác nhận — KHÔNG tự khai thác trên hệ thống",
+  "ctx": "Observations · SC-012"
+ },
+ "Observations|OBS-055|Note": {
+  "text": "Code review (đọc handler)",
+  "ctx": "Observations · SC-012"
+ },
+ "Observations|OBS-056|Title": {
+  "text": "API-027 /api/admin/charts/total-new-and-old-booking-users",
+  "ctx": "Observations · SC-012"
+ },
+ "Observations|OBS-056|Why suspicious": {
+  "text": "tenantCode lấy từ query, không đối chiếu với tenant của Admin — Admin xem được số liệu tenant khác",
+  "ctx": "Observations · SC-012"
+ },
+ "Observations|OBS-056|Suggested investigation": {
+  "text": "Dev / pentest xác nhận — KHÔNG tự khai thác trên hệ thống",
+  "ctx": "Observations · SC-012"
+ },
+ "Observations|OBS-056|Note": {
+  "text": "Code review (đọc handler)",
+  "ctx": "Observations · SC-012"
+ },
+ "Observations|OBS-057|Title": {
+  "text": "API-028 /api/admin/credit-cards/search/:userId",
+  "ctx": "Observations · SC-007"
+ },
+ "Observations|OBS-057|Why suspicious": {
+  "text": "Không kiểm tra user thuộc tenant của Admin — có thể tra thẻ của user bất kỳ",
+  "ctx": "Observations · SC-007"
+ },
+ "Observations|OBS-057|Suggested investigation": {
+  "text": "Dev / pentest xác nhận — KHÔNG tự khai thác trên hệ thống",
+  "ctx": "Observations · SC-007"
+ },
+ "Observations|OBS-057|Note": {
+  "text": "Code review (đọc handler)",
+  "ctx": "Observations · SC-007"
+ },
+ "Observations|OBS-058|Title": {
+  "text": "API-029 /api/admin/disclaimers",
+  "ctx": "Observations · SC-013"
+ },
+ "Observations|OBS-058|Why suspicious": {
+  "text": "POST thay thế toàn bộ (deleteMany không điều kiện) — options được create nguyên payload, field ngoài schema cũng được truyền vào",
+  "ctx": "Observations · SC-013"
+ },
+ "Observations|OBS-058|Suggested investigation": {
+  "text": "Dev / pentest xác nhận — KHÔNG tự khai thác trên hệ thống",
+  "ctx": "Observations · SC-013"
+ },
+ "Observations|OBS-058|Note": {
+  "text": "Code review (đọc handler)",
+  "ctx": "Observations · SC-013"
+ },
+ "Observations|OBS-059|Title": {
+  "text": "API-030 /api/admin/email-settings/:emailKey",
+  "ctx": "Observations · SC-014"
+ },
+ "Observations|OBS-059|Why suspicious": {
+  "text": "PUT dùng req.body.emailKey làm where thay vì emailKey trên path",
+  "ctx": "Observations · SC-014"
+ },
+ "Observations|OBS-059|Suggested investigation": {
+  "text": "Dev / pentest xác nhận — KHÔNG tự khai thác trên hệ thống",
+  "ctx": "Observations · SC-014"
+ },
+ "Observations|OBS-059|Note": {
+  "text": "Code review (đọc handler)",
+  "ctx": "Observations · SC-014"
+ },
+ "Observations|OBS-060|Title": {
+  "text": "API-030 /api/admin/email-settings/:emailKey",
+  "ctx": "Observations · SC-014"
+ },
+ "Observations|OBS-060|Why suspicious": {
+  "text": "PUT truyền nguyên req.body vào prisma update (không whitelist field)",
+  "ctx": "Observations · SC-014"
+ },
+ "Observations|OBS-060|Suggested investigation": {
+  "text": "Dev / pentest xác nhận — KHÔNG tự khai thác trên hệ thống",
+  "ctx": "Observations · SC-014"
+ },
+ "Observations|OBS-060|Note": {
+  "text": "Code review (đọc handler)",
+  "ctx": "Observations · SC-014"
+ },
+ "Observations|OBS-061|Title": {
+  "text": "API-030 /api/admin/email-settings/:emailKey",
+  "ctx": "Observations · SC-014"
+ },
+ "Observations|OBS-061|Why suspicious": {
+  "text": "DELETE xoá cứng mẫu email, không kiểm tra mẫu có đang được hệ thống dùng hay không",
+  "ctx": "Observations · SC-014"
+ },
+ "Observations|OBS-061|Suggested investigation": {
+  "text": "Dev / pentest xác nhận — KHÔNG tự khai thác trên hệ thống",
+  "ctx": "Observations · SC-014"
+ },
+ "Observations|OBS-061|Note": {
+  "text": "Code review (đọc handler)",
+  "ctx": "Observations · SC-014"
+ },
+ "Observations|OBS-062|Title": {
+  "text": "API-031 /api/admin/email-settings",
+  "ctx": "Observations · SC-014"
+ },
+ "Observations|OBS-062|Why suspicious": {
+  "text": "POST truyền nguyên req.body vào prisma create (không whitelist field)",
+  "ctx": "Observations · SC-014"
+ },
+ "Observations|OBS-062|Suggested investigation": {
+  "text": "Dev / pentest xác nhận — KHÔNG tự khai thác trên hệ thống",
+  "ctx": "Observations · SC-014"
+ },
+ "Observations|OBS-062|Note": {
+  "text": "Code review (đọc handler)",
+  "ctx": "Observations · SC-014"
+ },
+ "Observations|OBS-063|Title": {
+  "text": "API-032 /api/admin/email-settings/preview",
+  "ctx": "Observations · SC-015"
+ },
+ "Observations|OBS-063|Why suspicious": {
+  "text": "Nội dung template do client gửi được render bằng ejs.render phía server (src/utils/email.ts#L13-L18) — template EJS có thể thực thi biểu thức JS phía server; hiện chỉ giới hạn cho SuperAdmin",
+  "ctx": "Observations · SC-015"
+ },
+ "Observations|OBS-063|Suggested investigation": {
+  "text": "Dev / pentest xác nhận — KHÔNG tự khai thác trên hệ thống",
+  "ctx": "Observations · SC-015"
+ },
+ "Observations|OBS-063|Note": {
+  "text": "Code review (đọc handler)",
+  "ctx": "Observations · SC-015"
+ },
+ "Observations|OBS-064|Title": {
+  "text": "API-033 /api/admin/email-settings/send-preview-email",
+  "ctx": "Observations · SC-015"
+ },
+ "Observations|OBS-064|Why suspicious": {
+  "text": "EmailService.sendEmailWithPredefinedContent không được await → lỗi gửi mail không phản hồi về client, luôn trả 200",
+  "ctx": "Observations · SC-015"
+ },
+ "Observations|OBS-064|Suggested investigation": {
+  "text": "Dev / pentest xác nhận — KHÔNG tự khai thác trên hệ thống",
+  "ctx": "Observations · SC-015"
+ },
+ "Observations|OBS-064|Note": {
+  "text": "Code review (đọc handler)",
+  "ctx": "Observations · SC-015"
+ },
+ "Observations|OBS-065|Title": {
+  "text": "API-033 /api/admin/email-settings/send-preview-email",
+  "ctx": "Observations · SC-015"
+ },
+ "Observations|OBS-065|Why suspicious": {
+  "text": "Template do client gửi được render bằng ejs phía server (src/services/email.service.ts#L100-L108 → src/utils/email.ts#L13-L18)",
+  "ctx": "Observations · SC-015"
+ },
+ "Observations|OBS-065|Suggested investigation": {
+  "text": "Dev / pentest xác nhận — KHÔNG tự khai thác trên hệ thống",
+  "ctx": "Observations · SC-015"
+ },
+ "Observations|OBS-065|Note": {
+  "text": "Code review (đọc handler)",
+  "ctx": "Observations · SC-015"
+ },
+ "Observations|OBS-066|Title": {
+  "text": "API-033 /api/admin/email-settings/send-preview-email",
+  "ctx": "Observations · SC-015"
+ },
+ "Observations|OBS-066|Why suspicious": {
+  "text": "Transport: AWS SES nếu serverConfig.email.enable_aws_ses, ngược lại SMTP nodemailer (src/services/email.service.ts#L24-L38)",
+  "ctx": "Observations · SC-015"
+ },
+ "Observations|OBS-066|Suggested investigation": {
+  "text": "Dev / pentest xác nhận — KHÔNG tự khai thác trên hệ thống",
+  "ctx": "Observations · SC-015"
+ },
+ "Observations|OBS-066|Note": {
+  "text": "Code review (đọc handler)",
+  "ctx": "Observations · SC-015"
+ },
+ "Observations|OBS-067|Title": {
+  "text": "API-034 /api/admin/gmo-settings/:id",
+  "ctx": "Observations · SC-017"
+ },
+ "Observations|OBS-067|Why suspicious": {
+  "text": "Response GET/PUT/DELETE trả nguyên bản ghi gmo_settings, bao gồm trường shopPass (mật khẩu shop GMO) về client",
+  "ctx": "Observations · SC-017"
+ },
+ "Observations|OBS-067|Suggested investigation": {
+  "text": "Dev / pentest xác nhận — KHÔNG tự khai thác trên hệ thống",
+  "ctx": "Observations · SC-017"
+ },
+ "Observations|OBS-067|Note": {
+  "text": "Code review (đọc handler)",
+  "ctx": "Observations · SC-017"
+ },
+ "Observations|OBS-068|Title": {
+  "text": "API-034 /api/admin/gmo-settings/:id",
+  "ctx": "Observations · SC-017"
+ },
+ "Observations|OBS-068|Why suspicious": {
+  "text": "PUT dùng id trong body thay vì id trên path; truyền nguyên req.body vào prisma update",
+  "ctx": "Observations · SC-017"
+ },
+ "Observations|OBS-068|Suggested investigation": {
+  "text": "Dev / pentest xác nhận — KHÔNG tự khai thác trên hệ thống",
+  "ctx": "Observations · SC-017"
+ },
+ "Observations|OBS-068|Note": {
+  "text": "Code review (đọc handler)",
+  "ctx": "Observations · SC-017"
+ },
+ "Observations|OBS-069|Title": {
+  "text": "API-034 /api/admin/gmo-settings/:id",
+  "ctx": "Observations · SC-017"
+ },
+ "Observations|OBS-069|Why suspicious": {
+  "text": "PUT không kiểm tra bản ghi tồn tại trước khi đọc currentGMOSetting.shopId → id sai gây lỗi 500",
+  "ctx": "Observations · SC-017"
+ },
+ "Observations|OBS-069|Suggested investigation": {
+  "text": "Dev / pentest xác nhận — KHÔNG tự khai thác trên hệ thống",
+  "ctx": "Observations · SC-017"
+ },
+ "Observations|OBS-069|Note": {
+  "text": "Code review (đọc handler)",
+  "ctx": "Observations · SC-017"
+ },
+ "Observations|OBS-070|Title": {
+  "text": "API-035 /api/admin/gmo-settings",
+  "ctx": "Observations · SC-017"
+ },
+ "Observations|OBS-070|Why suspicious": {
+  "text": "GET trả danh sách kèm trường shopPass của tất cả tài khoản GMO",
+  "ctx": "Observations · SC-017"
+ },
+ "Observations|OBS-070|Suggested investigation": {
+  "text": "Dev / pentest xác nhận — KHÔNG tự khai thác trên hệ thống",
+  "ctx": "Observations · SC-017"
+ },
+ "Observations|OBS-070|Note": {
+  "text": "Code review (đọc handler)",
+  "ctx": "Observations · SC-017"
+ },
+ "Observations|OBS-071|Title": {
+  "text": "API-035 /api/admin/gmo-settings",
+  "ctx": "Observations · SC-017"
+ },
+ "Observations|OBS-071|Why suspicious": {
+  "text": "POST truyền nguyên req.body vào prisma create",
+  "ctx": "Observations · SC-017"
+ },
+ "Observations|OBS-071|Suggested investigation": {
+  "text": "Dev / pentest xác nhận — KHÔNG tự khai thác trên hệ thống",
+  "ctx": "Observations · SC-017"
+ },
+ "Observations|OBS-071|Note": {
+  "text": "Code review (đọc handler)",
+  "ctx": "Observations · SC-017"
+ },
+ "Observations|OBS-072|Title": {
+  "text": "API-036 /api/admin/news/:id",
+  "ctx": "Observations · SC-021"
+ },
+ "Observations|OBS-072|Why suspicious": {
+  "text": "PUT dùng id trong body thay vì id trên path; truyền nguyên req.body vào prisma update",
+  "ctx": "Observations · SC-021"
+ },
+ "Observations|OBS-072|Suggested investigation": {
+  "text": "Dev / pentest xác nhận — KHÔNG tự khai thác trên hệ thống",
+  "ctx": "Observations · SC-021"
+ },
+ "Observations|OBS-072|Note": {
+  "text": "Code review (đọc handler)",
+  "ctx": "Observations · SC-021"
+ },
+ "Observations|OBS-073|Title": {
+  "text": "API-037 /api/admin/news",
+  "ctx": "Observations · SC-021"
+ },
+ "Observations|OBS-073|Why suspicious": {
+  "text": "POST truyền nguyên req.body vào prisma create",
+  "ctx": "Observations · SC-021"
+ },
+ "Observations|OBS-073|Suggested investigation": {
+  "text": "Dev / pentest xác nhận — KHÔNG tự khai thác trên hệ thống",
+  "ctx": "Observations · SC-021"
+ },
+ "Observations|OBS-073|Note": {
+  "text": "Code review (đọc handler)",
+  "ctx": "Observations · SC-021"
+ },
+ "Observations|OBS-074|Title": {
+  "text": "API-037 /api/admin/news",
+  "ctx": "Observations · SC-021"
+ },
+ "Observations|OBS-074|Why suspicious": {
+  "text": "GET findMany không phân trang",
+  "ctx": "Observations · SC-021"
+ },
+ "Observations|OBS-074|Suggested investigation": {
+  "text": "Dev / pentest xác nhận — KHÔNG tự khai thác trên hệ thống",
+  "ctx": "Observations · SC-021"
+ },
+ "Observations|OBS-074|Note": {
+  "text": "Code review (đọc handler)",
+  "ctx": "Observations · SC-021"
+ },
+ "Observations|OBS-075|Title": {
+  "text": "API-038 /api/admin/obic-codes",
+  "ctx": "Observations · F-001"
+ },
+ "Observations|OBS-075|Why suspicious": {
+  "text": "tenantCode lấy từ form, không đối chiếu với req.user.tenantCode → Admin/Staff của tenant này có thể cập nhật vé của tenant khác",
+  "ctx": "Observations · F-001"
+ },
+ "Observations|OBS-075|Suggested investigation": {
+  "text": "Dev / pentest xác nhận — KHÔNG tự khai thác trên hệ thống",
+  "ctx": "Observations · F-001"
+ },
+ "Observations|OBS-075|Note": {
+  "text": "Code review (đọc handler)",
+  "ctx": "Observations · F-001"
+ },
+ "Observations|OBS-076|Title": {
+  "text": "API-038 /api/admin/obic-codes",
+  "ctx": "Observations · F-001"
+ },
+ "Observations|OBS-076|Why suspicious": {
+  "text": "Role Staff cũng được phép import hàng loạt mã OBIC",
+  "ctx": "Observations · F-001"
+ },
+ "Observations|OBS-076|Suggested investigation": {
+  "text": "Dev / pentest xác nhận — KHÔNG tự khai thác trên hệ thống",
+  "ctx": "Observations · F-001"
+ },
+ "Observations|OBS-076|Note": {
+  "text": "Code review (đọc handler)",
+  "ctx": "Observations · F-001"
+ },
+ "Observations|OBS-077|Title": {
+  "text": "API-038 /api/admin/obic-codes",
+  "ctx": "Observations · F-001"
+ },
+ "Observations|OBS-077|Why suspicious": {
+  "text": "Khớp vé bằng name contains (insensitive) + findFirst → tên ngắn có thể khớp nhầm vé khác",
+  "ctx": "Observations · F-001"
+ },
+ "Observations|OBS-077|Suggested investigation": {
+  "text": "Dev / pentest xác nhận — KHÔNG tự khai thác trên hệ thống",
+  "ctx": "Observations · F-001"
+ },
+ "Observations|OBS-077|Note": {
+  "text": "Code review (đọc handler)",
+  "ctx": "Observations · F-001"
+ },
+ "Observations|OBS-078|Title": {
+  "text": "API-038 /api/admin/obic-codes",
+  "ctx": "Observations · F-001"
+ },
+ "Observations|OBS-078|Why suspicious": {
+  "text": "Không kiểm tra định dạng/kích thước file; parser CSV tự viết (không xử lý dấu ngoặc kép escape)",
+  "ctx": "Observations · F-001"
+ },
+ "Observations|OBS-078|Suggested investigation": {
+  "text": "Dev / pentest xác nhận — KHÔNG tự khai thác trên hệ thống",
+  "ctx": "Observations · F-001"
+ },
+ "Observations|OBS-078|Note": {
+  "text": "Code review (đọc handler)",
+  "ctx": "Observations · F-001"
+ },
+ "Observations|OBS-079|Title": {
+  "text": "API-038 /api/admin/obic-codes",
+  "ctx": "Observations · F-001"
+ },
+ "Observations|OBS-079|Why suspicious": {
+  "text": "Edge middleware (src/middleware.ts#L106-L111) chỉ loại trừ /api/upload khỏi matcher; comment tại đó nói middleware làm hỏng multipart body — endpoint multipart này vẫn đi qua middleware (cần xác minh có ảnh hưởng không)",
+  "ctx": "Observations · F-001"
+ },
+ "Observations|OBS-079|Suggested investigation": {
+  "text": "Dev / pentest xác nhận — KHÔNG tự khai thác trên hệ thống",
+  "ctx": "Observations · F-001"
+ },
+ "Observations|OBS-079|Note": {
+  "text": "Code review (đọc handler)",
+  "ctx": "Observations · F-001"
+ },
+ "Observations|OBS-080|Title": {
+  "text": "API-039 /api/admin/revenue-management/count",
+  "ctx": "Observations · SC-025"
+ },
+ "Observations|OBS-080|Why suspicious": {
+  "text": "Raw SQL dựng bằng nối chuỗi trong Prisma.sql([string]) — tenantCode từ query được chèn trực tiếp vào câu SQL (không bind parameter) → rủi ro SQL injection",
+  "ctx": "Observations · SC-025"
+ },
+ "Observations|OBS-080|Suggested investigation": {
+  "text": "Dev / pentest xác nhận — KHÔNG tự khai thác trên hệ thống",
+  "ctx": "Observations · SC-025"
+ },
+ "Observations|OBS-080|Note": {
+  "text": "Code review (đọc handler)",
+  "ctx": "Observations · SC-025"
+ },
+ "Observations|OBS-081|Title": {
+  "text": "API-039 /api/admin/revenue-management/count",
+  "ctx": "Observations · SC-025"
+ },
+ "Observations|OBS-081|Why suspicious": {
+  "text": "Kiểm tra tenant chỉ khi cả req.user.tenantCode và query tenantCode cùng có; Admin bỏ trống tenantCode sẽ đếm toàn bộ tenant",
+  "ctx": "Observations · SC-025"
+ },
+ "Observations|OBS-081|Suggested investigation": {
+  "text": "Dev / pentest xác nhận — KHÔNG tự khai thác trên hệ thống",
+  "ctx": "Observations · SC-025"
+ },
+ "Observations|OBS-081|Note": {
+  "text": "Code review (đọc handler)",
+  "ctx": "Observations · SC-025"
+ },
+ "Observations|OBS-082|Title": {
+  "text": "API-040 /api/admin/revenue-management/export",
+  "ctx": "Observations · F-001"
+ },
+ "Observations|OBS-082|Why suspicious": {
+  "text": "Raw SQL trong getRevenueBookings nối chuỗi tenantCode từ query trực tiếp (src/utils/server/revenue-management.ts#L60-L73) → rủi ro SQL injection",
+  "ctx": "Observations · F-001"
+ },
+ "Observations|OBS-082|Suggested investigation": {
+  "text": "Dev / pentest xác nhận — KHÔNG tự khai thác trên hệ thống",
+  "ctx": "Observations · F-001"
+ },
+ "Observations|OBS-082|Note": {
+  "text": "Code review (đọc handler)",
+  "ctx": "Observations · F-001"
+ },
+ "Observations|OBS-083|Title": {
+  "text": "API-040 /api/admin/revenue-management/export",
+  "ctx": "Observations · F-001"
+ },
+ "Observations|OBS-083|Why suspicious": {
+  "text": "Kiểm tra tenant chỉ khi query có tenantCode; Admin bỏ trống tenantCode sẽ xuất doanh thu mọi tenant",
+  "ctx": "Observations · F-001"
+ },
+ "Observations|OBS-083|Suggested investigation": {
+  "text": "Dev / pentest xác nhận — KHÔNG tự khai thác trên hệ thống",
+  "ctx": "Observations · F-001"
+ },
+ "Observations|OBS-083|Note": {
+  "text": "Code review (đọc handler)",
+  "ctx": "Observations · F-001"
+ },
+ "Observations|OBS-084|Title": {
+  "text": "API-040 /api/admin/revenue-management/export",
+  "ctx": "Observations · F-001"
+ },
+ "Observations|OBS-084|Why suspicious": {
+  "text": "exportingRole do client quyết định bộ cột (ADMIN gồm tên khách, GMOTransactionId, LINE user ID) — server không đối chiếu với role thật",
+  "ctx": "Observations · F-001"
+ },
+ "Observations|OBS-084|Suggested investigation": {
+  "text": "Dev / pentest xác nhận — KHÔNG tự khai thác trên hệ thống",
+  "ctx": "Observations · F-001"
+ },
+ "Observations|OBS-084|Note": {
+  "text": "Code review (đọc handler)",
+  "ctx": "Observations · F-001"
+ },
+ "Observations|OBS-085|Title": {
+  "text": "API-040 /api/admin/revenue-management/export",
+  "ctx": "Observations · F-001"
+ },
+ "Observations|OBS-085|Why suspicious": {
+  "text": "Không có page → skip = NaN → mệnh đề 'LIMIT ... OFFSET NaN' trong raw SQL (cần xác minh có lỗi không)",
+  "ctx": "Observations · F-001"
+ },
+ "Observations|OBS-085|Suggested investigation": {
+  "text": "Dev / pentest xác nhận — KHÔNG tự khai thác trên hệ thống",
+  "ctx": "Observations · F-001"
+ },
+ "Observations|OBS-085|Note": {
+  "text": "Code review (đọc handler)",
+  "ctx": "Observations · F-001"
+ },
+ "Observations|OBS-086|Title": {
+  "text": "API-040 /api/admin/revenue-management/export",
+  "ctx": "Observations · F-001"
+ },
+ "Observations|OBS-086|Why suspicious": {
+  "text": "Trong map dữ liệu, nhánh vé không Online có posTotalAmount 'return' chuỗi tiền thay vì object dòng (L229-L231) → dòng CSV đó bị sai",
+  "ctx": "Observations · F-001"
+ },
+ "Observations|OBS-086|Suggested investigation": {
+  "text": "Dev / pentest xác nhận — KHÔNG tự khai thác trên hệ thống",
+  "ctx": "Observations · F-001"
+ },
+ "Observations|OBS-086|Note": {
+  "text": "Code review (đọc handler)",
+  "ctx": "Observations · F-001"
+ },
+ "Observations|OBS-087|Title": {
+  "text": "API-040 /api/admin/revenue-management/export",
+  "ctx": "Observations · F-001"
+ },
+ "Observations|OBS-087|Why suspicious": {
+  "text": "userOrStaffId lấy từ query để ghi log hoạt động → người gọi tự khai danh tính trong log",
+  "ctx": "Observations · F-001"
+ },
+ "Observations|OBS-087|Suggested investigation": {
+  "text": "Dev / pentest xác nhận — KHÔNG tự khai thác trên hệ thống",
+  "ctx": "Observations · F-001"
+ },
+ "Observations|OBS-087|Note": {
+  "text": "Code review (đọc handler)",
+  "ctx": "Observations · F-001"
+ },
+ "Observations|OBS-088|Title": {
+  "text": "API-041 /api/admin/revenue-management",
+  "ctx": "Observations · SC-025"
+ },
+ "Observations|OBS-088|Why suspicious": {
+  "text": "Raw SQL trong getRevenueBookings nối chuỗi tenantCode từ query trực tiếp (src/utils/server/revenue-management.ts#L60-L73) → rủi ro SQL injection",
+  "ctx": "Observations · SC-025"
+ },
+ "Observations|OBS-088|Suggested investigation": {
+  "text": "Dev / pentest xác nhận — KHÔNG tự khai thác trên hệ thống",
+  "ctx": "Observations · SC-025"
+ },
+ "Observations|OBS-088|Note": {
+  "text": "Code review (đọc handler)",
+  "ctx": "Observations · SC-025"
+ },
+ "Observations|OBS-089|Title": {
+  "text": "API-041 /api/admin/revenue-management",
+  "ctx": "Observations · SC-025"
+ },
+ "Observations|OBS-089|Why suspicious": {
+  "text": "Kiểm tra tenant chỉ khi query có tenantCode; Admin bỏ trống tenantCode sẽ xem doanh thu mọi tenant",
+  "ctx": "Observations · SC-025"
+ },
+ "Observations|OBS-089|Suggested investigation": {
+  "text": "Dev / pentest xác nhận — KHÔNG tự khai thác trên hệ thống",
+  "ctx": "Observations · SC-025"
+ },
+ "Observations|OBS-089|Note": {
+  "text": "Code review (đọc handler)",
+  "ctx": "Observations · SC-025"
+ },
+ "Observations|OBS-090|Title": {
+  "text": "API-041 /api/admin/revenue-management",
+  "ctx": "Observations · SC-025"
+ },
+ "Observations|OBS-090|Why suspicious": {
+  "text": "Response include User: true (src/utils/server/revenue-management.ts#L88-L96) → trả nguyên bản ghi users, gồm cả cột password (hash) và thông tin cá nhân",
+  "ctx": "Observations · SC-025"
+ },
+ "Observations|OBS-090|Suggested investigation": {
+  "text": "Dev / pentest xác nhận — KHÔNG tự khai thác trên hệ thống",
+  "ctx": "Observations · SC-025"
+ },
+ "Observations|OBS-090|Note": {
+  "text": "Code review (đọc handler)",
+  "ctx": "Observations · SC-025"
+ },
+ "Observations|OBS-091|Title": {
+  "text": "API-042 /api/admin/staffs/:id",
+  "ctx": "Observations · SC-028"
+ },
+ "Observations|OBS-091|Why suspicious": {
+  "text": "Không kiểm tra staff thuộc tenant của Admin đang đăng nhập → Admin có thể xem/sửa/xoá staff của tenant khác",
+  "ctx": "Observations · SC-028"
+ },
+ "Observations|OBS-091|Suggested investigation": {
+  "text": "Dev / pentest xác nhận — KHÔNG tự khai thác trên hệ thống",
+  "ctx": "Observations · SC-028"
+ },
+ "Observations|OBS-091|Note": {
+  "text": "Code review (đọc handler)",
+  "ctx": "Observations · SC-028"
+ },
+ "Observations|OBS-092|Title": {
+  "text": "API-042 /api/admin/staffs/:id",
+  "ctx": "Observations · SC-028"
+ },
+ "Observations|OBS-092|Why suspicious": {
+  "text": "Response GET/PUT/DELETE trả nguyên bản ghi staffs gồm cột password (hash); logic PUT so sánh password với hash → client đang giữ và gửi lại hash",
+  "ctx": "Observations · SC-028"
+ },
+ "Observations|OBS-092|Suggested investigation": {
+  "text": "Dev / pentest xác nhận — KHÔNG tự khai thác trên hệ thống",
+  "ctx": "Observations · SC-028"
+ },
+ "Observations|OBS-092|Note": {
+  "text": "Code review (đọc handler)",
+  "ctx": "Observations · SC-028"
+ },
+ "Observations|OBS-093|Title": {
+  "text": "API-042 /api/admin/staffs/:id",
+  "ctx": "Observations · SC-028"
+ },
+ "Observations|OBS-093|Why suspicious": {
+  "text": "PUT spread nguyên req.body vào update → role và tenantCode đổi được tuỳ ý",
+  "ctx": "Observations · SC-028"
+ },
+ "Observations|OBS-093|Suggested investigation": {
+  "text": "Dev / pentest xác nhận — KHÔNG tự khai thác trên hệ thống",
+  "ctx": "Observations · SC-028"
+ },
+ "Observations|OBS-093|Note": {
+  "text": "Code review (đọc handler)",
+  "ctx": "Observations · SC-028"
+ },
+ "Observations|OBS-094|Title": {
+  "text": "API-043 /api/admin/staffs/count",
+  "ctx": "Observations · SC-028"
+ },
+ "Observations|OBS-094|Why suspicious": {
+  "text": "Lọc tenantCode bằng contains thay vì equals → Admin có thể đếm cả staff của tenant có mã chứa mã tenant mình",
+  "ctx": "Observations · SC-028"
+ },
+ "Observations|OBS-094|Suggested investigation": {
+  "text": "Dev / pentest xác nhận — KHÔNG tự khai thác trên hệ thống",
+  "ctx": "Observations · SC-028"
+ },
+ "Observations|OBS-094|Note": {
+  "text": "Code review (đọc handler)",
+  "ctx": "Observations · SC-028"
+ },
+ "Observations|OBS-095|Title": {
+  "text": "API-044 /api/admin/staffs",
+  "ctx": "Observations · SC-028"
+ },
+ "Observations|OBS-095|Why suspicious": {
+  "text": "POST không đối chiếu body.tenantCode với tenant của Admin → Admin tạo được staff cho tenant khác; role lấy từ body không giới hạn giá trị",
+  "ctx": "Observations · SC-028"
+ },
+ "Observations|OBS-095|Suggested investigation": {
+  "text": "Dev / pentest xác nhận — KHÔNG tự khai thác trên hệ thống",
+  "ctx": "Observations · SC-028"
+ },
+ "Observations|OBS-095|Note": {
+  "text": "Code review (đọc handler)",
+  "ctx": "Observations · SC-028"
+ },
+ "Observations|OBS-096|Title": {
+  "text": "API-044 /api/admin/staffs",
+  "ctx": "Observations · SC-028"
+ },
+ "Observations|OBS-096|Why suspicious": {
+  "text": "Response GET/POST trả cột password (hash) của staff",
+  "ctx": "Observations · SC-028"
+ },
+ "Observations|OBS-096|Suggested investigation": {
+  "text": "Dev / pentest xác nhận — KHÔNG tự khai thác trên hệ thống",
+  "ctx": "Observations · SC-028"
+ },
+ "Observations|OBS-096|Note": {
+  "text": "Code review (đọc handler)",
+  "ctx": "Observations · SC-028"
+ },
+ "Observations|OBS-097|Title": {
+  "text": "API-044 /api/admin/staffs",
+  "ctx": "Observations · SC-028"
+ },
+ "Observations|OBS-097|Why suspicious": {
+  "text": "Lọc tenantCode bằng contains thay vì equals",
+  "ctx": "Observations · SC-028"
+ },
+ "Observations|OBS-097|Suggested investigation": {
+  "text": "Dev / pentest xác nhận — KHÔNG tự khai thác trên hệ thống",
+  "ctx": "Observations · SC-028"
+ },
+ "Observations|OBS-097|Note": {
+  "text": "Code review (đọc handler)",
+  "ctx": "Observations · SC-028"
+ },
+ "Observations|OBS-098|Title": {
+  "text": "API-045 /api/admin/tenants/:code",
+  "ctx": "Observations · SC-001"
+ },
+ "Observations|OBS-098|Why suspicious": {
+  "text": "NGHIÊM TRỌNG: handler không dùng checkAuth/roleAuth (L21) — GET/PUT/DELETE/PATCH tenant không yêu cầu session; chỉ phụ thuộc Basic Auth edge (tắt nếu thiếu env)",
+  "ctx": "Observations · SC-001"
+ },
+ "Observations|OBS-098|Suggested investigation": {
+  "text": "Dev / pentest xác nhận — KHÔNG tự khai thác trên hệ thống",
+  "ctx": "Observations · SC-001"
+ },
+ "Observations|OBS-098|Note": {
+  "text": "Code review (đọc handler)",
+  "ctx": "Observations · SC-001"
+ },
+ "Observations|OBS-099|Title": {
+  "text": "API-045 /api/admin/tenants/:code",
+  "ctx": "Observations · SC-001"
+ },
+ "Observations|OBS-099|Why suspicious": {
+  "text": "GET trả AdminTenant.User (gồm cột password hash) và GMOSetting (gồm shopPass)",
+  "ctx": "Observations · SC-001"
+ },
+ "Observations|OBS-099|Suggested investigation": {
+  "text": "Dev / pentest xác nhận — KHÔNG tự khai thác trên hệ thống",
+  "ctx": "Observations · SC-001"
+ },
+ "Observations|OBS-099|Note": {
+  "text": "Code review (đọc handler)",
+  "ctx": "Observations · SC-001"
+ },
+ "Observations|OBS-100|Title": {
+  "text": "API-045 /api/admin/tenants/:code",
+  "ctx": "Observations · SC-001"
+ },
+ "Observations|OBS-100|Why suspicious": {
+  "text": "DELETE xoá cứng tenant (không soft delete) và không kiểm tra booking",
+  "ctx": "Observations · SC-001"
+ },
+ "Observations|OBS-100|Suggested investigation": {
+  "text": "Dev / pentest xác nhận — KHÔNG tự khai thác trên hệ thống",
+  "ctx": "Observations · SC-001"
+ },
+ "Observations|OBS-100|Note": {
+  "text": "Code review (đọc handler)",
+  "ctx": "Observations · SC-001"
+ },
+ "Observations|OBS-101|Title": {
+  "text": "API-045 /api/admin/tenants/:code",
+  "ctx": "Observations · SC-001"
+ },
+ "Observations|OBS-101|Why suspicious": {
+  "text": "PUT dùng code trong body làm where thay vì code trên path; spread req.body vào update",
+  "ctx": "Observations · SC-001"
+ }
+}

@@ -8,6 +8,8 @@
 
 **1 agent duy nhất:** [`system-analyst`](.claude/agents/system-analyst.md) — canonical workflow cho cả 2 luồng.
 
+**Văn phong:** mọi câu trả lời trong phiên và mọi chữ khách đọc theo [`sys-agent/writing-style.md`](.claude/sys-agent/writing-style.md) — vai PM / BrSE chuẩn Nhật, đúng trọng tâm, ngắn, dễ hiểu, không chào hỏi / tóm tắt cuối.
+
 | Luồng | Lệnh | Spec |
 |---|---|---|
 | **1 — Baseline** | `/analyze-system` | `system-analyst.md` §3 |
@@ -25,11 +27,11 @@
 | O2 | API Documentation xlsx (+ batch) + Code map | V-API |
 | O3 | Database Documentation xlsx + ERD | V-DB |
 | O4 | Design System — chuẩn chung với designer-kit (= format Artifact type "Design System" của claude.ai), publish khi user đồng ý | V-DS |
-| O5 | Figma Output 1 + Output 2 (cách vẽ của requirement-to-flow) | recheck bbox |
+| O5 | Figma Output 1 (**use case**: Actor → đường đi → kết thúc, non-happy hàng dưới · Technology Stack · Sitemap Site → Actor → Nhóm → Màn) + Output 2 (**site → use case → section**) · không chữ `UNKNOWN` trên hình | recheck bbox · phủ SC |
 | O6 | docx tổng hợp | V3 · V5 |
 | O7 | Bug list Medium–High (tuỳ chọn) | V8 |
 
-**Output Luồng 2** → `outputs/ver<N>_<DDMMYY>_CR-<id>-<slug>/`: `CR-<id>_Impact.xlsx` (7 sheet: `Summary` công số + số đối tượng thay đổi + link · `Estimation` theo `templates/template_estimation.xlsx` (bóc từ 見積書) · `Screen` · `API` · `Database` · `Figma` · `Q&A` giải trình CR + câu hỏi KH) · Figma view CR mới (`sys-agent/figma/cr-view.md`): CR-1 Flow format Output 1 · CR-2 Screen Flow format Output 2 · CR Change Table thống kê · CR-3 màn đề xuất bám Design System (badge NEW/UPD/DEL/IMPACT/AS-IS, chỉ phần liên quan). Gate V-CR · V-CR-FIGMA. Đơn giá MD: `.claude/config/md-unit-rates.json`.
+**Output Luồng 2** → `outputs/ver<N>_<DDMMYY>_CR-<id>-<slug>/`: `CR-<id>_Impact.xlsx` (7 sheet: `Summary` công số + số đối tượng thay đổi + link · `Estimation` = bản vi nội bộ của 見積書, 1 dòng / chức năng (`--estimate`) · `Screen` · `API` · `Database` · `Figma` · `Q&A` giải trình CR + câu hỏi KH) · Figma view CR mới (`sys-agent/figma/cr-view.md`): CR-1 Flow format Output 1 (**mỗi lane có NON-HAPPY**) · CR-2 Screen Flow format Output 2 (**màn / popup lỗi + Screen Index có Loại + ⑦ Error/Popup Index**) · CR Change Table thống kê · CR-3 màn đề xuất **format Output 3** (mockup trái · mô tả + ITEMS + ERROR SCENARIOS phải · NEW + UPD tô màu phần đổi + popup lỗi) bám Design System (badge NEW/UPD/DEL/IMPACT/AS-IS, chỉ phần liên quan). **> 1 site → mỗi site 1 Section riêng (CR-2 · CR-3 · Output 2 Luồng 1); trong section: site → flow nghiệp vụ → màn; section CR-3 nền `#9DA5AD`.** Gate V-CR-FIGMA check 11–14. **`CR-<id>_見積書.xlsx`** gửi KH (tiếng Nhật, 詳細見積書 + 前提条件・留意事項, theo `templates/template_mitsumori.xlsx`) sinh từ `_internal/estimate.json` — quy tắc `sys-agent/estimate-rules.md` + **văn phong cho khách `sys-agent/writing-style.md`** (gate V-EST E4 / E9 / E10), câu hỏi nghiệp vụ gửi khách sinh thành sheet 確認事項 / Câu hỏi nghiệp vụ, câu hỏi CR-4. Gate V-CR · V-EST · V-CR-FIGMA. Đơn giá: `.claude/config/function-rates.json` (見積書, theo chức năng) · `md-unit-rates.json` (impact nội bộ).
 
 `_internal/inventory.xlsx` trong mỗi version = bộ nhớ máy đọc của agent (schema: [`inventory-spec.md`](.claude/sys-agent/inventory-spec.md)). Không phải deliverable, không nhắc trong tài liệu cho user.
 
@@ -46,6 +48,8 @@
 ├── sys-agent/
 │   ├── preflight-questions.md        G-R · P0–P11 · G9 · G10
 │   ├── flow-2-change-request.md      Luồng 2: nhận CR, 6 trục impact, xlsx 7 sheet, Figma view CR
+│   ├── estimate-rules.md             Luồng 2: phân rã chức năng cho 見積書 (estimate.json, V-EST)
+│   ├── writing-style.md              Văn phong mọi chữ khách đọc (theo 見積書 FINAL)
 │   ├── versioning.md                 folder ver<N>_<DDMMYY>_<slug>, README, run-log
 │   ├── source-rules.md · evidence-ledger.md · inventory-spec.md
 │   ├── outputs/o1-screens.md … o7-bug-list.md
@@ -60,7 +64,7 @@
 ├── config/pii-patterns.json
 └── settings.json                     nối H06 vào PreToolUse
 docs/                                 hướng dẫn sử dụng (docx)
-templates/                            sample_basic_design.xlsx · high-level-template.docx · template_estimation.xlsx (sheet Estimation Luồng 2)
+templates/                            sample_basic_design.xlsx · high-level-template.docx · template_estimation.xlsx (layout cũ) · template_mitsumori.xlsx (見積書 Luồng 2)
 ```
 
 ---
@@ -69,8 +73,8 @@ templates/                            sample_basic_design.xlsx · high-level-tem
 
 | Loại | Ký hiệu | Công cụ | Nguyên tắc |
 |---|---|---|---|
-| **Hỏi người** | G-R · P0–P11 · G9 · G10 · CR-0…CR-2 | `AskUserQuestion` | Cấm in text rồi tự suy ra câu trả lời |
-| **Máy chấm** | S1 · V1–V9 · V-BD · V-API · V-DB · V-DS · V-CR | script trong `skills/system-analyst/scripts/` | Cấm chấm bằng mắt. Script không chạy được → `❌ Blocked` |
+| **Hỏi người** | G-R · P0–P11 · G9 · G10 · CR-0…CR-4 | `AskUserQuestion` | Cấm in text rồi tự suy ra câu trả lời |
+| **Máy chấm** | S1 · V1–V9 · V-BD · V-API · V-DB · V-DS · V-CR · V-EST | script trong `skills/system-analyst/scripts/` | Cấm chấm bằng mắt. Script không chạy được → `❌ Blocked` |
 
 ---
 

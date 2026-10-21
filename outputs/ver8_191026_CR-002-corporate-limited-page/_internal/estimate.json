@@ -1,0 +1,1183 @@
+{
+ "meta": {
+  "cr_id": "CR-002",
+  "title": {
+   "ja": "法人向け商品販売に伴う機能改修",
+   "vi": "Chỉnh sửa chức năng phục vụ bán sản phẩm cho khách doanh nghiệp — CR-002"
+  },
+  "customer": {
+   "ja": "株式会社TOKIWAGI",
+   "vi": "Công ty TOKIWAGI"
+  },
+  "date": "2026-10-19",
+  "valid_days": 30,
+  "section_labels": {
+   "user": {
+    "ja": "ユーザー予約サイト",
+    "vi": "Trang đặt chỗ cho khách hàng"
+   },
+   "sa": {
+    "ja": "管理サイト（SUPER ADMIN・施設ADMIN 共通画面）",
+    "vi": "Trang quản trị (dùng chung cho Super Admin và Admin cửa hàng)"
+   },
+   "admin": {
+    "ja": "施設管理サイト（ADMIN）",
+    "vi": "Trang quản trị cửa hàng"
+   },
+   "common": {
+    "ja": "全システム",
+    "vi": "Toàn hệ thống (dữ liệu · kiểm tra ảnh hưởng)"
+   }
+  }
+ },
+ "patterns": [
+  {
+   "id": "1B",
+   "label": {
+    "ja": "①-B",
+    "vi": "① Phương án B"
+   }
+  },
+  {
+   "id": "1A",
+   "label": {
+    "ja": "①-A",
+    "vi": "① Phương án A"
+   }
+  },
+  {
+   "id": "1",
+   "label": {
+    "ja": "①共通",
+    "vi": "① Dùng chung"
+   }
+  },
+  {
+   "id": "2P",
+   "label": {
+    "ja": "②新規ページ",
+    "vi": "② Trang mới"
+   }
+  },
+  {
+   "id": "2S",
+   "label": {
+    "ja": "②簡易案",
+    "vi": "② Phương án đơn giản"
+   }
+  },
+  {
+   "id": "2",
+   "label": {
+    "ja": "②共通",
+    "vi": "② Dùng chung"
+   }
+  },
+  {
+   "id": "2OPT",
+   "label": {
+    "ja": "②オプション",
+    "vi": "② Option"
+   }
+  }
+ ],
+ "combos": [
+  {
+   "label": {
+    "ja": "① パターンB",
+    "vi": "① Phương án B"
+   },
+   "patterns": [
+    "1B",
+    "1"
+   ]
+  },
+  {
+   "label": {
+    "ja": "① パターンA",
+    "vi": "① Phương án A"
+   },
+   "patterns": [
+    "1A",
+    "1"
+   ]
+  },
+  {
+   "label": {
+    "ja": "② 限定公開ページ（オプションなし）",
+    "vi": "② Không Option (trang mới)"
+   },
+   "patterns": [
+    "2P",
+    "2"
+   ]
+  },
+  {
+   "label": {
+    "ja": "② 簡易案（店舗詳細ページ流用）",
+    "vi": "② Phương án đơn giản"
+   },
+   "patterns": [
+    "2S",
+    "2"
+   ]
+  },
+  {
+   "label": {
+    "ja": "② オプション（追加分のみ）",
+    "vi": "② Option (phần cộng thêm)"
+   },
+   "patterns": [
+    "2OPT"
+   ]
+  },
+  {
+   "label": {
+    "ja": "①B ＋ ②（オプションなし）",
+    "vi": "① B + ② không Option"
+   },
+   "patterns": [
+    "1B",
+    "1",
+    "2P",
+    "2"
+   ]
+  },
+  {
+   "label": {
+    "ja": "①B ＋ ②（オプションあり）",
+    "vi": "① B + ② có Option"
+   },
+   "patterns": [
+    "1B",
+    "1",
+    "2P",
+    "2",
+    "2OPT"
+   ]
+  },
+  {
+   "label": {
+    "ja": "①A ＋ ②（オプションなし）",
+    "vi": "① A + ② không Option"
+   },
+   "patterns": [
+    "1A",
+    "1",
+    "2P",
+    "2"
+   ]
+  },
+  {
+   "label": {
+    "ja": "①B ＋ ②簡易案",
+    "vi": "① B + ② phương án đơn giản"
+   },
+   "patterns": [
+    "1B",
+    "1",
+    "2S",
+    "2"
+   ]
+  }
+ ],
+ "rows": [
+  {
+   "section": "user",
+   "big": {
+    "ja": "商品購入画面 カレンダー表示",
+    "vi": "Lịch trên màn mua vé"
+   },
+   "mid": {
+    "ja": "事前予約カレンダー",
+    "vi": "Lịch đặt trước"
+   },
+   "small": {
+    "ja": "パターンB（推奨）",
+    "vi": "Phương án B (khách hàng chọn)"
+   },
+   "content": {
+    "ja": "【想定する対応内容】\n・事前予約カレンダーの初期表示を、商品ごとに本日から1週間分とする。\n・「1か月分を見る」ボタンで1か月分のカレンダーを展開し、「閉じる」で元に戻す。\n・PC・スマートフォンの両方に対応する。\n・店舗詳細ページ・事前購入画面・限定公開ページで共通のカレンダー部品を改修する。",
+    "vi": "Nội dung dự kiến:\n• Mặc định mỗi sản phẩm chỉ hiện lịch 7 ngày.\n• Nút “Xem 1 tháng” mở lịch 30 ngày; nút “Đóng” thu lại.\n• Áp dụng cho cả máy tính và điện thoại.\n• Sửa phần lịch dùng chung cho trang chi tiết cửa hàng, màn mua vé trước và trang giới hạn."
+   },
+   "confirm": {
+    "ja": "「1週間分」は本日から7日間、「1か月分」は本日から30日間を想定しています。展開ボタンは商品ごとに設置し、展開状態は保持しない想定です。",
+    "vi": "1 tuần = 7 ngày tính từ hôm nay; 1 tháng = 30 ngày tính từ hôm nay; mỗi sản phẩm có nút riêng, không nhớ trạng thái mở khi tải lại trang."
+   },
+   "reuse": "一部流用",
+   "must": "◉",
+   "step": "Step 1",
+   "pattern": "1B",
+   "code": "SCR-UPD-L",
+   "qty": 1,
+   "req": true,
+   "impacts": [
+    "IMP-001",
+    "IMP-005",
+    "IMP-006"
+   ],
+   "impl_override": null,
+   "override_note": null
+  },
+  {
+   "section": "user",
+   "big": {
+    "ja": "商品購入画面 カレンダー表示",
+    "vi": "Lịch trên màn mua vé"
+   },
+   "mid": {
+    "ja": "事前予約カレンダー",
+    "vi": "Lịch đặt trước"
+   },
+   "small": {
+    "ja": "パターンA（代替案）",
+    "vi": "Phương án A (thay thế cho B)"
+   },
+   "content": {
+    "ja": "【想定する対応内容】\n・事前予約カレンダーを初期表示では非表示とし、商品名のみを表示する。\n・「カレンダーを表示」ボタンで、その商品の1か月分のカレンダーを表示する。\n※パターンBとどちらか1つを選択いただく前提です。",
+    "vi": "Nội dung dự kiến:\n• Mặc định ẩn lịch, chỉ hiện tên sản phẩm.\n• Nút “Hiện lịch” mở lịch 1 tháng của sản phẩm đó.\n• Chọn 1 trong 2 phương án A hoặc B."
+   },
+   "confirm": null,
+   "reuse": "一部流用",
+   "must": "◯",
+   "step": "Step 1",
+   "pattern": "1A",
+   "code": "SCR-UPD-M",
+   "qty": 1,
+   "req": true,
+   "impacts": [
+    "IMP-007",
+    "IMP-008",
+    "IMP-009"
+   ],
+   "impl_override": null,
+   "override_note": null
+  },
+  {
+   "section": "common",
+   "big": {
+    "ja": "既存機能への影響確認",
+    "vi": "Kiểm tra ảnh hưởng chức năng hiện có"
+   },
+   "mid": {
+    "ja": "カレンダー部品",
+    "vi": "Phần lịch dùng chung"
+   },
+   "small": {
+    "ja": "①共通",
+    "vi": "Hạng mục ①"
+   },
+   "content": {
+    "ja": "【想定する対応内容】\n・カレンダー部品を利用している画面（事前購入画面、管理画面の空き状況）の動作確認・回帰テストを行う。",
+    "vi": "Kiểm tra lại các màn đang dùng chung phần lịch: màn mua vé trước, màn tình trạng chỗ trống của quản trị."
+   },
+   "confirm": null,
+   "reuse": "一部流用",
+   "must": "◉",
+   "step": "Step 1",
+   "pattern": "1",
+   "code": "REGRESSION",
+   "qty": 0.5,
+   "req": false,
+   "impacts": [
+    "IMP-002",
+    "IMP-003",
+    "IMP-004"
+   ],
+   "impl_override": null,
+   "override_note": null
+  },
+  {
+   "section": "user",
+   "big": {
+    "ja": "法人向け限定公開ページ",
+    "vi": "Trang giới hạn cho doanh nghiệp"
+   },
+   "mid": {
+    "ja": "限定公開ページ",
+    "vi": "Trang giới hạn"
+   },
+   "small": {
+    "ja": "新規ページ",
+    "vi": "Tạo trang mới"
+   },
+   "content": {
+    "ja": "【想定する対応内容】\n・URLを知っている方だけが閲覧できる「法人のお客様向け商品」ページを新規作成する。\n・既存の店舗詳細ページのレイアウト（店舗情報・カレンダー・当日商品）を流用する。\n・限定公開に設定された商品のみを表示する。\n・URLが正しくない場合は「ページが見つかりません」を表示する。",
+    "vi": "Nội dung dự kiến:\n• Tạo trang “Sản phẩm dành cho khách doanh nghiệp”, chỉ người có link mới vào được.\n• Dùng lại bố cục trang chi tiết cửa hàng: thông tin cửa hàng, lịch đặt trước, vé dùng trong ngày.\n• Chỉ hiện các sản phẩm đang bật “Hiển thị giới hạn”.\n• Link sai → báo không tìm thấy trang."
+   },
+   "confirm": {
+    "ja": "ご依頼どおり限定公開URLのページを1つ設け、複数店舗の商品はページ内で店舗を選択して表示する想定です。URLはシステム設定で固定、専用デザインなし（タイトルのみ変更）を想定しています。",
+    "vi": "Đúng yêu cầu 1 trang / 1 link; sản phẩm của nhiều cửa hàng → chọn cửa hàng ngay trên trang; link cố định trong cấu hình; không thiết kế riêng (chỉ đổi tiêu đề)."
+   },
+   "reuse": "新規開発",
+   "must": "◉",
+   "step": "Step 1",
+   "pattern": "2P",
+   "code": "SCR-PAGE-NEW-M",
+   "qty": 1,
+   "req": true,
+   "impacts": [
+    "IMP-016",
+    "IMP-022",
+    "IMP-023"
+   ],
+   "impl_override": null,
+   "override_note": null
+  },
+  {
+   "section": "user",
+   "big": {
+    "ja": "法人向け限定公開ページ",
+    "vi": "Trang giới hạn cho doanh nghiệp"
+   },
+   "mid": {
+    "ja": "限定公開ページ",
+    "vi": "Trang giới hạn"
+   },
+   "small": {
+    "ja": "簡易案（代替案）",
+    "vi": "Phương án đơn giản (thay thế)"
+   },
+   "content": {
+    "ja": "【提案する対応方法】（簡易案）\n・新規ページは作成せず、既存の店舗詳細ページにアクセスキー付きURLでアクセスした場合のみ、限定公開商品を表示する。\n・店舗ごとにURLが必要になるため、ご依頼の「ページを1つ」とは異なります（ご了承いただける場合の代替案）。\n※上記「新規ページ」とどちらか1つを選択いただく前提です。",
+    "vi": "Nội dung dự kiến:\n• Không tạo trang mới: dùng lại trang chi tiết cửa hàng, mở bằng link có khoá thì hiện thêm sản phẩm giới hạn.\n• Mỗi cửa hàng 1 link riêng → khác yêu cầu “1 trang”, chỉ dùng nếu khách hàng đồng ý.\n• Chọn 1 trong 2: tạo trang mới hoặc phương án này."
+   },
+   "confirm": null,
+   "reuse": "一部流用",
+   "must": "◯",
+   "step": "Step 1",
+   "pattern": "2S",
+   "code": "SCR-UPD-M",
+   "qty": 1,
+   "req": true,
+   "impacts": [
+    "IMP-016"
+   ],
+   "impl_override": null,
+   "override_note": null
+  },
+  {
+   "section": "user",
+   "big": {
+    "ja": "法人向け限定公開ページ",
+    "vi": "Trang giới hạn cho doanh nghiệp"
+   },
+   "mid": {
+    "ja": "商品・空き状況の取得",
+    "vi": "Lấy dữ liệu sản phẩm / chỗ trống"
+   },
+   "small": {
+    "ja": "限定公開商品の絞り込み",
+    "vi": "Chỉ trả sản phẩm giới hạn khi link đúng"
+   },
+   "content": {
+    "ja": "【想定する対応内容】\n・商品一覧・空き状況の取得処理を改修し、正しいアクセスキー付きのURLからアクセスした場合のみ限定公開商品を表示する。\n・キーがない、または正しくない場合は限定公開商品を表示しない。",
+    "vi": "Nội dung dự kiến:\n• Sửa xử lý lấy danh sách sản phẩm và chỗ trống: chỉ trả sản phẩm giới hạn khi link có khoá đúng.\n• Không có khoá hoặc khoá sai → không trả sản phẩm giới hạn."
+   },
+   "confirm": null,
+   "reuse": "一部流用",
+   "must": "◉",
+   "step": "Step 1",
+   "pattern": "2",
+   "code": "LOGIC-M",
+   "qty": 1,
+   "req": true,
+   "impacts": [
+    "IMP-011",
+    "IMP-012"
+   ],
+   "impl_override": null,
+   "override_note": null
+  },
+  {
+   "section": "user",
+   "big": {
+    "ja": "一般向け画面",
+    "vi": "Màn hình hiện có cho khách thường"
+   },
+   "mid": {
+    "ja": "既存の一般向け画面",
+    "vi": "Chi tiết cửa hàng · bảng giá · tình trạng bán · màn mua"
+   },
+   "small": {
+    "ja": "限定公開商品を非表示",
+    "vi": "Ẩn sản phẩm giới hạn"
+   },
+   "content": {
+    "ja": "【想定する対応内容】\n・店舗詳細・料金プラン・待ち時間/販売状況・購入画面など一般向けの画面に、限定公開商品を表示しないようにする。\n・影響範囲を調査・確認する。\n・当日予約・POS・順番待ちで利用している共通処理は変更しない。",
+    "vi": "Nội dung dự kiến:\n• Không hiện sản phẩm giới hạn ở các màn dành cho khách thường.\n• Điều tra và xác nhận phạm vi ảnh hưởng.\n• Không sửa phần xử lý dùng chung cho mua trong ngày, máy POS, hàng chờ."
+   },
+   "confirm": {
+    "ja": "料金プラン・待ち時間/販売状況ページにも限定公開商品は表示しない想定です。",
+    "vi": "Ẩn cả ở trang bảng giá và trang thời gian chờ / tình trạng bán."
+   },
+   "reuse": "一部流用",
+   "must": "◉",
+   "step": "Step 1",
+   "pattern": "2",
+   "code": "PAGE-FILTER-UPD",
+   "qty": 1,
+   "req": true,
+   "impacts": [
+    "IMP-021",
+    "IMP-013",
+    "IMP-014",
+    "IMP-025"
+   ],
+   "impl_override": null,
+   "override_note": null
+  },
+  {
+   "section": "user",
+   "big": {
+    "ja": "購入画面",
+    "vi": "Màn mua vé"
+   },
+   "mid": {
+    "ja": "事前購入画面",
+    "vi": "Mua vé trước"
+   },
+   "small": {
+    "ja": "アクセスキー引継ぎ",
+    "vi": "Giữ khoá từ link"
+   },
+   "content": {
+    "ja": "【想定する対応内容】\n・限定公開ページから事前購入画面へ遷移した場合、アクセスキーを引き継ぎ、限定公開商品を購入できるようにする。\n・決済はクレジットカード（現行どおり）とする。",
+    "vi": "Nội dung dự kiến:\n• Khi đi từ trang giới hạn sang màn mua vé trước, giữ khoá để mua được sản phẩm giới hạn.\n• Thanh toán bằng thẻ như hiện tại."
+   },
+   "confirm": {
+    "ja": "URLを知っている方は閲覧・購入可能（ログイン・パスワードなし）とする想定です。",
+    "vi": "Ai có link đều xem và mua được (không cần đăng nhập / mật khẩu)."
+   },
+   "reuse": "一部流用",
+   "must": "◉",
+   "step": "Step 1",
+   "pattern": "2",
+   "code": "SCR-UPD-S",
+   "qty": 1,
+   "req": true,
+   "impacts": [
+    "IMP-017"
+   ],
+   "impl_override": null,
+   "override_note": null
+  },
+  {
+   "section": "user",
+   "big": {
+    "ja": "購入画面",
+    "vi": "Màn mua vé"
+   },
+   "mid": {
+    "ja": "当日購入画面",
+    "vi": "Mua vé dùng trong ngày"
+   },
+   "small": {
+    "ja": "アクセスキー引継ぎ",
+    "vi": "Giữ khoá từ link"
+   },
+   "content": {
+    "ja": "【想定する対応内容】\n・当日1DAY商品について、限定公開ページから当日購入画面へ遷移した場合にアクセスキーを引き継ぐ。\n・購入方法は現行の当日利用と同じとする。",
+    "vi": "Nội dung dự kiến:\n• Vé dùng trong ngày: giữ khoá khi đi từ trang giới hạn sang.\n• Cách mua giống vé dùng trong ngày hiện tại."
+   },
+   "confirm": null,
+   "reuse": "一部流用",
+   "must": "◉",
+   "step": "Step 1",
+   "pattern": "2",
+   "code": "SCR-UPD-S",
+   "qty": 1,
+   "req": true,
+   "impacts": [
+    "IMP-018"
+   ],
+   "impl_override": null,
+   "override_note": null
+  },
+  {
+   "section": "sa",
+   "big": {
+    "ja": "商品管理",
+    "vi": "Quản lý sản phẩm"
+   },
+   "mid": {
+    "ja": "商品登録・編集",
+    "vi": "Đăng ký / sửa sản phẩm"
+   },
+   "small": {
+    "ja": "限定公開設定",
+    "vi": "Cài đặt hiển thị giới hạn"
+   },
+   "content": {
+    "ja": "【想定する対応内容】\n・商品登録・編集画面に「限定公開」の設定項目（OFF：通常公開／ON：限定公開）を追加する。\n・設定内容を保存し、ユーザー画面の表示に反映する。",
+    "vi": "Nội dung dự kiến:\n• Thêm mục “Hiển thị giới hạn” vào form đăng ký / sửa sản phẩm: Tắt = bán bình thường, Bật = chỉ hiện ở trang giới hạn.\n• Lưu và áp dụng cho các màn người dùng."
+   },
+   "confirm": null,
+   "reuse": "一部流用",
+   "must": "◉",
+   "step": "Step 1",
+   "pattern": "2",
+   "code": "SETTING-FIELD",
+   "qty": 1,
+   "req": true,
+   "impacts": [
+    "IMP-015",
+    "IMP-019",
+    "IMP-024"
+   ],
+   "impl_override": null,
+   "override_note": null
+  },
+  {
+   "section": "sa",
+   "big": {
+    "ja": "商品管理",
+    "vi": "Quản lý sản phẩm"
+   },
+   "mid": {
+    "ja": "商品一覧",
+    "vi": "Danh sách sản phẩm"
+   },
+   "small": {
+    "ja": "公開区分の表示",
+    "vi": "Hiển thị loại bán"
+   },
+   "content": {
+    "ja": "【想定する対応内容】\n・商品一覧に公開区分（通常公開／限定公開）を表示する。",
+    "vi": "Thêm cột cho biết sản phẩm đang bán thường hay bán giới hạn."
+   },
+   "confirm": null,
+   "reuse": "一部流用",
+   "must": "◉",
+   "step": "Step 1",
+   "pattern": "2",
+   "code": "SCR-UPD-S",
+   "qty": 1,
+   "req": true,
+   "impacts": [
+    "IMP-020"
+   ],
+   "impl_override": null,
+   "override_note": null
+  },
+  {
+   "section": "sa",
+   "big": {
+    "ja": "商品管理",
+    "vi": "Quản lý sản phẩm"
+   },
+   "mid": {
+    "ja": "商品詳細",
+    "vi": "Chi tiết sản phẩm"
+   },
+   "small": {
+    "ja": "公開区分の表示",
+    "vi": "Hiển thị loại bán"
+   },
+   "content": {
+    "ja": "【想定する対応内容】\n・商品詳細に公開区分（通常公開／限定公開）を表示する。",
+    "vi": "Hiện loại bán (thường / giới hạn) ở màn chi tiết sản phẩm."
+   },
+   "confirm": null,
+   "reuse": "一部流用",
+   "must": "◉",
+   "step": "Step 1",
+   "pattern": "2",
+   "code": "SCR-UPD-S",
+   "qty": 1,
+   "req": true,
+   "impacts": [
+    "IMP-020"
+   ],
+   "impl_override": null,
+   "override_note": null
+  },
+  {
+   "section": "common",
+   "big": {
+    "ja": "データベース",
+    "vi": "Cơ sở dữ liệu"
+   },
+   "mid": {
+    "ja": "商品テーブル",
+    "vi": "Bảng sản phẩm"
+   },
+   "small": {
+    "ja": "項目追加",
+    "vi": "Thêm cột"
+   },
+   "content": {
+    "ja": "【想定する対応内容】\n・商品テーブルに公開区分（限定公開フラグ）を追加する（データ移行を含む）。",
+    "vi": "Nội dung dự kiến:\n• Thêm cột lưu cài đặt “Hiển thị giới hạn” của sản phẩm (kèm chuyển đổi dữ liệu)."
+   },
+   "confirm": null,
+   "reuse": "新規開発",
+   "must": "◉",
+   "step": "Step 1",
+   "pattern": "2",
+   "code": "DB-COLUMN",
+   "qty": 1,
+   "req": false,
+   "impacts": [
+    "IMP-010"
+   ],
+   "impl_override": null,
+   "override_note": null
+  },
+  {
+   "section": "common",
+   "big": {
+    "ja": "既存機能への影響確認",
+    "vi": "Kiểm tra ảnh hưởng chức năng hiện có"
+   },
+   "mid": {
+    "ja": "購入・決済・POS連携",
+    "vi": "Mua vé · thanh toán · máy POS"
+   },
+   "small": {
+    "ja": "②共通",
+    "vi": "Hạng mục ②"
+   },
+   "content": {
+    "ja": "【想定する対応内容】\n・限定公開商品について、購入・決済（クレジットカード）・POS連携・キャンセル・マイページの動作確認・回帰テストを行う。",
+    "vi": "Nội dung dự kiến:\n• Kiểm tra lại với sản phẩm giới hạn: mua vé, thanh toán thẻ, liên kết máy POS, huỷ vé, trang cá nhân."
+   },
+   "confirm": null,
+   "reuse": "一部流用",
+   "must": "◉",
+   "step": "Step 1",
+   "pattern": "2",
+   "code": "REGRESSION",
+   "qty": 1,
+   "req": false,
+   "impacts": [
+    "IMP-013",
+    "IMP-025"
+   ],
+   "impl_override": null,
+   "override_note": null
+  },
+  {
+   "section": "user",
+   "big": {
+    "ja": "法人向け限定公開ページ",
+    "vi": "Trang giới hạn cho doanh nghiệp"
+   },
+   "mid": {
+    "ja": "限定公開ページ",
+    "vi": "Trang giới hạn"
+   },
+   "small": {
+    "ja": "ページ単位の商品表示",
+    "vi": "Hiện sản phẩm theo từng trang"
+   },
+   "content": {
+    "ja": "【想定する対応内容】（オプション）\n・限定公開ページ（URL）ごとに、そのページに掲載された商品のみを表示する。",
+    "vi": "Nội dung dự kiến (Option):\n• Mỗi trang (mỗi link) chỉ hiện các sản phẩm được gắn với trang đó."
+   },
+   "confirm": null,
+   "reuse": "一部流用",
+   "must": "◯",
+   "step": "Step 2",
+   "pattern": "2OPT",
+   "code": "LOGIC-M",
+   "qty": 1,
+   "req": true,
+   "impacts": [
+    "IMP-033"
+   ],
+   "impl_override": null,
+   "override_note": null
+  },
+  {
+   "section": "sa",
+   "big": {
+    "ja": "限定公開ページ管理（オプション）",
+    "vi": "Quản lý trang giới hạn (Option)"
+   },
+   "mid": {
+    "ja": "限定公開ページ一覧",
+    "vi": "Danh sách trang giới hạn"
+   },
+   "small": {
+    "ja": "一覧・検索",
+    "vi": "Danh sách"
+   },
+   "content": {
+    "ja": "【想定する対応内容】（オプション）\n・限定公開ページの一覧画面を新規作成する（ページ名・URL・公開状態を表示）。\n・URLをコピーして法人のお客様へご案内できるようにする。",
+    "vi": "Nội dung dự kiến (Option):\n• Màn mới liệt kê các trang giới hạn: tên trang, link, trạng thái.\n• Sao chép link để gửi cho khách doanh nghiệp."
+   },
+   "confirm": null,
+   "reuse": "新規開発",
+   "must": "◯",
+   "step": "Step 2",
+   "pattern": "2OPT",
+   "code": "SCR-LIST-NEW",
+   "qty": 1,
+   "req": true,
+   "impacts": [
+    "IMP-034",
+    "IMP-037",
+    "IMP-038"
+   ],
+   "impl_override": null,
+   "override_note": null
+  },
+  {
+   "section": "sa",
+   "big": {
+    "ja": "限定公開ページ管理（オプション）",
+    "vi": "Quản lý trang giới hạn (Option)"
+   },
+   "mid": {
+    "ja": "限定公開ページ登録・編集",
+    "vi": "Tạo / sửa trang giới hạn"
+   },
+   "small": {
+    "ja": "登録・編集",
+    "vi": "Tạo · sửa"
+   },
+   "content": {
+    "ja": "【想定する対応内容】（オプション）\n・限定公開ページの登録・編集画面を新規作成する（ページ名・表示タイトル）。\n・保存時にページごとのURLを自動で発行する。",
+    "vi": "Nội dung dự kiến (Option):\n• Form tạo / sửa trang: tên trang, tiêu đề hiển thị.\n• Hệ thống tự sinh link khi lưu."
+   },
+   "confirm": {
+    "ja": "1つの商品を複数の限定公開ページに掲載できる仕様（例：同じ商品をA社用・B社用ページの両方に掲載）を想定しています。ページの公開期間設定はなし（手動で公開停止）を想定しています。",
+    "vi": "1 sản phẩm gắn được nhiều trang (đề xuất của Dipro); trang không có thời hạn, quản trị dừng bằng tay."
+   },
+   "reuse": "新規開発",
+   "must": "◯",
+   "step": "Step 2",
+   "pattern": "2OPT",
+   "code": "SCR-FORM-EDIT",
+   "qty": 1,
+   "req": true,
+   "impacts": [
+    "IMP-032"
+   ],
+   "impl_override": null,
+   "override_note": null
+  },
+  {
+   "section": "sa",
+   "big": {
+    "ja": "限定公開ページ管理（オプション）",
+    "vi": "Quản lý trang giới hạn (Option)"
+   },
+   "mid": {
+    "ja": "限定公開ページ登録・編集",
+    "vi": "Tạo / sửa trang giới hạn"
+   },
+   "small": {
+    "ja": "公開停止",
+    "vi": "Dừng / mở lại trang"
+   },
+   "content": {
+    "ja": "【想定する対応内容】（オプション）\n・限定公開ページごとに公開・公開停止を切り替えられるようにする。\n・公開停止したページのURLでは「ページが見つかりません」を表示する。",
+    "vi": "Nội dung dự kiến (Option):\n• Bật / dừng công khai từng trang; trang đã dừng thì link báo không tìm thấy trang."
+   },
+   "confirm": null,
+   "reuse": "新規開発",
+   "must": "◯",
+   "step": "Step 2",
+   "pattern": "2OPT",
+   "code": "STATUS-ACTION",
+   "qty": 1,
+   "req": true,
+   "impacts": [
+    "IMP-032"
+   ],
+   "impl_override": null,
+   "override_note": null
+  },
+  {
+   "section": "sa",
+   "big": {
+    "ja": "商品管理",
+    "vi": "Quản lý sản phẩm"
+   },
+   "mid": {
+    "ja": "商品登録・編集",
+    "vi": "Đăng ký / sửa sản phẩm"
+   },
+   "small": {
+    "ja": "掲載先ページ選択",
+    "vi": "Chọn trang hiển thị"
+   },
+   "content": {
+    "ja": "【想定する対応内容】（オプション）\n・限定公開商品の掲載先ページを、作成済みのページから選択できるようにする（複数ページ選択可）。",
+    "vi": "Nội dung dự kiến (Option):\n• Với sản phẩm giới hạn, chọn 1 hoặc nhiều trang sẽ hiển thị sản phẩm."
+   },
+   "confirm": null,
+   "reuse": "一部流用",
+   "must": "◯",
+   "step": "Step 2",
+   "pattern": "2OPT",
+   "code": "SETTING-FIELD",
+   "qty": 1,
+   "req": true,
+   "impacts": [
+    "IMP-035"
+   ],
+   "impl_override": null,
+   "override_note": null
+  },
+  {
+   "section": "common",
+   "big": {
+    "ja": "データベース",
+    "vi": "Cơ sở dữ liệu"
+   },
+   "mid": {
+    "ja": "限定公開ページテーブル",
+    "vi": "Bảng trang giới hạn"
+   },
+   "small": {
+    "ja": "テーブル追加",
+    "vi": "Thêm bảng"
+   },
+   "content": {
+    "ja": "【想定する対応内容】（オプション）\n・限定公開ページのテーブル、および商品と掲載先ページの紐付けテーブル（1商品を複数ページに掲載可）を追加する。",
+    "vi": "Nội dung dự kiến (Option):\n• Thêm bảng trang giới hạn và bảng liên kết sản phẩm ↔ trang (1 sản phẩm gắn được nhiều trang)."
+   },
+   "confirm": null,
+   "reuse": "新規開発",
+   "must": "◯",
+   "step": "Step 2",
+   "pattern": "2OPT",
+   "code": "DB-TABLE-PAIR",
+   "qty": 1,
+   "req": false,
+   "impacts": [
+    "IMP-030",
+    "IMP-031"
+   ],
+   "impl_override": null,
+   "override_note": null
+  }
+ ],
+ "premises": {
+  "前提条件": [
+   {
+    "ja": "本見積もりは、ご共有いただいた見積依頼書（2026年10月16日）をもとに、現時点で確認できている要件および想定仕様に基づいて作成しております。",
+    "vi": "Báo giá dựa trên văn bản yêu cầu báo giá khách hàng gửi ngày 16/10/2026 và đặc tả giả định tại thời điểm hiện tại."
+   },
+   {
+    "ja": "法人向け商品（事前1DAY・当日1DAY × 平日・休日）は、既存の商品管理機能で御社にて登録いただく前提とし、本見積もりの対象外とする。",
+    "vi": "4 sản phẩm cho doanh nghiệp (vé 1 ngày mua trước / dùng trong ngày × ngày thường / ngày nghỉ) do khách hàng tự tạo bằng chức năng quản lý sản phẩm hiện có — không nằm trong báo giá."
+   },
+   {
+    "ja": "購入・予約・決済・キャンセル・マイページ・POS連携は既存機能をそのまま利用する。",
+    "vi": "Mua vé, đặt chỗ, thanh toán, huỷ, trang cá nhân, liên kết máy POS dùng nguyên chức năng hiện có."
+   },
+   {
+    "ja": "①のパターンA・Bはいずれか1つ、②の新規ページ・簡易案はいずれか1つを選択いただく前提とする。合計は「パターン別合計」をご参照ください。",
+    "vi": "Hạng mục ①: chọn 1 trong phương án A / B. Hạng mục ②: chọn 1 trong “tạo trang mới” / “phương án đơn giản”. Tổng tiền xem bảng “Tổng theo phương án”."
+   },
+   {
+    "ja": "Step 1 は①・②の基本機能、Step 2 は②のオプション（複数ページ管理）とする。",
+    "vi": "Step 1 = hạng mục ① và ② cơ bản; Step 2 = Option của ② (nhiều trang giới hạn)."
+   },
+   {
+    "ja": "企画終了時（2027年1月頃）は、既存の販売スケジュール（終了日）および公開ステータスの設定で法人向け商品の販売を終了する運用とし、日付による自動非表示機能は本見積もりの対象外とする。",
+    "vi": "Kết thúc chương trình (khoảng 01/2027): quản trị đặt ngày kết thúc lịch bán / chuyển trạng thái đăng sang Ẩn bằng chức năng có sẵn; không làm chức năng tự ẩn theo ngày."
+   },
+   {
+    "ja": "未確定の仕様については開発着手前に協議・確定し、仕様変更や追加要望が発生した場合は、必要に応じて工数・費用・スケジュールを再調整する。",
+    "vi": "Đặc tả chưa chốt sẽ thống nhất trước khi bắt đầu phát triển; nếu thay đổi đặc tả hoặc có yêu cầu thêm thì điều chỉnh lại công số, chi phí và lịch."
+   }
+  ],
+  "既存システムへの影響": [
+   {
+    "ja": "カレンダー表示は店舗詳細・事前購入画面で共通の部品を改修するため、共通部品を利用する画面の動作確認を行う。",
+    "vi": "Sửa phần lịch dùng chung → kiểm tra lại các màn đang dùng phần lịch này."
+   },
+   {
+    "ja": "商品に公開区分を追加し、一般向け画面では限定公開商品を表示しないよう表示条件を変更する。",
+    "vi": "Thêm cài đặt “Hiển thị giới hạn” cho sản phẩm; các màn dành cho khách thường sẽ ẩn sản phẩm giới hạn."
+   },
+   {
+    "ja": "当日予約・POS・順番待ちで利用している共通処理は変更しない方針とするが、既存の購入・決済機能について回帰テストが必要となる。",
+    "vi": "Không sửa phần xử lý dùng chung cho mua trong ngày, máy POS, hàng chờ, nhưng cần kiểm thử hồi quy phần mua vé và thanh toán."
+   }
+  ],
+  "クライアント側で事前に決定・準備が必要な事項": [
+   {
+    "ja": "カレンダー表示： パターンA・Bの選択、「1週間分」「1か月分」の定義、展開ボタンの設置単位。",
+    "vi": "Lịch: chọn phương án A hay B; định nghĩa “1 tuần”, “1 tháng”; nút mở lịch đặt cho từng sản phẩm hay chung."
+   },
+   {
+    "ja": "限定公開ページ： 複数店舗の商品の表示方法（ページ内で店舗選択／全店舗一覧）、簡易案（店舗ごとのURL）の採否、URL変更の要否、専用デザインの要否。",
+    "vi": "Trang giới hạn: sản phẩm của nhiều cửa hàng hiển thị thế nào trên 1 trang; có dùng phương án đơn giản (mỗi cửa hàng 1 link) không; có cần đổi link từ màn quản trị không; có cần thiết kế riêng không."
+   },
+   {
+    "ja": "公開範囲： URLを知っている方のみ閲覧・購入可能とすることへのご了承、料金プラン・待ち時間ページでの表示要否。",
+    "vi": "Phạm vi công khai: chấp nhận “ai có link là mua được”; có ẩn sản phẩm giới hạn ở trang bảng giá / thời gian chờ không."
+   },
+   {
+    "ja": "運用： 売上・予約件数の区別方法、受入試験の環境・ご担当者・日程。",
+    "vi": "Vận hành: cách tách doanh thu, môi trường / người / lịch nghiệm thu."
+   }
+  ],
+  "想定されるリスク": [
+   {
+    "ja": "限定公開はURLによるアクセス制御のため、URLが第三者に共有された場合は閲覧・購入される可能性がある。",
+    "vi": "Trang giới hạn kiểm soát bằng link — nếu link bị chia sẻ thì người ngoài cũng xem và mua được."
+   },
+   {
+    "ja": "共通のカレンダー部品・商品取得処理を改修するため、一般予約を含む既存機能に影響が生じる可能性がある。",
+    "vi": "Sửa phần lịch và phần lấy dữ liệu sản phẩm dùng chung → có thể ảnh hưởng tới đặt chỗ thông thường."
+   },
+   {
+    "ja": "仕様確定・ご発注の時期により、リリース日が変動する可能性がある。",
+    "vi": "Ngày release phụ thuộc thời điểm chốt đặc tả và đặt hàng."
+   },
+   {
+    "ja": "仕様変更や追加対応が発生した場合、開発工数・費用およびスケジュールに影響する可能性がある。",
+    "vi": "Thay đổi đặc tả hoặc yêu cầu thêm → ảnh hưởng tới công số, chi phí và lịch."
+   }
+  ]
+ },
+ "questions": [
+  {
+   "id": "CQ-001",
+   "group": {
+    "ja": "カレンダー（①）",
+    "vi": "Lịch (①)"
+   },
+   "question": {
+    "ja": "「1か月分を見る」で表示するのは、本日から30日間でよろしいでしょうか。それとも当月末までの表示が必要でしょうか。",
+    "vi": "Khi bấm “Xem 1 tháng”, lịch hiện 30 ngày tính từ hôm nay, hay hiện đến hết tháng hiện tại?"
+   },
+   "why": {
+    "ja": "カレンダーを展開した際の表示日数を決めるためです。",
+    "vi": "Quyết định số ngày hiển thị khi mở rộng lịch."
+   },
+   "proposal": {
+    "ja": "本日から30日間",
+    "vi": "30 ngày tính từ hôm nay."
+   },
+   "alt": {
+    "ja": "当月末まで表示する場合、日付処理の追加により工数が少し増えます。",
+    "vi": "Đến hết tháng → thêm xử lý ngày, phát sinh công nhỏ."
+   },
+   "due": "2026/10/20"
+  },
+  {
+   "id": "CQ-002",
+   "group": {
+    "ja": "カレンダー（①）",
+    "vi": "Lịch (①)"
+   },
+   "question": {
+    "ja": "初期表示の「1週間分」は本日から7日間でよろしいでしょうか。それとも月曜〜日曜の暦週でしょうか。",
+    "vi": "“1 tuần” hiển thị mặc định là 7 ngày tính từ hôm nay, hay 1 tuần theo lịch (thứ Hai – Chủ nhật)?"
+   },
+   "why": {
+    "ja": "パターンBの初期表示の範囲を決めるためです。",
+    "vi": "Quyết định ngày bắt đầu / kết thúc của lịch thu gọn (phương án B)."
+   },
+   "proposal": {
+    "ja": "本日から7日間",
+    "vi": "7 ngày tính từ hôm nay."
+   },
+   "alt": {
+    "ja": "暦週で表示する場合、工数が少し増えます。",
+    "vi": "Theo tuần lịch → thêm xử lý, phát sinh công nhỏ."
+   },
+   "due": "2026/10/20"
+  },
+  {
+   "id": "CQ-004",
+   "group": {
+    "ja": "カレンダー（①）",
+    "vi": "Lịch (①)"
+   },
+   "question": {
+    "ja": "カレンダー折りたたみの対象は、店舗詳細ページ・事前購入画面・限定公開ページでよろしいでしょうか（管理画面の空き状況は変更なし）。",
+    "vi": "Chức năng thu gọn lịch áp dụng cho trang chi tiết cửa hàng, màn mua vé trước và trang giới hạn — đúng không? (màn tình trạng chỗ trống của quản trị giữ nguyên)"
+   },
+   "why": {
+    "ja": "改修・テストの対象画面を確定するためです。",
+    "vi": "Phạm vi màn cần sửa và kiểm thử."
+   },
+   "proposal": {
+    "ja": "上記3画面",
+    "vi": "Áp dụng cho 3 màn trên."
+   },
+   "alt": {
+    "ja": "対象画面が増える場合、テスト工数が増えます。",
+    "vi": "Thêm màn khác → thêm kiểm thử."
+   },
+   "due": "2026/10/20"
+  },
+  {
+   "id": "CQ-005",
+   "group": {
+    "ja": "限定公開ページ（②）",
+    "vi": "Trang giới hạn (②)"
+   },
+   "question": {
+    "ja": "限定公開ページは、ご依頼どおりURL1つのページとする想定です。複数店舗の商品は、ページ内で店舗を選択して表示する形でよろしいでしょうか。全店舗分を同時に一覧表示する必要はありますか。",
+    "vi": "Trang giới hạn (1 trang, 1 link — theo yêu cầu) hiển thị sản phẩm của nhiều cửa hàng thế nào: chọn cửa hàng ngay trên trang, hay liệt kê tất cả cửa hàng cùng lúc?"
+   },
+   "why": {
+    "ja": "商品と販売スケジュールは店舗ごとに管理されており、表示方法がご依頼に記載されていないためです。",
+    "vi": "Sản phẩm và lịch bán được quản lý theo từng cửa hàng; yêu cầu chưa nói cách hiển thị."
+   },
+   "proposal": {
+    "ja": "ページ内で店舗を選択して表示",
+    "vi": "Chọn cửa hàng ngay trên trang."
+   },
+   "alt": {
+    "ja": "全店舗を一覧表示する場合、ページが長くなり工数が少し増えます。",
+    "vi": "Liệt kê tất cả → trang dài, phát sinh công nhỏ."
+   },
+   "due": "2026/10/21"
+  },
+  {
+   "id": "CQ-006",
+   "group": {
+    "ja": "限定公開ページ（②）",
+    "vi": "Trang giới hạn (②)"
+   },
+   "question": {
+    "ja": "限定公開ページのURLを、管理画面から変更する必要はありますか（URLが外部に漏れた場合など）。",
+    "vi": "Có cần tự đổi link trang giới hạn từ màn quản trị không (ví dụ khi link bị lộ)?"
+   },
+   "why": {
+    "ja": "URL変更機能の要否を決めるためです。",
+    "vi": "Ảnh hưởng tới việc có cần thêm chức năng đổi link."
+   },
+   "proposal": {
+    "ja": "基本機能：URLは固定とし、変更が必要な場合は弊社で対応します。オプション：ページを公開停止し、新しいページを作成します。",
+    "vi": "Bản cơ bản: link cố định, khi cần đổi thì Dipro hỗ trợ. Option: dừng trang cũ, tạo trang mới."
+   },
+   "alt": {
+    "ja": "管理画面からURLを変更する場合、機能追加となり工数が増えます。",
+    "vi": "Tự đổi link từ màn quản trị → thêm chức năng, phát sinh công."
+   },
+   "due": "2026/10/21"
+  },
+  {
+   "id": "CQ-007",
+   "group": {
+    "ja": "限定公開ページ（②）",
+    "vi": "Trang giới hạn (②)"
+   },
+   "question": {
+    "ja": "限定公開は「URLを知っている方なら閲覧・購入できる」（ログイン・パスワードなし）仕様でよろしいでしょうか。URLが共有された場合のリスクについてご了承いただけますか。",
+    "vi": "Trang giới hạn theo kiểu “ai có link là xem và mua được” (không đăng nhập, không mật khẩu) — khách hàng có chấp nhận rủi ro link bị chia sẻ không?"
+   },
+   "why": {
+    "ja": "限定公開ページの保護レベルを決めるためです。",
+    "vi": "Quyết định mức bảo vệ của trang giới hạn."
+   },
+   "proposal": {
+    "ja": "上記仕様でご了承いただく",
+    "vi": "Chấp nhận như trên."
+   },
+   "alt": {
+    "ja": "ログインやパスワードによる制限を追加する場合、工数が増えます。",
+    "vi": "Thêm đăng nhập / mật khẩu → phát sinh công."
+   },
+   "due": "2026/10/21"
+  },
+  {
+   "id": "CQ-008",
+   "group": {
+    "ja": "限定公開ページ（②）",
+    "vi": "Trang giới hạn (②)"
+   },
+   "question": {
+    "ja": "法人向け商品の購入方法は、事前1DAYはクレジットカード決済（現行どおり）、当日1DAYは現行の当日利用と同じ方法でよろしいでしょうか。",
+    "vi": "Cách mua sản phẩm doanh nghiệp: vé mua trước thanh toán thẻ online, vé dùng trong ngày mua như vé dùng trong ngày hiện tại — đúng không?"
+   },
+   "why": {
+    "ja": "既存の購入・決済の仕組みをそのまま利用できるか確認するためです。",
+    "vi": "Xác nhận dùng nguyên luồng mua và thanh toán hiện có."
+   },
+   "proposal": {
+    "ja": "現行どおり",
+    "vi": "Giữ như hiện tại."
+   },
+   "alt": {
+    "ja": "請求書払いなど別の決済方法が必要な場合、大きく工数が増えます。",
+    "vi": "Cách thanh toán khác (hoá đơn, chuyển khoản…) → phát sinh lớn."
+   },
+   "due": "2026/10/21"
+  },
+  {
+   "id": "CQ-009",
+   "group": {
+    "ja": "限定公開ページ（②）",
+    "vi": "Trang giới hạn (②)"
+   },
+   "question": {
+    "ja": "限定公開商品は、料金プランページや待ち時間/販売状況ページにも表示しない想定でよろしいでしょうか。",
+    "vi": "Sản phẩm giới hạn có cần ẩn ở trang bảng giá và trang thời gian chờ / tình trạng bán không?"
+   },
+   "why": {
+    "ja": "限定公開商品を非表示にする画面の範囲を決めるためです。",
+    "vi": "Phạm vi các màn phải ẩn sản phẩm giới hạn."
+   },
+   "proposal": {
+    "ja": "両ページとも表示しない",
+    "vi": "Ẩn ở cả 2 trang."
+   },
+   "alt": {
+    "ja": "表示する場合、テスト工数が少し減ります。",
+    "vi": "Vẫn hiện → giảm kiểm thử."
+   },
+   "due": "2026/10/21"
+  },
+  {
+   "id": "CQ-010",
+   "group": {
+    "ja": "オプション",
+    "vi": "Option"
+   },
+   "question": {
+    "ja": "オプションでは、1つの商品を複数の限定公開ページに掲載できる仕様（例：同じ商品をA社用・B社用の両ページに掲載）をご提案します。この仕様でよろしいでしょうか。",
+    "vi": "Dipro đề xuất 1 sản phẩm hiển thị được ở nhiều trang (VD 1 vé dùng chung cho công ty X và công ty Y) — khách hàng có đồng ý không?"
+   },
+   "why": {
+    "ja": "商品とページの紐付け方法を決めるためです。",
+    "vi": "Quyết định cách gán sản phẩm vào trang."
+   },
+   "proposal": {
+    "ja": "1商品を複数ページに掲載可能",
+    "vi": "1 sản phẩm gắn được nhiều trang."
+   },
+   "alt": {
+    "ja": "1商品1ページとする場合は工数が少し減ります。",
+    "vi": "Chỉ 1 trang → giảm nhẹ công."
+   },
+   "due": "2026/10/28"
+  },
+  {
+   "id": "CQ-014",
+   "group": {
+    "ja": "運用",
+    "vi": "Vận hành"
+   },
+   "question": {
+    "ja": "法人向け商品の売上・予約件数を、売上管理やCSVで区別して確認する必要はありますか（現状は商品名で区別可能です）。",
+    "vi": "Có cần xem riêng doanh thu / số đặt chỗ của sản phẩm doanh nghiệp ở màn quản lý doanh thu hoặc file CSV không?"
+   },
+   "why": {
+    "ja": "売上レポートに絞り込み・項目追加が必要か判断するためです。",
+    "vi": "Quyết định có cần thêm bộ lọc / cột riêng cho báo cáo."
+   },
+   "proposal": {
+    "ja": "商品名で区別（既存機能で対応可能）",
+    "vi": "Phân biệt bằng tên sản phẩm (đã làm được với chức năng hiện có)."
+   },
+   "alt": {
+    "ja": "専用の絞り込み・項目が必要な場合、工数が増えます。",
+    "vi": "Cần lọc / cột riêng → phát sinh công."
+   },
+   "due": "2026/10/21"
+  }
+ ]
+}

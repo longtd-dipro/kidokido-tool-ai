@@ -1,0 +1,1006 @@
+{
+ "API-001|Summary": {
+  "text": "GET: lấy giá trị (value) của app setting theo settingKey; PUT: cập nhật bản ghi app_settings có settingKey = body.settingKey bằng toàn bộ body; DELETE: xoá app setting theo settingKey trên URL.",
+  "ctx": "ANY /api/admin/app-settings/:settingKey · group admin"
+ },
+ "API-001|Note": {
+  "text": "Methods: GET, PUT, DELETE · Called By = suy từ import tĩnh page→component→service (có thể dư)",
+  "ctx": "ANY /api/admin/app-settings/:settingKey · group admin"
+ },
+ "API-002|Summary": {
+  "text": "GET: lấy toàn bộ app_settings; POST: tạo mới một app setting từ body.",
+  "ctx": "ANY /api/admin/app-settings · group admin"
+ },
+ "API-002|Note": {
+  "text": "Methods: GET, POST · Called By = suy từ import tĩnh page→component→service (có thể dư)",
+  "ctx": "ANY /api/admin/app-settings · group admin"
+ },
+ "API-003|Summary": {
+  "text": "Đổi trạng thái booking trong hàng đợi (Calling/Waiting/SystemCancelled…) cho mọi booking cùng barCode (trong 1 năm, cùng status hiện tại), gửi mail gọi nếu có cờ, và nếu huỷ booking đang Calling thì gọi booking Waiting tiếp theo.",
+  "ctx": "PUT /api/admin/booking-queue/:id · group admin"
+ },
+ "API-003|Note": {
+  "text": "Called By = suy từ import tĩnh page→component→service (có thể dư)",
+  "ctx": "PUT /api/admin/booking-queue/:id · group admin"
+ },
+ "API-004|Summary": {
+  "text": "Lấy danh sách booking đang ở trạng thái Calling trong ngày của tenant đăng nhập, tách nhóm accumulative và nhóm theo từng ticket standalone, kèm thời gian đã gọi.",
+  "ctx": "GET /api/admin/booking-queue/calling · group admin"
+ },
+ "API-004|Note": {
+  "text": "Called By = suy từ import tĩnh page→component→service (có thể dư)",
+  "ctx": "GET /api/admin/booking-queue/calling · group admin"
+ },
+ "API-005|Summary": {
+  "text": "Cập nhật thứ tự chờ (waitingOrder) cho danh sách booking trong 1 transaction.",
+  "ctx": "POST /api/admin/booking-queue · group admin"
+ },
+ "API-005|Note": {
+  "text": "Called By = suy từ import tĩnh page→component→service (có thể dư)",
+  "ctx": "POST /api/admin/booking-queue · group admin"
+ },
+ "API-006|Summary": {
+  "text": "Lấy các booking SystemCancelled trong ngày của tenant đăng nhập, sắp xếp updatedAt giảm dần, kèm thời gian đã huỷ.",
+  "ctx": "GET /api/admin/booking-queue/system-cancelled · group admin"
+ },
+ "API-006|Note": {
+  "text": "Called By = suy từ import tĩnh page→component→service (có thể dư)",
+  "ctx": "GET /api/admin/booking-queue/system-cancelled · group admin"
+ },
+ "API-007|Summary": {
+  "text": "Lấy hàng đợi Waiting trong ngày của tenant: chia accumulative/standalone theo ticket, tính tổng số booking/nhóm/người chờ, số người lớn/trẻ em đã check-in và thời gian chờ ước tính theo app setting.",
+  "ctx": "GET /api/admin/booking-queue/waiting · group admin"
+ },
+ "API-007|Note": {
+  "text": "Called By = suy từ import tĩnh page→component→service (có thể dư)",
+  "ctx": "GET /api/admin/booking-queue/waiting · group admin"
+ },
+ "API-008|Summary": {
+  "text": "Tính tình trạng chỗ trống 8 ngày (hôm nay + 7) cho tenant đăng nhập: theo ngày và theo từng ticket (max người, tổng người, đã check-in, đang chờ, có thể vào), bỏ các ticket bị ẩn theo file hidden-tickets.json trên S3.",
+  "ctx": "GET /api/admin/booking-vacancies · group admin"
+ },
+ "API-008|Note": {
+  "text": "Called By = suy từ import tĩnh page→component→service (có thể dư)",
+  "ctx": "GET /api/admin/booking-vacancies · group admin"
+ },
+ "API-009|Summary": {
+  "text": "Lấy chi tiết 1 booking theo id kèm User, Ticket (detail, discount, schedule), Tenant, thông tin tuổi trẻ em, partial checkout và schedule.",
+  "ctx": "GET /api/admin/bookings/:id · group admin"
+ },
+ "API-009|Note": {
+  "text": "Called By = suy từ import tĩnh page→component→service (có thể dư)",
+  "ctx": "GET /api/admin/bookings/:id · group admin"
+ },
+ "API-010|Summary": {
+  "text": "Tính lại mã OBIC của booking đã checkout và ghi thêm một revision mới vào booking_obic_codes.",
+  "ctx": "POST /api/admin/bookings/:id/force-recompute-obic · group admin"
+ },
+ "API-011|Summary": {
+  "text": "Đánh dấu đã thanh toán (paymentStatus=Completed) cho mọi booking cùng barCode trong 1 năm, cập nhật coupons và posTotalAmount (chỉ ghi vào 1 booking hợp lệ, booking khác set 0 nếu null).",
+  "ctx": "PUT /api/admin/bookings/:id/status · group admin"
+ },
+ "API-011|Note": {
+  "text": "Called By = suy từ import tĩnh page→component→service (có thể dư)",
+  "ctx": "PUT /api/admin/bookings/:id/status · group admin"
+ },
+ "API-012|Summary": {
+  "text": "Lấy tất cả booking (mọi tenant) có paymentStatus=Pending, đã check-in và ngày sử dụng đã qua, kèm toàn bộ thông tin User.",
+  "ctx": "GET /api/admin/bookings/blacklist · group admin"
+ },
+ "API-013|Summary": {
+  "text": "Admin huỷ booking: kiểm tra trạng thái có thể huỷ, nếu đã thanh toán online thì huỷ giao dịch GMO, set SystemCancelled (+Refunded/Pending) cho booking hoặc cả nhóm barCode, huỷ các booking con của vé tháng/vé lượt, huỷ giao dịch xác nhận Smaregi, gửi mail + SSE và gọi booking chờ tiếp theo.",
+  "ctx": "PUT /api/admin/bookings/cancel/:id · group admin"
+ },
+ "API-013|Note": {
+  "text": "Called By = suy từ import tĩnh page→component→service (có thể dư)",
+  "ctx": "PUT /api/admin/bookings/cancel/:id · group admin"
+ },
+ "API-014|Summary": {
+  "text": "Đếm số booking theo cùng bộ lọc với danh sách booking admin (tenant, ticket, status, ngày, tên, barCode).",
+  "ctx": "GET /api/admin/bookings/count · group admin"
+ },
+ "API-014|Note": {
+  "text": "Called By = suy từ import tĩnh page→component→service (có thể dư)",
+  "ctx": "GET /api/admin/bookings/count · group admin"
+ },
+ "API-015|Summary": {
+  "text": "Giảm số người lớn/trẻ em của booking, tính lại tổng tiền, nếu là booking online (1 ngày/tháng) và tiền thay đổi thì đổi số tiền giao dịch GMO, rồi xoá thông tin tuổi trẻ em được chỉ định và cập nhật booking trong transaction.",
+  "ctx": "PATCH /api/admin/bookings/decrease-quantity/:id · group admin"
+ },
+ "API-015|Note": {
+  "text": "Called By = suy từ import tĩnh page→component→service (có thể dư)",
+  "ctx": "PATCH /api/admin/bookings/decrease-quantity/:id · group admin"
+ },
+ "API-016|Summary": {
+  "text": "Xuất CSV danh sách booking theo bộ lọc admin; bộ cột CSV chọn theo query exportingRole (SuperAdmin/Staff/Admin); ghi activity log DownloadBooking.",
+  "ctx": "GET /api/admin/bookings/export · group admin"
+ },
+ "API-017|Summary": {
+  "text": "Lấy danh sách booking (phân trang) theo bộ lọc; Admin bị giới hạn trong tenant của mình, SuperAdmin lọc theo tenantCode tuỳ chọn; loại booking có GMOTransactionId nhưng paymentStatus Pending; ghi activity log nếu có fromAction.",
+  "ctx": "GET /api/admin/bookings · group admin"
+ },
+ "API-017|Note": {
+  "text": "Called By = suy từ import tĩnh page→component→service (có thể dư)",
+  "ctx": "GET /api/admin/bookings · group admin"
+ },
+ "API-018|Summary": {
+  "text": "Với một booking vé tháng: đếm số lần đã sử dụng (booking con không ở trạng thái Waiting/Cancelled/SystemCancelled/Successful) và (tuỳ chọn) trả về các booking con đang hoạt động cùng các booking cùng barCode.",
+  "ctx": "GET /api/admin/bookings/monthly-tickets/extra-info · group admin"
+ },
+ "API-018|Note": {
+  "text": "Called By = suy từ import tĩnh page→component→service (có thể dư)",
+  "ctx": "GET /api/admin/bookings/monthly-tickets/extra-info · group admin"
+ },
+ "API-019|Summary": {
+  "text": "Hoàn tác lần quét barCode gần nhất: nếu có booking CheckedOut (không phải chu kỳ cũ) thì rollback checkout (về CheckedIn, reset thanh toán/OBIC/partial checkout, rollback giao dịch Smaregi); nếu không mà có CheckedIn thì rollback check-in (về Successful/Calling/CheckedOut); gửi SSE.",
+  "ctx": "POST /api/admin/bookings/rollback-scan · group admin"
+ },
+ "API-019|Note": {
+  "text": "Called By = suy từ import tĩnh page→component→service (có thể dư)",
+  "ctx": "POST /api/admin/bookings/rollback-scan · group admin"
+ },
+ "API-020|Summary": {
+  "text": "Quét barCode tại quầy: nếu có booking CheckedIn → checkout (tính phí, ghi OBIC, tạo 仮販売/確定販売 Smaregi, gửi mail checkout, gọi booking chờ); nếu có booking Successful/Waiting/Calling → kiểm tra sức chứa, ngày, trạng thái, thanh toán rồi check-in; gửi SSE kết quả.",
+  "ctx": "POST /api/admin/bookings/scan · group admin"
+ },
+ "API-020|Note": {
+  "text": "Called By = suy từ import tĩnh page→component→service (có thể dư)",
+  "ctx": "POST /api/admin/bookings/scan · group admin"
+ },
+ "API-021|Summary": {
+  "text": "Admin đổi trạng thái 1 booking (Waiting/Calling/CheckedIn/CheckedOut/Cancelled/SystemCancelled) và cập nhật các mốc thời gian tương ứng; SystemCancelled booking online thì hoàn tiền GMO, huỷ booking con vé tháng/vé lượt, huỷ giao dịch xác nhận Smaregi; cập nhật firstCheckedOutBookingId của user, gọi booking chờ tiếp theo, gửi SSE.",
+  "ctx": "PUT /api/admin/bookings/status · group admin"
+ },
+ "API-021|Note": {
+  "text": "Called By = suy từ import tĩnh page→component→service (có thể dư)",
+  "ctx": "PUT /api/admin/bookings/status · group admin"
+ },
+ "API-022|Summary": {
+  "text": "Cập nhật số người tối đa (maxBookingPeople) của 1 lịch đặt vé; nếu tăng và lịch đang hiệu lực hôm nay thì gọi các booking chờ tiếp theo.",
+  "ctx": "PUT /api/admin/bookings/ticket-booking-schedules/:id · group admin"
+ },
+ "API-022|Note": {
+  "text": "Called By = suy từ import tĩnh page→component→service (có thể dư)",
+  "ctx": "PUT /api/admin/bookings/ticket-booking-schedules/:id · group admin"
+ },
+ "API-023|Summary": {
+  "text": "Thống kê theo tenant trong khoảng ngày: tổng booking, tổng user và tỷ lệ booking trung bình trên mỗi user (raw SQL).",
+  "ctx": "GET /api/admin/charts/average-booking-times · group admin"
+ },
+ "API-023|Note": {
+  "text": "Called By = suy từ import tĩnh page→component→service (có thể dư)",
+  "ctx": "GET /api/admin/charts/average-booking-times · group admin"
+ },
+ "API-024|Summary": {
+  "text": "Thống kê thời gian lưu trú trung bình (giờ) theo ngày cho từng tenant trong khoảng ngày, từ booking đã check-in và check-out.",
+  "ctx": "GET /api/admin/charts/average-stay-duration · group admin"
+ },
+ "API-024|Note": {
+  "text": "Called By = suy từ import tĩnh page→component→service (có thể dư)",
+  "ctx": "GET /api/admin/charts/average-stay-duration · group admin"
+ },
+ "API-025|Summary": {
+  "text": "Đếm số booking theo từng ticket_id của một tenant trong khoảng ngày (raw SQL).",
+  "ctx": "GET /api/admin/charts/total-bookings-with-ticket · group admin"
+ },
+ "API-025|Note": {
+  "text": "Called By = suy từ import tĩnh page→component→service (có thể dư)",
+  "ctx": "GET /api/admin/charts/total-bookings-with-ticket · group admin"
+ },
+ "API-026|Summary": {
+  "text": "Phân bố số user theo số lần đặt (booking không bị huỷ, đã thanh toán Completed) của một tenant trong khoảng ngày.",
+  "ctx": "GET /api/admin/charts/total-bookings-with-times · group admin"
+ },
+ "API-026|Note": {
+  "text": "Called By = suy từ import tĩnh page→component→service (có thể dư)",
+  "ctx": "GET /api/admin/charts/total-bookings-with-times · group admin"
+ },
+ "API-027|Summary": {
+  "text": "Theo từng ngày tạo booking trong khoảng ngày, đếm số user mới (ngày đặt đầu tiên) và user cũ của một tenant (booking không bị huỷ).",
+  "ctx": "GET /api/admin/charts/total-new-and-old-booking-users · group admin"
+ },
+ "API-027|Note": {
+  "text": "Called By = suy từ import tĩnh page→component→service (có thể dư)",
+  "ctx": "GET /api/admin/charts/total-new-and-old-booking-users · group admin"
+ },
+ "API-028|Summary": {
+  "text": "Gọi API SearchCard của GMO với memberId = userId và trả về kết quả đã parse.",
+  "ctx": "GET /api/admin/credit-cards/search/:userId · group admin"
+ },
+ "API-028|Note": {
+  "text": "Called By = suy từ import tĩnh page→component→service (có thể dư)",
+  "ctx": "GET /api/admin/credit-cards/search/:userId · group admin"
+ },
+ "API-029|Summary": {
+  "text": "GET: lấy toàn bộ disclaimer kèm options; POST: xoá toàn bộ disclaimer rồi tạo lại theo payload (title + options) trong 1 transaction.",
+  "ctx": "ANY /api/admin/disclaimers · group admin"
+ },
+ "API-029|Note": {
+  "text": "Methods: GET, POST · Called By = suy từ import tĩnh page→component→service (có thể dư)",
+  "ctx": "ANY /api/admin/disclaimers · group admin"
+ },
+ "API-030|Summary": {
+  "text": "GET: lấy 1 mẫu email theo emailKey; PUT: cập nhật mẫu email (where theo emailKey trong body); DELETE: xoá cứng mẫu email theo emailKey trên path",
+  "ctx": "ANY /api/admin/email-settings/:emailKey · group admin"
+ },
+ "API-030|Note": {
+  "text": "Methods: GET, PUT, DELETE · Called By = suy từ import tĩnh page→component→service (có thể dư)",
+  "ctx": "ANY /api/admin/email-settings/:emailKey · group admin"
+ },
+ "API-031|Summary": {
+  "text": "GET: lấy toàn bộ mẫu email sắp xếp theo emailKey; POST: tạo mẫu email mới",
+  "ctx": "ANY /api/admin/email-settings · group admin"
+ },
+ "API-031|Note": {
+  "text": "Methods: GET, POST · Called By = suy từ import tĩnh page→component→service (có thể dư)",
+  "ctx": "ANY /api/admin/email-settings · group admin"
+ },
+ "API-032|Summary": {
+  "text": "Render nội dung mẫu email (template EJS delimiter {{ }}) với dữ liệu giả cố định và trả về HTML để xem trước",
+  "ctx": "POST /api/admin/email-settings/preview · group admin"
+ },
+ "API-032|Note": {
+  "text": "Called By = suy từ import tĩnh page→component→service (có thể dư)",
+  "ctx": "POST /api/admin/email-settings/preview · group admin"
+ },
+ "API-033|Summary": {
+  "text": "Gửi email xem trước (tiêu đề + nội dung template do client gửi, dữ liệu giả cố định, kèm dữ liệu barcode giả với một số emailKey) tới địa chỉ email chỉ định",
+  "ctx": "POST /api/admin/email-settings/send-preview-email · group admin"
+ },
+ "API-033|Note": {
+  "text": "Called By = suy từ import tĩnh page→component→service (có thể dư)",
+  "ctx": "POST /api/admin/email-settings/send-preview-email · group admin"
+ },
+ "API-034|Summary": {
+  "text": "GET: lấy 1 cấu hình tài khoản GMO; PUT: cập nhật cấu hình GMO (chặn nếu đổi shopId/shopPass khi tenant liên kết còn booking online chưa huỷ, chặn trùng shopId); DELETE: xoá cấu hình GMO nếu chưa gắn tenant nào",
+  "ctx": "ANY /api/admin/gmo-settings/:id · group admin"
+ },
+ "API-034|Note": {
+  "text": "Methods: GET, PUT, DELETE · Called By = suy từ import tĩnh page→component→service (có thể dư)",
+  "ctx": "ANY /api/admin/gmo-settings/:id · group admin"
+ },
+ "API-035|Summary": {
+  "text": "GET: lấy danh sách cấu hình GMO (mới nhất trước); POST: tạo cấu hình GMO mới nếu shopId chưa tồn tại",
+  "ctx": "ANY /api/admin/gmo-settings · group admin"
+ },
+ "API-035|Note": {
+  "text": "Methods: GET, POST · Called By = suy từ import tĩnh page→component→service (có thể dư)",
+  "ctx": "ANY /api/admin/gmo-settings · group admin"
+ },
+ "API-036|Summary": {
+  "text": "GET: lấy 1 tin tức; PUT: cập nhật tin tức (where theo id trong body); DELETE: xoá cứng tin tức theo id trên path",
+  "ctx": "ANY /api/admin/news/:id · group admin"
+ },
+ "API-036|Note": {
+  "text": "Methods: GET, PUT, DELETE · Called By = suy từ import tĩnh page→component→service (có thể dư)",
+  "ctx": "ANY /api/admin/news/:id · group admin"
+ },
+ "API-037|Summary": {
+  "text": "GET: lấy toàn bộ tin tức (không phân trang, không sắp xếp); POST: tạo tin tức mới",
+  "ctx": "ANY /api/admin/news · group admin"
+ },
+ "API-037|Note": {
+  "text": "Methods: GET, POST · Called By = suy từ import tĩnh page→component→service (có thể dư)",
+  "ctx": "ANY /api/admin/news · group admin"
+ },
+ "API-038|Summary": {
+  "text": "Import file CSV mã OBIC (multipart: tenantCode + file); với mỗi dòng, tìm vé của tenant có tên chứa TicketName rồi cập nhật mã OBIC vào ticket_booking_schedules (vé Daily/Hourly) hoặc ticket_details (vé Monthly/DailyTimesLimit) và các tier trong ticket_discount_settings; trả về danh sách dòng đã parse",
+  "ctx": "POST /api/admin/obic-codes · group admin"
+ },
+ "API-039|Summary": {
+  "text": "Đếm số booking có payment_status Completed/Refunded theo bộ lọc tenant, vé, trạng thái doanh thu (tái nhập/chưa dùng) và khoảng ngày (vé Online theo date, vé khác theo checked_out_at) bằng raw SQL",
+  "ctx": "GET /api/admin/revenue-management/count · group admin"
+ },
+ "API-039|Note": {
+  "text": "Called By = suy từ import tĩnh page→component→service (có thể dư)",
+  "ctx": "GET /api/admin/revenue-management/count · group admin"
+ },
+ "API-040|Summary": {
+  "text": "Xuất CSV doanh thu (revenue_data.csv) từ danh sách booking Completed/Refunded theo bộ lọc; bộ cột chọn theo exportingRole (GUEST/STAFF/ADMIN); ghi log hoạt động admin (mặc định DownloadRevenue)",
+  "ctx": "GET /api/admin/revenue-management/export · group admin"
+ },
+ "API-041|Summary": {
+  "text": "Lấy danh sách booking doanh thu (Completed/Refunded) có phân trang theo bộ lọc tenant/vé/trạng thái/khoảng ngày, kèm Ticket+TicketDetail, User, BookingChildAgeInfo; ghi log hoạt động nếu có fromAction",
+  "ctx": "GET /api/admin/revenue-management · group admin"
+ },
+ "API-041|Note": {
+  "text": "Called By = suy từ import tĩnh page→component→service (có thể dư)",
+  "ctx": "GET /api/admin/revenue-management · group admin"
+ },
+ "API-042|Summary": {
+  "text": "GET: lấy 1 nhân viên kèm Tenant; PUT: cập nhật nhân viên (kiểm tra ID mới không trùng staff/admin, hash lại mật khẩu nếu thay đổi); DELETE: xoá cứng nhân viên",
+  "ctx": "ANY /api/admin/staffs/:id · group admin"
+ },
+ "API-042|Note": {
+  "text": "Methods: GET, PUT, DELETE · Called By = suy từ import tĩnh page→component→service (có thể dư)",
+  "ctx": "ANY /api/admin/staffs/:id · group admin"
+ },
+ "API-043|Summary": {
+  "text": "Đếm số nhân viên theo tên và tenantCode (lọc contains, không phân biệt hoa thường), chỉ tenant chưa bị xoá",
+  "ctx": "GET /api/admin/staffs/count · group admin"
+ },
+ "API-043|Note": {
+  "text": "Called By = suy từ import tĩnh page→component→service (có thể dư)",
+  "ctx": "GET /api/admin/staffs/count · group admin"
+ },
+ "API-044|Summary": {
+  "text": "GET: danh sách nhân viên có phân trang, lọc tên/tenantCode (tenant chưa xoá); POST: tạo nhân viên mới (ID không trùng staff/admin, hash mật khẩu, name = họ + tên)",
+  "ctx": "ANY /api/admin/staffs · group admin"
+ },
+ "API-044|Note": {
+  "text": "Methods: GET, POST · Called By = suy từ import tĩnh page→component→service (có thể dư)",
+  "ctx": "ANY /api/admin/staffs · group admin"
+ },
+ "API-045|Summary": {
+  "text": "GET: lấy 1 tenant kèm admin user và cấu hình GMO; PUT: cập nhật tenant + admin user (đổi email admin thì xoá AdminTenant cũ và tạo admin mới; chặn đổi gmoId khi đã có booking online); DELETE: xoá cứng tenant; PATCH: cập nhật imageUrl",
+  "ctx": "ANY /api/admin/tenants/:code · group admin"
+ },
+ "API-045|Note": {
+  "text": "Methods: GET, PUT, DELETE, PATCH · Called By = suy từ import tĩnh page→component→service (có thể dư)",
+  "ctx": "ANY /api/admin/tenants/:code · group admin"
+ },
+ "API-046|Summary": {
+  "text": "Đếm số tenant chưa bị xoá có mã chứa chuỗi code (không phân biệt hoa thường)",
+  "ctx": "GET /api/admin/tenants/count · group admin"
+ },
+ "API-046|Note": {
+  "text": "Called By = suy từ import tĩnh page→component→service (có thể dư)",
+  "ctx": "GET /api/admin/tenants/count · group admin"
+ },
+ "API-047|Summary": {
+  "text": "GET: danh sách tenant (lọc code contains, phân trang) kèm admin user; POST: tạo tenant mới cùng admin user (role Admin, mật khẩu hash, emailVerified = now) sau khi kiểm tra trùng email và mã tenant",
+  "ctx": "ANY /api/admin/tenants · group admin"
+ },
+ "API-047|Note": {
+  "text": "Methods: GET, POST · Called By = suy từ import tĩnh page→component→service (có thể dư)",
+  "ctx": "ANY /api/admin/tenants · group admin"
+ },
+ "API-048|Summary": {
+  "text": "Kiểm tra có booking nào gắn với khung đặt chỗ ticketBookingScheduleId hay không",
+  "ctx": "GET /api/admin/ticket-booking-schedules/has-booking · group admin"
+ },
+ "API-048|Note": {
+  "text": "Called By = suy từ import tĩnh page→component→service (có thể dư)",
+  "ctx": "GET /api/admin/ticket-booking-schedules/has-booking · group admin"
+ },
+ "API-049|Summary": {
+  "text": "POST: tạo hàng loạt khung đặt chỗ (createMany); PUT: đồng bộ danh sách khung đặt chỗ của 1 vé — khung bị bỏ ra thì soft delete (chặn nếu còn booking và khung chưa quá hạn), upsert các khung gửi lên, rồi backfill mã OBIC cho booking_obic_codes đang pending nếu mã OBIC chuyển từ rỗng sang có giá trị",
+  "ctx": "ANY /api/admin/ticket-booking-schedules · group admin"
+ },
+ "API-049|Note": {
+  "text": "Methods: POST, PUT · Called By = suy từ import tĩnh page→component→service (có thể dư)",
+  "ctx": "ANY /api/admin/ticket-booking-schedules · group admin"
+ },
+ "API-050|Summary": {
+  "text": "GET: lấy vé kèm TicketDetail, Tenant, khung đặt chỗ chưa xoá, cấu hình giảm giá (tuỳ chọn kèm vé con của vé tháng master và cờ hasBooking); PUT: cập nhật vé trong transaction (đồng bộ vé con theo slaveTenantCodes), gửi mail cho SuperAdmin nếu Admin sửa, backfill mã OBIC pending; DELETE (chỉ SuperAdmin): xoá vé và vé con nếu chưa có booking; PATCH: cập nhật videoUrl (lan sang vé con chưa có video)",
+  "ctx": "ANY /api/admin/tickets/:id · group admin"
+ },
+ "API-050|Note": {
+  "text": "Methods: GET, PUT, DELETE, PATCH · Called By = suy từ import tĩnh page→component→service (có thể dư) · CR-002 đã duyệt 20/10/2026 — chờ release (① 5/11 · ② 19/11), xác nhận lại sau release: IMP-015 Nhận và lưu limited_public; trả trong GET",
+  "ctx": "ANY /api/admin/tickets/:id · group admin"
+ },
+ "API-051|Summary": {
+  "text": "Tìm các nguồn mã OBIC đang pending của booking thuộc vé, rồi chạy backfill gán mã OBIC hiện tại của vé vào các dòng booking_obic_codes pending",
+  "ctx": "POST /api/admin/tickets/:id/backfill-obic-codes · group admin"
+ },
+ "API-052|Summary": {
+  "text": "Đếm số vé theo tenantCode (contains; mặc định tenant của admin) và danh sách loại vé",
+  "ctx": "GET /api/admin/tickets/count · group admin"
+ },
+ "API-052|Note": {
+  "text": "Called By = suy từ import tĩnh page→component→service (có thể dư)",
+  "ctx": "GET /api/admin/tickets/count · group admin"
+ },
+ "API-053|Summary": {
+  "text": "Kiểm tra vé ticketId đã có booking nào chưa",
+  "ctx": "GET /api/admin/tickets/has-booking · group admin"
+ },
+ "API-053|Note": {
+  "text": "Called By = suy từ import tĩnh page→component→service (có thể dư)",
+  "ctx": "GET /api/admin/tickets/has-booking · group admin"
+ },
+ "API-054|Summary": {
+  "text": "GET: danh sách vé theo tenant (mặc định tenant của admin), loại vé, hình thức thanh toán, cho đặt trước, có phân trang, kèm TicketDetail, khung đặt chỗ (tuỳ chọn bỏ khung hết hạn), Tenant; POST: tạo vé mới cùng TicketDetail/TicketDiscountSetting, và tạo vé con Monthly cho từng slaveTenantCodes nếu là vé tháng master",
+  "ctx": "ANY /api/admin/tickets · group admin"
+ },
+ "API-054|Note": {
+  "text": "Methods: GET, POST · Called By = suy từ import tĩnh page→component→service (có thể dư) · CR-002 đã duyệt 20/10/2026 — chờ release (① 5/11 · ② 19/11), xác nhận lại sau release: IMP-015 Nhận và lưu limited_public; trả trong GET",
+  "ctx": "ANY /api/admin/tickets · group admin"
+ },
+ "API-055|Summary": {
+  "text": "Xuất file Excel (.xlsx) tổng hợp số lượng theo mã OBIC từ booking_obic_codes đã chốt (không pending, không xoá) của booking Completed chưa huỷ, lọc theo tenant và khoảng computedAt",
+  "ctx": "GET /api/admin/tickets/obic-codes/export · group admin"
+ },
+ "API-056|Summary": {
+  "text": "GET: lấy 1 user theo id; PUT: cập nhật user (validate theo schema admin hoặc staff tuỳ fromStaff, hash lại mật khẩu nếu khác giá trị lưu); DELETE: soft delete user (đánh dấu deleted, đổi email thành dạng đã xoá) và xoá các bản ghi accounts liên kết",
+  "ctx": "ANY /api/admin/users/:id · group admin"
+ },
+ "API-056|Note": {
+  "text": "Methods: GET, PUT, DELETE · Called By = suy từ import tĩnh page→component→service (có thể dư)",
+  "ctx": "ANY /api/admin/users/:id · group admin"
+ },
+ "API-057|Summary": {
+  "text": "Đếm số user role User chưa bị xoá theo tên/email/SĐT (contains) và khoảng ngày tạo",
+  "ctx": "GET /api/admin/users/count · group admin"
+ },
+ "API-057|Note": {
+  "text": "Called By = suy từ import tĩnh page→component→service (có thể dư)",
+  "ctx": "GET /api/admin/users/count · group admin"
+ },
+ "API-058|Summary": {
+  "text": "GET: danh sách user role User theo tên/email/SĐT/khoảng ngày tạo, có phân trang, tuỳ chọn kèm số lần checkout và lần checkout cuối (raw SQL trên bookings), ghi log hoạt động nếu có fromAction; POST: tạo user mới (kiểm tra trùng email kể cả đã xoá, hash mật khẩu, emailVerified = now) và gửi email đăng ký thành công",
+  "ctx": "ANY /api/admin/users · group admin"
+ },
+ "API-058|Note": {
+  "text": "Methods: GET, POST · Called By = suy từ import tĩnh page→component→service (có thể dư)",
+  "ctx": "ANY /api/admin/users · group admin"
+ },
+ "API-059|Summary": {
+  "text": "GET: lấy 1 bản ghi cấu hình ứng dụng (app_settings) theo settingKey trên URL.",
+  "ctx": "GET /api/app-settings/:settingKey · group app-settings"
+ },
+ "API-060|Summary": {
+  "text": "GET: trả về danh sách quốc gia/IP được phép (đọc file JSON trên S3, cache 5 phút; lỗi S3 thì trả cache cũ hoặc danh sách rỗng = cho phép tất cả).",
+  "ctx": "GET /api/app-settings/ip-whitelist · group app-settings"
+ },
+ "API-061|Summary": {
+  "text": "Endpoint NextAuth: đăng nhập bằng email+mật khẩu (provider 'credentials', có câu hỏi bảo mật tuỳ chọn), đăng nhập bằng token (provider 'token'), đăng nhập LINE; phiên JWT 1 ngày (7 ngày nếu rememberMe); các method/route con do thư viện NextAuth xử lý.",
+  "ctx": "ANY /api/auth/:nextauth* · group auth"
+ },
+ "API-062|Summary": {
+  "text": "PUT: SuperAdmin đổi email của chính tài khoản đang đăng nhập.",
+  "ctx": "PUT /api/auth/change-email · group auth"
+ },
+ "API-062|Note": {
+  "text": "Called By = suy từ import tĩnh page→component→service (có thể dư)",
+  "ctx": "PUT /api/auth/change-email · group auth"
+ },
+ "API-063|Summary": {
+  "text": "POST: nhận email; nếu là SuperAdmin thì gửi mail chứa link mở khoá tài khoản (/admin/unlock-account/<token>) và trả token trong response.",
+  "ctx": "POST /api/auth/request-unlock-account · group auth"
+ },
+ "API-063|Note": {
+  "text": "Called By = suy từ import tĩnh page→component→service (có thể dư)",
+  "ctx": "POST /api/auth/request-unlock-account · group auth"
+ },
+ "API-064|Summary": {
+  "text": "POST: tìm user theo token (nếu có) hoặc theo email, gửi lại mail xác thực tài khoản chứa link /verify/<token>?email=… tới email trong body.",
+  "ctx": "POST /api/auth/resend-verification-email · group auth"
+ },
+ "API-064|Note": {
+  "text": "Called By = suy từ import tĩnh page→component→service (có thể dư)",
+  "ctx": "POST /api/auth/resend-verification-email · group auth"
+ },
+ "API-065|Summary": {
+  "text": "GET: trả toàn bộ bản ghi security_questions.",
+  "ctx": "GET /api/auth/security-questions · group auth"
+ },
+ "API-065|Note": {
+  "text": "Called By = suy từ import tĩnh page→component→service (có thể dư)",
+  "ctx": "GET /api/auth/security-questions · group auth"
+ },
+ "API-066|Summary": {
+  "text": "POST: đăng ký user mới (hash mật khẩu, sinh token), gửi mail xác thực; nếu systemCreated=true thì đánh dấu đã xác thực email ngay và không gửi mail.",
+  "ctx": "POST /api/auth/signup · group auth"
+ },
+ "API-066|Note": {
+  "text": "Called By = suy từ import tĩnh page→component→service (có thể dư)",
+  "ctx": "POST /api/auth/signup · group auth"
+ },
+ "API-067|Summary": {
+  "text": "POST: tìm user theo token, mở khoá tài khoản (locked=false, loginAttempts=0).",
+  "ctx": "POST /api/auth/unlock-account · group auth"
+ },
+ "API-067|Note": {
+  "text": "Called By = suy từ import tĩnh page→component→service (có thể dư)",
+  "ctx": "POST /api/auth/unlock-account · group auth"
+ },
+ "API-068|Summary": {
+  "text": "GET: kiểm tra đã có booking con (chưa huỷ) nào thuộc booking vé tháng parentBookingId hay chưa; trả true/false.",
+  "ctx": "GET /api/bookings/check-monthly-ticket-already-used · group bookings"
+ },
+ "API-068|Note": {
+  "text": "Called By = suy từ import tĩnh page→component→service (có thể dư)",
+  "ctx": "GET /api/bookings/check-monthly-ticket-already-used · group bookings"
+ },
+ "API-069|Summary": {
+  "text": "GET: với vé tháng — kiểm tra user có vé tháng đã thanh toán còn hạn; với vé khác — kiểm tra user đã có booking Successful (Completed/Refunded) cùng vé cùng ngày (vé Daily: chỉ xét booking tạo trong 7 ngày gần nhất).",
+  "ctx": "GET /api/bookings/check-same-date-booking-exists · group bookings"
+ },
+ "API-069|Note": {
+  "text": "Called By = suy từ import tĩnh page→component→service (có thể dư)",
+  "ctx": "GET /api/bookings/check-same-date-booking-exists · group bookings"
+ },
+ "API-070|Summary": {
+  "text": "POST: tạo booking online (kiểm tra lịch bán vé, validate, kiểm tra chỗ trống vé 1 ngày online), sinh barcode, lưu tuổi trẻ em; nếu có cardSeq thì đăng ký + thực hiện giao dịch GMO (3DS thì trả RedirectUrl), sau đó gửi mail xác nhận. GET: tìm danh sách booking theo date/fromDate/barCode/tenantCode/ticketId có phân trang.",
+  "ctx": "ANY /api/bookings · group bookings"
+ },
+ "API-070|Note": {
+  "text": "Methods: GET, POST · Called By = suy từ import tĩnh page→component→service (có thể dư)",
+  "ctx": "ANY /api/bookings · group bookings"
+ },
+ "API-071|Summary": {
+  "text": "GET: lấy booking theo id, rồi trả mọi booking cùng barcode (tạo trong 1 năm, trạng thái khác CheckedOut/Cancelled/SystemCancelled) với các trường giới hạn kèm Ticket.",
+  "ctx": "GET /api/bookings/main-bookings/:id · group bookings"
+ },
+ "API-071|Note": {
+  "text": "Called By = suy từ import tĩnh page→component→service (có thể dư)",
+  "ctx": "GET /api/bookings/main-bookings/:id · group bookings"
+ },
+ "API-072|Summary": {
+  "text": "GET: trả trạng thái (status) của booking theo bookingId.",
+  "ctx": "GET /api/bookings/status · group bookings"
+ },
+ "API-072|Note": {
+  "text": "Called By = suy từ import tĩnh page→component→service (có thể dư)",
+  "ctx": "GET /api/bookings/status · group bookings"
+ },
+ "API-073|Summary": {
+  "text": "GET: tra cứu giao dịch GMO (SearchTrade) của booking theo id; role User chỉ xem được booking của mình.",
+  "ctx": "GET /api/bookings/transaction/:id · group bookings"
+ },
+ "API-073|Note": {
+  "text": "Called By = suy từ import tĩnh page→component→service (có thể dư)",
+  "ctx": "GET /api/bookings/transaction/:id · group bookings"
+ },
+ "API-074|Summary": {
+  "text": "POST: tạo nhóm booking dùng trong ngày tại cửa hàng (nhiều vé, cùng barcode hoặc gắn vào mainBooking), kiểm tra giới hạn lượt/chỗ trống, xếp hàng chờ nếu đầy, lưu trong transaction rồi gửi mail xác nhận kèm barcode.",
+  "ctx": "POST /api/bookings/use-in-day · group bookings"
+ },
+ "API-074|Note": {
+  "text": "Called By = suy từ import tĩnh page→component→service (có thể dư)",
+  "ctx": "POST /api/bookings/use-in-day · group bookings"
+ },
+ "API-075|Summary": {
+  "text": "GET: tính tình trạng chỗ trống trong ngày (inDayTenantStatus) và chỗ trống vé 1 ngày online cho các ngày tới (oneDayOnlineTenantStatus) theo danh sách cửa hàng.",
+  "ctx": "GET /api/bookings/vacancies/status · group bookings"
+ },
+ "API-075|Note": {
+  "text": "Called By = suy từ import tĩnh page→component→service (có thể dư) · CR-002 đã duyệt 20/10/2026 — chờ release (① 5/11 · ② 19/11), xác nhận lại sau release: IMP-012 Lọc vé limited_public ở tầng response theo khoá (KHÔNG sửa getTenantTicketsForVacancy dùng chung)",
+  "ctx": "GET /api/bookings/vacancies/status · group bookings"
+ },
+ "API-076|Summary": {
+  "text": "GET: job bảo trì hằng ngày — xoá sse_notifications cũ hơn thời gian lưu giữ (nếu ENABLE_CRON_JOB bật).",
+  "ctx": "GET /api/cron-job/daily · group cron-job"
+ },
+ "API-077|Summary": {
+  "text": "GET (chạy mỗi phút): tìm booking hôm nay ở trạng thái Calling quá CALLING_TIME_LIMIT_IN_MINUTES, khoá hàng (FOR UPDATE SKIP LOCKED) theo lô; đã checkout thì chuyển CheckedOut, chưa thì SystemCancelled + gửi mail huỷ; huỷ cả nhóm cùng barcode nếu số trẻ không hợp lệ; gọi booking chờ tiếp theo.",
+  "ctx": "GET /api/cron-job/process-overdue-calling-booking · group cron-job"
+ },
+ "API-078|Summary": {
+  "text": "GET (chạy mỗi phút): tìm booking hôm nay trạng thái Successful tạo quá CALLING_TIME_LIMIT_IN_MINUTES mà chưa thanh toán (Pending, chưa có GMOTransactionId) hoặc là lượt dùng vé tháng, chuyển SystemCancelled + gửi mail; huỷ cả nhóm cùng barcode nếu số trẻ không hợp lệ; gọi booking chờ tiếp theo.",
+  "ctx": "GET /api/cron-job/process-overdue-no-waiting-booking · group cron-job"
+ },
+ "API-079|Summary": {
+  "text": "GET: đối soát 仮販売 cuối ngày — với mỗi smaregi_temporary_transactions trạng thái Normal, tìm contractId của tenant theo storeId, gọi Smaregi GET /transactions theo barcode + khung thời gian; nếu có giao dịch thì xử lý (booking -> Completed) và đánh dấu dòng Completed.",
+  "ctx": "GET /api/cron-job/reconcile-smaregi-transactions · group cron-job"
+ },
+ "API-080|Summary": {
+  "text": "GET (mỗi phút): với booking vé lượt (DailyTimesLimit/HourlyTimesLimit) chưa nhắc hết hạn và lịch bán có bật nhắc, tính hạn và số lượt còn; hết hạn/hết lượt thì đánh dấu đã nhắc, đến ngày/giờ nhắc thì gửi mail nhắc hết hạn và ghi expirationRemindedAt.",
+  "ctx": "GET /api/cron-job/remind-booking-expired · group cron-job"
+ },
+ "API-081|Summary": {
+  "text": "GET (mỗi phút): với booking vé Daily từ hôm nay trở đi (không huỷ, không phải online đang chờ thanh toán) có cấu hình remindBeforeInDay/remindAt, đến đúng ngày/giờ thì ghi remindedAt và gửi mail nhắc sử dụng.",
+  "ctx": "GET /api/cron-job/remind-one-day-booking · group cron-job"
+ },
+ "API-082|Summary": {
+  "text": "GET (mỗi phút): với booking vé tháng / vé lượt (booking cha, không phải online đang chờ thanh toán) từ hôm nay trở đi, đọc MONTHLY_REMIND_BEFORE_IN_DAY và MONTHLY_REMIND_AT; đến đúng ngày/giờ thì ghi remindedAt và gửi mail nhắc sử dụng vé tháng.",
+  "ctx": "GET /api/cron-job/remind-using-booking · group cron-job"
+ },
+ "API-083|Summary": {
+  "text": "GET: trả toàn bộ điều khoản miễn trừ (disclaimers) kèm các lựa chọn (disclaimer_options).",
+  "ctx": "GET /api/disclaimers · group disclaimers"
+ },
+ "API-083|Note": {
+  "text": "Called By = suy từ import tĩnh page→component→service (có thể dư)",
+  "ctx": "GET /api/disclaimers · group disclaimers"
+ },
+ "API-084|Summary": {
+  "text": "POST: nhận lỗi từ client và ghi error.stack hoặc error.message vào log server.",
+  "ctx": "POST /api/error-report · group error-report"
+ },
+ "API-085|Summary": {
+  "text": "POST: callback 3DS của GMO — nếu booking còn Pending thì lấy/thi hành kết quả xác thực 3DS; Y/A: thực hiện SecureTran, cập nhật booking Completed + gửi mail rồi redirect trang thành công; C: redirect ChallengeUrl; khác/lỗi: huỷ booking (SystemCancelled hoặc xoá), huỷ giao dịch GMO và redirect trang thất bại.",
+  "ctx": "POST /api/gmo/callback · group gmo"
+ },
+ "API-086|Summary": {
+  "text": "GET: health check — trả CPU, RAM, dung lượng đĩa của web server và trạng thái DB (SELECT 1, số kết nối active trong pg_stat_activity) kèm cảnh báo khi ≥ 80.",
+  "ctx": "GET /api/health · group health"
+ },
+ "API-087|Summary": {
+  "text": "GET: chèn 5 câu hỏi bảo mật (kèm câu trả lời hardcode trong source) vào security_questions bằng createMany.",
+  "ctx": "GET /api/migration/add-security-questions · group migration"
+ },
+ "API-088|Summary": {
+  "text": "GET: tạo mới 1 bản ghi email_settings với emailKey 'unlock-account' (mẫu mail mở khoá tài khoản phía quản trị) từ dữ liệu cứng trong code và trả về bản ghi vừa tạo.",
+  "ctx": "GET /api/migration/email-settings/add-unlock-account · group migration"
+ },
+ "API-089|Summary": {
+  "text": "GET: duyệt các user role User chưa có firstCheckedOutBookingId, tìm booking đầu tiên đã check-in (không bị huỷ) theo createdAt và ghi id vào users.firstCheckedOutBookingId; trả về số user chưa điền và số đã điền.",
+  "ctx": "GET /api/migration/fill-first-checked-out-booking-id-for-users · group migration"
+ },
+ "API-090|Summary": {
+  "text": "GET: upsert 1 bản ghi gmo_settings mặc định từ cấu hình GMO shop (env NEXT_PUBLIC_GMO_SHOP_ID / GMO_SHOP_PASS) rồi gán gmoId đó cho mọi tenant đang có gmoId null; trả về số tenant chưa điền và số đã điền.",
+  "ctx": "GET /api/migration/fill-gmo-id-for-tenant · group migration"
+ },
+ "API-091|Summary": {
+  "text": "GET: với mọi booking có ticketBookingScheduleId null, xác định lịch đặt (ticket_booking_schedules) theo ngày booking (hoặc ngày booking cha) qua getTicketBookingSchedule và ghi ticketBookingScheduleId; trả về số booking chưa điền và số đã điền.",
+  "ctx": "GET /api/migration/fill-ticket-booking-schedule-id-for-booking · group migration"
+ },
+ "API-092|Summary": {
+  "text": "GET: điền tickets.groupId cho các ticket có groupId null — ticket không có masterTicketId nhận groupId = timestamp createdAt; nếu là vé tháng master thì các ticket slave nhận groupId '<groupId>_<timestamp hiện tại>'; trả về số ticket chưa điền.",
+  "ctx": "GET /api/migration/fill-ticket-group-id · group migration"
+ },
+ "API-093|Summary": {
+  "text": "GET: với mọi ticket_details có enableDiscount=true mà chưa có ticket_discount_settings, tạo setting mới (threshold 2, mức giảm người lớn/trẻ em lấy từ ticket_details, hourlyExtraTimeSetting rỗng); trả về số đã tạo và số đã có sẵn.",
+  "ctx": "GET /api/migration/migrate-discount-setting · group migration"
+ },
+ "API-094|Summary": {
+  "text": "GET: trả danh sách tin tức (news) có phân trang theo limit/page và sắp xếp theo sort_by dạng '<field>.<asc|desc>'.",
+  "ctx": "GET /api/news · group news"
+ },
+ "API-094|Note": {
+  "text": "Called By = suy từ import tĩnh page→component→service (có thể dư)",
+  "ctx": "GET /api/news · group news"
+ },
+ "API-095|Summary": {
+  "text": "POST: tìm các booking theo barCode (trong 1 năm), lọc booking đang CheckedIn, tính tổng tiền phải trả tại thời điểm payTimeAt, lưu payTimeAt vào bookings.tempCheckoutAt và trả totalAmount cho POS.",
+  "ctx": "POST /api/pos/bookings/calculate-pay-amount · group pos"
+ },
+ "API-096|Summary": {
+  "text": "POST: khoá (SELECT FOR UPDATE) các booking theo barCode trong 1 năm, kiểm tra ngày/trạng thái/thanh toán/khả năng check-in rồi chuyển sang CheckedIn và xoá partial_checkouts liên quan; DELETE: huỷ check-in — hoàn trạng thái booking CheckedIn về Successful/Calling/CheckedOut, giảm reCheckInCount và xoá partial_checkouts.",
+  "ctx": "ANY /api/pos/bookings/check-in · group pos"
+ },
+ "API-096|Note": {
+  "text": "Methods: POST, DELETE",
+  "ctx": "ANY /api/pos/bookings/check-in · group pos"
+ },
+ "API-097|Summary": {
+  "text": "POST: check-out các booking CheckedIn theo barCode — cập nhật trạng thái CheckedOut/thanh toán Completed, coupon, thời gian lưu trú, cộng totalAmount cho booking offline đầu tiên, tính lại mã OBIC (booking_obic_codes), xoá partial_checkouts, ghi firstCheckedOutBookingId cho user, gửi email check-out và gọi xử lý hàng chờ; DELETE: huỷ check-out — đưa booking về CheckedIn, khôi phục partial checkout, soft-delete mã OBIC, reset thanh toán nếu là lần check-out đầu.",
+  "ctx": "ANY /api/pos/bookings/check-out · group pos"
+ },
+ "API-097|Note": {
+  "text": "Methods: POST, DELETE",
+  "ctx": "ANY /api/pos/bookings/check-out · group pos"
+ },
+ "API-098|Summary": {
+  "text": "POST: tra cứu các booking theo barCode (trong 1 năm) cho POS — kiểm tra ngày và khả năng check-in (trừ khi noCheck), trả về từng booking với mã vé người lớn/trẻ em, đơn giá, số lượng, mức giảm và trạng thái thanh toán.",
+  "ctx": "POST /api/pos/bookings · group pos"
+ },
+ "API-099|Summary": {
+  "text": "POST: kiểm tra định dạng barCode (toàn chữ số và độ dài bằng BARCODE_LENGTH) và trả resultCode thành công/thất bại; không truy cập DB.",
+  "ctx": "POST /api/pos/test · group pos"
+ },
+ "API-100|Summary": {
+  "text": "POST: webhook nhận sự kiện giao dịch từ Smaregi — kiểm tra header smaregi-event = 'pos:transactions' và contractId thuộc 1 tenant, rồi với từng transactionHeadId: action 'created' thì quyết toán giao dịch (processSmaregiTransaction), action khác thì xử lý sửa/huỷ (handleSmaregiTransactionMutation); luôn trả 200.",
+  "ctx": "POST /api/smaregi/webhook-transactions · group smaregi"
+ },
+ "API-101|Summary": {
+  "text": "GET: health-check, luôn trả 200 với data rỗng.",
+  "ctx": "GET /api/status · group status"
+ },
+ "API-102|Summary": {
+  "text": "GET: trả về toàn bộ bản ghi tenant theo code (null nếu không có).",
+  "ctx": "GET /api/tenants/:code · group tenants"
+ },
+ "API-102|Note": {
+  "text": "Called By = suy từ import tĩnh page→component→service (có thể dư)",
+  "ctx": "GET /api/tenants/:code · group tenants"
+ },
+ "API-103|Summary": {
+  "text": "GET: đếm số tenant có name hoặc address chứa chuỗi search (không phân biệt hoa thường).",
+  "ctx": "GET /api/tenants/count · group tenants"
+ },
+ "API-104|Summary": {
+  "text": "GET: trả danh sách tenant (bỏ cột gmoId) có name/address/guide chứa search, mặc định chỉ tenant active, sắp xếp createdAt giảm dần, phân trang page/limit.",
+  "ctx": "GET /api/tenants · group tenants"
+ },
+ "API-104|Note": {
+  "text": "Called By = suy từ import tĩnh page→component→service (có thể dư)",
+  "ctx": "GET /api/tenants · group tenants"
+ },
+ "API-105|Summary": {
+  "text": "GET: trả các ticket slave (masterTicketId = tham số) thuộc tenant active/không bị xoá, tuỳ chọn kèm tenant và lịch đặt còn hiệu lực, có thể lọc chỉ ticket có lịch đặt / có lịch đặt hôm nay.",
+  "ctx": "GET /api/tickets-supported/:masterTicketId · group tickets-supported"
+ },
+ "API-105|Note": {
+  "text": "Called By = suy từ import tĩnh page→component→service (có thể dư)",
+  "ctx": "GET /api/tickets-supported/:masterTicketId · group tickets-supported"
+ },
+ "API-106|Summary": {
+  "text": "GET: trả chi tiết 1 ticket theo id kèm ticket_details, ticket_discount_settings, lịch đặt chưa xoá và thông tin tenant rút gọn.",
+  "ctx": "GET /api/tickets/:id · group tickets"
+ },
+ "API-106|Note": {
+  "text": "Called By = suy từ import tĩnh page→component→service (có thể dư)",
+  "ctx": "GET /api/tickets/:id · group tickets"
+ },
+ "API-107|Summary": {
+  "text": "GET: trả danh sách ticket visibility=true theo tenantCode/paymentType/canBookInAdvance/ticketTypes, kèm lịch đặt còn hiệu lực, chi tiết, discount và tenant rút gọn; khi sourcePage='price-list' loại các tên ticket bị ẩn đọc từ file hidden-tickets.json trên S3; tuỳ chọn lọc có lịch đặt và gắn danh sách slaveTenants.",
+  "ctx": "GET /api/tickets · group tickets"
+ },
+ "API-107|Note": {
+  "text": "Called By = suy từ import tĩnh page→component→service (có thể dư) · CR-002 đã duyệt 20/10/2026 — chờ release (① 5/11 · ② 19/11), xác nhận lại sau release: IMP-011 Mặc định bỏ vé limited_public = true; có khoá 限定公開 hợp lệ → chỉ trả vé limited_public",
+  "ctx": "GET /api/tickets · group tickets"
+ },
+ "API-108|Summary": {
+  "text": "POST: nhận 1 file multipart (field 'file') bằng formidable; nếu STORAGE_TYPE='s3' thì upload lên S3 (prefix theo env), ngược lại đổi tên file vào ./public/uploads với tên newFileName (nếu có) hoặc tên gốc; trả về fileName.",
+  "ctx": "POST /api/upload · group upload"
+ },
+ "API-108|Note": {
+  "text": "Called By = suy từ import tĩnh page→component→service (có thể dư)",
+  "ctx": "POST /api/upload · group upload"
+ },
+ "API-109|Summary": {
+  "text": "GET: trả chi tiết 1 booking của user đang đăng nhập (kèm ticket, tenant, tuổi trẻ em, lịch đặt, partial checkout; số lần đã dùng cho vé giới hạn lượt, giá phát sinh cho vé theo giờ đã check-out, barcode 仮販売 Smaregi mới nhất); PUT: sửa booking — kiểm tra trạng thái/khả năng sửa, validate, tính lại tổng tiền, đổi số tiền giao dịch GMO nếu cần, cập nhật booking + tuổi trẻ em và gửi email cập nhật kèm barcode.",
+  "ctx": "ANY /api/user/bookings/:id · group user"
+ },
+ "API-109|Note": {
+  "text": "Methods: GET, PUT · Called By = suy từ import tĩnh page→component→service (có thể dư)",
+  "ctx": "ANY /api/user/bookings/:id · group user"
+ },
+ "API-110|Summary": {
+  "text": "PATCH: cập nhật cờ isSmaregiScanned của booking thuộc user đang đăng nhập, và cập nhật paymentStatus nếu ticket là Offline hoặc không phải loại Monthly/DailyTimesLimit; trả booking sau cập nhật.",
+  "ctx": "PATCH /api/user/bookings/:id/payment-status · group user"
+ },
+ "API-110|Note": {
+  "text": "Called By = suy từ import tĩnh page→component→service (có thể dư)",
+  "ctx": "PATCH /api/user/bookings/:id/payment-status · group user"
+ },
+ "API-111|Summary": {
+  "text": "POST: huỷ booking — nếu thanh toán online thì tra cứu và huỷ giao dịch GMO; cập nhật status Cancelled (paymentStatus Refunded/Pending, hoặc giữ CheckedOut/Completed nếu đã check-out) cho 1 booking hoặc mọi booking cùng barCode; gửi email huỷ và chọn booking chờ tiếp theo nếu cần.",
+  "ctx": "POST /api/user/bookings/cancel · group user"
+ },
+ "API-111|Note": {
+  "text": "Called By = suy từ import tĩnh page→component→service (có thể dư)",
+  "ctx": "POST /api/user/bookings/cancel · group user"
+ },
+ "API-112|Summary": {
+  "text": "GET: trả danh sách booking của user đang đăng nhập (lọc theo date hoặc fromDate, loại booking GMO đang Pending chưa check-out), kèm ticket, tenant rút gọn, tuổi trẻ em, partial checkout, tổng tiền đã format và barcode 仮販売 Smaregi mới nhất.",
+  "ctx": "GET /api/user/bookings · group user"
+ },
+ "API-112|Note": {
+  "text": "Called By = suy từ import tĩnh page→component→service (có thể dư)",
+  "ctx": "GET /api/user/bookings · group user"
+ },
+ "API-113|Summary": {
+  "text": "GET: lấy booking gần nhất (không huỷ, không có GMOTransactionId) của user đang đăng nhập, rồi trả mọi booking cùng barCode trong 1 năm (không huỷ) có ticket khớp canBookInAdvance hoặc là loại DailyTimesLimit/HourlyTimesLimit.",
+  "ctx": "GET /api/user/bookings/last-booking · group user"
+ },
+ "API-113|Note": {
+  "text": "Called By = suy từ import tĩnh page→component→service (có thể dư)",
+  "ctx": "GET /api/user/bookings/last-booking · group user"
+ },
+ "API-114|Summary": {
+  "text": "GET: trả true nếu user có ít nhất 1 vé tháng (Successful, đã thanh toán/hoàn, gắn master ticket, còn hạn) tại tenantCode hoặc mua ở tenant khác nhưng hỗ trợ tenantCode mà chưa được sử dụng; ngược lại false.",
+  "ctx": "GET /api/user/bookings/monthly-tickets/check-already-used-across-tenants · group user"
+ },
+ "API-114|Note": {
+  "text": "Called By = suy từ import tĩnh page→component→service (có thể dư)",
+  "ctx": "GET /api/user/bookings/monthly-tickets/check-already-used-across-tenants · group user"
+ },
+ "API-115|Summary": {
+  "text": "GET: đếm số booking vé tháng gốc (parentBookingId null, thanh toán Completed/Refunded) của user, trạng thái Successful (kèm Cancelled/SystemCancelled nếu includeCancelledStatus).",
+  "ctx": "GET /api/user/bookings/monthly-tickets/count · group user"
+ },
+ "API-115|Note": {
+  "text": "Called By = suy từ import tĩnh page→component→service (có thể dư)",
+  "ctx": "GET /api/user/bookings/monthly-tickets/count · group user"
+ },
+ "API-116|Summary": {
+  "text": "GET: với 1 booking vé tháng (monthlyBookingId) trả số lần đã dùng, đã dùng hôm nay chưa, số lần đặt tối đa theo lịch đặt hôm nay của ticketId, còn hạn không và ngày hết hạn.",
+  "ctx": "GET /api/user/bookings/monthly-tickets/extra-info · group user"
+ },
+ "API-116|Note": {
+  "text": "Called By = suy từ import tĩnh page→component→service (có thể dư)",
+  "ctx": "GET /api/user/bookings/monthly-tickets/extra-info · group user"
+ },
+ "API-117|Summary": {
+  "text": "GET: lấy danh sách booking vé tháng (Monthly, booking gốc, thanh toán Completed/Refunded) của user đang đăng nhập tại tenantCode, tuỳ chọn tính hạn dùng, lọc còn hạn và bổ sung vé tháng mua ở tenant khác nhưng hỗ trợ tenant này.",
+  "ctx": "GET /api/user/bookings/monthly-tickets · group user"
+ },
+ "API-117|Note": {
+  "text": "Called By = suy từ import tĩnh page→component→service (có thể dư)",
+  "ctx": "GET /api/user/bookings/monthly-tickets · group user"
+ },
+ "API-118|Summary": {
+  "text": "POST: checkout một phần số người (người lớn/trẻ em) của booking, tạo bản ghi partial_checkouts, cập nhật số lượng đã checkout và thời gian lưu trú khi đã checkout hết, rồi gọi booking đang chờ tiếp theo và gửi mail thông báo.",
+  "ctx": "POST /api/user/bookings/partial-checkout/:id · group user"
+ },
+ "API-118|Note": {
+  "text": "Called By = suy từ import tĩnh page→component→service (có thể dư)",
+  "ctx": "POST /api/user/bookings/partial-checkout/:id · group user"
+ },
+ "API-119|Summary": {
+  "text": "PATCH: với các booking cùng barCode trong 1 năm gần đây đang CheckedIn/CheckedOut (không phải vé Hourly/HourlyTimesLimit), ghi requestedReCheckInAt và chuyển booking CheckedOut sang Waiting hoặc Calling tuỳ isMustWaiting.",
+  "ctx": "PATCH /api/user/bookings/request-re-check-in · group user"
+ },
+ "API-119|Note": {
+  "text": "Called By = suy từ import tĩnh page→component→service (có thể dư)",
+  "ctx": "PATCH /api/user/bookings/request-re-check-in · group user"
+ },
+ "API-120|Summary": {
+  "text": "GET: đếm số booking gốc vé giới hạn số lần (HourlyTimesLimit/DailyTimesLimit) của user đang đăng nhập có thanh toán Completed/Refunded.",
+  "ctx": "GET /api/user/bookings/times-limit-tickets/count · group user"
+ },
+ "API-120|Note": {
+  "text": "Called By = suy từ import tĩnh page→component→service (có thể dư)",
+  "ctx": "GET /api/user/bookings/times-limit-tickets/count · group user"
+ },
+ "API-121|Summary": {
+  "text": "GET: lấy danh sách booking vé giới hạn số lần của user tại tenantCode kèm lịch sử sử dụng (booking con) và số lần đã dùng, tuỳ chọn tính hạn dùng, lọc còn hạn và bổ sung vé tháng mua ở tenant khác hỗ trợ tenant này.",
+  "ctx": "GET /api/user/bookings/times-limit-tickets · group user"
+ },
+ "API-121|Note": {
+  "text": "Called By = suy từ import tĩnh page→component→service (có thể dư)",
+  "ctx": "GET /api/user/bookings/times-limit-tickets · group user"
+ },
+ "API-122|Summary": {
+  "text": "POST: kiểm tra email đã tồn tại chưa (kể cả user đã xoá mềm qua raw query) và trả về đã xác thực hay chưa kèm message.",
+  "ctx": "POST /api/user/check-existing-email · group user"
+ },
+ "API-122|Note": {
+  "text": "Called By = suy từ import tĩnh page→component→service (có thể dư)",
+  "ctx": "POST /api/user/check-existing-email · group user"
+ },
+ "API-123|Summary": {
+  "text": "GET: trả về true nếu user đang đăng nhập đã có email và firstName.",
+  "ctx": "GET /api/user/check-required-info · group user"
+ },
+ "API-123|Note": {
+  "text": "Called By = suy từ import tĩnh page→component→service (có thể dư)",
+  "ctx": "GET /api/user/check-required-info · group user"
+ },
+ "API-124|Summary": {
+  "text": "POST: gọi GMO DeleteCard để xoá thẻ (cardSeq) của member GMO có MemberID = user.id, trả kết quả GMO đã parse.",
+  "ctx": "POST /api/user/credit-card/delete · group user"
+ },
+ "API-124|Note": {
+  "text": "Called By = suy từ import tĩnh page→component→service (có thể dư)",
+  "ctx": "POST /api/user/credit-card/delete · group user"
+ },
+ "API-125|Summary": {
+  "text": "POST: tạo member GMO nếu chưa có, lưu thẻ qua GMO SaveCard bằng token thẻ; nếu shouldNotify thì gửi mail thông báo cập nhật thẻ cho user.",
+  "ctx": "POST /api/user/credit-card/save · group user"
+ },
+ "API-125|Note": {
+  "text": "Called By = suy từ import tĩnh page→component→service (có thể dư)",
+  "ctx": "POST /api/user/credit-card/save · group user"
+ },
+ "API-126|Summary": {
+  "text": "GET: gọi GMO SearchCard lấy danh sách thẻ đã lưu của member GMO = user.id và trả kết quả đã parse.",
+  "ctx": "GET /api/user/credit-card/search · group user"
+ },
+ "API-126|Note": {
+  "text": "Called By = suy từ import tĩnh page→component→service (có thể dư)",
+  "ctx": "GET /api/user/credit-card/search · group user"
+ },
+ "API-127|Summary": {
+  "text": "PUT: cập nhật email của user được xác định bằng token (users.token) và trả về bản ghi user sau cập nhật.",
+  "ctx": "PUT /api/user/edit-email · group user"
+ },
+ "API-127|Note": {
+  "text": "Called By = suy từ import tĩnh page→component→service (có thể dư)",
+  "ctx": "PUT /api/user/edit-email · group user"
+ },
+ "API-128|Summary": {
+  "text": "GET: lấy thông tin user đang đăng nhập; PUT: cập nhật thông tin cá nhân (họ tên, SĐT, địa chỉ…), nếu email khác hiện tại thì gửi mail xác thực/đổi email kèm token (email không cập nhật trực tiếp); DELETE: xoá mềm user (đổi email thêm prefix, set deleted) và xoá accounts liên quan.",
+  "ctx": "ANY /api/user · group user"
+ },
+ "API-128|Note": {
+  "text": "Methods: GET, PUT, DELETE · Called By = suy từ import tĩnh page→component→service (có thể dư)",
+  "ctx": "ANY /api/user · group user"
+ },
+ "API-129|Summary": {
+  "text": "GET: mở kết nối Server-Sent Events, mỗi 2.5 giây poll bảng sse_notifications và đẩy payload thông báo mới của user, ping giữ kết nối mỗi 25 giây.",
+  "ctx": "GET /api/user/notifications/stream · group user"
+ },
+ "API-130|Summary": {
+  "text": "POST: thêm tenant vào danh sách yêu thích của user; DELETE: xoá tenant khỏi danh sách yêu thích của user.",
+  "ctx": "ANY /api/user/tenant-favorites/:tenantCode · group user"
+ },
+ "API-130|Note": {
+  "text": "Methods: POST, DELETE · Called By = suy từ import tĩnh page→component→service (có thể dư)",
+  "ctx": "ANY /api/user/tenant-favorites/:tenantCode · group user"
+ },
+ "API-131|Summary": {
+  "text": "GET: đếm số tenant yêu thích (tenant đang active) của user đang đăng nhập.",
+  "ctx": "GET /api/user/tenant-favorites/count · group user"
+ },
+ "API-131|Note": {
+  "text": "Called By = suy từ import tĩnh page→component→service (có thể dư)",
+  "ctx": "GET /api/user/tenant-favorites/count · group user"
+ },
+ "API-132|Summary": {
+  "text": "GET: lấy danh sách tenant yêu thích (tenant active) của user, có phân trang, mặc định kèm thông tin Tenant.",
+  "ctx": "GET /api/user/tenant-favorites · group user"
+ },
+ "API-132|Note": {
+  "text": "Called By = suy từ import tĩnh page→component→service (có thể dư)",
+  "ctx": "GET /api/user/tenant-favorites · group user"
+ },
+ "API-133|Summary": {
+  "text": "Custom server Express: bật CORS, phục vụ file tĩnh /uploads từ ./public/uploads, ghi log response body cho các URL /api/pos, /api/admin/bookings/scan, /api/admin/bookings/rollback-scan và chuyển mọi request còn lại cho Next.js.",
+  "ctx": "ANY /* · group other"
+ },
+ "API-134|Summary": {
+  "text": "POST: xác nhận lại email + mật khẩu của chính admin đang đăng nhập (user tìm theo email phải trùng id session), trả 200 nếu đúng.",
+  "ctx": "POST /api/admin/admin-credentials-confirmation · group admin"
+ },
+ "API-134|Note": {
+  "text": "bo sung — scan-repo bo qua vi ten file · Called By = suy từ import tĩnh page→component→service (có thể dư)",
+  "ctx": "POST /api/admin/admin-credentials-confirmation · group admin"
+ },
+ "API-135|Summary": {
+  "text": "POST: xác nhận ID nhân viên (staff cùng tenant) hoặc email của chính admin đang đăng nhập cùng mật khẩu; đúng thì trả về bản ghi staff/user.",
+  "ctx": "POST /api/admin/credentials-confirmation · group admin"
+ },
+ "API-135|Note": {
+  "text": "bo sung — scan-repo bo qua vi ten file · Called By = suy từ import tĩnh page→component→service (có thể dư)",
+  "ctx": "POST /api/admin/credentials-confirmation · group admin"
+ },
+ "API-136|Summary": {
+  "text": "POST: xác nhận mật khẩu của admin đang đăng nhập; đúng thì trả về bản ghi user.",
+  "ctx": "POST /api/admin/password-confirmation · group admin"
+ },
+ "API-136|Note": {
+  "text": "bo sung — scan-repo bo qua vi ten file · Called By = suy từ import tĩnh page→component→service (có thể dư)",
+  "ctx": "POST /api/admin/password-confirmation · group admin"
+ },
+ "API-137|Summary": {
+  "text": "POST: lấy email từ session NextAuth, kiểm tra mật khẩu hiện tại rồi băm và cập nhật mật khẩu mới.",
+  "ctx": "POST /api/auth/change-password · group auth"
+ },
+ "API-137|Note": {
+  "text": "bo sung — scan-repo bo qua vi ten file · Called By = suy từ import tĩnh page→component→service (có thể dư)",
+  "ctx": "POST /api/auth/change-password · group auth"
+ },
+ "API-138|Summary": {
+  "text": "POST: kiểm tra email/mật khẩu của Admin/SuperAdmin (khoá tài khoản, tăng/reset loginAttempts, Admin phải thuộc tenant), đúng thì trả về bản ghi user.",
+  "ctx": "POST /api/auth/check-admin-credentials · group auth"
+ },
+ "API-138|Note": {
+  "text": "bo sung — scan-repo bo qua vi ten file · Called By = suy từ import tĩnh page→component→service (có thể dư)",
+  "ctx": "POST /api/auth/check-admin-credentials · group auth"
+ },
+ "API-139|Summary": {
+  "text": "POST: xác thực email/mật khẩu và phát hành access token JWT (NextAuth encode) chứa userId, role.",
+  "ctx": "POST /api/auth/fetch-access-token · group auth"
+ },
+ "API-139|Note": {
+  "text": "bo sung — scan-repo bo qua vi ten file",
+  "ctx": "POST /api/auth/fetch-access-token · group auth"
+ },
+ "API-140|Summary": {
+  "text": "POST: tìm user theo email, gửi mail RESET_PASSWORD chứa link đặt lại mật khẩu (user hoặc admin) kèm users.token, và trả token đó trong response.",
+  "ctx": "POST /api/auth/forgot-password · group auth"
+ },
+ "API-140|Note": {
+  "text": "bo sung — scan-repo bo qua vi ten file · Called By = suy từ import tĩnh page→component→service (có thể dư)",
+  "ctx": "POST /api/auth/forgot-password · group auth"
+ },
+ "API-141|Summary": {
+  "text": "POST: nếu token tồn tại (users.token) thì băm và cập nhật mật khẩu mới cho user đó.",
+  "ctx": "POST /api/auth/reset-password · group auth"
+ },
+ "API-141|Note": {
+  "text": "bo sung — scan-repo bo qua vi ten file · Called By = suy từ import tĩnh page→component→service (có thể dư)",
+  "ctx": "POST /api/auth/reset-password · group auth"
+ },
+ "API-142|Summary": {
+  "text": "POST: tìm user theo email, gửi mail RESET_PASSWORD chứa link đổi mật khẩu ở trang thông tin cá nhân kèm users.token, và trả token đó trong response.",
+  "ctx": "POST /api/auth/update-password · group auth"
+ },
+ "API-142|Note": {
+  "text": "bo sung — scan-repo bo qua vi ten file · Called By = suy từ import tĩnh page→component→service (có thể dư)",
+  "ctx": "POST /api/auth/update-password · group auth"
+ },
+ "API-143|Summary": {
+  "text": "GET: tìm user theo token; nếu chưa xác thực email thì đánh dấu emailVerified và gửi mail VERIFY_SUCCESSFUL, nếu đã xác thực thì trả isAlreadyVerified.",
+  "ctx": "GET /api/auth/verify/:token · group auth"
+ },
+ "API-143|Note": {
+  "text": "bo sung — scan-repo bo qua vi ten file · Called By = suy từ import tĩnh page→component→service (có thể dư)",
+  "ctx": "GET /api/auth/verify/:token · group auth"
+ }
+}

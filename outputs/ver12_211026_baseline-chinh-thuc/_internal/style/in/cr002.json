@@ -1,0 +1,794 @@
+{
+ "imp|IMP-001|item": {
+  "text": "Lịch đặt trước — component BookingVacancies (①-B)",
+  "ctx": "Screen UPD SC-067"
+ },
+ "imp|IMP-001|change": {
+  "text": "Mỗi sản phẩm hiển thị 7 ngày đầu; nút 「もっと見る」 mở đủ 1 tháng, 「閉じる」 thu lại; PC (lưới) + mobile (danh sách); ngày đang chọn nằm ngoài tuần đầu → tự mở",
+  "ctx": "Screen UPD SC-067"
+ },
+ "imp|IMP-001|why_change": {
+  "text": "CR-002.1-B: màn mua bị kéo dài khi nhiều sản phẩm 事前",
+  "ctx": "Screen UPD SC-067"
+ },
+ "imp|IMP-001|impact_on_current": {
+  "text": "Component dùng chung SC-067 / SC-050 / SC-044 — thêm prop, mặc định giữ hành vi cũ cho admin",
+  "ctx": "Screen UPD SC-067"
+ },
+ "imp|IMP-001|question": {
+  "text": "CQ-002;CQ-003",
+  "ctx": "Screen UPD SC-067"
+ },
+ "imp|IMP-002|item": {
+  "text": "Form mua trước (dùng BookingVacancies)",
+  "ctx": "Screen IMPACT SC-050"
+ },
+ "imp|IMP-002|change": {
+  "text": "Kiểm lại chọn ngày / giữ ngày đã chọn khi lịch thu gọn",
+  "ctx": "Screen IMPACT SC-050"
+ },
+ "imp|IMP-002|why_change": {
+  "text": "CR-002.1-B: component đổi hành vi",
+  "ctx": "Screen IMPACT SC-050"
+ },
+ "imp|IMP-002|impact_on_current": {
+  "text": "Không đổi luồng thanh toán",
+  "ctx": "Screen IMPACT SC-050"
+ },
+ "imp|IMP-002|question": {
+  "text": "CQ-004",
+  "ctx": "Screen IMPACT SC-050"
+ },
+ "imp|IMP-003|item": {
+  "text": "空き状況 (admin) dùng BookingVacancies",
+  "ctx": "Screen IMPACT SC-044"
+ },
+ "imp|IMP-003|change": {
+  "text": "Giữ lịch mở như cũ (không truyền prop thu gọn) — kiểm lại",
+  "ctx": "Screen IMPACT SC-044"
+ },
+ "imp|IMP-003|why_change": {
+  "text": "CR-002.1-B: component dùng chung",
+  "ctx": "Screen IMPACT SC-044"
+ },
+ "imp|IMP-003|impact_on_current": {
+  "text": "Không đổi",
+  "ctx": "Screen IMPACT SC-044"
+ },
+ "imp|IMP-004|item": {
+  "text": "API trạng thái chỗ trống (bookingDays)",
+  "ctx": "System IMPACT API-075"
+ },
+ "imp|IMP-004|change": {
+  "text": "Khi mở rộng tải 30 ngày (tham số bookingDays có sẵn, chặn ≤ 30); nếu production đang 7 ngày → kiểm thời gian phản hồi khi nhiều sản phẩm",
+  "ctx": "System IMPACT API-075"
+ },
+ "imp|IMP-004|why_change": {
+  "text": "CR-002.1-B: màn mua bị kéo dài khi nhiều sản phẩm 事前 — KH chọn mặc định 1 tuần, mở rộng 1 tháng — hiển thị 1 tháng",
+  "ctx": "System IMPACT API-075"
+ },
+ "imp|IMP-004|impact_on_current": {
+  "text": "Không đổi contract",
+  "ctx": "System IMPACT API-075"
+ },
+ "imp|IMP-004|question": {
+  "text": "CQ-001",
+  "ctx": "System IMPACT API-075"
+ },
+ "imp|IMP-005|item": {
+  "text": "Rule hiển thị lịch đặt trước",
+  "ctx": "Business UPD SC-067"
+ },
+ "imp|IMP-005|change": {
+  "text": "Mặc định 1 tuần, mở rộng 1 tháng (áp dụng mọi sản phẩm 事前購入)",
+  "ctx": "Business UPD SC-067"
+ },
+ "imp|IMP-005|why_change": {
+  "text": "CR-002.1-B: màn mua bị kéo dài khi nhiều sản phẩm 事前 — KH chọn mặc định 1 tuần, mở rộng 1 tháng",
+  "ctx": "Business UPD SC-067"
+ },
+ "imp|IMP-005|impact_on_current": {
+  "text": "Mọi sản phẩm 事前 trên trang user đổi cách hiển thị",
+  "ctx": "Business UPD SC-067"
+ },
+ "imp|IMP-005|question": {
+  "text": "CQ-001",
+  "ctx": "Business UPD SC-067"
+ },
+ "imp|IMP-006|item": {
+  "text": "Mockup khối lịch có nút mở rộng (①-B)",
+  "ctx": "Mockup UPD DS-component:WEB-02:Button"
+ },
+ "imp|IMP-006|change": {
+  "text": "Thêm nút 「もっと見る / 閉じる」 bằng Button có sẵn của Design System WEB-02",
+  "ctx": "Mockup UPD DS-component:WEB-02:Button"
+ },
+ "imp|IMP-006|why_change": {
+  "text": "CR-002.1-B: màn mua bị kéo dài khi nhiều sản phẩm 事前 — KH chọn mặc định 1 tuần, mở rộng 1 tháng",
+  "ctx": "Mockup UPD DS-component:WEB-02:Button"
+ },
+ "imp|IMP-006|impact_on_current": {
+  "text": "Không thêm component mới",
+  "ctx": "Mockup UPD DS-component:WEB-02:Button"
+ },
+ "imp|IMP-007|item": {
+  "text": "Lịch đặt trước — component BookingVacancies (①-A, thay thế ①-B)",
+  "ctx": "Screen UPD SC-067"
+ },
+ "imp|IMP-007|change": {
+  "text": "Mỗi sản phẩm chỉ hiện tên + nút 「カレンダーを表示」; bấm → mở lịch 1 tháng; PC + mobile",
+  "ctx": "Screen UPD SC-067"
+ },
+ "imp|IMP-007|why_change": {
+  "text": "CR-002.1-A: phương án thay thế — KHÔNG cộng với IMP-001",
+  "ctx": "Screen UPD SC-067"
+ },
+ "imp|IMP-007|impact_on_current": {
+  "text": "Như IMP-001 (dùng chung IMP-002…004 khi chọn A)",
+  "ctx": "Screen UPD SC-067"
+ },
+ "imp|IMP-007|md_note": {
+  "text": "Thay thế IMP-001 / IMP-005 / IMP-006 khi KH chọn A",
+  "ctx": "Screen UPD SC-067"
+ },
+ "imp|IMP-008|item": {
+  "text": "Rule hiển thị lịch đặt trước (①-A)",
+  "ctx": "Business UPD SC-067"
+ },
+ "imp|IMP-008|change": {
+  "text": "Mặc định đóng, mở → 1 tháng",
+  "ctx": "Business UPD SC-067"
+ },
+ "imp|IMP-008|why_change": {
+  "text": "CR-002.1-A: phương án thay thế — mặc định đóng lịch, mở ra 1 tháng",
+  "ctx": "Business UPD SC-067"
+ },
+ "imp|IMP-008|impact_on_current": {
+  "text": "Như IMP-005",
+  "ctx": "Business UPD SC-067"
+ },
+ "imp|IMP-008|md_note": {
+  "text": "Thay thế IMP-005",
+  "ctx": "Business UPD SC-067"
+ },
+ "imp|IMP-009|item": {
+  "text": "Mockup khối lịch đóng (①-A)",
+  "ctx": "Mockup UPD DS-component:WEB-02:Button"
+ },
+ "imp|IMP-009|change": {
+  "text": "Thêm nút mở lịch bằng Button có sẵn",
+  "ctx": "Mockup UPD DS-component:WEB-02:Button"
+ },
+ "imp|IMP-009|why_change": {
+  "text": "CR-002.1-A: phương án thay thế — mặc định đóng lịch, mở ra 1 tháng",
+  "ctx": "Mockup UPD DS-component:WEB-02:Button"
+ },
+ "imp|IMP-009|impact_on_current": {
+  "text": "Không thêm component mới",
+  "ctx": "Mockup UPD DS-component:WEB-02:Button"
+ },
+ "imp|IMP-009|md_note": {
+  "text": "Thay thế IMP-006",
+  "ctx": "Mockup UPD DS-component:WEB-02:Button"
+ },
+ "imp|IMP-010|item": {
+  "text": "Cờ 限定公開 của sản phẩm",
+  "ctx": "DB NEW column:tickets.limited_public"
+ },
+ "imp|IMP-010|change": {
+  "text": "Thêm cột tickets.limited_public boolean mặc định false",
+  "ctx": "DB NEW column:tickets.limited_public"
+ },
+ "imp|IMP-010|why_change": {
+  "text": "CR-002.2: ON = chỉ hiện ở trang 限定公開",
+  "ctx": "DB NEW column:tickets.limited_public"
+ },
+ "imp|IMP-010|impact_on_current": {
+  "text": "Vé cũ = false → không đổi hành vi; visibility giữ nghĩa 公開 / 非公開",
+  "ctx": "DB NEW column:tickets.limited_public"
+ },
+ "imp|IMP-011|item": {
+  "text": "API danh sách sản phẩm (user)",
+  "ctx": "System UPD API-107"
+ },
+ "imp|IMP-011|change": {
+  "text": "Mặc định bỏ vé limited_public = true; có khoá 限定公開 hợp lệ → chỉ trả vé limited_public",
+  "ctx": "System UPD API-107"
+ },
+ "imp|IMP-011|why_change": {
+  "text": "CR-002.2: tách vé thường / 法人向け",
+  "ctx": "System UPD API-107"
+ },
+ "imp|IMP-011|impact_on_current": {
+  "text": "Dùng bởi SC-050, SC-054, SC-059, SC-048, SC-049 — không truyền khoá thì kết quả như cũ trừ vé 限定公開",
+  "ctx": "System UPD API-107"
+ },
+ "imp|IMP-011|question": {
+  "text": "CQ-009",
+  "ctx": "System UPD API-107"
+ },
+ "imp|IMP-012|item": {
+  "text": "API trạng thái chỗ trống (user)",
+  "ctx": "System UPD API-075"
+ },
+ "imp|IMP-012|change": {
+  "text": "Lọc vé limited_public ở tầng response theo khoá (KHÔNG sửa getTenantTicketsForVacancy dùng chung)",
+  "ctx": "System UPD API-075"
+ },
+ "imp|IMP-012|why_change": {
+  "text": "CR-002.2: tách sản phẩm 法人向け khỏi danh sách thường, chỉ hiện ở trang 限定公開",
+  "ctx": "System UPD API-075"
+ },
+ "imp|IMP-012|impact_on_current": {
+  "text": "Dùng bởi SC-067, SC-054, SC-092 — không truyền khoá thì ẩn vé 限定公開",
+  "ctx": "System UPD API-075"
+ },
+ "imp|IMP-013|item": {
+  "text": "API tạo đặt chỗ (trước / trong ngày)",
+  "ctx": "System IMPACT API-070;API-074"
+ },
+ "imp|IMP-013|change": {
+  "text": "Kiểm lại: vé 限定公開 đặt được như vé thường (server không kiểm visibility)",
+  "ctx": "System IMPACT API-070;API-074"
+ },
+ "imp|IMP-013|why_change": {
+  "text": "CR-002.2: dùng nguyên luồng mua",
+  "ctx": "System IMPACT API-070;API-074"
+ },
+ "imp|IMP-013|impact_on_current": {
+  "text": "Không sửa",
+  "ctx": "System IMPACT API-070;API-074"
+ },
+ "imp|IMP-013|question": {
+  "text": "CQ-007",
+  "ctx": "System IMPACT API-070;API-074"
+ },
+ "imp|IMP-014|item": {
+  "text": "Hàm dùng chung getTenantTicketsForVacancy / booking-queue",
+  "ctx": "System IMPACT API-074"
+ },
+ "imp|IMP-014|change": {
+  "text": "Giữ nguyên (đặt chỗ trong ngày, hàng chờ, cron 077/078, POS check-out vẫn thấy vé 限定公開) — kiểm hồi quy",
+  "ctx": "System IMPACT API-074"
+ },
+ "imp|IMP-014|why_change": {
+  "text": "CR-002.2: tách sản phẩm 法人向け khỏi danh sách thường, chỉ hiện ở trang 限定公開",
+  "ctx": "System IMPACT API-074"
+ },
+ "imp|IMP-014|impact_on_current": {
+  "text": "Không sửa — nếu lọc ở đây sẽ chặn bán 当日 vé 限定公開",
+  "ctx": "System IMPACT API-074"
+ },
+ "imp|IMP-015|item": {
+  "text": "API tạo / sửa sản phẩm (admin)",
+  "ctx": "System UPD API-050;API-054"
+ },
+ "imp|IMP-015|change": {
+  "text": "Nhận và lưu limited_public; trả trong GET",
+  "ctx": "System UPD API-050;API-054"
+ },
+ "imp|IMP-015|why_change": {
+  "text": "CR-002.2: tách sản phẩm 法人向け khỏi danh sách thường, chỉ hiện ở trang 限定公開 — thiết lập ON / OFF",
+  "ctx": "System UPD API-050;API-054"
+ },
+ "imp|IMP-015|impact_on_current": {
+  "text": "Vé cũ không gửi field → giữ false",
+  "ctx": "System UPD API-050;API-054"
+ },
+ "imp|IMP-016|item": {
+  "text": "[WEB-02] 限定公開ページ (法人向け商品)",
+  "ctx": "Screen NEW —"
+ },
+ "imp|IMP-016|change": {
+  "text": "URL có khoá khó đoán (cấu hình hệ thống); liệt kê 施設 có vé 限定公開 → mỗi 施設: lịch đặt trước (BookingVacancies, áp dụng ①) + vé trong ngày (như khối 本日 của 店舗詳細) → nút mua chuyển SC-050 / SC-054 kèm khoá; khoá sai → 404",
+  "ctx": "Screen NEW —"
+ },
+ "imp|IMP-016|why_change": {
+  "text": "CR-002.2: tách sản phẩm 法人向け khỏi danh sách thường, chỉ hiện ở trang 限定公開 — trang riêng cho 法人",
+  "ctx": "Screen NEW —"
+ },
+ "imp|IMP-016|impact_on_current": {
+  "text": "Không đổi trang hiện có",
+  "ctx": "Screen NEW —"
+ },
+ "imp|IMP-016|question": {
+  "text": "CQ-005;CQ-006;CQ-011",
+  "ctx": "Screen NEW —"
+ },
+ "imp|IMP-017|item": {
+  "text": "Form mua trước — nhận khoá 限定公開",
+  "ctx": "Screen UPD SC-050"
+ },
+ "imp|IMP-017|change": {
+  "text": "Truyền khoá từ URL xuống PaymentOnlineBookingForm → API-107 trả vé 限定公開",
+  "ctx": "Screen UPD SC-050"
+ },
+ "imp|IMP-017|why_change": {
+  "text": "CR-002.2: tách sản phẩm 法人向け khỏi danh sách thường, chỉ hiện ở trang 限定公開 — mua bằng luồng cũ",
+  "ctx": "Screen UPD SC-050"
+ },
+ "imp|IMP-017|impact_on_current": {
+  "text": "Không có khoá → như cũ",
+  "ctx": "Screen UPD SC-050"
+ },
+ "imp|IMP-017|question": {
+  "text": "CQ-008",
+  "ctx": "Screen UPD SC-050"
+ },
+ "imp|IMP-018|item": {
+  "text": "Mua trong ngày — nhận khoá 限定公開",
+  "ctx": "Screen UPD SC-054"
+ },
+ "imp|IMP-018|change": {
+  "text": "Truyền khoá xuống PaymentOfflineBookingForm → API-107 / API-075 trả vé 限定公開",
+  "ctx": "Screen UPD SC-054"
+ },
+ "imp|IMP-018|why_change": {
+  "text": "CR-002.2: tách sản phẩm 法人向け khỏi danh sách thường, chỉ hiện ở trang 限定公開",
+  "ctx": "Screen UPD SC-054"
+ },
+ "imp|IMP-018|impact_on_current": {
+  "text": "Không có khoá → như cũ",
+  "ctx": "Screen UPD SC-054"
+ },
+ "imp|IMP-018|question": {
+  "text": "CQ-008",
+  "ctx": "Screen UPD SC-054"
+ },
+ "imp|IMP-019|item": {
+  "text": "Form tạo / sửa sản phẩm — 限定公開 ON / OFF",
+  "ctx": "Screen UPD SC-036;SC-037"
+ },
+ "imp|IMP-019|change": {
+  "text": "Thêm radio 限定公開 ON / OFF (mặc định OFF) cạnh 公開ステータス",
+  "ctx": "Screen UPD SC-036;SC-037"
+ },
+ "imp|IMP-019|why_change": {
+  "text": "CR-002.2: tách sản phẩm 法人向け khỏi danh sách thường, chỉ hiện ở trang 限定公開",
+  "ctx": "Screen UPD SC-036;SC-037"
+ },
+ "imp|IMP-019|impact_on_current": {
+  "text": "Form dùng chung create / edit",
+  "ctx": "Screen UPD SC-036;SC-037"
+ },
+ "imp|IMP-020|item": {
+  "text": "Danh sách / xem sản phẩm — hiện 限定公開",
+  "ctx": "Screen UPD SC-035;SC-038"
+ },
+ "imp|IMP-020|change": {
+  "text": "Thêm cột / nhãn 限定公開 ở 商品一覧 và màn xem",
+  "ctx": "Screen UPD SC-035;SC-038"
+ },
+ "imp|IMP-020|why_change": {
+  "text": "CR-002.2: admin nhận biết vé 法人向け",
+  "ctx": "Screen UPD SC-035;SC-038"
+ },
+ "imp|IMP-020|impact_on_current": {
+  "text": "Không đổi chức năng khác",
+  "ctx": "Screen UPD SC-035;SC-038"
+ },
+ "imp|IMP-021|item": {
+  "text": "Màn user đang liệt kê sản phẩm",
+  "ctx": "Screen IMPACT SC-067;SC-059;SC-092;SC-048;SC-049"
+ },
+ "imp|IMP-021|change": {
+  "text": "Kiểm lại: vé 限定公開 không xuất hiện",
+  "ctx": "Screen IMPACT SC-067;SC-059;SC-092;SC-048;SC-049"
+ },
+ "imp|IMP-021|why_change": {
+  "text": "CR-002.2: tách sản phẩm 法人向け khỏi danh sách thường, chỉ hiện ở trang 限定公開",
+  "ctx": "Screen IMPACT SC-067;SC-059;SC-092;SC-048;SC-049"
+ },
+ "imp|IMP-021|impact_on_current": {
+  "text": "Kết quả API đổi (ẩn vé 限定公開)",
+  "ctx": "Screen IMPACT SC-067;SC-059;SC-092;SC-048;SC-049"
+ },
+ "imp|IMP-021|question": {
+  "text": "CQ-009",
+  "ctx": "Screen IMPACT SC-067;SC-059;SC-092;SC-048;SC-049"
+ },
+ "imp|IMP-022|item": {
+  "text": "Rule 限定公開",
+  "ctx": "Business NEW —"
+ },
+ "imp|IMP-022|change": {
+  "text": "ON → ẩn mọi danh sách thường, chỉ hiện ở trang 限定公開; mua / đặt / thanh toán / huỷ / my page dùng luồng cũ; truy cập = biết URL (không đăng nhập)",
+  "ctx": "Business NEW —"
+ },
+ "imp|IMP-022|why_change": {
+  "text": "CR-002.2: tách sản phẩm 法人向け khỏi danh sách thường, chỉ hiện ở trang 限定公開",
+  "ctx": "Business NEW —"
+ },
+ "imp|IMP-022|impact_on_current": {
+  "text": "Không đổi rule hiện có",
+  "ctx": "Business NEW —"
+ },
+ "imp|IMP-022|question": {
+  "text": "CQ-007",
+  "ctx": "Business NEW —"
+ },
+ "imp|IMP-023|item": {
+  "text": "Mockup 限定公開ページ",
+  "ctx": "Mockup NEW DS-component:WEB-02:PageHeader;DS-component:WEB-02:Card;DS-component:WEB-02:Button"
+ },
+ "imp|IMP-023|change": {
+  "text": "Dựng từ bố cục 店舗詳細 + token / component Design System WEB-02",
+  "ctx": "Mockup NEW DS-component:WEB-02:PageHeader;DS-component:WEB-02:Card;DS-component:WEB-02:Button"
+ },
+ "imp|IMP-023|why_change": {
+  "text": "CR-002.2: tách sản phẩm 法人向け khỏi danh sách thường, chỉ hiện ở trang 限定公開",
+  "ctx": "Mockup NEW DS-component:WEB-02:PageHeader;DS-component:WEB-02:Card;DS-component:WEB-02:Button"
+ },
+ "imp|IMP-023|impact_on_current": {
+  "text": "Không thêm component mới",
+  "ctx": "Mockup NEW DS-component:WEB-02:PageHeader;DS-component:WEB-02:Card;DS-component:WEB-02:Button"
+ },
+ "imp|IMP-023|question": {
+  "text": "CQ-011",
+  "ctx": "Mockup NEW DS-component:WEB-02:PageHeader;DS-component:WEB-02:Card;DS-component:WEB-02:Button"
+ },
+ "imp|IMP-024|item": {
+  "text": "Mockup form sản phẩm — radio 限定公開",
+  "ctx": "Mockup UPD DS-component:WEB-01:Radio"
+ },
+ "imp|IMP-024|change": {
+  "text": "Thêm 1 radio bằng component Radio có sẵn WEB-01",
+  "ctx": "Mockup UPD DS-component:WEB-01:Radio"
+ },
+ "imp|IMP-024|why_change": {
+  "text": "CR-002.2: tách sản phẩm 法人向け khỏi danh sách thường, chỉ hiện ở trang 限定公開",
+  "ctx": "Mockup UPD DS-component:WEB-01:Radio"
+ },
+ "imp|IMP-024|impact_on_current": {
+  "text": "Không thêm component",
+  "ctx": "Mockup UPD DS-component:WEB-01:Radio"
+ },
+ "imp|IMP-025|item": {
+  "text": "GMO (thanh toán online) · Smaregi / POS",
+  "ctx": "ThirdParty IMPACT EXT-001;EXT-006"
+ },
+ "imp|IMP-025|change": {
+  "text": "Kiểm lại: vé 限定公開 thanh toán / quyết toán như vé thường (mã Smaregi / OBIC nhập ở 商品管理)",
+  "ctx": "ThirdParty IMPACT EXT-001;EXT-006"
+ },
+ "imp|IMP-025|why_change": {
+  "text": "CR-002.2: tách sản phẩm 法人向け khỏi danh sách thường, chỉ hiện ở trang 限定公開",
+  "ctx": "ThirdParty IMPACT EXT-001;EXT-006"
+ },
+ "imp|IMP-025|impact_on_current": {
+  "text": "Không sửa liên kết",
+  "ctx": "ThirdParty IMPACT EXT-001;EXT-006"
+ },
+ "imp|IMP-030|item": {
+  "text": "Bảng trang 限定公開",
+  "ctx": "DB NEW —"
+ },
+ "imp|IMP-030|change": {
+  "text": "limited_pages: id, tên trang, khoá URL (sinh ngẫu nhiên), trạng thái, ghi chú",
+  "ctx": "DB NEW —"
+ },
+ "imp|IMP-030|why_change": {
+  "text": "CR-002.3: nhiều trang A / B / C",
+  "ctx": "DB NEW —"
+ },
+ "imp|IMP-030|impact_on_current": {
+  "text": "Bảng mới",
+  "ctx": "DB NEW —"
+ },
+ "imp|IMP-030|question": {
+  "text": "CQ-010",
+  "ctx": "DB NEW —"
+ },
+ "imp|IMP-031|item": {
+  "text": "Bảng liên kết sản phẩm ↔ trang 限定公開",
+  "ctx": "DB NEW —"
+ },
+ "imp|IMP-031|change": {
+  "text": "Bảng mới ticket_limited_pages (ticket_id, limited_page_id) — 1 vé gắn được nhiều trang (đề xuất Dipro, chờ CQ-010); vé 限定公開 không có dòng nào = không hiện ở đâu",
+  "ctx": "DB NEW —"
+ },
+ "imp|IMP-031|why_change": {
+  "text": "CR-002.3: chỉ định 掲載先 (nhiều trang)",
+  "ctx": "DB NEW —"
+ },
+ "imp|IMP-031|impact_on_current": {
+  "text": "Thay vai trò cờ limited_public của bản cơ bản",
+  "ctx": "DB NEW —"
+ },
+ "imp|IMP-031|question": {
+  "text": "CQ-010",
+  "ctx": "DB NEW —"
+ },
+ "imp|IMP-032|item": {
+  "text": "API quản trị trang 限定公開",
+  "ctx": "System NEW —"
+ },
+ "imp|IMP-032|change": {
+  "text": "Danh sách / tạo / sửa / dừng trang; sinh khoá URL",
+  "ctx": "System NEW —"
+ },
+ "imp|IMP-032|why_change": {
+  "text": "CR-002.3: nhiều trang 限定公開 A / B / C, mỗi sản phẩm chọn trang hiển thị",
+  "ctx": "System NEW —"
+ },
+ "imp|IMP-032|impact_on_current": {
+  "text": "API mới",
+  "ctx": "System NEW —"
+ },
+ "imp|IMP-033|item": {
+  "text": "Lọc sản phẩm theo trang",
+  "ctx": "System UPD API-107;API-075"
+ },
+ "imp|IMP-033|change": {
+  "text": "Khoá URL → trang → các vé gắn với trang (qua bảng liên kết); trang dừng / khoá sai → 404; trang 限定公開 (IMP-016) hiện tên trang + vé của trang",
+  "ctx": "System UPD API-107;API-075"
+ },
+ "imp|IMP-033|why_change": {
+  "text": "CR-002.3: nhiều trang 限定公開 A / B / C, mỗi sản phẩm chọn trang hiển thị",
+  "ctx": "System UPD API-107;API-075"
+ },
+ "imp|IMP-033|impact_on_current": {
+  "text": "Thêm vào logic IMP-011 / IMP-012 / màn IMP-016",
+  "ctx": "System UPD API-107;API-075"
+ },
+ "imp|IMP-034|item": {
+  "text": "[WEB-01] 限定公開ページ管理",
+  "ctx": "Screen NEW —"
+ },
+ "imp|IMP-034|change": {
+  "text": "Danh sách trang + form tạo / sửa (tên, trạng thái), hiện URL để copy; thêm mục menu Super Admin / Admin",
+  "ctx": "Screen NEW —"
+ },
+ "imp|IMP-034|why_change": {
+  "text": "CR-002.3: nhiều trang 限定公開 A / B / C, mỗi sản phẩm chọn trang hiển thị",
+  "ctx": "Screen NEW —"
+ },
+ "imp|IMP-034|impact_on_current": {
+  "text": "Màn mới",
+  "ctx": "Screen NEW —"
+ },
+ "imp|IMP-034|question": {
+  "text": "CQ-010",
+  "ctx": "Screen NEW —"
+ },
+ "imp|IMP-035|item": {
+  "text": "Form sản phẩm — chọn 掲載先ページ",
+  "ctx": "Screen UPD SC-036;SC-037"
+ },
+ "imp|IMP-035|change": {
+  "text": "Khi 限定公開: chọn 1 hoặc nhiều trang (multi-select) từ danh sách đã tạo",
+  "ctx": "Screen UPD SC-036;SC-037"
+ },
+ "imp|IMP-035|why_change": {
+  "text": "CR-002.3: nhiều trang 限定公開 A / B / C, mỗi sản phẩm chọn trang hiển thị",
+  "ctx": "Screen UPD SC-036;SC-037"
+ },
+ "imp|IMP-035|impact_on_current": {
+  "text": "Thay radio ON / OFF của IMP-019",
+  "ctx": "Screen UPD SC-036;SC-037"
+ },
+ "imp|IMP-037|item": {
+  "text": "Rule nhiều trang",
+  "ctx": "Business NEW —"
+ },
+ "imp|IMP-037|change": {
+  "text": "1 vé hiển thị được trên nhiều trang (đề xuất Dipro — chờ KH xác nhận CQ-010); vé chỉ hiện trên các trang đang công khai; mọi trang của vé đều dừng → vé không hiện ở đâu",
+  "ctx": "Business NEW —"
+ },
+ "imp|IMP-037|why_change": {
+  "text": "CR-002.3: nhiều trang 限定公開 A / B / C, mỗi sản phẩm chọn trang hiển thị",
+  "ctx": "Business NEW —"
+ },
+ "imp|IMP-037|impact_on_current": {
+  "text": "Rule mới",
+  "ctx": "Business NEW —"
+ },
+ "imp|IMP-037|question": {
+  "text": "CQ-010",
+  "ctx": "Business NEW —"
+ },
+ "imp|IMP-038|item": {
+  "text": "Mockup màn quản lý trang 限定公開",
+  "ctx": "Mockup NEW DS-component:WEB-01:Table;DS-component:WEB-01:TextField;DS-component:WEB-01:Button"
+ },
+ "imp|IMP-038|change": {
+  "text": "Dựng từ Table / TextField / Button có sẵn của Design System WEB-01",
+  "ctx": "Mockup NEW DS-component:WEB-01:Table;DS-component:WEB-01:TextField;DS-component:WEB-01:Button"
+ },
+ "imp|IMP-038|why_change": {
+  "text": "CR-002.3: nhiều trang 限定公開 A / B / C, mỗi sản phẩm chọn trang hiển thị",
+  "ctx": "Mockup NEW DS-component:WEB-01:Table;DS-component:WEB-01:TextField;DS-component:WEB-01:Button"
+ },
+ "imp|IMP-038|impact_on_current": {
+  "text": "Không thêm component",
+  "ctx": "Mockup NEW DS-component:WEB-01:Table;DS-component:WEB-01:TextField;DS-component:WEB-01:Button"
+ },
+ "not_cr|0|item": {
+  "text": "企画: 4 sản phẩm 法人向け 事前1DAY / 当日1DAY × 平日 / 休日 (giá ~1/2)",
+  "ctx": "not_cr"
+ },
+ "not_cr|0|label": {
+  "text": "QUESTION",
+  "ctx": "not_cr"
+ },
+ "not_cr|0|reason": {
+  "text": "Đã có: 商品管理 (SC-035…038, API-050 / API-054) tạo vé loại ワンデー, đặt giá, lịch bán (ticket_booking_schedules), mã Smaregi / OBIC. Admin tự tạo 4 vé — không tính MD.",
+  "ctx": "not_cr"
+ },
+ "not_cr|0|baseline_ref": {
+  "text": "SC-036",
+  "ctx": "not_cr"
+ },
+ "not_cr|1|item": {
+  "text": "購入・予約などの販売フロー",
+  "ctx": "not_cr"
+ },
+ "not_cr|1|label": {
+  "text": "QUESTION",
+  "ctx": "not_cr"
+ },
+ "not_cr|1|reason": {
+  "text": "Đã có: mua trước online SC-050 → API-070 (GMO), mua trong ngày SC-054 → API-074; xác nhận mail, my page, huỷ. Vé 限定公開 đi qua nguyên luồng này (server không kiểm visibility khi tạo booking).",
+  "ctx": "not_cr"
+ },
+ "not_cr|1|baseline_ref": {
+  "text": "API-070",
+  "ctx": "not_cr"
+ },
+ "q|CQ-001|question": {
+  "text": "Lịch đặt trước trên production đang hiển thị bao nhiêu ngày (biến NEXT_PUBLIC_ONLINE_BOOKING_ADVANCE_DAYS; bản mẫu = 7, có chế độ 30 ngày)? 「1か月分」 = 30 ngày tính từ hôm nay (như chế độ 30 ngày hiện có) hay đến hết tháng dương lịch?",
+  "ctx": "câu hỏi khách"
+ },
+ "q|CQ-001|why": {
+  "text": "Quyết định ① có cần đổi số ngày tải từ API-075 không; nếu đang 7 ngày thì 'mở rộng 1 tháng' là tính năng mới cho người dùng",
+  "ctx": "câu hỏi khách"
+ },
+ "q|CQ-001|axis": {
+  "text": "Screen",
+  "ctx": "câu hỏi khách"
+ },
+ "q|CQ-001|owner": {
+  "text": "DEV / KH",
+  "ctx": "câu hỏi khách"
+ },
+ "q|CQ-002|question": {
+  "text": "①-B 「1週間分」 = 7 ngày đầu tính từ hôm nay (đúng 1 hàng lưới hiện tại) hay tuần lịch 月〜日?",
+  "ctx": "câu hỏi khách"
+ },
+ "q|CQ-002|why": {
+  "text": "Lưới hiện tại bắt đầu từ hôm nay; tuần lịch cần thêm ô trống đầu hàng",
+  "ctx": "câu hỏi khách"
+ },
+ "q|CQ-002|axis": {
+  "text": "Screen",
+  "ctx": "câu hỏi khách"
+ },
+ "q|CQ-003|question": {
+  "text": "Nút mở rộng: riêng cho từng sản phẩm hay 1 nút cho tất cả? Có cần giữ trạng thái mở khi quay lại trang không?",
+  "ctx": "câu hỏi khách"
+ },
+ "q|CQ-003|why": {
+  "text": "Ảnh hưởng nhỏ đến thiết kế; đề xuất: riêng từng sản phẩm, không giữ trạng thái",
+  "ctx": "câu hỏi khách"
+ },
+ "q|CQ-003|axis": {
+  "text": "Screen",
+  "ctx": "câu hỏi khách"
+ },
+ "q|CQ-004|question": {
+  "text": "① áp dụng cho: trang 店舗詳細 + form mua trước (SC-050) + trang 限定公開 — đúng không? (màn admin 空き状況 giữ nguyên)",
+  "ctx": "câu hỏi khách"
+ },
+ "q|CQ-004|why": {
+  "text": "Component BookingVacancies dùng ở 3 nơi (2 phía user, 1 phía admin)",
+  "ctx": "câu hỏi khách"
+ },
+ "q|CQ-004|axis": {
+  "text": "Screen",
+  "ctx": "câu hỏi khách"
+ },
+ "q|CQ-005|question": {
+  "text": "KH đã chốt số trang / URL (見積依頼 ② 基本機能「限定公開URLのページを1つ設ける」; Option: mỗi trang A/B/C 1 URL riêng). Còn mở: trong 1 trang, sản phẩm 限定公開 của nhiều 施設 hiển thị thế nào — chọn 施設 trên trang (đề xuất) hay liệt kê mọi 施設 cùng lúc?",
+  "ctx": "câu hỏi khách"
+ },
+ "q|CQ-005|why": {
+  "text": "Vé gắn theo 施設 (tenantCode), lịch / chỗ trống tính theo 施設; yêu cầu không nói cách hiển thị nhiều 施設. Ước tính đang theo: 1 URL, trên trang có ô chọn 施設",
+  "ctx": "câu hỏi khách"
+ },
+ "q|CQ-005|axis": {
+  "text": "Business",
+  "ctx": "câu hỏi khách"
+ },
+ "q|CQ-006|question": {
+  "text": "URL 限定公開 có cần đổi từ màn quản trị không? (không Option: khoá URL cấu hình trong hệ thống, đổi cần deploy)",
+  "ctx": "câu hỏi khách"
+ },
+ "q|CQ-006|why": {
+  "text": "Nếu cần đổi từ admin → thêm 1 màn cài đặt (gần bằng Option)",
+  "ctx": "câu hỏi khách"
+ },
+ "q|CQ-006|axis": {
+  "text": "Business",
+  "ctx": "câu hỏi khách"
+ },
+ "q|CQ-007|question": {
+  "text": "限定公開 chỉ cần 'biết URL' (không đăng nhập / mật khẩu) — đồng ý rủi ro link bị chia sẻ? Có cần chặn đặt vé 限定公開 khi vào không qua trang này (người biết ticketId) không?",
+  "ctx": "câu hỏi khách"
+ },
+ "q|CQ-007|why": {
+  "text": "Hiện API tạo booking không kiểm visibility; chặn thêm = sửa API-070 / API-074",
+  "ctx": "câu hỏi khách"
+ },
+ "q|CQ-007|axis": {
+  "text": "Business",
+  "ctx": "câu hỏi khách"
+ },
+ "q|CQ-008|question": {
+  "text": "Trang 限定公開 hiển thị cả 当日1DAY: cách mua 当日 giữ như vé thường hiện tại (luồng 今から利用する / 店頭)? 事前1DAY thanh toán thẻ online như hiện tại?",
+  "ctx": "câu hỏi khách"
+ },
+ "q|CQ-008|why": {
+  "text": "Xác định màn mua nào phải nhận khoá 限定公開 (SC-050, SC-054)",
+  "ctx": "câu hỏi khách"
+ },
+ "q|CQ-008|axis": {
+  "text": "Business",
+  "ctx": "câu hỏi khách"
+ },
+ "q|CQ-009|question": {
+  "text": "Vé 限定公開 có ẩn ở 料金プラン (SC-059) và 待ち時間/販売状況 (SC-092) không? (đề xuất: ẩn)",
+  "ctx": "câu hỏi khách"
+ },
+ "q|CQ-009|why": {
+  "text": "Hai màn này dùng chung API-107 / API-075 → ẩn mặc định",
+  "ctx": "câu hỏi khách"
+ },
+ "q|CQ-009|axis": {
+  "text": "Screen",
+  "ctx": "câu hỏi khách"
+ },
+ "q|CQ-010|question": {
+  "text": "Option: Dipro đề xuất 1 vé gán được NHIỀU trang (VD 1 vé dùng chung cho trang công ty X và công ty Y) — KH xác nhận được không?",
+  "ctx": "câu hỏi khách"
+ },
+ "q|CQ-010|why": {
+  "text": "Quyết định bảng trang–vé (1-n hay n-n) và field thời hạn",
+  "ctx": "câu hỏi khách"
+ },
+ "q|CQ-011|question": {
+  "text": "Trang 限定公開 dùng bố cục 店舗詳細 hiện có (thông tin 施設 + lịch + vé trong ngày) với tiêu đề 法人向け — có cần thiết kế riêng / ảnh / mô tả không?",
+  "ctx": "câu hỏi khách"
+ },
+ "q|CQ-011|why": {
+  "text": "Có thiết kế riêng → thêm công designer",
+  "ctx": "câu hỏi khách"
+ },
+ "q|CQ-011|axis": {
+  "text": "Mockup",
+  "ctx": "câu hỏi khách"
+ },
+ "q|CQ-012|question": {
+  "text": "Release: có môi trường staging để KH nghiệm thu không, lịch deploy production cố định không, ai test nghiệm thu? Ngày chốt đặc tả + 発注 dự kiến?",
+  "ctx": "câu hỏi khách"
+ },
+ "q|CQ-012|why": {
+  "text": "Quyết định thời điểm release sớm nhất",
+  "ctx": "câu hỏi khách"
+ },
+ "q|CQ-012|axis": {
+  "text": "Business",
+  "ctx": "câu hỏi khách"
+ },
+ "q|CQ-014|question": {
+  "text": "Có cần xem doanh thu / số đặt chỗ của sản phẩm 法人向け tách riêng ở 売上管理 hoặc CSV không?",
+  "ctx": "câu hỏi khách"
+ },
+ "q|CQ-014|why": {
+  "text": "Hiện 売上管理 thống kê theo sản phẩm (tên sản phẩm phân biệt được); cần lọc / cột 限定公開 riêng thì phát sinh thêm công",
+  "ctx": "câu hỏi khách"
+ },
+ "q|CQ-014|axis": {
+  "text": "Business",
+  "ctx": "câu hỏi khách"
+ }
+}

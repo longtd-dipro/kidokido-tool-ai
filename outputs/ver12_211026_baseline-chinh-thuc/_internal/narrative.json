@@ -1,0 +1,37 @@
+{
+ "project_name": "KidoKido",
+ "customer": "Chưa xác định — tên khách hàng chưa được khai báo lúc bắt đầu khảo sát. Tiêu đề trang web quan sát được: 「ボーネルンドあそび場予約・購入サイト」.",
+ "product_overview": "KidoKido là hệ thống đặt chỗ và bán vé cho khu vui chơi, chia theo từng cửa hàng (施設).\n• Website người dùng: xem danh sách cửa hàng, tình trạng chờ / chỗ trống, bảng giá; mua vé dùng trong ngày, vé lượt (回数券), vé tháng (フリーパス); xem lịch sử đặt chỗ và quản lý tài khoản.\n• Website quản trị: Super Admin quản lý cửa hàng, vé, người dùng, nhân viên, tin tức, email tự động, cổng thanh toán GMO và cài đặt; admin cửa hàng vận hành đặt chỗ, hàng chờ, check-in / check-out bằng mã vạch và xem doanh thu.\n• Kết nối ngoài: thanh toán online qua GMO, đồng bộ giao dịch với máy bán hàng Smaregi, gửi mail qua SES/SMTP, lưu file trên S3, người dùng đăng nhập bằng LINE.\n• Mục đích nghiệp vụ chi tiết của từng màn chờ khách hàng xác nhận — xem Phụ lục A.",
+ "actors": [
+  {
+   "actor": "Khách chưa đăng nhập",
+   "role": "Khách vãng lai (anonymous)",
+   "main_usage": "• Xem trang công khai: cửa hàng, giá, tình trạng chờ, điều khoản\n• Đăng ký tài khoản / đăng nhập"
+  },
+  {
+   "actor": "Người dùng (đã đăng nhập)",
+   "role": "Người dùng (User)",
+   "main_usage": "• Mua vé\n• Xem lịch sử đặt chỗ, vé lượt / vé tháng\n• Quản lý cửa hàng yêu thích và tài khoản"
+  },
+  {
+   "actor": "Super Admin",
+   "role": "Super Admin",
+   "main_usage": "• Xem trang tổng quan (Dashboard)\n• Quản lý cửa hàng, vé, người dùng, nhân viên, tin tức, email\n• Cài đặt cổng thanh toán GMO và cài đặt hệ thống"
+  },
+  {
+   "actor": "Admin cửa hàng (loại Tenant / POSS / Smaregi V1 / V2)",
+   "role": "Admin",
+   "main_usage": "• Xem danh sách đặt chỗ, hàng chờ, check-in\n• Điều chỉnh số vé còn, trạng thái chỗ trống\n• Xem doanh thu; quản lý nhân viên, vé, người dùng của cửa hàng mình"
+  },
+  {
+   "actor": "Hệ thống (tự động)",
+   "role": "Tác vụ chạy định kỳ / nhận thông báo từ hệ thống ngoài / API cho máy bán hàng",
+   "main_usage": "• Chạy định kỳ: đối soát giao dịch với Smaregi, gửi nhắc hạn, chuyển đổi dữ liệu\n• Nhận thông báo tự động từ Smaregi và kết quả thanh toán từ GMO\n• Cung cấp API cho máy bán hàng (POS)"
+  }
+ ],
+ "system_composition": [
+  "Toàn bộ mã nguồn nằm trong 1 repo (REPO-01) viết bằng Next.js (pages router): gồm giao diện của cả 2 website và phần xử lý phía server (API routes). Dữ liệu lưu trong PostgreSQL, truy cập qua Prisma.",
+  "Website quản trị (/admin) và website người dùng (/) dùng chung 1 tên miền, đang ở môi trường dev. Trước khi vào trang phải nhập mật khẩu lớp ngoài (HTTP Basic Auth của CloudFront).",
+  "Hệ thống bên ngoài đang kết nối:\n• Thanh toán: GMO Payment Gateway\n• Máy bán hàng: POS Smaregi\n• Gửi mail: AWS SES / Nodemailer\n• Lưu file: AWS S3\n• Đăng nhập: LINE Login"
+ ]
+}

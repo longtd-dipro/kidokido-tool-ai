@@ -1,0 +1,458 @@
+{
+ "Q-001|Item": {
+  "text": "API-012 /api/admin/bookings/blacklist",
+  "ctx": "type Unknown · owner BrSE / PM phía KH · Open"
+ },
+ "Q-001|Reason / Evidence": {
+  "text": "src/middleware.ts chỉ áp Basic Auth cho /api/admin khi env BASIC_AUTH_USER/BASIC_AUTH_PASS có giá trị (REPO-01:src/middleware.ts#L80-L104); không có trong code là môi trường production có cấu hình 2 biến này hay không → cần xác nhận endpoint có thực sự công khai không.",
+  "ctx": "type Unknown · owner BrSE / PM phía KH · Open"
+ },
+ "Q-001|Required Action": {
+  "text": "Dev / BrSE xác nhận hành vi API",
+  "ctx": "type Unknown · owner BrSE / PM phía KH · Open"
+ },
+ "Q-002|Item": {
+  "text": "SC-005 /admin/booking-management/details/:id",
+  "ctx": "type Unknown · owner BrSE / PM phía KH · Open"
+ },
+ "Q-002|Reason / Evidence": {
+  "text": "Route có tham số, crawler không có ID hợp lệ để mở (màn mở bằng click dòng / nút) — code: REPO-01:src/pages/admin/booking-management/details/[id].tsx#L1",
+  "ctx": "type Unknown · owner BrSE / PM phía KH · Open"
+ },
+ "Q-002|Required Action": {
+  "text": "Cung cấp đường đi / dữ liệu test để mở màn, hoặc xác nhận màn còn dùng",
+  "ctx": "type Unknown · owner BrSE / PM phía KH · Open"
+ },
+ "Q-003|Item": {
+  "text": "SC-006 /admin/booking-management/partial-checkout/:id",
+  "ctx": "type Unknown · owner BrSE / PM phía KH · Open"
+ },
+ "Q-003|Reason / Evidence": {
+  "text": "Route có tham số, crawler không có ID hợp lệ để mở (màn mở bằng click dòng / nút) — code: REPO-01:src/pages/admin/booking-management/partial-checkout/[id].tsx#L1",
+  "ctx": "type Unknown · owner BrSE / PM phía KH · Open"
+ },
+ "Q-003|Required Action": {
+  "text": "Cung cấp đường đi / dữ liệu test để mở màn, hoặc xác nhận màn còn dùng",
+  "ctx": "type Unknown · owner BrSE / PM phía KH · Open"
+ },
+ "Q-004|Item": {
+  "text": "SC-007 /admin/booking-management/update/:id",
+  "ctx": "type Unknown · owner BrSE / PM phía KH · Open"
+ },
+ "Q-004|Reason / Evidence": {
+  "text": "Route có tham số, crawler không có ID hợp lệ để mở (màn mở bằng click dòng / nút) — code: REPO-01:src/pages/admin/booking-management/update/[id].tsx#L1",
+  "ctx": "type Unknown · owner BrSE / PM phía KH · Open"
+ },
+ "Q-004|Required Action": {
+  "text": "Cung cấp đường đi / dữ liệu test để mở màn, hoặc xác nhận màn còn dùng",
+  "ctx": "type Unknown · owner BrSE / PM phía KH · Open"
+ },
+ "Q-005|Item": {
+  "text": "SC-015 /admin/email-settings/edit/:emailKey",
+  "ctx": "type Unknown · owner BrSE / PM phía KH · Open"
+ },
+ "Q-005|Reason / Evidence": {
+  "text": "Route có tham số, crawler không có ID hợp lệ để mở (màn mở bằng click dòng / nút) — code: REPO-01:src/pages/admin/email-settings/edit/[emailKey].tsx#L1",
+  "ctx": "type Unknown · owner BrSE / PM phía KH · Open"
+ },
+ "Q-005|Required Action": {
+  "text": "Cung cấp đường đi / dữ liệu test để mở màn, hoặc xác nhận màn còn dùng",
+  "ctx": "type Unknown · owner BrSE / PM phía KH · Open"
+ },
+ "Q-006|Item": {
+  "text": "SC-019 /admin/gmo-settings/edit/:id",
+  "ctx": "type Unknown · owner BrSE / PM phía KH · Open"
+ },
+ "Q-006|Reason / Evidence": {
+  "text": "Route có tham số, crawler không có ID hợp lệ để mở (màn mở bằng click dòng / nút) — code: REPO-01:src/pages/admin/gmo-settings/edit/[id].tsx#L1",
+  "ctx": "type Unknown · owner BrSE / PM phía KH · Open"
+ },
+ "Q-006|Required Action": {
+  "text": "Cung cấp đường đi / dữ liệu test để mở màn, hoặc xác nhận màn còn dùng",
+  "ctx": "type Unknown · owner BrSE / PM phía KH · Open"
+ },
+ "Q-007|Item": {
+  "text": "SC-020 /admin/gmo-settings/view/:id",
+  "ctx": "type Unknown · owner BrSE / PM phía KH · Open"
+ },
+ "Q-007|Reason / Evidence": {
+  "text": "Route có tham số, crawler không có ID hợp lệ để mở (màn mở bằng click dòng / nút) — code: REPO-01:src/pages/admin/gmo-settings/view/[id].tsx#L1",
+  "ctx": "type Unknown · owner BrSE / PM phía KH · Open"
+ },
+ "Q-007|Required Action": {
+  "text": "Cung cấp đường đi / dữ liệu test để mở màn, hoặc xác nhận màn còn dùng",
+  "ctx": "type Unknown · owner BrSE / PM phía KH · Open"
+ },
+ "Q-008|Item": {
+  "text": "SC-023 /admin/news-management/edit/:newsId",
+  "ctx": "type Unknown · owner BrSE / PM phía KH · Open"
+ },
+ "Q-008|Reason / Evidence": {
+  "text": "Route có tham số, crawler không có ID hợp lệ để mở (màn mở bằng click dòng / nút) — code: REPO-01:src/pages/admin/news-management/edit/[newsId].tsx#L1",
+  "ctx": "type Unknown · owner BrSE / PM phía KH · Open"
+ },
+ "Q-008|Required Action": {
+  "text": "Cung cấp đường đi / dữ liệu test để mở màn, hoặc xác nhận màn còn dùng",
+  "ctx": "type Unknown · owner BrSE / PM phía KH · Open"
+ },
+ "Q-009|Item": {
+  "text": "SC-024 /admin/reset-password/:token",
+  "ctx": "type Unknown · owner BrSE / PM phía KH · Open"
+ },
+ "Q-009|Reason / Evidence": {
+  "text": "Route có tham số, crawler không có ID hợp lệ để mở (màn mở bằng click dòng / nút) — code: REPO-01:src/pages/admin/reset-password/[token].tsx#L1",
+  "ctx": "type Unknown · owner BrSE / PM phía KH · Open"
+ },
+ "Q-009|Required Action": {
+  "text": "Cung cấp đường đi / dữ liệu test để mở màn, hoặc xác nhận màn còn dùng",
+  "ctx": "type Unknown · owner BrSE / PM phía KH · Open"
+ },
+ "Q-010|Item": {
+  "text": "SC-030 /admin/staff-management/edit/:id",
+  "ctx": "type Unknown · owner BrSE / PM phía KH · Open"
+ },
+ "Q-010|Reason / Evidence": {
+  "text": "Route có tham số, crawler không có ID hợp lệ để mở (màn mở bằng click dòng / nút) — code: REPO-01:src/pages/admin/staff-management/edit/[id].tsx#L1",
+  "ctx": "type Unknown · owner BrSE / PM phía KH · Open"
+ },
+ "Q-010|Required Action": {
+  "text": "Cung cấp đường đi / dữ liệu test để mở màn, hoặc xác nhận màn còn dùng",
+  "ctx": "type Unknown · owner BrSE / PM phía KH · Open"
+ },
+ "Q-011|Item": {
+  "text": "SC-033 /admin/tenant-management/edit/:tenantCode",
+  "ctx": "type Unknown · owner BrSE / PM phía KH · Open"
+ },
+ "Q-011|Reason / Evidence": {
+  "text": "Route có tham số, crawler không có ID hợp lệ để mở (màn mở bằng click dòng / nút) — code: REPO-01:src/pages/admin/tenant-management/edit/[tenantCode].tsx#L1",
+  "ctx": "type Unknown · owner BrSE / PM phía KH · Open"
+ },
+ "Q-011|Required Action": {
+  "text": "Cung cấp đường đi / dữ liệu test để mở màn, hoặc xác nhận màn còn dùng",
+  "ctx": "type Unknown · owner BrSE / PM phía KH · Open"
+ },
+ "Q-012|Item": {
+  "text": "SC-034 /admin/tenant-management/view/:tenantCode",
+  "ctx": "type Unknown · owner BrSE / PM phía KH · Open"
+ },
+ "Q-012|Reason / Evidence": {
+  "text": "Route có tham số, crawler không có ID hợp lệ để mở (màn mở bằng click dòng / nút) — code: REPO-01:src/pages/admin/tenant-management/view/[tenantCode].tsx#L1",
+  "ctx": "type Unknown · owner BrSE / PM phía KH · Open"
+ },
+ "Q-012|Required Action": {
+  "text": "Cung cấp đường đi / dữ liệu test để mở màn, hoặc xác nhận màn còn dùng",
+  "ctx": "type Unknown · owner BrSE / PM phía KH · Open"
+ },
+ "Q-013|Item": {
+  "text": "SC-037 /admin/ticket-management/edit/:ticketId",
+  "ctx": "type Unknown · owner BrSE / PM phía KH · Open"
+ },
+ "Q-013|Reason / Evidence": {
+  "text": "Route có tham số, crawler không có ID hợp lệ để mở (màn mở bằng click dòng / nút) — code: REPO-01:src/pages/admin/ticket-management/edit/[ticketId].tsx#L1",
+  "ctx": "type Unknown · owner BrSE / PM phía KH · Open"
+ },
+ "Q-013|Required Action": {
+  "text": "Cung cấp đường đi / dữ liệu test để mở màn, hoặc xác nhận màn còn dùng",
+  "ctx": "type Unknown · owner BrSE / PM phía KH · Open"
+ },
+ "Q-014|Item": {
+  "text": "SC-038 /admin/ticket-management/view/:ticketId",
+  "ctx": "type Unknown · owner BrSE / PM phía KH · Open"
+ },
+ "Q-014|Reason / Evidence": {
+  "text": "Route có tham số, crawler không có ID hợp lệ để mở (màn mở bằng click dòng / nút) — code: REPO-01:src/pages/admin/ticket-management/view/[ticketId].tsx#L1",
+  "ctx": "type Unknown · owner BrSE / PM phía KH · Open"
+ },
+ "Q-014|Required Action": {
+  "text": "Cung cấp đường đi / dữ liệu test để mở màn, hoặc xác nhận màn còn dùng",
+  "ctx": "type Unknown · owner BrSE / PM phía KH · Open"
+ },
+ "Q-015|Item": {
+  "text": "SC-039 /admin/unlock-account/:token",
+  "ctx": "type Unknown · owner BrSE / PM phía KH · Open"
+ },
+ "Q-015|Reason / Evidence": {
+  "text": "Route có tham số, crawler không có ID hợp lệ để mở (màn mở bằng click dòng / nút) — code: REPO-01:src/pages/admin/unlock-account/[token].tsx#L1",
+  "ctx": "type Unknown · owner BrSE / PM phía KH · Open"
+ },
+ "Q-015|Required Action": {
+  "text": "Cung cấp đường đi / dữ liệu test để mở màn, hoặc xác nhận màn còn dùng",
+  "ctx": "type Unknown · owner BrSE / PM phía KH · Open"
+ },
+ "Q-016|Item": {
+  "text": "SC-042 /admin/user-management/edit/:userId",
+  "ctx": "type Unknown · owner BrSE / PM phía KH · Open"
+ },
+ "Q-016|Reason / Evidence": {
+  "text": "Route có tham số, crawler không có ID hợp lệ để mở (màn mở bằng click dòng / nút) — code: REPO-01:src/pages/admin/user-management/edit/[userId].tsx#L1",
+  "ctx": "type Unknown · owner BrSE / PM phía KH · Open"
+ },
+ "Q-016|Required Action": {
+  "text": "Cung cấp đường đi / dữ liệu test để mở màn, hoặc xác nhận màn còn dùng",
+  "ctx": "type Unknown · owner BrSE / PM phía KH · Open"
+ },
+ "Q-017|Item": {
+  "text": "SC-043 /admin/user-management/view/:userId",
+  "ctx": "type Unknown · owner BrSE / PM phía KH · Open"
+ },
+ "Q-017|Reason / Evidence": {
+  "text": "Route có tham số, crawler không có ID hợp lệ để mở (màn mở bằng click dòng / nút) — code: REPO-01:src/pages/admin/user-management/view/[userId].tsx#L1",
+  "ctx": "type Unknown · owner BrSE / PM phía KH · Open"
+ },
+ "Q-017|Required Action": {
+  "text": "Cung cấp đường đi / dữ liệu test để mở màn, hoặc xác nhận màn còn dùng",
+  "ctx": "type Unknown · owner BrSE / PM phía KH · Open"
+ },
+ "Q-018|Item": {
+  "text": "SC-047 /403",
+  "ctx": "type Unknown · owner BrSE / PM phía KH · Open"
+ },
+ "Q-018|Reason / Evidence": {
+  "text": "Đã mở URL nhưng mọi role đã thử đều không xem được (trang trống / về login): Khách (chưa đăng nhập), User — code: REPO-01:src/pages/403.tsx#L1",
+  "ctx": "type Unknown · owner BrSE / PM phía KH · Open"
+ },
+ "Q-018|Required Action": {
+  "text": "Cung cấp đường đi / dữ liệu test để mở màn, hoặc xác nhận màn còn dùng",
+  "ctx": "type Unknown · owner BrSE / PM phía KH · Open"
+ },
+ "Q-019|Item": {
+  "text": "SC-050 /booking/payment-online",
+  "ctx": "type Unknown · owner BrSE / PM phía KH · Open"
+ },
+ "Q-019|Reason / Evidence": {
+  "text": "Route có trong code nhưng chưa được crawl tới — code: REPO-01:src/pages/booking/payment-online.tsx#L1",
+  "ctx": "type Unknown · owner BrSE / PM phía KH · Open"
+ },
+ "Q-019|Required Action": {
+  "text": "Cung cấp đường đi / dữ liệu test để mở màn, hoặc xác nhận màn còn dùng",
+  "ctx": "type Unknown · owner BrSE / PM phía KH · Open"
+ },
+ "Q-020|Item": {
+  "text": "SC-051 /booking/payment-online-failure",
+  "ctx": "type Unknown · owner BrSE / PM phía KH · Open"
+ },
+ "Q-020|Reason / Evidence": {
+  "text": "Route có trong code nhưng chưa được crawl tới — code: REPO-01:src/pages/booking/payment-online-failure.tsx#L1",
+  "ctx": "type Unknown · owner BrSE / PM phía KH · Open"
+ },
+ "Q-020|Required Action": {
+  "text": "Cung cấp đường đi / dữ liệu test để mở màn, hoặc xác nhận màn còn dùng",
+  "ctx": "type Unknown · owner BrSE / PM phía KH · Open"
+ },
+ "Q-021|Item": {
+  "text": "SC-052 /booking/payment-online-monthly-ticket-success",
+  "ctx": "type Unknown · owner BrSE / PM phía KH · Open"
+ },
+ "Q-021|Reason / Evidence": {
+  "text": "Route có trong code nhưng chưa được crawl tới — code: REPO-01:src/pages/booking/payment-online-monthly-ticket-success.tsx#L1",
+  "ctx": "type Unknown · owner BrSE / PM phía KH · Open"
+ },
+ "Q-021|Required Action": {
+  "text": "Cung cấp đường đi / dữ liệu test để mở màn, hoặc xác nhận màn còn dùng",
+  "ctx": "type Unknown · owner BrSE / PM phía KH · Open"
+ },
+ "Q-022|Item": {
+  "text": "SC-053 /booking/payment-online-success",
+  "ctx": "type Unknown · owner BrSE / PM phía KH · Open"
+ },
+ "Q-022|Reason / Evidence": {
+  "text": "Route có trong code nhưng chưa được crawl tới — code: REPO-01:src/pages/booking/payment-online-success.tsx#L1",
+  "ctx": "type Unknown · owner BrSE / PM phía KH · Open"
+ },
+ "Q-022|Required Action": {
+  "text": "Cung cấp đường đi / dữ liệu test để mở màn, hoặc xác nhận màn còn dùng",
+  "ctx": "type Unknown · owner BrSE / PM phía KH · Open"
+ },
+ "Q-023|Item": {
+  "text": "SC-058 /maintenance",
+  "ctx": "type Unknown · owner BrSE / PM phía KH · Open"
+ },
+ "Q-023|Reason / Evidence": {
+  "text": "Đã mở URL nhưng mọi role đã thử đều không xem được (trang trống / về login): Khách (chưa đăng nhập), User — code: REPO-01:src/pages/maintenance.tsx#L1",
+  "ctx": "type Unknown · owner BrSE / PM phía KH · Open"
+ },
+ "Q-023|Required Action": {
+  "text": "Cung cấp đường đi / dữ liệu test để mở màn, hoặc xác nhận màn còn dùng",
+  "ctx": "type Unknown · owner BrSE / PM phía KH · Open"
+ },
+ "Q-024|Item": {
+  "text": "SC-061 /reset-password/:token",
+  "ctx": "type Unknown · owner BrSE / PM phía KH · Open"
+ },
+ "Q-024|Reason / Evidence": {
+  "text": "Route có tham số, crawler không có ID hợp lệ để mở (màn mở bằng click dòng / nút) — code: REPO-01:src/pages/reset-password/[token].tsx#L1",
+  "ctx": "type Unknown · owner BrSE / PM phía KH · Open"
+ },
+ "Q-024|Required Action": {
+  "text": "Cung cấp đường đi / dữ liệu test để mở màn, hoặc xác nhận màn còn dùng",
+  "ctx": "type Unknown · owner BrSE / PM phía KH · Open"
+ },
+ "Q-025|Item": {
+  "text": "SC-072 /user/my-page/booking-history/cancel-success",
+  "ctx": "type Unknown · owner BrSE / PM phía KH · Open"
+ },
+ "Q-025|Reason / Evidence": {
+  "text": "Route có trong code nhưng chưa được crawl tới — code: REPO-01:src/pages/user/my-page/booking-history/cancel-success.tsx#L1",
+  "ctx": "type Unknown · owner BrSE / PM phía KH · Open"
+ },
+ "Q-025|Required Action": {
+  "text": "Cung cấp đường đi / dữ liệu test để mở màn, hoặc xác nhận màn còn dùng",
+  "ctx": "type Unknown · owner BrSE / PM phía KH · Open"
+ },
+ "Q-026|Item": {
+  "text": "SC-073 /user/my-page/booking-history/partial-checkout/:id",
+  "ctx": "type Unknown · owner BrSE / PM phía KH · Open"
+ },
+ "Q-026|Reason / Evidence": {
+  "text": "Route có tham số, crawler không có ID hợp lệ để mở (màn mở bằng click dòng / nút) — code: REPO-01:src/pages/user/my-page/booking-history/partial-checkout/[id].tsx#L1",
+  "ctx": "type Unknown · owner BrSE / PM phía KH · Open"
+ },
+ "Q-026|Required Action": {
+  "text": "Cung cấp đường đi / dữ liệu test để mở màn, hoặc xác nhận màn còn dùng",
+  "ctx": "type Unknown · owner BrSE / PM phía KH · Open"
+ },
+ "Q-027|Item": {
+  "text": "SC-074 /user/my-page/booking-history/partial-checkout/success",
+  "ctx": "type Unknown · owner BrSE / PM phía KH · Open"
+ },
+ "Q-027|Reason / Evidence": {
+  "text": "Route có trong code nhưng chưa được crawl tới — code: REPO-01:src/pages/user/my-page/booking-history/partial-checkout/success.tsx#L1",
+  "ctx": "type Unknown · owner BrSE / PM phía KH · Open"
+ },
+ "Q-027|Required Action": {
+  "text": "Cung cấp đường đi / dữ liệu test để mở màn, hoặc xác nhận màn còn dùng",
+  "ctx": "type Unknown · owner BrSE / PM phía KH · Open"
+ },
+ "Q-028|Item": {
+  "text": "SC-075 /user/my-page/booking-history/update",
+  "ctx": "type Unknown · owner BrSE / PM phía KH · Open"
+ },
+ "Q-028|Reason / Evidence": {
+  "text": "Route có trong code nhưng chưa được crawl tới — code: REPO-01:src/pages/user/my-page/booking-history/update/index.tsx#L1",
+  "ctx": "type Unknown · owner BrSE / PM phía KH · Open"
+ },
+ "Q-028|Required Action": {
+  "text": "Cung cấp đường đi / dữ liệu test để mở màn, hoặc xác nhận màn còn dùng",
+  "ctx": "type Unknown · owner BrSE / PM phía KH · Open"
+ },
+ "Q-029|Item": {
+  "text": "SC-077 /user/my-page/booking-history/update/completed",
+  "ctx": "type Unknown · owner BrSE / PM phía KH · Open"
+ },
+ "Q-029|Reason / Evidence": {
+  "text": "Route có trong code nhưng chưa được crawl tới — code: REPO-01:src/pages/user/my-page/booking-history/update/completed/index.tsx#L1",
+  "ctx": "type Unknown · owner BrSE / PM phía KH · Open"
+ },
+ "Q-029|Required Action": {
+  "text": "Cung cấp đường đi / dữ liệu test để mở màn, hoặc xác nhận màn còn dùng",
+  "ctx": "type Unknown · owner BrSE / PM phía KH · Open"
+ },
+ "Q-030|Item": {
+  "text": "SC-078 /user/my-page/delete-account",
+  "ctx": "type Unknown · owner BrSE / PM phía KH · Open"
+ },
+ "Q-030|Reason / Evidence": {
+  "text": "Route có trong code nhưng chưa được crawl tới — code: REPO-01:src/pages/user/my-page/delete-account.tsx#L1",
+  "ctx": "type Unknown · owner BrSE / PM phía KH · Open"
+ },
+ "Q-030|Required Action": {
+  "text": "Cung cấp đường đi / dữ liệu test để mở màn, hoặc xác nhận màn còn dùng",
+  "ctx": "type Unknown · owner BrSE / PM phía KH · Open"
+ },
+ "Q-031|Item": {
+  "text": "SC-083 /user/my-page/personal-info/change-credit-card/delete",
+  "ctx": "type Unknown · owner BrSE / PM phía KH · Open"
+ },
+ "Q-031|Reason / Evidence": {
+  "text": "Route có trong code nhưng chưa được crawl tới — code: REPO-01:src/pages/user/my-page/personal-info/change-credit-card/delete.tsx#L1",
+  "ctx": "type Unknown · owner BrSE / PM phía KH · Open"
+ },
+ "Q-031|Required Action": {
+  "text": "Cung cấp đường đi / dữ liệu test để mở màn, hoặc xác nhận màn còn dùng",
+  "ctx": "type Unknown · owner BrSE / PM phía KH · Open"
+ },
+ "Q-032|Item": {
+  "text": "SC-088 /user/my-page/personal-info/update-information/verify-edit-email/:token",
+  "ctx": "type Unknown · owner BrSE / PM phía KH · Open"
+ },
+ "Q-032|Reason / Evidence": {
+  "text": "Route có tham số, crawler không có ID hợp lệ để mở (màn mở bằng click dòng / nút) — code: REPO-01:src/pages/user/my-page/personal-info/update-information/verify-edit-email/[token].tsx#L1",
+  "ctx": "type Unknown · owner BrSE / PM phía KH · Open"
+ },
+ "Q-032|Required Action": {
+  "text": "Cung cấp đường đi / dữ liệu test để mở màn, hoặc xác nhận màn còn dùng",
+  "ctx": "type Unknown · owner BrSE / PM phía KH · Open"
+ },
+ "Q-033|Item": {
+  "text": "SC-089 /user/my-page/personal-info/update-password/:token",
+  "ctx": "type Unknown · owner BrSE / PM phía KH · Open"
+ },
+ "Q-033|Reason / Evidence": {
+  "text": "Route có tham số, crawler không có ID hợp lệ để mở (màn mở bằng click dòng / nút) — code: REPO-01:src/pages/user/my-page/personal-info/update-password/[token].tsx#L1",
+  "ctx": "type Unknown · owner BrSE / PM phía KH · Open"
+ },
+ "Q-033|Required Action": {
+  "text": "Cung cấp đường đi / dữ liệu test để mở màn, hoặc xác nhận màn còn dùng",
+  "ctx": "type Unknown · owner BrSE / PM phía KH · Open"
+ },
+ "Q-034|Item": {
+  "text": "SC-093 /verify/:token",
+  "ctx": "type Unknown · owner BrSE / PM phía KH · Open"
+ },
+ "Q-034|Reason / Evidence": {
+  "text": "Route có tham số, crawler không có ID hợp lệ để mở (màn mở bằng click dòng / nút) — code: REPO-01:src/pages/verify/[token].tsx#L1",
+  "ctx": "type Unknown · owner BrSE / PM phía KH · Open"
+ },
+ "Q-034|Required Action": {
+  "text": "Cung cấp đường đi / dữ liệu test để mở màn, hoặc xác nhận màn còn dùng",
+  "ctx": "type Unknown · owner BrSE / PM phía KH · Open"
+ },
+ "Q-035|Item": {
+  "text": "Database schema-only",
+  "ctx": "type Unknown · owner User · Open"
+ },
+ "Q-035|Reason / Evidence": {
+  "text": "Dump inputs/db/kido_local_20270730.dump có dữ liệu (COPY rows, JWT, email) -> không đọc; O3 dựng từ prisma/schema.prisma",
+  "ctx": "type Unknown · owner User · Open"
+ },
+ "Q-035|Required Action": {
+  "text": "User gửi inputs/db/schema.sql (pg_restore --schema-only) để đối chiếu",
+  "ctx": "type Unknown · owner User · Open"
+ },
+ "Q-036|Item": {
+  "text": "Ý nghĩa nghiệp vụ của cột DB",
+  "ctx": "type Unknown · owner BrSE · Open"
+ },
+ "Q-036|Reason / Evidence": {
+  "text": "Meaning để UNKNOWN: chưa đọc code đọc/ghi từng cột (RE3)",
+  "ctx": "type Unknown · owner BrSE · Open"
+ },
+ "Q-036|Required Action": {
+  "text": "BrSE xác nhận ý nghĩa các cột quan trọng",
+  "ctx": "type Unknown · owner BrSE · Open"
+ },
+ "Q-037|Item": {
+  "text": "Chức năng CR-002 (①-B + ② cơ bản) sau release",
+  "ctx": "type Inference · owner BrSE · Open"
+ },
+ "Q-037|Reason / Evidence": {
+  "text": "Đưa vào baseline từ CR đã duyệt, chưa quan sát trên hệ thống",
+  "ctx": "type Inference · owner BrSE · Open"
+ },
+ "Q-037|Required Action": {
+  "text": "Sau release (① 5/11 · ② 19/11): chạy Luồng 1 DELTA quét lại màn / API CR chạm → đổi To verify thành Confirmed",
+  "ctx": "type Inference · owner BrSE · Open"
+ },
+ "Q-038|Item": {
+  "text": "CR-002 Option (nhiều trang giới hạn, IMP-030…038)",
+  "ctx": "type Unknown · owner PM · Open"
+ },
+ "Q-038|Reason / Evidence": {
+  "text": "ETA FINAL + Schedule có R2' thay R2 nếu chọn Option; chưa có xác nhận khách chọn",
+  "ctx": "type Unknown · owner PM · Open"
+ },
+ "Q-038|Required Action": {
+  "text": "PM xác nhận khách chọn ② có / không Option → nếu có, đưa IMP-030…038 vào baseline",
+  "ctx": "type Unknown · owner PM · Open"
+ }
+}

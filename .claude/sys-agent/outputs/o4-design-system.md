@@ -122,6 +122,8 @@ Chặn: **cấu trúc không khớp chế độ trong `dsLayout`** (VD dữ li�
 
 P7b = Không → giữ file local, `STATUS.md` ghi `- Artifact: — (chưa publish: <lý do>)`.
 
+**Bổ sung từ UI thật của designer (Luồng 2, CR-3):** quy trình ở `figma/cr-view.md` §4 bước 7 — version DS mới, token theo vai trò, mâu thuẫn chọn website, gate V-DS + V-CR-FIGMA `--ds-baseline`.
+
 **Version sau:** không tạo artifact mới — revise artifact cũ theo `SKILL.md` § Revising (đọc index + file sẽ sửa, gửi chỉ file đổi, index cuối, `lastChange.note`); Changelog trong `STATUS.md`.
 
 **Sang designer-kit:** `single` / `themes` → copy `04_DesignSystem/` → `designer-kit/prototype-to-figma/design-system/`; `per-site` → copy `04_DesignSystem/WEB-xx/` của site đang vẽ. Cùng cấu trúc. Designer duyệt → `STATUS.md` `APPROVED <ngày>`.

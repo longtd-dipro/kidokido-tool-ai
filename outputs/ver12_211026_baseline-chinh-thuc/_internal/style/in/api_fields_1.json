@@ -1,0 +1,1310 @@
+{
+ "AF0000": {
+  "text": "Khoá setting (GET/DELETE dùng tham số path)",
+  "ctx": "API-001 REQUEST.settingKey (string)"
+ },
+ "AF0001": {
+  "text": "PUT: khoá setting dùng làm điều kiện where (lấy từ body, không lấy từ path)",
+  "ctx": "API-001 REQUEST.settingKey (string)"
+ },
+ "AF0002": {
+  "text": "PUT: toàn bộ body được truyền thẳng vào data update",
+  "ctx": "API-001 REQUEST.(toàn bộ body) (object)"
+ },
+ "AF0003": {
+  "text": "Thành công",
+  "ctx": "API-001 RESPONSE.200 (object)"
+ },
+ "AF0004": {
+  "text": "GET: chuỗi value của setting (getAppSettingByKey trả .value); PUT/DELETE: bản ghi app_settings",
+  "ctx": "API-001 RESPONSE.data (string|object)"
+ },
+ "AF0005": {
+  "text": "Chưa đăng nhập / không có token hợp lệ ({error})",
+  "ctx": "API-001 RESPONSE.401 (object)"
+ },
+ "AF0006": {
+  "text": "Role không nằm trong danh sách cho phép ({error})",
+  "ctx": "API-001 RESPONSE.403 (object)"
+ },
+ "AF0007": {
+  "text": "Lỗi không bắt được → onError ({error})",
+  "ctx": "API-001 RESPONSE.500 (object)"
+ },
+ "AF0008": {
+  "text": "Method không được handler hỗ trợ (onNoMatch)",
+  "ctx": "API-001 RESPONSE.404 (string)"
+ },
+ "AF0009": {
+  "text": "Khoá setting",
+  "ctx": "API-002 REQUEST.settingKey (string)"
+ },
+ "AF0010": {
+  "text": "Tên setting",
+  "ctx": "API-002 REQUEST.name (string)"
+ },
+ "AF0011": {
+  "text": "Giá trị",
+  "ctx": "API-002 REQUEST.value (string)"
+ },
+ "AF0012": {
+  "text": "Kiểu dữ liệu",
+  "ctx": "API-002 REQUEST.dataType (string)"
+ },
+ "AF0013": {
+  "text": "Thành công (cả GET và POST, POST cũng trả 200)",
+  "ctx": "API-002 RESPONSE.200 (object)"
+ },
+ "AF0014": {
+  "text": "GET: mảng app_settings; POST: bản ghi vừa tạo",
+  "ctx": "API-002 RESPONSE.data (array|object)"
+ },
+ "AF0015": {
+  "text": "Lỗi validate yup ({error, data})",
+  "ctx": "API-002 RESPONSE.400 (object)"
+ },
+ "AF0016": {
+  "text": "ID booking",
+  "ctx": "API-003 REQUEST.id (number)"
+ },
+ "AF0017": {
+  "text": "Có giá trị (truthy) → gửi mail thông báo gọi",
+  "ctx": "API-003 REQUEST.needToSendNotification (string)"
+ },
+ "AF0018": {
+  "text": "Trạng thái mới (BookingStatus)",
+  "ctx": "API-003 REQUEST.status (string)"
+ },
+ "AF0019": {
+  "text": "Kết quả updateMany ({count})",
+  "ctx": "API-003 RESPONSE.data (object)"
+ },
+ "AF0020": {
+  "text": "Booking Calling thuộc vé accumulative, kèm callingDuration",
+  "ctx": "API-004 RESPONSE.data.accumulativeCallingBookings (array)"
+ },
+ "AF0021": {
+  "text": "Nhóm theo ticket: {ticketId, ticketName, callingBookings}",
+  "ctx": "API-004 RESPONSE.data.standaloneCallingBookings (array)"
+ },
+ "AF0022": {
+  "text": "Danh sách booking",
+  "ctx": "API-005 REQUEST.[] (body là mảng) (array)"
+ },
+ "AF0023": {
+  "text": "ID booking cần cập nhật (không có trong schema)",
+  "ctx": "API-005 REQUEST.[].id (number)"
+ },
+ "AF0024": {
+  "text": "Thứ tự chờ mới",
+  "ctx": "API-005 REQUEST.[].waitingOrder (number)"
+ },
+ "AF0025": {
+  "text": "Chỉ booking đầu tiên đã cập nhật (destructure phần tử [0] của kết quả transaction)",
+  "ctx": "API-005 RESPONSE.data (object)"
+ },
+ "AF0026": {
+  "text": "Booking + User{name,email} + Ticket{name} + cancelledDuration",
+  "ctx": "API-006 RESPONSE.data (array)"
+ },
+ "AF0027": {
+  "text": "Booking chờ của vé accumulative (kèm waitingDuration, waitingTime)",
+  "ctx": "API-007 RESPONSE.data.accumulativeWaitingBookings (array)"
+ },
+ "AF0028": {
+  "text": "{ticketId, ticketName, waitingBookings}",
+  "ctx": "API-007 RESPONSE.data.standaloneWaitingBookings (array)"
+ },
+ "AF0029": {
+  "text": "Tổng booking chờ",
+  "ctx": "API-007 RESPONSE.data.totalWaitingBookings (number)"
+ },
+ "AF0030": {
+  "text": "Tổng nhóm chờ",
+  "ctx": "API-007 RESPONSE.data.totalWaitingGroups (number)"
+ },
+ "AF0031": {
+  "text": "Tổng người chờ",
+  "ctx": "API-007 RESPONSE.data.totalWaitingPeople (number)"
+ },
+ "AF0032": {
+  "text": "Số người lớn đã check-in",
+  "ctx": "API-007 RESPONSE.data.totalAdultCheckIn (number)"
+ },
+ "AF0033": {
+  "text": "Số trẻ em đã check-in",
+  "ctx": "API-007 RESPONSE.data.totalChildCheckIn (number)"
+ },
+ "AF0034": {
+  "text": "Tổng thời gian chờ",
+  "ctx": "API-007 RESPONSE.data.totalWaitingBookingsTime (number)"
+ },
+ "AF0035": {
+  "text": "{date, totalMaxBookingPeople, totalPeople, checkedInPeople, waitingPeople, tickets[], totalAccessiblePeople}",
+  "ctx": "API-008 RESPONSE.data[] (array)"
+ },
+ "AF0036": {
+  "text": "{name, type, id, maxBookingPeople, ticketBookingScheduleId, totalPeople, checkedInPeople, waitingPeople, accessiblePeople}",
+  "ctx": "API-008 RESPONSE.data[].tickets[] (array)"
+ },
+ "AF0037": {
+  "text": "Booking đầy đủ quan hệ",
+  "ctx": "API-009 RESPONSE.data (object|null)"
+ },
+ "AF0038": {
+  "text": "{bookingId, recomputed: true}",
+  "ctx": "API-010 RESPONSE.data (object)"
+ },
+ "AF0039": {
+  "text": "Booking chưa checkout (throw Error) → onError",
+  "ctx": "API-010 RESPONSE.500 (object)"
+ },
+ "AF0040": {
+  "text": "Tổng tiền POS",
+  "ctx": "API-011 REQUEST.posTotalAmount (number)"
+ },
+ "AF0041": {
+  "text": "Coupon áp dụng (undefined → giữ giá trị cũ)",
+  "ctx": "API-011 REQUEST.coupons (UNKNOWN)"
+ },
+ "AF0042": {
+  "text": "true",
+  "ctx": "API-011 RESPONSE.data (boolean)"
+ },
+ "AF0043": {
+  "text": "Không tìm thấy booking",
+  "ctx": "API-011 RESPONSE.404 (object)"
+ },
+ "AF0044": {
+  "text": "Booking + User đầy đủ",
+  "ctx": "API-012 RESPONSE.data (array)"
+ },
+ "AF0045": {
+  "text": "Lỗi → onError",
+  "ctx": "API-012 RESPONSE.500 (object)"
+ },
+ "AF0046": {
+  "text": "Method khác GET",
+  "ctx": "API-012 RESPONSE.404 (string)"
+ },
+ "AF0047": {
+  "text": "true → huỷ mọi booking cùng barCode",
+  "ctx": "API-013 REQUEST.shouldCancelAllSameBarcodeBookings (boolean)"
+ },
+ "AF0048": {
+  "text": "Danh sách barCode của booking con (vé tháng) cần huỷ cả nhóm",
+  "ctx": "API-013 REQUEST.specificBookingBarCodeShouldCancelAll (array)"
+ },
+ "AF0049": {
+  "text": "null",
+  "ctx": "API-013 RESPONSE.data (null)"
+ },
+ "AF0050": {
+  "text": "Trạng thái không cho huỷ / lỗi GMO search hoặc cancel",
+  "ctx": "API-013 RESPONSE.400 (object)"
+ },
+ "AF0051": {
+  "text": "Chỉ có hiệu lực với SuperAdmin; Admin bị ép tenant của mình",
+  "ctx": "API-014 REQUEST.tenantCode (string)"
+ },
+ "AF0052": {
+  "text": "Loại vé (TicketType)",
+  "ctx": "API-014 REQUEST.ticketType (string)"
+ },
+ "AF0053": {
+  "text": "ID vé",
+  "ctx": "API-014 REQUEST.ticketId (number)"
+ },
+ "AF0054": {
+  "text": "Danh sách trạng thái",
+  "ctx": "API-014 REQUEST.status[] (array)"
+ },
+ "AF0055": {
+  "text": "Ngày bắt đầu",
+  "ctx": "API-014 REQUEST.startDate (string)"
+ },
+ "AF0056": {
+  "text": "Ngày kết thúc",
+  "ctx": "API-014 REQUEST.endDate (string)"
+ },
+ "AF0057": {
+  "text": "Đuôi barCode",
+  "ctx": "API-014 REQUEST.shortBarCode (string)"
+ },
+ "AF0058": {
+  "text": "BarCode đầy đủ",
+  "ctx": "API-014 REQUEST.barCode (string)"
+ },
+ "AF0059": {
+  "text": "Tên user (contains, không phân biệt hoa thường)",
+  "ctx": "API-014 REQUEST.name (string)"
+ },
+ "AF0060": {
+  "text": "Tổng số booking",
+  "ctx": "API-014 RESPONSE.data (number)"
+ },
+ "AF0061": {
+  "text": "Số người lớn cần giảm",
+  "ctx": "API-015 REQUEST.adultQuantity (number)"
+ },
+ "AF0062": {
+  "text": "Số trẻ em cần giảm",
+  "ctx": "API-015 REQUEST.childQuantity (number)"
+ },
+ "AF0063": {
+  "text": "Danh sách {id} thông tin tuổi trẻ em cần xoá",
+  "ctx": "API-015 REQUEST.childAges (array)"
+ },
+ "AF0064": {
+  "text": "Lỗi GMO khi search/đổi số tiền",
+  "ctx": "API-015 RESPONSE.400 (object)"
+ },
+ "AF0065": {
+  "text": "Chọn bộ header CSV (SUPER_ADMIN/STAFF/khác→Admin)",
+  "ctx": "API-016 REQUEST.exportingRole (string)"
+ },
+ "AF0066": {
+  "text": "ID staff/user để ghi activity log",
+  "ctx": "API-016 REQUEST.userOrStaffId (string)"
+ },
+ "AF0067": {
+  "text": "tenantCode, ticketType, ticketId, status[], startDate, endDate, shortBarCode, barCode, name — giống API-017",
+  "ctx": "API-016 REQUEST.(bộ lọc booking) (string)"
+ },
+ "AF0068": {
+  "text": "File CSV (Content-Type text/csv; attachment data.csv)",
+  "ctx": "API-016 RESPONSE.200 (file)"
+ },
+ "AF0069": {
+  "text": "Số bản ghi / trang",
+  "ctx": "API-017 REQUEST.limit (number)"
+ },
+ "AF0070": {
+  "text": "Trang (bắt đầu 1)",
+  "ctx": "API-017 REQUEST.page (number)"
+ },
+ "AF0071": {
+  "text": "ActivityType — có thì ghi activity log",
+  "ctx": "API-017 REQUEST.fromAction (string)"
+ },
+ "AF0072": {
+  "text": "Chỉ dùng cho SuperAdmin",
+  "ctx": "API-017 REQUEST.tenantCode (string)"
+ },
+ "AF0073": {
+  "text": "Loại vé",
+  "ctx": "API-017 REQUEST.ticketType (string)"
+ },
+ "AF0074": {
+  "text": "Trạng thái",
+  "ctx": "API-017 REQUEST.status[] (array)"
+ },
+ "AF0075": {
+  "text": "Từ ngày (date)",
+  "ctx": "API-017 REQUEST.startDate (string)"
+ },
+ "AF0076": {
+  "text": "Đến ngày (date)",
+  "ctx": "API-017 REQUEST.endDate (string)"
+ },
+ "AF0077": {
+  "text": "Đuôi barCode (endsWith)",
+  "ctx": "API-017 REQUEST.shortBarCode (string)"
+ },
+ "AF0078": {
+  "text": "BarCode đầy đủ (equals)",
+  "ctx": "API-017 REQUEST.barCode (string)"
+ },
+ "AF0079": {
+  "text": "Tên user (contains, insensitive)",
+  "ctx": "API-017 REQUEST.name (string)"
+ },
+ "AF0080": {
+  "text": "Booking + Ticket + User đầy đủ",
+  "ctx": "API-017 RESPONSE.data.bookings (array)"
+ },
+ "AF0081": {
+  "text": "ID booking vé tháng (cha)",
+  "ctx": "API-018 REQUEST.monthlyBookingId (number)"
+ },
+ "AF0082": {
+  "text": "Truthy → kèm danh sách booking con theo barCode",
+  "ctx": "API-018 REQUEST.includeOneDayBookings (string)"
+ },
+ "AF0083": {
+  "text": "Số lần đã dùng",
+  "ctx": "API-018 RESPONSE.data.totalUsingTimes (number)"
+ },
+ "AF0084": {
+  "text": "Map barCode → {oneDayMonthlyBookingId, bookings[]}",
+  "ctx": "API-018 RESPONSE.data.oneDayBookings (object)"
+ },
+ "AF0085": {
+  "text": "BarCode cần rollback",
+  "ctx": "API-019 REQUEST.barCode (string)"
+ },
+ "AF0086": {
+  "text": "'rollback-checkout' | 'rollback-checkin'",
+  "ctx": "API-019 RESPONSE.data.action (string)"
+ },
+ "AF0087": {
+  "text": "{id, barCode, shortBarCode, ticketIndex, ticketCount, ticketName, tenantCode, adultQuantity, childQuantity, date, status, checkedInAt, checkedOutAt}",
+  "ctx": "API-019 RESPONSE.data.bookings (array)"
+ },
+ "AF0088": {
+  "text": "Thiếu barCode / barCode không hợp lệ / không thể rollback",
+  "ctx": "API-019 RESPONSE.400 (object)"
+ },
+ "AF0089": {
+  "text": "BarCode quét được",
+  "ctx": "API-020 REQUEST.barCode (string)"
+ },
+ "AF0090": {
+  "text": "Thời điểm thực hiện (làm tròn phút) dùng làm thời gian checkout",
+  "ctx": "API-020 REQUEST.performedAt (string)"
+ },
+ "AF0091": {
+  "text": "'checkout' | 'checkin'",
+  "ctx": "API-020 RESPONSE.data.action (string)"
+ },
+ "AF0092": {
+  "text": "Thông tin booking (checkout kèm formattedTotalAmount, extendedPrices, partialCheckouts)",
+  "ctx": "API-020 RESPONSE.data.bookings (array)"
+ },
+ "AF0093": {
+  "text": "Checkout, tenant v2: tổng tiền nhóm đã format",
+  "ctx": "API-020 RESPONSE.data.totalAmount (string)"
+ },
+ "AF0094": {
+  "text": "Thiếu/không hợp lệ barCode, đầy sức chứa, sai ngày/trạng thái/thanh toán, đã dùng",
+  "ctx": "API-020 RESPONSE.400 (object)"
+ },
+ "AF0095": {
+  "text": "Trạng thái mới",
+  "ctx": "API-021 REQUEST.status (string)"
+ },
+ "AF0096": {
+  "text": "Booking sau cập nhật",
+  "ctx": "API-021 RESPONSE.data (object)"
+ },
+ "AF0097": {
+  "text": "Chuyển sang Calling khi không phải Waiting / lỗi hoàn tiền GMO",
+  "ctx": "API-021 RESPONSE.400 (object)"
+ },
+ "AF0098": {
+  "text": "ID ticket booking schedule",
+  "ctx": "API-022 REQUEST.id (number)"
+ },
+ "AF0099": {
+  "text": "Số người tối đa",
+  "ctx": "API-022 REQUEST.maxBookingPeople (number)"
+ },
+ "AF0100": {
+  "text": "Bản ghi ticket_booking_schedules sau cập nhật",
+  "ctx": "API-022 RESPONSE.data (object)"
+ },
+ "AF0101": {
+  "text": "Từ ngày",
+  "ctx": "API-023 REQUEST.dateFrom (string)"
+ },
+ "AF0102": {
+  "text": "Đến ngày",
+  "ctx": "API-023 REQUEST.dateTo (string)"
+ },
+ "AF0103": {
+  "text": "[{tenant_code, total_bookings, total_users, ratio}]",
+  "ctx": "API-023 RESPONSE.data (array)"
+ },
+ "AF0104": {
+  "text": "[{name: tenant_code, data: [[date, ratio]]}]",
+  "ctx": "API-024 RESPONSE.data (array)"
+ },
+ "AF0105": {
+  "text": "Mã tenant",
+  "ctx": "API-025 REQUEST.tenantCode (string)"
+ },
+ "AF0106": {
+  "text": "[{ticket_id, total_bookings}]",
+  "ctx": "API-025 RESPONSE.data (array)"
+ },
+ "AF0107": {
+  "text": "[{times, total_bookings}]",
+  "ctx": "API-026 RESPONSE.data (array)"
+ },
+ "AF0108": {
+  "text": "[{date, totalNewUsers, totalOldUsers}]",
+  "ctx": "API-027 RESPONSE.data (array)"
+ },
+ "AF0109": {
+  "text": "ID user (dùng làm GMO memberId)",
+  "ctx": "API-028 REQUEST.userId (number)"
+ },
+ "AF0110": {
+  "text": "Kết quả SearchCard GMO đã parse (parseGMOResponse)",
+  "ctx": "API-028 RESPONSE.data (object)"
+ },
+ "AF0111": {
+  "text": "Danh sách disclaimer",
+  "ctx": "API-029 REQUEST.disclaimers (array)"
+ },
+ "AF0112": {
+  "text": "Nội dung disclaimer",
+  "ctx": "API-029 REQUEST.disclaimers[].title (string)"
+ },
+ "AF0113": {
+  "text": "Nội dung checkbox",
+  "ctx": "API-029 REQUEST.disclaimers[].options[].content (string)"
+ },
+ "AF0114": {
+  "text": "GET thành công",
+  "ctx": "API-029 RESPONSE.200 (object)"
+ },
+ "AF0115": {
+  "text": "GET: disclaimers + DisclaimerOption",
+  "ctx": "API-029 RESPONSE.data (array)"
+ },
+ "AF0116": {
+  "text": "POST thành công (data null)",
+  "ctx": "API-029 RESPONSE.201 (object)"
+ },
+ "AF0117": {
+  "text": "Token xác thực thay cho cookie",
+  "ctx": "API-030 REQUEST.access-token (string)"
+ },
+ "AF0118": {
+  "text": "Khoá mẫu email (GET/DELETE)",
+  "ctx": "API-030 REQUEST.emailKey (string)"
+ },
+ "AF0119": {
+  "text": "PUT: khoá mẫu email dùng làm điều kiện where",
+  "ctx": "API-030 REQUEST.emailKey (string)"
+ },
+ "AF0120": {
+  "text": "PUT: tên mẫu email",
+  "ctx": "API-030 REQUEST.name (string)"
+ },
+ "AF0121": {
+  "text": "PUT: tiêu đề email",
+  "ctx": "API-030 REQUEST.title (string)"
+ },
+ "AF0122": {
+  "text": "PUT: nội dung HTML mẫu email",
+  "ctx": "API-030 REQUEST.content (string)"
+ },
+ "AF0123": {
+  "text": "{data: emailSetting} (GET trả null nếu không tìm thấy)",
+  "ctx": "API-030 RESPONSE.200 (object)"
+ },
+ "AF0124": {
+  "text": "PUT: validation yup thất bại → {error, data}",
+  "ctx": "API-030 RESPONSE.400 (object)"
+ },
+ "AF0125": {
+  "text": "Chưa đăng nhập → {error: UNAUTHENTICATED}",
+  "ctx": "API-030 RESPONSE.401 (object)"
+ },
+ "AF0126": {
+  "text": "Không đúng role → {error: UNAUTHORIZED}",
+  "ctx": "API-030 RESPONSE.403 (object)"
+ },
+ "AF0127": {
+  "text": "Lỗi không bắt (vd. emailKey không tồn tại khi PUT/DELETE) → onError",
+  "ctx": "API-030 RESPONSE.500 (object)"
+ },
+ "AF0128": {
+  "text": "POST: khoá mẫu email",
+  "ctx": "API-031 REQUEST.emailKey (string)"
+ },
+ "AF0129": {
+  "text": "POST: tên mẫu",
+  "ctx": "API-031 REQUEST.name (string)"
+ },
+ "AF0130": {
+  "text": "POST: tiêu đề email",
+  "ctx": "API-031 REQUEST.title (string)"
+ },
+ "AF0131": {
+  "text": "POST: nội dung HTML",
+  "ctx": "API-031 REQUEST.content (string)"
+ },
+ "AF0132": {
+  "text": "GET: {data: emailSetting[]}; POST: {data: emailSetting}",
+  "ctx": "API-031 RESPONSE.200 (object)"
+ },
+ "AF0133": {
+  "text": "POST: validation thất bại",
+  "ctx": "API-031 RESPONSE.400 (object)"
+ },
+ "AF0134": {
+  "text": "Chưa đăng nhập",
+  "ctx": "API-031 RESPONSE.401 (object)"
+ },
+ "AF0135": {
+  "text": "Không đúng role",
+  "ctx": "API-031 RESPONSE.403 (object)"
+ },
+ "AF0136": {
+  "text": "Lỗi không bắt (vd. trùng emailKey) → onError",
+  "ctx": "API-031 RESPONSE.500 (object)"
+ },
+ "AF0137": {
+  "text": "Nội dung template email cần render",
+  "ctx": "API-032 REQUEST.content (string)"
+ },
+ "AF0138": {
+  "text": "Nếu = MONTHLY_BOOKING_SUCCESSFUL thì dùng bộ dữ liệu giả của vé tháng",
+  "ctx": "API-032 REQUEST.emailKey (string)"
+ },
+ "AF0139": {
+  "text": "{data: html string}",
+  "ctx": "API-032 RESPONSE.200 (object)"
+ },
+ "AF0140": {
+  "text": "Validation thất bại",
+  "ctx": "API-032 RESPONSE.400 (object)"
+ },
+ "AF0141": {
+  "text": "Lỗi render template → onError",
+  "ctx": "API-032 RESPONSE.500 (object)"
+ },
+ "AF0142": {
+  "text": "Khoá mẫu (chọn bộ dữ liệu giả / có ảnh barcode hay không)",
+  "ctx": "API-033 REQUEST.emailKey (string)"
+ },
+ "AF0143": {
+  "text": "Tiêu đề email",
+  "ctx": "API-033 REQUEST.emailTitle (string)"
+ },
+ "AF0144": {
+  "text": "Nội dung template",
+  "ctx": "API-033 REQUEST.content (string)"
+ },
+ "AF0145": {
+  "text": "Địa chỉ nhận email xem trước",
+  "ctx": "API-033 REQUEST.email (string)"
+ },
+ "AF0146": {
+  "text": "{data: null} (trả ngay, không chờ kết quả gửi)",
+  "ctx": "API-033 RESPONSE.200 (object)"
+ },
+ "AF0147": {
+  "text": "ID cấu hình GMO (GET/DELETE)",
+  "ctx": "API-034 REQUEST.id (number)"
+ },
+ "AF0148": {
+  "text": "PUT: ID cấu hình GMO dùng làm where",
+  "ctx": "API-034 REQUEST.id (number)"
+ },
+ "AF0149": {
+  "text": "PUT: tên tài khoản",
+  "ctx": "API-034 REQUEST.name (string)"
+ },
+ "AF0150": {
+  "text": "PUT: Shop ID GMO",
+  "ctx": "API-034 REQUEST.shopId (string)"
+ },
+ "AF0151": {
+  "text": "PUT: Shop password GMO",
+  "ctx": "API-034 REQUEST.shopPass (string)"
+ },
+ "AF0152": {
+  "text": "{data: gmoSetting}",
+  "ctx": "API-034 RESPONSE.200 (object)"
+ },
+ "AF0153": {
+  "text": "PUT: CANNOT_EDIT_GMO_SETTING (đã có booking online) / SHOP_ID_ALREADY_EXIST / validation",
+  "ctx": "API-034 RESPONSE.400 (object)"
+ },
+ "AF0154": {
+  "text": "DELETE: CANNOT_DELETE_GMO_SETTING (còn tenant liên kết)",
+  "ctx": "API-034 RESPONSE.400 (object)"
+ },
+ "AF0155": {
+  "text": "Lỗi không bắt → onError",
+  "ctx": "API-034 RESPONSE.500 (object)"
+ },
+ "AF0156": {
+  "text": "POST: tên tài khoản",
+  "ctx": "API-035 REQUEST.name (string)"
+ },
+ "AF0157": {
+  "text": "POST: Shop ID GMO",
+  "ctx": "API-035 REQUEST.shopId (string)"
+ },
+ "AF0158": {
+  "text": "POST: Shop password GMO",
+  "ctx": "API-035 REQUEST.shopPass (string)"
+ },
+ "AF0159": {
+  "text": "GET: {data: gmoSetting[]}; POST: {data: gmoSetting}",
+  "ctx": "API-035 RESPONSE.200 (object)"
+ },
+ "AF0160": {
+  "text": "POST: SHOP_ID_ALREADY_EXIST / validation",
+  "ctx": "API-035 RESPONSE.400 (object)"
+ },
+ "AF0161": {
+  "text": "ID tin tức (GET/DELETE)",
+  "ctx": "API-036 REQUEST.id (number)"
+ },
+ "AF0162": {
+  "text": "PUT: ID tin tức dùng làm where",
+  "ctx": "API-036 REQUEST.id (number)"
+ },
+ "AF0163": {
+  "text": "PUT: ngày giờ đăng",
+  "ctx": "API-036 REQUEST.date (string)"
+ },
+ "AF0164": {
+  "text": "PUT: tiêu đề",
+  "ctx": "API-036 REQUEST.title (string)"
+ },
+ "AF0165": {
+  "text": "PUT: nội dung",
+  "ctx": "API-036 REQUEST.content (string)"
+ },
+ "AF0166": {
+  "text": "{data: news}",
+  "ctx": "API-036 RESPONSE.200 (object)"
+ },
+ "AF0167": {
+  "text": "PUT: validation thất bại",
+  "ctx": "API-036 RESPONSE.400 (object)"
+ },
+ "AF0168": {
+  "text": "POST: ngày giờ đăng",
+  "ctx": "API-037 REQUEST.date (string)"
+ },
+ "AF0169": {
+  "text": "POST: tiêu đề",
+  "ctx": "API-037 REQUEST.title (string)"
+ },
+ "AF0170": {
+  "text": "POST: nội dung",
+  "ctx": "API-037 REQUEST.content (string)"
+ },
+ "AF0171": {
+  "text": "GET: {data: news[]}; POST: {data: news}",
+  "ctx": "API-037 RESPONSE.200 (object)"
+ },
+ "AF0172": {
+  "text": "Mã tenant có vé cần cập nhật",
+  "ctx": "API-038 REQUEST.tenantCode (string)"
+ },
+ "AF0173": {
+  "text": "File CSV UTF-8, header: TicketName, Category, description, parent1st, parent2nd, child1st, child2nd, parentSecondTimes, childSecondTimes, extendedChild, extendedParent (ô rỗng hoặc \"null\" = bỏ qua)",
+  "ctx": "API-038 REQUEST.file (file)"
+ },
+ "AF0174": {
+  "text": "{data: ObicTicketToImport[]} — các dòng đã parse (kể cả dòng không khớp vé)",
+  "ctx": "API-038 RESPONSE.200 (object)"
+ },
+ "AF0175": {
+  "text": "Thiếu tenantCode / thiếu file CSV",
+  "ctx": "API-038 RESPONSE.400 (object)"
+ },
+ "AF0176": {
+  "text": "Lỗi parse multipart → {error: err.message}",
+  "ctx": "API-038 RESPONSE.500 (object)"
+ },
+ "AF0177": {
+  "text": "Lọc theo tenant",
+  "ctx": "API-039 REQUEST.tenantCode (string)"
+ },
+ "AF0178": {
+  "text": "Lọc theo vé",
+  "ctx": "API-039 REQUEST.ticketId (number)"
+ },
+ "AF0179": {
+  "text": "Lọc trạng thái doanh thu",
+  "ctx": "API-039 REQUEST.revenueStatus (string)"
+ },
+ "AF0180": {
+  "text": "{data: count}",
+  "ctx": "API-039 RESPONSE.200 (object)"
+ },
+ "AF0181": {
+  "text": "ADMIN_NOT_BELONG_TO_THIS_TENANT / không đúng role",
+  "ctx": "API-039 RESPONSE.403 (object)"
+ },
+ "AF0182": {
+  "text": "Lỗi SQL/không bắt → onError",
+  "ctx": "API-039 RESPONSE.500 (object)"
+ },
+ "AF0183": {
+  "text": "Loại hoạt động ghi log",
+  "ctx": "API-040 REQUEST.fromAction (string)"
+ },
+ "AF0184": {
+  "text": "Chọn bộ cột CSV",
+  "ctx": "API-040 REQUEST.exportingRole (string)"
+ },
+ "AF0185": {
+  "text": "Trang (tính skip)",
+  "ctx": "API-040 REQUEST.page (number)"
+ },
+ "AF0186": {
+  "text": "Số dòng tối đa",
+  "ctx": "API-040 REQUEST.limit (number)"
+ },
+ "AF0187": {
+  "text": "ID staff/admin dùng để ghi log hoạt động",
+  "ctx": "API-040 REQUEST.userOrStaffId (string)"
+ },
+ "AF0188": {
+  "text": "text/csv; attachment revenue_data.csv",
+  "ctx": "API-040 RESPONSE.200 (file)"
+ },
+ "AF0189": {
+  "text": "Có thì ghi log hoạt động",
+  "ctx": "API-041 REQUEST.fromAction (string)"
+ },
+ "AF0190": {
+  "text": "Trang",
+  "ctx": "API-041 REQUEST.page (number)"
+ },
+ "AF0191": {
+  "text": "Số dòng/trang",
+  "ctx": "API-041 REQUEST.limit (number)"
+ },
+ "AF0192": {
+  "text": "{data: booking[]} kèm Ticket, User, BookingChildAgeInfo",
+  "ctx": "API-041 RESPONSE.200 (object)"
+ },
+ "AF0193": {
+  "text": "ID nhân viên hiện tại",
+  "ctx": "API-042 REQUEST.id (string)"
+ },
+ "AF0194": {
+  "text": "PUT: họ",
+  "ctx": "API-042 REQUEST.lastName (string)"
+ },
+ "AF0195": {
+  "text": "PUT: tên",
+  "ctx": "API-042 REQUEST.firstName (string)"
+ },
+ "AF0196": {
+  "text": "PUT: họ phiên âm",
+  "ctx": "API-042 REQUEST.lastNameFurigana (string)"
+ },
+ "AF0197": {
+  "text": "PUT: tên phiên âm",
+  "ctx": "API-042 REQUEST.firstNameFurigana (string)"
+ },
+ "AF0198": {
+  "text": "PUT: ID đăng nhập nhân viên (có thể đổi)",
+  "ctx": "API-042 REQUEST.id (string)"
+ },
+ "AF0199": {
+  "text": "PUT: mật khẩu (giữ nguyên nếu bằng giá trị hash hiện tại)",
+  "ctx": "API-042 REQUEST.password (string)"
+ },
+ "AF0200": {
+  "text": "PUT: quyền",
+  "ctx": "API-042 REQUEST.role (string)"
+ },
+ "AF0201": {
+  "text": "PUT: tenant của nhân viên",
+  "ctx": "API-042 REQUEST.tenantCode (string)"
+ },
+ "AF0202": {
+  "text": "{data: staff} (GET kèm Tenant)",
+  "ctx": "API-042 RESPONSE.200 (object)"
+ },
+ "AF0203": {
+  "text": "PUT: STAFF_ID_ALREADY_TAKEN / validation",
+  "ctx": "API-042 RESPONSE.400 (object)"
+ },
+ "AF0204": {
+  "text": "Lọc theo tên",
+  "ctx": "API-043 REQUEST.name (string)"
+ },
+ "AF0205": {
+  "text": "Lọc theo tenant (SuperAdmin)",
+  "ctx": "API-043 REQUEST.tenantCode (string)"
+ },
+ "AF0206": {
+  "text": "{data: totalCount}",
+  "ctx": "API-043 RESPONSE.200 (object)"
+ },
+ "AF0207": {
+  "text": "GET: lọc theo tên",
+  "ctx": "API-044 REQUEST.name (string)"
+ },
+ "AF0208": {
+  "text": "GET: lọc theo tenant",
+  "ctx": "API-044 REQUEST.tenantCode (string)"
+ },
+ "AF0209": {
+  "text": "GET: số dòng/trang",
+  "ctx": "API-044 REQUEST.limit (number)"
+ },
+ "AF0210": {
+  "text": "GET: trang",
+  "ctx": "API-044 REQUEST.page (number)"
+ },
+ "AF0211": {
+  "text": "POST: họ, tên",
+  "ctx": "API-044 REQUEST.lastName / firstName (string)"
+ },
+ "AF0212": {
+  "text": "POST: phiên âm",
+  "ctx": "API-044 REQUEST.lastNameFurigana / firstNameFurigana (string)"
+ },
+ "AF0213": {
+  "text": "POST: ID đăng nhập nhân viên",
+  "ctx": "API-044 REQUEST.id (string)"
+ },
+ "AF0214": {
+  "text": "POST: mật khẩu (được hash bcrypt cost 12)",
+  "ctx": "API-044 REQUEST.password (string)"
+ },
+ "AF0215": {
+  "text": "POST: quyền",
+  "ctx": "API-044 REQUEST.role (string)"
+ },
+ "AF0216": {
+  "text": "POST: tenant",
+  "ctx": "API-044 REQUEST.tenantCode (string)"
+ },
+ "AF0217": {
+  "text": "GET: {data: staff[]}; POST: {data: staff}",
+  "ctx": "API-044 RESPONSE.200 (object)"
+ },
+ "AF0218": {
+  "text": "POST: STAFF_ID_ALREADY_TAKEN / validation",
+  "ctx": "API-044 RESPONSE.400 (object)"
+ },
+ "AF0219": {
+  "text": "Mã tenant (GET/DELETE/PATCH)",
+  "ctx": "API-045 REQUEST.code (string)"
+ },
+ "AF0220": {
+  "text": "PUT: mã tenant dùng làm where",
+  "ctx": "API-045 REQUEST.code (string)"
+ },
+ "AF0221": {
+  "text": "PUT: chỉ để qua validation, bị xoá khỏi body trước khi lưu",
+  "ctx": "API-045 REQUEST.email / password / confirmationPassword (string)"
+ },
+ "AF0222": {
+  "text": "PUT: thông tin tenant",
+  "ctx": "API-045 REQUEST.name / imageUrl / siteUrl / address (string)"
+ },
+ "AF0223": {
+  "text": "PUT: mã bưu điện",
+  "ctx": "API-045 REQUEST.postCode (string)"
+ },
+ "AF0224": {
+  "text": "PUT: điện thoại",
+  "ctx": "API-045 REQUEST.phone (string)"
+ },
+ "AF0225": {
+  "text": "PUT: trạng thái hoạt động",
+  "ctx": "API-045 REQUEST.active (boolean)"
+ },
+ "AF0226": {
+  "text": "PUT: giờ mở/đóng/nhận khách cuối",
+  "ctx": "API-045 REQUEST.openedAt / closedAt / servedUtil (string)"
+ },
+ "AF0227": {
+  "text": "PUT: cấu hình Smaregi",
+  "ctx": "API-045 REQUEST.smaregiContractId / smaregiStoreId / smaregiTerminalId (string)"
+ },
+ "AF0228": {
+  "text": "PUT: hướng dẫn",
+  "ctx": "API-045 REQUEST.guide (string)"
+ },
+ "AF0229": {
+  "text": "PUT: thông tin admin user của tenant (email, password, ...)",
+  "ctx": "API-045 REQUEST.User (object)"
+ },
+ "AF0230": {
+  "text": "PUT: cấu hình GMO gắn với tenant",
+  "ctx": "API-045 REQUEST.gmoId (number)"
+ },
+ "AF0231": {
+  "text": "PATCH: ảnh tenant",
+  "ctx": "API-045 REQUEST.imageUrl (string)"
+ },
+ "AF0232": {
+  "text": "GET/PUT/DELETE: {data: tenant}; PATCH: {data: {tenant}}",
+  "ctx": "API-045 RESPONSE.200 (object)"
+ },
+ "AF0233": {
+  "text": "PUT: EMAIL_ALREADY_TAKEN / CANNOT_EDIT_GMO_SETTING / validation",
+  "ctx": "API-045 RESPONSE.400 (object)"
+ },
+ "AF0234": {
+  "text": "Lọc theo mã tenant",
+  "ctx": "API-046 REQUEST.code (string)"
+ },
+ "AF0235": {
+  "text": "GET: lọc mã tenant",
+  "ctx": "API-047 REQUEST.code (string)"
+ },
+ "AF0236": {
+  "text": "GET: phân trang",
+  "ctx": "API-047 REQUEST.limit / page (number)"
+ },
+ "AF0237": {
+  "text": "POST: thông tin tenant (email/password/confirmationPassword/imageUrl bị xoá khỏi body trước khi lưu)",
+  "ctx": "API-047 REQUEST.(tenantSchema) email, password, confirmationPassword, code, name, imageUrl, siteUrl, address, postCode, phone, active, openedAt, closedAt, servedUtil, smaregi* (object)"
+ },
+ "AF0238": {
+  "text": "POST: admin user của tenant",
+  "ctx": "API-047 REQUEST.User (object)"
+ },
+ "AF0239": {
+  "text": "GET: {data: tenant[]}; POST: {data: tenant} kèm AdminTenant.User",
+  "ctx": "API-047 RESPONSE.200 (object)"
+ },
+ "AF0240": {
+  "text": "POST: EMAIL_ALREADY_TAKEN / TENANT_CODE_ALREADY_EXIST / validation",
+  "ctx": "API-047 RESPONSE.400 (object)"
+ },
+ "AF0241": {
+  "text": "ID khung đặt chỗ",
+  "ctx": "API-048 REQUEST.ticketBookingScheduleId (number)"
+ },
+ "AF0242": {
+  "text": "{data: {hasBooking: boolean}}",
+  "ctx": "API-048 RESPONSE.200 (object)"
+ },
+ "AF0243": {
+  "text": "Danh sách khung đặt chỗ; ticketType bị loại khỏi payload",
+  "ctx": "API-049 REQUEST.(array) item (array)"
+ },
+ "AF0244": {
+  "text": "PUT: ID khung hiện có (không có → tạo mới)",
+  "ctx": "API-049 REQUEST.[].id (number)"
+ },
+ "AF0245": {
+  "text": "Vé sở hữu khung",
+  "ctx": "API-049 REQUEST.[].ticketId (number)"
+ },
+ "AF0246": {
+  "text": "Ngày mở bán, khoảng ngày áp dụng",
+  "ctx": "API-049 REQUEST.[].startSaleAt / dateFrom / dateTo (string)"
+ },
+ "AF0247": {
+  "text": "Hạn đặt / hạn huỷ-đổi",
+  "ctx": "API-049 REQUEST.[].canBookingBeforeInDay / canBookingUtil / canCancelOrChangeBeforeInDay / canCancelOrChangeUtil (number|string)"
+ },
+ "AF0248": {
+  "text": "Giới hạn người / lượt",
+  "ctx": "API-049 REQUEST.[].maxBookingPeople / maxBookingTimes (number)"
+ },
+ "AF0249": {
+  "text": "Cấu hình nhắc lịch",
+  "ctx": "API-049 REQUEST.[].enableRemind / remindBeforeInDay / remindAt (boolean|number|string)"
+ },
+ "AF0250": {
+  "text": "Giá theo thời lượng cơ bản / gia hạn",
+  "ctx": "API-049 REQUEST.[].base*/extended* Period, PeriodPrice, Unit (number|string)"
+ },
+ "AF0251": {
+  "text": "Mã OBIC",
+  "ctx": "API-049 REQUEST.[].baseAdultObicCode / baseChildObicCode / extendedAdultObicCode / extendedChildObicCode (string)"
+ },
+ "AF0252": {
+  "text": "POST: {data: {count}}; PUT: {data: null}",
+  "ctx": "API-049 RESPONSE.201 (object)"
+ },
+ "AF0253": {
+  "text": "PUT: CANNOT_REMOVE_TICKET_BOOKING_SCHEDULE / validation",
+  "ctx": "API-049 RESPONSE.400 (object)"
+ },
+ "AF0254": {
+  "text": "GET: kèm vé con (vé tháng master)",
+  "ctx": "API-050 REQUEST.includeSlaveTickets (boolean)"
+ },
+ "AF0255": {
+  "text": "GET: kèm cờ hasBooking cho từng vé con",
+  "ctx": "API-050 REQUEST.includeHasBooking (boolean)"
+ },
+ "AF0256": {
+  "text": "PUT: tên, loại vé",
+  "ctx": "API-050 REQUEST.name / type (string)"
+ },
+ "AF0257": {
+  "text": "PUT: tenant của vé",
+  "ctx": "API-050 REQUEST.tenantCode (string)"
+ },
+ "AF0258": {
+  "text": "PUT: các tenant có vé con",
+  "ctx": "API-050 REQUEST.slaveTenantCodes (array)"
+ },
+ "AF0259": {
+  "text": "PUT: hiển thị, thứ tự",
+  "ctx": "API-050 REQUEST.visibility / displayOrder (boolean|number)"
+ },
+ "AF0260": {
+  "text": "PUT: giới hạn tuổi trẻ em, số trẻ/người lớn",
+  "ctx": "API-050 REQUEST.childAgeLimitFrom / childAgeLimitTo / maxChildPerAdult (number)"
+ },
+ "AF0261": {
+  "text": "PUT: mã vé",
+  "ctx": "API-050 REQUEST.adultTicketCode / childTicketCode (string)"
+ },
+ "AF0262": {
+  "text": "PUT: hình thức thanh toán, cho đặt trước",
+  "ctx": "API-050 REQUEST.paymentType / canBookInAdvance (string|boolean)"
+ },
+ "AF0263": {
+  "text": "PUT: chi tiết vé (update nested)",
+  "ctx": "API-050 REQUEST.TicketDetail (object)"
+ },
+ "AF0264": {
+  "text": "PUT: cấu hình giảm giá (upsert nested)",
+  "ctx": "API-050 REQUEST.TicketDiscountSetting (object)"
+ },
+ "AF0265": {
+  "text": "PUT: vé master",
+  "ctx": "API-050 REQUEST.masterTicketId (number)"
+ },
+ "AF0266": {
+  "text": "PATCH: URL video hướng dẫn",
+  "ctx": "API-050 REQUEST.videoUrl (string)"
+ },
+ "AF0267": {
+  "text": "GET: {data: ticket}; PUT/PATCH: {data: {ticket}}; DELETE: {data: {deleted: id}}",
+  "ctx": "API-050 RESPONSE.200 (object)"
+ },
+ "AF0268": {
+  "text": "DELETE: CANNOT_REMOVE_TICKET (vé đã có booking) / PUT validation",
+  "ctx": "API-050 RESPONSE.400 (object)"
+ },
+ "AF0269": {
+  "text": "Không đúng role (DELETE cần SuperAdmin)",
+  "ctx": "API-050 RESPONSE.403 (object)"
+ },
+ "AF0270": {
+  "text": "Error CANNOT_REMOVE_TICKET ném trong transaction khi vé con có booking → onError",
+  "ctx": "API-050 RESPONSE.500 (object)"
+ },
+ "AF0271": {
+  "text": "{data: {rowsUpdated: 0, message}} khi không có pending; ngược lại {data: {rowsUpdated}}",
+  "ctx": "API-051 RESPONSE.200 (object)"
+ },
+ "AF0272": {
+  "text": "Lọc loại vé",
+  "ctx": "API-052 REQUEST.ticketTypes (array)"
+ },
+ "AF0273": {
+  "text": "Lọc tenant",
+  "ctx": "API-052 REQUEST.tenantCode (string)"
+ },
+ "AF0274": {
+  "text": "GET: lọc hình thức thanh toán",
+  "ctx": "API-054 REQUEST.paymentType (string)"
+ },
+ "AF0275": {
+  "text": "GET: lọc cho đặt trước",
+  "ctx": "API-054 REQUEST.canBookInAdvance (boolean)"
+ },
+ "AF0276": {
+  "text": "GET: lọc loại vé",
+  "ctx": "API-054 REQUEST.ticketTypes (array)"
+ },
+ "AF0277": {
+  "text": "GET: lọc tenant",
+  "ctx": "API-054 REQUEST.tenantCode (string)"
+ },
+ "AF0278": {
+  "text": "GET: chỉ kèm khung dateTo ≥ hôm nay",
+  "ctx": "API-054 REQUEST.excludeExpiredSchedule (boolean)"
+ },
+ "AF0279": {
+  "text": "POST: dữ liệu vé",
+  "ctx": "API-054 REQUEST.(ticketJsonDataSchema) name, type, tenantCode, slaveTenantCodes, visibility, displayOrder, childAgeLimitFrom, childAgeLimitTo, adultTicketCode, childTicketCode, maxChildPerAdult, paymentType, canBookInAdvance, TicketDetail, TicketDiscountSetting (object)"
+ },
+ "AF0280": {
+  "text": "POST: {data: {ticket}}",
+  "ctx": "API-054 RESPONSE.201 (object)"
+ },
+ "AF0281": {
+  "text": "GET: {data: ticket[]}",
+  "ctx": "API-054 RESPONSE.200 (object)"
+ },
+ "AF0282": {
+  "text": "computedAt ≥ startDate; dùng đặt tên file",
+  "ctx": "API-055 REQUEST.startDate (string)"
+ },
+ "AF0283": {
+  "text": "computedAt ≤ endDate",
+  "ctx": "API-055 REQUEST.endDate (string)"
+ },
+ "AF0284": {
+  "text": "Lọc booking theo tenant",
+  "ctx": "API-055 REQUEST.tenantCode (string)"
+ },
+ "AF0285": {
+  "text": "xlsx (sheet 'OBICコード', cột JANコード/商品コード/数量/商品ランク区分/備考), attachment obic_codes_<YYYYMMDD>.xlsx",
+  "ctx": "API-055 RESPONSE.200 (file)"
+ },
+ "AF0286": {
+  "text": "ID user",
+  "ctx": "API-056 REQUEST.id (number)"
+ },
+ "AF0287": {
+  "text": "PUT: true → validate updateUserSchemaForStaff, ngược lại updateUserSchemaAdmin",
+  "ctx": "API-056 REQUEST.fromStaff (boolean)"
+ },
+ "AF0288": {
+  "text": "PUT: họ tên (name = họ + tên)",
+  "ctx": "API-056 REQUEST.lastName / firstName (string)"
+ },
+ "AF0289": {
+  "text": "PUT: phiên âm",
+  "ctx": "API-056 REQUEST.lastNameFurigana / firstNameFurigana (string)"
+ },
+ "AF0290": {
+  "text": "PUT: email",
+  "ctx": "API-056 REQUEST.email (string)"
+ },
+ "AF0291": {
+  "text": "PUT: mật khẩu (giữ nguyên nếu bằng hash đang lưu)",
+  "ctx": "API-056 REQUEST.password (string)"
+ },
+ "AF0292": {
+  "text": "PUT: liên hệ, địa chỉ",
+  "ctx": "API-056 REQUEST.phone / postCode / province / address (string)"
+ },
+ "AF0293": {
+  "text": "PUT: giới tính, ngày sinh, nhận newsletter",
+  "ctx": "API-056 REQUEST.gender / birthday / allowedNewsletter / systemCreated (boolean|string)"
+ },
+ "AF0294": {
+  "text": "{data: user} (DELETE: user đã bỏ trường password)",
+  "ctx": "API-056 RESPONSE.200 (object)"
+ },
+ "AF0295": {
+  "text": "PUT: validation / EMAIL_ALREADY_TAKEN",
+  "ctx": "API-056 RESPONSE.400 (object)"
+ },
+ "AF0296": {
+  "text": "Lọc tên",
+  "ctx": "API-057 REQUEST.name (string)"
+ },
+ "AF0297": {
+  "text": "Lọc email",
+  "ctx": "API-057 REQUEST.email (string)"
+ },
+ "AF0298": {
+  "text": "Lọc SĐT",
+  "ctx": "API-057 REQUEST.phone (string)"
+ },
+ "AF0299": {
+  "text": "Khoảng createdAt",
+  "ctx": "API-057 REQUEST.startDate / endDate (string)"
+ },
+ "AF0300": {
+  "text": "GET: bộ lọc",
+  "ctx": "API-058 REQUEST.name / email / phone (string)"
+ },
+ "AF0301": {
+  "text": "GET: khoảng createdAt",
+  "ctx": "API-058 REQUEST.startDate / endDate (string)"
+ },
+ "AF0302": {
+  "text": "GET: có thì ghi log hoạt động",
+  "ctx": "API-058 REQUEST.fromAction (string)"
+ },
+ "AF0303": {
+  "text": "GET: ID staff/admin dùng để ghi log",
+  "ctx": "API-058 REQUEST.userOrStaffId (string)"
+ },
+ "AF0304": {
+  "text": "GET: kèm checkedOutCount, lastCheckedOut",
+  "ctx": "API-058 REQUEST.includeCheckoutInfo (boolean)"
+ },
+ "AF0305": {
+  "text": "POST: họ tên",
+  "ctx": "API-058 REQUEST.lastName / firstName / lastNameFurigana / firstNameFurigana (string)"
+ },
+ "AF0306": {
+  "text": "POST: email",
+  "ctx": "API-058 REQUEST.email (string)"
+ },
+ "AF0307": {
+  "text": "POST: mật khẩu",
+  "ctx": "API-058 REQUEST.password / confirmationPassword (string)"
+ },
+ "AF0308": {
+  "text": "POST: liên hệ, địa chỉ",
+  "ctx": "API-058 REQUEST.phone / postCode / province / address (string)"
+ },
+ "AF0309": {
+  "text": "POST: thông tin khác",
+  "ctx": "API-058 REQUEST.gender / birthday / allowedNewsletter / systemCreated (boolean|string)"
+ },
+ "AF0310": {
+  "text": "GET: {data: user[]} (tuỳ chọn kèm checkedOutCount, lastCheckedOut); POST: {data: user}",
+  "ctx": "API-058 RESPONSE.200 (object)"
+ },
+ "AF0311": {
+  "text": "POST: EMAIL_ALREADY_TAKEN / validation",
+  "ctx": "API-058 RESPONSE.400 (object)"
+ },
+ "AF0312": {
+  "text": "Khoá cấu hình cần đọc",
+  "ctx": "API-059 REQUEST.settingKey (string)"
+ },
+ "AF0313": {
+  "text": "{ data: AppSetting | null }",
+  "ctx": "API-059 RESPONSE.200 (object)"
+ },
+ "AF0314": {
+  "text": "Bản ghi app_settings (toàn bộ cột) hoặc null nếu không có",
+  "ctx": "API-059 RESPONSE.data (object)"
+ },
+ "AF0315": {
+  "text": "Method khác GET (onNoMatch)",
+  "ctx": "API-059 RESPONSE.404 (string)"
+ },
+ "AF0316": {
+  "text": "Lỗi không bắt (onError)",
+  "ctx": "API-059 RESPONSE.500 (object)"
+ },
+ "AF0317": {
+  "text": "{ data: { countries: string[], ips: string[] } }",
+  "ctx": "API-060 RESPONSE.200 (object)"
+ },
+ "AF0318": {
+  "text": "Danh sách mã quốc gia được phép",
+  "ctx": "API-060 RESPONSE.data.countries (array)"
+ },
+ "AF0319": {
+  "text": "Danh sách IP được phép",
+  "ctx": "API-060 RESPONSE.data.ips (array)"
+ },
+ "AF0320": {
+  "text": "Email đăng nhập (provider credentials)",
+  "ctx": "API-061 REQUEST.email (string)"
+ },
+ "AF0321": {
+  "text": "Mật khẩu (so bcrypt)",
+  "ctx": "API-061 REQUEST.password (string)"
+ },
+ "AF0322": {
+  "text": "Ghi nhớ đăng nhập (phiên 7 ngày)",
+  "ctx": "API-061 REQUEST.rememberMe (string)"
+ },
+ "AF0323": {
+  "text": "ID câu hỏi bảo mật; nếu có thì kiểm tra enteredAnswer",
+  "ctx": "API-061 REQUEST.questionId (number)"
+ },
+ "AF0324": {
+  "text": "Câu trả lời bảo mật",
+  "ctx": "API-061 REQUEST.enteredAnswer (string)"
+ },
+ "AF0325": {
+  "text": "URL quay về; dùng để phân biệt admin/user site",
+  "ctx": "API-061 REQUEST.callbackUrl (string)"
+ },
+ "AF0326": {
+  "text": "Token người dùng (provider 'token')",
+  "ctx": "API-061 REQUEST.token (string)"
+ }
+}
