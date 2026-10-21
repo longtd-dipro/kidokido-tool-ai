@@ -1,0 +1,438 @@
+{
+ "narrative/project_name": {
+  "text": "KidoKido",
+  "ctx": "docx tổng hợp (O6)"
+ },
+ "narrative/customer": {
+  "text": "UNKNOWN — chưa khai ở P0 (tiêu đề trang quan sát được: 「ボーネルンドあそび場予約・購入サイト」)",
+  "ctx": "docx tổng hợp (O6)"
+ },
+ "narrative/product_overview": {
+  "text": "KidoKido là hệ thống đặt chỗ và bán vé cho khu vui chơi theo cửa hàng (施設). Website người dùng (WEB-02) cho xem danh sách cửa hàng, tình trạng chờ/chỗ trống, bảng giá, mua vé dùng trong ngày, vé lượt (回数券) và vé tháng (フリーパス), quản lý lịch sử đặt chỗ và tài khoản. Website quản trị (WEB-01) cho Super Admin quản lý cửa hàng, sản phẩm vé, người dùng, nhân viên, tin tức, email tự động, GMO và cài đặt; cho admin cửa hàng vận hành đặt chỗ, hàng chờ, check-in/check-out bằng barcode và doanh thu. Thanh toán online qua GMO, đồng bộ giao dịch với POS Smaregi, gửi mail qua SES/SMTP, lưu file trên S3, đăng nhập LINE cho người dùng. Mục đích nghiệp vụ chi tiết từng màn chưa được khách hàng xác nhận — xem Phụ lục A.",
+  "ctx": "docx tổng hợp (O6)"
+ },
+ "narrative/actors/0/actor": {
+  "text": "Khách (chưa đăng nhập)",
+  "ctx": "docx tổng hợp (O6)"
+ },
+ "narrative/actors/0/role": {
+  "text": "anonymous",
+  "ctx": "docx tổng hợp (O6)"
+ },
+ "narrative/actors/0/main_usage": {
+  "text": "Xem trang công khai: cửa hàng, giá, tình trạng chờ, điều khoản; đăng ký / đăng nhập",
+  "ctx": "docx tổng hợp (O6)"
+ },
+ "narrative/actors/1/actor": {
+  "text": "User",
+  "ctx": "docx tổng hợp (O6)"
+ },
+ "narrative/actors/1/role": {
+  "text": "User",
+  "ctx": "docx tổng hợp (O6)"
+ },
+ "narrative/actors/1/main_usage": {
+  "text": "Mua vé, xem lịch sử đặt chỗ, vé lượt / vé tháng, cửa hàng yêu thích, tài khoản",
+  "ctx": "docx tổng hợp (O6)"
+ },
+ "narrative/actors/2/actor": {
+  "text": "Super Admin",
+  "ctx": "docx tổng hợp (O6)"
+ },
+ "narrative/actors/2/role": {
+  "text": "SuperAdmin",
+  "ctx": "docx tổng hợp (O6)"
+ },
+ "narrative/actors/2/main_usage": {
+  "text": "Dashboard, quản lý cửa hàng, vé, người dùng, nhân viên, tin tức, email, GMO, cài đặt hệ thống",
+  "ctx": "docx tổng hợp (O6)"
+ },
+ "narrative/actors/3/actor": {
+  "text": "Admin cửa hàng (Tenant / POSS / Smaregi V1 / V2)",
+  "ctx": "docx tổng hợp (O6)"
+ },
+ "narrative/actors/3/role": {
+  "text": "Admin",
+  "ctx": "docx tổng hợp (O6)"
+ },
+ "narrative/actors/3/main_usage": {
+  "text": "Danh sách đặt chỗ, hàng chờ, điều chỉnh tồn, trạng thái chỗ trống, check-in, doanh thu, nhân viên, vé, người dùng của cửa hàng",
+  "ctx": "docx tổng hợp (O6)"
+ },
+ "narrative/actors/4/actor": {
+  "text": "Hệ thống",
+  "ctx": "docx tổng hợp (O6)"
+ },
+ "narrative/actors/4/role": {
+  "text": "cron / webhook / POS API",
+  "ctx": "docx tổng hợp (O6)"
+ },
+ "narrative/actors/4/main_usage": {
+  "text": "Cron đối soát Smaregi, nhắc hạn, migration; webhook Smaregi; callback GMO; API cho POS",
+  "ctx": "docx tổng hợp (O6)"
+ },
+ "narrative/system_composition/0": {
+  "text": "REPO-01: 1 repo Next.js (pages router) chứa cả FE của 2 website và BE (API routes), Prisma ORM với PostgreSQL.",
+  "ctx": "docx tổng hợp (O6)"
+ },
+ "narrative/system_composition/1": {
+  "text": "WEB-01 Admin (/admin) và WEB-02 User site (/) cùng một domain, môi trường dev, phía trước có HTTP Basic Auth của CloudFront.",
+  "ctx": "docx tổng hợp (O6)"
+ },
+ "narrative/system_composition/2": {
+  "text": "Tích hợp ngoài: GMO Payment Gateway, POS Smaregi, AWS SES / Nodemailer, AWS S3, LINE Login.",
+  "ctx": "docx tổng hợp (O6)"
+ },
+ "bd|WEB-01|Common mesage|B4": {
+  "text": "API処理",
+  "ctx": "Basic Design sheet Common mesage cột Item Name (JP)\n項目名（日本語）"
+ },
+ "bd|WEB-01|Common mesage|C4": {
+  "text": "Xử lý API",
+  "ctx": "Basic Design sheet Common mesage cột Item Name (VN)\nTên mục (VN)"
+ },
+ "bd|WEB-01|Common mesage|D4": {
+  "text": "🔵 System",
+  "ctx": "Basic Design sheet Common mesage cột Category\nカテゴリー"
+ },
+ "bd|WEB-01|Common mesage|E4": {
+  "text": "500系サーバーエラー / Lỗi server 5xx",
+  "ctx": "Basic Design sheet Common mesage cột Trigger / Check Type\nチェック種別"
+ },
+ "bd|WEB-01|Common mesage|G4": {
+  "text": "Đã xảy ra lỗi hệ thống. Vui lòng thử lại sau ít phút.",
+  "ctx": "Basic Design sheet Common mesage cột Error Message (VN)\nThông báo lỗi (Tiếng Việt)"
+ },
+ "bd|WEB-01|Common mesage|H4": {
+  "text": "全画面共通 / Tất cả màn hình",
+  "ctx": "Basic Design sheet Common mesage cột Applicable Screens\n適用画面"
+ },
+ "bd|WEB-01|Common mesage|I4": {
+  "text": "500系サーバーエラー（Toast）",
+  "ctx": "Basic Design sheet Common mesage cột Remarks\n備考"
+ },
+ "bd|WEB-01|Common mesage|B5": {
+  "text": "API処理",
+  "ctx": "Basic Design sheet Common mesage cột Item Name (JP)\n項目名（日本語）"
+ },
+ "bd|WEB-01|Common mesage|C5": {
+  "text": "Xử lý API",
+  "ctx": "Basic Design sheet Common mesage cột Item Name (VN)\nTên mục (VN)"
+ },
+ "bd|WEB-01|Common mesage|D5": {
+  "text": "🔵 System",
+  "ctx": "Basic Design sheet Common mesage cột Category\nカテゴリー"
+ },
+ "bd|WEB-01|Common mesage|E5": {
+  "text": "予期しないクライアントエラー / Lỗi client không mong muốn",
+  "ctx": "Basic Design sheet Common mesage cột Trigger / Check Type\nチェック種別"
+ },
+ "bd|WEB-01|Common mesage|G5": {
+  "text": "Đã xảy ra lỗi không mong muốn. Vui lòng tải lại trang và thử lại.",
+  "ctx": "Basic Design sheet Common mesage cột Error Message (VN)\nThông báo lỗi (Tiếng Việt)"
+ },
+ "bd|WEB-01|Common mesage|H5": {
+  "text": "全画面共通 / Tất cả màn hình",
+  "ctx": "Basic Design sheet Common mesage cột Applicable Screens\n適用画面"
+ },
+ "bd|WEB-01|Common mesage|C6": {
+  "text": "Phiên đăng nhập",
+  "ctx": "Basic Design sheet Common mesage cột Item Name (VN)\nTên mục (VN)"
+ },
+ "bd|WEB-01|Common mesage|D6": {
+  "text": "🔵 System",
+  "ctx": "Basic Design sheet Common mesage cột Category\nカテゴリー"
+ },
+ "bd|WEB-01|Common mesage|E6": {
+  "text": "セッション切れ / Hết phiên đăng nhập",
+  "ctx": "Basic Design sheet Common mesage cột Trigger / Check Type\nチェック種別"
+ },
+ "bd|WEB-01|Common mesage|G6": {
+  "text": "Phiên đăng nhập đã hết hạn. Vui lòng đăng nhập lại.",
+  "ctx": "Basic Design sheet Common mesage cột Error Message (VN)\nThông báo lỗi (Tiếng Việt)"
+ },
+ "bd|WEB-01|Common mesage|H6": {
+  "text": "全画面共通 / Tất cả màn hình",
+  "ctx": "Basic Design sheet Common mesage cột Applicable Screens\n適用画面"
+ },
+ "bd|WEB-01|Common mesage|I6": {
+  "text": "セッションタイムアウト → Login画面へ",
+  "ctx": "Basic Design sheet Common mesage cột Remarks\n備考"
+ },
+ "bd|WEB-01|Common mesage|C7": {
+  "text": "Gửi email",
+  "ctx": "Basic Design sheet Common mesage cột Item Name (VN)\nTên mục (VN)"
+ },
+ "bd|WEB-01|Common mesage|D7": {
+  "text": "🔵 System",
+  "ctx": "Basic Design sheet Common mesage cột Category\nカテゴリー"
+ },
+ "bd|WEB-01|Common mesage|E7": {
+  "text": "メールサーバー障害 / Lỗi mail server",
+  "ctx": "Basic Design sheet Common mesage cột Trigger / Check Type\nチェック種別"
+ },
+ "bd|WEB-01|Common mesage|G7": {
+  "text": "Gửi email xác nhận thất bại. Vui lòng thử lại sau ít phút.",
+  "ctx": "Basic Design sheet Common mesage cột Error Message (VN)\nThông báo lỗi (Tiếng Việt)"
+ },
+ "bd|WEB-01|Common mesage|H7": {
+  "text": "会員登録 / Forget PW",
+  "ctx": "Basic Design sheet Common mesage cột Applicable Screens\n適用画面"
+ },
+ "bd|WEB-01|Common mesage|C8": {
+  "text": "Xử lý database",
+  "ctx": "Basic Design sheet Common mesage cột Item Name (VN)\nTên mục (VN)"
+ },
+ "bd|WEB-01|Common mesage|D8": {
+  "text": "🔵 System",
+  "ctx": "Basic Design sheet Common mesage cột Category\nカテゴリー"
+ },
+ "bd|WEB-01|Common mesage|E8": {
+  "text": "DB書き込み・読み込み失敗 / DB ghi/đọc thất bại",
+  "ctx": "Basic Design sheet Common mesage cột Trigger / Check Type\nチェック種別"
+ },
+ "bd|WEB-01|Common mesage|G8": {
+  "text": "Đã xảy ra lỗi trong quá trình xử lý dữ liệu. Vui lòng thử lại sau ít phút.",
+  "ctx": "Basic Design sheet Common mesage cột Error Message (VN)\nThông báo lỗi (Tiếng Việt)"
+ },
+ "bd|WEB-01|Common mesage|H8": {
+  "text": "全画面共通 / Tất cả màn hình",
+  "ctx": "Basic Design sheet Common mesage cột Applicable Screens\n適用画面"
+ },
+ "bd|WEB-01|Common mesage|C9": {
+  "text": "Kết nối mạng",
+  "ctx": "Basic Design sheet Common mesage cột Item Name (VN)\nTên mục (VN)"
+ },
+ "bd|WEB-01|Common mesage|D9": {
+  "text": "🟢 Environment",
+  "ctx": "Basic Design sheet Common mesage cột Category\nカテゴリー"
+ },
+ "bd|WEB-01|Common mesage|E9": {
+  "text": "ネットワーク未接続 / Không có kết nối mạng",
+  "ctx": "Basic Design sheet Common mesage cột Trigger / Check Type\nチェック種別"
+ },
+ "bd|WEB-01|Common mesage|G9": {
+  "text": "Vui lòng kiểm tra kết nối mạng. Sau khi kết nối lại, nhấn nút「更新」.",
+  "ctx": "Basic Design sheet Common mesage cột Error Message (VN)\nThông báo lỗi (Tiếng Việt)"
+ },
+ "bd|WEB-01|Common mesage|H9": {
+  "text": "全画面共通 / Tất cả màn hình",
+  "ctx": "Basic Design sheet Common mesage cột Applicable Screens\n適用画面"
+ },
+ "bd|WEB-01|Common mesage|C10": {
+  "text": "Kết nối mạng",
+  "ctx": "Basic Design sheet Common mesage cột Item Name (VN)\nTên mục (VN)"
+ },
+ "bd|WEB-01|Common mesage|D10": {
+  "text": "🟢 Environment",
+  "ctx": "Basic Design sheet Common mesage cột Category\nカテゴリー"
+ },
+ "bd|WEB-01|Common mesage|E10": {
+  "text": "リクエストタイムアウト / Request timeout",
+  "ctx": "Basic Design sheet Common mesage cột Trigger / Check Type\nチェック種別"
+ },
+ "bd|WEB-01|Common mesage|G10": {
+  "text": "Yêu cầu đã hết thời gian chờ. Vui lòng kiểm tra kết nối và thử lại.",
+  "ctx": "Basic Design sheet Common mesage cột Error Message (VN)\nThông báo lỗi (Tiếng Việt)"
+ },
+ "bd|WEB-01|Common mesage|H10": {
+  "text": "全画面共通 / Tất cả màn hình",
+  "ctx": "Basic Design sheet Common mesage cột Applicable Screens\n適用画面"
+ },
+ "bd|WEB-01|Common mesage|C11": {
+  "text": "Thao tác trang",
+  "ctx": "Basic Design sheet Common mesage cột Item Name (VN)\nTên mục (VN)"
+ },
+ "bd|WEB-01|Common mesage|D11": {
+  "text": "🟢 Environment",
+  "ctx": "Basic Design sheet Common mesage cột Category\nカテゴリー"
+ },
+ "bd|WEB-01|Common mesage|E11": {
+  "text": "戻るボタン・再読み込み / Back/Reload trong flow",
+  "ctx": "Basic Design sheet Common mesage cột Trigger / Check Type\nチェック種別"
+ },
+ "bd|WEB-01|Common mesage|G11": {
+  "text": "Nhấn nút Back hoặc tải lại trang có thể làm mất thông tin đã nhập.",
+  "ctx": "Basic Design sheet Common mesage cột Error Message (VN)\nThông báo lỗi (Tiếng Việt)"
+ },
+ "bd|WEB-01|Common mesage|H11": {
+  "text": "会員登録 / Forget PW / 各フローページ",
+  "ctx": "Basic Design sheet Common mesage cột Applicable Screens\n適用画面"
+ },
+ "bd|WEB-02|Common mesage|B4": {
+  "text": "API処理",
+  "ctx": "Basic Design sheet Common mesage cột Item Name (JP)\n項目名（日本語）"
+ },
+ "bd|WEB-02|Common mesage|C4": {
+  "text": "Xử lý API",
+  "ctx": "Basic Design sheet Common mesage cột Item Name (VN)\nTên mục (VN)"
+ },
+ "bd|WEB-02|Common mesage|D4": {
+  "text": "🔵 System",
+  "ctx": "Basic Design sheet Common mesage cột Category\nカテゴリー"
+ },
+ "bd|WEB-02|Common mesage|E4": {
+  "text": "500系サーバーエラー / Lỗi server 5xx",
+  "ctx": "Basic Design sheet Common mesage cột Trigger / Check Type\nチェック種別"
+ },
+ "bd|WEB-02|Common mesage|G4": {
+  "text": "Đã xảy ra lỗi hệ thống. Vui lòng thử lại sau ít phút.",
+  "ctx": "Basic Design sheet Common mesage cột Error Message (VN)\nThông báo lỗi (Tiếng Việt)"
+ },
+ "bd|WEB-02|Common mesage|H4": {
+  "text": "全画面共通 / Tất cả màn hình",
+  "ctx": "Basic Design sheet Common mesage cột Applicable Screens\n適用画面"
+ },
+ "bd|WEB-02|Common mesage|I4": {
+  "text": "500系サーバーエラー（Toast）",
+  "ctx": "Basic Design sheet Common mesage cột Remarks\n備考"
+ },
+ "bd|WEB-02|Common mesage|B5": {
+  "text": "API処理",
+  "ctx": "Basic Design sheet Common mesage cột Item Name (JP)\n項目名（日本語）"
+ },
+ "bd|WEB-02|Common mesage|C5": {
+  "text": "Xử lý API",
+  "ctx": "Basic Design sheet Common mesage cột Item Name (VN)\nTên mục (VN)"
+ },
+ "bd|WEB-02|Common mesage|D5": {
+  "text": "🔵 System",
+  "ctx": "Basic Design sheet Common mesage cột Category\nカテゴリー"
+ },
+ "bd|WEB-02|Common mesage|E5": {
+  "text": "予期しないクライアントエラー / Lỗi client không mong muốn",
+  "ctx": "Basic Design sheet Common mesage cột Trigger / Check Type\nチェック種別"
+ },
+ "bd|WEB-02|Common mesage|G5": {
+  "text": "Đã xảy ra lỗi không mong muốn. Vui lòng tải lại trang và thử lại.",
+  "ctx": "Basic Design sheet Common mesage cột Error Message (VN)\nThông báo lỗi (Tiếng Việt)"
+ },
+ "bd|WEB-02|Common mesage|H5": {
+  "text": "全画面共通 / Tất cả màn hình",
+  "ctx": "Basic Design sheet Common mesage cột Applicable Screens\n適用画面"
+ },
+ "bd|WEB-02|Common mesage|C6": {
+  "text": "Phiên đăng nhập",
+  "ctx": "Basic Design sheet Common mesage cột Item Name (VN)\nTên mục (VN)"
+ },
+ "bd|WEB-02|Common mesage|D6": {
+  "text": "🔵 System",
+  "ctx": "Basic Design sheet Common mesage cột Category\nカテゴリー"
+ },
+ "bd|WEB-02|Common mesage|E6": {
+  "text": "セッション切れ / Hết phiên đăng nhập",
+  "ctx": "Basic Design sheet Common mesage cột Trigger / Check Type\nチェック種別"
+ },
+ "bd|WEB-02|Common mesage|G6": {
+  "text": "Phiên đăng nhập đã hết hạn. Vui lòng đăng nhập lại.",
+  "ctx": "Basic Design sheet Common mesage cột Error Message (VN)\nThông báo lỗi (Tiếng Việt)"
+ },
+ "bd|WEB-02|Common mesage|H6": {
+  "text": "全画面共通 / Tất cả màn hình",
+  "ctx": "Basic Design sheet Common mesage cột Applicable Screens\n適用画面"
+ },
+ "bd|WEB-02|Common mesage|I6": {
+  "text": "セッションタイムアウト → Login画面へ",
+  "ctx": "Basic Design sheet Common mesage cột Remarks\n備考"
+ },
+ "bd|WEB-02|Common mesage|C7": {
+  "text": "Gửi email",
+  "ctx": "Basic Design sheet Common mesage cột Item Name (VN)\nTên mục (VN)"
+ },
+ "bd|WEB-02|Common mesage|D7": {
+  "text": "🔵 System",
+  "ctx": "Basic Design sheet Common mesage cột Category\nカテゴリー"
+ },
+ "bd|WEB-02|Common mesage|E7": {
+  "text": "メールサーバー障害 / Lỗi mail server",
+  "ctx": "Basic Design sheet Common mesage cột Trigger / Check Type\nチェック種別"
+ },
+ "bd|WEB-02|Common mesage|G7": {
+  "text": "Gửi email xác nhận thất bại. Vui lòng thử lại sau ít phút.",
+  "ctx": "Basic Design sheet Common mesage cột Error Message (VN)\nThông báo lỗi (Tiếng Việt)"
+ },
+ "bd|WEB-02|Common mesage|H7": {
+  "text": "会員登録 / Forget PW",
+  "ctx": "Basic Design sheet Common mesage cột Applicable Screens\n適用画面"
+ },
+ "bd|WEB-02|Common mesage|C8": {
+  "text": "Xử lý database",
+  "ctx": "Basic Design sheet Common mesage cột Item Name (VN)\nTên mục (VN)"
+ },
+ "bd|WEB-02|Common mesage|D8": {
+  "text": "🔵 System",
+  "ctx": "Basic Design sheet Common mesage cột Category\nカテゴリー"
+ },
+ "bd|WEB-02|Common mesage|E8": {
+  "text": "DB書き込み・読み込み失敗 / DB ghi/đọc thất bại",
+  "ctx": "Basic Design sheet Common mesage cột Trigger / Check Type\nチェック種別"
+ },
+ "bd|WEB-02|Common mesage|G8": {
+  "text": "Đã xảy ra lỗi trong quá trình xử lý dữ liệu. Vui lòng thử lại sau ít phút.",
+  "ctx": "Basic Design sheet Common mesage cột Error Message (VN)\nThông báo lỗi (Tiếng Việt)"
+ },
+ "bd|WEB-02|Common mesage|H8": {
+  "text": "全画面共通 / Tất cả màn hình",
+  "ctx": "Basic Design sheet Common mesage cột Applicable Screens\n適用画面"
+ },
+ "bd|WEB-02|Common mesage|C9": {
+  "text": "Kết nối mạng",
+  "ctx": "Basic Design sheet Common mesage cột Item Name (VN)\nTên mục (VN)"
+ },
+ "bd|WEB-02|Common mesage|D9": {
+  "text": "🟢 Environment",
+  "ctx": "Basic Design sheet Common mesage cột Category\nカテゴリー"
+ },
+ "bd|WEB-02|Common mesage|E9": {
+  "text": "ネットワーク未接続 / Không có kết nối mạng",
+  "ctx": "Basic Design sheet Common mesage cột Trigger / Check Type\nチェック種別"
+ },
+ "bd|WEB-02|Common mesage|G9": {
+  "text": "Vui lòng kiểm tra kết nối mạng. Sau khi kết nối lại, nhấn nút「更新」.",
+  "ctx": "Basic Design sheet Common mesage cột Error Message (VN)\nThông báo lỗi (Tiếng Việt)"
+ },
+ "bd|WEB-02|Common mesage|H9": {
+  "text": "全画面共通 / Tất cả màn hình",
+  "ctx": "Basic Design sheet Common mesage cột Applicable Screens\n適用画面"
+ },
+ "bd|WEB-02|Common mesage|C10": {
+  "text": "Kết nối mạng",
+  "ctx": "Basic Design sheet Common mesage cột Item Name (VN)\nTên mục (VN)"
+ },
+ "bd|WEB-02|Common mesage|D10": {
+  "text": "🟢 Environment",
+  "ctx": "Basic Design sheet Common mesage cột Category\nカテゴリー"
+ },
+ "bd|WEB-02|Common mesage|E10": {
+  "text": "リクエストタイムアウト / Request timeout",
+  "ctx": "Basic Design sheet Common mesage cột Trigger / Check Type\nチェック種別"
+ },
+ "bd|WEB-02|Common mesage|G10": {
+  "text": "Yêu cầu đã hết thời gian chờ. Vui lòng kiểm tra kết nối và thử lại.",
+  "ctx": "Basic Design sheet Common mesage cột Error Message (VN)\nThông báo lỗi (Tiếng Việt)"
+ },
+ "bd|WEB-02|Common mesage|H10": {
+  "text": "全画面共通 / Tất cả màn hình",
+  "ctx": "Basic Design sheet Common mesage cột Applicable Screens\n適用画面"
+ },
+ "bd|WEB-02|Common mesage|C11": {
+  "text": "Thao tác trang",
+  "ctx": "Basic Design sheet Common mesage cột Item Name (VN)\nTên mục (VN)"
+ },
+ "bd|WEB-02|Common mesage|D11": {
+  "text": "🟢 Environment",
+  "ctx": "Basic Design sheet Common mesage cột Category\nカテゴリー"
+ },
+ "bd|WEB-02|Common mesage|E11": {
+  "text": "戻るボタン・再読み込み / Back/Reload trong flow",
+  "ctx": "Basic Design sheet Common mesage cột Trigger / Check Type\nチェック種別"
+ },
+ "bd|WEB-02|Common mesage|G11": {
+  "text": "Nhấn nút Back hoặc tải lại trang có thể làm mất thông tin đã nhập.",
+  "ctx": "Basic Design sheet Common mesage cột Error Message (VN)\nThông báo lỗi (Tiếng Việt)"
+ },
+ "bd|WEB-02|Common mesage|H11": {
+  "text": "会員登録 / Forget PW / 各フローページ",
+  "ctx": "Basic Design sheet Common mesage cột Applicable Screens\n適用画面"
+ }
+}

@@ -1,0 +1,246 @@
+{
+ "03_DB_Tables|users|Purpose": {
+  "text": "UNKNOWN — được đọc/ghi bởi 60 API: API-003,API-004,API-006,API-007,API-009,API-012,API-013,API-014…",
+  "ctx": "03_DB_Tables"
+ },
+ "03_DB_Tables|users|Note": {
+  "text": "Model Prisma `User` · index: (name,phone); (role,deleted,created_at); (email); (token); (line_user_id)",
+  "ctx": "03_DB_Tables"
+ },
+ "03_DB_Tables|accounts|Purpose": {
+  "text": "UNKNOWN — được đọc/ghi bởi 3 API: API-056,API-061,API-128",
+  "ctx": "03_DB_Tables"
+ },
+ "03_DB_Tables|accounts|Note": {
+  "text": "Model Prisma `Account` · index: (user_id)",
+  "ctx": "03_DB_Tables"
+ },
+ "03_DB_Tables|tenants|Purpose": {
+  "text": "UNKNOWN — được đọc/ghi bởi 45 API: API-007,API-009,API-013,API-015,API-016,API-019,API-020,API-021…",
+  "ctx": "03_DB_Tables"
+ },
+ "03_DB_Tables|tenants|Note": {
+  "text": "Model Prisma `Tenant` · index: (deleted); (active)",
+  "ctx": "03_DB_Tables"
+ },
+ "03_DB_Tables|admins_tenants|Purpose": {
+  "text": "UNKNOWN — được đọc/ghi bởi 4 API: API-045,API-047,API-061,API-138",
+  "ctx": "03_DB_Tables"
+ },
+ "03_DB_Tables|admins_tenants|Note": {
+  "text": "Model Prisma `AdminTenant` · index: —",
+  "ctx": "03_DB_Tables"
+ },
+ "03_DB_Tables|staffs|Purpose": {
+  "text": "UNKNOWN — được đọc/ghi bởi 9 API: API-016,API-017,API-040,API-041,API-042,API-043,API-044,API-058…",
+  "ctx": "03_DB_Tables"
+ },
+ "03_DB_Tables|staffs|Note": {
+  "text": "Model Prisma `Staff` · index: —",
+  "ctx": "03_DB_Tables"
+ },
+ "03_DB_Tables|admin_activity_logs|Purpose": {
+  "text": "UNKNOWN — được đọc/ghi bởi 5 API: API-016,API-017,API-040,API-041,API-058",
+  "ctx": "03_DB_Tables"
+ },
+ "03_DB_Tables|admin_activity_logs|Note": {
+  "text": "Model Prisma `AdminActivityLog` · index: —",
+  "ctx": "03_DB_Tables"
+ },
+ "03_DB_Tables|users_tenants_favorites|Purpose": {
+  "text": "UNKNOWN — được đọc/ghi bởi 3 API: API-130,API-131,API-132",
+  "ctx": "03_DB_Tables"
+ },
+ "03_DB_Tables|users_tenants_favorites|Note": {
+  "text": "Model Prisma `UserTenantFavorite` · index: —",
+  "ctx": "03_DB_Tables"
+ },
+ "03_DB_Tables|tickets|Purpose": {
+  "text": "UNKNOWN — được đọc/ghi bởi 60 API: API-003,API-004,API-006,API-007,API-008,API-009,API-010,API-011…",
+  "ctx": "03_DB_Tables"
+ },
+ "03_DB_Tables|tickets|Note": {
+  "text": "Model Prisma `Ticket` · index: (tenant_code); (ticket_type); (visibility); (master_ticket_id)",
+  "ctx": "03_DB_Tables"
+ },
+ "03_DB_Tables|ticket_details|Purpose": {
+  "text": "UNKNOWN — được đọc/ghi bởi 30 API: API-009,API-010,API-015,API-019,API-020,API-038,API-040,API-041…",
+  "ctx": "03_DB_Tables"
+ },
+ "03_DB_Tables|ticket_details|Note": {
+  "text": "Model Prisma `TicketDetail` · index: —",
+  "ctx": "03_DB_Tables"
+ },
+ "03_DB_Tables|ticket_discount_settings|Purpose": {
+  "text": "UNKNOWN — được đọc/ghi bởi 20 API: API-009,API-010,API-019,API-020,API-038,API-049,API-050,API-051…",
+  "ctx": "03_DB_Tables"
+ },
+ "03_DB_Tables|ticket_discount_settings|Note": {
+  "text": "Model Prisma `TicketDiscountSetting` · index: (ticket_id)",
+  "ctx": "03_DB_Tables"
+ },
+ "03_DB_Tables|ticket_booking_schedules|Purpose": {
+  "text": "UNKNOWN — được đọc/ghi bởi 41 API: API-003,API-004,API-007,API-008,API-009,API-010,API-013,API-015…",
+  "ctx": "03_DB_Tables"
+ },
+ "03_DB_Tables|ticket_booking_schedules|Note": {
+  "text": "Model Prisma `TicketBookingSchedule` · index: (ticket_id,deleted,date_to); (ticket_id); (date_to); (deleted)",
+  "ctx": "03_DB_Tables"
+ },
+ "03_DB_Tables|bookings|Purpose": {
+  "text": "UNKNOWN — được đọc/ghi bởi 72 API: API-003,API-004,API-005,API-006,API-007,API-008,API-009,API-010…",
+  "ctx": "03_DB_Tables"
+ },
+ "03_DB_Tables|bookings|Note": {
+  "text": "Model Prisma `Booking` · index: (bar_code,created_at); (tenant_code,status,date); (user_id,status); (ticket_id); (parent_booking_id,status); (created_at); (date); (status); (payment_status,GMO_transaction_id,created_at); (payment_status,GMO_transaction_id,user_id)",
+  "ctx": "03_DB_Tables"
+ },
+ "03_DB_Tables|booking_child_age_infos|Purpose": {
+  "text": "UNKNOWN — được đọc/ghi bởi 14 API: API-009,API-015,API-020,API-040,API-041,API-070,API-074,API-085…",
+  "ctx": "03_DB_Tables"
+ },
+ "03_DB_Tables|booking_child_age_infos|Note": {
+  "text": "Model Prisma `BookingChildAgeInfo` · index: (booking_id)",
+  "ctx": "03_DB_Tables"
+ },
+ "03_DB_Tables|partial_checkouts|Purpose": {
+  "text": "UNKNOWN — được đọc/ghi bởi 11 API: API-009,API-010,API-019,API-020,API-070,API-095,API-096,API-097…",
+  "ctx": "03_DB_Tables"
+ },
+ "03_DB_Tables|partial_checkouts|Note": {
+  "text": "Model Prisma `PartialCheckout` · index: (booking_id); (deleted)",
+  "ctx": "03_DB_Tables"
+ },
+ "03_DB_Tables|app_settings|Purpose": {
+  "text": "UNKNOWN — được đọc/ghi bởi 10 API: API-001,API-002,API-007,API-059,API-070,API-074,API-075,API-077…",
+  "ctx": "03_DB_Tables"
+ },
+ "03_DB_Tables|app_settings|Note": {
+  "text": "Model Prisma `AppSetting` · index: —",
+  "ctx": "03_DB_Tables"
+ },
+ "03_DB_Tables|email_settings|Purpose": {
+  "text": "UNKNOWN — được đọc/ghi bởi 30 API: API-003,API-013,API-020,API-021,API-022,API-030,API-031,API-050…",
+  "ctx": "03_DB_Tables"
+ },
+ "03_DB_Tables|email_settings|Note": {
+  "text": "Model Prisma `EmailSetting` · index: —",
+  "ctx": "03_DB_Tables"
+ },
+ "03_DB_Tables|news|Purpose": {
+  "text": "UNKNOWN — được đọc/ghi bởi 3 API: API-036,API-037,API-094",
+  "ctx": "03_DB_Tables"
+ },
+ "03_DB_Tables|news|Note": {
+  "text": "Model Prisma `News` · index: —",
+  "ctx": "03_DB_Tables"
+ },
+ "03_DB_Tables|disclaimers|Purpose": {
+  "text": "UNKNOWN — được đọc/ghi bởi 2 API: API-029,API-083",
+  "ctx": "03_DB_Tables"
+ },
+ "03_DB_Tables|disclaimers|Note": {
+  "text": "Model Prisma `Disclaimer` · index: —",
+  "ctx": "03_DB_Tables"
+ },
+ "03_DB_Tables|disclaimer_options|Purpose": {
+  "text": "UNKNOWN — được đọc/ghi bởi 2 API: API-029,API-083",
+  "ctx": "03_DB_Tables"
+ },
+ "03_DB_Tables|disclaimer_options|Note": {
+  "text": "Model Prisma `DisclaimerOption` · index: —",
+  "ctx": "03_DB_Tables"
+ },
+ "03_DB_Tables|gmo_settings|Purpose": {
+  "text": "UNKNOWN — được đọc/ghi bởi 12 API: API-013,API-015,API-021,API-034,API-035,API-045,API-070,API-073…",
+  "ctx": "03_DB_Tables"
+ },
+ "03_DB_Tables|gmo_settings|Note": {
+  "text": "Model Prisma `GMOSetting` · index: —",
+  "ctx": "03_DB_Tables"
+ },
+ "03_DB_Tables|security_questions|Purpose": {
+  "text": "UNKNOWN — được đọc/ghi bởi 3 API: API-061,API-065,API-087",
+  "ctx": "03_DB_Tables"
+ },
+ "03_DB_Tables|security_questions|Note": {
+  "text": "Model Prisma `SecurityQuestion` · index: —",
+  "ctx": "03_DB_Tables"
+ },
+ "03_DB_Tables|sse_notifications|Purpose": {
+  "text": "UNKNOWN — được đọc/ghi bởi 7 API: API-013,API-019,API-020,API-021,API-076,API-100,API-129",
+  "ctx": "03_DB_Tables"
+ },
+ "03_DB_Tables|sse_notifications|Note": {
+  "text": "Model Prisma `SseNotification` · index: (user_id,id); (created_at)",
+  "ctx": "03_DB_Tables"
+ },
+ "03_DB_Tables|booking_obic_codes|Purpose": {
+  "text": "UNKNOWN — được đọc/ghi bởi 8 API: API-010,API-019,API-020,API-049,API-050,API-051,API-055,API-097",
+  "ctx": "03_DB_Tables"
+ },
+ "03_DB_Tables|booking_obic_codes|Note": {
+  "text": "Model Prisma `BookingObicCode` · index: (booking_id); (booking_id,is_pending,source_field,source_tier_index); (booking_id,obic_code,quantity); (booking_id,deleted)",
+  "ctx": "03_DB_Tables"
+ },
+ "03_DB_Tables|smaregi_temporary_transactions|Purpose": {
+  "text": "UNKNOWN — được đọc/ghi bởi 6 API: API-019,API-020,API-079,API-100,API-109,API-112",
+  "ctx": "03_DB_Tables"
+ },
+ "03_DB_Tables|smaregi_temporary_transactions|Note": {
+  "text": "Model Prisma `SmaregiTemporaryTransaction` · index: (status)",
+  "ctx": "03_DB_Tables"
+ },
+ "03_DB_Tables|smaregi_transactions|Purpose": {
+  "text": "UNKNOWN — được đọc/ghi bởi 3 API: API-020,API-079,API-100",
+  "ctx": "03_DB_Tables"
+ },
+ "03_DB_Tables|smaregi_transactions|Note": {
+  "text": "Model Prisma `SmaregiTransaction` · index: (store_id)",
+  "ctx": "03_DB_Tables"
+ },
+ "04_DB_Columns|tickets.limited_public|Meaning": {
+  "text": "Cờ hiển thị giới hạn: true = chỉ hiện ở trang giới hạn (CR-002 IMP-010)",
+  "ctx": "04_DB_Columns"
+ },
+ "09_Integration|EXT-001|Purpose": {
+  "text": "Thanh toán online",
+  "ctx": "09_Integration"
+ },
+ "09_Integration|EXT-002|Purpose": {
+  "text": "Gửi email",
+  "ctx": "09_Integration"
+ },
+ "09_Integration|EXT-003|Purpose": {
+  "text": "Gửi email",
+  "ctx": "09_Integration"
+ },
+ "09_Integration|EXT-004|Purpose": {
+  "text": "Lưu file upload",
+  "ctx": "09_Integration"
+ },
+ "09_Integration|EXT-005|Purpose": {
+  "text": "Đăng nhập bằng LINE",
+  "ctx": "09_Integration"
+ },
+ "09_Integration|EXT-006|Purpose": {
+  "text": "Đồng bộ giao dịch / mã vạch với POS Smaregi",
+  "ctx": "09_Integration"
+ },
+ "09_Integration|EXT-006|Note": {
+  "text": "Từ handler API",
+  "ctx": "09_Integration"
+ },
+ "10_Site|WEB-01|Note": {
+  "text": "Crawl lần 1 SUBMIT_STAGING bị đăng xuất khi vào màn không có quyền -> crawl lại READ_ONLY. HTTP Basic Auth (CloudFront)",
+  "ctx": "10_Site"
+ },
+ "10_Site|WEB-02|Note": {
+  "text": "Crawler chỉ đi theo link, không submit form",
+  "ctx": "10_Site"
+ },
+ "11_Repo|REPO-01|Note": {
+  "text": "Tên package: next-app-starter",
+  "ctx": "11_Repo"
+ }
+}

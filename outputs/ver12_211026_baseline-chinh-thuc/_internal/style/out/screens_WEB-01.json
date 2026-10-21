@@ -1,0 +1,317 @@
+{
+ "SC-001": {
+  "B4": "■目的 / Mục đích\n• Mục đích nghiệp vụ: chờ khách hàng xác nhận (tài liệu mô tả màn như đang chạy hiện tại).\n• Tiêu đề trên màn: 「ダッシュボード」.\n\n■アクセス方法 / Cách truy cập\n• Đường dẫn: /admin\n• Quyền được xem: Super Admin, Admin Tenant, Admin POSS, Admin Smageri V1\n\n■トレーサビリティ / Traceability\n• Mã tra cứu: SC-001 · F-001 · Trạng thái: đã xác nhận",
+  "B5": "• Các API màn này có thể gọi (đọc từ code, suy luận, cần kiểm chứng): API-045 ANY /api/admin/tenants/:code, API-135 POST /api/admin/credentials-confirmation, API-136 POST /api/admin/password-confirmation\n• Người dùng không có quyền mà mở URL → hệ thống tự đăng xuất và đưa về màn đăng nhập (withAuthentication.tsx#L42-L44).",
+  "B6": "• Gõ trực tiếp URL /admin.\n• Có link dẫn tới từ màn: “Đăng nhập quản trị”.",
+  "B7": null,
+  "name_vi": "Trang chủ quản trị (Dashboard)"
+ },
+ "SC-002": {
+  "B4": "■目的 / Mục đích\n• Mục đích nghiệp vụ: chờ khách hàng xác nhận (tài liệu mô tả màn như đang chạy hiện tại).\n• Màn không có tiêu đề trên giao diện; tên màn đặt theo URL.\n\n■アクセス方法 / Cách truy cập\n• Đường dẫn: /admin/app-settings\n• Quyền được xem: Super Admin\n\n■トレーサビリティ / Traceability\n• Mã tra cứu: SC-002 · F-002 · Trạng thái: đã xác nhận",
+  "B5": "• Các API màn này có thể gọi (đọc từ code, suy luận, cần kiểm chứng): API-001 ANY /api/admin/app-settings/:settingKey, API-002 ANY /api/admin/app-settings\n• Người dùng không có quyền mà mở URL → hệ thống tự đăng xuất và đưa về màn đăng nhập (withAuthentication.tsx#L42-L44).\n• Quyền không vào được (trang trống hoặc bị đưa về màn đăng nhập): Admin POSS, Admin Smageri V1, Admin Tenant.",
+  "B6": "• Gõ trực tiếp URL /admin/app-settings.",
+  "B7": null,
+  "name_vi": "Cài đặt ứng dụng"
+ },
+ "SC-003": {
+  "B4": "■目的 / Mục đích\n• Mục đích nghiệp vụ: chờ khách hàng xác nhận (tài liệu mô tả màn như đang chạy hiện tại).\n• Tiêu đề trên màn: 「バーコード読み取り」.\n\n■アクセス方法 / Cách truy cập\n• Đường dẫn: /admin/barcode-scanner\n• Quyền được xem: Admin Tenant\n\n■トレーサビリティ / Traceability\n• Mã tra cứu: SC-003 · F-003 · Trạng thái: đã xác nhận",
+  "B5": "• Các API màn này có thể gọi (đọc từ code, suy luận, cần kiểm chứng): API-019 POST /api/admin/bookings/rollback-scan, API-020 POST /api/admin/bookings/scan, API-045 ANY /api/admin/tenants/:code, API-135 POST /api/admin/credentials-confirmation, API-136 POST /api/admin/password-confirmation\n• Người dùng không có quyền mà mở URL → hệ thống tự đăng xuất và đưa về màn đăng nhập (withAuthentication.tsx#L42-L44).\n• Quyền không vào được (trang trống hoặc bị đưa về màn đăng nhập): Admin POSS, Admin Smageri V1, Super Admin.",
+  "B6": "• Gõ trực tiếp URL /admin/barcode-scanner.\n• Có link dẫn tới từ màn: “Trang chủ quản trị (Dashboard)”, “Quản lý đặt chỗ”, “Quản lý hàng chờ”, “Điều chỉnh số chỗ trống”, “Thêm tài khoản GMO”.",
+  "B7": null,
+  "name_vi": "Quét mã vạch"
+ },
+ "SC-004": {
+  "B4": "■目的 / Mục đích\n• Mục đích nghiệp vụ: chờ khách hàng xác nhận (tài liệu mô tả màn như đang chạy hiện tại).\n• Tiêu đề trên màn: 「予約管理」.\n\n■アクセス方法 / Cách truy cập\n• Đường dẫn: /admin/booking-management\n• Quyền được xem: Super Admin, Admin Tenant, Admin POSS, Admin Smageri V1\n\n■トレーサビリティ / Traceability\n• Mã tra cứu: SC-004 · F-004 · Trạng thái: đã xác nhận",
+  "B5": "• Các API màn này có thể gọi (đọc từ code, suy luận, cần kiểm chứng): API-013 PUT /api/admin/bookings/cancel/:id, API-014 GET /api/admin/bookings/count, API-017 GET /api/admin/bookings, API-018 GET /api/admin/bookings/monthly-tickets/extra-info, API-021 PUT /api/admin/bookings/status, API-045 ANY /api/admin/tenants/:code, API-047 ANY /api/admin/tenants, API-071 GET /api/bookings/main-bookings/:id, API-072 GET /api/bookings/status, API-073 GET /api/bookings/transaction/:id, API-074 POST /api/bookings/use-in-day, API-075 GET /api/bookings/vacancies/status … (và 13 API khác)\n• Người dùng không có quyền mà mở URL → hệ thống tự đăng xuất và đưa về màn đăng nhập (withAuthentication.tsx#L42-L44).",
+  "B6": "• Gõ trực tiếp URL /admin/booking-management.\n• Có link dẫn tới từ màn: “Trang chủ quản trị (Dashboard)”, “Đổi email”, “Đổi mật khẩu”, “Dashboard thống kê”, “Cài đặt điều khoản miễn trừ”.",
+  "B7": null,
+  "name_vi": "Quản lý đặt chỗ"
+ },
+ "SC-005": {
+  "B4": "■目的 / Mục đích\n• Mục đích nghiệp vụ: chờ khách hàng xác nhận (tài liệu mô tả màn như đang chạy hiện tại).\n• Chưa mở được màn khi khảo sát: URL cần mã cụ thể (ID / token). Tên màn đặt theo URL.\n\n■アクセス方法 / Cách truy cập\n• Đường dẫn: /admin/booking-management/details/:id\n• Quyền được xem: chưa xác định\n\n■トレーサビリティ / Traceability\n• Mã tra cứu: SC-005 · F-005 · Trạng thái: cần kiểm chứng",
+  "B5": "• Các API màn này có thể gọi (đọc từ code, suy luận, cần kiểm chứng): API-009 GET /api/admin/bookings/:id, API-017 GET /api/admin/bookings, API-045 ANY /api/admin/tenants/:code, API-070 ANY /api/bookings, API-071 GET /api/bookings/main-bookings/:id, API-074 POST /api/bookings/use-in-day, API-075 GET /api/bookings/vacancies/status, API-083 GET /api/disclaimers, API-104 GET /api/tenants, API-106 GET /api/tickets/:id, API-107 GET /api/tickets, API-112 GET /api/user/bookings … (và 8 API khác)\n• Người dùng không có quyền mà mở URL → hệ thống tự đăng xuất và đưa về màn đăng nhập (withAuthentication.tsx#L42-L44).\n• Khi khảo sát không có mã hợp lệ để mở trực tiếp; màn này mở bằng cách bấm vào 1 dòng hoặc 1 nút.",
+  "B6": "• Gõ trực tiếp URL /admin/booking-management/details/:id.",
+  "B7": null,
+  "name_vi": "Chi tiết đặt chỗ"
+ },
+ "SC-006": {
+  "B4": "■目的 / Mục đích\n• Mục đích nghiệp vụ: chờ khách hàng xác nhận (tài liệu mô tả màn như đang chạy hiện tại).\n• Chưa mở được màn khi khảo sát: URL cần mã cụ thể (ID / token). Tên màn đặt theo URL.\n\n■アクセス方法 / Cách truy cập\n• Đường dẫn: /admin/booking-management/partial-checkout/:id\n• Quyền được xem: chưa xác định\n\n■トレーサビリティ / Traceability\n• Mã tra cứu: SC-006 · F-006 · Trạng thái: cần kiểm chứng",
+  "B5": "• Các API màn này có thể gọi (đọc từ code, suy luận, cần kiểm chứng): API-009 GET /api/admin/bookings/:id, API-017 GET /api/admin/bookings, API-045 ANY /api/admin/tenants/:code, API-070 ANY /api/bookings, API-071 GET /api/bookings/main-bookings/:id, API-074 POST /api/bookings/use-in-day, API-075 GET /api/bookings/vacancies/status, API-083 GET /api/disclaimers, API-104 GET /api/tenants, API-106 GET /api/tickets/:id, API-107 GET /api/tickets, API-112 GET /api/user/bookings … (và 9 API khác)\n• Người dùng không có quyền mà mở URL → hệ thống tự đăng xuất và đưa về màn đăng nhập (withAuthentication.tsx#L42-L44).\n• Khi khảo sát không có mã hợp lệ để mở trực tiếp; màn này mở bằng cách bấm vào 1 dòng hoặc 1 nút.",
+  "B6": "• Gõ trực tiếp URL /admin/booking-management/partial-checkout/:id.",
+  "B7": null,
+  "name_vi": "Trả vé một phần (check-out một phần)"
+ },
+ "SC-007": {
+  "B4": "■目的 / Mục đích\n• Mục đích nghiệp vụ: chờ khách hàng xác nhận (tài liệu mô tả màn như đang chạy hiện tại).\n• Chưa mở được màn khi khảo sát: URL cần mã cụ thể (ID / token). Tên màn đặt theo URL.\n\n■アクセス方法 / Cách truy cập\n• Đường dẫn: /admin/booking-management/update/:id\n• Quyền được xem: chưa xác định\n\n■トレーサビリティ / Traceability\n• Mã tra cứu: SC-007 · F-007 · Trạng thái: cần kiểm chứng",
+  "B5": "• Các API màn này có thể gọi (đọc từ code, suy luận, cần kiểm chứng): API-009 GET /api/admin/bookings/:id, API-015 PATCH /api/admin/bookings/decrease-quantity/:id, API-017 GET /api/admin/bookings, API-028 GET /api/admin/credit-cards/search/:userId, API-045 ANY /api/admin/tenants/:code, API-069 GET /api/bookings/check-same-date-booking-exists, API-070 ANY /api/bookings, API-071 GET /api/bookings/main-bookings/:id, API-073 GET /api/bookings/transaction/:id, API-074 POST /api/bookings/use-in-day, API-075 GET /api/bookings/vacancies/status, API-083 GET /api/disclaimers … (và 16 API khác)\n• Người dùng không có quyền mà mở URL → hệ thống tự đăng xuất và đưa về màn đăng nhập (withAuthentication.tsx#L42-L44).\n• Khi khảo sát không có mã hợp lệ để mở trực tiếp; màn này mở bằng cách bấm vào 1 dòng hoặc 1 nút.",
+  "B6": "• Gõ trực tiếp URL /admin/booking-management/update/:id.",
+  "B7": null,
+  "name_vi": "Sửa đặt chỗ"
+ },
+ "SC-008": {
+  "B4": "■目的 / Mục đích\n• Mục đích nghiệp vụ: chờ khách hàng xác nhận (tài liệu mô tả màn như đang chạy hiện tại).\n• Tiêu đề trên màn: 「順番待ち管理」.\n\n■アクセス方法 / Cách truy cập\n• Đường dẫn: /admin/booking-queue\n• Quyền được xem: Admin Tenant, Admin POSS, Admin Smageri V1\n\n■トレーサビリティ / Traceability\n• Mã tra cứu: SC-008 · F-008 · Trạng thái: đã xác nhận",
+  "B5": "• Các API màn này có thể gọi (đọc từ code, suy luận, cần kiểm chứng): API-003 PUT /api/admin/booking-queue/:id, API-004 GET /api/admin/booking-queue/calling, API-005 POST /api/admin/booking-queue, API-006 GET /api/admin/booking-queue/system-cancelled, API-007 GET /api/admin/booking-queue/waiting, API-017 GET /api/admin/bookings, API-045 ANY /api/admin/tenants/:code, API-071 GET /api/bookings/main-bookings/:id, API-074 POST /api/bookings/use-in-day, API-075 GET /api/bookings/vacancies/status, API-083 GET /api/disclaimers, API-104 GET /api/tenants … (và 11 API khác)\n• Người dùng không có quyền mà mở URL → hệ thống tự đăng xuất và đưa về màn đăng nhập (withAuthentication.tsx#L42-L44).\n• Quyền không vào được (trang trống hoặc bị đưa về màn đăng nhập): Super Admin.",
+  "B6": "• Gõ trực tiếp URL /admin/booking-queue.",
+  "B7": null,
+  "name_vi": "Quản lý hàng chờ"
+ },
+ "SC-009": {
+  "B4": "■目的 / Mục đích\n• Mục đích nghiệp vụ: chờ khách hàng xác nhận (tài liệu mô tả màn như đang chạy hiện tại).\n• Tiêu đề trên màn: 「在庫調整」.\n\n■アクセス方法 / Cách truy cập\n• Đường dẫn: /admin/booking-vacancies\n• Quyền được xem: Admin Tenant, Admin POSS, Admin Smageri V1\n\n■トレーサビリティ / Traceability\n• Mã tra cứu: SC-009 · F-009 · Trạng thái: đã xác nhận",
+  "B5": "• Các API màn này có thể gọi (đọc từ code, suy luận, cần kiểm chứng): API-008 GET /api/admin/booking-vacancies, API-022 PUT /api/admin/bookings/ticket-booking-schedules/:id, API-045 ANY /api/admin/tenants/:code, API-135 POST /api/admin/credentials-confirmation, API-136 POST /api/admin/password-confirmation\n• Người dùng không có quyền mà mở URL → hệ thống tự đăng xuất và đưa về màn đăng nhập (withAuthentication.tsx#L42-L44).\n• Quyền không vào được (trang trống hoặc bị đưa về màn đăng nhập): Super Admin.",
+  "B6": "• Gõ trực tiếp URL /admin/booking-vacancies.",
+  "B7": null,
+  "name_vi": "Điều chỉnh số chỗ trống"
+ },
+ "SC-010": {
+  "B4": "■目的 / Mục đích\n• Mục đích nghiệp vụ: chờ khách hàng xác nhận (tài liệu mô tả màn như đang chạy hiện tại).\n• Tiêu đề trên màn: 「メール変更」.\n\n■アクセス方法 / Cách truy cập\n• Đường dẫn: /admin/change-email\n• Quyền được xem: Super Admin\n\n■トレーサビリティ / Traceability\n• Mã tra cứu: SC-010 · F-010 · Trạng thái: đã xác nhận",
+  "B5": "• Các API màn này có thể gọi (đọc từ code, suy luận, cần kiểm chứng): API-045 ANY /api/admin/tenants/:code, API-062 PUT /api/auth/change-email, API-135 POST /api/admin/credentials-confirmation, API-136 POST /api/admin/password-confirmation\n• Người dùng không có quyền mà mở URL → hệ thống tự đăng xuất và đưa về màn đăng nhập (withAuthentication.tsx#L42-L44).\n• Quyền không vào được (trang trống hoặc bị đưa về màn đăng nhập): Admin POSS, Admin Smageri V1, Admin Tenant.",
+  "B6": "• Gõ trực tiếp URL /admin/change-email.",
+  "B7": null,
+  "name_vi": "Đổi email"
+ },
+ "SC-011": {
+  "B4": "■目的 / Mục đích\n• Mục đích nghiệp vụ: chờ khách hàng xác nhận (tài liệu mô tả màn như đang chạy hiện tại).\n• Tiêu đề trên màn: 「パスワード変更」.\n\n■アクセス方法 / Cách truy cập\n• Đường dẫn: /admin/change-password\n• Quyền được xem: Super Admin\n\n■トレーサビリティ / Traceability\n• Mã tra cứu: SC-011 · F-011 · Trạng thái: đã xác nhận",
+  "B5": "• Các API màn này có thể gọi (đọc từ code, suy luận, cần kiểm chứng): API-045 ANY /api/admin/tenants/:code, API-135 POST /api/admin/credentials-confirmation, API-136 POST /api/admin/password-confirmation, API-137 POST /api/auth/change-password\n• Người dùng không có quyền mà mở URL → hệ thống tự đăng xuất và đưa về màn đăng nhập (withAuthentication.tsx#L42-L44).\n• Quyền không vào được (trang trống hoặc bị đưa về màn đăng nhập): Admin POSS, Admin Smageri V1, Admin Tenant.",
+  "B6": "• Gõ trực tiếp URL /admin/change-password.",
+  "B7": null,
+  "name_vi": "Đổi mật khẩu"
+ },
+ "SC-012": {
+  "B4": "■目的 / Mục đích\n• Mục đích nghiệp vụ: chờ khách hàng xác nhận (tài liệu mô tả màn như đang chạy hiện tại).\n• Tiêu đề trên màn: 「ダッシュボード」.\n\n■アクセス方法 / Cách truy cập\n• Đường dẫn: /admin/dashboard\n• Quyền được xem: Super Admin\n\n■トレーサビリティ / Traceability\n• Mã tra cứu: SC-012 · F-012 · Trạng thái: đã xác nhận",
+  "B5": "• Các API màn này có thể gọi (đọc từ code, suy luận, cần kiểm chứng): API-017 GET /api/admin/bookings, API-023 GET /api/admin/charts/average-booking-times, API-024 GET /api/admin/charts/average-stay-duration, API-025 GET /api/admin/charts/total-bookings-with-ticket, API-026 GET /api/admin/charts/total-bookings-with-times, API-027 GET /api/admin/charts/total-new-and-old-booking-users, API-045 ANY /api/admin/tenants/:code, API-047 ANY /api/admin/tenants, API-054 ANY /api/admin/tickets, API-071 GET /api/bookings/main-bookings/:id, API-074 POST /api/bookings/use-in-day, API-075 GET /api/bookings/vacancies/status … (và 13 API khác)\n• Người dùng không có quyền mà mở URL → hệ thống tự đăng xuất và đưa về màn đăng nhập (withAuthentication.tsx#L42-L44).\n• Quyền không vào được (trang trống hoặc bị đưa về màn đăng nhập): Admin POSS, Admin Smageri V1, Admin Tenant.",
+  "B6": "• Gõ trực tiếp URL /admin/dashboard.\n• Có link dẫn tới từ màn: “Trang chủ quản trị (Dashboard)”, “Quản lý đặt chỗ”, “Đổi email”, “Đổi mật khẩu”, “Cài đặt điều khoản miễn trừ”.",
+  "B7": null,
+  "name_vi": "Dashboard thống kê"
+ },
+ "SC-013": {
+  "B4": "■目的 / Mục đích\n• Mục đích nghiệp vụ: chờ khách hàng xác nhận (tài liệu mô tả màn như đang chạy hiện tại).\n• Tiêu đề trên màn: 「免責事項設定」.\n\n■アクセス方法 / Cách truy cập\n• Đường dẫn: /admin/disclaimer-management\n• Quyền được xem: Super Admin\n\n■トレーサビリティ / Traceability\n• Mã tra cứu: SC-013 · F-013 · Trạng thái: đã xác nhận",
+  "B5": "• Các API màn này có thể gọi (đọc từ code, suy luận, cần kiểm chứng): API-029 ANY /api/admin/disclaimers, API-045 ANY /api/admin/tenants/:code, API-135 POST /api/admin/credentials-confirmation, API-136 POST /api/admin/password-confirmation\n• Người dùng không có quyền mà mở URL → hệ thống tự đăng xuất và đưa về màn đăng nhập (withAuthentication.tsx#L42-L44).\n• Quyền không vào được (trang trống hoặc bị đưa về màn đăng nhập): Admin POSS, Admin Smageri V1, Admin Tenant.",
+  "B6": "• Gõ trực tiếp URL /admin/disclaimer-management.\n• Có link dẫn tới từ màn: “Trang chủ quản trị (Dashboard)”, “Quản lý đặt chỗ”, “Đổi email”, “Đổi mật khẩu”, “Dashboard thống kê”.",
+  "B7": null,
+  "name_vi": "Cài đặt điều khoản miễn trừ"
+ },
+ "SC-014": {
+  "B4": "■目的 / Mục đích\n• Mục đích nghiệp vụ: chờ khách hàng xác nhận (tài liệu mô tả màn như đang chạy hiện tại).\n• Tiêu đề trên màn: 「自動返信メール設定」.\n\n■アクセス方法 / Cách truy cập\n• Đường dẫn: /admin/email-settings\n• Quyền được xem: Super Admin\n\n■トレーサビリティ / Traceability\n• Mã tra cứu: SC-014 · F-014 · Trạng thái: đã xác nhận",
+  "B5": "• Các API màn này có thể gọi (đọc từ code, suy luận, cần kiểm chứng): API-030 ANY /api/admin/email-settings/:emailKey, API-031 ANY /api/admin/email-settings, API-045 ANY /api/admin/tenants/:code, API-135 POST /api/admin/credentials-confirmation, API-136 POST /api/admin/password-confirmation\n• Người dùng không có quyền mà mở URL → hệ thống tự đăng xuất và đưa về màn đăng nhập (withAuthentication.tsx#L42-L44).\n• Quyền không vào được (trang trống hoặc bị đưa về màn đăng nhập): Admin POSS, Admin Smageri V1, Admin Tenant.",
+  "B6": "• Gõ trực tiếp URL /admin/email-settings.\n• Có link dẫn tới từ màn: “Trang chủ quản trị (Dashboard)”, “Quản lý đặt chỗ”, “Đổi email”, “Đổi mật khẩu”, “Dashboard thống kê”.",
+  "B7": null,
+  "name_vi": "Cài đặt email trả lời tự động"
+ },
+ "SC-015": {
+  "B4": "■目的 / Mục đích\n• Mục đích nghiệp vụ: chờ khách hàng xác nhận (tài liệu mô tả màn như đang chạy hiện tại).\n• Chưa mở được màn khi khảo sát: URL cần mã cụ thể (ID / token). Tên màn đặt theo URL.\n\n■アクセス方法 / Cách truy cập\n• Đường dẫn: /admin/email-settings/edit/:emailKey\n• Quyền được xem: chưa xác định\n\n■トレーサビリティ / Traceability\n• Mã tra cứu: SC-015 · F-015 · Trạng thái: cần kiểm chứng",
+  "B5": "• Các API màn này có thể gọi (đọc từ code, suy luận, cần kiểm chứng): API-017 GET /api/admin/bookings, API-030 ANY /api/admin/email-settings/:emailKey, API-031 ANY /api/admin/email-settings, API-032 POST /api/admin/email-settings/preview, API-033 POST /api/admin/email-settings/send-preview-email, API-045 ANY /api/admin/tenants/:code, API-071 GET /api/bookings/main-bookings/:id, API-074 POST /api/bookings/use-in-day, API-075 GET /api/bookings/vacancies/status, API-083 GET /api/disclaimers, API-104 GET /api/tenants, API-106 GET /api/tickets/:id … (và 10 API khác)\n• Người dùng không có quyền mà mở URL → hệ thống tự đăng xuất và đưa về màn đăng nhập (withAuthentication.tsx#L42-L44).\n• Khi khảo sát không có mã hợp lệ để mở trực tiếp; màn này mở bằng cách bấm vào 1 dòng hoặc 1 nút.",
+  "B6": "• Gõ trực tiếp URL /admin/email-settings/edit/:emailKey.",
+  "B7": null,
+  "name_vi": "Sửa email trả lời tự động"
+ },
+ "SC-016": {
+  "B4": "■目的 / Mục đích\n• Mục đích nghiệp vụ: chờ khách hàng xác nhận (tài liệu mô tả màn như đang chạy hiện tại).\n• Tiêu đề trên màn: 「パスワードを忘れた場合」.\n\n■アクセス方法 / Cách truy cập\n• Đường dẫn: /admin/forgot-password\n• Quyền được xem: Super Admin, Admin Tenant, Admin POSS, Admin Smageri V1\n\n■トレーサビリティ / Traceability\n• Mã tra cứu: SC-016 · F-016 · Trạng thái: đã xác nhận",
+  "B5": "• Các API màn này có thể gọi (đọc từ code, suy luận, cần kiểm chứng): API-140 POST /api/auth/forgot-password\n• Người dùng không có quyền mà mở URL → hệ thống tự đăng xuất và đưa về màn đăng nhập (withAuthentication.tsx#L42-L44).",
+  "B6": "• Gõ trực tiếp URL /admin/forgot-password.\n• Có link dẫn tới từ màn: “Đăng nhập quản trị”.",
+  "B7": null,
+  "name_vi": "Quên mật khẩu"
+ },
+ "SC-017": {
+  "B4": "■目的 / Mục đích\n• Mục đích nghiệp vụ: chờ khách hàng xác nhận (tài liệu mô tả màn như đang chạy hiện tại).\n• Tiêu đề trên màn: 「GMOアカウント管理」.\n\n■アクセス方法 / Cách truy cập\n• Đường dẫn: /admin/gmo-settings\n• Quyền được xem: Super Admin\n\n■トレーサビリティ / Traceability\n• Mã tra cứu: SC-017 · F-017 · Trạng thái: đã xác nhận",
+  "B5": "• Các API màn này có thể gọi (đọc từ code, suy luận, cần kiểm chứng): API-034 ANY /api/admin/gmo-settings/:id, API-035 ANY /api/admin/gmo-settings, API-045 ANY /api/admin/tenants/:code, API-135 POST /api/admin/credentials-confirmation, API-136 POST /api/admin/password-confirmation\n• Người dùng không có quyền mà mở URL → hệ thống tự đăng xuất và đưa về màn đăng nhập (withAuthentication.tsx#L42-L44).\n• Quyền không vào được (trang trống hoặc bị đưa về màn đăng nhập): Admin POSS, Admin Smageri V1, Admin Tenant.",
+  "B6": "• Gõ trực tiếp URL /admin/gmo-settings.\n• Có link dẫn tới từ màn: “Trang chủ quản trị (Dashboard)”, “Quản lý đặt chỗ”, “Đổi email”, “Đổi mật khẩu”, “Dashboard thống kê”.",
+  "B7": null,
+  "name_vi": "Quản lý tài khoản GMO"
+ },
+ "SC-018": {
+  "B4": "■目的 / Mục đích\n• Mục đích nghiệp vụ: chờ khách hàng xác nhận (tài liệu mô tả màn như đang chạy hiện tại).\n• Tiêu đề trên màn: 「新規GMOアカウントの設定」.\n\n■アクセス方法 / Cách truy cập\n• Đường dẫn: /admin/gmo-settings/create\n• Quyền được xem: Super Admin, Admin Tenant, Admin POSS, Admin Smageri V1\n\n■トレーサビリティ / Traceability\n• Mã tra cứu: SC-018 · F-018 · Trạng thái: đã xác nhận",
+  "B5": "• Các API màn này có thể gọi (đọc từ code, suy luận, cần kiểm chứng): API-034 ANY /api/admin/gmo-settings/:id, API-035 ANY /api/admin/gmo-settings, API-045 ANY /api/admin/tenants/:code, API-135 POST /api/admin/credentials-confirmation, API-136 POST /api/admin/password-confirmation\n• Người dùng không có quyền mà mở URL → hệ thống tự đăng xuất và đưa về màn đăng nhập (withAuthentication.tsx#L42-L44).",
+  "B6": "• Gõ trực tiếp URL /admin/gmo-settings/create.",
+  "B7": null,
+  "name_vi": "Thêm tài khoản GMO"
+ },
+ "SC-019": {
+  "B4": "■目的 / Mục đích\n• Mục đích nghiệp vụ: chờ khách hàng xác nhận (tài liệu mô tả màn như đang chạy hiện tại).\n• Chưa mở được màn khi khảo sát: URL cần mã cụ thể (ID / token). Tên màn đặt theo URL.\n\n■アクセス方法 / Cách truy cập\n• Đường dẫn: /admin/gmo-settings/edit/:id\n• Quyền được xem: chưa xác định\n\n■トレーサビリティ / Traceability\n• Mã tra cứu: SC-019 · F-019 · Trạng thái: cần kiểm chứng",
+  "B5": "• Các API màn này có thể gọi (đọc từ code, suy luận, cần kiểm chứng): API-034 ANY /api/admin/gmo-settings/:id, API-035 ANY /api/admin/gmo-settings, API-045 ANY /api/admin/tenants/:code, API-135 POST /api/admin/credentials-confirmation, API-136 POST /api/admin/password-confirmation\n• Người dùng không có quyền mà mở URL → hệ thống tự đăng xuất và đưa về màn đăng nhập (withAuthentication.tsx#L42-L44).\n• Khi khảo sát không có mã hợp lệ để mở trực tiếp; màn này mở bằng cách bấm vào 1 dòng hoặc 1 nút.",
+  "B6": "• Gõ trực tiếp URL /admin/gmo-settings/edit/:id.",
+  "B7": null,
+  "name_vi": "Sửa tài khoản GMO"
+ },
+ "SC-020": {
+  "B4": "■目的 / Mục đích\n• Mục đích nghiệp vụ: chờ khách hàng xác nhận (tài liệu mô tả màn như đang chạy hiện tại).\n• Chưa mở được màn khi khảo sát: URL cần mã cụ thể (ID / token). Tên màn đặt theo URL.\n\n■アクセス方法 / Cách truy cập\n• Đường dẫn: /admin/gmo-settings/view/:id\n• Quyền được xem: chưa xác định\n\n■トレーサビリティ / Traceability\n• Mã tra cứu: SC-020 · F-020 · Trạng thái: cần kiểm chứng",
+  "B5": "• Các API màn này có thể gọi (đọc từ code, suy luận, cần kiểm chứng): API-034 ANY /api/admin/gmo-settings/:id, API-045 ANY /api/admin/tenants/:code, API-135 POST /api/admin/credentials-confirmation, API-136 POST /api/admin/password-confirmation\n• Người dùng không có quyền mà mở URL → hệ thống tự đăng xuất và đưa về màn đăng nhập (withAuthentication.tsx#L42-L44).\n• Khi khảo sát không có mã hợp lệ để mở trực tiếp; màn này mở bằng cách bấm vào 1 dòng hoặc 1 nút.",
+  "B6": "• Gõ trực tiếp URL /admin/gmo-settings/view/:id.",
+  "B7": null,
+  "name_vi": "Xem tài khoản GMO"
+ },
+ "SC-021": {
+  "B4": "■目的 / Mục đích\n• Mục đích nghiệp vụ: chờ khách hàng xác nhận (tài liệu mô tả màn như đang chạy hiện tại).\n• Tiêu đề trên màn: 「お知らせ管理」.\n\n■アクセス方法 / Cách truy cập\n• Đường dẫn: /admin/news-management\n• Quyền được xem: Super Admin\n\n■トレーサビリティ / Traceability\n• Mã tra cứu: SC-021 · F-021 · Trạng thái: đã xác nhận",
+  "B5": "• Các API màn này có thể gọi (đọc từ code, suy luận, cần kiểm chứng): API-036 ANY /api/admin/news/:id, API-037 ANY /api/admin/news, API-045 ANY /api/admin/tenants/:code, API-135 POST /api/admin/credentials-confirmation, API-136 POST /api/admin/password-confirmation\n• Người dùng không có quyền mà mở URL → hệ thống tự đăng xuất và đưa về màn đăng nhập (withAuthentication.tsx#L42-L44).\n• Quyền không vào được (trang trống hoặc bị đưa về màn đăng nhập): Admin POSS, Admin Smageri V1, Admin Tenant.",
+  "B6": "• Gõ trực tiếp URL /admin/news-management.\n• Có link dẫn tới từ màn: “Trang chủ quản trị (Dashboard)”, “Quản lý đặt chỗ”, “Đổi email”, “Đổi mật khẩu”, “Dashboard thống kê”.",
+  "B7": null,
+  "name_vi": "Quản lý thông báo"
+ },
+ "SC-022": {
+  "B4": "■目的 / Mục đích\n• Mục đích nghiệp vụ: chờ khách hàng xác nhận (tài liệu mô tả màn như đang chạy hiện tại).\n• Tiêu đề trên màn: 「お知らせの設定」.\n\n■アクセス方法 / Cách truy cập\n• Đường dẫn: /admin/news-management/create\n• Quyền được xem: Super Admin, Admin Tenant, Admin POSS, Admin Smageri V1\n\n■トレーサビリティ / Traceability\n• Mã tra cứu: SC-022 · F-022 · Trạng thái: đã xác nhận",
+  "B5": "• Các API màn này có thể gọi (đọc từ code, suy luận, cần kiểm chứng): API-036 ANY /api/admin/news/:id, API-037 ANY /api/admin/news, API-045 ANY /api/admin/tenants/:code, API-135 POST /api/admin/credentials-confirmation, API-136 POST /api/admin/password-confirmation\n• Người dùng không có quyền mà mở URL → hệ thống tự đăng xuất và đưa về màn đăng nhập (withAuthentication.tsx#L42-L44).",
+  "B6": "• Gõ trực tiếp URL /admin/news-management/create.",
+  "B7": null,
+  "name_vi": "Thêm thông báo"
+ },
+ "SC-023": {
+  "B4": "■目的 / Mục đích\n• Mục đích nghiệp vụ: chờ khách hàng xác nhận (tài liệu mô tả màn như đang chạy hiện tại).\n• Chưa mở được màn khi khảo sát: URL cần mã cụ thể (ID / token). Tên màn đặt theo URL.\n\n■アクセス方法 / Cách truy cập\n• Đường dẫn: /admin/news-management/edit/:newsId\n• Quyền được xem: chưa xác định\n\n■トレーサビリティ / Traceability\n• Mã tra cứu: SC-023 · F-023 · Trạng thái: cần kiểm chứng",
+  "B5": "• Các API màn này có thể gọi (đọc từ code, suy luận, cần kiểm chứng): API-036 ANY /api/admin/news/:id, API-037 ANY /api/admin/news, API-045 ANY /api/admin/tenants/:code, API-135 POST /api/admin/credentials-confirmation, API-136 POST /api/admin/password-confirmation\n• Người dùng không có quyền mà mở URL → hệ thống tự đăng xuất và đưa về màn đăng nhập (withAuthentication.tsx#L42-L44).\n• Khi khảo sát không có mã hợp lệ để mở trực tiếp; màn này mở bằng cách bấm vào 1 dòng hoặc 1 nút.",
+  "B6": "• Gõ trực tiếp URL /admin/news-management/edit/:newsId.",
+  "B7": null,
+  "name_vi": "Sửa thông báo"
+ },
+ "SC-024": {
+  "B4": "■目的 / Mục đích\n• Mục đích nghiệp vụ: chờ khách hàng xác nhận (tài liệu mô tả màn như đang chạy hiện tại).\n• Chưa mở được màn khi khảo sát: URL cần mã cụ thể (ID / token). Tên màn đặt theo URL.\n\n■アクセス方法 / Cách truy cập\n• Đường dẫn: /admin/reset-password/:token\n• Quyền được xem: chưa xác định\n\n■トレーサビリティ / Traceability\n• Mã tra cứu: SC-024 · F-024 · Trạng thái: cần kiểm chứng",
+  "B5": "• Các API màn này có thể gọi (đọc từ code, suy luận, cần kiểm chứng): API-141 POST /api/auth/reset-password\n• Người dùng không có quyền mà mở URL → hệ thống tự đăng xuất và đưa về màn đăng nhập (withAuthentication.tsx#L42-L44).\n• Khi khảo sát không có mã hợp lệ để mở trực tiếp; màn này mở bằng cách bấm vào 1 dòng hoặc 1 nút.",
+  "B6": "• Gõ trực tiếp URL /admin/reset-password/:token.",
+  "B7": null,
+  "name_vi": "Đặt lại mật khẩu"
+ },
+ "SC-025": {
+  "B4": "■目的 / Mục đích\n• Mục đích nghiệp vụ: chờ khách hàng xác nhận (tài liệu mô tả màn như đang chạy hiện tại).\n• Tiêu đề trên màn: 「売上管理」.\n\n■アクセス方法 / Cách truy cập\n• Đường dẫn: /admin/revenue-management\n• Quyền được xem: Super Admin, Admin Tenant, Admin POSS, Admin Smageri V1\n\n■トレーサビリティ / Traceability\n• Mã tra cứu: SC-025 · F-025 · Trạng thái: đã xác nhận",
+  "B5": "• Các API màn này có thể gọi (đọc từ code, suy luận, cần kiểm chứng): API-017 GET /api/admin/bookings, API-039 GET /api/admin/revenue-management/count, API-041 GET /api/admin/revenue-management, API-045 ANY /api/admin/tenants/:code, API-047 ANY /api/admin/tenants, API-054 ANY /api/admin/tickets, API-071 GET /api/bookings/main-bookings/:id, API-074 POST /api/bookings/use-in-day, API-075 GET /api/bookings/vacancies/status, API-083 GET /api/disclaimers, API-104 GET /api/tenants, API-106 GET /api/tickets/:id … (và 10 API khác)\n• Người dùng không có quyền mà mở URL → hệ thống tự đăng xuất và đưa về màn đăng nhập (withAuthentication.tsx#L42-L44).",
+  "B6": "• Gõ trực tiếp URL /admin/revenue-management.\n• Có link dẫn tới từ màn: “Trang chủ quản trị (Dashboard)”, “Quét mã vạch”, “Quản lý đặt chỗ”, “Quản lý hàng chờ”, “Điều chỉnh số chỗ trống”.",
+  "B7": null,
+  "name_vi": "Quản lý doanh thu"
+ },
+ "SC-026": {
+  "B4": "■目的 / Mục đích\n• Mục đích nghiệp vụ: chờ khách hàng xác nhận (tài liệu mô tả màn như đang chạy hiện tại).\n• Tiêu đề trên màn: 「入場状況管理」.\n\n■アクセス方法 / Cách truy cập\n• Đường dẫn: /admin/scan-management\n• Quyền được xem: Admin Tenant, Admin Smageri V1\n\n■トレーサビリティ / Traceability\n• Mã tra cứu: SC-026 · F-026 · Trạng thái: đã xác nhận",
+  "B5": "• Các API màn này có thể gọi (đọc từ code, suy luận, cần kiểm chứng): API-011 PUT /api/admin/bookings/:id/status, API-013 PUT /api/admin/bookings/cancel/:id, API-014 GET /api/admin/bookings/count, API-017 GET /api/admin/bookings, API-018 GET /api/admin/bookings/monthly-tickets/extra-info, API-045 ANY /api/admin/tenants/:code, API-047 ANY /api/admin/tenants, API-071 GET /api/bookings/main-bookings/:id, API-073 GET /api/bookings/transaction/:id, API-074 POST /api/bookings/use-in-day, API-075 GET /api/bookings/vacancies/status, API-083 GET /api/disclaimers … (và 12 API khác)\n• Người dùng không có quyền mà mở URL → hệ thống tự đăng xuất và đưa về màn đăng nhập (withAuthentication.tsx#L42-L44).\n• Quyền không vào được (trang trống hoặc bị đưa về màn đăng nhập): Admin POSS, Super Admin.",
+  "B6": "• Gõ trực tiếp URL /admin/scan-management.\n• Có link dẫn tới từ màn: “Trang chủ quản trị (Dashboard)”, “Quét mã vạch”, “Quản lý đặt chỗ”, “Quản lý hàng chờ”, “Điều chỉnh số chỗ trống”.",
+  "B7": null,
+  "name_vi": "Quản lý tình trạng ra vào"
+ },
+ "SC-027": {
+  "B4": "■目的 / Mục đích\n• Mục đích nghiệp vụ: chờ khách hàng xác nhận (tài liệu mô tả màn như đang chạy hiện tại).\n• Màn không có tiêu đề trên giao diện; tên màn đặt theo URL.\n\n■アクセス方法 / Cách truy cập\n• Đường dẫn: /admin/signin\n• Quyền được xem: Super Admin, Admin Tenant, Admin POSS, Admin Smageri V1\n\n■トレーサビリティ / Traceability\n• Mã tra cứu: SC-027 · F-027 · Trạng thái: đã xác nhận",
+  "B5": "• Các API màn này có thể gọi (đọc từ code, suy luận, cần kiểm chứng): API-063 POST /api/auth/request-unlock-account, API-065 GET /api/auth/security-questions, API-138 POST /api/auth/check-admin-credentials\n• Người dùng không có quyền mà mở URL → hệ thống tự đăng xuất và đưa về màn đăng nhập (withAuthentication.tsx#L42-L44).",
+  "B6": "• Gõ trực tiếp URL /admin/signin.",
+  "B7": null,
+  "name_vi": "Đăng nhập quản trị"
+ },
+ "SC-028": {
+  "B4": "■目的 / Mục đích\n• Mục đích nghiệp vụ: chờ khách hàng xác nhận (tài liệu mô tả màn như đang chạy hiện tại).\n• Tiêu đề trên màn: 「従業員管理」.\n\n■アクセス方法 / Cách truy cập\n• Đường dẫn: /admin/staff-management\n• Quyền được xem: Super Admin, Admin Tenant, Admin POSS, Admin Smageri V1\n\n■トレーサビリティ / Traceability\n• Mã tra cứu: SC-028 · F-028 · Trạng thái: đã xác nhận",
+  "B5": "• Các API màn này có thể gọi (đọc từ code, suy luận, cần kiểm chứng): API-042 ANY /api/admin/staffs/:id, API-043 GET /api/admin/staffs/count, API-044 ANY /api/admin/staffs, API-045 ANY /api/admin/tenants/:code, API-047 ANY /api/admin/tenants, API-134 POST /api/admin/admin-credentials-confirmation, API-135 POST /api/admin/credentials-confirmation, API-136 POST /api/admin/password-confirmation\n• Người dùng không có quyền mà mở URL → hệ thống tự đăng xuất và đưa về màn đăng nhập (withAuthentication.tsx#L42-L44).",
+  "B6": "• Gõ trực tiếp URL /admin/staff-management.\n• Có link dẫn tới từ màn: “Trang chủ quản trị (Dashboard)”, “Quét mã vạch”, “Quản lý đặt chỗ”, “Quản lý hàng chờ”, “Điều chỉnh số chỗ trống”.",
+  "B7": null,
+  "name_vi": "Quản lý nhân viên"
+ },
+ "SC-029": {
+  "B4": "■目的 / Mục đích\n• Mục đích nghiệp vụ: chờ khách hàng xác nhận (tài liệu mô tả màn như đang chạy hiện tại).\n• Tiêu đề trên màn: 「従業員管理」.\n\n■アクセス方法 / Cách truy cập\n• Đường dẫn: /admin/staff-management/create\n• Quyền được xem: Super Admin, Admin Tenant, Admin POSS, Admin Smageri V1\n\n■トレーサビリティ / Traceability\n• Mã tra cứu: SC-029 · F-029 · Trạng thái: đã xác nhận",
+  "B5": "• Các API màn này có thể gọi (đọc từ code, suy luận, cần kiểm chứng): API-042 ANY /api/admin/staffs/:id, API-044 ANY /api/admin/staffs, API-045 ANY /api/admin/tenants/:code, API-047 ANY /api/admin/tenants, API-135 POST /api/admin/credentials-confirmation, API-136 POST /api/admin/password-confirmation\n• Người dùng không có quyền mà mở URL → hệ thống tự đăng xuất và đưa về màn đăng nhập (withAuthentication.tsx#L42-L44).",
+  "B6": "• Gõ trực tiếp URL /admin/staff-management/create.",
+  "B7": null,
+  "name_vi": "Thêm nhân viên"
+ },
+ "SC-030": {
+  "B4": "■目的 / Mục đích\n• Mục đích nghiệp vụ: chờ khách hàng xác nhận (tài liệu mô tả màn như đang chạy hiện tại).\n• Chưa mở được màn khi khảo sát: URL cần mã cụ thể (ID / token). Tên màn đặt theo URL.\n\n■アクセス方法 / Cách truy cập\n• Đường dẫn: /admin/staff-management/edit/:id\n• Quyền được xem: chưa xác định\n\n■トレーサビリティ / Traceability\n• Mã tra cứu: SC-030 · F-030 · Trạng thái: cần kiểm chứng",
+  "B5": "• Các API màn này có thể gọi (đọc từ code, suy luận, cần kiểm chứng): API-042 ANY /api/admin/staffs/:id, API-044 ANY /api/admin/staffs, API-045 ANY /api/admin/tenants/:code, API-047 ANY /api/admin/tenants, API-135 POST /api/admin/credentials-confirmation, API-136 POST /api/admin/password-confirmation\n• Người dùng không có quyền mà mở URL → hệ thống tự đăng xuất và đưa về màn đăng nhập (withAuthentication.tsx#L42-L44).\n• Khi khảo sát không có mã hợp lệ để mở trực tiếp; màn này mở bằng cách bấm vào 1 dòng hoặc 1 nút.",
+  "B6": "• Gõ trực tiếp URL /admin/staff-management/edit/:id.",
+  "B7": null,
+  "name_vi": "Sửa nhân viên"
+ },
+ "SC-031": {
+  "B4": "■目的 / Mục đích\n• Mục đích nghiệp vụ: chờ khách hàng xác nhận (tài liệu mô tả màn như đang chạy hiện tại).\n• Tiêu đề trên màn: 「施設管理」.\n\n■アクセス方法 / Cách truy cập\n• Đường dẫn: /admin/tenant-management\n• Quyền được xem: Super Admin\n\n■トレーサビリティ / Traceability\n• Mã tra cứu: SC-031 · F-031 · Trạng thái: đã xác nhận",
+  "B5": "• Các API màn này có thể gọi (đọc từ code, suy luận, cần kiểm chứng): API-045 ANY /api/admin/tenants/:code, API-046 GET /api/admin/tenants/count, API-047 ANY /api/admin/tenants, API-067 POST /api/auth/unlock-account, API-135 POST /api/admin/credentials-confirmation, API-136 POST /api/admin/password-confirmation\n• Người dùng không có quyền mà mở URL → hệ thống tự đăng xuất và đưa về màn đăng nhập (withAuthentication.tsx#L42-L44).\n• Quyền không vào được (trang trống hoặc bị đưa về màn đăng nhập): Admin POSS, Admin Smageri V1, Admin Tenant.",
+  "B6": "• Gõ trực tiếp URL /admin/tenant-management.\n• Có link dẫn tới từ màn: “Trang chủ quản trị (Dashboard)”, “Quản lý đặt chỗ”, “Đổi email”, “Đổi mật khẩu”, “Dashboard thống kê”.",
+  "B7": null,
+  "name_vi": "Quản lý cơ sở"
+ },
+ "SC-032": {
+  "B4": "■目的 / Mục đích\n• Mục đích nghiệp vụ: chờ khách hàng xác nhận (tài liệu mô tả màn như đang chạy hiện tại).\n• Tiêu đề trên màn: 「新規施設登録」.\n\n■アクセス方法 / Cách truy cập\n• Đường dẫn: /admin/tenant-management/create\n• Quyền được xem: Super Admin\n\n■トレーサビリティ / Traceability\n• Mã tra cứu: SC-032 · F-032 · Trạng thái: đã xác nhận",
+  "B5": "• Các API màn này có thể gọi (đọc từ code, suy luận, cần kiểm chứng): API-035 ANY /api/admin/gmo-settings, API-045 ANY /api/admin/tenants/:code, API-047 ANY /api/admin/tenants, API-108 POST /api/upload, API-135 POST /api/admin/credentials-confirmation, API-136 POST /api/admin/password-confirmation\n• Người dùng không có quyền mà mở URL → hệ thống tự đăng xuất và đưa về màn đăng nhập (withAuthentication.tsx#L42-L44).\n• Quyền không vào được (trang trống hoặc bị đưa về màn đăng nhập): Admin POSS, Admin Smageri V1, Admin Tenant.",
+  "B6": "• Gõ trực tiếp URL /admin/tenant-management/create.",
+  "B7": null,
+  "name_vi": "Thêm cơ sở mới"
+ },
+ "SC-033": {
+  "B4": "■目的 / Mục đích\n• Mục đích nghiệp vụ: chờ khách hàng xác nhận (tài liệu mô tả màn như đang chạy hiện tại).\n• Chưa mở được màn khi khảo sát: URL cần mã cụ thể (ID / token). Tên màn đặt theo URL.\n\n■アクセス方法 / Cách truy cập\n• Đường dẫn: /admin/tenant-management/edit/:tenantCode\n• Quyền được xem: chưa xác định\n\n■トレーサビリティ / Traceability\n• Mã tra cứu: SC-033 · F-033 · Trạng thái: cần kiểm chứng",
+  "B5": "• Các API màn này có thể gọi (đọc từ code, suy luận, cần kiểm chứng): API-035 ANY /api/admin/gmo-settings, API-045 ANY /api/admin/tenants/:code, API-047 ANY /api/admin/tenants, API-108 POST /api/upload, API-135 POST /api/admin/credentials-confirmation, API-136 POST /api/admin/password-confirmation\n• Người dùng không có quyền mà mở URL → hệ thống tự đăng xuất và đưa về màn đăng nhập (withAuthentication.tsx#L42-L44).\n• Khi khảo sát không có mã hợp lệ để mở trực tiếp; màn này mở bằng cách bấm vào 1 dòng hoặc 1 nút.",
+  "B6": "• Gõ trực tiếp URL /admin/tenant-management/edit/:tenantCode.",
+  "B7": null,
+  "name_vi": "Sửa cơ sở"
+ },
+ "SC-034": {
+  "B4": "■目的 / Mục đích\n• Mục đích nghiệp vụ: chờ khách hàng xác nhận (tài liệu mô tả màn như đang chạy hiện tại).\n• Chưa mở được màn khi khảo sát: URL cần mã cụ thể (ID / token). Tên màn đặt theo URL.\n\n■アクセス方法 / Cách truy cập\n• Đường dẫn: /admin/tenant-management/view/:tenantCode\n• Quyền được xem: chưa xác định\n\n■トレーサビリティ / Traceability\n• Mã tra cứu: SC-034 · F-034 · Trạng thái: cần kiểm chứng",
+  "B5": "• Các API màn này có thể gọi (đọc từ code, suy luận, cần kiểm chứng): API-045 ANY /api/admin/tenants/:code, API-135 POST /api/admin/credentials-confirmation, API-136 POST /api/admin/password-confirmation\n• Người dùng không có quyền mà mở URL → hệ thống tự đăng xuất và đưa về màn đăng nhập (withAuthentication.tsx#L42-L44).\n• Khi khảo sát không có mã hợp lệ để mở trực tiếp; màn này mở bằng cách bấm vào 1 dòng hoặc 1 nút.",
+  "B6": "• Gõ trực tiếp URL /admin/tenant-management/view/:tenantCode.",
+  "B7": null,
+  "name_vi": "Xem cơ sở"
+ },
+ "SC-035": {
+  "B4": "■目的 / Mục đích\n• Mục đích nghiệp vụ: chờ khách hàng xác nhận (tài liệu mô tả màn như đang chạy hiện tại).\n• Tiêu đề trên màn: 「商品管理」.\n\n■アクセス方法 / Cách truy cập\n• Đường dẫn: /admin/ticket-management\n• Quyền được xem: Super Admin, Admin Tenant, Admin POSS, Admin Smageri V1\n\n■トレーサビリティ / Traceability\n• Mã tra cứu: SC-035 · F-035 · Trạng thái: đã xác nhận",
+  "B5": "• Các API màn này có thể gọi (đọc từ code, suy luận, cần kiểm chứng): API-017 GET /api/admin/bookings, API-045 ANY /api/admin/tenants/:code, API-047 ANY /api/admin/tenants, API-050 ANY /api/admin/tickets/:id, API-052 GET /api/admin/tickets/count, API-054 ANY /api/admin/tickets, API-071 GET /api/bookings/main-bookings/:id, API-074 POST /api/bookings/use-in-day, API-075 GET /api/bookings/vacancies/status, API-083 GET /api/disclaimers, API-104 GET /api/tenants, API-106 GET /api/tickets/:id … (và 10 API khác)\n• Người dùng không có quyền mà mở URL → hệ thống tự đăng xuất và đưa về màn đăng nhập (withAuthentication.tsx#L42-L44).",
+  "B6": "• Gõ trực tiếp URL /admin/ticket-management.\n• Có link dẫn tới từ màn: “Trang chủ quản trị (Dashboard)”, “Quét mã vạch”, “Quản lý đặt chỗ”, “Quản lý hàng chờ”, “Điều chỉnh số chỗ trống”.",
+  "B7": null,
+  "name_vi": "Quản lý sản phẩm (vé)"
+ },
+ "SC-036": {
+  "B4": "■目的 / Mục đích\n• Mục đích nghiệp vụ: chờ khách hàng xác nhận (tài liệu mô tả màn như đang chạy hiện tại).\n• Tiêu đề trên màn: 「商品管理」.\n\n■アクセス方法 / Cách truy cập\n• Đường dẫn: /admin/ticket-management/create\n• Quyền được xem: Super Admin, Admin Tenant, Admin POSS, Admin Smageri V1\n\n■トレーサビリティ / Traceability\n• Mã tra cứu: SC-036 · F-036 · Trạng thái: đã xác nhận",
+  "B5": "• Các API màn này có thể gọi (đọc từ code, suy luận, cần kiểm chứng): API-017 GET /api/admin/bookings, API-045 ANY /api/admin/tenants/:code, API-047 ANY /api/admin/tenants, API-048 GET /api/admin/ticket-booking-schedules/has-booking, API-049 ANY /api/admin/ticket-booking-schedules, API-050 ANY /api/admin/tickets/:id, API-053 GET /api/admin/tickets/has-booking, API-054 ANY /api/admin/tickets, API-071 GET /api/bookings/main-bookings/:id, API-074 POST /api/bookings/use-in-day, API-075 GET /api/bookings/vacancies/status, API-083 GET /api/disclaimers … (và 13 API khác)\n• Người dùng không có quyền mà mở URL → hệ thống tự đăng xuất và đưa về màn đăng nhập (withAuthentication.tsx#L42-L44).",
+  "B6": "• Gõ trực tiếp URL /admin/ticket-management/create.",
+  "B7": null,
+  "name_vi": "Thêm sản phẩm (vé)"
+ },
+ "SC-037": {
+  "B4": "■目的 / Mục đích\n• Mục đích nghiệp vụ: chờ khách hàng xác nhận (tài liệu mô tả màn như đang chạy hiện tại).\n• Chưa mở được màn khi khảo sát: URL cần mã cụ thể (ID / token). Tên màn đặt theo URL.\n\n■アクセス方法 / Cách truy cập\n• Đường dẫn: /admin/ticket-management/edit/:ticketId\n• Quyền được xem: chưa xác định\n\n■トレーサビリティ / Traceability\n• Mã tra cứu: SC-037 · F-037 · Trạng thái: cần kiểm chứng",
+  "B5": "• Các API màn này có thể gọi (đọc từ code, suy luận, cần kiểm chứng): API-017 GET /api/admin/bookings, API-045 ANY /api/admin/tenants/:code, API-047 ANY /api/admin/tenants, API-048 GET /api/admin/ticket-booking-schedules/has-booking, API-049 ANY /api/admin/ticket-booking-schedules, API-050 ANY /api/admin/tickets/:id, API-053 GET /api/admin/tickets/has-booking, API-054 ANY /api/admin/tickets, API-071 GET /api/bookings/main-bookings/:id, API-074 POST /api/bookings/use-in-day, API-075 GET /api/bookings/vacancies/status, API-083 GET /api/disclaimers … (và 13 API khác)\n• Người dùng không có quyền mà mở URL → hệ thống tự đăng xuất và đưa về màn đăng nhập (withAuthentication.tsx#L42-L44).\n• Khi khảo sát không có mã hợp lệ để mở trực tiếp; màn này mở bằng cách bấm vào 1 dòng hoặc 1 nút.",
+  "B6": "• Gõ trực tiếp URL /admin/ticket-management/edit/:ticketId.",
+  "B7": null,
+  "name_vi": "Sửa sản phẩm (vé)"
+ },
+ "SC-038": {
+  "B4": "■目的 / Mục đích\n• Mục đích nghiệp vụ: chờ khách hàng xác nhận (tài liệu mô tả màn như đang chạy hiện tại).\n• Chưa mở được màn khi khảo sát: URL cần mã cụ thể (ID / token). Tên màn đặt theo URL.\n\n■アクセス方法 / Cách truy cập\n• Đường dẫn: /admin/ticket-management/view/:ticketId\n• Quyền được xem: chưa xác định\n\n■トレーサビリティ / Traceability\n• Mã tra cứu: SC-038 · F-038 · Trạng thái: cần kiểm chứng",
+  "B5": "• Các API màn này có thể gọi (đọc từ code, suy luận, cần kiểm chứng): API-017 GET /api/admin/bookings, API-045 ANY /api/admin/tenants/:code, API-050 ANY /api/admin/tickets/:id, API-071 GET /api/bookings/main-bookings/:id, API-074 POST /api/bookings/use-in-day, API-075 GET /api/bookings/vacancies/status, API-083 GET /api/disclaimers, API-104 GET /api/tenants, API-106 GET /api/tickets/:id, API-107 GET /api/tickets, API-112 GET /api/user/bookings, API-113 GET /api/user/bookings/last-booking … (và 7 API khác)\n• Người dùng không có quyền mà mở URL → hệ thống tự đăng xuất và đưa về màn đăng nhập (withAuthentication.tsx#L42-L44).\n• Khi khảo sát không có mã hợp lệ để mở trực tiếp; màn này mở bằng cách bấm vào 1 dòng hoặc 1 nút.",
+  "B6": "• Gõ trực tiếp URL /admin/ticket-management/view/:ticketId.",
+  "B7": null,
+  "name_vi": "Xem sản phẩm (vé)"
+ },
+ "SC-039": {
+  "B4": "■目的 / Mục đích\n• Mục đích nghiệp vụ: chờ khách hàng xác nhận (tài liệu mô tả màn như đang chạy hiện tại).\n• Chưa mở được màn khi khảo sát: URL cần mã cụ thể (ID / token). Tên màn đặt theo URL.\n\n■アクセス方法 / Cách truy cập\n• Đường dẫn: /admin/unlock-account/:token\n• Quyền được xem: chưa xác định\n\n■トレーサビリティ / Traceability\n• Mã tra cứu: SC-039 · F-039 · Trạng thái: cần kiểm chứng",
+  "B5": "• Các API màn này có thể gọi (đọc từ code, suy luận, cần kiểm chứng): API-067 POST /api/auth/unlock-account\n• Người dùng không có quyền mà mở URL → hệ thống tự đăng xuất và đưa về màn đăng nhập (withAuthentication.tsx#L42-L44).\n• Khi khảo sát không có mã hợp lệ để mở trực tiếp; màn này mở bằng cách bấm vào 1 dòng hoặc 1 nút.",
+  "B6": "• Gõ trực tiếp URL /admin/unlock-account/:token.",
+  "B7": null,
+  "name_vi": "Mở khoá tài khoản"
+ },
+ "SC-040": {
+  "B4": "■目的 / Mục đích\n• Mục đích nghiệp vụ: chờ khách hàng xác nhận (tài liệu mô tả màn như đang chạy hiện tại).\n• Tiêu đề trên màn: 「ユーザー管理」.\n\n■アクセス方法 / Cách truy cập\n• Đường dẫn: /admin/user-management\n• Quyền được xem: Super Admin, Admin Tenant, Admin POSS, Admin Smageri V1\n\n■トレーサビリティ / Traceability\n• Mã tra cứu: SC-040 · F-040 · Trạng thái: đã xác nhận",
+  "B5": "• Các API màn này có thể gọi (đọc từ code, suy luận, cần kiểm chứng): API-017 GET /api/admin/bookings, API-045 ANY /api/admin/tenants/:code, API-056 ANY /api/admin/users/:id, API-057 GET /api/admin/users/count, API-058 ANY /api/admin/users, API-071 GET /api/bookings/main-bookings/:id, API-074 POST /api/bookings/use-in-day, API-075 GET /api/bookings/vacancies/status, API-083 GET /api/disclaimers, API-104 GET /api/tenants, API-106 GET /api/tickets/:id, API-107 GET /api/tickets … (và 9 API khác)\n• Người dùng không có quyền mà mở URL → hệ thống tự đăng xuất và đưa về màn đăng nhập (withAuthentication.tsx#L42-L44).",
+  "B6": "• Gõ trực tiếp URL /admin/user-management.\n• Có link dẫn tới từ màn: “Trang chủ quản trị (Dashboard)”, “Quét mã vạch”, “Quản lý đặt chỗ”, “Quản lý hàng chờ”, “Điều chỉnh số chỗ trống”.",
+  "B7": null,
+  "name_vi": "Quản lý người dùng"
+ },
+ "SC-041": {
+  "B4": "■目的 / Mục đích\n• Mục đích nghiệp vụ: chờ khách hàng xác nhận (tài liệu mô tả màn như đang chạy hiện tại).\n• Tiêu đề trên màn: 「ユーザー管理」.\n\n■アクセス方法 / Cách truy cập\n• Đường dẫn: /admin/user-management/create\n• Quyền được xem: Super Admin, Admin Tenant, Admin POSS, Admin Smageri V1\n\n■トレーサビリティ / Traceability\n• Mã tra cứu: SC-041 · F-041 · Trạng thái: đã xác nhận",
+  "B5": "• Các API màn này có thể gọi (đọc từ code, suy luận, cần kiểm chứng): API-045 ANY /api/admin/tenants/:code, API-056 ANY /api/admin/users/:id, API-058 ANY /api/admin/users, API-135 POST /api/admin/credentials-confirmation, API-136 POST /api/admin/password-confirmation\n• Người dùng không có quyền mà mở URL → hệ thống tự đăng xuất và đưa về màn đăng nhập (withAuthentication.tsx#L42-L44).",
+  "B6": "• Gõ trực tiếp URL /admin/user-management/create.",
+  "B7": null,
+  "name_vi": "Thêm người dùng"
+ },
+ "SC-042": {
+  "B4": "■目的 / Mục đích\n• Mục đích nghiệp vụ: chờ khách hàng xác nhận (tài liệu mô tả màn như đang chạy hiện tại).\n• Chưa mở được màn khi khảo sát: URL cần mã cụ thể (ID / token). Tên màn đặt theo URL.\n\n■アクセス方法 / Cách truy cập\n• Đường dẫn: /admin/user-management/edit/:userId\n• Quyền được xem: chưa xác định\n\n■トレーサビリティ / Traceability\n• Mã tra cứu: SC-042 · F-042 · Trạng thái: cần kiểm chứng",
+  "B5": "• Các API màn này có thể gọi (đọc từ code, suy luận, cần kiểm chứng): API-045 ANY /api/admin/tenants/:code, API-056 ANY /api/admin/users/:id, API-058 ANY /api/admin/users, API-135 POST /api/admin/credentials-confirmation, API-136 POST /api/admin/password-confirmation\n• Người dùng không có quyền mà mở URL → hệ thống tự đăng xuất và đưa về màn đăng nhập (withAuthentication.tsx#L42-L44).\n• Khi khảo sát không có mã hợp lệ để mở trực tiếp; màn này mở bằng cách bấm vào 1 dòng hoặc 1 nút.",
+  "B6": "• Gõ trực tiếp URL /admin/user-management/edit/:userId.",
+  "B7": null,
+  "name_vi": "Sửa người dùng"
+ },
+ "SC-043": {
+  "B4": "■目的 / Mục đích\n• Mục đích nghiệp vụ: chờ khách hàng xác nhận (tài liệu mô tả màn như đang chạy hiện tại).\n• Chưa mở được màn khi khảo sát: URL cần mã cụ thể (ID / token). Tên màn đặt theo URL.\n\n■アクセス方法 / Cách truy cập\n• Đường dẫn: /admin/user-management/view/:userId\n• Quyền được xem: chưa xác định\n\n■トレーサビリティ / Traceability\n• Mã tra cứu: SC-043 · F-043 · Trạng thái: cần kiểm chứng",
+  "B5": "• Các API màn này có thể gọi (đọc từ code, suy luận, cần kiểm chứng): API-045 ANY /api/admin/tenants/:code, API-056 ANY /api/admin/users/:id, API-135 POST /api/admin/credentials-confirmation, API-136 POST /api/admin/password-confirmation\n• Người dùng không có quyền mà mở URL → hệ thống tự đăng xuất và đưa về màn đăng nhập (withAuthentication.tsx#L42-L44).\n• Khi khảo sát không có mã hợp lệ để mở trực tiếp; màn này mở bằng cách bấm vào 1 dòng hoặc 1 nút.",
+  "B6": "• Gõ trực tiếp URL /admin/user-management/view/:userId.",
+  "B7": null,
+  "name_vi": "Xem người dùng"
+ },
+ "SC-044": {
+  "B4": "■目的 / Mục đích\n• Mục đích nghiệp vụ: chờ khách hàng xác nhận (tài liệu mô tả màn như đang chạy hiện tại).\n• Tiêu đề trên màn: 「空き状況」.\n\n■アクセス方法 / Cách truy cập\n• Đường dẫn: /admin/vacancies-status\n• Quyền được xem: Admin Tenant, Admin POSS, Admin Smageri V1\n\n■トレーサビリティ / Traceability\n• Mã tra cứu: SC-044 · F-044 · Trạng thái: đã xác nhận",
+  "B5": "• Các API màn này có thể gọi (đọc từ code, suy luận, cần kiểm chứng): API-045 ANY /api/admin/tenants/:code, API-054 ANY /api/admin/tickets, API-075 GET /api/bookings/vacancies/status, API-135 POST /api/admin/credentials-confirmation, API-136 POST /api/admin/password-confirmation\n• Người dùng không có quyền mà mở URL → hệ thống tự đăng xuất và đưa về màn đăng nhập (withAuthentication.tsx#L42-L44).\n• Quyền không vào được (trang trống hoặc bị đưa về màn đăng nhập): Super Admin.",
+  "B6": "• Gõ trực tiếp URL /admin/vacancies-status.",
+  "B7": null,
+  "name_vi": "Tình trạng chỗ trống"
+ },
+ "SC-045": {
+  "B4": "■目的 / Mục đích\n• Mục đích nghiệp vụ: chờ khách hàng xác nhận (tài liệu mô tả màn như đang chạy hiện tại).\n• Tiêu đề trên màn: 「待機時間設定」.\n\n■アクセス方法 / Cách truy cập\n• Đường dẫn: /admin/waiting-time-management\n• Quyền được xem: Super Admin\n\n■トレーサビリティ / Traceability\n• Mã tra cứu: SC-045 · F-045 · Trạng thái: đã xác nhận",
+  "B5": "• Các API màn này có thể gọi (đọc từ code, suy luận, cần kiểm chứng): API-001 ANY /api/admin/app-settings/:settingKey, API-045 ANY /api/admin/tenants/:code, API-135 POST /api/admin/credentials-confirmation, API-136 POST /api/admin/password-confirmation\n• Người dùng không có quyền mà mở URL → hệ thống tự đăng xuất và đưa về màn đăng nhập (withAuthentication.tsx#L42-L44).\n• Quyền không vào được (trang trống hoặc bị đưa về màn đăng nhập): Admin POSS, Admin Smageri V1, Admin Tenant.",
+  "B6": "• Gõ trực tiếp URL /admin/waiting-time-management.\n• Có link dẫn tới từ màn: “Trang chủ quản trị (Dashboard)”, “Quản lý đặt chỗ”, “Đổi email”, “Đổi mật khẩu”, “Dashboard thống kê”.",
+  "B7": null,
+  "name_vi": "Cài đặt thời gian chờ"
+ }
+}

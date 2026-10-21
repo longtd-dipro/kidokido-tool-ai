@@ -1,0 +1,594 @@
+{
+ "F-051|Function": {
+  "text": "Hiển thị & thao tác màn /booking/payment-online-failure",
+  "ctx": "Mua vé / đặt chỗ · màn SC-051 · actor UNKNOWN"
+ },
+ "F-051|Description": {
+  "text": "Route /booking/payment-online-failure có trong code (src/pages/booking/payment-online-failure.tsx) nhưng chưa quan sát được trên UI.",
+  "ctx": "Mua vé / đặt chỗ · màn SC-051 · actor UNKNOWN"
+ },
+ "F-051|Entry / Trigger": {
+  "text": "/booking/payment-online-failure",
+  "ctx": "Mua vé / đặt chỗ · màn SC-051 · actor UNKNOWN"
+ },
+ "F-052|Function": {
+  "text": "Hiển thị & thao tác màn /booking/payment-online-monthly-ticket-success",
+  "ctx": "Mua vé / đặt chỗ · màn SC-052 · actor UNKNOWN"
+ },
+ "F-052|Description": {
+  "text": "Route /booking/payment-online-monthly-ticket-success có trong code (src/pages/booking/payment-online-monthly-ticket-success.tsx) nhưng chưa quan sát được trên UI.",
+  "ctx": "Mua vé / đặt chỗ · màn SC-052 · actor UNKNOWN"
+ },
+ "F-052|Entry / Trigger": {
+  "text": "/booking/payment-online-monthly-ticket-success",
+  "ctx": "Mua vé / đặt chỗ · màn SC-052 · actor UNKNOWN"
+ },
+ "F-053|Function": {
+  "text": "Hiển thị & thao tác màn /booking/payment-online-success",
+  "ctx": "Mua vé / đặt chỗ · màn SC-053 · actor UNKNOWN"
+ },
+ "F-053|Description": {
+  "text": "Route /booking/payment-online-success có trong code (src/pages/booking/payment-online-success.tsx) nhưng chưa quan sát được trên UI.",
+  "ctx": "Mua vé / đặt chỗ · màn SC-053 · actor UNKNOWN"
+ },
+ "F-053|Entry / Trigger": {
+  "text": "/booking/payment-online-success",
+  "ctx": "Mua vé / đặt chỗ · màn SC-053 · actor UNKNOWN"
+ },
+ "F-054|Function": {
+  "text": "Hiển thị & thao tác màn UNKNOWN — màn không có heading (route /booking/use-in-day)",
+  "ctx": "Mua vé / đặt chỗ · màn SC-054 · actor User, Khách (chưa đăng nhập)"
+ },
+ "F-054|Description": {
+  "text": "Màn UNKNOWN — màn không có heading (route /booking/use-in-day) (/booking/use-in-day) quan sát được với role User, Khách (chưa đăng nhập); 54 item trên DOM. Component: src/pages/booking/use-in-day.tsx.",
+  "ctx": "Mua vé / đặt chỗ · màn SC-054 · actor User, Khách (chưa đăng nhập)"
+ },
+ "F-054|Entry / Trigger": {
+  "text": "/booking/use-in-day",
+  "ctx": "Mua vé / đặt chỗ · màn SC-054 · actor User, Khách (chưa đăng nhập)"
+ },
+ "F-055|Function": {
+  "text": "Hiển thị & thao tác màn 特定商取引法に基づく表示",
+  "ctx": "Trang pháp lý · màn SC-055 · actor User, Khách (chưa đăng nhập)"
+ },
+ "F-055|Description": {
+  "text": "Màn 特定商取引法に基づく表示 (/commercial-law) quan sát được với role User, Khách (chưa đăng nhập); 45 item trên DOM. Component: src/pages/commercial-law/index.tsx.",
+  "ctx": "Trang pháp lý · màn SC-055 · actor User, Khách (chưa đăng nhập)"
+ },
+ "F-055|Entry / Trigger": {
+  "text": "/commercial-law",
+  "ctx": "Trang pháp lý · màn SC-055 · actor User, Khách (chưa đăng nhập)"
+ },
+ "F-056|Function": {
+  "text": "Hiển thị & thao tác màn UNKNOWN — màn không có heading (route /error)",
+  "ctx": "Trang hệ thống · màn SC-056 · actor User, Khách (chưa đăng nhập)"
+ },
+ "F-056|Description": {
+  "text": "Màn UNKNOWN — màn không có heading (route /error) (/error) quan sát được với role User, Khách (chưa đăng nhập); 40 item trên DOM. Component: src/pages/error.tsx.",
+  "ctx": "Trang hệ thống · màn SC-056 · actor User, Khách (chưa đăng nhập)"
+ },
+ "F-056|Entry / Trigger": {
+  "text": "/error",
+  "ctx": "Trang hệ thống · màn SC-056 · actor User, Khách (chưa đăng nhập)"
+ },
+ "F-057|Function": {
+  "text": "Hiển thị & thao tác màn パスワードを忘れた場合",
+  "ctx": "Xác thực & tài khoản user · màn SC-057 · actor User, Khách (chưa đăng nhập)"
+ },
+ "F-057|Description": {
+  "text": "Màn パスワードを忘れた場合 (/forgot-password) quan sát được với role User, Khách (chưa đăng nhập); 42 item trên DOM. Component: src/pages/forgot-password.tsx.",
+  "ctx": "Xác thực & tài khoản user · màn SC-057 · actor User, Khách (chưa đăng nhập)"
+ },
+ "F-057|Entry / Trigger": {
+  "text": "/forgot-password",
+  "ctx": "Xác thực & tài khoản user · màn SC-057 · actor User, Khách (chưa đăng nhập)"
+ },
+ "F-058|Function": {
+  "text": "Hiển thị & thao tác màn /maintenance",
+  "ctx": "Trang hệ thống · màn SC-058 · actor UNKNOWN"
+ },
+ "F-058|Description": {
+  "text": "Route /maintenance có trong code (src/pages/maintenance.tsx) nhưng chưa quan sát được trên UI.",
+  "ctx": "Trang hệ thống · màn SC-058 · actor UNKNOWN"
+ },
+ "F-058|Entry / Trigger": {
+  "text": "/maintenance",
+  "ctx": "Trang hệ thống · màn SC-058 · actor UNKNOWN"
+ },
+ "F-059|Function": {
+  "text": "Hiển thị & thao tác màn 料金プラン",
+  "ctx": "Thông tin công khai · màn SC-059 · actor User, Khách (chưa đăng nhập)"
+ },
+ "F-059|Description": {
+  "text": "Màn 料金プラン (/price-list) quan sát được với role User, Khách (chưa đăng nhập); 43 item trên DOM. Component: src/pages/price-list/index.tsx.",
+  "ctx": "Thông tin công khai · màn SC-059 · actor User, Khách (chưa đăng nhập)"
+ },
+ "F-059|Entry / Trigger": {
+  "text": "/price-list",
+  "ctx": "Thông tin công khai · màn SC-059 · actor User, Khách (chưa đăng nhập)"
+ },
+ "F-060|Function": {
+  "text": "Hiển thị & thao tác màn プライバシーポリシー",
+  "ctx": "Trang pháp lý · màn SC-060 · actor User, Khách (chưa đăng nhập)"
+ },
+ "F-060|Description": {
+  "text": "Màn プライバシーポリシー (/privacy-policy) quan sát được với role User, Khách (chưa đăng nhập); 42 item trên DOM. Component: src/pages/privacy-policy.tsx.",
+  "ctx": "Trang pháp lý · màn SC-060 · actor User, Khách (chưa đăng nhập)"
+ },
+ "F-060|Entry / Trigger": {
+  "text": "/privacy-policy",
+  "ctx": "Trang pháp lý · màn SC-060 · actor User, Khách (chưa đăng nhập)"
+ },
+ "F-061|Function": {
+  "text": "Hiển thị & thao tác màn /reset-password/:token",
+  "ctx": "Xác thực & tài khoản user · màn SC-061 · actor UNKNOWN"
+ },
+ "F-061|Description": {
+  "text": "Route /reset-password/:token có trong code (src/pages/reset-password/[token].tsx) nhưng chưa quan sát được trên UI.",
+  "ctx": "Xác thực & tài khoản user · màn SC-061 · actor UNKNOWN"
+ },
+ "F-061|Entry / Trigger": {
+  "text": "/reset-password/:token",
+  "ctx": "Xác thực & tài khoản user · màn SC-061 · actor UNKNOWN"
+ },
+ "F-062|Function": {
+  "text": "Hiển thị & thao tác màn パスワードを変更しました",
+  "ctx": "Xác thực & tài khoản user · màn SC-062 · actor User, Khách (chưa đăng nhập)"
+ },
+ "F-062|Description": {
+  "text": "Màn パスワードを変更しました (/reset-password/success) quan sát được với role User, Khách (chưa đăng nhập); 41 item trên DOM. Component: src/pages/reset-password/success.tsx.",
+  "ctx": "Xác thực & tài khoản user · màn SC-062 · actor User, Khách (chưa đăng nhập)"
+ },
+ "F-062|Entry / Trigger": {
+  "text": "/reset-password/success",
+  "ctx": "Xác thực & tài khoản user · màn SC-062 · actor User, Khách (chưa đăng nhập)"
+ },
+ "F-063|Function": {
+  "text": "Hiển thị & thao tác màn ログイン方法を選択",
+  "ctx": "Xác thực & tài khoản user · màn SC-063 · actor Khách (chưa đăng nhập)"
+ },
+ "F-063|Description": {
+  "text": "Màn ログイン方法を選択 (/signin) quan sát được với role Khách (chưa đăng nhập); 47 item trên DOM. Component: src/pages/signin.tsx.",
+  "ctx": "Xác thực & tài khoản user · màn SC-063 · actor Khách (chưa đăng nhập)"
+ },
+ "F-063|Entry / Trigger": {
+  "text": "/signin",
+  "ctx": "Xác thực & tài khoản user · màn SC-063 · actor Khách (chưa đăng nhập)"
+ },
+ "F-064|Function": {
+  "text": "Hiển thị & thao tác màn アカウント作成はこちら",
+  "ctx": "Xác thực & tài khoản user · màn SC-064 · actor User, Khách (chưa đăng nhập)"
+ },
+ "F-064|Description": {
+  "text": "Màn アカウント作成はこちら (/signup) quan sát được với role User, Khách (chưa đăng nhập); 66 item trên DOM. Component: src/pages/signup.tsx.",
+  "ctx": "Xác thực & tài khoản user · màn SC-064 · actor User, Khách (chưa đăng nhập)"
+ },
+ "F-064|Entry / Trigger": {
+  "text": "/signup",
+  "ctx": "Xác thực & tài khoản user · màn SC-064 · actor User, Khách (chưa đăng nhập)"
+ },
+ "F-065|Function": {
+  "text": "Hiển thị & thao tác màn 仮登録を受付けました",
+  "ctx": "Thông tin công khai · màn SC-065 · actor User, Khách (chưa đăng nhập)"
+ },
+ "F-065|Description": {
+  "text": "Màn 仮登録を受付けました (/signup-success) quan sát được với role User, Khách (chưa đăng nhập); 41 item trên DOM. Component: src/pages/signup-success.tsx.",
+  "ctx": "Thông tin công khai · màn SC-065 · actor User, Khách (chưa đăng nhập)"
+ },
+ "F-065|Entry / Trigger": {
+  "text": "/signup-success",
+  "ctx": "Thông tin công khai · màn SC-065 · actor User, Khách (chưa đăng nhập)"
+ },
+ "F-066|Function": {
+  "text": "Hiển thị & thao tác màn 店舗一覧",
+  "ctx": "Thông tin công khai · màn SC-066 · actor User, Khách (chưa đăng nhập)"
+ },
+ "F-066|Description": {
+  "text": "Màn 店舗一覧 (/tenant-list) quan sát được với role User, Khách (chưa đăng nhập); 67 item trên DOM. Component: src/pages/tenant-list.tsx.",
+  "ctx": "Thông tin công khai · màn SC-066 · actor User, Khách (chưa đăng nhập)"
+ },
+ "F-066|Entry / Trigger": {
+  "text": "/tenant-list",
+  "ctx": "Thông tin công khai · màn SC-066 · actor User, Khách (chưa đăng nhập)"
+ },
+ "F-067|Function": {
+  "text": "Hiển thị & thao tác màn [Heading động theo dữ liệu — route /tenant/:code]",
+  "ctx": "Thông tin công khai · màn SC-067 · actor User, Khách (chưa đăng nhập)"
+ },
+ "F-067|Description": {
+  "text": "Màn [Heading động theo dữ liệu — route /tenant/:code] (/tenant/:code) quan sát được với role User, Khách (chưa đăng nhập); 222 item trên DOM. Component: src/pages/tenant/[code].tsx.",
+  "ctx": "Thông tin công khai · màn SC-067 · actor User, Khách (chưa đăng nhập)"
+ },
+ "F-067|Entry / Trigger": {
+  "text": "/tenant/:code",
+  "ctx": "Thông tin công khai · màn SC-067 · actor User, Khách (chưa đăng nhập)"
+ },
+ "F-068|Function": {
+  "text": "Hiển thị & thao tác màn 利用規約",
+  "ctx": "Trang pháp lý · màn SC-068 · actor User, Khách (chưa đăng nhập)"
+ },
+ "F-068|Description": {
+  "text": "Màn 利用規約 (/terms-of-use) quan sát được với role User, Khách (chưa đăng nhập); 41 item trên DOM. Component: src/pages/terms-of-use/index.tsx.",
+  "ctx": "Trang pháp lý · màn SC-068 · actor User, Khách (chưa đăng nhập)"
+ },
+ "F-068|Entry / Trigger": {
+  "text": "/terms-of-use",
+  "ctx": "Trang pháp lý · màn SC-068 · actor User, Khách (chưa đăng nhập)"
+ },
+ "F-069|Function": {
+  "text": "Hiển thị & thao tác màn 予約履歴",
+  "ctx": "Trang cá nhân · màn SC-069 · actor User"
+ },
+ "F-069|Description": {
+  "text": "Màn 予約履歴 (/user/my-page) quan sát được với role User; 42 item trên DOM. Component: src/pages/user/my-page/index.tsx.",
+  "ctx": "Trang cá nhân · màn SC-069 · actor User"
+ },
+ "F-069|Entry / Trigger": {
+  "text": "/user/my-page",
+  "ctx": "Trang cá nhân · màn SC-069 · actor User"
+ },
+ "F-070|Function": {
+  "text": "Hiển thị & thao tác màn 予約履歴",
+  "ctx": "Trang cá nhân · màn SC-070 · actor User"
+ },
+ "F-070|Description": {
+  "text": "Màn 予約履歴 (/user/my-page/booking-history) quan sát được với role User; 42 item trên DOM. Component: src/pages/user/my-page/booking-history/index.tsx.",
+  "ctx": "Trang cá nhân · màn SC-070 · actor User"
+ },
+ "F-070|Entry / Trigger": {
+  "text": "/user/my-page/booking-history",
+  "ctx": "Trang cá nhân · màn SC-070 · actor User"
+ },
+ "F-071|Function": {
+  "text": "Hiển thị & thao tác màn 予約履歴",
+  "ctx": "Trang cá nhân · màn SC-071 · actor User"
+ },
+ "F-071|Description": {
+  "text": "Màn 予約履歴 (/user/my-page/booking-history/:id) quan sát được với role User; 43 item trên DOM. Component: src/pages/user/my-page/booking-history/[id].tsx.",
+  "ctx": "Trang cá nhân · màn SC-071 · actor User"
+ },
+ "F-071|Entry / Trigger": {
+  "text": "/user/my-page/booking-history/:id",
+  "ctx": "Trang cá nhân · màn SC-071 · actor User"
+ },
+ "F-072|Function": {
+  "text": "Hiển thị & thao tác màn /user/my-page/booking-history/cancel-success",
+  "ctx": "Trang cá nhân · màn SC-072 · actor UNKNOWN"
+ },
+ "F-072|Description": {
+  "text": "Route /user/my-page/booking-history/cancel-success có trong code (src/pages/user/my-page/booking-history/cancel-success.tsx) nhưng chưa quan sát được trên UI.",
+  "ctx": "Trang cá nhân · màn SC-072 · actor UNKNOWN"
+ },
+ "F-072|Entry / Trigger": {
+  "text": "/user/my-page/booking-history/cancel-success",
+  "ctx": "Trang cá nhân · màn SC-072 · actor UNKNOWN"
+ },
+ "F-073|Function": {
+  "text": "Hiển thị & thao tác màn /user/my-page/booking-history/partial-checkout/:id",
+  "ctx": "Trang cá nhân · màn SC-073 · actor UNKNOWN"
+ },
+ "F-073|Description": {
+  "text": "Route /user/my-page/booking-history/partial-checkout/:id có trong code (src/pages/user/my-page/booking-history/partial-checkout/[id].tsx) nhưng chưa quan sát được trên UI.",
+  "ctx": "Trang cá nhân · màn SC-073 · actor UNKNOWN"
+ },
+ "F-073|Entry / Trigger": {
+  "text": "/user/my-page/booking-history/partial-checkout/:id",
+  "ctx": "Trang cá nhân · màn SC-073 · actor UNKNOWN"
+ },
+ "F-074|Function": {
+  "text": "Hiển thị & thao tác màn /user/my-page/booking-history/partial-checkout/success",
+  "ctx": "Trang cá nhân · màn SC-074 · actor UNKNOWN"
+ },
+ "F-074|Description": {
+  "text": "Route /user/my-page/booking-history/partial-checkout/success có trong code (src/pages/user/my-page/booking-history/partial-checkout/success.tsx) nhưng chưa quan sát được trên UI.",
+  "ctx": "Trang cá nhân · màn SC-074 · actor UNKNOWN"
+ },
+ "F-074|Entry / Trigger": {
+  "text": "/user/my-page/booking-history/partial-checkout/success",
+  "ctx": "Trang cá nhân · màn SC-074 · actor UNKNOWN"
+ },
+ "F-075|Function": {
+  "text": "Hiển thị & thao tác màn /user/my-page/booking-history/update",
+  "ctx": "Trang cá nhân · màn SC-075 · actor UNKNOWN"
+ },
+ "F-075|Description": {
+  "text": "Route /user/my-page/booking-history/update có trong code (src/pages/user/my-page/booking-history/update/index.tsx) nhưng chưa quan sát được trên UI.",
+  "ctx": "Trang cá nhân · màn SC-075 · actor UNKNOWN"
+ },
+ "F-075|Entry / Trigger": {
+  "text": "/user/my-page/booking-history/update",
+  "ctx": "Trang cá nhân · màn SC-075 · actor UNKNOWN"
+ },
+ "F-076|Function": {
+  "text": "Hiển thị & thao tác màn 予約履歴",
+  "ctx": "Trang cá nhân · màn SC-076 · actor User"
+ },
+ "F-076|Description": {
+  "text": "Màn 予約履歴 (/user/my-page/booking-history/update/:id) quan sát được với role User; 43 item trên DOM. Component: src/pages/user/my-page/booking-history/update/[id].tsx.",
+  "ctx": "Trang cá nhân · màn SC-076 · actor User"
+ },
+ "F-076|Entry / Trigger": {
+  "text": "/user/my-page/booking-history/update/:id",
+  "ctx": "Trang cá nhân · màn SC-076 · actor User"
+ },
+ "F-077|Function": {
+  "text": "Hiển thị & thao tác màn /user/my-page/booking-history/update/completed",
+  "ctx": "Trang cá nhân · màn SC-077 · actor UNKNOWN"
+ },
+ "F-077|Description": {
+  "text": "Route /user/my-page/booking-history/update/completed có trong code (src/pages/user/my-page/booking-history/update/completed/index.tsx) nhưng chưa quan sát được trên UI.",
+  "ctx": "Trang cá nhân · màn SC-077 · actor UNKNOWN"
+ },
+ "F-077|Entry / Trigger": {
+  "text": "/user/my-page/booking-history/update/completed",
+  "ctx": "Trang cá nhân · màn SC-077 · actor UNKNOWN"
+ },
+ "F-078|Function": {
+  "text": "Hiển thị & thao tác màn /user/my-page/delete-account",
+  "ctx": "Trang cá nhân · màn SC-078 · actor UNKNOWN"
+ },
+ "F-078|Description": {
+  "text": "Route /user/my-page/delete-account có trong code (src/pages/user/my-page/delete-account.tsx) nhưng chưa quan sát được trên UI.",
+  "ctx": "Trang cá nhân · màn SC-078 · actor UNKNOWN"
+ },
+ "F-078|Entry / Trigger": {
+  "text": "/user/my-page/delete-account",
+  "ctx": "Trang cá nhân · màn SC-078 · actor UNKNOWN"
+ },
+ "F-079|Function": {
+  "text": "Hiển thị & thao tác màn お気に入り店舗一覧",
+  "ctx": "Trang cá nhân · màn SC-079 · actor User"
+ },
+ "F-079|Description": {
+  "text": "Màn お気に入り店舗一覧 (/user/my-page/favorite-tenants) quan sát được với role User; 42 item trên DOM. Component: src/pages/user/my-page/favorite-tenants.tsx.",
+  "ctx": "Trang cá nhân · màn SC-079 · actor User"
+ },
+ "F-079|Entry / Trigger": {
+  "text": "/user/my-page/favorite-tenants",
+  "ctx": "Trang cá nhân · màn SC-079 · actor User"
+ },
+ "F-080|Function": {
+  "text": "Hiển thị & thao tác màn フリーパスの確認",
+  "ctx": "Trang cá nhân · màn SC-080 · actor User"
+ },
+ "F-080|Description": {
+  "text": "Màn フリーパスの確認 (/user/my-page/monthly-ticket-status) quan sát được với role User; 47 item trên DOM. Component: src/pages/user/my-page/monthly-ticket-status.tsx.",
+  "ctx": "Trang cá nhân · màn SC-080 · actor User"
+ },
+ "F-080|Entry / Trigger": {
+  "text": "/user/my-page/monthly-ticket-status",
+  "ctx": "Trang cá nhân · màn SC-080 · actor User"
+ },
+ "F-081|Function": {
+  "text": "Hiển thị & thao tác màn アカウント情報の確認・編集",
+  "ctx": "Trang cá nhân · màn SC-081 · actor User"
+ },
+ "F-081|Description": {
+  "text": "Màn アカウント情報の確認・編集 (/user/my-page/personal-info) quan sát được với role User; 49 item trên DOM. Component: src/pages/user/my-page/personal-info/index.tsx.",
+  "ctx": "Trang cá nhân · màn SC-081 · actor User"
+ },
+ "F-081|Entry / Trigger": {
+  "text": "/user/my-page/personal-info",
+  "ctx": "Trang cá nhân · màn SC-081 · actor User"
+ },
+ "F-082|Function": {
+  "text": "Hiển thị & thao tác màn クレジットカード情報の編集",
+  "ctx": "Trang cá nhân · màn SC-082 · actor User"
+ },
+ "F-082|Description": {
+  "text": "Màn クレジットカード情報の編集 (/user/my-page/personal-info/change-credit-card) quan sát được với role User; 50 item trên DOM. Component: src/pages/user/my-page/personal-info/change-credit-card/index.tsx.",
+  "ctx": "Trang cá nhân · màn SC-082 · actor User"
+ },
+ "F-082|Entry / Trigger": {
+  "text": "/user/my-page/personal-info/change-credit-card",
+  "ctx": "Trang cá nhân · màn SC-082 · actor User"
+ },
+ "F-083|Function": {
+  "text": "Hiển thị & thao tác màn /user/my-page/personal-info/change-credit-card/delete",
+  "ctx": "Trang cá nhân · màn SC-083 · actor UNKNOWN"
+ },
+ "F-083|Description": {
+  "text": "Route /user/my-page/personal-info/change-credit-card/delete có trong code (src/pages/user/my-page/personal-info/change-credit-card/delete.tsx) nhưng chưa quan sát được trên UI.",
+  "ctx": "Trang cá nhân · màn SC-083 · actor UNKNOWN"
+ },
+ "F-083|Entry / Trigger": {
+  "text": "/user/my-page/personal-info/change-credit-card/delete",
+  "ctx": "Trang cá nhân · màn SC-083 · actor UNKNOWN"
+ },
+ "F-084|Function": {
+  "text": "Hiển thị & thao tác màn カード情報の編集",
+  "ctx": "Trang cá nhân · màn SC-084 · actor User"
+ },
+ "F-084|Description": {
+  "text": "Màn カード情報の編集 (/user/my-page/personal-info/change-credit-card/success) quan sát được với role User; 43 item trên DOM. Component: src/pages/user/my-page/personal-info/change-credit-card/success.tsx.",
+  "ctx": "Trang cá nhân · màn SC-084 · actor User"
+ },
+ "F-084|Entry / Trigger": {
+  "text": "/user/my-page/personal-info/change-credit-card/success",
+  "ctx": "Trang cá nhân · màn SC-084 · actor User"
+ },
+ "F-085|Function": {
+  "text": "Hiển thị & thao tác màn アカウント情報の編集",
+  "ctx": "Trang cá nhân · màn SC-085 · actor User"
+ },
+ "F-085|Description": {
+  "text": "Màn アカウント情報の編集 (/user/my-page/personal-info/change-password) quan sát được với role User; 47 item trên DOM. Component: src/pages/user/my-page/personal-info/change-password.tsx.",
+  "ctx": "Trang cá nhân · màn SC-085 · actor User"
+ },
+ "F-085|Entry / Trigger": {
+  "text": "/user/my-page/personal-info/change-password",
+  "ctx": "Trang cá nhân · màn SC-085 · actor User"
+ },
+ "F-086|Function": {
+  "text": "Hiển thị & thao tác màn アカウント情報の編集",
+  "ctx": "Trang cá nhân · màn SC-086 · actor User"
+ },
+ "F-086|Description": {
+  "text": "Màn アカウント情報の編集 (/user/my-page/personal-info/update-information) quan sát được với role User; 62 item trên DOM. Component: src/pages/user/my-page/personal-info/update-information/index.tsx.",
+  "ctx": "Trang cá nhân · màn SC-086 · actor User"
+ },
+ "F-086|Entry / Trigger": {
+  "text": "/user/my-page/personal-info/update-information",
+  "ctx": "Trang cá nhân · màn SC-086 · actor User"
+ },
+ "F-087|Function": {
+  "text": "Hiển thị & thao tác màn アカウント情報の編集",
+  "ctx": "Trang cá nhân · màn SC-087 · actor User"
+ },
+ "F-087|Description": {
+  "text": "Màn アカウント情報の編集 (/user/my-page/personal-info/update-information/success) quan sát được với role User; 43 item trên DOM. Component: src/pages/user/my-page/personal-info/update-information/success.tsx.",
+  "ctx": "Trang cá nhân · màn SC-087 · actor User"
+ },
+ "F-087|Entry / Trigger": {
+  "text": "/user/my-page/personal-info/update-information/success",
+  "ctx": "Trang cá nhân · màn SC-087 · actor User"
+ },
+ "F-088|Function": {
+  "text": "Hiển thị & thao tác màn /user/my-page/personal-info/update-information/verify-edit-email/:token",
+  "ctx": "Trang cá nhân · màn SC-088 · actor UNKNOWN"
+ },
+ "F-088|Description": {
+  "text": "Route /user/my-page/personal-info/update-information/verify-edit-email/:token có trong code (src/pages/user/my-page/personal-info/update-information/verify-edit-email/[token].tsx) nhưng chưa quan sát được trên UI.",
+  "ctx": "Trang cá nhân · màn SC-088 · actor UNKNOWN"
+ },
+ "F-088|Entry / Trigger": {
+  "text": "/user/my-page/personal-info/update-information/verify-edit-email/:token",
+  "ctx": "Trang cá nhân · màn SC-088 · actor UNKNOWN"
+ },
+ "F-089|Function": {
+  "text": "Hiển thị & thao tác màn /user/my-page/personal-info/update-password/:token",
+  "ctx": "Trang cá nhân · màn SC-089 · actor UNKNOWN"
+ },
+ "F-089|Description": {
+  "text": "Route /user/my-page/personal-info/update-password/:token có trong code (src/pages/user/my-page/personal-info/update-password/[token].tsx) nhưng chưa quan sát được trên UI.",
+  "ctx": "Trang cá nhân · màn SC-089 · actor UNKNOWN"
+ },
+ "F-089|Entry / Trigger": {
+  "text": "/user/my-page/personal-info/update-password/:token",
+  "ctx": "Trang cá nhân · màn SC-089 · actor UNKNOWN"
+ },
+ "F-090|Function": {
+  "text": "Hiển thị & thao tác màn アカウント情報の編集",
+  "ctx": "Trang cá nhân · màn SC-090 · actor User"
+ },
+ "F-090|Description": {
+  "text": "Màn アカウント情報の編集 (/user/my-page/personal-info/update-password/success) quan sát được với role User; 43 item trên DOM. Component: src/pages/user/my-page/personal-info/update-password/success.tsx.",
+  "ctx": "Trang cá nhân · màn SC-090 · actor User"
+ },
+ "F-090|Entry / Trigger": {
+  "text": "/user/my-page/personal-info/update-password/success",
+  "ctx": "Trang cá nhân · màn SC-090 · actor User"
+ },
+ "F-091|Function": {
+  "text": "Hiển thị & thao tác màn 回数券の確認",
+  "ctx": "Trang cá nhân · màn SC-091 · actor User"
+ },
+ "F-091|Description": {
+  "text": "Màn 回数券の確認 (/user/my-page/times-limit-ticket-status) quan sát được với role User; 42 item trên DOM. Component: src/pages/user/my-page/times-limit-ticket-status.tsx.",
+  "ctx": "Trang cá nhân · màn SC-091 · actor User"
+ },
+ "F-091|Entry / Trigger": {
+  "text": "/user/my-page/times-limit-ticket-status",
+  "ctx": "Trang cá nhân · màn SC-091 · actor User"
+ },
+ "F-092|Function": {
+  "text": "Hiển thị & thao tác màn 待ち時間/販売状況",
+  "ctx": "Thông tin công khai · màn SC-092 · actor User, Khách (chưa đăng nhập)"
+ },
+ "F-092|Description": {
+  "text": "Màn 待ち時間/販売状況 (/vacancy-status) quan sát được với role User, Khách (chưa đăng nhập); 2920 item trên DOM. Component: src/pages/vacancy-status/index.tsx.",
+  "ctx": "Thông tin công khai · màn SC-092 · actor User, Khách (chưa đăng nhập)"
+ },
+ "F-092|Entry / Trigger": {
+  "text": "/vacancy-status",
+  "ctx": "Thông tin công khai · màn SC-092 · actor User, Khách (chưa đăng nhập)"
+ },
+ "F-093|Function": {
+  "text": "Hiển thị & thao tác màn /verify/:token",
+  "ctx": "Xác thực & tài khoản user · màn SC-093 · actor UNKNOWN"
+ },
+ "F-093|Description": {
+  "text": "Route /verify/:token có trong code (src/pages/verify/[token].tsx) nhưng chưa quan sát được trên UI.",
+  "ctx": "Xác thực & tài khoản user · màn SC-093 · actor UNKNOWN"
+ },
+ "F-093|Entry / Trigger": {
+  "text": "/verify/:token",
+  "ctx": "Xác thực & tài khoản user · màn SC-093 · actor UNKNOWN"
+ },
+ "F-094|Function": {
+  "text": "Xử lý nhóm API /api/gmo/*",
+  "ctx": "Xử lý hệ thống / tích hợp · màn SYSTEM — no screen · actor Hệ thống"
+ },
+ "F-094|Description": {
+  "text": "1 API không gắn màn hình: API-085",
+  "ctx": "Xử lý hệ thống / tích hợp · màn SYSTEM — no screen · actor Hệ thống"
+ },
+ "F-094|Entry / Trigger": {
+  "text": "/api/gmo/*",
+  "ctx": "Xử lý hệ thống / tích hợp · màn SYSTEM — no screen · actor Hệ thống"
+ },
+ "F-095|Function": {
+  "text": "Xử lý nhóm API /api/migration/*",
+  "ctx": "Xử lý hệ thống / tích hợp · màn SYSTEM — no screen · actor Hệ thống"
+ },
+ "F-095|Description": {
+  "text": "7 API không gắn màn hình: API-087, API-088, API-089, API-090, API-091, API-092, API-093",
+  "ctx": "Xử lý hệ thống / tích hợp · màn SYSTEM — no screen · actor Hệ thống"
+ },
+ "F-095|Entry / Trigger": {
+  "text": "/api/migration/*",
+  "ctx": "Xử lý hệ thống / tích hợp · màn SYSTEM — no screen · actor Hệ thống"
+ },
+ "F-096|Function": {
+  "text": "Xử lý nhóm API /api/pos/*",
+  "ctx": "Xử lý hệ thống / tích hợp · màn SYSTEM — no screen · actor Hệ thống"
+ },
+ "F-096|Description": {
+  "text": "5 API không gắn màn hình: API-095, API-096, API-097, API-098, API-099",
+  "ctx": "Xử lý hệ thống / tích hợp · màn SYSTEM — no screen · actor Hệ thống"
+ },
+ "F-096|Entry / Trigger": {
+  "text": "/api/pos/*",
+  "ctx": "Xử lý hệ thống / tích hợp · màn SYSTEM — no screen · actor Hệ thống"
+ },
+ "F-097|Function": {
+  "text": "Xử lý nhóm API /api/smaregi/*",
+  "ctx": "Xử lý hệ thống / tích hợp · màn SYSTEM — no screen · actor Hệ thống"
+ },
+ "F-097|Description": {
+  "text": "1 API không gắn màn hình: API-100",
+  "ctx": "Xử lý hệ thống / tích hợp · màn SYSTEM — no screen · actor Hệ thống"
+ },
+ "F-097|Entry / Trigger": {
+  "text": "/api/smaregi/*",
+  "ctx": "Xử lý hệ thống / tích hợp · màn SYSTEM — no screen · actor Hệ thống"
+ },
+ "F-098|Function": {
+  "text": "Xử lý nhóm API /api/cron-job/*",
+  "ctx": "Xử lý hệ thống / tích hợp · màn SYSTEM — no screen · actor Hệ thống"
+ },
+ "F-098|Description": {
+  "text": "7 API không gắn màn hình: API-076, API-077, API-078, API-079, API-080, API-081, API-082",
+  "ctx": "Xử lý hệ thống / tích hợp · màn SYSTEM — no screen · actor Hệ thống"
+ },
+ "F-098|Entry / Trigger": {
+  "text": "/api/cron-job/*",
+  "ctx": "Xử lý hệ thống / tích hợp · màn SYSTEM — no screen · actor Hệ thống"
+ },
+ "F-099|Function": {
+  "text": "Mua sản phẩm doanh nghiệp qua trang giới hạn",
+  "ctx": "Trang giới hạn (CR-002) · màn SC-094 · actor Khách doanh nghiệp (có link)"
+ },
+ "F-099|Description": {
+  "text": "ON → ẩn mọi danh sách thường, chỉ hiện ở trang 限定公開; mua / đặt / thanh toán / huỷ / my page dùng luồng cũ; truy cập = biết URL (không đăng nhập)",
+  "ctx": "Trang giới hạn (CR-002) · màn SC-094 · actor Khách doanh nghiệp (có link)"
+ },
+ "F-099|Entry / Trigger": {
+  "text": "Link trang giới hạn",
+  "ctx": "Trang giới hạn (CR-002) · màn SC-094 · actor Khách doanh nghiệp (có link)"
+ },
+ "F-099|Note": {
+  "text": "CR-002 đã duyệt 20/10/2026 — chờ release (① 5/11 · ② 19/11), xác nhận lại sau release",
+  "ctx": "Trang giới hạn (CR-002) · màn SC-094 · actor Khách doanh nghiệp (có link)"
+ }
+}

@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="vi"><head><meta charset="utf-8"><title>Quan hệ sản phẩm và trang giới hạn</title>
+<style>
+:root{--ink:#1F2328;--mute:#57606A;--line:#D0D7DE;--blue:#0969DA;--blueb:#DDF4FF;--green:#1A7F37;--greenb:#DAFBE1;--red:#CF222E;--redb:#FFEBE9;--amber:#9A6700;--amberb:#FFF8C5;--grey:#F6F8FA;--purple:#6639BA;--purpleb:#FBEFFF}
+*{box-sizing:border-box}body{margin:0;background:#fff;color:var(--ink);font:15px/1.45 -apple-system,"Segoe UI","Helvetica Neue",Arial,sans-serif}
+.wrap{width:1680px;padding:40px 48px}
+h1{font-size:30px;margin:0 0 6px}h2{font-size:20px;margin:0 0 14px}.sub{color:var(--mute);margin:0 0 26px}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:36px;margin-bottom:36px}
+.card{border:1.5px solid var(--line);border-radius:14px;padding:22px 24px;background:#fff}
+.ent{border:2px solid var(--blue);border-radius:12px;overflow:hidden;background:#fff}.ent b{display:block;background:var(--blue);color:#fff;padding:8px 14px;font-size:16px}
+.ent ul{margin:0;padding:10px 14px 12px 30px}.ent li{margin:2px 0}
+.rel{display:flex;align-items:center;gap:0;margin:8px 0 4px}.rel .ent{flex:1}
+.conn{width:150px;text-align:center;font-weight:700;color:var(--blue)}.conn .bar{height:3px;background:var(--blue);margin:6px 0}
+.mode{margin-top:16px;border-radius:10px;padding:12px 14px}.mode.basic{background:var(--grey)}.mode.opt{background:var(--blueb)}
+.tag{display:inline-block;font-size:12px;font-weight:700;border-radius:20px;padding:1px 9px;margin-left:6px;vertical-align:2px}
+.t-as{background:var(--amberb);color:var(--amber);border:1px solid #D4A72C}.t-new{background:var(--greenb);color:var(--green);border:1px solid #4AC26B}
+.flow{display:flex;flex-direction:column;gap:0}
+.row{display:grid;grid-template-columns:360px 70px 1fr;align-items:center}
+.dec{background:var(--blueb);border:2px solid var(--blue);border-radius:12px;padding:12px 14px;font-weight:600;text-align:center}
+.start{background:var(--ink);color:#fff;border-radius:30px;padding:12px;text-align:center;font-weight:700}
+.yes{position:relative;height:3px;background:var(--blue)}.yes span{position:absolute;top:-22px;left:8px;font-size:13px;font-weight:700;color:var(--blue)}
+.yes:after{content:"";position:absolute;right:-2px;top:-6px;border:7px solid transparent;border-left:10px solid var(--blue)}
+.out{border-radius:12px;padding:11px 14px;border:2px solid}.out.ok{background:var(--greenb);border-color:var(--green)}.out.no{background:var(--redb);border-color:var(--red)}.out.warn{background:var(--amberb);border-color:#D4A72C}
+.down{width:360px;display:flex;justify-content:center}.down div{width:3px;height:34px;background:var(--blue);position:relative}
+.down div:after{content:"";position:absolute;left:-6px;bottom:-4px;border:7.5px solid transparent;border-top:10px solid var(--blue)}
+.down span{position:absolute;left:12px;top:6px;font-size:13px;font-weight:700;color:var(--blue);white-space:nowrap}
+table{width:100%;border-collapse:collapse;font-size:14px}th,td{border:1px solid var(--line);padding:8px 10px;vertical-align:top;text-align:left}
+th{background:var(--grey)}td.c{text-align:center;font-size:18px}.y{color:var(--green);font-weight:700}.n{color:var(--red);font-weight:700}
+.note{color:var(--mute);font-size:13px;margin-top:10px}.pend{color:var(--purple);font-weight:600}
+.legend{display:flex;gap:18px;font-size:13px;color:var(--mute);margin-top:12px}
+.flowcard h2{font-size:28px;margin-bottom:24px}
+.flowcard .row{grid-template-columns:600px 120px 1fr}
+.flowcard .dec{font-size:22px;padding:22px 24px;border-width:3px;border-radius:16px}
+.flowcard .start{font-size:24px;padding:20px;border-radius:40px}
+.flowcard .out{font-size:20px;padding:20px 24px;border-width:3px;border-radius:16px;line-height:1.5}
+.flowcard .yes{height:4px}.flowcard .yes span{font-size:18px;top:-30px}
+.flowcard .yes:after{border-width:10px;border-left-width:14px;top:-8px}
+.flowcard .down{width:600px}.flowcard .down div{width:4px;height:56px}
+.flowcard .down div:after{left:-9px;border-width:10.5px;border-top-width:14px}
+.flowcard .down span{font-size:18px;left:16px;top:14px}
+.flowcard .tag{font-size:15px}.flowcard .legend{font-size:17px;margin-top:22px}
+</style></head><body><div class="wrap">
+<h1>CR-002 — Quan hệ giữa Sản phẩm và Trang giới hạn</h1>
+<p class="sub">Sản phẩm hiện ở đâu, ai mua được · Thiết kế đề xuất của Dipro (chưa có trong hệ thống) · Chỗ ghi <span class="pend">[chờ KH]</span> = giả định đang dùng để ước tính, cần khách xác nhận</p>
+
+<div class="grid">
+ <div class="card">
+  <h2>A. Mô hình dữ liệu</h2>
+  <div class="rel">
+   <div class="ent"><b>Trang giới hạn</b><ul><li>Tên trang (VD Trang A)</li><li>Khoá URL — hệ thống tự sinh</li><li>Trạng thái: Công khai / Đã dừng</li><li>Sản phẩm được gán vào trang</li></ul></div>
+   <div class="conn">nhiều trang<div class="bar"></div>nhiều sản phẩm</div>
+   <div class="ent"><b>Sản phẩm (vé)</b><ul><li>Hiển thị giới hạn: OFF / ON</li><li>Được gán vào trang nào: gán từ màn trang giới hạn</li></ul></div>
+  </div>
+  <p class="note">Mỗi trang chứa 0…nhiều sản phẩm. Mỗi sản phẩm gắn được <b>nhiều trang</b> (lưu ở bảng liên kết sản phẩm ↔ trang) <span class="tag t-new">đề xuất Dipro</span> <span class="pend">[chờ KH xác nhận — CQ-010]</span></p>
+  <div class="mode basic"><b>Bản cơ bản</b> — chỉ có 1 trang giới hạn cố định (không có màn quản lý trang). Sản phẩm chỉ có công tắc <b>Hiển thị giới hạn ON / OFF</b>; ON = hiện trên trang giới hạn duy nhất.</div>
+  <div class="mode opt"><b>Option</b> — quản trị tạo nhiều trang A, B, C…, mỗi trang 1 URL riêng. Thứ tự làm: <b>tạo sản phẩm trước</b>, sau đó vào từng trang giới hạn <b>gán sản phẩm vào trang</b> (1 sản phẩm gán được nhiều trang); sản phẩm hiện trên đúng các trang được gán.</div>
+ </div>
+
+ <div class="card">
+  <h2>B. Ví dụ</h2>
+  <table>
+   <tr><th>Sản phẩm</th><th>Cài đặt</th><th>Trang thường</th><th>Link Trang A</th><th>Link Trang B</th></tr>
+   <tr><td>1DAYパス（平日）</td><td>Giới hạn OFF</td><td class="c y">✓</td><td class="c n">✗</td><td class="c n">✗</td></tr>
+   <tr><td>事前1DAY 平日版</td><td>ON · Trang A</td><td class="c n">✗</td><td class="c y">✓</td><td class="c n">✗</td></tr>
+   <tr><td>事前1DAY 休日版</td><td>ON · Trang A</td><td class="c n">✗</td><td class="c y">✓</td><td class="c n">✗</td></tr>
+   <tr><td>当日1DAY 平日版</td><td>ON · Trang B</td><td class="c n">✗</td><td class="c n">✗</td><td class="c y">✓</td></tr>
+   <tr><td>当日1DAY 休日版</td><td>ON · Trang A + Trang B</td><td class="c n">✗</td><td class="c y">✓</td><td class="c y">✓</td></tr>
+  </table>
+  <p class="note">Người có link Trang A thấy 3 sản phẩm gắn với Trang A (gồm 当日1DAY 休日版 dùng chung với Trang B). Khách thường không thấy sản phẩm nào đang bật giới hạn.</p>
+ </div>
+</div>
+
+<div class="card flowcard">
+ <h2>C. Sản phẩm X hiện ở đâu? (bản Option)</h2>
+ <div class="flow">
+  <div class="row"><div class="start">Sản phẩm X</div><div></div><div></div></div>
+  <div class="down"><div></div></div>
+  <div class="row"><div class="dec">Hiển thị giới hạn = OFF?</div><div class="yes"><span>Có</span></div><div class="out ok"><b>Hiện ở các trang thường</b> (chi tiết cửa hàng, bảng giá, tình trạng bán…) — như hiện tại. Không hiện trên trang giới hạn.</div></div>
+  <div class="down"><div><span>Không (ON) — đã được gán vào trang (VD Trang A, Trang B)</span></div></div>
+  <div class="row"><div class="dec">Tất cả các trang được gán đều Đã dừng?</div><div class="yes"><span>Có</span></div><div class="out no"><b>Không hiện ở đâu</b> — link các trang đã dừng báo không tìm thấy trang (404). Sản phẩm cũng <b>không</b> quay về trang thường. Nếu chỉ dừng Trang A, sản phẩm vẫn hiện trên Trang B.</div></div>
+  <div class="down"><div><span>Không (còn trang được gán đang công khai)</span></div></div>
+  <div class="row"><div class="dec">Còn lịch bán / còn chỗ trong thời gian hiển thị?</div><div class="yes"><span>Hết</span></div><div class="out warn"><b>Trang vẫn mở</b> nhưng ngày hiện × / —; nếu trang không còn sản phẩm nào bán được → 「現在ご購入いただける商品はありません」</div></div>
+  <div class="down"><div><span>Còn</span></div></div>
+  <div class="row"><div class="out ok" style="grid-column:1 / span 3"><b>Hiện trên mọi trang được gán đang công khai</b> (VD Trang A và Trang B). Người mở 1 trong các link đó mua được bằng luồng mua hiện có (mua trước / dùng trong ngày, thanh toán, mail xác nhận). Trang không gán sản phẩm X và các trang thường không thấy sản phẩm X.</div></div>
+ </div>
+ <div class="legend"><span>■ xanh lá = hiện / mua được</span><span>■ đỏ = không hiện / bị chặn</span><span>■ vàng = trang mở nhưng không có gì để mua</span></div>
+</div>
+
+</div></body></html>

@@ -1,0 +1,902 @@
+{
+ "L000": {
+  "text": "*********",
+  "ctx": "nhãn trên màn ログイン方法を選択"
+ },
+ "L001": {
+  "text": "000",
+  "ctx": "nhãn trên màn クレジットカード情報の編集"
+ },
+ "L002": {
+  "text": "0000000",
+  "ctx": "nhãn trên màn 新規施設登録"
+ },
+ "L003": {
+  "text": "00000000000",
+  "ctx": "nhãn trên màn アカウント作成はこちら"
+ },
+ "L004": {
+  "text": "00000000000000000",
+  "ctx": "nhãn trên màn クレジットカード情報の編集"
+ },
+ "L005": {
+  "text": "0123",
+  "ctx": "nhãn trên màn 入場状況管理"
+ },
+ "L006": {
+  "text": "09/25",
+  "ctx": "nhãn trên màn クレジットカード情報の編集"
+ },
+ "L007": {
+  "text": "1",
+  "ctx": "nhãn trên màn 商品管理"
+ },
+ "L008": {
+  "text": "10 / ページ",
+  "ctx": "nhãn trên màn 予約管理"
+ },
+ "L009": {
+  "text": "10/03",
+  "ctx": "nhãn trên màn [Heading động theo dữ liệu — route /tenant/:code]"
+ },
+ "L010": {
+  "text": "10/03 ー",
+  "ctx": "nhãn trên màn 待ち時間/販売状況"
+ },
+ "L011": {
+  "text": "10/04",
+  "ctx": "nhãn trên màn [Heading động theo dữ liệu — route /tenant/:code]"
+ },
+ "L012": {
+  "text": "10/04 ー",
+  "ctx": "nhãn trên màn 待ち時間/販売状況"
+ },
+ "L013": {
+  "text": "10/05",
+  "ctx": "nhãn trên màn [Heading động theo dữ liệu — route /tenant/:code]"
+ },
+ "L014": {
+  "text": "10/05 ー",
+  "ctx": "nhãn trên màn 待ち時間/販売状況"
+ },
+ "L015": {
+  "text": "10/06",
+  "ctx": "nhãn trên màn [Heading động theo dữ liệu — route /tenant/:code]"
+ },
+ "L016": {
+  "text": "10/06 ー",
+  "ctx": "nhãn trên màn 待ち時間/販売状況"
+ },
+ "L017": {
+  "text": "10/07",
+  "ctx": "nhãn trên màn [Heading động theo dữ liệu — route /tenant/:code]"
+ },
+ "L018": {
+  "text": "10/07 ー",
+  "ctx": "nhãn trên màn 待ち時間/販売状況"
+ },
+ "L019": {
+  "text": "10/08",
+  "ctx": "nhãn trên màn [Heading động theo dữ liệu — route /tenant/:code]"
+ },
+ "L020": {
+  "text": "10/08 ー",
+  "ctx": "nhãn trên màn 待ち時間/販売状況"
+ },
+ "L021": {
+  "text": "10/09",
+  "ctx": "nhãn trên màn [Heading động theo dữ liệu — route /tenant/:code]"
+ },
+ "L022": {
+  "text": "10/09 ー",
+  "ctx": "nhãn trên màn 待ち時間/販売状況"
+ },
+ "L023": {
+  "text": "10/10",
+  "ctx": "nhãn trên màn [Heading động theo dữ liệu — route /tenant/:code]"
+ },
+ "L024": {
+  "text": "10/10 ー",
+  "ctx": "nhãn trên màn 待ち時間/販売状況"
+ },
+ "L025": {
+  "text": "10/11",
+  "ctx": "nhãn trên màn [Heading động theo dữ liệu — route /tenant/:code]"
+ },
+ "L026": {
+  "text": "10/11 ー",
+  "ctx": "nhãn trên màn 待ち時間/販売状況"
+ },
+ "L027": {
+  "text": "10/12",
+  "ctx": "nhãn trên màn [Heading động theo dữ liệu — route /tenant/:code]"
+ },
+ "L028": {
+  "text": "10/12 ー",
+  "ctx": "nhãn trên màn 待ち時間/販売状況"
+ },
+ "L029": {
+  "text": "10/13",
+  "ctx": "nhãn trên màn [Heading động theo dữ liệu — route /tenant/:code]"
+ },
+ "L030": {
+  "text": "10/13 ー",
+  "ctx": "nhãn trên màn 待ち時間/販売状況"
+ },
+ "L031": {
+  "text": "10/14",
+  "ctx": "nhãn trên màn [Heading động theo dữ liệu — route /tenant/:code]"
+ },
+ "L032": {
+  "text": "10/14 ー",
+  "ctx": "nhãn trên màn 待ち時間/販売状況"
+ },
+ "L033": {
+  "text": "10/15",
+  "ctx": "nhãn trên màn [Heading động theo dữ liệu — route /tenant/:code]"
+ },
+ "L034": {
+  "text": "10/15 ー",
+  "ctx": "nhãn trên màn 待ち時間/販売状況"
+ },
+ "L035": {
+  "text": "10/16",
+  "ctx": "nhãn trên màn [Heading động theo dữ liệu — route /tenant/:code]"
+ },
+ "L036": {
+  "text": "10/16 ー",
+  "ctx": "nhãn trên màn 待ち時間/販売状況"
+ },
+ "L037": {
+  "text": "10/17",
+  "ctx": "nhãn trên màn [Heading động theo dữ liệu — route /tenant/:code]"
+ },
+ "L038": {
+  "text": "10/17 ー",
+  "ctx": "nhãn trên màn 待ち時間/販売状況"
+ },
+ "L039": {
+  "text": "10/18",
+  "ctx": "nhãn trên màn [Heading động theo dữ liệu — route /tenant/:code]"
+ },
+ "L040": {
+  "text": "10/18 ー",
+  "ctx": "nhãn trên màn 待ち時間/販売状況"
+ },
+ "L041": {
+  "text": "10/19",
+  "ctx": "nhãn trên màn [Heading động theo dữ liệu — route /tenant/:code]"
+ },
+ "L042": {
+  "text": "10/19 ー",
+  "ctx": "nhãn trên màn 待ち時間/販売状況"
+ },
+ "L043": {
+  "text": "10/20",
+  "ctx": "nhãn trên màn [Heading động theo dữ liệu — route /tenant/:code]"
+ },
+ "L044": {
+  "text": "10/20 ー",
+  "ctx": "nhãn trên màn 待ち時間/販売状況"
+ },
+ "L045": {
+  "text": "10/21",
+  "ctx": "nhãn trên màn [Heading động theo dữ liệu — route /tenant/:code]"
+ },
+ "L046": {
+  "text": "10/21 ー",
+  "ctx": "nhãn trên màn 待ち時間/販売状況"
+ },
+ "L047": {
+  "text": "10/22",
+  "ctx": "nhãn trên màn [Heading động theo dữ liệu — route /tenant/:code]"
+ },
+ "L048": {
+  "text": "10/22 ー",
+  "ctx": "nhãn trên màn 待ち時間/販売状況"
+ },
+ "L049": {
+  "text": "10/23",
+  "ctx": "nhãn trên màn [Heading động theo dữ liệu — route /tenant/:code]"
+ },
+ "L050": {
+  "text": "10/23 ー",
+  "ctx": "nhãn trên màn 待ち時間/販売状況"
+ },
+ "L051": {
+  "text": "10/24",
+  "ctx": "nhãn trên màn [Heading động theo dữ liệu — route /tenant/:code]"
+ },
+ "L052": {
+  "text": "10/24 ー",
+  "ctx": "nhãn trên màn 待ち時間/販売状況"
+ },
+ "L053": {
+  "text": "10/25",
+  "ctx": "nhãn trên màn [Heading động theo dữ liệu — route /tenant/:code]"
+ },
+ "L054": {
+  "text": "10/25 ー",
+  "ctx": "nhãn trên màn 待ち時間/販売状況"
+ },
+ "L055": {
+  "text": "10/26",
+  "ctx": "nhãn trên màn [Heading động theo dữ liệu — route /tenant/:code]"
+ },
+ "L056": {
+  "text": "10/26 ー",
+  "ctx": "nhãn trên màn 待ち時間/販売状況"
+ },
+ "L057": {
+  "text": "10/27",
+  "ctx": "nhãn trên màn [Heading động theo dữ liệu — route /tenant/:code]"
+ },
+ "L058": {
+  "text": "10/27 ー",
+  "ctx": "nhãn trên màn 待ち時間/販売状況"
+ },
+ "L059": {
+  "text": "10/28",
+  "ctx": "nhãn trên màn [Heading động theo dữ liệu — route /tenant/:code]"
+ },
+ "L060": {
+  "text": "10/28 ー",
+  "ctx": "nhãn trên màn 待ち時間/販売状況"
+ },
+ "L061": {
+  "text": "10/29",
+  "ctx": "nhãn trên màn [Heading động theo dữ liệu — route /tenant/:code]"
+ },
+ "L062": {
+  "text": "10/29 ー",
+  "ctx": "nhãn trên màn 待ち時間/販売状況"
+ },
+ "L063": {
+  "text": "10/30",
+  "ctx": "nhãn trên màn [Heading động theo dữ liệu — route /tenant/:code]"
+ },
+ "L064": {
+  "text": "10/30 ー",
+  "ctx": "nhãn trên màn 待ち時間/販売状況"
+ },
+ "L065": {
+  "text": "10/31",
+  "ctx": "nhãn trên màn [Heading động theo dữ liệu — route /tenant/:code]"
+ },
+ "L066": {
+  "text": "10/31 ー",
+  "ctx": "nhãn trên màn 待ち時間/販売状況"
+ },
+ "L067": {
+  "text": "11/01 ー",
+  "ctx": "nhãn trên màn [Heading động theo dữ liệu — route /tenant/:code]"
+ },
+ "L068": {
+  "text": "1234-567-890",
+  "ctx": "nhãn trên màn 新規施設登録"
+ },
+ "L069": {
+  "text": "18:30",
+  "ctx": "nhãn trên màn 新規施設登録"
+ },
+ "L070": {
+  "text": "1DAYパス 購入",
+  "ctx": "nhãn trên màn [Heading động theo dữ liệu — route /tenant/:code]"
+ },
+ "L071": {
+  "text": "20",
+  "ctx": "nhãn trên màn 待機時間設定"
+ },
+ "L072": {
+  "text": "3",
+  "ctx": "nhãn trên màn 商品管理"
+ },
+ "L073": {
+  "text": "30",
+  "ctx": "nhãn trên màn 待機時間設定"
+ },
+ "L074": {
+  "text": "45",
+  "ctx": "nhãn trên màn 待機時間設定"
+ },
+ "L075": {
+  "text": "6",
+  "ctx": "nhãn trên màn 商品管理"
+ },
+ "L076": {
+  "text": "60",
+  "ctx": "nhãn trên màn 待機時間設定"
+ },
+ "L077": {
+  "text": "7:30",
+  "ctx": "nhãn trên màn 新規施設登録"
+ },
+ "L078": {
+  "text": "8769",
+  "ctx": "nhãn trên màn 商品管理"
+ },
+ "L079": {
+  "text": ":Rchaam:",
+  "ctx": "nhãn trên màn フリーパス購入"
+ },
+ "L080": {
+  "text": "<>",
+  "ctx": "nhãn trên màn お知らせの設定"
+ },
+ "L081": {
+  "text": "ADD NEW",
+  "ctx": "nhãn trên màn UNKNOWN — màn không có heading (route /admin/app-settings)"
+ },
+ "L082": {
+  "text": "CSVファイル出力",
+  "ctx": "nhãn trên màn 予約管理"
+ },
+ "L083": {
+  "text": "Choose date",
+  "ctx": "nhãn trên màn ダッシュボード"
+ },
+ "L084": {
+  "text": "Choose date, selected date is 1961年11月24日",
+  "ctx": "nhãn trên màn アカウント情報の編集"
+ },
+ "L085": {
+  "text": "Choose date, selected date is 2026年10月2日",
+  "ctx": "nhãn trên màn 入場状況管理"
+ },
+ "L086": {
+  "text": "Choose date, selected date is 2035年9月1日",
+  "ctx": "nhãn trên màn クレジットカード情報の編集"
+ },
+ "L087": {
+  "text": "Choose time",
+  "ctx": "nhãn trên màn 新規施設登録"
+ },
+ "L088": {
+  "text": "OBIC用Excel出力",
+  "ctx": "nhãn trên màn 商品管理"
+ },
+ "L089": {
+  "text": "Stress Test",
+  "ctx": "nhãn trên màn UNKNOWN — màn không có heading (route /booking/use-in-day)"
+ },
+ "L090": {
+  "text": "YAMADA TAROU",
+  "ctx": "nhãn trên màn クレジットカード情報の編集"
+ },
+ "L091": {
+  "text": "[placeholder dạng email]",
+  "ctx": "nhãn trên màn メール変更"
+ },
+ "L092": {
+  "text": "add",
+  "ctx": "nhãn trên màn 商品管理"
+ },
+ "L093": {
+  "text": "agreePrivacy",
+  "ctx": "nhãn trên màn アカウント作成はこちら"
+ },
+ "L094": {
+  "text": "code",
+  "ctx": "nhãn trên màn 施設管理"
+ },
+ "L095": {
+  "text": "delete",
+  "ctx": "nhãn trên màn UNKNOWN — màn không có heading (route /admin/app-settings)"
+ },
+ "L096": {
+  "text": "details",
+  "ctx": "nhãn trên màn GMOアカウント管理"
+ },
+ "L097": {
+  "text": "https://kidokid.bornelund.co.jp/......",
+  "ctx": "nhãn trên màn 新規施設登録"
+ },
+ "L098": {
+  "text": "name",
+  "ctx": "nhãn trên màn 新規GMOアカウントの設定"
+ },
+ "L099": {
+  "text": "note",
+  "ctx": "nhãn trên màn 新規施設登録"
+ },
+ "L100": {
+  "text": "shopId",
+  "ctx": "nhãn trên màn 新規GMOアカウントの設定"
+ },
+ "L101": {
+  "text": "shopPass",
+  "ctx": "nhãn trên màn 新規GMOアカウントの設定"
+ },
+ "L102": {
+  "text": "tenantCode",
+  "ctx": "nhãn trên màn 従業員管理"
+ },
+ "L103": {
+  "text": "title",
+  "ctx": "nhãn trên màn お知らせの設定"
+ },
+ "L104": {
+  "text": "toggle password visibility",
+  "ctx": "nhãn trên màn 従業員管理"
+ },
+ "L105": {
+  "text": "update",
+  "ctx": "nhãn trên màn UNKNOWN — màn không có heading (route /admin/app-settings)"
+ },
+ "L106": {
+  "text": "user",
+  "ctx": "nhãn trên màn UNKNOWN — màn không có heading (route /admin/app-settings)"
+ },
+ "L107": {
+  "text": "view",
+  "ctx": "nhãn trên màn 売上管理"
+ },
+ "L108": {
+  "text": "yyyy/mm/dd",
+  "ctx": "nhãn trên màn ダッシュボード"
+ },
+ "L109": {
+  "text": "​",
+  "ctx": "nhãn trên màn ダッシュボード"
+ },
+ "L110": {
+  "text": "○○市○○区○○町",
+  "ctx": "nhãn trên màn アカウント作成はこちら"
+ },
+ "L111": {
+  "text": "○○市○○区○○町.",
+  "ctx": "nhãn trên màn 新規施設登録"
+ },
+ "L112": {
+  "text": "〇〇〇駅から徒歩5分",
+  "ctx": "nhãn trên màn 新規施設登録"
+ },
+ "L113": {
+  "text": "あ",
+  "ctx": "nhãn trên màn 予約管理"
+ },
+ "L114": {
+  "text": "お気に入りに登録",
+  "ctx": "nhãn trên màn [Heading động theo dữ liệu — route /tenant/:code]"
+ },
+ "L115": {
+  "text": "さらに商品を追加する",
+  "ctx": "nhãn trên màn UNKNOWN — màn không có heading (route /booking/use-in-day)"
+ },
+ "L116": {
+  "text": "カメラを起動する",
+  "ctx": "nhãn trên màn バーコード読み取り"
+ },
+ "L117": {
+  "text": "カメラスキャン",
+  "ctx": "nhãn trên màn バーコード読み取り"
+ },
+ "L118": {
+  "text": "キャンセル",
+  "ctx": "nhãn trên màn 免責事項設定"
+ },
+ "L119": {
+  "text": "キャンセルリスト",
+  "ctx": "nhãn trên màn 順番待ち管理"
+ },
+ "L120": {
+  "text": "システムによる自動キャンセル",
+  "ctx": "nhãn trên màn 予約管理"
+ },
+ "L121": {
+  "text": "ステータス",
+  "ctx": "nhãn trên màn 予約管理"
+ },
+ "L122": {
+  "text": "スマレジ契約ID",
+  "ctx": "nhãn trên màn 新規施設登録"
+ },
+ "L123": {
+  "text": "スマレジ店舗ID",
+  "ctx": "nhãn trên màn 新規施設登録"
+ },
+ "L124": {
+  "text": "スマレジ端末ID",
+  "ctx": "nhãn trên màn 新規施設登録"
+ },
+ "L125": {
+  "text": "セイ（カナ） [必須]",
+  "ctx": "nhãn trên màn ユーザー管理"
+ },
+ "L126": {
+  "text": "タロウ",
+  "ctx": "nhãn trên màn アカウント作成はこちら"
+ },
+ "L127": {
+  "text": "チェックボックスになるテキストを入力してください",
+  "ctx": "nhãn trên màn 免責事項設定"
+ },
+ "L128": {
+  "text": "バーコードリーダー",
+  "ctx": "nhãn trên màn バーコード読み取り"
+ },
+ "L129": {
+  "text": "バーコード下4桁",
+  "ctx": "nhãn trên màn 予約管理"
+ },
+ "L130": {
+  "text": "パスワード [必須]",
+  "ctx": "nhãn trên màn 従業員管理"
+ },
+ "L131": {
+  "text": "パスワードを忘れた場合",
+  "ctx": "nhãn trên màn パスワードを忘れた場合"
+ },
+ "L132": {
+  "text": "パスワード再設定用メール送信",
+  "ctx": "nhãn trên màn アカウント情報の編集"
+ },
+ "L133": {
+  "text": "パスワード確認 [必須]",
+  "ctx": "nhãn trên màn 新規施設登録"
+ },
+ "L134": {
+  "text": "フリーパス購入を希望の方はこちら",
+  "ctx": "nhãn trên màn UNKNOWN — màn không có heading (route /booking/use-in-day)"
+ },
+ "L135": {
+  "text": "ページ1",
+  "ctx": "nhãn trên màn 予約管理"
+ },
+ "L136": {
+  "text": "ページ2へ",
+  "ctx": "nhãn trên màn 予約管理"
+ },
+ "L137": {
+  "text": "ページ30へ",
+  "ctx": "nhãn trên màn 商品管理"
+ },
+ "L138": {
+  "text": "ページ375へ",
+  "ctx": "nhãn trên màn 売上管理"
+ },
+ "L139": {
+  "text": "ページ376へ",
+  "ctx": "nhãn trên màn 売上管理"
+ },
+ "L140": {
+  "text": "ページ3へ",
+  "ctx": "nhãn trên màn 予約管理"
+ },
+ "L141": {
+  "text": "ページ4へ",
+  "ctx": "nhãn trên màn 予約管理"
+ },
+ "L142": {
+  "text": "ページ57へ",
+  "ctx": "nhãn trên màn ユーザー管理"
+ },
+ "L143": {
+  "text": "ページ58へ",
+  "ctx": "nhãn trên màn ユーザー管理"
+ },
+ "L144": {
+  "text": "ページ5へ",
+  "ctx": "nhãn trên màn 予約管理"
+ },
+ "L145": {
+  "text": "ページ666へ",
+  "ctx": "nhãn trên màn 予約管理"
+ },
+ "L146": {
+  "text": "ページ667へ",
+  "ctx": "nhãn trên màn 予約管理"
+ },
+ "L147": {
+  "text": "ページ6へ",
+  "ctx": "nhãn trên màn 予約管理"
+ },
+ "L148": {
+  "text": "ページあたりの行数: 10",
+  "ctx": "nhãn trên màn UNKNOWN — màn không có heading (route /admin/app-settings)"
+ },
+ "L149": {
+  "text": "ボーネルンド渋谷店",
+  "ctx": "nhãn trên màn 従業員管理"
+ },
+ "L150": {
+  "text": "マイページに戻る",
+  "ctx": "nhãn trên màn 予約履歴"
+ },
+ "L151": {
+  "text": "メイ（カナ） [必須]",
+  "ctx": "nhãn trên màn ユーザー管理"
+ },
+ "L152": {
+  "text": "メールを再送信する",
+  "ctx": "nhãn trên màn 仮登録を受付けました"
+ },
+ "L153": {
+  "text": "メールアドレス",
+  "ctx": "nhãn trên màn ユーザー管理"
+ },
+ "L154": {
+  "text": "メールアドレス [必須]",
+  "ctx": "nhãn trên màn 新規施設登録"
+ },
+ "L155": {
+  "text": "メールアドレスを入力してください",
+  "ctx": "nhãn trên màn パスワードを忘れた場合"
+ },
+ "L156": {
+  "text": "メール送信",
+  "ctx": "nhãn trên màn パスワードを忘れた場合"
+ },
+ "L157": {
+  "text": "ヤマダ",
+  "ctx": "nhãn trên màn アカウント作成はこちら"
+ },
+ "L158": {
+  "text": "リセット",
+  "ctx": "nhãn trên màn 予約管理"
+ },
+ "L159": {
+  "text": "リフレッシュ",
+  "ctx": "nhãn trên màn 在庫調整"
+ },
+ "L160": {
+  "text": "ログイン",
+  "ctx": "nhãn trên màn お知らせ"
+ },
+ "L161": {
+  "text": "ログインはこちら",
+  "ctx": "nhãn trên màn お知らせ"
+ },
+ "L162": {
+  "text": "ワンデーパス",
+  "ctx": "nhãn trên màn 予約管理"
+ },
+ "L163": {
+  "text": "ヶ月",
+  "ctx": "nhãn trên màn 商品管理"
+ },
+ "L164": {
+  "text": "今から利用する",
+  "ctx": "nhãn trên màn [Heading động theo dữ liệu — route /tenant/:code]"
+ },
+ "L165": {
+  "text": "住所 [必須]",
+  "ctx": "nhãn trên màn ユーザー管理"
+ },
+ "L166": {
+  "text": "住所（町名以下は入力不要です） [必須]",
+  "ctx": "nhãn trên màn アカウント情報の編集"
+ },
+ "L167": {
+  "text": "保存する",
+  "ctx": "nhãn trên màn メール変更"
+ },
+ "L168": {
+  "text": "入場・退場・決済",
+  "ctx": "nhãn trên màn バーコード読み取り"
+ },
+ "L169": {
+  "text": "入場中",
+  "ctx": "nhãn trên màn 入場状況管理"
+ },
+ "L170": {
+  "text": "入場取り消し・退場取り消し",
+  "ctx": "nhãn trên màn バーコード読み取り"
+ },
+ "L171": {
+  "text": "全画面にする",
+  "ctx": "nhãn trên màn バーコード読み取り"
+ },
+ "L172": {
+  "text": "削除",
+  "ctx": "nhãn trên màn アカウント情報の確認・編集"
+ },
+ "L173": {
+  "text": "前のページへ",
+  "ctx": "nhãn trên màn UNKNOWN — màn không có heading (route /admin/app-settings)"
+ },
+ "L174": {
+  "text": "前回と同じ内容で入力する",
+  "ctx": "nhãn trên màn UNKNOWN — màn không có heading (route /booking/use-in-day)"
+ },
+ "L175": {
+  "text": "割り当て数変更",
+  "ctx": "nhãn trên màn 順番待ち管理"
+ },
+ "L176": {
+  "text": "半角英数字8文字以上",
+  "ctx": "nhãn trên màn アカウント作成はこちら"
+ },
+ "L177": {
+  "text": "名 [必須]",
+  "ctx": "nhãn trên màn 従業員管理"
+ },
+ "L178": {
+  "text": "名（フリガナ） [必須]",
+  "ctx": "nhãn trên màn 従業員管理"
+ },
+ "L179": {
+  "text": "呼び出し中リスト",
+  "ctx": "nhãn trên màn 順番待ち管理"
+ },
+ "L180": {
+  "text": "商品選択",
+  "ctx": "nhãn trên màn UNKNOWN — màn không có heading (route /booking/use-in-day)"
+ },
+ "L181": {
+  "text": "変更",
+  "ctx": "nhãn trên màn クレジットカード情報の編集"
+ },
+ "L182": {
+  "text": "太郎",
+  "ctx": "nhãn trên màn アカウント作成はこちら"
+ },
+ "L183": {
+  "text": "姓 [必須]",
+  "ctx": "nhãn trên màn 従業員管理"
+ },
+ "L184": {
+  "text": "姓（フリガナ） [必須]",
+  "ctx": "nhãn trên màn 従業員管理"
+ },
+ "L185": {
+  "text": "店舗を選択してください",
+  "ctx": "nhãn trên màn お知らせ"
+ },
+ "L186": {
+  "text": "店舗名、住所、駅",
+  "ctx": "nhãn trên màn お知らせ"
+ },
+ "L187": {
+  "text": "店舗詳細・事前予約をする",
+  "ctx": "nhãn trên màn 店舗一覧"
+ },
+ "L188": {
+  "text": "店舗選択",
+  "ctx": "nhãn trên màn 料金プラン"
+ },
+ "L189": {
+  "text": "当日利用",
+  "ctx": "nhãn trên màn 店舗一覧"
+ },
+ "L190": {
+  "text": "当日時間制パス",
+  "ctx": "nhãn trên màn 商品管理"
+ },
+ "L191": {
+  "text": "従業員IDを入力",
+  "ctx": "nhãn trên màn 従業員管理"
+ },
+ "L192": {
+  "text": "従業員名",
+  "ctx": "nhãn trên màn 従業員管理"
+ },
+ "L193": {
+  "text": "戻る",
+  "ctx": "nhãn trên màn 特定商取引法に基づく表示"
+ },
+ "L194": {
+  "text": "新しいお知らせ追加",
+  "ctx": "nhãn trên màn お知らせ管理"
+ },
+ "L195": {
+  "text": "新パスワードを入力してください",
+  "ctx": "nhãn trên màn パスワード変更"
+ },
+ "L196": {
+  "text": "新規アカウント登録はこちら",
+  "ctx": "nhãn trên màn お知らせ"
+ },
+ "L197": {
+  "text": "新規ユーザー登録",
+  "ctx": "nhãn trên màn ユーザー管理"
+ },
+ "L198": {
+  "text": "新規利用登録",
+  "ctx": "nhãn trên màn お知らせ"
+ },
+ "L199": {
+  "text": "新規商品追加",
+  "ctx": "nhãn trên màn 商品管理"
+ },
+ "L200": {
+  "text": "新規従業員登録",
+  "ctx": "nhãn trên màn 従業員管理"
+ },
+ "L201": {
+  "text": "新規施設登録",
+  "ctx": "nhãn trên màn 施設管理"
+ },
+ "L202": {
+  "text": "新規登録",
+  "ctx": "nhãn trên màn GMOアカウント管理"
+ },
+ "L203": {
+  "text": "施設コード [必須]",
+  "ctx": "nhãn trên màn 新規施設登録"
+ },
+ "L204": {
+  "text": "施設名",
+  "ctx": "nhãn trên màn 従業員管理"
+ },
+ "L205": {
+  "text": "施設名 [必須]",
+  "ctx": "nhãn trên màn 新規施設登録"
+ },
+ "L206": {
+  "text": "本文のフリーテキストを入力してください",
+  "ctx": "nhãn trên màn 免責事項設定"
+ },
+ "L207": {
+  "text": "検索する",
+  "ctx": "nhãn trên màn 予約管理"
+ },
+ "L208": {
+  "text": "権限 [必須]",
+  "ctx": "nhãn trên màn 従業員管理"
+ },
+ "L209": {
+  "text": "次のページへ",
+  "ctx": "nhãn trên màn UNKNOWN — màn không có heading (route /admin/app-settings)"
+ },
+ "L210": {
+  "text": "次へ",
+  "ctx": "nhãn trên màn 商品管理"
+ },
+ "L211": {
+  "text": "歳",
+  "ctx": "nhãn trên màn 商品管理"
+ },
+ "L212": {
+  "text": "氏名",
+  "ctx": "nhãn trên màn 予約管理"
+ },
+ "L213": {
+  "text": "現在パスワードを入力してください",
+  "ctx": "nhãn trên màn パスワード変更"
+ },
+ "L214": {
+  "text": "登録する",
+  "ctx": "nhãn trên màn 新規施設登録"
+ },
+ "L215": {
+  "text": "確認用パスワードを入力してください",
+  "ctx": "nhãn trên màn パスワード変更"
+ },
+ "L216": {
+  "text": "編集",
+  "ctx": "nhãn trên màn アカウント情報の編集"
+ },
+ "L217": {
+  "text": "購入済み",
+  "ctx": "nhãn trên màn 予約管理"
+ },
+ "L218": {
+  "text": "追加",
+  "ctx": "nhãn trên màn 免責事項設定"
+ },
+ "L219": {
+  "text": "郵便番号 [必須]",
+  "ctx": "nhãn trên màn ユーザー管理"
+ },
+ "L220": {
+  "text": "都道府県 [必須]",
+  "ctx": "nhãn trên màn ユーザー管理"
+ },
+ "L221": {
+  "text": "開く",
+  "ctx": "nhãn trên màn 予約管理"
+ },
+ "L222": {
+  "text": "電話番号",
+  "ctx": "nhãn trên màn ユーザー管理"
+ },
+ "L223": {
+  "text": "電話番号 [必須]",
+  "ctx": "nhãn trên màn ユーザー管理"
+ },
+ "L224": {
+  "text": "順番待ち中リスト",
+  "ctx": "nhãn trên màn 順番待ち管理"
+ }
+}

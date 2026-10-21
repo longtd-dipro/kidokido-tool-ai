@@ -1,0 +1,598 @@
+{
+ "F-001|Function": {
+  "text": "Hiển thị & thao tác màn ダッシュボード",
+  "ctx": "Dashboard (admin) · màn SC-001 · actor Super Admin, Admin Tenant, Admin POSS, Admin Smageri V1"
+ },
+ "F-001|Description": {
+  "text": "Màn ダッシュボード (/admin) quan sát được với role Super Admin, Admin Tenant, Admin POSS, Admin Smageri V1; 57 item trên DOM. Component: src/pages/admin/index.tsx.",
+  "ctx": "Dashboard (admin) · màn SC-001 · actor Super Admin, Admin Tenant, Admin POSS, Admin Smageri V1"
+ },
+ "F-001|Entry / Trigger": {
+  "text": "/admin",
+  "ctx": "Dashboard (admin) · màn SC-001 · actor Super Admin, Admin Tenant, Admin POSS, Admin Smageri V1"
+ },
+ "F-002|Function": {
+  "text": "Hiển thị & thao tác màn UNKNOWN — màn không có heading (route /admin/app-settings)",
+  "ctx": "Cài đặt hệ thống · màn SC-002 · actor Super Admin"
+ },
+ "F-002|Description": {
+  "text": "Màn UNKNOWN — màn không có heading (route /admin/app-settings) (/admin/app-settings) quan sát được với role Super Admin; 69 item trên DOM. Component: src/pages/admin/app-settings.tsx.",
+  "ctx": "Cài đặt hệ thống · màn SC-002 · actor Super Admin"
+ },
+ "F-002|Entry / Trigger": {
+  "text": "/admin/app-settings",
+  "ctx": "Cài đặt hệ thống · màn SC-002 · actor Super Admin"
+ },
+ "F-003|Function": {
+  "text": "Hiển thị & thao tác màn バーコード読み取り",
+  "ctx": "Vận hành tại cửa hàng · màn SC-003 · actor Admin Tenant"
+ },
+ "F-003|Description": {
+  "text": "Màn バーコード読み取り (/admin/barcode-scanner) quan sát được với role Admin Tenant; 27 item trên DOM. Component: src/pages/admin/barcode-scanner.tsx.",
+  "ctx": "Vận hành tại cửa hàng · màn SC-003 · actor Admin Tenant"
+ },
+ "F-003|Entry / Trigger": {
+  "text": "/admin/barcode-scanner",
+  "ctx": "Vận hành tại cửa hàng · màn SC-003 · actor Admin Tenant"
+ },
+ "F-004|Function": {
+  "text": "Hiển thị & thao tác màn 予約管理",
+  "ctx": "Quản lý đặt chỗ · màn SC-004 · actor Super Admin, Admin Tenant, Admin POSS, Admin Smageri V1"
+ },
+ "F-004|Description": {
+  "text": "Màn 予約管理 (/admin/booking-management) quan sát được với role Super Admin, Admin Tenant, Admin POSS, Admin Smageri V1; 120 item trên DOM. Component: src/pages/admin/booking-management/index.tsx.",
+  "ctx": "Quản lý đặt chỗ · màn SC-004 · actor Super Admin, Admin Tenant, Admin POSS, Admin Smageri V1"
+ },
+ "F-004|Entry / Trigger": {
+  "text": "/admin/booking-management",
+  "ctx": "Quản lý đặt chỗ · màn SC-004 · actor Super Admin, Admin Tenant, Admin POSS, Admin Smageri V1"
+ },
+ "F-005|Function": {
+  "text": "Hiển thị & thao tác màn /admin/booking-management/details/:id",
+  "ctx": "Quản lý đặt chỗ · màn SC-005 · actor UNKNOWN"
+ },
+ "F-005|Description": {
+  "text": "Route /admin/booking-management/details/:id có trong code (src/pages/admin/booking-management/details/[id].tsx) nhưng chưa quan sát được trên UI.",
+  "ctx": "Quản lý đặt chỗ · màn SC-005 · actor UNKNOWN"
+ },
+ "F-005|Entry / Trigger": {
+  "text": "/admin/booking-management/details/:id",
+  "ctx": "Quản lý đặt chỗ · màn SC-005 · actor UNKNOWN"
+ },
+ "F-006|Function": {
+  "text": "Hiển thị & thao tác màn /admin/booking-management/partial-checkout/:id",
+  "ctx": "Quản lý đặt chỗ · màn SC-006 · actor UNKNOWN"
+ },
+ "F-006|Description": {
+  "text": "Route /admin/booking-management/partial-checkout/:id có trong code (src/pages/admin/booking-management/partial-checkout/[id].tsx) nhưng chưa quan sát được trên UI.",
+  "ctx": "Quản lý đặt chỗ · màn SC-006 · actor UNKNOWN"
+ },
+ "F-006|Entry / Trigger": {
+  "text": "/admin/booking-management/partial-checkout/:id",
+  "ctx": "Quản lý đặt chỗ · màn SC-006 · actor UNKNOWN"
+ },
+ "F-007|Function": {
+  "text": "Hiển thị & thao tác màn /admin/booking-management/update/:id",
+  "ctx": "Quản lý đặt chỗ · màn SC-007 · actor UNKNOWN"
+ },
+ "F-007|Description": {
+  "text": "Route /admin/booking-management/update/:id có trong code (src/pages/admin/booking-management/update/[id].tsx) nhưng chưa quan sát được trên UI.",
+  "ctx": "Quản lý đặt chỗ · màn SC-007 · actor UNKNOWN"
+ },
+ "F-007|Entry / Trigger": {
+  "text": "/admin/booking-management/update/:id",
+  "ctx": "Quản lý đặt chỗ · màn SC-007 · actor UNKNOWN"
+ },
+ "F-008|Function": {
+  "text": "Hiển thị & thao tác màn 順番待ち管理",
+  "ctx": "Vận hành tại cửa hàng · màn SC-008 · actor Admin Tenant, Admin POSS, Admin Smageri V1"
+ },
+ "F-008|Description": {
+  "text": "Màn 順番待ち管理 (/admin/booking-queue) quan sát được với role Admin Tenant, Admin POSS, Admin Smageri V1; 25 item trên DOM. Component: src/pages/admin/booking-queue/index.tsx.",
+  "ctx": "Vận hành tại cửa hàng · màn SC-008 · actor Admin Tenant, Admin POSS, Admin Smageri V1"
+ },
+ "F-008|Entry / Trigger": {
+  "text": "/admin/booking-queue",
+  "ctx": "Vận hành tại cửa hàng · màn SC-008 · actor Admin Tenant, Admin POSS, Admin Smageri V1"
+ },
+ "F-009|Function": {
+  "text": "Hiển thị & thao tác màn 在庫調整",
+  "ctx": "Vận hành tại cửa hàng · màn SC-009 · actor Admin Tenant, Admin POSS, Admin Smageri V1"
+ },
+ "F-009|Description": {
+  "text": "Màn 在庫調整 (/admin/booking-vacancies) quan sát được với role Admin Tenant, Admin POSS, Admin Smageri V1; 35 item trên DOM. Component: src/pages/admin/booking-vacancies/index.tsx.",
+  "ctx": "Vận hành tại cửa hàng · màn SC-009 · actor Admin Tenant, Admin POSS, Admin Smageri V1"
+ },
+ "F-009|Entry / Trigger": {
+  "text": "/admin/booking-vacancies",
+  "ctx": "Vận hành tại cửa hàng · màn SC-009 · actor Admin Tenant, Admin POSS, Admin Smageri V1"
+ },
+ "F-010|Function": {
+  "text": "Hiển thị & thao tác màn メール変更",
+  "ctx": "Xác thực & tài khoản admin · màn SC-010 · actor Super Admin"
+ },
+ "F-010|Description": {
+  "text": "Màn メール変更 (/admin/change-email) quan sát được với role Super Admin; 34 item trên DOM. Component: src/pages/admin/change-email.tsx.",
+  "ctx": "Xác thực & tài khoản admin · màn SC-010 · actor Super Admin"
+ },
+ "F-010|Entry / Trigger": {
+  "text": "/admin/change-email",
+  "ctx": "Xác thực & tài khoản admin · màn SC-010 · actor Super Admin"
+ },
+ "F-011|Function": {
+  "text": "Hiển thị & thao tác màn パスワード変更",
+  "ctx": "Xác thực & tài khoản admin · màn SC-011 · actor Super Admin"
+ },
+ "F-011|Description": {
+  "text": "Màn パスワード変更 (/admin/change-password) quan sát được với role Super Admin; 36 item trên DOM. Component: src/pages/admin/change-password.tsx.",
+  "ctx": "Xác thực & tài khoản admin · màn SC-011 · actor Super Admin"
+ },
+ "F-011|Entry / Trigger": {
+  "text": "/admin/change-password",
+  "ctx": "Xác thực & tài khoản admin · màn SC-011 · actor Super Admin"
+ },
+ "F-012|Function": {
+  "text": "Hiển thị & thao tác màn ダッシュボード",
+  "ctx": "Dashboard (admin) · màn SC-012 · actor Super Admin"
+ },
+ "F-012|Description": {
+  "text": "Màn ダッシュボード (/admin/dashboard) quan sát được với role Super Admin; 57 item trên DOM. Component: src/pages/admin/dashboard.tsx.",
+  "ctx": "Dashboard (admin) · màn SC-012 · actor Super Admin"
+ },
+ "F-012|Entry / Trigger": {
+  "text": "/admin/dashboard",
+  "ctx": "Dashboard (admin) · màn SC-012 · actor Super Admin"
+ },
+ "F-013|Function": {
+  "text": "Hiển thị & thao tác màn 免責事項設定",
+  "ctx": "Cài đặt hệ thống · màn SC-013 · actor Super Admin"
+ },
+ "F-013|Description": {
+  "text": "Màn 免責事項設定 (/admin/disclaimer-management) quan sát được với role Super Admin; 58 item trên DOM. Component: src/pages/admin/disclaimer-management.tsx.",
+  "ctx": "Cài đặt hệ thống · màn SC-013 · actor Super Admin"
+ },
+ "F-013|Entry / Trigger": {
+  "text": "/admin/disclaimer-management",
+  "ctx": "Cài đặt hệ thống · màn SC-013 · actor Super Admin"
+ },
+ "F-014|Function": {
+  "text": "Hiển thị & thao tác màn 自動返信メール設定",
+  "ctx": "Cài đặt hệ thống · màn SC-014 · actor Super Admin"
+ },
+ "F-014|Description": {
+  "text": "Màn 自動返信メール設定 (/admin/email-settings) quan sát được với role Super Admin; 55 item trên DOM. Component: src/pages/admin/email-settings/index.tsx.",
+  "ctx": "Cài đặt hệ thống · màn SC-014 · actor Super Admin"
+ },
+ "F-014|Entry / Trigger": {
+  "text": "/admin/email-settings",
+  "ctx": "Cài đặt hệ thống · màn SC-014 · actor Super Admin"
+ },
+ "F-015|Function": {
+  "text": "Hiển thị & thao tác màn /admin/email-settings/edit/:emailKey",
+  "ctx": "Cài đặt hệ thống · màn SC-015 · actor UNKNOWN"
+ },
+ "F-015|Description": {
+  "text": "Route /admin/email-settings/edit/:emailKey có trong code (src/pages/admin/email-settings/edit/[emailKey].tsx) nhưng chưa quan sát được trên UI.",
+  "ctx": "Cài đặt hệ thống · màn SC-015 · actor UNKNOWN"
+ },
+ "F-015|Entry / Trigger": {
+  "text": "/admin/email-settings/edit/:emailKey",
+  "ctx": "Cài đặt hệ thống · màn SC-015 · actor UNKNOWN"
+ },
+ "F-016|Function": {
+  "text": "Hiển thị & thao tác màn パスワードを忘れた場合",
+  "ctx": "Xác thực & tài khoản admin · màn SC-016 · actor Super Admin, Admin Tenant, Admin POSS, Admin Smageri V1"
+ },
+ "F-016|Description": {
+  "text": "Màn パスワードを忘れた場合 (/admin/forgot-password) quan sát được với role Super Admin, Admin Tenant, Admin POSS, Admin Smageri V1; 3 item trên DOM. Component: src/pages/admin/forgot-password.tsx.",
+  "ctx": "Xác thực & tài khoản admin · màn SC-016 · actor Super Admin, Admin Tenant, Admin POSS, Admin Smageri V1"
+ },
+ "F-016|Entry / Trigger": {
+  "text": "/admin/forgot-password",
+  "ctx": "Xác thực & tài khoản admin · màn SC-016 · actor Super Admin, Admin Tenant, Admin POSS, Admin Smageri V1"
+ },
+ "F-017|Function": {
+  "text": "Hiển thị & thao tác màn GMOアカウント管理",
+  "ctx": "Cài đặt hệ thống · màn SC-017 · actor Super Admin"
+ },
+ "F-017|Description": {
+  "text": "Màn GMOアカウント管理 (/admin/gmo-settings) quan sát được với role Super Admin; 59 item trên DOM. Component: src/pages/admin/gmo-settings/index.tsx.",
+  "ctx": "Cài đặt hệ thống · màn SC-017 · actor Super Admin"
+ },
+ "F-017|Entry / Trigger": {
+  "text": "/admin/gmo-settings",
+  "ctx": "Cài đặt hệ thống · màn SC-017 · actor Super Admin"
+ },
+ "F-018|Function": {
+  "text": "Hiển thị & thao tác màn 新規GMOアカウントの設定",
+  "ctx": "Cài đặt hệ thống · màn SC-018 · actor Super Admin, Admin Tenant, Admin POSS, Admin Smageri V1"
+ },
+ "F-018|Description": {
+  "text": "Màn 新規GMOアカウントの設定 (/admin/gmo-settings/create) quan sát được với role Super Admin, Admin Tenant, Admin POSS, Admin Smageri V1; 36 item trên DOM. Component: src/pages/admin/gmo-settings/create.tsx.",
+  "ctx": "Cài đặt hệ thống · màn SC-018 · actor Super Admin, Admin Tenant, Admin POSS, Admin Smageri V1"
+ },
+ "F-018|Entry / Trigger": {
+  "text": "/admin/gmo-settings/create",
+  "ctx": "Cài đặt hệ thống · màn SC-018 · actor Super Admin, Admin Tenant, Admin POSS, Admin Smageri V1"
+ },
+ "F-019|Function": {
+  "text": "Hiển thị & thao tác màn /admin/gmo-settings/edit/:id",
+  "ctx": "Cài đặt hệ thống · màn SC-019 · actor UNKNOWN"
+ },
+ "F-019|Description": {
+  "text": "Route /admin/gmo-settings/edit/:id có trong code (src/pages/admin/gmo-settings/edit/[id].tsx) nhưng chưa quan sát được trên UI.",
+  "ctx": "Cài đặt hệ thống · màn SC-019 · actor UNKNOWN"
+ },
+ "F-019|Entry / Trigger": {
+  "text": "/admin/gmo-settings/edit/:id",
+  "ctx": "Cài đặt hệ thống · màn SC-019 · actor UNKNOWN"
+ },
+ "F-020|Function": {
+  "text": "Hiển thị & thao tác màn /admin/gmo-settings/view/:id",
+  "ctx": "Cài đặt hệ thống · màn SC-020 · actor UNKNOWN"
+ },
+ "F-020|Description": {
+  "text": "Route /admin/gmo-settings/view/:id có trong code (src/pages/admin/gmo-settings/view/[id].tsx) nhưng chưa quan sát được trên UI.",
+  "ctx": "Cài đặt hệ thống · màn SC-020 · actor UNKNOWN"
+ },
+ "F-020|Entry / Trigger": {
+  "text": "/admin/gmo-settings/view/:id",
+  "ctx": "Cài đặt hệ thống · màn SC-020 · actor UNKNOWN"
+ },
+ "F-021|Function": {
+  "text": "Hiển thị & thao tác màn お知らせ管理",
+  "ctx": "Quản lý tin tức · màn SC-021 · actor Super Admin"
+ },
+ "F-021|Description": {
+  "text": "Màn お知らせ管理 (/admin/news-management) quan sát được với role Super Admin; 39 item trên DOM. Component: src/pages/admin/news-management/index.tsx.",
+  "ctx": "Quản lý tin tức · màn SC-021 · actor Super Admin"
+ },
+ "F-021|Entry / Trigger": {
+  "text": "/admin/news-management",
+  "ctx": "Quản lý tin tức · màn SC-021 · actor Super Admin"
+ },
+ "F-022|Function": {
+  "text": "Hiển thị & thao tác màn お知らせの設定",
+  "ctx": "Quản lý tin tức · màn SC-022 · actor Super Admin, Admin Tenant, Admin POSS, Admin Smageri V1"
+ },
+ "F-022|Description": {
+  "text": "Màn お知らせの設定 (/admin/news-management/create) quan sát được với role Super Admin, Admin Tenant, Admin POSS, Admin Smageri V1; 109 item trên DOM. Component: src/pages/admin/news-management/create.tsx.",
+  "ctx": "Quản lý tin tức · màn SC-022 · actor Super Admin, Admin Tenant, Admin POSS, Admin Smageri V1"
+ },
+ "F-022|Entry / Trigger": {
+  "text": "/admin/news-management/create",
+  "ctx": "Quản lý tin tức · màn SC-022 · actor Super Admin, Admin Tenant, Admin POSS, Admin Smageri V1"
+ },
+ "F-023|Function": {
+  "text": "Hiển thị & thao tác màn /admin/news-management/edit/:newsId",
+  "ctx": "Quản lý tin tức · màn SC-023 · actor UNKNOWN"
+ },
+ "F-023|Description": {
+  "text": "Route /admin/news-management/edit/:newsId có trong code (src/pages/admin/news-management/edit/[newsId].tsx) nhưng chưa quan sát được trên UI.",
+  "ctx": "Quản lý tin tức · màn SC-023 · actor UNKNOWN"
+ },
+ "F-023|Entry / Trigger": {
+  "text": "/admin/news-management/edit/:newsId",
+  "ctx": "Quản lý tin tức · màn SC-023 · actor UNKNOWN"
+ },
+ "F-024|Function": {
+  "text": "Hiển thị & thao tác màn /admin/reset-password/:token",
+  "ctx": "Xác thực & tài khoản admin · màn SC-024 · actor UNKNOWN"
+ },
+ "F-024|Description": {
+  "text": "Route /admin/reset-password/:token có trong code (src/pages/admin/reset-password/[token].tsx) nhưng chưa quan sát được trên UI.",
+  "ctx": "Xác thực & tài khoản admin · màn SC-024 · actor UNKNOWN"
+ },
+ "F-024|Entry / Trigger": {
+  "text": "/admin/reset-password/:token",
+  "ctx": "Xác thực & tài khoản admin · màn SC-024 · actor UNKNOWN"
+ },
+ "F-025|Function": {
+  "text": "Hiển thị & thao tác màn 売上管理",
+  "ctx": "Quản lý doanh thu · màn SC-025 · actor Super Admin, Admin Tenant, Admin POSS, Admin Smageri V1"
+ },
+ "F-025|Description": {
+  "text": "Màn 売上管理 (/admin/revenue-management) quan sát được với role Super Admin, Admin Tenant, Admin POSS, Admin Smageri V1; 69 item trên DOM. Component: src/pages/admin/revenue-management.tsx.",
+  "ctx": "Quản lý doanh thu · màn SC-025 · actor Super Admin, Admin Tenant, Admin POSS, Admin Smageri V1"
+ },
+ "F-025|Entry / Trigger": {
+  "text": "/admin/revenue-management",
+  "ctx": "Quản lý doanh thu · màn SC-025 · actor Super Admin, Admin Tenant, Admin POSS, Admin Smageri V1"
+ },
+ "F-026|Function": {
+  "text": "Hiển thị & thao tác màn 入場状況管理",
+  "ctx": "Vận hành tại cửa hàng · màn SC-026 · actor Admin Tenant, Admin Smageri V1"
+ },
+ "F-026|Description": {
+  "text": "Màn 入場状況管理 (/admin/scan-management) quan sát được với role Admin Tenant, Admin Smageri V1; 38 item trên DOM. Component: src/pages/admin/scan-management/index.tsx.",
+  "ctx": "Vận hành tại cửa hàng · màn SC-026 · actor Admin Tenant, Admin Smageri V1"
+ },
+ "F-026|Entry / Trigger": {
+  "text": "/admin/scan-management",
+  "ctx": "Vận hành tại cửa hàng · màn SC-026 · actor Admin Tenant, Admin Smageri V1"
+ },
+ "F-027|Function": {
+  "text": "Hiển thị & thao tác màn UNKNOWN — màn không có heading (route /admin/signin)",
+  "ctx": "Xác thực & tài khoản admin · màn SC-027 · actor Super Admin, Admin Tenant, Admin POSS, Admin Smageri V1"
+ },
+ "F-027|Description": {
+  "text": "Màn UNKNOWN — màn không có heading (route /admin/signin) (/admin/signin) quan sát được với role Super Admin, Admin Tenant, Admin POSS, Admin Smageri V1; 31 item trên DOM. Component: src/pages/admin/signin.tsx.",
+  "ctx": "Xác thực & tài khoản admin · màn SC-027 · actor Super Admin, Admin Tenant, Admin POSS, Admin Smageri V1"
+ },
+ "F-027|Entry / Trigger": {
+  "text": "/admin/signin",
+  "ctx": "Xác thực & tài khoản admin · màn SC-027 · actor Super Admin, Admin Tenant, Admin POSS, Admin Smageri V1"
+ },
+ "F-028|Function": {
+  "text": "Hiển thị & thao tác màn 従業員管理",
+  "ctx": "Quản lý nhân viên · màn SC-028 · actor Super Admin, Admin Tenant, Admin POSS, Admin Smageri V1"
+ },
+ "F-028|Description": {
+  "text": "Màn 従業員管理 (/admin/staff-management) quan sát được với role Super Admin, Admin Tenant, Admin POSS, Admin Smageri V1; 69 item trên DOM. Component: src/pages/admin/staff-management/index.tsx.",
+  "ctx": "Quản lý nhân viên · màn SC-028 · actor Super Admin, Admin Tenant, Admin POSS, Admin Smageri V1"
+ },
+ "F-028|Entry / Trigger": {
+  "text": "/admin/staff-management",
+  "ctx": "Quản lý nhân viên · màn SC-028 · actor Super Admin, Admin Tenant, Admin POSS, Admin Smageri V1"
+ },
+ "F-029|Function": {
+  "text": "Hiển thị & thao tác màn 従業員管理",
+  "ctx": "Quản lý nhân viên · màn SC-029 · actor Super Admin, Admin Tenant, Admin POSS, Admin Smageri V1"
+ },
+ "F-029|Description": {
+  "text": "Màn 従業員管理 (/admin/staff-management/create) quan sát được với role Super Admin, Admin Tenant, Admin POSS, Admin Smageri V1; 46 item trên DOM. Component: src/pages/admin/staff-management/create.tsx.",
+  "ctx": "Quản lý nhân viên · màn SC-029 · actor Super Admin, Admin Tenant, Admin POSS, Admin Smageri V1"
+ },
+ "F-029|Entry / Trigger": {
+  "text": "/admin/staff-management/create",
+  "ctx": "Quản lý nhân viên · màn SC-029 · actor Super Admin, Admin Tenant, Admin POSS, Admin Smageri V1"
+ },
+ "F-030|Function": {
+  "text": "Hiển thị & thao tác màn /admin/staff-management/edit/:id",
+  "ctx": "Quản lý nhân viên · màn SC-030 · actor UNKNOWN"
+ },
+ "F-030|Description": {
+  "text": "Route /admin/staff-management/edit/:id có trong code (src/pages/admin/staff-management/edit/[id].tsx) nhưng chưa quan sát được trên UI.",
+  "ctx": "Quản lý nhân viên · màn SC-030 · actor UNKNOWN"
+ },
+ "F-030|Entry / Trigger": {
+  "text": "/admin/staff-management/edit/:id",
+  "ctx": "Quản lý nhân viên · màn SC-030 · actor UNKNOWN"
+ },
+ "F-031|Function": {
+  "text": "Hiển thị & thao tác màn 施設管理",
+  "ctx": "Quản lý cửa hàng (施設) · màn SC-031 · actor Super Admin"
+ },
+ "F-031|Description": {
+  "text": "Màn 施設管理 (/admin/tenant-management) quan sát được với role Super Admin; 81 item trên DOM. Component: src/pages/admin/tenant-management/index.tsx.",
+  "ctx": "Quản lý cửa hàng (施設) · màn SC-031 · actor Super Admin"
+ },
+ "F-031|Entry / Trigger": {
+  "text": "/admin/tenant-management",
+  "ctx": "Quản lý cửa hàng (施設) · màn SC-031 · actor Super Admin"
+ },
+ "F-032|Function": {
+  "text": "Hiển thị & thao tác màn 新規施設登録",
+  "ctx": "Quản lý cửa hàng (施設) · màn SC-032 · actor Super Admin"
+ },
+ "F-032|Description": {
+  "text": "Màn 新規施設登録 (/admin/tenant-management/create) quan sát được với role Super Admin; 62 item trên DOM. Component: src/pages/admin/tenant-management/create.tsx.",
+  "ctx": "Quản lý cửa hàng (施設) · màn SC-032 · actor Super Admin"
+ },
+ "F-032|Entry / Trigger": {
+  "text": "/admin/tenant-management/create",
+  "ctx": "Quản lý cửa hàng (施設) · màn SC-032 · actor Super Admin"
+ },
+ "F-033|Function": {
+  "text": "Hiển thị & thao tác màn /admin/tenant-management/edit/:tenantCode",
+  "ctx": "Quản lý cửa hàng (施設) · màn SC-033 · actor UNKNOWN"
+ },
+ "F-033|Description": {
+  "text": "Route /admin/tenant-management/edit/:tenantCode có trong code (src/pages/admin/tenant-management/edit/[tenantCode].tsx) nhưng chưa quan sát được trên UI.",
+  "ctx": "Quản lý cửa hàng (施設) · màn SC-033 · actor UNKNOWN"
+ },
+ "F-033|Entry / Trigger": {
+  "text": "/admin/tenant-management/edit/:tenantCode",
+  "ctx": "Quản lý cửa hàng (施設) · màn SC-033 · actor UNKNOWN"
+ },
+ "F-034|Function": {
+  "text": "Hiển thị & thao tác màn /admin/tenant-management/view/:tenantCode",
+  "ctx": "Quản lý cửa hàng (施設) · màn SC-034 · actor UNKNOWN"
+ },
+ "F-034|Description": {
+  "text": "Route /admin/tenant-management/view/:tenantCode có trong code (src/pages/admin/tenant-management/view/[tenantCode].tsx) nhưng chưa quan sát được trên UI.",
+  "ctx": "Quản lý cửa hàng (施設) · màn SC-034 · actor UNKNOWN"
+ },
+ "F-034|Entry / Trigger": {
+  "text": "/admin/tenant-management/view/:tenantCode",
+  "ctx": "Quản lý cửa hàng (施設) · màn SC-034 · actor UNKNOWN"
+ },
+ "F-035|Function": {
+  "text": "Hiển thị & thao tác màn 商品管理",
+  "ctx": "Quản lý sản phẩm (vé) · màn SC-035 · actor Super Admin, Admin Tenant, Admin POSS, Admin Smageri V1"
+ },
+ "F-035|Description": {
+  "text": "Màn 商品管理 (/admin/ticket-management) quan sát được với role Super Admin, Admin Tenant, Admin POSS, Admin Smageri V1; 87 item trên DOM. Component: src/pages/admin/ticket-management/index.tsx.",
+  "ctx": "Quản lý sản phẩm (vé) · màn SC-035 · actor Super Admin, Admin Tenant, Admin POSS, Admin Smageri V1"
+ },
+ "F-035|Entry / Trigger": {
+  "text": "/admin/ticket-management",
+  "ctx": "Quản lý sản phẩm (vé) · màn SC-035 · actor Super Admin, Admin Tenant, Admin POSS, Admin Smageri V1"
+ },
+ "F-036|Function": {
+  "text": "Hiển thị & thao tác màn 商品管理",
+  "ctx": "Quản lý sản phẩm (vé) · màn SC-036 · actor Super Admin, Admin Tenant, Admin POSS, Admin Smageri V1"
+ },
+ "F-036|Description": {
+  "text": "Màn 商品管理 (/admin/ticket-management/create) quan sát được với role Super Admin, Admin Tenant, Admin POSS, Admin Smageri V1; 66 item trên DOM. Component: src/pages/admin/ticket-management/create.tsx.",
+  "ctx": "Quản lý sản phẩm (vé) · màn SC-036 · actor Super Admin, Admin Tenant, Admin POSS, Admin Smageri V1"
+ },
+ "F-036|Entry / Trigger": {
+  "text": "/admin/ticket-management/create",
+  "ctx": "Quản lý sản phẩm (vé) · màn SC-036 · actor Super Admin, Admin Tenant, Admin POSS, Admin Smageri V1"
+ },
+ "F-037|Function": {
+  "text": "Hiển thị & thao tác màn /admin/ticket-management/edit/:ticketId",
+  "ctx": "Quản lý sản phẩm (vé) · màn SC-037 · actor UNKNOWN"
+ },
+ "F-037|Description": {
+  "text": "Route /admin/ticket-management/edit/:ticketId có trong code (src/pages/admin/ticket-management/edit/[ticketId].tsx) nhưng chưa quan sát được trên UI.",
+  "ctx": "Quản lý sản phẩm (vé) · màn SC-037 · actor UNKNOWN"
+ },
+ "F-037|Entry / Trigger": {
+  "text": "/admin/ticket-management/edit/:ticketId",
+  "ctx": "Quản lý sản phẩm (vé) · màn SC-037 · actor UNKNOWN"
+ },
+ "F-038|Function": {
+  "text": "Hiển thị & thao tác màn /admin/ticket-management/view/:ticketId",
+  "ctx": "Quản lý sản phẩm (vé) · màn SC-038 · actor UNKNOWN"
+ },
+ "F-038|Description": {
+  "text": "Route /admin/ticket-management/view/:ticketId có trong code (src/pages/admin/ticket-management/view/[ticketId].tsx) nhưng chưa quan sát được trên UI.",
+  "ctx": "Quản lý sản phẩm (vé) · màn SC-038 · actor UNKNOWN"
+ },
+ "F-038|Entry / Trigger": {
+  "text": "/admin/ticket-management/view/:ticketId",
+  "ctx": "Quản lý sản phẩm (vé) · màn SC-038 · actor UNKNOWN"
+ },
+ "F-039|Function": {
+  "text": "Hiển thị & thao tác màn /admin/unlock-account/:token",
+  "ctx": "Xác thực & tài khoản admin · màn SC-039 · actor UNKNOWN"
+ },
+ "F-039|Description": {
+  "text": "Route /admin/unlock-account/:token có trong code (src/pages/admin/unlock-account/[token].tsx) nhưng chưa quan sát được trên UI.",
+  "ctx": "Xác thực & tài khoản admin · màn SC-039 · actor UNKNOWN"
+ },
+ "F-039|Entry / Trigger": {
+  "text": "/admin/unlock-account/:token",
+  "ctx": "Xác thực & tài khoản admin · màn SC-039 · actor UNKNOWN"
+ },
+ "F-040|Function": {
+  "text": "Hiển thị & thao tác màn ユーザー管理",
+  "ctx": "Quản lý người dùng · màn SC-040 · actor Super Admin, Admin Tenant, Admin POSS, Admin Smageri V1"
+ },
+ "F-040|Description": {
+  "text": "Màn ユーザー管理 (/admin/user-management) quan sát được với role Super Admin, Admin Tenant, Admin POSS, Admin Smageri V1; 85 item trên DOM. Component: src/pages/admin/user-management/index.tsx.",
+  "ctx": "Quản lý người dùng · màn SC-040 · actor Super Admin, Admin Tenant, Admin POSS, Admin Smageri V1"
+ },
+ "F-040|Entry / Trigger": {
+  "text": "/admin/user-management",
+  "ctx": "Quản lý người dùng · màn SC-040 · actor Super Admin, Admin Tenant, Admin POSS, Admin Smageri V1"
+ },
+ "F-041|Function": {
+  "text": "Hiển thị & thao tác màn ユーザー管理",
+  "ctx": "Quản lý người dùng · màn SC-041 · actor Super Admin, Admin Tenant, Admin POSS, Admin Smageri V1"
+ },
+ "F-041|Description": {
+  "text": "Màn ユーザー管理 (/admin/user-management/create) quan sát được với role Super Admin, Admin Tenant, Admin POSS, Admin Smageri V1; 55 item trên DOM. Component: src/pages/admin/user-management/create.tsx.",
+  "ctx": "Quản lý người dùng · màn SC-041 · actor Super Admin, Admin Tenant, Admin POSS, Admin Smageri V1"
+ },
+ "F-041|Entry / Trigger": {
+  "text": "/admin/user-management/create",
+  "ctx": "Quản lý người dùng · màn SC-041 · actor Super Admin, Admin Tenant, Admin POSS, Admin Smageri V1"
+ },
+ "F-042|Function": {
+  "text": "Hiển thị & thao tác màn /admin/user-management/edit/:userId",
+  "ctx": "Quản lý người dùng · màn SC-042 · actor UNKNOWN"
+ },
+ "F-042|Description": {
+  "text": "Route /admin/user-management/edit/:userId có trong code (src/pages/admin/user-management/edit/[userId].tsx) nhưng chưa quan sát được trên UI.",
+  "ctx": "Quản lý người dùng · màn SC-042 · actor UNKNOWN"
+ },
+ "F-042|Entry / Trigger": {
+  "text": "/admin/user-management/edit/:userId",
+  "ctx": "Quản lý người dùng · màn SC-042 · actor UNKNOWN"
+ },
+ "F-043|Function": {
+  "text": "Hiển thị & thao tác màn /admin/user-management/view/:userId",
+  "ctx": "Quản lý người dùng · màn SC-043 · actor UNKNOWN"
+ },
+ "F-043|Description": {
+  "text": "Route /admin/user-management/view/:userId có trong code (src/pages/admin/user-management/view/[userId].tsx) nhưng chưa quan sát được trên UI.",
+  "ctx": "Quản lý người dùng · màn SC-043 · actor UNKNOWN"
+ },
+ "F-043|Entry / Trigger": {
+  "text": "/admin/user-management/view/:userId",
+  "ctx": "Quản lý người dùng · màn SC-043 · actor UNKNOWN"
+ },
+ "F-044|Function": {
+  "text": "Hiển thị & thao tác màn 空き状況",
+  "ctx": "Vận hành tại cửa hàng · màn SC-044 · actor Admin Tenant, Admin POSS, Admin Smageri V1"
+ },
+ "F-044|Description": {
+  "text": "Màn 空き状況 (/admin/vacancies-status) quan sát được với role Admin Tenant, Admin POSS, Admin Smageri V1; 21 item trên DOM. Component: src/pages/admin/vacancies-status/index.tsx.",
+  "ctx": "Vận hành tại cửa hàng · màn SC-044 · actor Admin Tenant, Admin POSS, Admin Smageri V1"
+ },
+ "F-044|Entry / Trigger": {
+  "text": "/admin/vacancies-status",
+  "ctx": "Vận hành tại cửa hàng · màn SC-044 · actor Admin Tenant, Admin POSS, Admin Smageri V1"
+ },
+ "F-045|Function": {
+  "text": "Hiển thị & thao tác màn 待機時間設定",
+  "ctx": "Vận hành tại cửa hàng · màn SC-045 · actor Super Admin"
+ },
+ "F-045|Description": {
+  "text": "Màn 待機時間設定 (/admin/waiting-time-management) quan sát được với role Super Admin; 37 item trên DOM. Component: src/pages/admin/waiting-time-management.tsx.",
+  "ctx": "Vận hành tại cửa hàng · màn SC-045 · actor Super Admin"
+ },
+ "F-045|Entry / Trigger": {
+  "text": "/admin/waiting-time-management",
+  "ctx": "Vận hành tại cửa hàng · màn SC-045 · actor Super Admin"
+ },
+ "F-046|Function": {
+  "text": "Hiển thị & thao tác màn お知らせ",
+  "ctx": "Thông tin công khai · màn SC-046 · actor User, Khách (chưa đăng nhập)"
+ },
+ "F-046|Description": {
+  "text": "Màn お知らせ (/) quan sát được với role User, Khách (chưa đăng nhập); 47 item trên DOM. Component: src/pages/index.tsx.",
+  "ctx": "Thông tin công khai · màn SC-046 · actor User, Khách (chưa đăng nhập)"
+ },
+ "F-047|Function": {
+  "text": "Hiển thị & thao tác màn /403",
+  "ctx": "Trang hệ thống · màn SC-047 · actor UNKNOWN"
+ },
+ "F-047|Description": {
+  "text": "Route /403 có trong code (src/pages/403.tsx) nhưng chưa quan sát được trên UI.",
+  "ctx": "Trang hệ thống · màn SC-047 · actor UNKNOWN"
+ },
+ "F-047|Entry / Trigger": {
+  "text": "/403",
+  "ctx": "Trang hệ thống · màn SC-047 · actor UNKNOWN"
+ },
+ "F-048|Function": {
+  "text": "Hiển thị & thao tác màn フリーパス購入",
+  "ctx": "Mua vé / đặt chỗ · màn SC-048 · actor User, Khách (chưa đăng nhập)"
+ },
+ "F-048|Description": {
+  "text": "Màn フリーパス購入 (/booking/buy-monthly-ticket) quan sát được với role User, Khách (chưa đăng nhập); 45 item trên DOM. Component: src/pages/booking/buy-monthly-ticket.tsx.",
+  "ctx": "Mua vé / đặt chỗ · màn SC-048 · actor User, Khách (chưa đăng nhập)"
+ },
+ "F-048|Entry / Trigger": {
+  "text": "/booking/buy-monthly-ticket",
+  "ctx": "Mua vé / đặt chỗ · màn SC-048 · actor User, Khách (chưa đăng nhập)"
+ },
+ "F-049|Function": {
+  "text": "Hiển thị & thao tác màn 回数券購入",
+  "ctx": "Mua vé / đặt chỗ · màn SC-049 · actor User, Khách (chưa đăng nhập)"
+ },
+ "F-049|Description": {
+  "text": "Màn 回数券購入 (/booking/buy-times-limit-ticket) quan sát được với role User, Khách (chưa đăng nhập); 45 item trên DOM. Component: src/pages/booking/buy-times-limit-ticket.tsx.",
+  "ctx": "Mua vé / đặt chỗ · màn SC-049 · actor User, Khách (chưa đăng nhập)"
+ },
+ "F-049|Entry / Trigger": {
+  "text": "/booking/buy-times-limit-ticket",
+  "ctx": "Mua vé / đặt chỗ · màn SC-049 · actor User, Khách (chưa đăng nhập)"
+ },
+ "F-050|Function": {
+  "text": "Hiển thị & thao tác màn /booking/payment-online",
+  "ctx": "Mua vé / đặt chỗ · màn SC-050 · actor UNKNOWN"
+ },
+ "F-050|Description": {
+  "text": "Route /booking/payment-online có trong code (src/pages/booking/payment-online.tsx) nhưng chưa quan sát được trên UI.",
+  "ctx": "Mua vé / đặt chỗ · màn SC-050 · actor UNKNOWN"
+ },
+ "F-050|Entry / Trigger": {
+  "text": "/booking/payment-online",
+  "ctx": "Mua vé / đặt chỗ · màn SC-050 · actor UNKNOWN"
+ }
+}
