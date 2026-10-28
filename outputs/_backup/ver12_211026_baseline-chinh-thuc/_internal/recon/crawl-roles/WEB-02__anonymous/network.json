@@ -1,0 +1,110 @@
+[
+  {
+    "page": "https://dhxkf93d45vp4.cloudfront.net/booking/buy-monthly-ticket",
+    "url": "https://dhxkf93d45vp4.cloudfront.net/api/user/check-required-info",
+    "status": 401,
+    "at": "2026-10-02T06:11:42.567Z"
+  },
+  {
+    "page": "https://dhxkf93d45vp4.cloudfront.net/booking/buy-times-limit-ticket",
+    "url": "https://dhxkf93d45vp4.cloudfront.net/api/user/check-required-info",
+    "status": 401,
+    "at": "2026-10-02T06:11:44.361Z"
+  },
+  {
+    "page": "https://dhxkf93d45vp4.cloudfront.net/booking/use-in-day",
+    "url": "https://dhxkf93d45vp4.cloudfront.net/api/user/check-required-info",
+    "status": 401,
+    "at": "2026-10-02T06:11:45.528Z"
+  },
+  {
+    "page": "https://dhxkf93d45vp4.cloudfront.net/user/my-page/favorite-tenants",
+    "url": "https://dhxkf93d45vp4.cloudfront.net/api/user/tenant-favorites?page=1&limit=5",
+    "status": 401,
+    "at": "2026-10-02T06:12:07.081Z"
+  },
+  {
+    "page": "https://dhxkf93d45vp4.cloudfront.net/user/my-page/monthly-ticket-status",
+    "url": "https://dhxkf93d45vp4.cloudfront.net/api/user/bookings/monthly-tickets?page=1&limit=4&includeCancelledStatus=true&includeDeadlineDate=true",
+    "status": 401,
+    "at": "2026-10-02T06:12:08.079Z"
+  },
+  {
+    "page": "https://dhxkf93d45vp4.cloudfront.net/user/my-page/monthly-ticket-status",
+    "url": "https://dhxkf93d45vp4.cloudfront.net/api/user/bookings/monthly-tickets/count?includeCancelledStatus=true",
+    "status": 401,
+    "at": "2026-10-02T06:12:08.083Z"
+  },
+  {
+    "page": "https://dhxkf93d45vp4.cloudfront.net/user/my-page/times-limit-ticket-status",
+    "url": "https://dhxkf93d45vp4.cloudfront.net/api/user/bookings/times-limit-tickets?page=1&limit=4&includeCancelledStatus=true&includeDeadlineDate=true",
+    "status": 401,
+    "at": "2026-10-02T06:12:16.418Z"
+  },
+  {
+    "page": "https://dhxkf93d45vp4.cloudfront.net/user/my-page/times-limit-ticket-status",
+    "url": "https://dhxkf93d45vp4.cloudfront.net/api/user/bookings/times-limit-tickets/count?includeCancelledStatus=true",
+    "status": 401,
+    "at": "2026-10-02T06:12:16.420Z"
+  },
+  {
+    "page": "https://dhxkf93d45vp4.cloudfront.net/booking/use-in-day?tenantCode=ST",
+    "url": "https://dhxkf93d45vp4.cloudfront.net/api/user/check-required-info",
+    "status": 401,
+    "at": "2026-10-02T06:12:21.908Z"
+  },
+  {
+    "page": "https://dhxkf93d45vp4.cloudfront.net/booking/use-in-day?tenantCode=ST",
+    "url": "https://dhxkf93d45vp4.cloudfront.net/api/user/bookings/monthly-tickets/check-already-used-across-tenants?tenantCode=ST",
+    "status": 401,
+    "at": "2026-10-02T06:12:22.180Z"
+  },
+  {
+    "page": "https://dhxkf93d45vp4.cloudfront.net/booking/use-in-day?tenantCode=KL",
+    "url": "https://dhxkf93d45vp4.cloudfront.net/api/user/check-required-info",
+    "status": 401,
+    "at": "2026-10-02T06:12:25.050Z"
+  },
+  {
+    "page": "https://dhxkf93d45vp4.cloudfront.net/booking/use-in-day?tenantCode=KL",
+    "url": "https://dhxkf93d45vp4.cloudfront.net/api/user/bookings/monthly-tickets/check-already-used-across-tenants?tenantCode=KL",
+    "status": 401,
+    "at": "2026-10-02T06:12:25.345Z"
+  },
+  {
+    "page": "https://dhxkf93d45vp4.cloudfront.net/booking/use-in-day?tenantCode=0702",
+    "url": "https://dhxkf93d45vp4.cloudfront.net/api/user/check-required-info",
+    "status": 401,
+    "at": "2026-10-02T06:12:27.443Z"
+  },
+  {
+    "page": "https://dhxkf93d45vp4.cloudfront.net/booking/use-in-day?tenantCode=0702",
+    "url": "https://dhxkf93d45vp4.cloudfront.net/api/user/bookings/monthly-tickets/check-already-used-across-tenants?tenantCode=0702",
+    "status": 401,
+    "at": "2026-10-02T06:12:27.701Z"
+  },
+  {
+    "page": "https://dhxkf93d45vp4.cloudfront.net/booking/use-in-day?tenantCode=SMAGE",
+    "url": "https://dhxkf93d45vp4.cloudfront.net/api/user/check-required-info",
+    "status": 401,
+    "at": "2026-10-02T06:12:30.917Z"
+  },
+  {
+    "page": "https://dhxkf93d45vp4.cloudfront.net/booking/use-in-day?tenantCode=SMAGE",
+    "url": "https://dhxkf93d45vp4.cloudfront.net/api/user/bookings/monthly-tickets/check-already-used-across-tenants?tenantCode=SMAGE",
+    "status": 401,
+    "at": "2026-10-02T06:12:31.200Z"
+  },
+  {
+    "page": "https://dhxkf93d45vp4.cloudfront.net/booking/use-in-day?tenantCode=T",
+    "url": "https://dhxkf93d45vp4.cloudfront.net/api/user/check-required-info",
+    "status": 401,
+    "at": "2026-10-02T06:12:33.282Z"
+  },
+  {
+    "page": "https://dhxkf93d45vp4.cloudfront.net/booking/use-in-day?tenantCode=T",
+    "url": "https://dhxkf93d45vp4.cloudfront.net/api/user/bookings/monthly-tickets/check-already-used-across-tenants?tenantCode=T",
+    "status": 401,
+    "at": "2026-10-02T06:12:33.564Z"
+  }
+]

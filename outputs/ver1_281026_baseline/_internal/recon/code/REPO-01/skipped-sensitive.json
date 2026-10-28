@@ -1,0 +1,520 @@
+{
+  "note": "Chi ten file — KHONG doc noi dung (rules/SECURITY.md)",
+  "sensitive": [
+    {
+      "path": ".yarnrc.yml",
+      "reason": "credential-config"
+    },
+    {
+      "path": "prisma/migrations/20220509042826_init_schema/migration.sql",
+      "reason": "key/cert/db-dump"
+    },
+    {
+      "path": "prisma/migrations/20220531104840_add_token_field_to_users_table/migration.sql",
+      "reason": "key/cert/db-dump"
+    },
+    {
+      "path": "prisma/migrations/20220603113718_login_with_line/migration.sql",
+      "reason": "key/cert/db-dump"
+    },
+    {
+      "path": "prisma/migrations/20220607082728_update_db/migration.sql",
+      "reason": "key/cert/db-dump"
+    },
+    {
+      "path": "prisma/migrations/20220610031343_add_tenant_day_off_holiday_tables/migration.sql",
+      "reason": "key/cert/db-dump"
+    },
+    {
+      "path": "prisma/migrations/20220610065212_update_app_settings_table/migration.sql",
+      "reason": "key/cert/db-dump"
+    },
+    {
+      "path": "prisma/migrations/20220621074556_update_db_for_new_features/migration.sql",
+      "reason": "key/cert/db-dump"
+    },
+    {
+      "path": "prisma/migrations/20220621083947_re_add_name_field_for_user_table/migration.sql",
+      "reason": "key/cert/db-dump"
+    },
+    {
+      "path": "prisma/migrations/20220623035102_update_scheme_for_booking_and_user_tables/migration.sql",
+      "reason": "key/cert/db-dump"
+    },
+    {
+      "path": "prisma/migrations/20220624031038_update_ticket_type/migration.sql",
+      "reason": "key/cert/db-dump"
+    },
+    {
+      "path": "prisma/migrations/20220624081527_add_first_checked_in_field_for_bookings_table/migration.sql",
+      "reason": "key/cert/db-dump"
+    },
+    {
+      "path": "prisma/migrations/20220627100918_update_ticket_booking_schedules_table/migration.sql",
+      "reason": "key/cert/db-dump"
+    },
+    {
+      "path": "prisma/migrations/20220628032825_update_bookings_table/migration.sql",
+      "reason": "key/cert/db-dump"
+    },
+    {
+      "path": "prisma/migrations/20220628091929_allow_null_on_some_fields_in_bookings_table/migration.sql",
+      "reason": "key/cert/db-dump"
+    },
+    {
+      "path": "prisma/migrations/20220629032403_add_users_tenants_favorites_table/migration.sql",
+      "reason": "key/cert/db-dump"
+    },
+    {
+      "path": "prisma/migrations/20220629073754_update_relation_on_users_tenants_favorites_table/migration.sql",
+      "reason": "key/cert/db-dump"
+    },
+    {
+      "path": "prisma/migrations/20220630081252_update_db_for_new_requirement/migration.sql",
+      "reason": "key/cert/db-dump"
+    },
+    {
+      "path": "prisma/migrations/20220711030637_update_related_ticket_tables/migration.sql",
+      "reason": "key/cert/db-dump"
+    },
+    {
+      "path": "prisma/migrations/20220711081252_update_fields_for_ticket_and_booking/migration.sql",
+      "reason": "key/cert/db-dump"
+    },
+    {
+      "path": "prisma/migrations/20220719065259_change_coupon_code_to_json_type/migration.sql",
+      "reason": "key/cert/db-dump"
+    },
+    {
+      "path": "prisma/migrations/20220720101520_update_booking_schema/migration.sql",
+      "reason": "key/cert/db-dump"
+    },
+    {
+      "path": "prisma/migrations/20220722090751_update_booking_fields/migration.sql",
+      "reason": "key/cert/db-dump"
+    },
+    {
+      "path": "prisma/migrations/20220725110859_update_bookings_schema/migration.sql",
+      "reason": "key/cert/db-dump"
+    },
+    {
+      "path": "prisma/migrations/20220728045434_remove_redundant_fields_on_ticket_detail_table/migration.sql",
+      "reason": "key/cert/db-dump"
+    },
+    {
+      "path": "prisma/migrations/20220801041348_update_discount_fields_on_ticket_details_table/migration.sql",
+      "reason": "key/cert/db-dump"
+    },
+    {
+      "path": "prisma/migrations/20220802085340_add_codes_for_child_and_adult_on_tickets_table/migration.sql",
+      "reason": "key/cert/db-dump"
+    },
+    {
+      "path": "prisma/migrations/20220802085804_refactor_field_names_on_tickets_table/migration.sql",
+      "reason": "key/cert/db-dump"
+    },
+    {
+      "path": "prisma/migrations/20220804023400_update_field_names_for_ticket_details_table/migration.sql",
+      "reason": "key/cert/db-dump"
+    },
+    {
+      "path": "prisma/migrations/20220810024313_add_privacy_settings_table/migration.sql",
+      "reason": "key/cert/db-dump"
+    },
+    {
+      "path": "prisma/migrations/20220815024331_remove_privacy_setting_table_and_consolidate_related_fields/migration.sql",
+      "reason": "key/cert/db-dump"
+    },
+    {
+      "path": "prisma/migrations/20220815030232_re_add_province_field_for_address_info/migration.sql",
+      "reason": "key/cert/db-dump"
+    },
+    {
+      "path": "prisma/migrations/20220826102811_update_db_base_on_new_ui/migration.sql",
+      "reason": "key/cert/db-dump"
+    },
+    {
+      "path": "prisma/migrations/20220905070757_add_max_booking_people_accumulative_field_for_ticket_booking_schedule/migration.sql",
+      "reason": "key/cert/db-dump"
+    },
+    {
+      "path": "prisma/migrations/20220905080352_move_can_book_in_advance_field_to_ticket_table/migration.sql",
+      "reason": "key/cert/db-dump"
+    },
+    {
+      "path": "prisma/migrations/20220912081129_drop_full_name_field_on_tenants_table/migration.sql",
+      "reason": "key/cert/db-dump"
+    },
+    {
+      "path": "prisma/migrations/20220912103830_remove_not_null_for_some_fields_on_tenants_table/migration.sql",
+      "reason": "key/cert/db-dump"
+    },
+    {
+      "path": "prisma/migrations/20220916082004_add_deleted_field_to_tenants_table_for_soft_deleted/migration.sql",
+      "reason": "key/cert/db-dump"
+    },
+    {
+      "path": "prisma/migrations/20221006104859_add_indexing_for_some_tables/migration.sql",
+      "reason": "key/cert/db-dump"
+    },
+    {
+      "path": "prisma/migrations/20221011023946_add_can_booking_from_field_for_ticket_booking_schedule_table/migration.sql",
+      "reason": "key/cert/db-dump"
+    },
+    {
+      "path": "prisma/migrations/20221018101827_add_news_table/migration.sql",
+      "reason": "key/cert/db-dump"
+    },
+    {
+      "path": "prisma/migrations/20221027101847_add_ticket_booking_schedule_id_field_for_booking_table/migration.sql",
+      "reason": "key/cert/db-dump"
+    },
+    {
+      "path": "prisma/migrations/20221031024158_add_invisible_when_reached_max_booking_people_field_for_ticket_booking_schedule_table/migration.sql",
+      "reason": "key/cert/db-dump"
+    },
+    {
+      "path": "prisma/migrations/20221125021634_add_display_order_field_for_ticket_table/migration.sql",
+      "reason": "key/cert/db-dump"
+    },
+    {
+      "path": "prisma/migrations/20221129043840_add_created_at_field_for_user_tenants_favorites_table/migration.sql",
+      "reason": "key/cert/db-dump"
+    },
+    {
+      "path": "prisma/migrations/20221206044824_add_cancelled_at_field_for_bookings_table/migration.sql",
+      "reason": "key/cert/db-dump"
+    },
+    {
+      "path": "prisma/migrations/20221207021013_add_note_field_for_tenant_table/migration.sql",
+      "reason": "key/cert/db-dump"
+    },
+    {
+      "path": "prisma/migrations/20221208024212_add_requested_re_check_in_at_field_for_bookings_table/migration.sql",
+      "reason": "key/cert/db-dump"
+    },
+    {
+      "path": "prisma/migrations/20221208035447_add_deleted_field_for_users_table/migration.sql",
+      "reason": "key/cert/db-dump"
+    },
+    {
+      "path": "prisma/migrations/20221214044921_add_disclaimer_tables/migration.sql",
+      "reason": "key/cert/db-dump"
+    },
+    {
+      "path": "prisma/migrations/20221229080008_allow_null_value_for_gender_on_user_table/migration.sql",
+      "reason": "key/cert/db-dump"
+    },
+    {
+      "path": "prisma/migrations/20230103063331_update_db_for_partial_checkout_feature/migration.sql",
+      "reason": "key/cert/db-dump"
+    },
+    {
+      "path": "prisma/migrations/20230110022548_add_deleted_field_for_partial_checkouts_table/migration.sql",
+      "reason": "key/cert/db-dump"
+    },
+    {
+      "path": "prisma/migrations/20230117071830_add_re_check_in_count_field_for_booking_table/migration.sql",
+      "reason": "key/cert/db-dump"
+    },
+    {
+      "path": "prisma/migrations/20230119024224_add_gmo_transaction_id_field_for_booking_table/migration.sql",
+      "reason": "key/cert/db-dump"
+    },
+    {
+      "path": "prisma/migrations/20230126150158_add_active_field_to_email_setting_table/migration.sql",
+      "reason": "key/cert/db-dump"
+    },
+    {
+      "path": "prisma/migrations/20230131025947_add_waiting_at_field_for_bookings_table/migration.sql",
+      "reason": "key/cert/db-dump"
+    },
+    {
+      "path": "prisma/migrations/20230206033408_add_deleted_field_on_ticket_booking_schedules_table/migration.sql",
+      "reason": "key/cert/db-dump"
+    },
+    {
+      "path": "prisma/migrations/20230208083210_add_stay_duration_fields_for_bookings_table/migration.sql",
+      "reason": "key/cert/db-dump"
+    },
+    {
+      "path": "prisma/migrations/20230217084930_add_partial_checked_out_at_field_for_bookings_table/migration.sql",
+      "reason": "key/cert/db-dump"
+    },
+    {
+      "path": "prisma/migrations/20230309033641_remove_unique_constraint_on_ticket_booking_schedules_table/migration.sql",
+      "reason": "key/cert/db-dump"
+    },
+    {
+      "path": "prisma/migrations/20230405071732_add_is_promotion_field_for_tickets_table/migration.sql",
+      "reason": "key/cert/db-dump"
+    },
+    {
+      "path": "prisma/migrations/20230711074520_add_gmo_and_security_tables/migration.sql",
+      "reason": "key/cert/db-dump"
+    },
+    {
+      "path": "prisma/migrations/20230711075236_fix_typo_field_in_security_answers_table/migration.sql",
+      "reason": "key/cert/db-dump"
+    },
+    {
+      "path": "prisma/migrations/20230721025830_add_unique_constraint_on_gmo_setting_table/migration.sql",
+      "reason": "key/cert/db-dump"
+    },
+    {
+      "path": "prisma/migrations/20230724101624_add_first_checked_out_booking_id_field_to_user_table/migration.sql",
+      "reason": "key/cert/db-dump"
+    },
+    {
+      "path": "prisma/migrations/20230803034522_remove_security_answer_table/migration.sql",
+      "reason": "key/cert/db-dump"
+    },
+    {
+      "path": "prisma/migrations/20230814084906_add_staffs_and_admin_activity_logs_tables/migration.sql",
+      "reason": "key/cert/db-dump"
+    },
+    {
+      "path": "prisma/migrations/20230816042314_remove_unique_constraint_on_staff_table/migration.sql",
+      "reason": "key/cert/db-dump"
+    },
+    {
+      "path": "prisma/migrations/20230816043636_add_created_at_and_updated_at_fields_on_staff_table/migration.sql",
+      "reason": "key/cert/db-dump"
+    },
+    {
+      "path": "prisma/migrations/20230905033841_add_index_for_booking_id_field_on_booking_child_age_infos_table/migration.sql",
+      "reason": "key/cert/db-dump"
+    },
+    {
+      "path": "prisma/migrations/20231127043717_add_start_and_end_sale_at_on_ticket_detail_table/migration.sql",
+      "reason": "key/cert/db-dump"
+    },
+    {
+      "path": "prisma/migrations/20231128062959_update_only_save_date_start_end_sale_at_fields/migration.sql",
+      "reason": "key/cert/db-dump"
+    },
+    {
+      "path": "prisma/migrations/20240318065913_add_ticket_discount_settings_table/migration.sql",
+      "reason": "key/cert/db-dump"
+    },
+    {
+      "path": "prisma/migrations/20240321135937_add_hourly_extra_time_setting_field_for_ticket_discount_settings_table/migration.sql",
+      "reason": "key/cert/db-dump"
+    },
+    {
+      "path": "prisma/migrations/20240923092014_add_some_fields_for_ticket_booking_schedules_table/migration.sql",
+      "reason": "key/cert/db-dump"
+    },
+    {
+      "path": "prisma/migrations/20241015105214_add_some_indexes_for_bookings_and_ticket_tables/migration.sql",
+      "reason": "key/cert/db-dump"
+    },
+    {
+      "path": "prisma/migrations/20241120074009_add_more_fields_for_master_monthly_ticket/migration.sql",
+      "reason": "key/cert/db-dump"
+    },
+    {
+      "path": "prisma/migrations/20241121080516_remove_constraint_not_null_of_tenant_code_on_ticket_table/migration.sql",
+      "reason": "key/cert/db-dump"
+    },
+    {
+      "path": "prisma/migrations/20241213120637_add_group_id_field_for_ticket_table/migration.sql",
+      "reason": "key/cert/db-dump"
+    },
+    {
+      "path": "prisma/migrations/20250502024109_add_more_fields_for_deleted_user/migration.sql",
+      "reason": "key/cert/db-dump"
+    },
+    {
+      "path": "prisma/migrations/20250707040410_add_more_indexes_for_bookings_table/migration.sql",
+      "reason": "key/cert/db-dump"
+    },
+    {
+      "path": "prisma/migrations/20250707083957_add_indexs_for_some_tables/migration.sql",
+      "reason": "key/cert/db-dump"
+    },
+    {
+      "path": "prisma/migrations/20250707085135_add_ticket_id_index_for_ticket_discount_settings_table/migration.sql",
+      "reason": "key/cert/db-dump"
+    },
+    {
+      "path": "prisma/migrations/20250707090922_remove_holidays_and_tenant_dayoffs_tables/migration.sql",
+      "reason": "key/cert/db-dump"
+    },
+    {
+      "path": "prisma/migrations/20250716095747_add_new_column_support_times_limit_ticket/down.sql",
+      "reason": "key/cert/db-dump"
+    },
+    {
+      "path": "prisma/migrations/20250716095747_add_new_column_support_times_limit_ticket/migration.sql",
+      "reason": "key/cert/db-dump"
+    },
+    {
+      "path": "prisma/migrations/20251117014538_add_booking_expiration_reminded_at_column/migration.sql",
+      "reason": "key/cert/db-dump"
+    },
+    {
+      "path": "prisma/migrations/20251216011658_add_ticket_booking_schedule_index/migration.sql",
+      "reason": "key/cert/db-dump"
+    },
+    {
+      "path": "prisma/migrations/20251216025727_modify_booking_parent_booking_id_idx/migration.sql",
+      "reason": "key/cert/db-dump"
+    },
+    {
+      "path": "prisma/migrations/20251218081036_add_indices_for_frequent_queries/migration.sql",
+      "reason": "key/cert/db-dump"
+    },
+    {
+      "path": "prisma/migrations/20260327073352_add_smaregi_qrcode_url/migration.sql",
+      "reason": "key/cert/db-dump"
+    },
+    {
+      "path": "prisma/migrations/20260329023002_add_new_smaregi_pos_columns/migration.sql",
+      "reason": "key/cert/db-dump"
+    },
+    {
+      "path": "prisma/migrations/20260414133827_create_smaregi_barcode_for_1st_booking_of_monthly_ticket/migration.sql",
+      "reason": "key/cert/db-dump"
+    },
+    {
+      "path": "prisma/migrations/20260415100652_add_column_is_smaregi_scanned_in_bookings_tables/migration.sql",
+      "reason": "key/cert/db-dump"
+    },
+    {
+      "path": "prisma/migrations/20260529030706_add_obic_code_to_ticket_and_booking/down.sql",
+      "reason": "key/cert/db-dump"
+    },
+    {
+      "path": "prisma/migrations/20260529030706_add_obic_code_to_ticket_and_booking/migration.sql",
+      "reason": "key/cert/db-dump"
+    },
+    {
+      "path": "prisma/migrations/20260609000000_add_deleted_to_booking_obic_codes/down.sql",
+      "reason": "key/cert/db-dump"
+    },
+    {
+      "path": "prisma/migrations/20260609000000_add_deleted_to_booking_obic_codes/migration.sql",
+      "reason": "key/cert/db-dump"
+    },
+    {
+      "path": "prisma/migrations/20260611091743_init_table_support_smaregi_v2/down.sql",
+      "reason": "key/cert/db-dump"
+    },
+    {
+      "path": "prisma/migrations/20260611091743_init_table_support_smaregi_v2/migration.sql",
+      "reason": "key/cert/db-dump"
+    },
+    {
+      "path": "prisma/migrations/20260612030545_change_tenant_version_type/down.sql",
+      "reason": "key/cert/db-dump"
+    },
+    {
+      "path": "prisma/migrations/20260612030545_change_tenant_version_type/migration.sql",
+      "reason": "key/cert/db-dump"
+    },
+    {
+      "path": "prisma/migrations/20260619060451_add_smaregi_contract_id_to_tenant_table/down.sql",
+      "reason": "key/cert/db-dump"
+    },
+    {
+      "path": "prisma/migrations/20260619060451_add_smaregi_contract_id_to_tenant_table/migration.sql",
+      "reason": "key/cert/db-dump"
+    },
+    {
+      "path": "prisma/migrations/20260622095833_add_temp_checkout_at_to_bookings/down.sql",
+      "reason": "key/cert/db-dump"
+    },
+    {
+      "path": "prisma/migrations/20260622095833_add_temp_checkout_at_to_bookings/migration.sql",
+      "reason": "key/cert/db-dump"
+    },
+    {
+      "path": "prisma/migrations/20260701012628_set_default_allowed_version_tenant_to_v2/down.sql",
+      "reason": "key/cert/db-dump"
+    },
+    {
+      "path": "prisma/migrations/20260701012628_set_default_allowed_version_tenant_to_v2/migration.sql",
+      "reason": "key/cert/db-dump"
+    },
+    {
+      "path": "prisma/migrations/20260709060642_add_checked_in_at_to_smaregi_temporary_transactions/down.sql",
+      "reason": "key/cert/db-dump"
+    },
+    {
+      "path": "prisma/migrations/20260709060642_add_checked_in_at_to_smaregi_temporary_transactions/migration.sql",
+      "reason": "key/cert/db-dump"
+    },
+    {
+      "path": "prisma/migrations/20260714000000_add_smaregi_confirmed_transaction_to_bookings/down.sql",
+      "reason": "key/cert/db-dump"
+    },
+    {
+      "path": "prisma/migrations/20260714000000_add_smaregi_confirmed_transaction_to_bookings/migration.sql",
+      "reason": "key/cert/db-dump"
+    },
+    {
+      "path": "prisma/migrations/20260721000000_add_smaregi_confirmed_transaction_cancelled_at_to_bookings/migration.sql",
+      "reason": "key/cert/db-dump"
+    },
+    {
+      "path": "prisma/migrations/20260728000000_add_line_user_id_to_users/down.sql",
+      "reason": "key/cert/db-dump"
+    },
+    {
+      "path": "prisma/migrations/20260728000000_add_line_user_id_to_users/migration.sql",
+      "reason": "key/cert/db-dump"
+    },
+    {
+      "path": "prisma/migrations/20260807000000_add_first_checkout_at_to_bookings/down.sql",
+      "reason": "key/cert/db-dump"
+    },
+    {
+      "path": "prisma/migrations/20260807000000_add_first_checkout_at_to_bookings/migration.sql",
+      "reason": "key/cert/db-dump"
+    },
+    {
+      "path": "prisma/migrations/20260810000000_add_smaregi_terminal_id_to_tenants/down.sql",
+      "reason": "key/cert/db-dump"
+    },
+    {
+      "path": "prisma/migrations/20260810000000_add_smaregi_terminal_id_to_tenants/migration.sql",
+      "reason": "key/cert/db-dump"
+    },
+    {
+      "path": "prisma/migrations/20260819000000_prefix_deleted_users_email/down.sql",
+      "reason": "key/cert/db-dump"
+    },
+    {
+      "path": "prisma/migrations/20260819000000_prefix_deleted_users_email/migration.sql",
+      "reason": "key/cert/db-dump"
+    }
+  ],
+  "too_large": [],
+  "reopened": [
+    "src/components/ForgotPassword/ForgotPasswordSuccess.tsx",
+    "src/components/ResetPasswordAdmin/ResetPasswordSuccess.tsx",
+    "src/pages/forgot-password.tsx",
+    "src/pages/admin/change-password.tsx",
+    "src/pages/admin/forgot-password.tsx",
+    "src/pages/admin/reset-password/[token].tsx",
+    "src/pages/admin/unlock-account/[token].tsx",
+    "src/pages/api/admin/admin-credentials-confirmation.ts",
+    "src/pages/api/admin/credentials-confirmation.ts",
+    "src/pages/api/admin/password-confirmation.ts",
+    "src/pages/api/auth/change-password.ts",
+    "src/pages/api/auth/check-admin-credentials.ts",
+    "src/pages/api/auth/fetch-access-token.ts",
+    "src/pages/api/auth/forgot-password.ts",
+    "src/pages/api/auth/reset-password.ts",
+    "src/pages/api/auth/update-password.ts",
+    "src/pages/api/auth/verify/[token].ts",
+    "src/pages/reset-password/[token].tsx",
+    "src/pages/user/my-page/personal-info/change-password.tsx",
+    "src/pages/user/my-page/personal-info/update-information/verify-edit-email/[token].tsx",
+    "src/pages/user/my-page/personal-info/update-password/[token].tsx",
+    "src/pages/verify/[token].tsx",
+    "src/stores/reducers/credentials-confirmation.ts",
+    "src/stores/reducers/password-confirmation.ts"
+  ]
+}

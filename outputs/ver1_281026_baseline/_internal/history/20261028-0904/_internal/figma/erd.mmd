@@ -1,0 +1,157 @@
+erDiagram
+  accounts["accounts (12 cột)"] {
+    text id PK
+    integer user_id FK
+    text provider
+    text provider_account_id
+  }
+  admin_activity_logs["admin_activity_logs (7 cột)"] {
+    serial id PK
+    integer user_id FK
+    text staff_id FK
+  }
+  admins_tenants["admins_tenants (2 cột)"] {
+    integer user_id PK, FK
+    text tenant_code PK, FK
+  }
+  app_settings["app_settings (6 cột)"] {
+    text setting_key PK
+    datatype data_type
+    timestamp updated_at
+  }
+  booking_child_age_infos["booking_child_age_infos (3 cột)"] {
+    serial id PK
+    integer booking_id FK
+  }
+  booking_obic_codes["booking_obic_codes (14 cột)"] {
+    serial id PK
+    integer booking_id FK
+    obiccodekind kind
+    obicaudience audience
+    obicsourcefield source_field
+  }
+  bookings["bookings (45 cột)"] {
+    serial id PK
+    text tenant_code FK
+    integer ticket_id FK
+    integer user_id FK
+    integer ticket_booking_schedule_id FK
+    bookingstatus_new status
+    paymentstatus_new payment_status
+    text bar_code
+  }
+  disclaimer_options["disclaimer_options (5 cột)"] {
+    serial id PK
+    integer disclaimer_id FK
+    timestamp updated_at
+  }
+  disclaimers["disclaimers (4 cột)"] {
+    serial id PK
+    timestamp updated_at
+  }
+  email_settings["email_settings (7 cột)"] {
+    text email_key PK
+    timestamp updated_at
+  }
+  gmo_settings["gmo_settings (6 cột)"] {
+    serial id PK
+    text shop_id
+    timestamp updated_at
+  }
+  news["news (6 cột)"] {
+    serial id PK
+    timestamp updated_at
+  }
+  partial_checkouts["partial_checkouts (7 cột)"] {
+    serial id PK
+    integer booking_id FK
+    integer booking_child_age_info_id FK
+  }
+  security_questions["security_questions (3 cột)"] {
+    serial id PK
+  }
+  smaregi_temporary_transactions["smaregi_temporary_transactions (16 cột)"] {
+    serial id PK
+    text temporary_transaction_barcode
+    smaregitemporarystatus status
+    timestamp updated_at
+  }
+  smaregi_transactions["smaregi_transactions (10 cột)"] {
+    serial id PK
+    text transaction_head_id
+  }
+  sse_notifications["sse_notifications (4 cột)"] {
+    serial id PK
+  }
+  staffs["staffs (11 cột)"] {
+    text id PK
+    text tenant_code FK
+    role role
+    timestamp updated_at
+  }
+  tenants["tenants (22 cột)"] {
+    text code PK
+    integer gmo_id FK
+    timestamp updated_at
+    tenantversion_new allowed_version
+  }
+  ticket_booking_schedules["ticket_booking_schedules (47 cột)"] {
+    serial id PK
+    integer ticket_id FK
+    priceunit_new base_adult_period_unit
+    priceunit_new base_child_period_unit
+    priceunit_new extended_adult_period_unit
+    priceunit_new extended_child_period_unit
+    date date_from
+    date date_to
+  }
+  ticket_details["ticket_details (29 cột)"] {
+    serial id PK
+    integer ticket_id FK
+    timestamp updated_at
+  }
+  ticket_discount_settings["ticket_discount_settings (6 cột)"] {
+    serial id PK
+    integer ticket_id FK
+    timestamp updated_at
+  }
+  tickets["tickets (19 cột)"] {
+    serial id PK
+    text tenant_code FK
+    paymenttype payment_type
+    tickettype_new ticket_type
+    timestamp updated_at
+  }
+  users["users (29 cột)"] {
+    serial id PK
+    text email
+    timestamp updated_at
+    text token
+    role role
+  }
+  users_tenants_favorites["users_tenants_favorites (3 cột)"] {
+    integer user_id PK, FK
+    text tenant_code PK, FK
+  }
+  booking_child_age_infos |o--o{ partial_checkouts : "booking_child_age_info_id"
+  bookings ||--o{ booking_child_age_infos : "booking_id"
+  bookings ||--o{ booking_obic_codes : "booking_id"
+  bookings ||--o{ partial_checkouts : "booking_id"
+  disclaimers ||--o{ disclaimer_options : "disclaimer_id"
+  gmo_settings |o--o{ tenants : "gmo_id"
+  staffs |o--o{ admin_activity_logs : "staff_id"
+  tenants |o--o{ tickets : "tenant_code"
+  tenants ||--o{ admins_tenants : "tenant_code"
+  tenants ||--o{ bookings : "tenant_code"
+  tenants ||--o{ staffs : "tenant_code"
+  tenants ||--o{ users_tenants_favorites : "tenant_code"
+  ticket_booking_schedules |o--o{ bookings : "ticket_booking_schedule_id"
+  tickets ||--o{ bookings : "ticket_id"
+  tickets ||--o{ ticket_booking_schedules : "ticket_id"
+  tickets ||--o{ ticket_details : "ticket_id"
+  tickets ||--o{ ticket_discount_settings : "ticket_id"
+  users |o--o{ bookings : "user_id"
+  users ||--o{ accounts : "user_id"
+  users ||--o{ admin_activity_logs : "user_id"
+  users ||--o{ admins_tenants : "user_id"
+  users ||--o{ users_tenants_favorites : "user_id"

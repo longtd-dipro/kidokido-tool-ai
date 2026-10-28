@@ -1,0 +1,180 @@
+flowchart LR
+  subgraph s1 ["WEB-01 Trang quản trị"]
+    m0["Cài đặt hệ thống · 8 màn"]
+    m1["Dashboard (admin) · 2 màn"]
+    m2["Quản lý cửa hàng (施設) · 4 màn"]
+    m3["Quản lý doanh thu · 1 màn"]
+    m4["Quản lý người dùng · 4 màn"]
+    m5["Quản lý nhân viên · 3 màn"]
+    m6["Quản lý sản phẩm (vé) · 4 màn"]
+    m7["Quản lý tin tức · 3 màn"]
+    m8["Quản lý đặt chỗ · 4 màn"]
+    m9["Vận hành tại cửa hàng · 6 màn"]
+    m10["Xác thực & tài khoản admin · 6 màn"]
+  end
+  subgraph s2 ["WEB-02 Trang người dùng"]
+    m11["Mua vé / đặt chỗ · 7 màn"]
+    m12["Thông tin công khai · 6 màn"]
+    m13["Trang cá nhân · 23 màn"]
+    m14["Trang hệ thống · 3 màn"]
+    m15["Trang pháp lý · 3 màn"]
+    m16["Xác thực & tài khoản user · 6 màn"]
+  end
+  subgraph apis ["API — 143 API · 20 nhóm"]
+    g17["admin · 61 API"]
+    g18["app-settings · 2 API"]
+    g19["auth · 14 API"]
+    g20["bookings · 8 API"]
+    g21["cron-job · 7 API"]
+    g22["disclaimers · 1 API"]
+    g23["error-report · 1 API"]
+    g24["gmo · 1 API"]
+    g25["health · 1 API"]
+    g26["migration · 7 API"]
+    g27["news · 1 API"]
+    g28["pos · 5 API"]
+    g29["smaregi · 1 API"]
+    g30["status · 1 API"]
+    g31["tenants · 3 API"]
+    g32["tickets-supported · 1 API"]
+    g33["tickets · 2 API"]
+    g34["upload · 1 API"]
+    g35["user · 24 API"]
+    g36["other · 1 API"]
+  end
+  subgraph db ["Cơ sở dữ liệu — 25 bảng (nhóm API → bảng: chỉ vẽ khi từ 3 API của nhóm dùng bảng)"]
+    t37[("accounts")]
+    t38[("admin_activity_logs")]
+    t39[("admins_tenants")]
+    t40[("app_settings")]
+    t41[("booking_child_age_infos")]
+    t42[("booking_obic_codes")]
+    t43[("bookings")]
+    t44[("disclaimer_options")]
+    t45[("disclaimers")]
+    t46[("email_settings")]
+    t47[("gmo_settings")]
+    t48[("news")]
+    t49[("partial_checkouts")]
+    t50[("security_questions")]
+    t51[("smaregi_temporary_transactions")]
+    t52[("smaregi_transactions")]
+    t53[("sse_notifications")]
+    t54[("staffs")]
+    t55[("tenants")]
+    t56[("ticket_booking_schedules")]
+    t57[("ticket_details")]
+    t58[("ticket_discount_settings")]
+    t59[("tickets")]
+    t60[("users")]
+    t61[("users_tenants_favorites")]
+  end
+  m0 -->|"15"| g17
+  m0 -->|"7"| g36
+  m1 -->|"8"| g17
+  m2 -->|"14"| g17
+  m2 -->|"1"| g19
+  m2 -->|"2"| g34
+  m3 -->|"4"| g17
+  m4 -->|"14"| g17
+  m5 -->|"8"| g17
+  m6 -->|"26"| g17
+  m6 -->|"4"| g34
+  m7 -->|"3"| g17
+  m7 -->|"4"| g36
+  m8 -->|"12"| g17
+  m8 -->|"5"| g20
+  m8 -->|"3"| g36
+  m8 -->|"1"| g33
+  m8 -->|"1"| g35
+  m9 -->|"14"| g17
+  m9 -->|"1"| g20
+  m9 -->|"5"| g36
+  m9 -->|"1"| g33
+  m10 -->|"8"| g19
+  m11 -->|"12"| g20
+  m11 -->|"2"| g22
+  m11 -->|"4"| g36
+  m11 -->|"4"| g31
+  m11 -->|"4"| g33
+  m11 -->|"21"| g35
+  m12 -->|"1"| g19
+  m12 -->|"4"| g20
+  m12 -->|"1"| g27
+  m12 -->|"6"| g31
+  m12 -->|"2"| g33
+  m12 -->|"7"| g35
+  m13 -->|"2"| g19
+  m13 -->|"11"| g20
+  m13 -->|"6"| g36
+  m13 -->|"1"| g31
+  m13 -->|"24"| g35
+  m16 -->|"6"| g19
+  m16 -->|"1"| g36
+  m16 -->|"3"| g35
+  g17 --> t38
+  g17 --> t40
+  g17 --> t41
+  g17 --> t42
+  g17 --> t43
+  g17 --> t46
+  g17 --> t47
+  g17 --> t49
+  g17 --> t53
+  g17 --> t54
+  g17 --> t55
+  g17 --> t56
+  g17 --> t57
+  g17 --> t58
+  g17 --> t59
+  g17 --> t60
+  g19 --> t46
+  g19 --> t60
+  g20 --> t40
+  g20 --> t43
+  g20 --> t55
+  g20 --> t56
+  g20 --> t57
+  g20 --> t59
+  g21 --> t40
+  g21 --> t43
+  g21 --> t46
+  g21 --> t55
+  g21 --> t56
+  g21 --> t59
+  g21 --> t60
+  g28 --> t43
+  g28 --> t49
+  g28 --> t56
+  g28 --> t57
+  g28 --> t58
+  g28 --> t59
+  g31 --> t55
+  g35 --> t41
+  g35 --> t43
+  g35 --> t46
+  g35 --> t49
+  g35 --> t55
+  g35 --> t56
+  g35 --> t57
+  g35 --> t58
+  g35 --> t59
+  g35 --> t60
+  g35 --> t61
+  subgraph ext ["Bên ngoài / chạy nền (không có màn)"]
+    xPos["Máy POS tại quầy"]
+    xSma["Smaregi"]
+    xGmo["GMO thanh toán"]
+    xCron["Lịch chạy tự động"]
+    xMig["Bảo trì chạy tay"]
+  end
+  xPos --> g28
+  xSma --> g29
+  xGmo -->|"kết quả 3DS"| g24
+  xCron --> g21
+  xMig -.-> g26
+  style ext fill:#FBEEFF,stroke:#6639BA
+  style s1 fill:#E8F4FD,stroke:#0969DA
+  style s2 fill:#EDFDF0,stroke:#1A7F37
+  style apis fill:#FFF9EB,stroke:#F4860C
+  style db fill:#F6F8FA,stroke:#D0D7DE

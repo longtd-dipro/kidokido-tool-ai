@@ -1,0 +1,30 @@
+<!-- @dsCard group="Actions" height=220 -->
+<!doctype html>
+<html>
+<head><meta charset="utf-8"><style>
+body{margin:0;padding:16px;background:var(--page-bg);font-family:var(--font-sans)}
+.row{display:flex;flex-wrap:wrap;gap:16px;align-items:center}
+.stack{display:flex;flex-direction:column;gap:16px}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:16px 32px}
+.note{font-size:12px;line-height:20px;color:var(--text-low)}
+</style></head>
+<body>
+<div id="root" class="kka-root"></div>
+<script>
+var D = window.KidoKidoAdmin, h = React.createElement;
+ReactDOM.createRoot(document.getElementById('root')).render(
+h('div',{className:'stack'},
+ h('div',{className:'row'},
+  h(D.Button,{variant:'outlined',size:'lg'},'リセット'),
+  h(D.Button,{size:'lg'},'検索する'),
+  h(D.Button,{variant:'outlined',size:'lg',endIcon:'save-alt'},'CSVファイル出力')),
+ h('div',{className:'row'},
+  h(D.Button,{variant:'outlined'},'キャンセル'),
+  h(D.Button,null,'保存する'),
+  h(D.Button,{startIcon:'add-circle'},'新規商品追加'),
+  h(D.Button,{disabled:true},'保存する')),
+ h('div',{style:{width:480}}, h(D.Button,{variant:'add'},'追加')))
+);
+</script>
+</body>
+</html>

@@ -1,0 +1,144 @@
+API ID,Method,Path,Roles,Auth,Code Ref,Confidence
+API-001,ANY,/api/admin/admin-credentials-confirmation,—,middleware /api/; middleware /api/admin,REPO-01:src/pages/api/admin/admin-credentials-confirmation.ts#L1,—
+API-002,ANY,/api/admin/app-settings/:settingKey,—,middleware /api/; middleware /api/admin,REPO-01:src/pages/api/admin/app-settings/[settingKey].ts#L1,—
+API-003,ANY,/api/admin/app-settings,—,middleware /api/; middleware /api/admin,REPO-01:src/pages/api/admin/app-settings/index.ts#L1,—
+API-004,ANY,/api/admin/booking-queue/:id,—,middleware /api/; middleware /api/admin,REPO-01:src/pages/api/admin/booking-queue/[id].ts#L1,—
+API-005,ANY,/api/admin/booking-queue/calling,—,middleware /api/; middleware /api/admin,REPO-01:src/pages/api/admin/booking-queue/calling.ts#L1,—
+API-006,ANY,/api/admin/booking-queue,—,middleware /api/; middleware /api/admin,REPO-01:src/pages/api/admin/booking-queue/index.ts#L1,—
+API-007,ANY,/api/admin/booking-queue/system-cancelled,—,middleware /api/; middleware /api/admin,REPO-01:src/pages/api/admin/booking-queue/system-cancelled.ts#L1,—
+API-008,ANY,/api/admin/booking-queue/waiting,—,middleware /api/; middleware /api/admin,REPO-01:src/pages/api/admin/booking-queue/waiting.ts#L1,—
+API-009,ANY,/api/admin/booking-vacancies,—,middleware /api/; middleware /api/admin,REPO-01:src/pages/api/admin/booking-vacancies/index.ts#L1,—
+API-010,ANY,/api/admin/bookings/:id,—,middleware /api/; middleware /api/admin,REPO-01:src/pages/api/admin/bookings/[id].ts#L1,—
+API-011,ANY,/api/admin/bookings/:id/force-recompute-obic,—,middleware /api/; middleware /api/admin,REPO-01:src/pages/api/admin/bookings/[id]/force-recompute-obic.ts#L1,—
+API-012,ANY,/api/admin/bookings/:id/status,—,middleware /api/; middleware /api/admin,REPO-01:src/pages/api/admin/bookings/[id]/status.ts#L1,—
+API-013,ANY,/api/admin/bookings/blacklist,—,middleware /api/; middleware /api/admin,REPO-01:src/pages/api/admin/bookings/blacklist.ts#L1,—
+API-014,ANY,/api/admin/bookings/cancel/:id,—,middleware /api/; middleware /api/admin,REPO-01:src/pages/api/admin/bookings/cancel/[id].ts#L1,—
+API-015,ANY,/api/admin/bookings/count,—,middleware /api/; middleware /api/admin,REPO-01:src/pages/api/admin/bookings/count.ts#L1,—
+API-016,ANY,/api/admin/bookings/decrease-quantity/:id,—,middleware /api/; middleware /api/admin,REPO-01:src/pages/api/admin/bookings/decrease-quantity/[id].ts#L1,—
+API-017,ANY,/api/admin/bookings/export,—,middleware /api/; middleware /api/admin,REPO-01:src/pages/api/admin/bookings/export.ts#L1,—
+API-018,ANY,/api/admin/bookings,SUPER_ADMIN,middleware /api/; middleware /api/admin,REPO-01:src/pages/api/admin/bookings/index.ts#L63,static
+API-019,ANY,/api/admin/bookings/monthly-tickets/extra-info,—,middleware /api/; middleware /api/admin,REPO-01:src/pages/api/admin/bookings/monthly-tickets/extra-info.ts#L1,—
+API-020,ANY,/api/admin/bookings/rollback-scan,—,middleware /api/; middleware /api/admin,REPO-01:src/pages/api/admin/bookings/rollback-scan.ts#L1,—
+API-021,ANY,/api/admin/bookings/scan,—,middleware /api/; middleware /api/admin,REPO-01:src/pages/api/admin/bookings/scan.ts#L1,—
+API-022,ANY,/api/admin/bookings/status,—,middleware /api/; middleware /api/admin,REPO-01:src/pages/api/admin/bookings/status.ts#L1,—
+API-023,ANY,/api/admin/bookings/ticket-booking-schedules/:id,—,middleware /api/; middleware /api/admin,REPO-01:src/pages/api/admin/bookings/ticket-booking-schedules/[id].ts#L1,—
+API-024,ANY,/api/admin/charts/average-booking-times,—,middleware /api/; middleware /api/admin,REPO-01:src/pages/api/admin/charts/average-booking-times.ts#L1,—
+API-025,ANY,/api/admin/charts/average-stay-duration,—,middleware /api/; middleware /api/admin,REPO-01:src/pages/api/admin/charts/average-stay-duration.ts#L1,—
+API-026,ANY,/api/admin/charts/total-bookings-with-ticket,—,middleware /api/; middleware /api/admin,REPO-01:src/pages/api/admin/charts/total-bookings-with-ticket.ts#L1,—
+API-027,ANY,/api/admin/charts/total-bookings-with-times,—,middleware /api/; middleware /api/admin,REPO-01:src/pages/api/admin/charts/total-bookings-with-times.ts#L1,—
+API-028,ANY,/api/admin/charts/total-new-and-old-booking-users,—,middleware /api/; middleware /api/admin,REPO-01:src/pages/api/admin/charts/total-new-and-old-booking-users.ts#L1,—
+API-029,ANY,/api/admin/credentials-confirmation,—,middleware /api/; middleware /api/admin,REPO-01:src/pages/api/admin/credentials-confirmation.ts#L1,—
+API-030,ANY,/api/admin/credit-cards/search/:userId,—,middleware /api/; middleware /api/admin,REPO-01:src/pages/api/admin/credit-cards/search/[userId].ts#L1,—
+API-031,ANY,/api/admin/disclaimers,—,middleware /api/; middleware /api/admin,REPO-01:src/pages/api/admin/disclaimers.ts#L1,—
+API-032,ANY,/api/admin/email-settings/:emailKey,—,middleware /api/; middleware /api/admin,REPO-01:src/pages/api/admin/email-settings/[emailKey].ts#L1,—
+API-033,ANY,/api/admin/email-settings,—,middleware /api/; middleware /api/admin,REPO-01:src/pages/api/admin/email-settings/index.ts#L1,—
+API-034,ANY,/api/admin/email-settings/preview,—,middleware /api/; middleware /api/admin,REPO-01:src/pages/api/admin/email-settings/preview.ts#L1,—
+API-035,ANY,/api/admin/email-settings/send-preview-email,—,middleware /api/; middleware /api/admin,REPO-01:src/pages/api/admin/email-settings/send-preview-email.ts#L1,—
+API-036,ANY,/api/admin/gmo-settings/:id,—,middleware /api/; middleware /api/admin,REPO-01:src/pages/api/admin/gmo-settings/[id].ts#L1,—
+API-037,ANY,/api/admin/gmo-settings,—,middleware /api/; middleware /api/admin,REPO-01:src/pages/api/admin/gmo-settings/index.ts#L1,—
+API-038,ANY,/api/admin/news/:id,—,middleware /api/; middleware /api/admin,REPO-01:src/pages/api/admin/news/[id].ts#L1,—
+API-039,ANY,/api/admin/news,—,middleware /api/; middleware /api/admin,REPO-01:src/pages/api/admin/news/index.ts#L1,—
+API-040,ANY,/api/admin/obic-codes,—,middleware /api/; middleware /api/admin,REPO-01:src/pages/api/admin/obic-codes/index.ts#L1,—
+API-041,ANY,/api/admin/password-confirmation,—,middleware /api/; middleware /api/admin,REPO-01:src/pages/api/admin/password-confirmation.ts#L1,—
+API-042,ANY,/api/admin/revenue-management/count,—,middleware /api/; middleware /api/admin,REPO-01:src/pages/api/admin/revenue-management/count.ts#L1,—
+API-043,ANY,/api/admin/revenue-management/export,—,middleware /api/; middleware /api/admin,REPO-01:src/pages/api/admin/revenue-management/export.ts#L1,—
+API-044,ANY,/api/admin/revenue-management,—,middleware /api/; middleware /api/admin,REPO-01:src/pages/api/admin/revenue-management/index.ts#L1,—
+API-045,ANY,/api/admin/staffs/:id,—,middleware /api/; middleware /api/admin,REPO-01:src/pages/api/admin/staffs/[id].ts#L1,—
+API-046,ANY,/api/admin/staffs/count,—,middleware /api/; middleware /api/admin,REPO-01:src/pages/api/admin/staffs/count.ts#L1,—
+API-047,ANY,/api/admin/staffs,—,middleware /api/; middleware /api/admin,REPO-01:src/pages/api/admin/staffs/index.ts#L1,—
+API-048,ANY,/api/admin/tenants/:code,—,middleware /api/; middleware /api/admin,REPO-01:src/pages/api/admin/tenants/[code].ts#L1,—
+API-049,ANY,/api/admin/tenants/count,—,middleware /api/; middleware /api/admin,REPO-01:src/pages/api/admin/tenants/count.ts#L1,—
+API-050,ANY,/api/admin/tenants,—,middleware /api/; middleware /api/admin,REPO-01:src/pages/api/admin/tenants/index.ts#L1,—
+API-051,ANY,/api/admin/ticket-booking-schedules/has-booking,—,middleware /api/; middleware /api/admin,REPO-01:src/pages/api/admin/ticket-booking-schedules/has-booking.ts#L1,—
+API-052,ANY,/api/admin/ticket-booking-schedules,—,middleware /api/; middleware /api/admin,REPO-01:src/pages/api/admin/ticket-booking-schedules/index.ts#L1,—
+API-053,ANY,/api/admin/tickets/:id,ADMIN,middleware /api/; middleware /api/admin,REPO-01:src/pages/api/admin/tickets/[id].ts#L155,static
+API-054,ANY,/api/admin/tickets/:id/backfill-obic-codes,—,middleware /api/; middleware /api/admin,REPO-01:src/pages/api/admin/tickets/[id]/backfill-obic-codes.ts#L1,—
+API-055,ANY,/api/admin/tickets/count,—,middleware /api/; middleware /api/admin,REPO-01:src/pages/api/admin/tickets/count.ts#L1,—
+API-056,ANY,/api/admin/tickets/has-booking,—,middleware /api/; middleware /api/admin,REPO-01:src/pages/api/admin/tickets/has-booking.ts#L1,—
+API-057,ANY,/api/admin/tickets,—,middleware /api/; middleware /api/admin,REPO-01:src/pages/api/admin/tickets/index.ts#L1,—
+API-058,ANY,/api/admin/tickets/obic-codes/export,—,middleware /api/; middleware /api/admin,REPO-01:src/pages/api/admin/tickets/obic-codes/export.ts#L1,—
+API-059,ANY,/api/admin/users/:id,—,middleware /api/; middleware /api/admin,REPO-01:src/pages/api/admin/users/[id].ts#L1,—
+API-060,ANY,/api/admin/users/count,—,middleware /api/; middleware /api/admin,REPO-01:src/pages/api/admin/users/count.ts#L1,—
+API-061,ANY,/api/admin/users,—,middleware /api/; middleware /api/admin,REPO-01:src/pages/api/admin/users/index.ts#L1,—
+API-062,ANY,/api/app-settings/:settingKey,—,middleware /api/,REPO-01:src/pages/api/app-settings/[settingKey].ts#L1,—
+API-063,ANY,/api/app-settings/ip-whitelist,—,middleware /api/,REPO-01:src/pages/api/app-settings/ip-whitelist.ts#L1,—
+API-064,ANY,/api/auth/:nextauth*,—,getServerSession; middleware /api/,REPO-01:src/pages/api/auth/[...nextauth].ts#L1,—
+API-065,ANY,/api/auth/change-email,—,middleware /api/,REPO-01:src/pages/api/auth/change-email.ts#L1,—
+API-066,ANY,/api/auth/change-password,—,getToken; middleware /api/,REPO-01:src/pages/api/auth/change-password.ts#L1,—
+API-067,ANY,/api/auth/check-admin-credentials,ADMIN,middleware /api/,REPO-01:src/pages/api/auth/check-admin-credentials.ts#L58,static
+API-068,ANY,/api/auth/fetch-access-token,—,middleware /api/,REPO-01:src/pages/api/auth/fetch-access-token.ts#L1,—
+API-069,ANY,/api/auth/forgot-password,USER,middleware /api/,REPO-01:src/pages/api/auth/forgot-password.ts#L32,static
+API-070,ANY,/api/auth/request-unlock-account,SUPER_ADMIN,middleware /api/,REPO-01:src/pages/api/auth/request-unlock-account.ts#L31,static
+API-071,ANY,/api/auth/resend-verification-email,—,withLogging; middleware /api/,REPO-01:src/pages/api/auth/resend-verification-email.ts#L1,—
+API-072,ANY,/api/auth/reset-password,—,middleware /api/,REPO-01:src/pages/api/auth/reset-password.ts#L1,—
+API-073,ANY,/api/auth/security-questions,—,middleware /api/,REPO-01:src/pages/api/auth/security-questions.ts#L1,—
+API-074,ANY,/api/auth/signup,—,middleware /api/,REPO-01:src/pages/api/auth/signup.ts#L1,—
+API-075,ANY,/api/auth/unlock-account,—,middleware /api/,REPO-01:src/pages/api/auth/unlock-account.ts#L1,—
+API-076,ANY,/api/auth/update-password,—,middleware /api/,REPO-01:src/pages/api/auth/update-password.ts#L1,—
+API-077,ANY,/api/auth/verify/:token,—,middleware /api/,REPO-01:src/pages/api/auth/verify/[token].ts#L1,—
+API-078,ANY,/api/bookings/check-monthly-ticket-already-used,—,middleware /api/,REPO-01:src/pages/api/bookings/check-monthly-ticket-already-used.ts#L1,—
+API-079,ANY,/api/bookings/check-same-date-booking-exists,—,middleware /api/,REPO-01:src/pages/api/bookings/check-same-date-booking-exists.ts#L1,—
+API-080,ANY,/api/bookings,—,middleware /api/,REPO-01:src/pages/api/bookings/index.ts#L1,—
+API-081,ANY,/api/bookings/main-bookings/:id,—,middleware /api/,REPO-01:src/pages/api/bookings/main-bookings/[id].ts#L1,—
+API-082,ANY,/api/bookings/status,—,middleware /api/,REPO-01:src/pages/api/bookings/status.ts#L1,—
+API-083,ANY,/api/bookings/transaction/:id,USER,middleware /api/,REPO-01:src/pages/api/bookings/transaction/[id].ts#L21,static
+API-084,ANY,/api/bookings/use-in-day,—,withLogging; middleware /api/,REPO-01:src/pages/api/bookings/use-in-day.ts#L1,—
+API-085,ANY,/api/bookings/vacancies/status,—,middleware /api/,REPO-01:src/pages/api/bookings/vacancies/status.ts#L1,—
+API-086,ANY,/api/cron-job/daily,—,middleware /api/,REPO-01:src/pages/api/cron-job/daily.ts#L1,—
+API-087,ANY,/api/cron-job/process-overdue-calling-booking,—,middleware /api/,REPO-01:src/pages/api/cron-job/process-overdue-calling-booking.ts#L1,—
+API-088,ANY,/api/cron-job/process-overdue-no-waiting-booking,—,middleware /api/,REPO-01:src/pages/api/cron-job/process-overdue-no-waiting-booking.ts#L1,—
+API-089,ANY,/api/cron-job/reconcile-smaregi-transactions,—,middleware /api/,REPO-01:src/pages/api/cron-job/reconcile-smaregi-transactions.ts#L1,—
+API-090,ANY,/api/cron-job/remind-booking-expired,—,middleware /api/,REPO-01:src/pages/api/cron-job/remind-booking-expired.ts#L1,—
+API-091,ANY,/api/cron-job/remind-one-day-booking,—,middleware /api/,REPO-01:src/pages/api/cron-job/remind-one-day-booking.ts#L1,—
+API-092,ANY,/api/cron-job/remind-using-booking,—,middleware /api/,REPO-01:src/pages/api/cron-job/remind-using-booking.ts#L1,—
+API-093,ANY,/api/disclaimers,—,middleware /api/,REPO-01:src/pages/api/disclaimers.ts#L1,—
+API-094,ANY,/api/error-report,—,middleware /api/,REPO-01:src/pages/api/error-report.ts#L1,—
+API-095,ANY,/api/gmo/callback,—,middleware /api/,REPO-01:src/pages/api/gmo/callback.ts#L1,—
+API-096,ANY,/api/health,—,middleware /api/,REPO-01:src/pages/api/health.ts#L1,—
+API-097,ANY,/api/migration/add-security-questions,—,middleware /api/,REPO-01:src/pages/api/migration/add-security-questions.ts#L1,—
+API-098,ANY,/api/migration/email-settings/add-unlock-account,—,middleware /api/,REPO-01:src/pages/api/migration/email-settings/add-unlock-account.ts#L1,—
+API-099,ANY,/api/migration/fill-first-checked-out-booking-id-for-users,—,middleware /api/,REPO-01:src/pages/api/migration/fill-first-checked-out-booking-id-for-users.ts#L1,—
+API-100,ANY,/api/migration/fill-gmo-id-for-tenant,—,middleware /api/,REPO-01:src/pages/api/migration/fill-gmo-id-for-tenant.ts#L1,—
+API-101,ANY,/api/migration/fill-ticket-booking-schedule-id-for-booking,—,middleware /api/,REPO-01:src/pages/api/migration/fill-ticket-booking-schedule-id-for-booking.ts#L1,—
+API-102,ANY,/api/migration/fill-ticket-group-id,—,middleware /api/,REPO-01:src/pages/api/migration/fill-ticket-group-id.ts#L1,—
+API-103,ANY,/api/migration/migrate-discount-setting,—,middleware /api/,REPO-01:src/pages/api/migration/migrate-discount-setting.ts#L1,—
+API-104,ANY,/api/news,—,middleware /api/,REPO-01:src/pages/api/news/index.ts#L1,—
+API-105,ANY,/api/pos/bookings/calculate-pay-amount,—,withLogging; middleware /api/,REPO-01:src/pages/api/pos/bookings/calculate-pay-amount.ts#L1,—
+API-106,ANY,/api/pos/bookings/check-in,—,withLogging; middleware /api/,REPO-01:src/pages/api/pos/bookings/check-in.ts#L1,—
+API-107,ANY,/api/pos/bookings/check-out,—,withLogging; middleware /api/,REPO-01:src/pages/api/pos/bookings/check-out.ts#L1,—
+API-108,ANY,/api/pos/bookings,—,withLogging; middleware /api/,REPO-01:src/pages/api/pos/bookings/index.ts#L1,—
+API-109,ANY,/api/pos/test,—,withLogging; middleware /api/,REPO-01:src/pages/api/pos/test.ts#L1,—
+API-110,ANY,/api/smaregi/webhook-transactions,—,middleware /api/,REPO-01:src/pages/api/smaregi/webhook-transactions.ts#L1,—
+API-111,ANY,/api/status,—,middleware /api/,REPO-01:src/pages/api/status.ts#L1,—
+API-112,ANY,/api/tenants/:code,—,middleware /api/,REPO-01:src/pages/api/tenants/[code].ts#L1,—
+API-113,ANY,/api/tenants/count,—,middleware /api/,REPO-01:src/pages/api/tenants/count.ts#L1,—
+API-114,ANY,/api/tenants,—,middleware /api/,REPO-01:src/pages/api/tenants/index.ts#L1,—
+API-115,ANY,/api/tickets-supported/:masterTicketId,—,middleware /api/,REPO-01:src/pages/api/tickets-supported/[masterTicketId].ts#L1,—
+API-116,ANY,/api/tickets/:id,—,middleware /api/,REPO-01:src/pages/api/tickets/[id].ts#L1,—
+API-117,ANY,/api/tickets,—,middleware /api/,REPO-01:src/pages/api/tickets/index.ts#L1,—
+API-118,ANY,/api/upload,—,middleware /api/,REPO-01:src/pages/api/upload.ts#L1,—
+API-119,ANY,/api/user/bookings/:id,—,middleware /api/,REPO-01:src/pages/api/user/bookings/[id]/index.ts#L1,—
+API-120,ANY,/api/user/bookings/:id/payment-status,—,middleware /api/,REPO-01:src/pages/api/user/bookings/[id]/payment-status.ts#L1,—
+API-121,ANY,/api/user/bookings/cancel,—,middleware /api/,REPO-01:src/pages/api/user/bookings/cancel.ts#L1,—
+API-122,ANY,/api/user/bookings,—,middleware /api/,REPO-01:src/pages/api/user/bookings/index.ts#L1,—
+API-123,ANY,/api/user/bookings/last-booking,—,middleware /api/,REPO-01:src/pages/api/user/bookings/last-booking.ts#L1,—
+API-124,ANY,/api/user/bookings/monthly-tickets/check-already-used-across-tenants,—,middleware /api/,REPO-01:src/pages/api/user/bookings/monthly-tickets/check-already-used-across-tenants.ts#L1,—
+API-125,ANY,/api/user/bookings/monthly-tickets/count,—,middleware /api/,REPO-01:src/pages/api/user/bookings/monthly-tickets/count.ts#L1,—
+API-126,ANY,/api/user/bookings/monthly-tickets/extra-info,—,middleware /api/,REPO-01:src/pages/api/user/bookings/monthly-tickets/extra-info.ts#L1,—
+API-127,ANY,/api/user/bookings/monthly-tickets,—,middleware /api/,REPO-01:src/pages/api/user/bookings/monthly-tickets/index.ts#L1,—
+API-128,ANY,/api/user/bookings/partial-checkout/:id,—,middleware /api/,REPO-01:src/pages/api/user/bookings/partial-checkout/[id].ts#L1,—
+API-129,ANY,/api/user/bookings/request-re-check-in,—,middleware /api/,REPO-01:src/pages/api/user/bookings/request-re-check-in.ts#L1,—
+API-130,ANY,/api/user/bookings/times-limit-tickets/count,—,middleware /api/,REPO-01:src/pages/api/user/bookings/times-limit-tickets/count.ts#L1,—
+API-131,ANY,/api/user/bookings/times-limit-tickets,—,middleware /api/,REPO-01:src/pages/api/user/bookings/times-limit-tickets/index.ts#L1,—
+API-132,ANY,/api/user/check-existing-email,—,middleware /api/,REPO-01:src/pages/api/user/check-existing-email.ts#L1,—
+API-133,ANY,/api/user/check-required-info,—,middleware /api/,REPO-01:src/pages/api/user/check-required-info.ts#L1,—
+API-134,ANY,/api/user/credit-card/delete,—,middleware /api/,REPO-01:src/pages/api/user/credit-card/delete.ts#L1,—
+API-135,ANY,/api/user/credit-card/save,—,middleware /api/,REPO-01:src/pages/api/user/credit-card/save.ts#L1,—
+API-136,ANY,/api/user/credit-card/search,—,middleware /api/,REPO-01:src/pages/api/user/credit-card/search.ts#L1,—
+API-137,ANY,/api/user/edit-email,—,middleware /api/,REPO-01:src/pages/api/user/edit-email/index.ts#L1,—
+API-138,ANY,/api/user,—,currentUser; middleware /api/,REPO-01:src/pages/api/user/index.ts#L1,—
+API-139,ANY,/api/user/notifications/stream,—,getToken; middleware /api/,REPO-01:src/pages/api/user/notifications/stream.ts#L1,—
+API-140,ANY,/api/user/tenant-favorites/:tenantCode,—,middleware /api/,REPO-01:src/pages/api/user/tenant-favorites/[tenantCode].ts#L1,—
+API-141,ANY,/api/user/tenant-favorites/count,—,middleware /api/,REPO-01:src/pages/api/user/tenant-favorites/count.ts#L1,—
+API-142,ANY,/api/user/tenant-favorites,—,middleware /api/,REPO-01:src/pages/api/user/tenant-favorites/index.ts#L1,—
+API-143,ANY,/*,—,— (khong thay kiem tra quyen trong code),REPO-01:src/server.js#L66,—

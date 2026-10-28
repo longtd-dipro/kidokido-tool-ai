@@ -1,0 +1,11 @@
+WEB-01 test_admin_tenant next_ev=379
+WEB-01 test_admin_poss next_ev=408
+WEB-01 test_smaregi_v1 next_ev=437
+WEB-01 test_super_admin next_ev=492
+WEB-02 anonymous next_ev=537
+WEB-02 test_user next_ev=582
+--- crawl-admin (read-only) tu EV 582
+WEB-01 test_admin_tenant next_ev=611
+WEB-01 test_admin_poss next_ev=640
+WEB-01 test_smaregi_v1 next_ev=669
+WEB-01 test_super_admin next_ev=709

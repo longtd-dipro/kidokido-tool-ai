@@ -1,0 +1,50 @@
+{
+  "title": "KidoKido — Luồng tổng quan (AS-IS ver1)",
+  "nodes": [
+    {"id": "a_user", "label": "User / Khách", "kind": "actor", "row": 0, "ref": ""},
+    {"id": "a_admin", "label": "Super Admin / Admin cửa hàng", "kind": "actor", "row": 0, "ref": ""},
+    {"id": "a_pos", "label": "POS Smaregi", "kind": "external", "row": 0, "ref": "EXT-006"},
+    {"id": "w2", "label": "WEB-02 User site", "kind": "site", "row": 1, "ref": "WEB-02"},
+    {"id": "w1", "label": "WEB-01 Admin", "kind": "site", "row": 1, "ref": "WEB-01"},
+    {"id": "s_tl", "label": "SC-066 店舗一覧", "kind": "screen", "row": 2, "ref": "SC-066"},
+    {"id": "s_ud", "label": "SC-054 /booking/use-in-day", "kind": "screen", "row": 2, "ref": "SC-054"},
+    {"id": "s_bm", "label": "SC-004 予約管理", "kind": "screen", "row": 2, "ref": "SC-004"},
+    {"id": "api_auth", "label": "API-064 NextAuth", "kind": "api", "row": 3, "ref": "API-064"},
+    {"id": "api_ud", "label": "API-084 use-in-day", "kind": "api", "row": 3, "ref": "API-084"},
+    {"id": "api_ab", "label": "API-018 admin bookings", "kind": "api", "row": 3, "ref": "API-018"},
+    {"id": "api_wh", "label": "API-110 Smaregi webhook", "kind": "api", "row": 3, "ref": "API-110"},
+    {"id": "gmo", "label": "GMO Payment Gateway", "kind": "external", "row": 4, "ref": "EXT-001"},
+    {"id": "api_cb", "label": "API-095 GMO callback", "kind": "api", "row": 4, "ref": "API-095"},
+    {"id": "cron", "label": "API-089 cron đối soát Smaregi", "kind": "batch", "row": 4, "ref": "API-089"},
+    {"id": "t_bk", "label": "bookings", "kind": "db", "row": 5, "ref": "table:bookings"},
+    {"id": "t_us", "label": "users", "kind": "db", "row": 5, "ref": "table:users"},
+    {"id": "t_st", "label": "smaregi_transactions", "kind": "db", "row": 5, "ref": "table:smaregi_transactions"}
+  ],
+  "edges": [
+    {"from": "a_user", "to": "w2", "label": ""},
+    {"from": "a_admin", "to": "w1", "label": ""},
+    {"from": "w2", "to": "s_tl", "label": ""},
+    {"from": "w2", "to": "s_ud", "label": ""},
+    {"from": "w1", "to": "s_bm", "label": ""},
+    {"from": "w2", "to": "api_auth", "label": "đăng nhập"},
+    {"from": "w1", "to": "api_auth", "label": "đăng nhập"},
+    {"from": "s_ud", "to": "api_ud", "label": ""},
+    {"from": "s_bm", "to": "api_ab", "label": ""},
+    {"from": "api_ud", "to": "t_bk", "label": ""},
+    {"from": "api_auth", "to": "t_us", "label": ""},
+    {"from": "api_ab", "to": "t_bk", "label": ""},
+    {"from": "gmo", "to": "api_cb", "label": "3DS"},
+    {"from": "api_cb", "to": "t_bk", "label": "Completed / huỷ"},
+    {"from": "a_pos", "to": "api_wh", "label": "pos:transactions"},
+    {"from": "api_wh", "to": "t_st", "label": ""},
+    {"from": "cron", "to": "t_st", "label": ""},
+    {"from": "cron", "to": "t_bk", "label": ""}
+  ],
+  "explanation": [
+    "1. User / Khách dùng WEB-02 User site: xem SC-066 店舗一覧 và mở SC-054 /booking/use-in-day để đặt vé dùng trong ngày; Super Admin / Admin cửa hàng dùng WEB-01 Admin, trong đó SC-004 予約管理 là màn quản lý đặt chỗ.",
+    "2. Cả hai site đăng nhập qua API-064 NextAuth (email + mật khẩu, token, LINE), đọc bảng users; admin site có thêm câu hỏi bảo mật.",
+    "3. API-084 use-in-day tạo nhóm booking trong transaction, ghi bảng bookings rồi gửi mail xác nhận kèm barcode; API-018 admin bookings trả danh sách bookings cho màn quản lý, Admin bị giới hạn trong tenant của mình.",
+    "4. Thanh toán online qua GMO Payment Gateway: sau xác thực 3DS, API-095 GMO callback cập nhật booking Completed hoặc huỷ booking và giao dịch.",
+    "5. POS Smaregi gửi sự kiện pos:transactions tới API-110 Smaregi webhook để ghi smaregi_transactions; API-089 cron đối soát Smaregi đối chiếu giao dịch tạm cuối ngày và cập nhật bookings."
+  ]
+}
