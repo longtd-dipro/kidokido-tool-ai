@@ -1,0 +1,123 @@
+{
+  "gmo": {
+    "kind": "Payment",
+    "hits": [
+      "REPO-01:prisma/seed.ts#L10",
+      "REPO-01:src/components/AdminCancelBookingDialog/index.tsx#L10",
+      "REPO-01:src/components/AdminRefundBookingDialogs/index.tsx#L11"
+    ]
+  },
+  "nodemailer": {
+    "kind": "Email",
+    "hits": [
+      "manifest",
+      "REPO-01:src/services/email.service.ts#L1"
+    ]
+  },
+  "ses": {
+    "kind": "Email",
+    "hits": [
+      "manifest",
+      "REPO-01:src/services/email.service.ts#L3"
+    ]
+  },
+  "s3": {
+    "kind": "Storage",
+    "hits": [
+      "REPO-01:src/pages/api/upload.ts#L11",
+      "REPO-01:src/utils/server/booking.ts#L33",
+      "REPO-01:src/utils/server/ipWhitelist.ts#L1"
+    ]
+  },
+  "line": {
+    "kind": "Chat",
+    "hits": [
+      "REPO-01:src/components/common/Header/index.tsx#L13",
+      "REPO-01:src/components/common/Header/MobileHeaderMenuDrawer/HeaderDrawerMenuList.tsx#L14",
+      "REPO-01:src/components/common/UserLayout/UserSideBarMobile/index.tsx#L12"
+    ]
+  },
+  "_env_keys": {
+    ".env.example": [
+      "AWS_ACCESS_KEY_ID",
+      "AWS_CLOUDWATCH_LOG_GROUP",
+      "AWS_REGION",
+      "AWS_S3_BUCKET",
+      "AWS_S3_COMMON_BUCKET",
+      "AWS_SECRET_ACCESS_KEY",
+      "BASIC_AUTH_PASS",
+      "BASIC_AUTH_USER",
+      "DATABASE_URL",
+      "DEBUG",
+      "EMAIL_FROM",
+      "EMAIL_PASSWORD",
+      "EMAIL_SERVICE",
+      "EMAIL_USER",
+      "ENABLE_CLOUDWATCH_LOG",
+      "ENABLE_CRON_JOB",
+      "ENV",
+      "EXTERNAL_URL",
+      "GMO_API_URL",
+      "GMO_SHOP_PASS",
+      "GMO_SITE_ID",
+      "GMO_SITE_PASS",
+      "LINE_CLIENT_ID",
+      "LINE_CLIENT_SECRET",
+      "LOG_FOLDER_PATH",
+      "LOG_LEVEL",
+      "NEXTAUTH_SECRET",
+      "NEXTAUTH_URL",
+      "NEXT_PUBLIC_GMO_SHOP_ID",
+      "NEXT_PUBLIC_ONLINE_BOOKING_ADVANCE_DAYS",
+      "NEXT_PUBLIC_TOKEN_URL",
+      "NODE_ENV",
+      "POS_API_KEY",
+      "SMAREGI_API_BASE_URL",
+      "SMAREGI_CLIENT_ID",
+      "SMAREGI_CLIENT_SECRET",
+      "SMAREGI_ID_BASE_URL",
+      "SMAREGI_SCOPES",
+      "STORAGE_TYPE"
+    ]
+  },
+  "_external_hosts": {
+    "nextjs.org": [
+      "REPO-01:next-env.d.ts#L5"
+    ],
+    "www.youtube.com": [
+      "REPO-01:prisma/seeds/app-settings.ts#L34"
+    ],
+    "id.smaregi.dev": [
+      "REPO-01:src/config.ts#L49"
+    ],
+    "kidokid.bornelund.co.jp": [
+      "REPO-01:src/components/Tenant/CreateOrUpdateTenant/index.tsx#L346",
+      "REPO-01:src/components/common/Footer/index.tsx#L69",
+      "REPO-01:src/components/common/Header/index.tsx#L77"
+    ],
+    "www.bornelund.co.jp": [
+      "REPO-01:src/components/common/Footer/index.tsx#L46",
+      "REPO-01:src/components/common/Footer/index.tsx#L52",
+      "REPO-01:src/components/common/Footer/index.tsx#L67"
+    ],
+    "playville.bornelund.co.jp": [
+      "REPO-01:src/components/common/Header/index.tsx#L87",
+      "REPO-01:src/components/common/Header/MobileHeaderMenuDrawer/HeaderDrawerMenuList.tsx#L147",
+      "REPO-01:src/pages/price-list/index.tsx#L167"
+    ],
+    "asobi-yoyaku.bornelund.co.jp": [
+      "REPO-01:src/constants/email-template.ts#L76",
+      "REPO-01:src/constants/email-template.ts#L82",
+      "REPO-01:src/pages/commercial-law/index.tsx#L227"
+    ],
+    "connect.facebook.net": [
+      "REPO-01:src/pages/_document.tsx#L21"
+    ],
+    "www.facebook.com": [
+      "REPO-01:src/pages/_document.tsx#L27"
+    ],
+    "api.smaregi.dev": [
+      "REPO-01:src/services/smaregi/smaregi.service.ts#L41"
+    ]
+  }
+}

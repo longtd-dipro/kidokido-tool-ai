@@ -1,0 +1,4446 @@
+[
+  {
+    "method": "ANY",
+    "path": "/api/admin/admin-credentials-confirmation",
+    "handler": "default",
+    "group": "admin",
+    "framework": "file-routing",
+    "locator": "REPO-01:src/pages/api/admin/admin-credentials-confirmation.ts#L1",
+    "file": "src/pages/api/admin/admin-credentials-confirmation.ts",
+    "auth_hints": [],
+    "request_hints": [
+      {
+        "field": "email",
+        "in": "body",
+        "source": "destructure req.body",
+        "locator": "REPO-01:src/pages/api/admin/admin-credentials-confirmation.ts#L26"
+      },
+      {
+        "field": "password",
+        "in": "body",
+        "source": "destructure req.body",
+        "locator": "REPO-01:src/pages/api/admin/admin-credentials-confirmation.ts#L26"
+      }
+    ],
+    "handler_locator": null,
+    "handler_file": "src/pages/api/admin/admin-credentials-confirmation.ts",
+    "ev": "EV-0734",
+    "api_id": "API-001"
+  },
+  {
+    "method": "ANY",
+    "path": "/api/admin/app-settings/:settingKey",
+    "handler": "default",
+    "group": "admin",
+    "framework": "file-routing",
+    "locator": "REPO-01:src/pages/api/admin/app-settings/[settingKey].ts#L1",
+    "file": "src/pages/api/admin/app-settings/[settingKey].ts",
+    "auth_hints": [],
+    "request_hints": [
+      {
+        "field": "settingKey",
+        "in": "query",
+        "source": "req.query",
+        "locator": "REPO-01:src/pages/api/admin/app-settings/[settingKey].ts#L16"
+      },
+      {
+        "field": "settingKey",
+        "in": "body",
+        "source": "req.body",
+        "locator": "REPO-01:src/pages/api/admin/app-settings/[settingKey].ts#L27"
+      },
+      {
+        "field": "settingKey",
+        "in": "path",
+        "source": "route param",
+        "locator": "REPO-01:src/pages/api/admin/app-settings/[settingKey].ts#L1"
+      }
+    ],
+    "handler_locator": null,
+    "handler_file": "src/pages/api/admin/app-settings/[settingKey].ts",
+    "ev": "EV-0735",
+    "api_id": "API-002"
+  },
+  {
+    "method": "ANY",
+    "path": "/api/admin/app-settings",
+    "handler": "default",
+    "group": "admin",
+    "framework": "file-routing",
+    "locator": "REPO-01:src/pages/api/admin/app-settings/index.ts#L1",
+    "file": "src/pages/api/admin/app-settings/index.ts",
+    "auth_hints": [],
+    "request_hints": [],
+    "handler_locator": null,
+    "handler_file": "src/pages/api/admin/app-settings/index.ts",
+    "ev": "EV-0736",
+    "api_id": "API-003"
+  },
+  {
+    "method": "ANY",
+    "path": "/api/admin/booking-queue/:id",
+    "handler": "default",
+    "group": "admin",
+    "framework": "file-routing",
+    "locator": "REPO-01:src/pages/api/admin/booking-queue/[id].ts#L1",
+    "file": "src/pages/api/admin/booking-queue/[id].ts",
+    "auth_hints": [],
+    "request_hints": [
+      {
+        "field": "needToSendNotification",
+        "in": "query",
+        "source": "req.query",
+        "locator": "REPO-01:src/pages/api/admin/booking-queue/[id].ts#L21"
+      },
+      {
+        "field": "id",
+        "in": "query",
+        "source": "req.query",
+        "locator": "REPO-01:src/pages/api/admin/booking-queue/[id].ts#L22"
+      },
+      {
+        "field": "updatedAt",
+        "in": "body",
+        "source": "req.body",
+        "locator": "REPO-01:src/pages/api/admin/booking-queue/[id].ts#L25"
+      },
+      {
+        "field": "status",
+        "in": "body",
+        "source": "destructure req.body",
+        "locator": "REPO-01:src/pages/api/admin/booking-queue/[id].ts#L23"
+      },
+      {
+        "field": "id",
+        "in": "path",
+        "source": "route param",
+        "locator": "REPO-01:src/pages/api/admin/booking-queue/[id].ts#L1"
+      }
+    ],
+    "handler_locator": null,
+    "handler_file": "src/pages/api/admin/booking-queue/[id].ts",
+    "ev": "EV-0737",
+    "api_id": "API-004"
+  },
+  {
+    "method": "ANY",
+    "path": "/api/admin/booking-queue/calling",
+    "handler": "default",
+    "group": "admin",
+    "framework": "file-routing",
+    "locator": "REPO-01:src/pages/api/admin/booking-queue/calling.ts#L1",
+    "file": "src/pages/api/admin/booking-queue/calling.ts",
+    "auth_hints": [],
+    "request_hints": [],
+    "handler_locator": null,
+    "handler_file": "src/pages/api/admin/booking-queue/calling.ts",
+    "ev": "EV-0738",
+    "api_id": "API-005"
+  },
+  {
+    "method": "ANY",
+    "path": "/api/admin/booking-queue",
+    "handler": "default",
+    "group": "admin",
+    "framework": "file-routing",
+    "locator": "REPO-01:src/pages/api/admin/booking-queue/index.ts#L1",
+    "file": "src/pages/api/admin/booking-queue/index.ts",
+    "auth_hints": [],
+    "request_hints": [],
+    "handler_locator": null,
+    "handler_file": "src/pages/api/admin/booking-queue/index.ts",
+    "ev": "EV-0739",
+    "api_id": "API-006"
+  },
+  {
+    "method": "ANY",
+    "path": "/api/admin/booking-queue/system-cancelled",
+    "handler": "default",
+    "group": "admin",
+    "framework": "file-routing",
+    "locator": "REPO-01:src/pages/api/admin/booking-queue/system-cancelled.ts#L1",
+    "file": "src/pages/api/admin/booking-queue/system-cancelled.ts",
+    "auth_hints": [],
+    "request_hints": [],
+    "handler_locator": null,
+    "handler_file": "src/pages/api/admin/booking-queue/system-cancelled.ts",
+    "ev": "EV-0740",
+    "api_id": "API-007"
+  },
+  {
+    "method": "ANY",
+    "path": "/api/admin/booking-queue/waiting",
+    "handler": "default",
+    "group": "admin",
+    "framework": "file-routing",
+    "locator": "REPO-01:src/pages/api/admin/booking-queue/waiting.ts#L1",
+    "file": "src/pages/api/admin/booking-queue/waiting.ts",
+    "auth_hints": [],
+    "request_hints": [],
+    "handler_locator": null,
+    "handler_file": "src/pages/api/admin/booking-queue/waiting.ts",
+    "ev": "EV-0741",
+    "api_id": "API-008"
+  },
+  {
+    "method": "ANY",
+    "path": "/api/admin/booking-vacancies",
+    "handler": "default",
+    "group": "admin",
+    "framework": "file-routing",
+    "locator": "REPO-01:src/pages/api/admin/booking-vacancies/index.ts#L1",
+    "file": "src/pages/api/admin/booking-vacancies/index.ts",
+    "auth_hints": [],
+    "request_hints": [],
+    "handler_locator": null,
+    "handler_file": "src/pages/api/admin/booking-vacancies/index.ts",
+    "ev": "EV-0742",
+    "api_id": "API-009"
+  },
+  {
+    "method": "ANY",
+    "path": "/api/admin/bookings/:id",
+    "handler": "default",
+    "group": "admin",
+    "framework": "file-routing",
+    "locator": "REPO-01:src/pages/api/admin/bookings/[id].ts#L1",
+    "file": "src/pages/api/admin/bookings/[id].ts",
+    "auth_hints": [],
+    "request_hints": [
+      {
+        "field": "id",
+        "in": "query",
+        "source": "req.query",
+        "locator": "REPO-01:src/pages/api/admin/bookings/[id].ts#L17"
+      },
+      {
+        "field": "id",
+        "in": "path",
+        "source": "route param",
+        "locator": "REPO-01:src/pages/api/admin/bookings/[id].ts#L1"
+      }
+    ],
+    "handler_locator": null,
+    "handler_file": "src/pages/api/admin/bookings/[id].ts",
+    "ev": "EV-0743",
+    "api_id": "API-010"
+  },
+  {
+    "method": "ANY",
+    "path": "/api/admin/bookings/:id/force-recompute-obic",
+    "handler": "default",
+    "group": "admin",
+    "framework": "file-routing",
+    "locator": "REPO-01:src/pages/api/admin/bookings/[id]/force-recompute-obic.ts#L1",
+    "file": "src/pages/api/admin/bookings/[id]/force-recompute-obic.ts",
+    "auth_hints": [],
+    "request_hints": [
+      {
+        "field": "id",
+        "in": "query",
+        "source": "req.query",
+        "locator": "REPO-01:src/pages/api/admin/bookings/[id]/force-recompute-obic.ts#L17"
+      },
+      {
+        "field": "id",
+        "in": "path",
+        "source": "route param",
+        "locator": "REPO-01:src/pages/api/admin/bookings/[id]/force-recompute-obic.ts#L1"
+      }
+    ],
+    "handler_locator": null,
+    "handler_file": "src/pages/api/admin/bookings/[id]/force-recompute-obic.ts",
+    "ev": "EV-0744",
+    "api_id": "API-011"
+  },
+  {
+    "method": "ANY",
+    "path": "/api/admin/bookings/:id/status",
+    "handler": "default",
+    "group": "admin",
+    "framework": "file-routing",
+    "locator": "REPO-01:src/pages/api/admin/bookings/[id]/status.ts#L1",
+    "file": "src/pages/api/admin/bookings/[id]/status.ts",
+    "auth_hints": [],
+    "request_hints": [
+      {
+        "field": "id",
+        "in": "query",
+        "source": "req.query",
+        "locator": "REPO-01:src/pages/api/admin/bookings/[id]/status.ts#L20"
+      },
+      {
+        "field": "posTotalAmount",
+        "in": "body",
+        "source": "destructure req.body",
+        "locator": "REPO-01:src/pages/api/admin/bookings/[id]/status.ts#L21"
+      },
+      {
+        "field": "coupons",
+        "in": "body",
+        "source": "destructure req.body",
+        "locator": "REPO-01:src/pages/api/admin/bookings/[id]/status.ts#L21"
+      },
+      {
+        "field": "id",
+        "in": "path",
+        "source": "route param",
+        "locator": "REPO-01:src/pages/api/admin/bookings/[id]/status.ts#L1"
+      }
+    ],
+    "handler_locator": null,
+    "handler_file": "src/pages/api/admin/bookings/[id]/status.ts",
+    "ev": "EV-0745",
+    "api_id": "API-012"
+  },
+  {
+    "method": "ANY",
+    "path": "/api/admin/bookings/blacklist",
+    "handler": "default",
+    "group": "admin",
+    "framework": "file-routing",
+    "locator": "REPO-01:src/pages/api/admin/bookings/blacklist.ts#L1",
+    "file": "src/pages/api/admin/bookings/blacklist.ts",
+    "auth_hints": [],
+    "request_hints": [],
+    "handler_locator": null,
+    "handler_file": "src/pages/api/admin/bookings/blacklist.ts",
+    "ev": "EV-0746",
+    "api_id": "API-013"
+  },
+  {
+    "method": "ANY",
+    "path": "/api/admin/bookings/cancel/:id",
+    "handler": "default",
+    "group": "admin",
+    "framework": "file-routing",
+    "locator": "REPO-01:src/pages/api/admin/bookings/cancel/[id].ts#L1",
+    "file": "src/pages/api/admin/bookings/cancel/[id].ts",
+    "auth_hints": [],
+    "request_hints": [
+      {
+        "field": "id",
+        "in": "query",
+        "source": "req.query",
+        "locator": "REPO-01:src/pages/api/admin/bookings/cancel/[id].ts#L30"
+      },
+      {
+        "field": "shouldCancelAllSameBarcodeBookings",
+        "in": "body",
+        "source": "destructure req.body",
+        "locator": "REPO-01:src/pages/api/admin/bookings/cancel/[id].ts#L31"
+      },
+      {
+        "field": "specificBookingBarCodeShouldCancelAll",
+        "in": "body",
+        "source": "destructure req.body",
+        "locator": "REPO-01:src/pages/api/admin/bookings/cancel/[id].ts#L31"
+      },
+      {
+        "field": "id",
+        "in": "path",
+        "source": "route param",
+        "locator": "REPO-01:src/pages/api/admin/bookings/cancel/[id].ts#L1"
+      }
+    ],
+    "handler_locator": null,
+    "handler_file": "src/pages/api/admin/bookings/cancel/[id].ts",
+    "ev": "EV-0747",
+    "api_id": "API-014"
+  },
+  {
+    "method": "ANY",
+    "path": "/api/admin/bookings/count",
+    "handler": "default",
+    "group": "admin",
+    "framework": "file-routing",
+    "locator": "REPO-01:src/pages/api/admin/bookings/count.ts#L1",
+    "file": "src/pages/api/admin/bookings/count.ts",
+    "auth_hints": [],
+    "request_hints": [],
+    "handler_locator": null,
+    "handler_file": "src/pages/api/admin/bookings/count.ts",
+    "ev": "EV-0748",
+    "api_id": "API-015"
+  },
+  {
+    "method": "ANY",
+    "path": "/api/admin/bookings/decrease-quantity/:id",
+    "handler": "default",
+    "group": "admin",
+    "framework": "file-routing",
+    "locator": "REPO-01:src/pages/api/admin/bookings/decrease-quantity/[id].ts#L1",
+    "file": "src/pages/api/admin/bookings/decrease-quantity/[id].ts",
+    "auth_hints": [],
+    "request_hints": [
+      {
+        "field": "id",
+        "in": "query",
+        "source": "req.query",
+        "locator": "REPO-01:src/pages/api/admin/bookings/decrease-quantity/[id].ts#L19"
+      },
+      {
+        "field": "adultQuantity",
+        "in": "body",
+        "source": "destructure req.body",
+        "locator": "REPO-01:src/pages/api/admin/bookings/decrease-quantity/[id].ts#L20"
+      },
+      {
+        "field": "childQuantity",
+        "in": "body",
+        "source": "destructure req.body",
+        "locator": "REPO-01:src/pages/api/admin/bookings/decrease-quantity/[id].ts#L20"
+      },
+      {
+        "field": "childAges",
+        "in": "body",
+        "source": "destructure req.body",
+        "locator": "REPO-01:src/pages/api/admin/bookings/decrease-quantity/[id].ts#L20"
+      },
+      {
+        "field": "id",
+        "in": "path",
+        "source": "route param",
+        "locator": "REPO-01:src/pages/api/admin/bookings/decrease-quantity/[id].ts#L1"
+      }
+    ],
+    "handler_locator": null,
+    "handler_file": "src/pages/api/admin/bookings/decrease-quantity/[id].ts",
+    "ev": "EV-0749",
+    "api_id": "API-016"
+  },
+  {
+    "method": "ANY",
+    "path": "/api/admin/bookings/export",
+    "handler": "default",
+    "group": "admin",
+    "framework": "file-routing",
+    "locator": "REPO-01:src/pages/api/admin/bookings/export.ts#L1",
+    "file": "src/pages/api/admin/bookings/export.ts",
+    "auth_hints": [],
+    "request_hints": [
+      {
+        "field": "exportingRole",
+        "in": "query",
+        "source": "req.query",
+        "locator": "REPO-01:src/pages/api/admin/bookings/export.ts#L91"
+      }
+    ],
+    "handler_locator": null,
+    "handler_file": "src/pages/api/admin/bookings/export.ts",
+    "ev": "EV-0750",
+    "api_id": "API-017"
+  },
+  {
+    "method": "ANY",
+    "path": "/api/admin/bookings",
+    "handler": "default",
+    "group": "admin",
+    "framework": "file-routing",
+    "locator": "REPO-01:src/pages/api/admin/bookings/index.ts#L1",
+    "file": "src/pages/api/admin/bookings/index.ts",
+    "auth_hints": [],
+    "request_hints": [
+      {
+        "field": "fromAction",
+        "in": "query",
+        "source": "req.query",
+        "locator": "REPO-01:src/pages/api/admin/bookings/index.ts#L27"
+      },
+      {
+        "field": "name",
+        "in": "query",
+        "source": "req.query",
+        "locator": "REPO-01:src/pages/api/admin/bookings/index.ts#L54"
+      },
+      {
+        "field": "tenantCode",
+        "in": "query",
+        "source": "req.query",
+        "locator": "REPO-01:src/pages/api/admin/bookings/index.ts#L55"
+      },
+      {
+        "field": "ticketType",
+        "in": "query",
+        "source": "req.query",
+        "locator": "REPO-01:src/pages/api/admin/bookings/index.ts#L56"
+      },
+      {
+        "field": "ticketId",
+        "in": "query",
+        "source": "req.query",
+        "locator": "REPO-01:src/pages/api/admin/bookings/index.ts#L57"
+      },
+      {
+        "field": "startDate",
+        "in": "query",
+        "source": "req.query",
+        "locator": "REPO-01:src/pages/api/admin/bookings/index.ts#L59"
+      },
+      {
+        "field": "endDate",
+        "in": "query",
+        "source": "req.query",
+        "locator": "REPO-01:src/pages/api/admin/bookings/index.ts#L60"
+      },
+      {
+        "field": "shortBarCode",
+        "in": "query",
+        "source": "req.query",
+        "locator": "REPO-01:src/pages/api/admin/bookings/index.ts#L61"
+      },
+      {
+        "field": "barCode",
+        "in": "query",
+        "source": "req.query",
+        "locator": "REPO-01:src/pages/api/admin/bookings/index.ts#L62"
+      },
+      {
+        "field": "limit",
+        "in": "query",
+        "source": "destructure req.query",
+        "locator": "REPO-01:src/pages/api/admin/bookings/index.ts#L24"
+      },
+      {
+        "field": "page",
+        "in": "query",
+        "source": "destructure req.query",
+        "locator": "REPO-01:src/pages/api/admin/bookings/index.ts#L24"
+      }
+    ],
+    "handler_locator": null,
+    "handler_file": "src/pages/api/admin/bookings/index.ts",
+    "ev": "EV-0751",
+    "api_id": "API-018"
+  },
+  {
+    "method": "ANY",
+    "path": "/api/admin/bookings/monthly-tickets/extra-info",
+    "handler": "default",
+    "group": "admin",
+    "framework": "file-routing",
+    "locator": "REPO-01:src/pages/api/admin/bookings/monthly-tickets/extra-info.ts#L1",
+    "file": "src/pages/api/admin/bookings/monthly-tickets/extra-info.ts",
+    "auth_hints": [],
+    "request_hints": [
+      {
+        "field": "monthlyBookingId",
+        "in": "query",
+        "source": "req.query",
+        "locator": "REPO-01:src/pages/api/admin/bookings/monthly-tickets/extra-info.ts#L20"
+      },
+      {
+        "field": "includeOneDayBookings",
+        "in": "query",
+        "source": "req.query",
+        "locator": "REPO-01:src/pages/api/admin/bookings/monthly-tickets/extra-info.ts#L21"
+      }
+    ],
+    "handler_locator": null,
+    "handler_file": "src/pages/api/admin/bookings/monthly-tickets/extra-info.ts",
+    "ev": "EV-0752",
+    "api_id": "API-019"
+  },
+  {
+    "method": "ANY",
+    "path": "/api/admin/bookings/rollback-scan",
+    "handler": "default",
+    "group": "admin",
+    "framework": "file-routing",
+    "locator": "REPO-01:src/pages/api/admin/bookings/rollback-scan.ts#L1",
+    "file": "src/pages/api/admin/bookings/rollback-scan.ts",
+    "auth_hints": [],
+    "request_hints": [
+      {
+        "field": "barCode",
+        "in": "body",
+        "source": "destructure req.body",
+        "locator": "REPO-01:src/pages/api/admin/bookings/rollback-scan.ts#L54"
+      }
+    ],
+    "handler_locator": null,
+    "handler_file": "src/pages/api/admin/bookings/rollback-scan.ts",
+    "ev": "EV-0753",
+    "api_id": "API-020"
+  },
+  {
+    "method": "ANY",
+    "path": "/api/admin/bookings/scan",
+    "handler": "default",
+    "group": "admin",
+    "framework": "file-routing",
+    "locator": "REPO-01:src/pages/api/admin/bookings/scan.ts#L1",
+    "file": "src/pages/api/admin/bookings/scan.ts",
+    "auth_hints": [],
+    "request_hints": [
+      {
+        "field": "barCode",
+        "in": "body",
+        "source": "destructure req.body",
+        "locator": "REPO-01:src/pages/api/admin/bookings/scan.ts#L97"
+      },
+      {
+        "field": "performedAt",
+        "in": "body",
+        "source": "destructure req.body",
+        "locator": "REPO-01:src/pages/api/admin/bookings/scan.ts#L97"
+      }
+    ],
+    "handler_locator": null,
+    "handler_file": "src/pages/api/admin/bookings/scan.ts",
+    "ev": "EV-0754",
+    "api_id": "API-021"
+  },
+  {
+    "method": "ANY",
+    "path": "/api/admin/bookings/status",
+    "handler": "default",
+    "group": "admin",
+    "framework": "file-routing",
+    "locator": "REPO-01:src/pages/api/admin/bookings/status.ts#L1",
+    "file": "src/pages/api/admin/bookings/status.ts",
+    "auth_hints": [],
+    "request_hints": [
+      {
+        "field": "id",
+        "in": "body",
+        "source": "req.body",
+        "locator": "REPO-01:src/pages/api/admin/bookings/status.ts#L29"
+      },
+      {
+        "field": "updatedAt",
+        "in": "body",
+        "source": "req.body",
+        "locator": "REPO-01:src/pages/api/admin/bookings/status.ts#L33"
+      },
+      {
+        "field": "status",
+        "in": "body",
+        "source": "destructure req.body",
+        "locator": "REPO-01:src/pages/api/admin/bookings/status.ts#L30"
+      }
+    ],
+    "handler_locator": null,
+    "handler_file": "src/pages/api/admin/bookings/status.ts",
+    "ev": "EV-0755",
+    "api_id": "API-022"
+  },
+  {
+    "method": "ANY",
+    "path": "/api/admin/bookings/ticket-booking-schedules/:id",
+    "handler": "default",
+    "group": "admin",
+    "framework": "file-routing",
+    "locator": "REPO-01:src/pages/api/admin/bookings/ticket-booking-schedules/[id].ts#L1",
+    "file": "src/pages/api/admin/bookings/ticket-booking-schedules/[id].ts",
+    "auth_hints": [],
+    "request_hints": [
+      {
+        "field": "id",
+        "in": "query",
+        "source": "req.query",
+        "locator": "REPO-01:src/pages/api/admin/bookings/ticket-booking-schedules/[id].ts#L24"
+      },
+      {
+        "field": "maxBookingPeople",
+        "in": "body",
+        "source": "req.body",
+        "locator": "REPO-01:src/pages/api/admin/bookings/ticket-booking-schedules/[id].ts#L25"
+      },
+      {
+        "field": "id",
+        "in": "path",
+        "source": "route param",
+        "locator": "REPO-01:src/pages/api/admin/bookings/ticket-booking-schedules/[id].ts#L1"
+      }
+    ],
+    "handler_locator": null,
+    "handler_file": "src/pages/api/admin/bookings/ticket-booking-schedules/[id].ts",
+    "ev": "EV-0756",
+    "api_id": "API-023"
+  },
+  {
+    "method": "ANY",
+    "path": "/api/admin/charts/average-booking-times",
+    "handler": "default",
+    "group": "admin",
+    "framework": "file-routing",
+    "locator": "REPO-01:src/pages/api/admin/charts/average-booking-times.ts#L1",
+    "file": "src/pages/api/admin/charts/average-booking-times.ts",
+    "auth_hints": [],
+    "request_hints": [
+      {
+        "field": "dateFrom",
+        "in": "query",
+        "source": "destructure req.query",
+        "locator": "REPO-01:src/pages/api/admin/charts/average-booking-times.ts#L18"
+      },
+      {
+        "field": "dateTo",
+        "in": "query",
+        "source": "destructure req.query",
+        "locator": "REPO-01:src/pages/api/admin/charts/average-booking-times.ts#L18"
+      }
+    ],
+    "handler_locator": null,
+    "handler_file": "src/pages/api/admin/charts/average-booking-times.ts",
+    "ev": "EV-0757",
+    "api_id": "API-024"
+  },
+  {
+    "method": "ANY",
+    "path": "/api/admin/charts/average-stay-duration",
+    "handler": "default",
+    "group": "admin",
+    "framework": "file-routing",
+    "locator": "REPO-01:src/pages/api/admin/charts/average-stay-duration.ts#L1",
+    "file": "src/pages/api/admin/charts/average-stay-duration.ts",
+    "auth_hints": [],
+    "request_hints": [
+      {
+        "field": "dateFrom",
+        "in": "query",
+        "source": "destructure req.query",
+        "locator": "REPO-01:src/pages/api/admin/charts/average-stay-duration.ts#L20"
+      },
+      {
+        "field": "dateTo",
+        "in": "query",
+        "source": "destructure req.query",
+        "locator": "REPO-01:src/pages/api/admin/charts/average-stay-duration.ts#L20"
+      }
+    ],
+    "handler_locator": null,
+    "handler_file": "src/pages/api/admin/charts/average-stay-duration.ts",
+    "ev": "EV-0758",
+    "api_id": "API-025"
+  },
+  {
+    "method": "ANY",
+    "path": "/api/admin/charts/total-bookings-with-ticket",
+    "handler": "default",
+    "group": "admin",
+    "framework": "file-routing",
+    "locator": "REPO-01:src/pages/api/admin/charts/total-bookings-with-ticket.ts#L1",
+    "file": "src/pages/api/admin/charts/total-bookings-with-ticket.ts",
+    "auth_hints": [],
+    "request_hints": [
+      {
+        "field": "dateFrom",
+        "in": "query",
+        "source": "destructure req.query",
+        "locator": "REPO-01:src/pages/api/admin/charts/total-bookings-with-ticket.ts#L18"
+      },
+      {
+        "field": "dateTo",
+        "in": "query",
+        "source": "destructure req.query",
+        "locator": "REPO-01:src/pages/api/admin/charts/total-bookings-with-ticket.ts#L18"
+      },
+      {
+        "field": "tenantCode",
+        "in": "query",
+        "source": "destructure req.query",
+        "locator": "REPO-01:src/pages/api/admin/charts/total-bookings-with-ticket.ts#L18"
+      }
+    ],
+    "handler_locator": null,
+    "handler_file": "src/pages/api/admin/charts/total-bookings-with-ticket.ts",
+    "ev": "EV-0759",
+    "api_id": "API-026"
+  },
+  {
+    "method": "ANY",
+    "path": "/api/admin/charts/total-bookings-with-times",
+    "handler": "default",
+    "group": "admin",
+    "framework": "file-routing",
+    "locator": "REPO-01:src/pages/api/admin/charts/total-bookings-with-times.ts#L1",
+    "file": "src/pages/api/admin/charts/total-bookings-with-times.ts",
+    "auth_hints": [],
+    "request_hints": [
+      {
+        "field": "dateFrom",
+        "in": "query",
+        "source": "destructure req.query",
+        "locator": "REPO-01:src/pages/api/admin/charts/total-bookings-with-times.ts#L19"
+      },
+      {
+        "field": "dateTo",
+        "in": "query",
+        "source": "destructure req.query",
+        "locator": "REPO-01:src/pages/api/admin/charts/total-bookings-with-times.ts#L19"
+      },
+      {
+        "field": "tenantCode",
+        "in": "query",
+        "source": "destructure req.query",
+        "locator": "REPO-01:src/pages/api/admin/charts/total-bookings-with-times.ts#L19"
+      }
+    ],
+    "handler_locator": null,
+    "handler_file": "src/pages/api/admin/charts/total-bookings-with-times.ts",
+    "ev": "EV-0760",
+    "api_id": "API-027"
+  },
+  {
+    "method": "ANY",
+    "path": "/api/admin/charts/total-new-and-old-booking-users",
+    "handler": "default",
+    "group": "admin",
+    "framework": "file-routing",
+    "locator": "REPO-01:src/pages/api/admin/charts/total-new-and-old-booking-users.ts#L1",
+    "file": "src/pages/api/admin/charts/total-new-and-old-booking-users.ts",
+    "auth_hints": [],
+    "request_hints": [
+      {
+        "field": "dateFrom",
+        "in": "query",
+        "source": "destructure req.query",
+        "locator": "REPO-01:src/pages/api/admin/charts/total-new-and-old-booking-users.ts#L19"
+      },
+      {
+        "field": "dateTo",
+        "in": "query",
+        "source": "destructure req.query",
+        "locator": "REPO-01:src/pages/api/admin/charts/total-new-and-old-booking-users.ts#L19"
+      },
+      {
+        "field": "tenantCode",
+        "in": "query",
+        "source": "destructure req.query",
+        "locator": "REPO-01:src/pages/api/admin/charts/total-new-and-old-booking-users.ts#L19"
+      }
+    ],
+    "handler_locator": null,
+    "handler_file": "src/pages/api/admin/charts/total-new-and-old-booking-users.ts",
+    "ev": "EV-0761",
+    "api_id": "API-028"
+  },
+  {
+    "method": "ANY",
+    "path": "/api/admin/credentials-confirmation",
+    "handler": "default",
+    "group": "admin",
+    "framework": "file-routing",
+    "locator": "REPO-01:src/pages/api/admin/credentials-confirmation.ts#L1",
+    "file": "src/pages/api/admin/credentials-confirmation.ts",
+    "auth_hints": [],
+    "request_hints": [
+      {
+        "field": "idOrEmail",
+        "in": "body",
+        "source": "destructure req.body",
+        "locator": "REPO-01:src/pages/api/admin/credentials-confirmation.ts#L26"
+      },
+      {
+        "field": "password",
+        "in": "body",
+        "source": "destructure req.body",
+        "locator": "REPO-01:src/pages/api/admin/credentials-confirmation.ts#L26"
+      }
+    ],
+    "handler_locator": null,
+    "handler_file": "src/pages/api/admin/credentials-confirmation.ts",
+    "ev": "EV-0762",
+    "api_id": "API-029"
+  },
+  {
+    "method": "ANY",
+    "path": "/api/admin/credit-cards/search/:userId",
+    "handler": "default",
+    "group": "admin",
+    "framework": "file-routing",
+    "locator": "REPO-01:src/pages/api/admin/credit-cards/search/[userId].ts#L1",
+    "file": "src/pages/api/admin/credit-cards/search/[userId].ts",
+    "auth_hints": [],
+    "request_hints": [
+      {
+        "field": "userId",
+        "in": "query",
+        "source": "destructure req.query",
+        "locator": "REPO-01:src/pages/api/admin/credit-cards/search/[userId].ts#L18"
+      },
+      {
+        "field": "userId",
+        "in": "path",
+        "source": "route param",
+        "locator": "REPO-01:src/pages/api/admin/credit-cards/search/[userId].ts#L1"
+      }
+    ],
+    "handler_locator": null,
+    "handler_file": "src/pages/api/admin/credit-cards/search/[userId].ts",
+    "ev": "EV-0763",
+    "api_id": "API-030"
+  },
+  {
+    "method": "ANY",
+    "path": "/api/admin/disclaimers",
+    "handler": "default",
+    "group": "admin",
+    "framework": "file-routing",
+    "locator": "REPO-01:src/pages/api/admin/disclaimers.ts#L1",
+    "file": "src/pages/api/admin/disclaimers.ts",
+    "auth_hints": [],
+    "request_hints": [
+      {
+        "field": "disclaimers",
+        "in": "body",
+        "source": "req.body",
+        "locator": "REPO-01:src/pages/api/admin/disclaimers.ts#L29"
+      }
+    ],
+    "handler_locator": null,
+    "handler_file": "src/pages/api/admin/disclaimers.ts",
+    "ev": "EV-0764",
+    "api_id": "API-031"
+  },
+  {
+    "method": "ANY",
+    "path": "/api/admin/email-settings/:emailKey",
+    "handler": "default",
+    "group": "admin",
+    "framework": "file-routing",
+    "locator": "REPO-01:src/pages/api/admin/email-settings/[emailKey].ts#L1",
+    "file": "src/pages/api/admin/email-settings/[emailKey].ts",
+    "auth_hints": [],
+    "request_hints": [
+      {
+        "field": "emailKey",
+        "in": "body",
+        "source": "req.body",
+        "locator": "REPO-01:src/pages/api/admin/email-settings/[emailKey].ts#L26"
+      },
+      {
+        "field": "emailKey",
+        "in": "query",
+        "source": "req.query",
+        "locator": "REPO-01:src/pages/api/admin/email-settings/[emailKey].ts#L34"
+      },
+      {
+        "field": "emailKey",
+        "in": "path",
+        "source": "route param",
+        "locator": "REPO-01:src/pages/api/admin/email-settings/[emailKey].ts#L1"
+      }
+    ],
+    "handler_locator": null,
+    "handler_file": "src/pages/api/admin/email-settings/[emailKey].ts",
+    "ev": "EV-0765",
+    "api_id": "API-032"
+  },
+  {
+    "method": "ANY",
+    "path": "/api/admin/email-settings",
+    "handler": "default",
+    "group": "admin",
+    "framework": "file-routing",
+    "locator": "REPO-01:src/pages/api/admin/email-settings/index.ts#L1",
+    "file": "src/pages/api/admin/email-settings/index.ts",
+    "auth_hints": [],
+    "request_hints": [],
+    "handler_locator": null,
+    "handler_file": "src/pages/api/admin/email-settings/index.ts",
+    "ev": "EV-0766",
+    "api_id": "API-033"
+  },
+  {
+    "method": "ANY",
+    "path": "/api/admin/email-settings/preview",
+    "handler": "default",
+    "group": "admin",
+    "framework": "file-routing",
+    "locator": "REPO-01:src/pages/api/admin/email-settings/preview.ts#L1",
+    "file": "src/pages/api/admin/email-settings/preview.ts",
+    "auth_hints": [],
+    "request_hints": [
+      {
+        "field": "content",
+        "in": "body",
+        "source": "destructure req.body",
+        "locator": "REPO-01:src/pages/api/admin/email-settings/preview.ts#L26"
+      },
+      {
+        "field": "emailKey",
+        "in": "body",
+        "source": "destructure req.body",
+        "locator": "REPO-01:src/pages/api/admin/email-settings/preview.ts#L26"
+      }
+    ],
+    "handler_locator": null,
+    "handler_file": "src/pages/api/admin/email-settings/preview.ts",
+    "ev": "EV-0767",
+    "api_id": "API-034"
+  },
+  {
+    "method": "ANY",
+    "path": "/api/admin/email-settings/send-preview-email",
+    "handler": "default",
+    "group": "admin",
+    "framework": "file-routing",
+    "locator": "REPO-01:src/pages/api/admin/email-settings/send-preview-email.ts#L1",
+    "file": "src/pages/api/admin/email-settings/send-preview-email.ts",
+    "auth_hints": [],
+    "request_hints": [
+      {
+        "field": "emailTitle",
+        "in": "body",
+        "source": "destructure req.body",
+        "locator": "REPO-01:src/pages/api/admin/email-settings/send-preview-email.ts#L27"
+      },
+      {
+        "field": "emailKey",
+        "in": "body",
+        "source": "destructure req.body",
+        "locator": "REPO-01:src/pages/api/admin/email-settings/send-preview-email.ts#L27"
+      },
+      {
+        "field": "content",
+        "in": "body",
+        "source": "destructure req.body",
+        "locator": "REPO-01:src/pages/api/admin/email-settings/send-preview-email.ts#L27"
+      },
+      {
+        "field": "email",
+        "in": "body",
+        "source": "destructure req.body",
+        "locator": "REPO-01:src/pages/api/admin/email-settings/send-preview-email.ts#L27"
+      }
+    ],
+    "handler_locator": null,
+    "handler_file": "src/pages/api/admin/email-settings/send-preview-email.ts",
+    "ev": "EV-0768",
+    "api_id": "API-035"
+  },
+  {
+    "method": "ANY",
+    "path": "/api/admin/gmo-settings/:id",
+    "handler": "default",
+    "group": "admin",
+    "framework": "file-routing",
+    "locator": "REPO-01:src/pages/api/admin/gmo-settings/[id].ts#L1",
+    "file": "src/pages/api/admin/gmo-settings/[id].ts",
+    "auth_hints": [],
+    "request_hints": [
+      {
+        "field": "shopId",
+        "in": "body",
+        "source": "req.body",
+        "locator": "REPO-01:src/pages/api/admin/gmo-settings/[id].ts#L46"
+      },
+      {
+        "field": "id",
+        "in": "query",
+        "source": "req.query",
+        "locator": "REPO-01:src/pages/api/admin/gmo-settings/[id].ts#L62"
+      },
+      {
+        "field": "id",
+        "in": "body",
+        "source": "destructure req.body",
+        "locator": "REPO-01:src/pages/api/admin/gmo-settings/[id].ts#L27"
+      },
+      {
+        "field": "shopPass",
+        "in": "body",
+        "source": "destructure req.body",
+        "locator": "REPO-01:src/pages/api/admin/gmo-settings/[id].ts#L27"
+      },
+      {
+        "field": "id",
+        "in": "path",
+        "source": "route param",
+        "locator": "REPO-01:src/pages/api/admin/gmo-settings/[id].ts#L1"
+      }
+    ],
+    "handler_locator": null,
+    "handler_file": "src/pages/api/admin/gmo-settings/[id].ts",
+    "ev": "EV-0769",
+    "api_id": "API-036"
+  },
+  {
+    "method": "ANY",
+    "path": "/api/admin/gmo-settings",
+    "handler": "default",
+    "group": "admin",
+    "framework": "file-routing",
+    "locator": "REPO-01:src/pages/api/admin/gmo-settings/index.ts#L1",
+    "file": "src/pages/api/admin/gmo-settings/index.ts",
+    "auth_hints": [],
+    "request_hints": [
+      {
+        "field": "shopId",
+        "in": "body",
+        "source": "req.body",
+        "locator": "REPO-01:src/pages/api/admin/gmo-settings/index.ts#L31"
+      }
+    ],
+    "handler_locator": null,
+    "handler_file": "src/pages/api/admin/gmo-settings/index.ts",
+    "ev": "EV-0770",
+    "api_id": "API-037"
+  },
+  {
+    "method": "ANY",
+    "path": "/api/admin/news/:id",
+    "handler": "default",
+    "group": "admin",
+    "framework": "file-routing",
+    "locator": "REPO-01:src/pages/api/admin/news/[id].ts#L1",
+    "file": "src/pages/api/admin/news/[id].ts",
+    "auth_hints": [],
+    "request_hints": [
+      {
+        "field": "id",
+        "in": "body",
+        "source": "req.body",
+        "locator": "REPO-01:src/pages/api/admin/news/[id].ts#L26"
+      },
+      {
+        "field": "id",
+        "in": "query",
+        "source": "req.query",
+        "locator": "REPO-01:src/pages/api/admin/news/[id].ts#L34"
+      },
+      {
+        "field": "id",
+        "in": "path",
+        "source": "route param",
+        "locator": "REPO-01:src/pages/api/admin/news/[id].ts#L1"
+      }
+    ],
+    "handler_locator": null,
+    "handler_file": "src/pages/api/admin/news/[id].ts",
+    "ev": "EV-0771",
+    "api_id": "API-038"
+  },
+  {
+    "method": "ANY",
+    "path": "/api/admin/news",
+    "handler": "default",
+    "group": "admin",
+    "framework": "file-routing",
+    "locator": "REPO-01:src/pages/api/admin/news/index.ts#L1",
+    "file": "src/pages/api/admin/news/index.ts",
+    "auth_hints": [],
+    "request_hints": [],
+    "handler_locator": null,
+    "handler_file": "src/pages/api/admin/news/index.ts",
+    "ev": "EV-0772",
+    "api_id": "API-039"
+  },
+  {
+    "method": "ANY",
+    "path": "/api/admin/obic-codes",
+    "handler": "default",
+    "group": "admin",
+    "framework": "file-routing",
+    "locator": "REPO-01:src/pages/api/admin/obic-codes/index.ts#L1",
+    "file": "src/pages/api/admin/obic-codes/index.ts",
+    "auth_hints": [],
+    "request_hints": [],
+    "handler_locator": null,
+    "handler_file": "src/pages/api/admin/obic-codes/index.ts",
+    "ev": "EV-0773",
+    "api_id": "API-040"
+  },
+  {
+    "method": "ANY",
+    "path": "/api/admin/password-confirmation",
+    "handler": "default",
+    "group": "admin",
+    "framework": "file-routing",
+    "locator": "REPO-01:src/pages/api/admin/password-confirmation.ts#L1",
+    "file": "src/pages/api/admin/password-confirmation.ts",
+    "auth_hints": [],
+    "request_hints": [
+      {
+        "field": "password",
+        "in": "body",
+        "source": "destructure req.body",
+        "locator": "REPO-01:src/pages/api/admin/password-confirmation.ts#L26"
+      }
+    ],
+    "handler_locator": null,
+    "handler_file": "src/pages/api/admin/password-confirmation.ts",
+    "ev": "EV-0774",
+    "api_id": "API-041"
+  },
+  {
+    "method": "ANY",
+    "path": "/api/admin/revenue-management/count",
+    "handler": "default",
+    "group": "admin",
+    "framework": "file-routing",
+    "locator": "REPO-01:src/pages/api/admin/revenue-management/count.ts#L1",
+    "file": "src/pages/api/admin/revenue-management/count.ts",
+    "auth_hints": [],
+    "request_hints": [
+      {
+        "field": "tenantCode",
+        "in": "query",
+        "source": "req.query",
+        "locator": "REPO-01:src/pages/api/admin/revenue-management/count.ts#L22"
+      },
+      {
+        "field": "ticketId",
+        "in": "query",
+        "source": "req.query",
+        "locator": "REPO-01:src/pages/api/admin/revenue-management/count.ts#L27"
+      },
+      {
+        "field": "revenueStatus",
+        "in": "query",
+        "source": "req.query",
+        "locator": "REPO-01:src/pages/api/admin/revenue-management/count.ts#L28"
+      },
+      {
+        "field": "fromDate",
+        "in": "query",
+        "source": "req.query",
+        "locator": "REPO-01:src/pages/api/admin/revenue-management/count.ts#L29"
+      },
+      {
+        "field": "endDate",
+        "in": "query",
+        "source": "req.query",
+        "locator": "REPO-01:src/pages/api/admin/revenue-management/count.ts#L30"
+      }
+    ],
+    "handler_locator": null,
+    "handler_file": "src/pages/api/admin/revenue-management/count.ts",
+    "ev": "EV-0775",
+    "api_id": "API-042"
+  },
+  {
+    "method": "ANY",
+    "path": "/api/admin/revenue-management/export",
+    "handler": "default",
+    "group": "admin",
+    "framework": "file-routing",
+    "locator": "REPO-01:src/pages/api/admin/revenue-management/export.ts#L1",
+    "file": "src/pages/api/admin/revenue-management/export.ts",
+    "auth_hints": [],
+    "request_hints": [
+      {
+        "field": "tenantCode",
+        "in": "query",
+        "source": "req.query",
+        "locator": "REPO-01:src/pages/api/admin/revenue-management/export.ts#L131"
+      },
+      {
+        "field": "ticketId",
+        "in": "query",
+        "source": "req.query",
+        "locator": "REPO-01:src/pages/api/admin/revenue-management/export.ts#L136"
+      },
+      {
+        "field": "revenueStatus",
+        "in": "query",
+        "source": "req.query",
+        "locator": "REPO-01:src/pages/api/admin/revenue-management/export.ts#L137"
+      },
+      {
+        "field": "fromDate",
+        "in": "query",
+        "source": "req.query",
+        "locator": "REPO-01:src/pages/api/admin/revenue-management/export.ts#L138"
+      },
+      {
+        "field": "endDate",
+        "in": "query",
+        "source": "req.query",
+        "locator": "REPO-01:src/pages/api/admin/revenue-management/export.ts#L139"
+      },
+      {
+        "field": "fromAction",
+        "in": "query",
+        "source": "req.query",
+        "locator": "REPO-01:src/pages/api/admin/revenue-management/export.ts#L141"
+      },
+      {
+        "field": "exportingRole",
+        "in": "query",
+        "source": "req.query",
+        "locator": "REPO-01:src/pages/api/admin/revenue-management/export.ts#L142"
+      },
+      {
+        "field": "page",
+        "in": "query",
+        "source": "req.query",
+        "locator": "REPO-01:src/pages/api/admin/revenue-management/export.ts#L143"
+      },
+      {
+        "field": "limit",
+        "in": "query",
+        "source": "req.query",
+        "locator": "REPO-01:src/pages/api/admin/revenue-management/export.ts#L144"
+      }
+    ],
+    "handler_locator": null,
+    "handler_file": "src/pages/api/admin/revenue-management/export.ts",
+    "ev": "EV-0776",
+    "api_id": "API-043"
+  },
+  {
+    "method": "ANY",
+    "path": "/api/admin/revenue-management",
+    "handler": "default",
+    "group": "admin",
+    "framework": "file-routing",
+    "locator": "REPO-01:src/pages/api/admin/revenue-management/index.ts#L1",
+    "file": "src/pages/api/admin/revenue-management/index.ts",
+    "auth_hints": [],
+    "request_hints": [
+      {
+        "field": "tenantCode",
+        "in": "query",
+        "source": "req.query",
+        "locator": "REPO-01:src/pages/api/admin/revenue-management/index.ts#L20"
+      },
+      {
+        "field": "ticketId",
+        "in": "query",
+        "source": "req.query",
+        "locator": "REPO-01:src/pages/api/admin/revenue-management/index.ts#L25"
+      },
+      {
+        "field": "revenueStatus",
+        "in": "query",
+        "source": "req.query",
+        "locator": "REPO-01:src/pages/api/admin/revenue-management/index.ts#L26"
+      },
+      {
+        "field": "fromDate",
+        "in": "query",
+        "source": "req.query",
+        "locator": "REPO-01:src/pages/api/admin/revenue-management/index.ts#L27"
+      },
+      {
+        "field": "endDate",
+        "in": "query",
+        "source": "req.query",
+        "locator": "REPO-01:src/pages/api/admin/revenue-management/index.ts#L28"
+      },
+      {
+        "field": "fromAction",
+        "in": "query",
+        "source": "req.query",
+        "locator": "REPO-01:src/pages/api/admin/revenue-management/index.ts#L29"
+      },
+      {
+        "field": "page",
+        "in": "query",
+        "source": "req.query",
+        "locator": "REPO-01:src/pages/api/admin/revenue-management/index.ts#L33"
+      },
+      {
+        "field": "limit",
+        "in": "query",
+        "source": "req.query",
+        "locator": "REPO-01:src/pages/api/admin/revenue-management/index.ts#L34"
+      }
+    ],
+    "handler_locator": null,
+    "handler_file": "src/pages/api/admin/revenue-management/index.ts",
+    "ev": "EV-0777",
+    "api_id": "API-044"
+  },
+  {
+    "method": "ANY",
+    "path": "/api/admin/staffs/:id",
+    "handler": "default",
+    "group": "admin",
+    "framework": "file-routing",
+    "locator": "REPO-01:src/pages/api/admin/staffs/[id].ts#L1",
+    "file": "src/pages/api/admin/staffs/[id].ts",
+    "auth_hints": [],
+    "request_hints": [
+      {
+        "field": "id",
+        "in": "query",
+        "source": "req.query",
+        "locator": "REPO-01:src/pages/api/admin/staffs/[id].ts#L27"
+      },
+      {
+        "field": "password",
+        "in": "body",
+        "source": "destructure req.body",
+        "locator": "REPO-01:src/pages/api/admin/staffs/[id].ts#L39"
+      },
+      {
+        "field": "id",
+        "in": "body",
+        "source": "destructure req.body",
+        "locator": "REPO-01:src/pages/api/admin/staffs/[id].ts#L39"
+      },
+      {
+        "field": "lastName",
+        "in": "body",
+        "source": "destructure req.body",
+        "locator": "REPO-01:src/pages/api/admin/staffs/[id].ts#L39"
+      },
+      {
+        "field": "firstName",
+        "in": "body",
+        "source": "destructure req.body",
+        "locator": "REPO-01:src/pages/api/admin/staffs/[id].ts#L39"
+      },
+      {
+        "field": "id",
+        "in": "path",
+        "source": "route param",
+        "locator": "REPO-01:src/pages/api/admin/staffs/[id].ts#L1"
+      }
+    ],
+    "handler_locator": null,
+    "handler_file": "src/pages/api/admin/staffs/[id].ts",
+    "ev": "EV-0778",
+    "api_id": "API-045"
+  },
+  {
+    "method": "ANY",
+    "path": "/api/admin/staffs/count",
+    "handler": "default",
+    "group": "admin",
+    "framework": "file-routing",
+    "locator": "REPO-01:src/pages/api/admin/staffs/count.ts#L1",
+    "file": "src/pages/api/admin/staffs/count.ts",
+    "auth_hints": [],
+    "request_hints": [
+      {
+        "field": "name",
+        "in": "query",
+        "source": "req.query",
+        "locator": "REPO-01:src/pages/api/admin/staffs/count.ts#L17"
+      },
+      {
+        "field": "tenantCode",
+        "in": "query",
+        "source": "req.query",
+        "locator": "REPO-01:src/pages/api/admin/staffs/count.ts#L18"
+      }
+    ],
+    "handler_locator": null,
+    "handler_file": "src/pages/api/admin/staffs/count.ts",
+    "ev": "EV-0779",
+    "api_id": "API-046"
+  },
+  {
+    "method": "ANY",
+    "path": "/api/admin/staffs",
+    "handler": "default",
+    "group": "admin",
+    "framework": "file-routing",
+    "locator": "REPO-01:src/pages/api/admin/staffs/index.ts#L1",
+    "file": "src/pages/api/admin/staffs/index.ts",
+    "auth_hints": [],
+    "request_hints": [
+      {
+        "field": "name",
+        "in": "query",
+        "source": "req.query",
+        "locator": "REPO-01:src/pages/api/admin/staffs/index.ts#L27"
+      },
+      {
+        "field": "tenantCode",
+        "in": "query",
+        "source": "req.query",
+        "locator": "REPO-01:src/pages/api/admin/staffs/index.ts#L28"
+      },
+      {
+        "field": "limit",
+        "in": "query",
+        "source": "destructure req.query",
+        "locator": "REPO-01:src/pages/api/admin/staffs/index.ts#L29"
+      },
+      {
+        "field": "page",
+        "in": "query",
+        "source": "destructure req.query",
+        "locator": "REPO-01:src/pages/api/admin/staffs/index.ts#L29"
+      },
+      {
+        "field": "password",
+        "in": "body",
+        "source": "destructure req.body",
+        "locator": "REPO-01:src/pages/api/admin/staffs/index.ts#L60"
+      },
+      {
+        "field": "firstName",
+        "in": "body",
+        "source": "destructure req.body",
+        "locator": "REPO-01:src/pages/api/admin/staffs/index.ts#L60"
+      },
+      {
+        "field": "lastName",
+        "in": "body",
+        "source": "destructure req.body",
+        "locator": "REPO-01:src/pages/api/admin/staffs/index.ts#L60"
+      },
+      {
+        "field": "id",
+        "in": "body",
+        "source": "destructure req.body",
+        "locator": "REPO-01:src/pages/api/admin/staffs/index.ts#L60"
+      }
+    ],
+    "handler_locator": null,
+    "handler_file": "src/pages/api/admin/staffs/index.ts",
+    "ev": "EV-0780",
+    "api_id": "API-047"
+  },
+  {
+    "method": "ANY",
+    "path": "/api/admin/tenants/:code",
+    "handler": "default",
+    "group": "admin",
+    "framework": "file-routing",
+    "locator": "REPO-01:src/pages/api/admin/tenants/[code].ts#L1",
+    "file": "src/pages/api/admin/tenants/[code].ts",
+    "auth_hints": [],
+    "request_hints": [
+      {
+        "field": "code",
+        "in": "query",
+        "source": "req.query",
+        "locator": "REPO-01:src/pages/api/admin/tenants/[code].ts#L24"
+      },
+      {
+        "field": "email",
+        "in": "body",
+        "source": "req.body",
+        "locator": "REPO-01:src/pages/api/admin/tenants/[code].ts#L80"
+      },
+      {
+        "field": "password",
+        "in": "body",
+        "source": "req.body",
+        "locator": "REPO-01:src/pages/api/admin/tenants/[code].ts#L81"
+      },
+      {
+        "field": "confirmationPassword",
+        "in": "body",
+        "source": "req.body",
+        "locator": "REPO-01:src/pages/api/admin/tenants/[code].ts#L82"
+      },
+      {
+        "field": "User",
+        "in": "body",
+        "source": "req.body",
+        "locator": "REPO-01:src/pages/api/admin/tenants/[code].ts#L83"
+      },
+      {
+        "field": "AdminTenant",
+        "in": "body",
+        "source": "req.body",
+        "locator": "REPO-01:src/pages/api/admin/tenants/[code].ts#L84"
+      },
+      {
+        "field": "code",
+        "in": "body",
+        "source": "destructure req.body",
+        "locator": "REPO-01:src/pages/api/admin/tenants/[code].ts#L35"
+      },
+      {
+        "field": "guide",
+        "in": "body",
+        "source": "destructure req.body",
+        "locator": "REPO-01:src/pages/api/admin/tenants/[code].ts#L35"
+      },
+      {
+        "field": "gmoId",
+        "in": "body",
+        "source": "destructure req.body",
+        "locator": "REPO-01:src/pages/api/admin/tenants/[code].ts#L35"
+      },
+      {
+        "field": "imageUrl",
+        "in": "body",
+        "source": "destructure req.body",
+        "locator": "REPO-01:src/pages/api/admin/tenants/[code].ts#L127"
+      },
+      {
+        "field": "code",
+        "in": "path",
+        "source": "route param",
+        "locator": "REPO-01:src/pages/api/admin/tenants/[code].ts#L1"
+      }
+    ],
+    "handler_locator": null,
+    "handler_file": "src/pages/api/admin/tenants/[code].ts",
+    "ev": "EV-0781",
+    "api_id": "API-048"
+  },
+  {
+    "method": "ANY",
+    "path": "/api/admin/tenants/count",
+    "handler": "default",
+    "group": "admin",
+    "framework": "file-routing",
+    "locator": "REPO-01:src/pages/api/admin/tenants/count.ts#L1",
+    "file": "src/pages/api/admin/tenants/count.ts",
+    "auth_hints": [],
+    "request_hints": [
+      {
+        "field": "code",
+        "in": "query",
+        "source": "req.query",
+        "locator": "REPO-01:src/pages/api/admin/tenants/count.ts#L17"
+      }
+    ],
+    "handler_locator": null,
+    "handler_file": "src/pages/api/admin/tenants/count.ts",
+    "ev": "EV-0782",
+    "api_id": "API-049"
+  },
+  {
+    "method": "ANY",
+    "path": "/api/admin/tenants",
+    "handler": "default",
+    "group": "admin",
+    "framework": "file-routing",
+    "locator": "REPO-01:src/pages/api/admin/tenants/index.ts#L1",
+    "file": "src/pages/api/admin/tenants/index.ts",
+    "auth_hints": [],
+    "request_hints": [
+      {
+        "field": "code",
+        "in": "query",
+        "source": "req.query",
+        "locator": "REPO-01:src/pages/api/admin/tenants/index.ts#L28"
+      },
+      {
+        "field": "email",
+        "in": "body",
+        "source": "req.body",
+        "locator": "REPO-01:src/pages/api/admin/tenants/index.ts#L58"
+      },
+      {
+        "field": "password",
+        "in": "body",
+        "source": "req.body",
+        "locator": "REPO-01:src/pages/api/admin/tenants/index.ts#L59"
+      },
+      {
+        "field": "confirmationPassword",
+        "in": "body",
+        "source": "req.body",
+        "locator": "REPO-01:src/pages/api/admin/tenants/index.ts#L60"
+      },
+      {
+        "field": "User",
+        "in": "body",
+        "source": "req.body",
+        "locator": "REPO-01:src/pages/api/admin/tenants/index.ts#L61"
+      },
+      {
+        "field": "imageUrl",
+        "in": "body",
+        "source": "req.body",
+        "locator": "REPO-01:src/pages/api/admin/tenants/index.ts#L62"
+      },
+      {
+        "field": "limit",
+        "in": "query",
+        "source": "destructure req.query",
+        "locator": "REPO-01:src/pages/api/admin/tenants/index.ts#L29"
+      },
+      {
+        "field": "page",
+        "in": "query",
+        "source": "destructure req.query",
+        "locator": "REPO-01:src/pages/api/admin/tenants/index.ts#L29"
+      },
+      {
+        "field": "code",
+        "in": "body",
+        "source": "destructure req.body",
+        "locator": "REPO-01:src/pages/api/admin/tenants/index.ts#L56"
+      }
+    ],
+    "handler_locator": null,
+    "handler_file": "src/pages/api/admin/tenants/index.ts",
+    "ev": "EV-0783",
+    "api_id": "API-050"
+  },
+  {
+    "method": "ANY",
+    "path": "/api/admin/ticket-booking-schedules/has-booking",
+    "handler": "default",
+    "group": "admin",
+    "framework": "file-routing",
+    "locator": "REPO-01:src/pages/api/admin/ticket-booking-schedules/has-booking.ts#L1",
+    "file": "src/pages/api/admin/ticket-booking-schedules/has-booking.ts",
+    "auth_hints": [],
+    "request_hints": [
+      {
+        "field": "ticketBookingScheduleId",
+        "in": "query",
+        "source": "req.query",
+        "locator": "REPO-01:src/pages/api/admin/ticket-booking-schedules/has-booking.ts#L17"
+      }
+    ],
+    "handler_locator": null,
+    "handler_file": "src/pages/api/admin/ticket-booking-schedules/has-booking.ts",
+    "ev": "EV-0784",
+    "api_id": "API-051"
+  },
+  {
+    "method": "ANY",
+    "path": "/api/admin/ticket-booking-schedules",
+    "handler": "default",
+    "group": "admin",
+    "framework": "file-routing",
+    "locator": "REPO-01:src/pages/api/admin/ticket-booking-schedules/index.ts#L1",
+    "file": "src/pages/api/admin/ticket-booking-schedules/index.ts",
+    "auth_hints": [],
+    "request_hints": [
+      {
+        "field": "map",
+        "in": "body",
+        "source": "req.body",
+        "locator": "REPO-01:src/pages/api/admin/ticket-booking-schedules/index.ts#L29"
+      }
+    ],
+    "handler_locator": null,
+    "handler_file": "src/pages/api/admin/ticket-booking-schedules/index.ts",
+    "ev": "EV-0785",
+    "api_id": "API-052"
+  },
+  {
+    "method": "ANY",
+    "path": "/api/admin/tickets/:id",
+    "handler": "default",
+    "group": "admin",
+    "framework": "file-routing",
+    "locator": "REPO-01:src/pages/api/admin/tickets/[id].ts#L1",
+    "file": "src/pages/api/admin/tickets/[id].ts",
+    "auth_hints": [],
+    "request_hints": [
+      {
+        "field": "id",
+        "in": "query",
+        "source": "req.query",
+        "locator": "REPO-01:src/pages/api/admin/tickets/[id].ts#L32"
+      },
+      {
+        "field": "TicketDetail",
+        "in": "body",
+        "source": "req.body",
+        "locator": "REPO-01:src/pages/api/admin/tickets/[id].ts#L82"
+      },
+      {
+        "field": "TicketDiscountSetting",
+        "in": "body",
+        "source": "req.body",
+        "locator": "REPO-01:src/pages/api/admin/tickets/[id].ts#L86"
+      },
+      {
+        "field": "slaveTenantCodes",
+        "in": "body",
+        "source": "destructure req.body",
+        "locator": "REPO-01:src/pages/api/admin/tickets/[id].ts#L71"
+      },
+      {
+        "field": "tenantCode",
+        "in": "body",
+        "source": "destructure req.body",
+        "locator": "REPO-01:src/pages/api/admin/tickets/[id].ts#L71"
+      },
+      {
+        "field": "masterTicketId",
+        "in": "body",
+        "source": "destructure req.body",
+        "locator": "REPO-01:src/pages/api/admin/tickets/[id].ts#L71"
+      },
+      {
+        "field": "TicketTenant",
+        "in": "body",
+        "source": "destructure req.body",
+        "locator": "REPO-01:src/pages/api/admin/tickets/[id].ts#L71"
+      },
+      {
+        "field": "id",
+        "in": "body",
+        "source": "destructure req.body",
+        "locator": "REPO-01:src/pages/api/admin/tickets/[id].ts#L71"
+      },
+      {
+        "field": "adultTicketCode",
+        "in": "body",
+        "source": "destructure req.body",
+        "locator": "REPO-01:src/pages/api/admin/tickets/[id].ts#L71"
+      },
+      {
+        "field": "childTicketCode",
+        "in": "body",
+        "source": "destructure req.body",
+        "locator": "REPO-01:src/pages/api/admin/tickets/[id].ts#L71"
+      },
+      {
+        "field": "videoUrl",
+        "in": "body",
+        "source": "destructure req.body",
+        "locator": "REPO-01:src/pages/api/admin/tickets/[id].ts#L215"
+      },
+      {
+        "field": "id",
+        "in": "path",
+        "source": "route param",
+        "locator": "REPO-01:src/pages/api/admin/tickets/[id].ts#L1"
+      }
+    ],
+    "handler_locator": null,
+    "handler_file": "src/pages/api/admin/tickets/[id].ts",
+    "ev": "EV-0786",
+    "api_id": "API-053"
+  },
+  {
+    "method": "ANY",
+    "path": "/api/admin/tickets/:id/backfill-obic-codes",
+    "handler": "default",
+    "group": "admin",
+    "framework": "file-routing",
+    "locator": "REPO-01:src/pages/api/admin/tickets/[id]/backfill-obic-codes.ts#L1",
+    "file": "src/pages/api/admin/tickets/[id]/backfill-obic-codes.ts",
+    "auth_hints": [],
+    "request_hints": [
+      {
+        "field": "id",
+        "in": "query",
+        "source": "req.query",
+        "locator": "REPO-01:src/pages/api/admin/tickets/[id]/backfill-obic-codes.ts#L19"
+      },
+      {
+        "field": "id",
+        "in": "path",
+        "source": "route param",
+        "locator": "REPO-01:src/pages/api/admin/tickets/[id]/backfill-obic-codes.ts#L1"
+      }
+    ],
+    "handler_locator": null,
+    "handler_file": "src/pages/api/admin/tickets/[id]/backfill-obic-codes.ts",
+    "ev": "EV-0787",
+    "api_id": "API-054"
+  },
+  {
+    "method": "ANY",
+    "path": "/api/admin/tickets/count",
+    "handler": "default",
+    "group": "admin",
+    "framework": "file-routing",
+    "locator": "REPO-01:src/pages/api/admin/tickets/count.ts#L1",
+    "file": "src/pages/api/admin/tickets/count.ts",
+    "auth_hints": [],
+    "request_hints": [
+      {
+        "field": "ticketTypes",
+        "in": "query",
+        "source": "req.query",
+        "locator": "REPO-01:src/pages/api/admin/tickets/count.ts#L20"
+      },
+      {
+        "field": "tenantCode",
+        "in": "query",
+        "source": "req.query",
+        "locator": "REPO-01:src/pages/api/admin/tickets/count.ts#L21"
+      }
+    ],
+    "handler_locator": null,
+    "handler_file": "src/pages/api/admin/tickets/count.ts",
+    "ev": "EV-0788",
+    "api_id": "API-055"
+  },
+  {
+    "method": "ANY",
+    "path": "/api/admin/tickets/has-booking",
+    "handler": "default",
+    "group": "admin",
+    "framework": "file-routing",
+    "locator": "REPO-01:src/pages/api/admin/tickets/has-booking.ts#L1",
+    "file": "src/pages/api/admin/tickets/has-booking.ts",
+    "auth_hints": [],
+    "request_hints": [
+      {
+        "field": "ticketId",
+        "in": "query",
+        "source": "req.query",
+        "locator": "REPO-01:src/pages/api/admin/tickets/has-booking.ts#L17"
+      }
+    ],
+    "handler_locator": null,
+    "handler_file": "src/pages/api/admin/tickets/has-booking.ts",
+    "ev": "EV-0789",
+    "api_id": "API-056"
+  },
+  {
+    "method": "ANY",
+    "path": "/api/admin/tickets",
+    "handler": "default",
+    "group": "admin",
+    "framework": "file-routing",
+    "locator": "REPO-01:src/pages/api/admin/tickets/index.ts#L1",
+    "file": "src/pages/api/admin/tickets/index.ts",
+    "auth_hints": [],
+    "request_hints": [
+      {
+        "field": "paymentType",
+        "in": "query",
+        "source": "req.query",
+        "locator": "REPO-01:src/pages/api/admin/tickets/index.ts#L67"
+      },
+      {
+        "field": "canBookInAdvance",
+        "in": "query",
+        "source": "req.query",
+        "locator": "REPO-01:src/pages/api/admin/tickets/index.ts#L68"
+      },
+      {
+        "field": "ticketTypes",
+        "in": "query",
+        "source": "req.query",
+        "locator": "REPO-01:src/pages/api/admin/tickets/index.ts#L69"
+      },
+      {
+        "field": "tenantCode",
+        "in": "query",
+        "source": "req.query",
+        "locator": "REPO-01:src/pages/api/admin/tickets/index.ts#L70"
+      },
+      {
+        "field": "excludeExpiredSchedule",
+        "in": "query",
+        "source": "req.query",
+        "locator": "REPO-01:src/pages/api/admin/tickets/index.ts#L72"
+      },
+      {
+        "field": "slaveTenantCodes",
+        "in": "body",
+        "source": "destructure req.body",
+        "locator": "REPO-01:src/pages/api/admin/tickets/index.ts#L27"
+      },
+      {
+        "field": "tenantCode",
+        "in": "body",
+        "source": "destructure req.body",
+        "locator": "REPO-01:src/pages/api/admin/tickets/index.ts#L27"
+      },
+      {
+        "field": "TicketTenant",
+        "in": "body",
+        "source": "destructure req.body",
+        "locator": "REPO-01:src/pages/api/admin/tickets/index.ts#L27"
+      },
+      {
+        "field": "adultTicketCode",
+        "in": "body",
+        "source": "destructure req.body",
+        "locator": "REPO-01:src/pages/api/admin/tickets/index.ts#L27"
+      },
+      {
+        "field": "childTicketCode",
+        "in": "body",
+        "source": "destructure req.body",
+        "locator": "REPO-01:src/pages/api/admin/tickets/index.ts#L27"
+      },
+      {
+        "field": "limit",
+        "in": "query",
+        "source": "destructure req.query",
+        "locator": "REPO-01:src/pages/api/admin/tickets/index.ts#L71"
+      },
+      {
+        "field": "page",
+        "in": "query",
+        "source": "destructure req.query",
+        "locator": "REPO-01:src/pages/api/admin/tickets/index.ts#L71"
+      }
+    ],
+    "handler_locator": null,
+    "handler_file": "src/pages/api/admin/tickets/index.ts",
+    "ev": "EV-0790",
+    "api_id": "API-057"
+  },
+  {
+    "method": "ANY",
+    "path": "/api/admin/tickets/obic-codes/export",
+    "handler": "default",
+    "group": "admin",
+    "framework": "file-routing",
+    "locator": "REPO-01:src/pages/api/admin/tickets/obic-codes/export.ts#L1",
+    "file": "src/pages/api/admin/tickets/obic-codes/export.ts",
+    "auth_hints": [],
+    "request_hints": [
+      {
+        "field": "startDate",
+        "in": "query",
+        "source": "destructure req.query",
+        "locator": "REPO-01:src/pages/api/admin/tickets/obic-codes/export.ts#L27"
+      },
+      {
+        "field": "endDate",
+        "in": "query",
+        "source": "destructure req.query",
+        "locator": "REPO-01:src/pages/api/admin/tickets/obic-codes/export.ts#L27"
+      },
+      {
+        "field": "tenantCode",
+        "in": "query",
+        "source": "destructure req.query",
+        "locator": "REPO-01:src/pages/api/admin/tickets/obic-codes/export.ts#L27"
+      }
+    ],
+    "handler_locator": null,
+    "handler_file": "src/pages/api/admin/tickets/obic-codes/export.ts",
+    "ev": "EV-0791",
+    "api_id": "API-058"
+  },
+  {
+    "method": "ANY",
+    "path": "/api/admin/users/:id",
+    "handler": "default",
+    "group": "admin",
+    "framework": "file-routing",
+    "locator": "REPO-01:src/pages/api/admin/users/[id].ts#L1",
+    "file": "src/pages/api/admin/users/[id].ts",
+    "auth_hints": [],
+    "request_hints": [
+      {
+        "field": "fromStaff",
+        "in": "body",
+        "source": "req.body",
+        "locator": "REPO-01:src/pages/api/admin/users/[id].ts#L21"
+      },
+      {
+        "field": "id",
+        "in": "query",
+        "source": "req.query",
+        "locator": "REPO-01:src/pages/api/admin/users/[id].ts#L28"
+      },
+      {
+        "field": "lastName",
+        "in": "body",
+        "source": "req.body",
+        "locator": "REPO-01:src/pages/api/admin/users/[id].ts#L31"
+      },
+      {
+        "field": "firstName",
+        "in": "body",
+        "source": "req.body",
+        "locator": "REPO-01:src/pages/api/admin/users/[id].ts#L31"
+      },
+      {
+        "field": "confirmationPassword",
+        "in": "body",
+        "source": "req.body",
+        "locator": "REPO-01:src/pages/api/admin/users/[id].ts#L33"
+      },
+      {
+        "field": "confirmationEmail",
+        "in": "body",
+        "source": "req.body",
+        "locator": "REPO-01:src/pages/api/admin/users/[id].ts#L34"
+      },
+      {
+        "field": "password",
+        "in": "body",
+        "source": "destructure req.body",
+        "locator": "REPO-01:src/pages/api/admin/users/[id].ts#L29"
+      },
+      {
+        "field": "id",
+        "in": "path",
+        "source": "route param",
+        "locator": "REPO-01:src/pages/api/admin/users/[id].ts#L1"
+      }
+    ],
+    "handler_locator": null,
+    "handler_file": "src/pages/api/admin/users/[id].ts",
+    "ev": "EV-0792",
+    "api_id": "API-059"
+  },
+  {
+    "method": "ANY",
+    "path": "/api/admin/users/count",
+    "handler": "default",
+    "group": "admin",
+    "framework": "file-routing",
+    "locator": "REPO-01:src/pages/api/admin/users/count.ts#L1",
+    "file": "src/pages/api/admin/users/count.ts",
+    "auth_hints": [],
+    "request_hints": [
+      {
+        "field": "name",
+        "in": "query",
+        "source": "req.query",
+        "locator": "REPO-01:src/pages/api/admin/users/count.ts#L19"
+      },
+      {
+        "field": "email",
+        "in": "query",
+        "source": "req.query",
+        "locator": "REPO-01:src/pages/api/admin/users/count.ts#L20"
+      },
+      {
+        "field": "phone",
+        "in": "query",
+        "source": "req.query",
+        "locator": "REPO-01:src/pages/api/admin/users/count.ts#L21"
+      },
+      {
+        "field": "startDate",
+        "in": "query",
+        "source": "req.query",
+        "locator": "REPO-01:src/pages/api/admin/users/count.ts#L22"
+      },
+      {
+        "field": "endDate",
+        "in": "query",
+        "source": "req.query",
+        "locator": "REPO-01:src/pages/api/admin/users/count.ts#L23"
+      }
+    ],
+    "handler_locator": null,
+    "handler_file": "src/pages/api/admin/users/count.ts",
+    "ev": "EV-0793",
+    "api_id": "API-060"
+  },
+  {
+    "method": "ANY",
+    "path": "/api/admin/users",
+    "handler": "default",
+    "group": "admin",
+    "framework": "file-routing",
+    "locator": "REPO-01:src/pages/api/admin/users/index.ts#L1",
+    "file": "src/pages/api/admin/users/index.ts",
+    "auth_hints": [],
+    "request_hints": [
+      {
+        "field": "name",
+        "in": "query",
+        "source": "req.query",
+        "locator": "REPO-01:src/pages/api/admin/users/index.ts#L33"
+      },
+      {
+        "field": "email",
+        "in": "query",
+        "source": "req.query",
+        "locator": "REPO-01:src/pages/api/admin/users/index.ts#L34"
+      },
+      {
+        "field": "phone",
+        "in": "query",
+        "source": "req.query",
+        "locator": "REPO-01:src/pages/api/admin/users/index.ts#L35"
+      },
+      {
+        "field": "startDate",
+        "in": "query",
+        "source": "req.query",
+        "locator": "REPO-01:src/pages/api/admin/users/index.ts#L36"
+      },
+      {
+        "field": "endDate",
+        "in": "query",
+        "source": "req.query",
+        "locator": "REPO-01:src/pages/api/admin/users/index.ts#L37"
+      },
+      {
+        "field": "fromAction",
+        "in": "query",
+        "source": "req.query",
+        "locator": "REPO-01:src/pages/api/admin/users/index.ts#L38"
+      },
+      {
+        "field": "includeCheckoutInfo",
+        "in": "query",
+        "source": "req.query",
+        "locator": "REPO-01:src/pages/api/admin/users/index.ts#L39"
+      },
+      {
+        "field": "confirmationPassword",
+        "in": "body",
+        "source": "req.body",
+        "locator": "REPO-01:src/pages/api/admin/users/index.ts#L88"
+      },
+      {
+        "field": "limit",
+        "in": "query",
+        "source": "destructure req.query",
+        "locator": "REPO-01:src/pages/api/admin/users/index.ts#L45"
+      },
+      {
+        "field": "page",
+        "in": "query",
+        "source": "destructure req.query",
+        "locator": "REPO-01:src/pages/api/admin/users/index.ts#L45"
+      },
+      {
+        "field": "email",
+        "in": "body",
+        "source": "destructure req.body",
+        "locator": "REPO-01:src/pages/api/admin/users/index.ts#L86"
+      },
+      {
+        "field": "password",
+        "in": "body",
+        "source": "destructure req.body",
+        "locator": "REPO-01:src/pages/api/admin/users/index.ts#L86"
+      },
+      {
+        "field": "firstName",
+        "in": "body",
+        "source": "destructure req.body",
+        "locator": "REPO-01:src/pages/api/admin/users/index.ts#L86"
+      },
+      {
+        "field": "lastName",
+        "in": "body",
+        "source": "destructure req.body",
+        "locator": "REPO-01:src/pages/api/admin/users/index.ts#L86"
+      }
+    ],
+    "handler_locator": null,
+    "handler_file": "src/pages/api/admin/users/index.ts",
+    "ev": "EV-0794",
+    "api_id": "API-061"
+  },
+  {
+    "method": "ANY",
+    "path": "/api/app-settings/:settingKey",
+    "handler": "default",
+    "group": "app-settings",
+    "framework": "file-routing",
+    "locator": "REPO-01:src/pages/api/app-settings/[settingKey].ts#L1",
+    "file": "src/pages/api/app-settings/[settingKey].ts",
+    "auth_hints": [],
+    "request_hints": [
+      {
+        "field": "settingKey",
+        "in": "query",
+        "source": "req.query",
+        "locator": "REPO-01:src/pages/api/app-settings/[settingKey].ts#L12"
+      },
+      {
+        "field": "settingKey",
+        "in": "path",
+        "source": "route param",
+        "locator": "REPO-01:src/pages/api/app-settings/[settingKey].ts#L1"
+      }
+    ],
+    "handler_locator": null,
+    "handler_file": "src/pages/api/app-settings/[settingKey].ts",
+    "ev": "EV-0795",
+    "api_id": "API-062"
+  },
+  {
+    "method": "ANY",
+    "path": "/api/app-settings/ip-whitelist",
+    "handler": "default",
+    "group": "app-settings",
+    "framework": "file-routing",
+    "locator": "REPO-01:src/pages/api/app-settings/ip-whitelist.ts#L1",
+    "file": "src/pages/api/app-settings/ip-whitelist.ts",
+    "auth_hints": [],
+    "request_hints": [],
+    "handler_locator": null,
+    "handler_file": "src/pages/api/app-settings/ip-whitelist.ts",
+    "ev": "EV-0796",
+    "api_id": "API-063"
+  },
+  {
+    "method": "ANY",
+    "path": "/api/auth/:nextauth*",
+    "handler": "default",
+    "group": "auth",
+    "framework": "file-routing",
+    "locator": "REPO-01:src/pages/api/auth/[...nextauth].ts#L1",
+    "file": "src/pages/api/auth/[...nextauth].ts",
+    "auth_hints": [
+      "getServerSession"
+    ],
+    "request_hints": [
+      {
+        "field": "callbackUrl",
+        "in": "body",
+        "source": "req.body",
+        "locator": "REPO-01:src/pages/api/auth/[...nextauth].ts#L70"
+      },
+      {
+        "field": "nextauth",
+        "in": "path",
+        "source": "route param",
+        "locator": "REPO-01:src/pages/api/auth/[...nextauth].ts#L1"
+      }
+    ],
+    "handler_locator": null,
+    "handler_file": "src/pages/api/auth/[...nextauth].ts",
+    "ev": "EV-0797",
+    "api_id": "API-064"
+  },
+  {
+    "method": "ANY",
+    "path": "/api/auth/change-email",
+    "handler": "default",
+    "group": "auth",
+    "framework": "file-routing",
+    "locator": "REPO-01:src/pages/api/auth/change-email.ts#L1",
+    "file": "src/pages/api/auth/change-email.ts",
+    "auth_hints": [],
+    "request_hints": [
+      {
+        "field": "email",
+        "in": "body",
+        "source": "req.body",
+        "locator": "REPO-01:src/pages/api/auth/change-email.ts#L25"
+      }
+    ],
+    "handler_locator": null,
+    "handler_file": "src/pages/api/auth/change-email.ts",
+    "ev": "EV-0798",
+    "api_id": "API-065"
+  },
+  {
+    "method": "ANY",
+    "path": "/api/auth/change-password",
+    "handler": "default",
+    "group": "auth",
+    "framework": "file-routing",
+    "locator": "REPO-01:src/pages/api/auth/change-password.ts#L1",
+    "file": "src/pages/api/auth/change-password.ts",
+    "auth_hints": [
+      "getToken"
+    ],
+    "request_hints": [
+      {
+        "field": "currentPassword",
+        "in": "body",
+        "source": "destructure req.body",
+        "locator": "REPO-01:src/pages/api/auth/change-password.ts#L33"
+      },
+      {
+        "field": "newPassword",
+        "in": "body",
+        "source": "destructure req.body",
+        "locator": "REPO-01:src/pages/api/auth/change-password.ts#L33"
+      }
+    ],
+    "handler_locator": null,
+    "handler_file": "src/pages/api/auth/change-password.ts",
+    "ev": "EV-0799",
+    "api_id": "API-066"
+  },
+  {
+    "method": "ANY",
+    "path": "/api/auth/check-admin-credentials",
+    "handler": "default",
+    "group": "auth",
+    "framework": "file-routing",
+    "locator": "REPO-01:src/pages/api/auth/check-admin-credentials.ts#L1",
+    "file": "src/pages/api/auth/check-admin-credentials.ts",
+    "auth_hints": [],
+    "request_hints": [
+      {
+        "field": "email",
+        "in": "body",
+        "source": "destructure req.body",
+        "locator": "REPO-01:src/pages/api/auth/check-admin-credentials.ts#L23"
+      },
+      {
+        "field": "password",
+        "in": "body",
+        "source": "destructure req.body",
+        "locator": "REPO-01:src/pages/api/auth/check-admin-credentials.ts#L23"
+      }
+    ],
+    "handler_locator": null,
+    "handler_file": "src/pages/api/auth/check-admin-credentials.ts",
+    "ev": "EV-0800",
+    "api_id": "API-067"
+  },
+  {
+    "method": "ANY",
+    "path": "/api/auth/fetch-access-token",
+    "handler": "default",
+    "group": "auth",
+    "framework": "file-routing",
+    "locator": "REPO-01:src/pages/api/auth/fetch-access-token.ts#L1",
+    "file": "src/pages/api/auth/fetch-access-token.ts",
+    "auth_hints": [],
+    "request_hints": [
+      {
+        "field": "email",
+        "in": "body",
+        "source": "destructure req.body",
+        "locator": "REPO-01:src/pages/api/auth/fetch-access-token.ts#L22"
+      },
+      {
+        "field": "password",
+        "in": "body",
+        "source": "destructure req.body",
+        "locator": "REPO-01:src/pages/api/auth/fetch-access-token.ts#L22"
+      }
+    ],
+    "handler_locator": null,
+    "handler_file": "src/pages/api/auth/fetch-access-token.ts",
+    "ev": "EV-0801",
+    "api_id": "API-068"
+  },
+  {
+    "method": "ANY",
+    "path": "/api/auth/forgot-password",
+    "handler": "default",
+    "group": "auth",
+    "framework": "file-routing",
+    "locator": "REPO-01:src/pages/api/auth/forgot-password.ts#L1",
+    "file": "src/pages/api/auth/forgot-password.ts",
+    "auth_hints": [],
+    "request_hints": [
+      {
+        "field": "email",
+        "in": "body",
+        "source": "destructure req.body",
+        "locator": "REPO-01:src/pages/api/auth/forgot-password.ts#L25"
+      }
+    ],
+    "handler_locator": null,
+    "handler_file": "src/pages/api/auth/forgot-password.ts",
+    "ev": "EV-0802",
+    "api_id": "API-069"
+  },
+  {
+    "method": "ANY",
+    "path": "/api/auth/request-unlock-account",
+    "handler": "default",
+    "group": "auth",
+    "framework": "file-routing",
+    "locator": "REPO-01:src/pages/api/auth/request-unlock-account.ts#L1",
+    "file": "src/pages/api/auth/request-unlock-account.ts",
+    "auth_hints": [],
+    "request_hints": [
+      {
+        "field": "email",
+        "in": "body",
+        "source": "destructure req.body",
+        "locator": "REPO-01:src/pages/api/auth/request-unlock-account.ts#L24"
+      }
+    ],
+    "handler_locator": null,
+    "handler_file": "src/pages/api/auth/request-unlock-account.ts",
+    "ev": "EV-0803",
+    "api_id": "API-070"
+  },
+  {
+    "method": "ANY",
+    "path": "/api/auth/resend-verification-email",
+    "handler": "default",
+    "group": "auth",
+    "framework": "file-routing",
+    "locator": "REPO-01:src/pages/api/auth/resend-verification-email.ts#L1",
+    "file": "src/pages/api/auth/resend-verification-email.ts",
+    "auth_hints": [],
+    "request_hints": [
+      {
+        "field": "email",
+        "in": "body",
+        "source": "destructure req.body",
+        "locator": "REPO-01:src/pages/api/auth/resend-verification-email.ts#L17"
+      },
+      {
+        "field": "token",
+        "in": "body",
+        "source": "destructure req.body",
+        "locator": "REPO-01:src/pages/api/auth/resend-verification-email.ts#L17"
+      }
+    ],
+    "handler_locator": null,
+    "handler_file": "src/pages/api/auth/resend-verification-email.ts",
+    "ev": "EV-0804",
+    "api_id": "API-071"
+  },
+  {
+    "method": "ANY",
+    "path": "/api/auth/reset-password",
+    "handler": "default",
+    "group": "auth",
+    "framework": "file-routing",
+    "locator": "REPO-01:src/pages/api/auth/reset-password.ts#L1",
+    "file": "src/pages/api/auth/reset-password.ts",
+    "auth_hints": [],
+    "request_hints": [
+      {
+        "field": "token",
+        "in": "body",
+        "source": "destructure req.body",
+        "locator": "REPO-01:src/pages/api/auth/reset-password.ts#L21"
+      },
+      {
+        "field": "password",
+        "in": "body",
+        "source": "destructure req.body",
+        "locator": "REPO-01:src/pages/api/auth/reset-password.ts#L21"
+      }
+    ],
+    "handler_locator": null,
+    "handler_file": "src/pages/api/auth/reset-password.ts",
+    "ev": "EV-0805",
+    "api_id": "API-072"
+  },
+  {
+    "method": "ANY",
+    "path": "/api/auth/security-questions",
+    "handler": "default",
+    "group": "auth",
+    "framework": "file-routing",
+    "locator": "REPO-01:src/pages/api/auth/security-questions.ts#L1",
+    "file": "src/pages/api/auth/security-questions.ts",
+    "auth_hints": [],
+    "request_hints": [],
+    "handler_locator": null,
+    "handler_file": "src/pages/api/auth/security-questions.ts",
+    "ev": "EV-0806",
+    "api_id": "API-073"
+  },
+  {
+    "method": "ANY",
+    "path": "/api/auth/signup",
+    "handler": "default",
+    "group": "auth",
+    "framework": "file-routing",
+    "locator": "REPO-01:src/pages/api/auth/signup.ts#L1",
+    "file": "src/pages/api/auth/signup.ts",
+    "auth_hints": [],
+    "request_hints": [
+      {
+        "field": "confirmationPassword",
+        "in": "body",
+        "source": "req.body",
+        "locator": "REPO-01:src/pages/api/auth/signup.ts#L28"
+      },
+      {
+        "field": "confirmationEmail",
+        "in": "body",
+        "source": "req.body",
+        "locator": "REPO-01:src/pages/api/auth/signup.ts#L29"
+      },
+      {
+        "field": "agreePrivacy",
+        "in": "body",
+        "source": "req.body",
+        "locator": "REPO-01:src/pages/api/auth/signup.ts#L30"
+      },
+      {
+        "field": "systemCreated",
+        "in": "body",
+        "source": "req.body",
+        "locator": "REPO-01:src/pages/api/auth/signup.ts#L31"
+      },
+      {
+        "field": "email",
+        "in": "body",
+        "source": "destructure req.body",
+        "locator": "REPO-01:src/pages/api/auth/signup.ts#L26"
+      },
+      {
+        "field": "password",
+        "in": "body",
+        "source": "destructure req.body",
+        "locator": "REPO-01:src/pages/api/auth/signup.ts#L26"
+      },
+      {
+        "field": "lastName",
+        "in": "body",
+        "source": "destructure req.body",
+        "locator": "REPO-01:src/pages/api/auth/signup.ts#L26"
+      },
+      {
+        "field": "firstName",
+        "in": "body",
+        "source": "destructure req.body",
+        "locator": "REPO-01:src/pages/api/auth/signup.ts#L26"
+      }
+    ],
+    "handler_locator": null,
+    "handler_file": "src/pages/api/auth/signup.ts",
+    "ev": "EV-0807",
+    "api_id": "API-074"
+  },
+  {
+    "method": "ANY",
+    "path": "/api/auth/unlock-account",
+    "handler": "default",
+    "group": "auth",
+    "framework": "file-routing",
+    "locator": "REPO-01:src/pages/api/auth/unlock-account.ts#L1",
+    "file": "src/pages/api/auth/unlock-account.ts",
+    "auth_hints": [],
+    "request_hints": [
+      {
+        "field": "token",
+        "in": "body",
+        "source": "destructure req.body",
+        "locator": "REPO-01:src/pages/api/auth/unlock-account.ts#L21"
+      }
+    ],
+    "handler_locator": null,
+    "handler_file": "src/pages/api/auth/unlock-account.ts",
+    "ev": "EV-0808",
+    "api_id": "API-075"
+  },
+  {
+    "method": "ANY",
+    "path": "/api/auth/update-password",
+    "handler": "default",
+    "group": "auth",
+    "framework": "file-routing",
+    "locator": "REPO-01:src/pages/api/auth/update-password.ts#L1",
+    "file": "src/pages/api/auth/update-password.ts",
+    "auth_hints": [],
+    "request_hints": [
+      {
+        "field": "email",
+        "in": "body",
+        "source": "destructure req.body",
+        "locator": "REPO-01:src/pages/api/auth/update-password.ts#L25"
+      }
+    ],
+    "handler_locator": null,
+    "handler_file": "src/pages/api/auth/update-password.ts",
+    "ev": "EV-0809",
+    "api_id": "API-076"
+  },
+  {
+    "method": "ANY",
+    "path": "/api/auth/verify/:token",
+    "handler": "default",
+    "group": "auth",
+    "framework": "file-routing",
+    "locator": "REPO-01:src/pages/api/auth/verify/[token].ts#L1",
+    "file": "src/pages/api/auth/verify/[token].ts",
+    "auth_hints": [],
+    "request_hints": [
+      {
+        "field": "token",
+        "in": "query",
+        "source": "req.query",
+        "locator": "REPO-01:src/pages/api/auth/verify/[token].ts#L17"
+      },
+      {
+        "field": "token",
+        "in": "path",
+        "source": "route param",
+        "locator": "REPO-01:src/pages/api/auth/verify/[token].ts#L1"
+      }
+    ],
+    "handler_locator": null,
+    "handler_file": "src/pages/api/auth/verify/[token].ts",
+    "ev": "EV-0810",
+    "api_id": "API-077"
+  },
+  {
+    "method": "ANY",
+    "path": "/api/bookings/check-monthly-ticket-already-used",
+    "handler": "default",
+    "group": "bookings",
+    "framework": "file-routing",
+    "locator": "REPO-01:src/pages/api/bookings/check-monthly-ticket-already-used.ts#L1",
+    "file": "src/pages/api/bookings/check-monthly-ticket-already-used.ts",
+    "auth_hints": [],
+    "request_hints": [
+      {
+        "field": "parentBookingId",
+        "in": "query",
+        "source": "req.query",
+        "locator": "REPO-01:src/pages/api/bookings/check-monthly-ticket-already-used.ts#L13"
+      }
+    ],
+    "handler_locator": null,
+    "handler_file": "src/pages/api/bookings/check-monthly-ticket-already-used.ts",
+    "ev": "EV-0811",
+    "api_id": "API-078"
+  },
+  {
+    "method": "ANY",
+    "path": "/api/bookings/check-same-date-booking-exists",
+    "handler": "default",
+    "group": "bookings",
+    "framework": "file-routing",
+    "locator": "REPO-01:src/pages/api/bookings/check-same-date-booking-exists.ts#L1",
+    "file": "src/pages/api/bookings/check-same-date-booking-exists.ts",
+    "auth_hints": [],
+    "request_hints": [
+      {
+        "field": "ticketId",
+        "in": "query",
+        "source": "destructure req.query",
+        "locator": "REPO-01:src/pages/api/bookings/check-same-date-booking-exists.ts#L22"
+      },
+      {
+        "field": "date",
+        "in": "query",
+        "source": "destructure req.query",
+        "locator": "REPO-01:src/pages/api/bookings/check-same-date-booking-exists.ts#L22"
+      }
+    ],
+    "handler_locator": null,
+    "handler_file": "src/pages/api/bookings/check-same-date-booking-exists.ts",
+    "ev": "EV-0812",
+    "api_id": "API-079"
+  },
+  {
+    "method": "ANY",
+    "path": "/api/bookings",
+    "handler": "default",
+    "group": "bookings",
+    "framework": "file-routing",
+    "locator": "REPO-01:src/pages/api/bookings/index.ts#L1",
+    "file": "src/pages/api/bookings/index.ts",
+    "auth_hints": [],
+    "request_hints": [
+      {
+        "field": "barCode",
+        "in": "query",
+        "source": "req.query",
+        "locator": "REPO-01:src/pages/api/bookings/index.ts#L156"
+      },
+      {
+        "field": "tenantCode",
+        "in": "query",
+        "source": "req.query",
+        "locator": "REPO-01:src/pages/api/bookings/index.ts#L157"
+      },
+      {
+        "field": "ticketId",
+        "in": "query",
+        "source": "req.query",
+        "locator": "REPO-01:src/pages/api/bookings/index.ts#L158"
+      },
+      {
+        "field": "childAges",
+        "in": "body",
+        "source": "destructure req.body",
+        "locator": "REPO-01:src/pages/api/bookings/index.ts#L39"
+      },
+      {
+        "field": "cardSeq",
+        "in": "body",
+        "source": "destructure req.body",
+        "locator": "REPO-01:src/pages/api/bookings/index.ts#L39"
+      },
+      {
+        "field": "mainBookingId",
+        "in": "body",
+        "source": "destructure req.body",
+        "locator": "REPO-01:src/pages/api/bookings/index.ts#L39"
+      },
+      {
+        "field": "bySystem",
+        "in": "body",
+        "source": "destructure req.body",
+        "locator": "REPO-01:src/pages/api/bookings/index.ts#L39"
+      },
+      {
+        "field": "bookingDays",
+        "in": "body",
+        "source": "destructure req.body",
+        "locator": "REPO-01:src/pages/api/bookings/index.ts#L39"
+      },
+      {
+        "field": "fromDate",
+        "in": "query",
+        "source": "destructure req.query",
+        "locator": "REPO-01:src/pages/api/bookings/index.ts#L155"
+      },
+      {
+        "field": "date",
+        "in": "query",
+        "source": "destructure req.query",
+        "locator": "REPO-01:src/pages/api/bookings/index.ts#L155"
+      },
+      {
+        "field": "includeBookingSchedule",
+        "in": "query",
+        "source": "destructure req.query",
+        "locator": "REPO-01:src/pages/api/bookings/index.ts#L155"
+      },
+      {
+        "field": "limit",
+        "in": "query",
+        "source": "destructure req.query",
+        "locator": "REPO-01:src/pages/api/bookings/index.ts#L155"
+      },
+      {
+        "field": "page",
+        "in": "query",
+        "source": "destructure req.query",
+        "locator": "REPO-01:src/pages/api/bookings/index.ts#L155"
+      }
+    ],
+    "handler_locator": null,
+    "handler_file": "src/pages/api/bookings/index.ts",
+    "ev": "EV-0813",
+    "api_id": "API-080"
+  },
+  {
+    "method": "ANY",
+    "path": "/api/bookings/main-bookings/:id",
+    "handler": "default",
+    "group": "bookings",
+    "framework": "file-routing",
+    "locator": "REPO-01:src/pages/api/bookings/main-bookings/[id].ts#L1",
+    "file": "src/pages/api/bookings/main-bookings/[id].ts",
+    "auth_hints": [],
+    "request_hints": [
+      {
+        "field": "id",
+        "in": "query",
+        "source": "req.query",
+        "locator": "REPO-01:src/pages/api/bookings/main-bookings/[id].ts#L16"
+      },
+      {
+        "field": "id",
+        "in": "path",
+        "source": "route param",
+        "locator": "REPO-01:src/pages/api/bookings/main-bookings/[id].ts#L1"
+      }
+    ],
+    "handler_locator": null,
+    "handler_file": "src/pages/api/bookings/main-bookings/[id].ts",
+    "ev": "EV-0814",
+    "api_id": "API-081"
+  },
+  {
+    "method": "ANY",
+    "path": "/api/bookings/status",
+    "handler": "default",
+    "group": "bookings",
+    "framework": "file-routing",
+    "locator": "REPO-01:src/pages/api/bookings/status.ts#L1",
+    "file": "src/pages/api/bookings/status.ts",
+    "auth_hints": [],
+    "request_hints": [
+      {
+        "field": "bookingId",
+        "in": "query",
+        "source": "req.query",
+        "locator": "REPO-01:src/pages/api/bookings/status.ts#L13"
+      }
+    ],
+    "handler_locator": null,
+    "handler_file": "src/pages/api/bookings/status.ts",
+    "ev": "EV-0815",
+    "api_id": "API-082"
+  },
+  {
+    "method": "ANY",
+    "path": "/api/bookings/transaction/:id",
+    "handler": "default",
+    "group": "bookings",
+    "framework": "file-routing",
+    "locator": "REPO-01:src/pages/api/bookings/transaction/[id].ts#L1",
+    "file": "src/pages/api/bookings/transaction/[id].ts",
+    "auth_hints": [],
+    "request_hints": [
+      {
+        "field": "id",
+        "in": "query",
+        "source": "req.query",
+        "locator": "REPO-01:src/pages/api/bookings/transaction/[id].ts#L23"
+      },
+      {
+        "field": "id",
+        "in": "path",
+        "source": "route param",
+        "locator": "REPO-01:src/pages/api/bookings/transaction/[id].ts#L1"
+      }
+    ],
+    "handler_locator": null,
+    "handler_file": "src/pages/api/bookings/transaction/[id].ts",
+    "ev": "EV-0816",
+    "api_id": "API-083"
+  },
+  {
+    "method": "ANY",
+    "path": "/api/bookings/use-in-day",
+    "handler": "default",
+    "group": "bookings",
+    "framework": "file-routing",
+    "locator": "REPO-01:src/pages/api/bookings/use-in-day.ts#L1",
+    "file": "src/pages/api/bookings/use-in-day.ts",
+    "auth_hints": [],
+    "request_hints": [
+      {
+        "field": "tenantCode",
+        "in": "body",
+        "source": "destructure req.body",
+        "locator": "REPO-01:src/pages/api/bookings/use-in-day.ts#L40"
+      },
+      {
+        "field": "subEmail",
+        "in": "body",
+        "source": "destructure req.body",
+        "locator": "REPO-01:src/pages/api/bookings/use-in-day.ts#L40"
+      }
+    ],
+    "handler_locator": null,
+    "handler_file": "src/pages/api/bookings/use-in-day.ts",
+    "ev": "EV-0817",
+    "api_id": "API-084"
+  },
+  {
+    "method": "ANY",
+    "path": "/api/bookings/vacancies/status",
+    "handler": "default",
+    "group": "bookings",
+    "framework": "file-routing",
+    "locator": "REPO-01:src/pages/api/bookings/vacancies/status.ts#L1",
+    "file": "src/pages/api/bookings/vacancies/status.ts",
+    "auth_hints": [],
+    "request_hints": [
+      {
+        "field": "includeTodayOneDayOnlineForInDayVacancy",
+        "in": "query",
+        "source": "req.query",
+        "locator": "REPO-01:src/pages/api/bookings/vacancies/status.ts#L15"
+      },
+      {
+        "field": "bookingDays",
+        "in": "query",
+        "source": "req.query",
+        "locator": "REPO-01:src/pages/api/bookings/vacancies/status.ts#L17"
+      },
+      {
+        "field": "sortTicketsBy",
+        "in": "query",
+        "source": "destructure req.query",
+        "locator": "REPO-01:src/pages/api/bookings/vacancies/status.ts#L16"
+      }
+    ],
+    "handler_locator": null,
+    "handler_file": "src/pages/api/bookings/vacancies/status.ts",
+    "ev": "EV-0818",
+    "api_id": "API-085"
+  },
+  {
+    "method": "ANY",
+    "path": "/api/cron-job/daily",
+    "handler": "default",
+    "group": "cron-job",
+    "framework": "file-routing",
+    "locator": "REPO-01:src/pages/api/cron-job/daily.ts#L1",
+    "file": "src/pages/api/cron-job/daily.ts",
+    "auth_hints": [],
+    "request_hints": [],
+    "handler_locator": null,
+    "handler_file": "src/pages/api/cron-job/daily.ts",
+    "ev": "EV-0819",
+    "api_id": "API-086"
+  },
+  {
+    "method": "ANY",
+    "path": "/api/cron-job/process-overdue-calling-booking",
+    "handler": "default",
+    "group": "cron-job",
+    "framework": "file-routing",
+    "locator": "REPO-01:src/pages/api/cron-job/process-overdue-calling-booking.ts#L1",
+    "file": "src/pages/api/cron-job/process-overdue-calling-booking.ts",
+    "auth_hints": [],
+    "request_hints": [],
+    "handler_locator": null,
+    "handler_file": "src/pages/api/cron-job/process-overdue-calling-booking.ts",
+    "ev": "EV-0820",
+    "api_id": "API-087"
+  },
+  {
+    "method": "ANY",
+    "path": "/api/cron-job/process-overdue-no-waiting-booking",
+    "handler": "default",
+    "group": "cron-job",
+    "framework": "file-routing",
+    "locator": "REPO-01:src/pages/api/cron-job/process-overdue-no-waiting-booking.ts#L1",
+    "file": "src/pages/api/cron-job/process-overdue-no-waiting-booking.ts",
+    "auth_hints": [],
+    "request_hints": [],
+    "handler_locator": null,
+    "handler_file": "src/pages/api/cron-job/process-overdue-no-waiting-booking.ts",
+    "ev": "EV-0821",
+    "api_id": "API-088"
+  },
+  {
+    "method": "ANY",
+    "path": "/api/cron-job/reconcile-smaregi-transactions",
+    "handler": "default",
+    "group": "cron-job",
+    "framework": "file-routing",
+    "locator": "REPO-01:src/pages/api/cron-job/reconcile-smaregi-transactions.ts#L1",
+    "file": "src/pages/api/cron-job/reconcile-smaregi-transactions.ts",
+    "auth_hints": [],
+    "request_hints": [],
+    "handler_locator": null,
+    "handler_file": "src/pages/api/cron-job/reconcile-smaregi-transactions.ts",
+    "ev": "EV-0822",
+    "api_id": "API-089"
+  },
+  {
+    "method": "ANY",
+    "path": "/api/cron-job/remind-booking-expired",
+    "handler": "default",
+    "group": "cron-job",
+    "framework": "file-routing",
+    "locator": "REPO-01:src/pages/api/cron-job/remind-booking-expired.ts#L1",
+    "file": "src/pages/api/cron-job/remind-booking-expired.ts",
+    "auth_hints": [],
+    "request_hints": [],
+    "handler_locator": null,
+    "handler_file": "src/pages/api/cron-job/remind-booking-expired.ts",
+    "ev": "EV-0823",
+    "api_id": "API-090"
+  },
+  {
+    "method": "ANY",
+    "path": "/api/cron-job/remind-one-day-booking",
+    "handler": "default",
+    "group": "cron-job",
+    "framework": "file-routing",
+    "locator": "REPO-01:src/pages/api/cron-job/remind-one-day-booking.ts#L1",
+    "file": "src/pages/api/cron-job/remind-one-day-booking.ts",
+    "auth_hints": [],
+    "request_hints": [],
+    "handler_locator": null,
+    "handler_file": "src/pages/api/cron-job/remind-one-day-booking.ts",
+    "ev": "EV-0824",
+    "api_id": "API-091"
+  },
+  {
+    "method": "ANY",
+    "path": "/api/cron-job/remind-using-booking",
+    "handler": "default",
+    "group": "cron-job",
+    "framework": "file-routing",
+    "locator": "REPO-01:src/pages/api/cron-job/remind-using-booking.ts#L1",
+    "file": "src/pages/api/cron-job/remind-using-booking.ts",
+    "auth_hints": [],
+    "request_hints": [],
+    "handler_locator": null,
+    "handler_file": "src/pages/api/cron-job/remind-using-booking.ts",
+    "ev": "EV-0825",
+    "api_id": "API-092"
+  },
+  {
+    "method": "ANY",
+    "path": "/api/disclaimers",
+    "handler": "default",
+    "group": "disclaimers",
+    "framework": "file-routing",
+    "locator": "REPO-01:src/pages/api/disclaimers.ts#L1",
+    "file": "src/pages/api/disclaimers.ts",
+    "auth_hints": [],
+    "request_hints": [],
+    "handler_locator": null,
+    "handler_file": "src/pages/api/disclaimers.ts",
+    "ev": "EV-0826",
+    "api_id": "API-093"
+  },
+  {
+    "method": "ANY",
+    "path": "/api/error-report",
+    "handler": "default",
+    "group": "error-report",
+    "framework": "file-routing",
+    "locator": "REPO-01:src/pages/api/error-report.ts#L1",
+    "file": "src/pages/api/error-report.ts",
+    "auth_hints": [],
+    "request_hints": [
+      {
+        "field": "error",
+        "in": "body",
+        "source": "destructure req.body",
+        "locator": "REPO-01:src/pages/api/error-report.ts#L12"
+      }
+    ],
+    "handler_locator": null,
+    "handler_file": "src/pages/api/error-report.ts",
+    "ev": "EV-0827",
+    "api_id": "API-094"
+  },
+  {
+    "method": "ANY",
+    "path": "/api/gmo/callback",
+    "handler": "default",
+    "group": "gmo",
+    "framework": "file-routing",
+    "locator": "REPO-01:src/pages/api/gmo/callback.ts#L1",
+    "file": "src/pages/api/gmo/callback.ts",
+    "auth_hints": [],
+    "request_hints": [
+      {
+        "field": "accessId",
+        "in": "query",
+        "source": "destructure req.query",
+        "locator": "REPO-01:src/pages/api/gmo/callback.ts#L35"
+      },
+      {
+        "field": "accessPass",
+        "in": "query",
+        "source": "destructure req.query",
+        "locator": "REPO-01:src/pages/api/gmo/callback.ts#L35"
+      },
+      {
+        "field": "bookingId",
+        "in": "query",
+        "source": "destructure req.query",
+        "locator": "REPO-01:src/pages/api/gmo/callback.ts#L35"
+      },
+      {
+        "field": "tenantCode",
+        "in": "query",
+        "source": "destructure req.query",
+        "locator": "REPO-01:src/pages/api/gmo/callback.ts#L35"
+      },
+      {
+        "field": "ticketType",
+        "in": "query",
+        "source": "destructure req.query",
+        "locator": "REPO-01:src/pages/api/gmo/callback.ts#L35"
+      },
+      {
+        "field": "param",
+        "in": "body",
+        "source": "destructure req.body",
+        "locator": "REPO-01:src/pages/api/gmo/callback.ts#L36"
+      },
+      {
+        "field": "event",
+        "in": "body",
+        "source": "destructure req.body",
+        "locator": "REPO-01:src/pages/api/gmo/callback.ts#L36"
+      }
+    ],
+    "handler_locator": null,
+    "handler_file": "src/pages/api/gmo/callback.ts",
+    "ev": "EV-0828",
+    "api_id": "API-095"
+  },
+  {
+    "method": "ANY",
+    "path": "/api/health",
+    "handler": "default",
+    "group": "health",
+    "framework": "file-routing",
+    "locator": "REPO-01:src/pages/api/health.ts#L1",
+    "file": "src/pages/api/health.ts",
+    "auth_hints": [],
+    "request_hints": [],
+    "handler_locator": null,
+    "handler_file": "src/pages/api/health.ts",
+    "ev": "EV-0829",
+    "api_id": "API-096"
+  },
+  {
+    "method": "ANY",
+    "path": "/api/migration/add-security-questions",
+    "handler": "default",
+    "group": "migration",
+    "framework": "file-routing",
+    "locator": "REPO-01:src/pages/api/migration/add-security-questions.ts#L1",
+    "file": "src/pages/api/migration/add-security-questions.ts",
+    "auth_hints": [],
+    "request_hints": [],
+    "handler_locator": null,
+    "handler_file": "src/pages/api/migration/add-security-questions.ts",
+    "ev": "EV-0830",
+    "api_id": "API-097"
+  },
+  {
+    "method": "ANY",
+    "path": "/api/migration/email-settings/add-unlock-account",
+    "handler": "default",
+    "group": "migration",
+    "framework": "file-routing",
+    "locator": "REPO-01:src/pages/api/migration/email-settings/add-unlock-account.ts#L1",
+    "file": "src/pages/api/migration/email-settings/add-unlock-account.ts",
+    "auth_hints": [],
+    "request_hints": [],
+    "handler_locator": null,
+    "handler_file": "src/pages/api/migration/email-settings/add-unlock-account.ts",
+    "ev": "EV-0831",
+    "api_id": "API-098"
+  },
+  {
+    "method": "ANY",
+    "path": "/api/migration/fill-first-checked-out-booking-id-for-users",
+    "handler": "default",
+    "group": "migration",
+    "framework": "file-routing",
+    "locator": "REPO-01:src/pages/api/migration/fill-first-checked-out-booking-id-for-users.ts#L1",
+    "file": "src/pages/api/migration/fill-first-checked-out-booking-id-for-users.ts",
+    "auth_hints": [],
+    "request_hints": [],
+    "handler_locator": null,
+    "handler_file": "src/pages/api/migration/fill-first-checked-out-booking-id-for-users.ts",
+    "ev": "EV-0832",
+    "api_id": "API-099"
+  },
+  {
+    "method": "ANY",
+    "path": "/api/migration/fill-gmo-id-for-tenant",
+    "handler": "default",
+    "group": "migration",
+    "framework": "file-routing",
+    "locator": "REPO-01:src/pages/api/migration/fill-gmo-id-for-tenant.ts#L1",
+    "file": "src/pages/api/migration/fill-gmo-id-for-tenant.ts",
+    "auth_hints": [],
+    "request_hints": [],
+    "handler_locator": null,
+    "handler_file": "src/pages/api/migration/fill-gmo-id-for-tenant.ts",
+    "ev": "EV-0833",
+    "api_id": "API-100"
+  },
+  {
+    "method": "ANY",
+    "path": "/api/migration/fill-ticket-booking-schedule-id-for-booking",
+    "handler": "default",
+    "group": "migration",
+    "framework": "file-routing",
+    "locator": "REPO-01:src/pages/api/migration/fill-ticket-booking-schedule-id-for-booking.ts#L1",
+    "file": "src/pages/api/migration/fill-ticket-booking-schedule-id-for-booking.ts",
+    "auth_hints": [],
+    "request_hints": [],
+    "handler_locator": null,
+    "handler_file": "src/pages/api/migration/fill-ticket-booking-schedule-id-for-booking.ts",
+    "ev": "EV-0834",
+    "api_id": "API-101"
+  },
+  {
+    "method": "ANY",
+    "path": "/api/migration/fill-ticket-group-id",
+    "handler": "default",
+    "group": "migration",
+    "framework": "file-routing",
+    "locator": "REPO-01:src/pages/api/migration/fill-ticket-group-id.ts#L1",
+    "file": "src/pages/api/migration/fill-ticket-group-id.ts",
+    "auth_hints": [],
+    "request_hints": [],
+    "handler_locator": null,
+    "handler_file": "src/pages/api/migration/fill-ticket-group-id.ts",
+    "ev": "EV-0835",
+    "api_id": "API-102"
+  },
+  {
+    "method": "ANY",
+    "path": "/api/migration/migrate-discount-setting",
+    "handler": "default",
+    "group": "migration",
+    "framework": "file-routing",
+    "locator": "REPO-01:src/pages/api/migration/migrate-discount-setting.ts#L1",
+    "file": "src/pages/api/migration/migrate-discount-setting.ts",
+    "auth_hints": [],
+    "request_hints": [],
+    "handler_locator": null,
+    "handler_file": "src/pages/api/migration/migrate-discount-setting.ts",
+    "ev": "EV-0836",
+    "api_id": "API-103"
+  },
+  {
+    "method": "ANY",
+    "path": "/api/news",
+    "handler": "default",
+    "group": "news",
+    "framework": "file-routing",
+    "locator": "REPO-01:src/pages/api/news/index.ts#L1",
+    "file": "src/pages/api/news/index.ts",
+    "auth_hints": [],
+    "request_hints": [
+      {
+        "field": "limit",
+        "in": "query",
+        "source": "destructure req.query",
+        "locator": "REPO-01:src/pages/api/news/index.ts#L12"
+      },
+      {
+        "field": "page",
+        "in": "query",
+        "source": "destructure req.query",
+        "locator": "REPO-01:src/pages/api/news/index.ts#L12"
+      },
+      {
+        "field": "sort_by",
+        "in": "query",
+        "source": "destructure req.query",
+        "locator": "REPO-01:src/pages/api/news/index.ts#L12"
+      }
+    ],
+    "handler_locator": null,
+    "handler_file": "src/pages/api/news/index.ts",
+    "ev": "EV-0837",
+    "api_id": "API-104"
+  },
+  {
+    "method": "ANY",
+    "path": "/api/pos/bookings/calculate-pay-amount",
+    "handler": "default",
+    "group": "pos",
+    "framework": "file-routing",
+    "locator": "REPO-01:src/pages/api/pos/bookings/calculate-pay-amount.ts#L1",
+    "file": "src/pages/api/pos/bookings/calculate-pay-amount.ts",
+    "auth_hints": [],
+    "request_hints": [
+      {
+        "field": "barCode",
+        "in": "body",
+        "source": "destructure req.body",
+        "locator": "REPO-01:src/pages/api/pos/bookings/calculate-pay-amount.ts#L28"
+      },
+      {
+        "field": "payTimeAt",
+        "in": "body",
+        "source": "destructure req.body",
+        "locator": "REPO-01:src/pages/api/pos/bookings/calculate-pay-amount.ts#L28"
+      }
+    ],
+    "handler_locator": null,
+    "handler_file": "src/pages/api/pos/bookings/calculate-pay-amount.ts",
+    "ev": "EV-0838",
+    "api_id": "API-105"
+  },
+  {
+    "method": "ANY",
+    "path": "/api/pos/bookings/check-in",
+    "handler": "default",
+    "group": "pos",
+    "framework": "file-routing",
+    "locator": "REPO-01:src/pages/api/pos/bookings/check-in.ts#L1",
+    "file": "src/pages/api/pos/bookings/check-in.ts",
+    "auth_hints": [],
+    "request_hints": [
+      {
+        "field": "barCode",
+        "in": "body",
+        "source": "destructure req.body",
+        "locator": "REPO-01:src/pages/api/pos/bookings/check-in.ts#L28"
+      }
+    ],
+    "handler_locator": null,
+    "handler_file": "src/pages/api/pos/bookings/check-in.ts",
+    "ev": "EV-0839",
+    "api_id": "API-106"
+  },
+  {
+    "method": "ANY",
+    "path": "/api/pos/bookings/check-out",
+    "handler": "default",
+    "group": "pos",
+    "framework": "file-routing",
+    "locator": "REPO-01:src/pages/api/pos/bookings/check-out.ts#L1",
+    "file": "src/pages/api/pos/bookings/check-out.ts",
+    "auth_hints": [],
+    "request_hints": [
+      {
+        "field": "barCode",
+        "in": "body",
+        "source": "destructure req.body",
+        "locator": "REPO-01:src/pages/api/pos/bookings/check-out.ts#L33"
+      },
+      {
+        "field": "totalAmount",
+        "in": "body",
+        "source": "destructure req.body",
+        "locator": "REPO-01:src/pages/api/pos/bookings/check-out.ts#L33"
+      },
+      {
+        "field": "coupons",
+        "in": "body",
+        "source": "destructure req.body",
+        "locator": "REPO-01:src/pages/api/pos/bookings/check-out.ts#L33"
+      }
+    ],
+    "handler_locator": null,
+    "handler_file": "src/pages/api/pos/bookings/check-out.ts",
+    "ev": "EV-0840",
+    "api_id": "API-107"
+  },
+  {
+    "method": "ANY",
+    "path": "/api/pos/bookings",
+    "handler": "default",
+    "group": "pos",
+    "framework": "file-routing",
+    "locator": "REPO-01:src/pages/api/pos/bookings/index.ts#L1",
+    "file": "src/pages/api/pos/bookings/index.ts",
+    "auth_hints": [],
+    "request_hints": [
+      {
+        "field": "barCode",
+        "in": "body",
+        "source": "destructure req.body",
+        "locator": "REPO-01:src/pages/api/pos/bookings/index.ts#L36"
+      },
+      {
+        "field": "noCheck",
+        "in": "body",
+        "source": "destructure req.body",
+        "locator": "REPO-01:src/pages/api/pos/bookings/index.ts#L36"
+      }
+    ],
+    "handler_locator": null,
+    "handler_file": "src/pages/api/pos/bookings/index.ts",
+    "ev": "EV-0841",
+    "api_id": "API-108"
+  },
+  {
+    "method": "ANY",
+    "path": "/api/pos/test",
+    "handler": "default",
+    "group": "pos",
+    "framework": "file-routing",
+    "locator": "REPO-01:src/pages/api/pos/test.ts#L1",
+    "file": "src/pages/api/pos/test.ts",
+    "auth_hints": [],
+    "request_hints": [
+      {
+        "field": "barCode",
+        "in": "body",
+        "source": "req.body",
+        "locator": "REPO-01:src/pages/api/pos/test.ts#L22"
+      }
+    ],
+    "handler_locator": null,
+    "handler_file": "src/pages/api/pos/test.ts",
+    "ev": "EV-0842",
+    "api_id": "API-109"
+  },
+  {
+    "method": "ANY",
+    "path": "/api/smaregi/webhook-transactions",
+    "handler": "default",
+    "group": "smaregi",
+    "framework": "file-routing",
+    "locator": "REPO-01:src/pages/api/smaregi/webhook-transactions.ts#L1",
+    "file": "src/pages/api/smaregi/webhook-transactions.ts",
+    "auth_hints": [],
+    "request_hints": [
+      {
+        "field": "contractId",
+        "in": "body",
+        "source": "destructure req.body",
+        "locator": "REPO-01:src/pages/api/smaregi/webhook-transactions.ts#L30"
+      },
+      {
+        "field": "action",
+        "in": "body",
+        "source": "destructure req.body",
+        "locator": "REPO-01:src/pages/api/smaregi/webhook-transactions.ts#L30"
+      },
+      {
+        "field": "transactionHeadIds",
+        "in": "body",
+        "source": "destructure req.body",
+        "locator": "REPO-01:src/pages/api/smaregi/webhook-transactions.ts#L30"
+      }
+    ],
+    "handler_locator": null,
+    "handler_file": "src/pages/api/smaregi/webhook-transactions.ts",
+    "ev": "EV-0843",
+    "api_id": "API-110"
+  },
+  {
+    "method": "ANY",
+    "path": "/api/status",
+    "handler": "default",
+    "group": "status",
+    "framework": "file-routing",
+    "locator": "REPO-01:src/pages/api/status.ts#L1",
+    "file": "src/pages/api/status.ts",
+    "auth_hints": [],
+    "request_hints": [],
+    "handler_locator": null,
+    "handler_file": "src/pages/api/status.ts",
+    "ev": "EV-0844",
+    "api_id": "API-111"
+  },
+  {
+    "method": "ANY",
+    "path": "/api/tenants/:code",
+    "handler": "default",
+    "group": "tenants",
+    "framework": "file-routing",
+    "locator": "REPO-01:src/pages/api/tenants/[code].ts#L1",
+    "file": "src/pages/api/tenants/[code].ts",
+    "auth_hints": [],
+    "request_hints": [
+      {
+        "field": "code",
+        "in": "query",
+        "source": "req.query",
+        "locator": "REPO-01:src/pages/api/tenants/[code].ts#L12"
+      },
+      {
+        "field": "code",
+        "in": "path",
+        "source": "route param",
+        "locator": "REPO-01:src/pages/api/tenants/[code].ts#L1"
+      }
+    ],
+    "handler_locator": null,
+    "handler_file": "src/pages/api/tenants/[code].ts",
+    "ev": "EV-0845",
+    "api_id": "API-112"
+  },
+  {
+    "method": "ANY",
+    "path": "/api/tenants/count",
+    "handler": "default",
+    "group": "tenants",
+    "framework": "file-routing",
+    "locator": "REPO-01:src/pages/api/tenants/count.ts#L1",
+    "file": "src/pages/api/tenants/count.ts",
+    "auth_hints": [],
+    "request_hints": [
+      {
+        "field": "search",
+        "in": "query",
+        "source": "req.query",
+        "locator": "REPO-01:src/pages/api/tenants/count.ts#L12"
+      }
+    ],
+    "handler_locator": null,
+    "handler_file": "src/pages/api/tenants/count.ts",
+    "ev": "EV-0846",
+    "api_id": "API-113"
+  },
+  {
+    "method": "ANY",
+    "path": "/api/tenants",
+    "handler": "default",
+    "group": "tenants",
+    "framework": "file-routing",
+    "locator": "REPO-01:src/pages/api/tenants/index.ts#L1",
+    "file": "src/pages/api/tenants/index.ts",
+    "auth_hints": [],
+    "request_hints": [
+      {
+        "field": "search",
+        "in": "query",
+        "source": "req.query",
+        "locator": "REPO-01:src/pages/api/tenants/index.ts#L12"
+      },
+      {
+        "field": "page",
+        "in": "query",
+        "source": "destructure req.query",
+        "locator": "REPO-01:src/pages/api/tenants/index.ts#L13"
+      },
+      {
+        "field": "limit",
+        "in": "query",
+        "source": "destructure req.query",
+        "locator": "REPO-01:src/pages/api/tenants/index.ts#L13"
+      },
+      {
+        "field": "allowInactiveTenantCode",
+        "in": "query",
+        "source": "destructure req.query",
+        "locator": "REPO-01:src/pages/api/tenants/index.ts#L13"
+      }
+    ],
+    "handler_locator": null,
+    "handler_file": "src/pages/api/tenants/index.ts",
+    "ev": "EV-0847",
+    "api_id": "API-114"
+  },
+  {
+    "method": "ANY",
+    "path": "/api/tickets-supported/:masterTicketId",
+    "handler": "default",
+    "group": "tickets-supported",
+    "framework": "file-routing",
+    "locator": "REPO-01:src/pages/api/tickets-supported/[masterTicketId].ts#L1",
+    "file": "src/pages/api/tickets-supported/[masterTicketId].ts",
+    "auth_hints": [],
+    "request_hints": [
+      {
+        "field": "masterTicketId",
+        "in": "query",
+        "source": "req.query",
+        "locator": "REPO-01:src/pages/api/tickets-supported/[masterTicketId].ts#L13"
+      },
+      {
+        "field": "visibility",
+        "in": "query",
+        "source": "req.query",
+        "locator": "REPO-01:src/pages/api/tickets-supported/[masterTicketId].ts#L14"
+      },
+      {
+        "field": "includeTenant",
+        "in": "query",
+        "source": "req.query",
+        "locator": "REPO-01:src/pages/api/tickets-supported/[masterTicketId].ts#L15"
+      },
+      {
+        "field": "hasBookingSchedule",
+        "in": "query",
+        "source": "req.query",
+        "locator": "REPO-01:src/pages/api/tickets-supported/[masterTicketId].ts#L16"
+      },
+      {
+        "field": "hasTodayBookingSchedule",
+        "in": "query",
+        "source": "req.query",
+        "locator": "REPO-01:src/pages/api/tickets-supported/[masterTicketId].ts#L17"
+      },
+      {
+        "field": "masterTicketId",
+        "in": "path",
+        "source": "route param",
+        "locator": "REPO-01:src/pages/api/tickets-supported/[masterTicketId].ts#L1"
+      }
+    ],
+    "handler_locator": null,
+    "handler_file": "src/pages/api/tickets-supported/[masterTicketId].ts",
+    "ev": "EV-0848",
+    "api_id": "API-115"
+  },
+  {
+    "method": "ANY",
+    "path": "/api/tickets/:id",
+    "handler": "default",
+    "group": "tickets",
+    "framework": "file-routing",
+    "locator": "REPO-01:src/pages/api/tickets/[id].ts#L1",
+    "file": "src/pages/api/tickets/[id].ts",
+    "auth_hints": [],
+    "request_hints": [
+      {
+        "field": "id",
+        "in": "query",
+        "source": "req.query",
+        "locator": "REPO-01:src/pages/api/tickets/[id].ts#L13"
+      },
+      {
+        "field": "id",
+        "in": "path",
+        "source": "route param",
+        "locator": "REPO-01:src/pages/api/tickets/[id].ts#L1"
+      }
+    ],
+    "handler_locator": null,
+    "handler_file": "src/pages/api/tickets/[id].ts",
+    "ev": "EV-0849",
+    "api_id": "API-116"
+  },
+  {
+    "method": "ANY",
+    "path": "/api/tickets",
+    "handler": "default",
+    "group": "tickets",
+    "framework": "file-routing",
+    "locator": "REPO-01:src/pages/api/tickets/index.ts#L1",
+    "file": "src/pages/api/tickets/index.ts",
+    "auth_hints": [],
+    "request_hints": [
+      {
+        "field": "tenantCode",
+        "in": "query",
+        "source": "req.query",
+        "locator": "REPO-01:src/pages/api/tickets/index.ts#L17"
+      },
+      {
+        "field": "paymentType",
+        "in": "query",
+        "source": "req.query",
+        "locator": "REPO-01:src/pages/api/tickets/index.ts#L18"
+      },
+      {
+        "field": "canBookInAdvance",
+        "in": "query",
+        "source": "req.query",
+        "locator": "REPO-01:src/pages/api/tickets/index.ts#L19"
+      },
+      {
+        "field": "ticketTypes",
+        "in": "query",
+        "source": "req.query",
+        "locator": "REPO-01:src/pages/api/tickets/index.ts#L20"
+      },
+      {
+        "field": "hasBookingSchedule",
+        "in": "query",
+        "source": "req.query",
+        "locator": "REPO-01:src/pages/api/tickets/index.ts#L21"
+      },
+      {
+        "field": "hasSlaveTenants",
+        "in": "query",
+        "source": "req.query",
+        "locator": "REPO-01:src/pages/api/tickets/index.ts#L22"
+      },
+      {
+        "field": "sourcePage",
+        "in": "query",
+        "source": "req.query",
+        "locator": "REPO-01:src/pages/api/tickets/index.ts#L28"
+      },
+      {
+        "field": "sort_by",
+        "in": "query",
+        "source": "destructure req.query",
+        "locator": "REPO-01:src/pages/api/tickets/index.ts#L23"
+      }
+    ],
+    "handler_locator": null,
+    "handler_file": "src/pages/api/tickets/index.ts",
+    "ev": "EV-0850",
+    "api_id": "API-117"
+  },
+  {
+    "method": "ANY",
+    "path": "/api/upload",
+    "handler": "default",
+    "group": "upload",
+    "framework": "file-routing",
+    "locator": "REPO-01:src/pages/api/upload.ts#L1",
+    "file": "src/pages/api/upload.ts",
+    "auth_hints": [],
+    "request_hints": [],
+    "handler_locator": null,
+    "handler_file": "src/pages/api/upload.ts",
+    "ev": "EV-0851",
+    "api_id": "API-118"
+  },
+  {
+    "method": "ANY",
+    "path": "/api/user/bookings/:id",
+    "handler": "default",
+    "group": "user",
+    "framework": "file-routing",
+    "locator": "REPO-01:src/pages/api/user/bookings/[id]/index.ts#L1",
+    "file": "src/pages/api/user/bookings/[id]/index.ts",
+    "auth_hints": [],
+    "request_hints": [
+      {
+        "field": "id",
+        "in": "query",
+        "source": "req.query",
+        "locator": "REPO-01:src/pages/api/user/bookings/[id]/index.ts#L44"
+      },
+      {
+        "field": "id",
+        "in": "body",
+        "source": "req.body",
+        "locator": "REPO-01:src/pages/api/user/bookings/[id]/index.ts#L106"
+      },
+      {
+        "field": "id",
+        "in": "path",
+        "source": "route param",
+        "locator": "REPO-01:src/pages/api/user/bookings/[id]/index.ts#L1"
+      }
+    ],
+    "handler_locator": null,
+    "handler_file": "src/pages/api/user/bookings/[id]/index.ts",
+    "ev": "EV-0852",
+    "api_id": "API-119"
+  },
+  {
+    "method": "ANY",
+    "path": "/api/user/bookings/:id/payment-status",
+    "handler": "default",
+    "group": "user",
+    "framework": "file-routing",
+    "locator": "REPO-01:src/pages/api/user/bookings/[id]/payment-status.ts#L1",
+    "file": "src/pages/api/user/bookings/[id]/payment-status.ts",
+    "auth_hints": [],
+    "request_hints": [
+      {
+        "field": "id",
+        "in": "query",
+        "source": "req.query",
+        "locator": "REPO-01:src/pages/api/user/bookings/[id]/payment-status.ts#L25"
+      },
+      {
+        "field": "paymentStatus",
+        "in": "body",
+        "source": "destructure req.body",
+        "locator": "REPO-01:src/pages/api/user/bookings/[id]/payment-status.ts#L22"
+      },
+      {
+        "field": "isSmaregiScanned",
+        "in": "body",
+        "source": "destructure req.body",
+        "locator": "REPO-01:src/pages/api/user/bookings/[id]/payment-status.ts#L22"
+      },
+      {
+        "field": "id",
+        "in": "path",
+        "source": "route param",
+        "locator": "REPO-01:src/pages/api/user/bookings/[id]/payment-status.ts#L1"
+      }
+    ],
+    "handler_locator": null,
+    "handler_file": "src/pages/api/user/bookings/[id]/payment-status.ts",
+    "ev": "EV-0853",
+    "api_id": "API-120"
+  },
+  {
+    "method": "ANY",
+    "path": "/api/user/bookings/cancel",
+    "handler": "default",
+    "group": "user",
+    "framework": "file-routing",
+    "locator": "REPO-01:src/pages/api/user/bookings/cancel.ts#L1",
+    "file": "src/pages/api/user/bookings/cancel.ts",
+    "auth_hints": [],
+    "request_hints": [
+      {
+        "field": "bookingId",
+        "in": "body",
+        "source": "destructure req.body",
+        "locator": "REPO-01:src/pages/api/user/bookings/cancel.ts#L30"
+      },
+      {
+        "field": "shouldCancelAllSameBarcodeBookings",
+        "in": "body",
+        "source": "destructure req.body",
+        "locator": "REPO-01:src/pages/api/user/bookings/cancel.ts#L30"
+      }
+    ],
+    "handler_locator": null,
+    "handler_file": "src/pages/api/user/bookings/cancel.ts",
+    "ev": "EV-0854",
+    "api_id": "API-121"
+  },
+  {
+    "method": "ANY",
+    "path": "/api/user/bookings",
+    "handler": "default",
+    "group": "user",
+    "framework": "file-routing",
+    "locator": "REPO-01:src/pages/api/user/bookings/index.ts#L1",
+    "file": "src/pages/api/user/bookings/index.ts",
+    "auth_hints": [],
+    "request_hints": [
+      {
+        "field": "date",
+        "in": "query",
+        "source": "req.query",
+        "locator": "REPO-01:src/pages/api/user/bookings/index.ts#L17"
+      },
+      {
+        "field": "fromDate",
+        "in": "query",
+        "source": "req.query",
+        "locator": "REPO-01:src/pages/api/user/bookings/index.ts#L18"
+      }
+    ],
+    "handler_locator": null,
+    "handler_file": "src/pages/api/user/bookings/index.ts",
+    "ev": "EV-0855",
+    "api_id": "API-122"
+  },
+  {
+    "method": "ANY",
+    "path": "/api/user/bookings/last-booking",
+    "handler": "default",
+    "group": "user",
+    "framework": "file-routing",
+    "locator": "REPO-01:src/pages/api/user/bookings/last-booking.ts#L1",
+    "file": "src/pages/api/user/bookings/last-booking.ts",
+    "auth_hints": [],
+    "request_hints": [
+      {
+        "field": "canBookInAdvance",
+        "in": "query",
+        "source": "req.query",
+        "locator": "REPO-01:src/pages/api/user/bookings/last-booking.ts#L16"
+      }
+    ],
+    "handler_locator": null,
+    "handler_file": "src/pages/api/user/bookings/last-booking.ts",
+    "ev": "EV-0856",
+    "api_id": "API-123"
+  },
+  {
+    "method": "ANY",
+    "path": "/api/user/bookings/monthly-tickets/check-already-used-across-tenants",
+    "handler": "default",
+    "group": "user",
+    "framework": "file-routing",
+    "locator": "REPO-01:src/pages/api/user/bookings/monthly-tickets/check-already-used-across-tenants.ts#L1",
+    "file": "src/pages/api/user/bookings/monthly-tickets/check-already-used-across-tenants.ts",
+    "auth_hints": [],
+    "request_hints": [
+      {
+        "field": "tenantCode",
+        "in": "query",
+        "source": "req.query",
+        "locator": "REPO-01:src/pages/api/user/bookings/monthly-tickets/check-already-used-across-tenants.ts#L24"
+      }
+    ],
+    "handler_locator": null,
+    "handler_file": "src/pages/api/user/bookings/monthly-tickets/check-already-used-across-tenants.ts",
+    "ev": "EV-0857",
+    "api_id": "API-124"
+  },
+  {
+    "method": "ANY",
+    "path": "/api/user/bookings/monthly-tickets/count",
+    "handler": "default",
+    "group": "user",
+    "framework": "file-routing",
+    "locator": "REPO-01:src/pages/api/user/bookings/monthly-tickets/count.ts#L1",
+    "file": "src/pages/api/user/bookings/monthly-tickets/count.ts",
+    "auth_hints": [],
+    "request_hints": [
+      {
+        "field": "includeCancelledStatus",
+        "in": "query",
+        "source": "req.query",
+        "locator": "REPO-01:src/pages/api/user/bookings/monthly-tickets/count.ts#L19"
+      }
+    ],
+    "handler_locator": null,
+    "handler_file": "src/pages/api/user/bookings/monthly-tickets/count.ts",
+    "ev": "EV-0858",
+    "api_id": "API-125"
+  },
+  {
+    "method": "ANY",
+    "path": "/api/user/bookings/monthly-tickets/extra-info",
+    "handler": "default",
+    "group": "user",
+    "framework": "file-routing",
+    "locator": "REPO-01:src/pages/api/user/bookings/monthly-tickets/extra-info.ts#L1",
+    "file": "src/pages/api/user/bookings/monthly-tickets/extra-info.ts",
+    "auth_hints": [],
+    "request_hints": [
+      {
+        "field": "monthlyBookingId",
+        "in": "query",
+        "source": "req.query",
+        "locator": "REPO-01:src/pages/api/user/bookings/monthly-tickets/extra-info.ts#L22"
+      },
+      {
+        "field": "ticketId",
+        "in": "query",
+        "source": "req.query",
+        "locator": "REPO-01:src/pages/api/user/bookings/monthly-tickets/extra-info.ts#L23"
+      }
+    ],
+    "handler_locator": null,
+    "handler_file": "src/pages/api/user/bookings/monthly-tickets/extra-info.ts",
+    "ev": "EV-0859",
+    "api_id": "API-126"
+  },
+  {
+    "method": "ANY",
+    "path": "/api/user/bookings/monthly-tickets",
+    "handler": "default",
+    "group": "user",
+    "framework": "file-routing",
+    "locator": "REPO-01:src/pages/api/user/bookings/monthly-tickets/index.ts#L1",
+    "file": "src/pages/api/user/bookings/monthly-tickets/index.ts",
+    "auth_hints": [],
+    "request_hints": [
+      {
+        "field": "tenantCode",
+        "in": "query",
+        "source": "req.query",
+        "locator": "REPO-01:src/pages/api/user/bookings/monthly-tickets/index.ts#L25"
+      },
+      {
+        "field": "isAvailable",
+        "in": "query",
+        "source": "req.query",
+        "locator": "REPO-01:src/pages/api/user/bookings/monthly-tickets/index.ts#L26"
+      },
+      {
+        "field": "includeCancelledStatus",
+        "in": "query",
+        "source": "req.query",
+        "locator": "REPO-01:src/pages/api/user/bookings/monthly-tickets/index.ts#L27"
+      },
+      {
+        "field": "includeDeadlineDate",
+        "in": "query",
+        "source": "req.query",
+        "locator": "REPO-01:src/pages/api/user/bookings/monthly-tickets/index.ts#L28"
+      },
+      {
+        "field": "includeSupportedTenant",
+        "in": "query",
+        "source": "req.query",
+        "locator": "REPO-01:src/pages/api/user/bookings/monthly-tickets/index.ts#L29"
+      },
+      {
+        "field": "onlyIncludeSupportedTenantIfAlreadyUseTheFirstTime",
+        "in": "query",
+        "source": "req.query",
+        "locator": "REPO-01:src/pages/api/user/bookings/monthly-tickets/index.ts#L30"
+      },
+      {
+        "field": "page",
+        "in": "query",
+        "source": "destructure req.query",
+        "locator": "REPO-01:src/pages/api/user/bookings/monthly-tickets/index.ts#L24"
+      },
+      {
+        "field": "limit",
+        "in": "query",
+        "source": "destructure req.query",
+        "locator": "REPO-01:src/pages/api/user/bookings/monthly-tickets/index.ts#L24"
+      }
+    ],
+    "handler_locator": null,
+    "handler_file": "src/pages/api/user/bookings/monthly-tickets/index.ts",
+    "ev": "EV-0860",
+    "api_id": "API-127"
+  },
+  {
+    "method": "ANY",
+    "path": "/api/user/bookings/partial-checkout/:id",
+    "handler": "default",
+    "group": "user",
+    "framework": "file-routing",
+    "locator": "REPO-01:src/pages/api/user/bookings/partial-checkout/[id].ts#L1",
+    "file": "src/pages/api/user/bookings/partial-checkout/[id].ts",
+    "auth_hints": [],
+    "request_hints": [
+      {
+        "field": "id",
+        "in": "query",
+        "source": "req.query",
+        "locator": "REPO-01:src/pages/api/user/bookings/partial-checkout/[id].ts#L22"
+      },
+      {
+        "field": "adultQuantity",
+        "in": "body",
+        "source": "destructure req.body",
+        "locator": "REPO-01:src/pages/api/user/bookings/partial-checkout/[id].ts#L23"
+      },
+      {
+        "field": "childQuantity",
+        "in": "body",
+        "source": "destructure req.body",
+        "locator": "REPO-01:src/pages/api/user/bookings/partial-checkout/[id].ts#L23"
+      },
+      {
+        "field": "childAges",
+        "in": "body",
+        "source": "destructure req.body",
+        "locator": "REPO-01:src/pages/api/user/bookings/partial-checkout/[id].ts#L23"
+      },
+      {
+        "field": "id",
+        "in": "path",
+        "source": "route param",
+        "locator": "REPO-01:src/pages/api/user/bookings/partial-checkout/[id].ts#L1"
+      }
+    ],
+    "handler_locator": null,
+    "handler_file": "src/pages/api/user/bookings/partial-checkout/[id].ts",
+    "ev": "EV-0861",
+    "api_id": "API-128"
+  },
+  {
+    "method": "ANY",
+    "path": "/api/user/bookings/request-re-check-in",
+    "handler": "default",
+    "group": "user",
+    "framework": "file-routing",
+    "locator": "REPO-01:src/pages/api/user/bookings/request-re-check-in.ts#L1",
+    "file": "src/pages/api/user/bookings/request-re-check-in.ts",
+    "auth_hints": [],
+    "request_hints": [
+      {
+        "field": "barCode",
+        "in": "body",
+        "source": "destructure req.body",
+        "locator": "REPO-01:src/pages/api/user/bookings/request-re-check-in.ts#L22"
+      },
+      {
+        "field": "isMustWaiting",
+        "in": "body",
+        "source": "destructure req.body",
+        "locator": "REPO-01:src/pages/api/user/bookings/request-re-check-in.ts#L22"
+      }
+    ],
+    "handler_locator": null,
+    "handler_file": "src/pages/api/user/bookings/request-re-check-in.ts",
+    "ev": "EV-0862",
+    "api_id": "API-129"
+  },
+  {
+    "method": "ANY",
+    "path": "/api/user/bookings/times-limit-tickets/count",
+    "handler": "default",
+    "group": "user",
+    "framework": "file-routing",
+    "locator": "REPO-01:src/pages/api/user/bookings/times-limit-tickets/count.ts#L1",
+    "file": "src/pages/api/user/bookings/times-limit-tickets/count.ts",
+    "auth_hints": [],
+    "request_hints": [
+      {
+        "field": "includeCancelledStatus",
+        "in": "query",
+        "source": "req.query",
+        "locator": "REPO-01:src/pages/api/user/bookings/times-limit-tickets/count.ts#L25"
+      }
+    ],
+    "handler_locator": null,
+    "handler_file": "src/pages/api/user/bookings/times-limit-tickets/count.ts",
+    "ev": "EV-0863",
+    "api_id": "API-130"
+  },
+  {
+    "method": "ANY",
+    "path": "/api/user/bookings/times-limit-tickets",
+    "handler": "default",
+    "group": "user",
+    "framework": "file-routing",
+    "locator": "REPO-01:src/pages/api/user/bookings/times-limit-tickets/index.ts#L1",
+    "file": "src/pages/api/user/bookings/times-limit-tickets/index.ts",
+    "auth_hints": [],
+    "request_hints": [
+      {
+        "field": "includeDeadlineDate",
+        "in": "query",
+        "source": "req.query",
+        "locator": "REPO-01:src/pages/api/user/bookings/times-limit-tickets/index.ts#L27"
+      },
+      {
+        "field": "includeSupportedTenant",
+        "in": "query",
+        "source": "req.query",
+        "locator": "REPO-01:src/pages/api/user/bookings/times-limit-tickets/index.ts#L28"
+      },
+      {
+        "field": "tenantCode",
+        "in": "query",
+        "source": "req.query",
+        "locator": "REPO-01:src/pages/api/user/bookings/times-limit-tickets/index.ts#L29"
+      },
+      {
+        "field": "onlyIncludeSupportedTenantIfAlreadyUseTheFirstTime",
+        "in": "query",
+        "source": "req.query",
+        "locator": "REPO-01:src/pages/api/user/bookings/times-limit-tickets/index.ts#L30"
+      },
+      {
+        "field": "page",
+        "in": "query",
+        "source": "destructure req.query",
+        "locator": "REPO-01:src/pages/api/user/bookings/times-limit-tickets/index.ts#L26"
+      },
+      {
+        "field": "limit",
+        "in": "query",
+        "source": "destructure req.query",
+        "locator": "REPO-01:src/pages/api/user/bookings/times-limit-tickets/index.ts#L26"
+      },
+      {
+        "field": "includeCancelledStatus",
+        "in": "query",
+        "source": "destructure req.query",
+        "locator": "REPO-01:src/pages/api/user/bookings/times-limit-tickets/index.ts#L26"
+      },
+      {
+        "field": "isAvailable",
+        "in": "query",
+        "source": "destructure req.query",
+        "locator": "REPO-01:src/pages/api/user/bookings/times-limit-tickets/index.ts#L26"
+      }
+    ],
+    "handler_locator": null,
+    "handler_file": "src/pages/api/user/bookings/times-limit-tickets/index.ts",
+    "ev": "EV-0864",
+    "api_id": "API-131"
+  },
+  {
+    "method": "ANY",
+    "path": "/api/user/check-existing-email",
+    "handler": "default",
+    "group": "user",
+    "framework": "file-routing",
+    "locator": "REPO-01:src/pages/api/user/check-existing-email.ts#L1",
+    "file": "src/pages/api/user/check-existing-email.ts",
+    "auth_hints": [],
+    "request_hints": [
+      {
+        "field": "email",
+        "in": "body",
+        "source": "destructure req.body",
+        "locator": "REPO-01:src/pages/api/user/check-existing-email.ts#L14"
+      }
+    ],
+    "handler_locator": null,
+    "handler_file": "src/pages/api/user/check-existing-email.ts",
+    "ev": "EV-0865",
+    "api_id": "API-132"
+  },
+  {
+    "method": "ANY",
+    "path": "/api/user/check-required-info",
+    "handler": "default",
+    "group": "user",
+    "framework": "file-routing",
+    "locator": "REPO-01:src/pages/api/user/check-required-info.ts#L1",
+    "file": "src/pages/api/user/check-required-info.ts",
+    "auth_hints": [],
+    "request_hints": [],
+    "handler_locator": null,
+    "handler_file": "src/pages/api/user/check-required-info.ts",
+    "ev": "EV-0866",
+    "api_id": "API-133"
+  },
+  {
+    "method": "ANY",
+    "path": "/api/user/credit-card/delete",
+    "handler": "default",
+    "group": "user",
+    "framework": "file-routing",
+    "locator": "REPO-01:src/pages/api/user/credit-card/delete.ts#L1",
+    "file": "src/pages/api/user/credit-card/delete.ts",
+    "auth_hints": [],
+    "request_hints": [
+      {
+        "field": "cardSeq",
+        "in": "body",
+        "source": "destructure req.body",
+        "locator": "REPO-01:src/pages/api/user/credit-card/delete.ts#L19"
+      }
+    ],
+    "handler_locator": null,
+    "handler_file": "src/pages/api/user/credit-card/delete.ts",
+    "ev": "EV-0867",
+    "api_id": "API-134"
+  },
+  {
+    "method": "ANY",
+    "path": "/api/user/credit-card/save",
+    "handler": "default",
+    "group": "user",
+    "framework": "file-routing",
+    "locator": "REPO-01:src/pages/api/user/credit-card/save.ts#L1",
+    "file": "src/pages/api/user/credit-card/save.ts",
+    "auth_hints": [],
+    "request_hints": [
+      {
+        "field": "token",
+        "in": "body",
+        "source": "destructure req.body",
+        "locator": "REPO-01:src/pages/api/user/credit-card/save.ts#L23"
+      },
+      {
+        "field": "cardSeq",
+        "in": "body",
+        "source": "destructure req.body",
+        "locator": "REPO-01:src/pages/api/user/credit-card/save.ts#L23"
+      },
+      {
+        "field": "shouldNotify",
+        "in": "body",
+        "source": "destructure req.body",
+        "locator": "REPO-01:src/pages/api/user/credit-card/save.ts#L23"
+      }
+    ],
+    "handler_locator": null,
+    "handler_file": "src/pages/api/user/credit-card/save.ts",
+    "ev": "EV-0868",
+    "api_id": "API-135"
+  },
+  {
+    "method": "ANY",
+    "path": "/api/user/credit-card/search",
+    "handler": "default",
+    "group": "user",
+    "framework": "file-routing",
+    "locator": "REPO-01:src/pages/api/user/credit-card/search.ts#L1",
+    "file": "src/pages/api/user/credit-card/search.ts",
+    "auth_hints": [],
+    "request_hints": [],
+    "handler_locator": null,
+    "handler_file": "src/pages/api/user/credit-card/search.ts",
+    "ev": "EV-0869",
+    "api_id": "API-136"
+  },
+  {
+    "method": "ANY",
+    "path": "/api/user/edit-email",
+    "handler": "default",
+    "group": "user",
+    "framework": "file-routing",
+    "locator": "REPO-01:src/pages/api/user/edit-email/index.ts#L1",
+    "file": "src/pages/api/user/edit-email/index.ts",
+    "auth_hints": [],
+    "request_hints": [
+      {
+        "field": "email",
+        "in": "body",
+        "source": "destructure req.body",
+        "locator": "REPO-01:src/pages/api/user/edit-email/index.ts#L20"
+      },
+      {
+        "field": "token",
+        "in": "body",
+        "source": "destructure req.body",
+        "locator": "REPO-01:src/pages/api/user/edit-email/index.ts#L20"
+      }
+    ],
+    "handler_locator": null,
+    "handler_file": "src/pages/api/user/edit-email/index.ts",
+    "ev": "EV-0870",
+    "api_id": "API-137"
+  },
+  {
+    "method": "ANY",
+    "path": "/api/user",
+    "handler": "default",
+    "group": "user",
+    "framework": "file-routing",
+    "locator": "REPO-01:src/pages/api/user/index.ts#L1",
+    "file": "src/pages/api/user/index.ts",
+    "auth_hints": [
+      "currentUser"
+    ],
+    "request_hints": [
+      {
+        "field": "lastName",
+        "in": "body",
+        "source": "req.body",
+        "locator": "REPO-01:src/pages/api/user/index.ts#L53"
+      },
+      {
+        "field": "firstName",
+        "in": "body",
+        "source": "req.body",
+        "locator": "REPO-01:src/pages/api/user/index.ts#L53"
+      },
+      {
+        "field": "email",
+        "in": "body",
+        "source": "destructure req.body",
+        "locator": "REPO-01:src/pages/api/user/index.ts#L52"
+      },
+      {
+        "field": "isLineSignUpMode",
+        "in": "body",
+        "source": "destructure req.body",
+        "locator": "REPO-01:src/pages/api/user/index.ts#L52"
+      }
+    ],
+    "handler_locator": null,
+    "handler_file": "src/pages/api/user/index.ts",
+    "ev": "EV-0871",
+    "api_id": "API-138"
+  },
+  {
+    "method": "ANY",
+    "path": "/api/user/notifications/stream",
+    "handler": "default",
+    "group": "user",
+    "framework": "file-routing",
+    "locator": "REPO-01:src/pages/api/user/notifications/stream.ts#L1",
+    "file": "src/pages/api/user/notifications/stream.ts",
+    "auth_hints": [
+      "getToken"
+    ],
+    "request_hints": [],
+    "handler_locator": null,
+    "handler_file": "src/pages/api/user/notifications/stream.ts",
+    "ev": "EV-0872",
+    "api_id": "API-139"
+  },
+  {
+    "method": "ANY",
+    "path": "/api/user/tenant-favorites/:tenantCode",
+    "handler": "default",
+    "group": "user",
+    "framework": "file-routing",
+    "locator": "REPO-01:src/pages/api/user/tenant-favorites/[tenantCode].ts#L1",
+    "file": "src/pages/api/user/tenant-favorites/[tenantCode].ts",
+    "auth_hints": [],
+    "request_hints": [
+      {
+        "field": "tenantCode",
+        "in": "query",
+        "source": "req.query",
+        "locator": "REPO-01:src/pages/api/user/tenant-favorites/[tenantCode].ts#L18"
+      },
+      {
+        "field": "tenantCode",
+        "in": "path",
+        "source": "route param",
+        "locator": "REPO-01:src/pages/api/user/tenant-favorites/[tenantCode].ts#L1"
+      }
+    ],
+    "handler_locator": null,
+    "handler_file": "src/pages/api/user/tenant-favorites/[tenantCode].ts",
+    "ev": "EV-0873",
+    "api_id": "API-140"
+  },
+  {
+    "method": "ANY",
+    "path": "/api/user/tenant-favorites/count",
+    "handler": "default",
+    "group": "user",
+    "framework": "file-routing",
+    "locator": "REPO-01:src/pages/api/user/tenant-favorites/count.ts#L1",
+    "file": "src/pages/api/user/tenant-favorites/count.ts",
+    "auth_hints": [],
+    "request_hints": [],
+    "handler_locator": null,
+    "handler_file": "src/pages/api/user/tenant-favorites/count.ts",
+    "ev": "EV-0874",
+    "api_id": "API-141"
+  },
+  {
+    "method": "ANY",
+    "path": "/api/user/tenant-favorites",
+    "handler": "default",
+    "group": "user",
+    "framework": "file-routing",
+    "locator": "REPO-01:src/pages/api/user/tenant-favorites/index.ts#L1",
+    "file": "src/pages/api/user/tenant-favorites/index.ts",
+    "auth_hints": [],
+    "request_hints": [
+      {
+        "field": "page",
+        "in": "query",
+        "source": "destructure req.query",
+        "locator": "REPO-01:src/pages/api/user/tenant-favorites/index.ts#L19"
+      },
+      {
+        "field": "limit",
+        "in": "query",
+        "source": "destructure req.query",
+        "locator": "REPO-01:src/pages/api/user/tenant-favorites/index.ts#L19"
+      },
+      {
+        "field": "includeTenant",
+        "in": "query",
+        "source": "destructure req.query",
+        "locator": "REPO-01:src/pages/api/user/tenant-favorites/index.ts#L19"
+      }
+    ],
+    "handler_locator": null,
+    "handler_file": "src/pages/api/user/tenant-favorites/index.ts",
+    "ev": "EV-0875",
+    "api_id": "API-142"
+  },
+  {
+    "method": "ANY",
+    "path": "/*",
+    "handler": "(inline)",
+    "group": "*",
+    "framework": "Express/Koa",
+    "locator": "REPO-01:src/server.js#L66",
+    "file": "src/server.js",
+    "auth_hints": [],
+    "request_hints": [],
+    "handler_locator": "REPO-01:src/server.js#L66",
+    "handler_file": "src/server.js",
+    "ev": "EV-0876",
+    "api_id": "API-143"
+  }
+]

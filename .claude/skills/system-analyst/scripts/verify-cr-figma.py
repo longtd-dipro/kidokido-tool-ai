@@ -98,6 +98,9 @@ def main():
     cr = C.load_json(a.cr_json)
     _rm, rates = C.load_rates(a.rates)
     B = C.load_baseline(a.baseline)
+    if a.ds_baseline:  # cung DS voi render-cr-figma.py --ds-baseline
+        B["ds"] = C.load_ds_sites(os.path.join(a.ds_baseline, "04_DesignSystem"))
+        B["has_ds"] = bool(B["ds"])
     view = C.load_json(a.view) if a.view and os.path.isfile(a.view) else None
     IMP = cr.get("impacts") or []
     g = Gate("GATE V-CR-FIGMA — %s" % C.txt((cr.get("meta") or {}).get("cr_id")))

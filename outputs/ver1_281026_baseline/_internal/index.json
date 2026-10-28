@@ -1,0 +1,187 @@
+{
+  "system": "KidoKido",
+  "version": "ver1",
+  "version_folder": "ver1_281026_baseline",
+  "version_type": "BASELINE",
+  "date": "28/10/2026",
+  "baseline_ref": "—",
+  "outputs": [
+    {
+      "id": "O1",
+      "name": "Basic Design WEB-01",
+      "content": "Thiết kế cơ bản từng màn hình của site WEB-01",
+      "files": [
+        "01_Screens/BasicDesign_WEB-01_ver1.xlsx"
+      ],
+      "count": "45 sheet màn hình",
+      "exists": true,
+      "site": "WEB-01",
+      "count_value": 45,
+      "gate": "WARN",
+      "gate_detail": "v-bd-WEB-01.md 17/19 PASS",
+      "status": "warn",
+      "reason": "gate có cảnh báo",
+      "status_text": "⚠️ gate có cảnh báo"
+    },
+    {
+      "id": "O1",
+      "name": "Basic Design WEB-02",
+      "content": "Thiết kế cơ bản từng màn hình của site WEB-02",
+      "files": [
+        "01_Screens/BasicDesign_WEB-02_ver1.xlsx"
+      ],
+      "count": "48 sheet màn hình",
+      "exists": true,
+      "site": "WEB-02",
+      "count_value": 48,
+      "gate": "WARN",
+      "gate_detail": "v-bd-WEB-02.md 17/19 PASS",
+      "status": "warn",
+      "reason": "gate có cảnh báo",
+      "status_text": "⚠️ gate có cảnh báo"
+    },
+    {
+      "id": "O2",
+      "name": "API",
+      "content": "Danh sách API/batch",
+      "files": [
+        "02_API/API_Doc_KidoKido_ver1.xlsx"
+      ],
+      "count": "143 API · 0 batch/khác",
+      "exists": true,
+      "count_value": 143,
+      "gate": "PASS",
+      "gate_detail": "v-api.md 13/13 PASS",
+      "status": "ok",
+      "reason": "",
+      "status_text": "✅"
+    },
+    {
+      "id": "O3",
+      "name": "Database",
+      "content": "Danh sách bảng/cột/quan hệ + ERD",
+      "files": [
+        "03_DB/DB_Doc_KidoKido_ver1.xlsx",
+        "03_DB/ERD_KidoKido_ver1.png"
+      ],
+      "count": "25 bảng · 323 cột",
+      "exists": true,
+      "count_value": 25,
+      "gate": "PASS",
+      "gate_detail": "v-db.md 10/10 PASS",
+      "status": "ok",
+      "reason": "",
+      "status_text": "✅"
+    },
+    {
+      "id": "O4",
+      "name": "Design System WEB-01",
+      "content": "Token, kiểu chữ, component, icon (format artifact Design System)",
+      "files": [
+        "04_DesignSystem/WEB-01/project/",
+        "04_DesignSystem/WEB-01/STATUS.md",
+        "https://claude.ai/artifact/L6VfhzcbZmpfo1wfpYoD2E"
+      ],
+      "count": "76 màu · 18 style chữ · 20 component · 61 icon · 12 TBD · DRAFT",
+      "exists": true,
+      "count_value": 76,
+      "ds_status": "DRAFT",
+      "site": "WEB-01",
+      "link": "https://claude.ai/artifact/L6VfhzcbZmpfo1wfpYoD2E",
+      "gate": "WARN",
+      "gate_detail": "v-ds.md 31/35 PASS",
+      "status": "warn",
+      "reason": "gate có cảnh báo",
+      "status_text": "⚠️ gate có cảnh báo"
+    },
+    {
+      "id": "O4",
+      "name": "Design System WEB-02",
+      "content": "Token, kiểu chữ, component, icon (format artifact Design System)",
+      "files": [
+        "04_DesignSystem/WEB-02/project/",
+        "04_DesignSystem/WEB-02/STATUS.md",
+        "https://claude.ai/artifact/QubGWoAQ3dLzTbNSQxG9i3"
+      ],
+      "count": "43 màu · 19 style chữ · 15 component · 11 icon · 25 TBD · DRAFT",
+      "exists": true,
+      "count_value": 43,
+      "ds_status": "DRAFT",
+      "site": "WEB-02",
+      "link": "https://claude.ai/artifact/QubGWoAQ3dLzTbNSQxG9i3",
+      "gate": "WARN",
+      "gate_detail": "v-ds.md 31/35 PASS",
+      "status": "warn",
+      "reason": "gate có cảnh báo",
+      "status_text": "⚠️ gate có cảnh báo"
+    },
+    {
+      "id": "O5",
+      "name": "Figma",
+      "content": "Link node Figma của màn hình/thành phần",
+      "files": [
+        "05_Figma/figma-links.md"
+      ],
+      "count": "4 link",
+      "exists": true,
+      "count_value": 4,
+      "gate": "—",
+      "gate_detail": "chua chay gate",
+      "status": "warn",
+      "reason": "chưa chạy gate",
+      "status_text": "⚠️ chưa chạy gate"
+    },
+    {
+      "id": "O6",
+      "name": "Overview",
+      "content": "Tài liệu tóm tắt khảo sát (docx)",
+      "files": [
+        "06_Overview/Overview_KidoKido_ver1.docx"
+      ],
+      "count": "1 tài liệu",
+      "exists": true,
+      "count_value": 1,
+      "gate": "PASS",
+      "gate_detail": "v3.md 14/14 PASS",
+      "status": "ok",
+      "reason": "",
+      "status_text": "✅"
+    },
+    {
+      "id": "O7",
+      "name": "Bug List",
+      "content": "Lỗi mức High trở lên ảnh hưởng thao tác người dùng",
+      "files": [
+        "07_BugList/BugList_KidoKido_ver1.xlsx"
+      ],
+      "count": "0 bug",
+      "exists": true,
+      "count_value": 0,
+      "gate": "PASS",
+      "gate_detail": "v8.md 12/12 PASS",
+      "status": "ok",
+      "reason": "",
+      "status_text": "✅"
+    },
+    {
+      "id": "O9",
+      "name": "Dev setup",
+      "content": "Hướng dẫn chạy local + môi trường cho dev (md)",
+      "files": [
+        "09_DevSetup/DevSetup_KidoKido_ver1.md"
+      ],
+      "count": "1 tài liệu",
+      "exists": true,
+      "count_value": 1,
+      "gate": "PASS",
+      "gate_detail": "v-devsetup.md 6/6 PASS",
+      "status": "ok",
+      "reason": "",
+      "status_text": "✅"
+    }
+  ],
+  "inventory_gate": {
+    "gate": "WARN",
+    "detail": "v1.md 10/11 PASS · v2.md 30/30 PASS"
+  }
+}

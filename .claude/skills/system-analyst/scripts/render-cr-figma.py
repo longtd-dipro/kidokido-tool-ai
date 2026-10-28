@@ -87,10 +87,14 @@ def load_tokens(bdir, site):
     if not os.path.isfile(p):
         p = os.path.join(bdir, "04_DesignSystem", "project", "tokens.json")
     t = C.load_json(p)
+    themes = [th.get("id") for th in (t.get("color") or {}).get("themes") or []]
     flat = {}
     for grp in ("color", "spacing", "radius", "shadow", "size"):
         for x in (t.get(grp) or {}).get("tokens") or []:
-            flat[x["name"]] = x.get("value")
+            v = x.get("value")
+            if isinstance(v, dict):  # gia tri theo theme -> theme dau tien (VD Base DS: light)
+                v = v.get(themes[0]) if themes and themes[0] in v else next(iter(v.values()), None)
+            flat[x["name"]] = v
     for _ in range(3):                       # giai alias {primary}
         for k, v in flat.items():
             m = re.match(r"^\{(.+)\}$", str(v))
@@ -818,8 +822,8 @@ def usecase_lane_errors(L):
 
 
 def unknown_text_errors(view):
-    """Figma Output 1 / 2 (CR-1 / CR-2) khong hien chu UNKNOWN (feedback 20/10/2026): chua ro -> viet bang loi
-    ("chua quan sat", "chua xac dinh", "cho khach hang xac nhan"). Trang thai UNKNOWN chi nam o xlsx / inventory."""
+    """Figma Output 1 / 2 (CR-1 / CR-2) khong hien chu cu S.LEGACY_WORD (feedback 20/10/2026 · D1): chua ro -> ghi
+    "Cần xác nhận — Q-xxx" / "chưa quan sát được". Trang thai tuong ung trong xlsx / inventory = To verify."""
     errs = []
     def walk(o, where):
         if isinstance(o, dict):
@@ -828,8 +832,8 @@ def unknown_text_errors(view):
         elif isinstance(o, list):
             for i, v in enumerate(o):
                 walk(v, "%s[%d]" % (where, i))
-        elif isinstance(o, str) and re.search(r"unknown", o, re.I):
-            errs.append("%s chua chu UNKNOWN: %r — Figma khong hien UNKNOWN, viet 'chua quan sat' / 'chua xac dinh'" % (where, o[:60]))
+        elif S.has_legacy(o):
+            errs.append("%s chua chu %s: %r — ghi 'Cần xác nhận — Q-xxx' / 'chưa quan sát được'" % (where, S.LEGACY_WORD, o[:60]))
     for k in ("title", "subtitle", "flow_note", "screen_note", "flows", "tech", "screen_groups"):
         walk(view.get(k), k)
     return errs
@@ -854,6 +858,9 @@ def main():
     view = C.load_json(a.view)
     _rm, rates = C.load_rates(a.rates)
     B = C.load_baseline(a.baseline)
+    if a.ds_baseline:  # DS dung khi ve (DS moi hon, hoac Base Design System tam o version CR) thay DS cua baseline
+        B["ds"] = C.load_ds_sites(os.path.join(a.ds_baseline, "04_DesignSystem"))
+        B["has_ds"] = bool(B["ds"])
     tpl = C.find_template(a.template, KIT)
     est = C.load_estimation_template(tpl)[1] if tpl else None
     errors = []
@@ -909,11 +916,6 @@ def main():
         except (OSError, ValueError) as e:
             errors.append("khong doc duoc tokens.json %s: %s" % (st, e))
     comps = {s: B["ds"][s]["comps"] for s in B["ds"]}
-    if a.ds_baseline:
-        for st in list(comps):
-            cdir = os.path.join(a.ds_baseline, "04_DesignSystem", st, "project", "components")
-            if os.path.isdir(cdir):
-                comps[st] = {d.lower() for d in os.listdir(cdir) if os.path.isdir(os.path.join(cdir, d))}
     scr = view.get("screens") or {}
     ds_read = scr.get("ds_read") or []
     items = scr.get("items") or []

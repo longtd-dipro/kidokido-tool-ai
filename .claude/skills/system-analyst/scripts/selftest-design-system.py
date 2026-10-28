@@ -391,6 +391,20 @@ LAYOUT_CASES = [
     ("1 thu muc + draft FORCED themes (tu dong per-site) -> PASS", _single_forced, "0", "PASS", 0),
 ]
 
+def base_ds_diff(a, b):
+    """-> file lech giua 2 ban Base Design System (project/ + STATUS.md + prompt; README khac header SOURCE)."""
+    def files(root):
+        out = {}
+        for d, _dirs, fs in os.walk(root):
+            for f in fs:
+                rel = os.path.relpath(os.path.join(d, f), root)
+                if rel.startswith("project" + os.sep) or rel in ("STATUS.md", "prompt_design_system.md"):
+                    out[rel] = open(os.path.join(d, f), "rb").read()
+        return out
+    fa, fb = files(a), files(b)
+    return sorted(k for k in set(fa) | set(fb) if fa.get(k) != fb.get(k))
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--keep", action="store_true")
@@ -440,6 +454,15 @@ def main():
         code, out = run(os.path.join(d, "04_DesignSystem"), os.path.join(d, "tokens-draft.json"), "--figma-used")
         record("mau ngoai draft + --figma-used + source figma -> check 5 WARN",
                results(out).get("5") == "WARN" and code == 0, "nhan %s (exit %d)" % (results(out).get("5"), code))
+        # Base Design System: mau ngoai draft co nhan [base] trong usage -> check 5 PASS + 5b WARN; khong nhan -> 5 FAIL
+        d = os.path.join(root, "basemark")
+        shutil.copytree(base, d)
+        Px = os.path.join(d, "04_DesignSystem", "project")
+        edit_tokens(lambda t: ctok("primary")(t).update(value="#0017c1", usage=R_.BASE_MARK + " key-900 DADS — chua quan sat"))(Px)
+        code, out = run(os.path.join(d, "04_DesignSystem"), os.path.join(d, "tokens-draft.json"))
+        r = results(out)
+        record("mau ngoai draft co nhan [base] -> check 5 PASS + 5b WARN",
+               r.get("5") == "PASS" and r.get("5b") == "WARN" and code == 0, "nhan 5=%s 5b=%s (exit %d)" % (r.get("5"), r.get("5b"), code))
         for i, (name, fn, chk, want, ecode) in enumerate(LAYOUT_CASES, 1):
             ds_, dp_ = fn(os.path.join(root, "L%02d" % i))
             code, out = run(ds_, dp_)
@@ -451,11 +474,40 @@ def main():
             if want == "PASS":
                 ok = ok and not fails
             record(name, ok, "nhan %s=%s, FAIL %s (exit %d)" % (chk, r.get(chk), fails, code))
+        # R10: --code-only (truoc Brief) — 2 repo FE khac font/radius -> per-site; giong nhau -> single
+        def code_only(name, css_b):
+            d = os.path.join(root, "co_" + name)
+            for rid, css in (("a", ":root{--radius-md:4px;--space-2:8px;font-family:'Noto Sans JP',sans-serif}"),
+                             ("b", css_b)):
+                os.makedirs(os.path.join(d, rid))
+                open(os.path.join(d, rid, "app.css"), "w").write(css)
+            p_ = subprocess.run([sys.executable, os.path.join(HERE, "extract-design-tokens.py"), "--code-only",
+                                 "--css-root", "REPO-01@WEB-01=" + os.path.join(d, "a"),
+                                 "--css-root", "REPO-02@WEB-02=" + os.path.join(d, "b"), "--out", os.path.join(d, "o")],
+                                capture_output=True, text=True)
+            return p_.returncode, (json.loads(p_.stdout)["dsLayout"]["mode"] if p_.returncode == 0 else p_.stderr[-200:])
+        got = code_only("diff", ":root{--radius-md:12px;--space-2:20px;font-family:'Inter',sans-serif}")
+        record("--code-only: 2 site khac font/radius/spacing -> per-site", got == (0, "per-site"), str(got))
+        got = code_only("same", ":root{--radius-md:4px;--space-2:8px;font-family:'Noto Sans JP',sans-serif}")
+        record("--code-only: 2 site giong nhau -> single", got == (0, "single"), str(got))
     finally:
         if a.keep:
             print("Giu fixture tai %s" % root)
         else:
             shutil.rmtree(root, ignore_errors=True)
+
+    # Base Design System: ban copy trong kit phai giong ban o requirement-to-flow, designer-kit/document-to-figma va ban goc AI_Source (neu co)
+    kit = os.path.normpath(os.path.join(HERE, "..", "..", ".."))            # .claude/
+    mine = os.path.join(kit, "base-design-system")
+    others = {"requirement-to-flow": os.path.join(kit, "..", "..", "requirement-to-flow", ".claude", "base-design-system"),
+              "designer-kit/document-to-figma": os.path.join(kit, "..", "..", "..", "designer-kit", "document-to-figma", ".claude", "base-design-system"),
+              "AI_Source": os.path.join(kit, "..", "..", "..", "AI_Source", "base-design-system")}
+    record("co .claude/base-design-system/project/tokens.json", os.path.isfile(os.path.join(mine, "project", "tokens.json")))
+    for name, other in others.items():
+        if os.path.isdir(other):
+            diff = base_ds_diff(mine, other)
+            record("Base Design System khop ban %s" % name, not diff,
+                   "lech: %s — copy lai tu AI_Source/base-design-system vao ca 3 kit" % ", ".join(diff[:5]))
 
     print("\n".join(lines))
     print("\n%d ca · %d PASS" % (total, passed))

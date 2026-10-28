@@ -1,0 +1,15 @@
+<!-- @dsCard group="Data" height=120 -->
+<!doctype html>
+<html>
+<head><meta charset="utf-8"><style>
+body{margin:0;padding:16px;background:var(--page-bg);font-family:var(--font-sans)}
+.stack{display:flex;flex-direction:column;gap:16px}
+</style></head>
+<body>
+<div id="root" class="kka-root"></div>
+<script>
+var D = window.KidoKidoAdmin, h = React.createElement;
+ReactDOM.createRoot(document.getElementById('root')).render(h('div',{className:'kka-stats'}, h(D.StatTile,{label:'施設収容数:',value:'○○○',icon:'circle',color:'purple'}), h(D.StatTile,{label:'入場おとな数',value:'○○',icon:'circle',color:'green'}), h(D.StatTile,{label:'現在○○組○○分待ち',icon:'clock',color:'amber'})));
+</script>
+</body>
+</html>

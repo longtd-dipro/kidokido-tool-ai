@@ -1,0 +1,1182 @@
+[
+  {
+    "route": "/api/admin/admin-credentials-confirmation",
+    "method": "ANY",
+    "locator": "REPO-01:src/pages/api/admin/admin-credentials-confirmation.ts#L1"
+  },
+  {
+    "route": "/api/admin/app-settings/:settingKey",
+    "method": "ANY",
+    "locator": "REPO-01:src/pages/api/admin/app-settings/[settingKey].ts#L1"
+  },
+  {
+    "route": "/api/admin/app-settings",
+    "method": "ANY",
+    "locator": "REPO-01:src/pages/api/admin/app-settings/index.ts#L1"
+  },
+  {
+    "route": "/api/admin/booking-queue/:id",
+    "method": "ANY",
+    "locator": "REPO-01:src/pages/api/admin/booking-queue/[id].ts#L1"
+  },
+  {
+    "route": "/api/admin/booking-queue/calling",
+    "method": "ANY",
+    "locator": "REPO-01:src/pages/api/admin/booking-queue/calling.ts#L1"
+  },
+  {
+    "route": "/api/admin/booking-queue",
+    "method": "ANY",
+    "locator": "REPO-01:src/pages/api/admin/booking-queue/index.ts#L1"
+  },
+  {
+    "route": "/api/admin/booking-queue/system-cancelled",
+    "method": "ANY",
+    "locator": "REPO-01:src/pages/api/admin/booking-queue/system-cancelled.ts#L1"
+  },
+  {
+    "route": "/api/admin/booking-queue/waiting",
+    "method": "ANY",
+    "locator": "REPO-01:src/pages/api/admin/booking-queue/waiting.ts#L1"
+  },
+  {
+    "route": "/api/admin/booking-vacancies",
+    "method": "ANY",
+    "locator": "REPO-01:src/pages/api/admin/booking-vacancies/index.ts#L1"
+  },
+  {
+    "route": "/api/admin/bookings/:id",
+    "method": "ANY",
+    "locator": "REPO-01:src/pages/api/admin/bookings/[id].ts#L1"
+  },
+  {
+    "route": "/api/admin/bookings/:id/force-recompute-obic",
+    "method": "ANY",
+    "locator": "REPO-01:src/pages/api/admin/bookings/[id]/force-recompute-obic.ts#L1"
+  },
+  {
+    "route": "/api/admin/bookings/:id/status",
+    "method": "ANY",
+    "locator": "REPO-01:src/pages/api/admin/bookings/[id]/status.ts#L1"
+  },
+  {
+    "route": "/api/admin/bookings/blacklist",
+    "method": "ANY",
+    "locator": "REPO-01:src/pages/api/admin/bookings/blacklist.ts#L1"
+  },
+  {
+    "route": "/api/admin/bookings/cancel/:id",
+    "method": "ANY",
+    "locator": "REPO-01:src/pages/api/admin/bookings/cancel/[id].ts#L1"
+  },
+  {
+    "route": "/api/admin/bookings/count",
+    "method": "ANY",
+    "locator": "REPO-01:src/pages/api/admin/bookings/count.ts#L1"
+  },
+  {
+    "route": "/api/admin/bookings/decrease-quantity/:id",
+    "method": "ANY",
+    "locator": "REPO-01:src/pages/api/admin/bookings/decrease-quantity/[id].ts#L1"
+  },
+  {
+    "route": "/api/admin/bookings/export",
+    "method": "ANY",
+    "locator": "REPO-01:src/pages/api/admin/bookings/export.ts#L1"
+  },
+  {
+    "route": "/api/admin/bookings",
+    "method": "ANY",
+    "locator": "REPO-01:src/pages/api/admin/bookings/index.ts#L1"
+  },
+  {
+    "route": "/api/admin/bookings/monthly-tickets/extra-info",
+    "method": "ANY",
+    "locator": "REPO-01:src/pages/api/admin/bookings/monthly-tickets/extra-info.ts#L1"
+  },
+  {
+    "route": "/api/admin/bookings/rollback-scan",
+    "method": "ANY",
+    "locator": "REPO-01:src/pages/api/admin/bookings/rollback-scan.ts#L1"
+  },
+  {
+    "route": "/api/admin/bookings/scan",
+    "method": "ANY",
+    "locator": "REPO-01:src/pages/api/admin/bookings/scan.ts#L1"
+  },
+  {
+    "route": "/api/admin/bookings/status",
+    "method": "ANY",
+    "locator": "REPO-01:src/pages/api/admin/bookings/status.ts#L1"
+  },
+  {
+    "route": "/api/admin/bookings/ticket-booking-schedules/:id",
+    "method": "ANY",
+    "locator": "REPO-01:src/pages/api/admin/bookings/ticket-booking-schedules/[id].ts#L1"
+  },
+  {
+    "route": "/api/admin/charts/average-booking-times",
+    "method": "ANY",
+    "locator": "REPO-01:src/pages/api/admin/charts/average-booking-times.ts#L1"
+  },
+  {
+    "route": "/api/admin/charts/average-stay-duration",
+    "method": "ANY",
+    "locator": "REPO-01:src/pages/api/admin/charts/average-stay-duration.ts#L1"
+  },
+  {
+    "route": "/api/admin/charts/total-bookings-with-ticket",
+    "method": "ANY",
+    "locator": "REPO-01:src/pages/api/admin/charts/total-bookings-with-ticket.ts#L1"
+  },
+  {
+    "route": "/api/admin/charts/total-bookings-with-times",
+    "method": "ANY",
+    "locator": "REPO-01:src/pages/api/admin/charts/total-bookings-with-times.ts#L1"
+  },
+  {
+    "route": "/api/admin/charts/total-new-and-old-booking-users",
+    "method": "ANY",
+    "locator": "REPO-01:src/pages/api/admin/charts/total-new-and-old-booking-users.ts#L1"
+  },
+  {
+    "route": "/api/admin/credentials-confirmation",
+    "method": "ANY",
+    "locator": "REPO-01:src/pages/api/admin/credentials-confirmation.ts#L1"
+  },
+  {
+    "route": "/api/admin/credit-cards/search/:userId",
+    "method": "ANY",
+    "locator": "REPO-01:src/pages/api/admin/credit-cards/search/[userId].ts#L1"
+  },
+  {
+    "route": "/api/admin/disclaimers",
+    "method": "ANY",
+    "locator": "REPO-01:src/pages/api/admin/disclaimers.ts#L1"
+  },
+  {
+    "route": "/api/admin/email-settings/:emailKey",
+    "method": "ANY",
+    "locator": "REPO-01:src/pages/api/admin/email-settings/[emailKey].ts#L1"
+  },
+  {
+    "route": "/api/admin/email-settings",
+    "method": "ANY",
+    "locator": "REPO-01:src/pages/api/admin/email-settings/index.ts#L1"
+  },
+  {
+    "route": "/api/admin/email-settings/preview",
+    "method": "ANY",
+    "locator": "REPO-01:src/pages/api/admin/email-settings/preview.ts#L1"
+  },
+  {
+    "route": "/api/admin/email-settings/send-preview-email",
+    "method": "ANY",
+    "locator": "REPO-01:src/pages/api/admin/email-settings/send-preview-email.ts#L1"
+  },
+  {
+    "route": "/api/admin/gmo-settings/:id",
+    "method": "ANY",
+    "locator": "REPO-01:src/pages/api/admin/gmo-settings/[id].ts#L1"
+  },
+  {
+    "route": "/api/admin/gmo-settings",
+    "method": "ANY",
+    "locator": "REPO-01:src/pages/api/admin/gmo-settings/index.ts#L1"
+  },
+  {
+    "route": "/api/admin/news/:id",
+    "method": "ANY",
+    "locator": "REPO-01:src/pages/api/admin/news/[id].ts#L1"
+  },
+  {
+    "route": "/api/admin/news",
+    "method": "ANY",
+    "locator": "REPO-01:src/pages/api/admin/news/index.ts#L1"
+  },
+  {
+    "route": "/api/admin/obic-codes",
+    "method": "ANY",
+    "locator": "REPO-01:src/pages/api/admin/obic-codes/index.ts#L1"
+  },
+  {
+    "route": "/api/admin/password-confirmation",
+    "method": "ANY",
+    "locator": "REPO-01:src/pages/api/admin/password-confirmation.ts#L1"
+  },
+  {
+    "route": "/api/admin/revenue-management/count",
+    "method": "ANY",
+    "locator": "REPO-01:src/pages/api/admin/revenue-management/count.ts#L1"
+  },
+  {
+    "route": "/api/admin/revenue-management/export",
+    "method": "ANY",
+    "locator": "REPO-01:src/pages/api/admin/revenue-management/export.ts#L1"
+  },
+  {
+    "route": "/api/admin/revenue-management",
+    "method": "ANY",
+    "locator": "REPO-01:src/pages/api/admin/revenue-management/index.ts#L1"
+  },
+  {
+    "route": "/api/admin/staffs/:id",
+    "method": "ANY",
+    "locator": "REPO-01:src/pages/api/admin/staffs/[id].ts#L1"
+  },
+  {
+    "route": "/api/admin/staffs/count",
+    "method": "ANY",
+    "locator": "REPO-01:src/pages/api/admin/staffs/count.ts#L1"
+  },
+  {
+    "route": "/api/admin/staffs",
+    "method": "ANY",
+    "locator": "REPO-01:src/pages/api/admin/staffs/index.ts#L1"
+  },
+  {
+    "route": "/api/admin/tenants/:code",
+    "method": "ANY",
+    "locator": "REPO-01:src/pages/api/admin/tenants/[code].ts#L1"
+  },
+  {
+    "route": "/api/admin/tenants/count",
+    "method": "ANY",
+    "locator": "REPO-01:src/pages/api/admin/tenants/count.ts#L1"
+  },
+  {
+    "route": "/api/admin/tenants",
+    "method": "ANY",
+    "locator": "REPO-01:src/pages/api/admin/tenants/index.ts#L1"
+  },
+  {
+    "route": "/api/admin/ticket-booking-schedules/has-booking",
+    "method": "ANY",
+    "locator": "REPO-01:src/pages/api/admin/ticket-booking-schedules/has-booking.ts#L1"
+  },
+  {
+    "route": "/api/admin/ticket-booking-schedules",
+    "method": "ANY",
+    "locator": "REPO-01:src/pages/api/admin/ticket-booking-schedules/index.ts#L1"
+  },
+  {
+    "route": "/api/admin/tickets/:id",
+    "method": "ANY",
+    "locator": "REPO-01:src/pages/api/admin/tickets/[id].ts#L1"
+  },
+  {
+    "route": "/api/admin/tickets/:id/backfill-obic-codes",
+    "method": "ANY",
+    "locator": "REPO-01:src/pages/api/admin/tickets/[id]/backfill-obic-codes.ts#L1"
+  },
+  {
+    "route": "/api/admin/tickets/count",
+    "method": "ANY",
+    "locator": "REPO-01:src/pages/api/admin/tickets/count.ts#L1"
+  },
+  {
+    "route": "/api/admin/tickets/has-booking",
+    "method": "ANY",
+    "locator": "REPO-01:src/pages/api/admin/tickets/has-booking.ts#L1"
+  },
+  {
+    "route": "/api/admin/tickets",
+    "method": "ANY",
+    "locator": "REPO-01:src/pages/api/admin/tickets/index.ts#L1"
+  },
+  {
+    "route": "/api/admin/tickets/obic-codes/export",
+    "method": "ANY",
+    "locator": "REPO-01:src/pages/api/admin/tickets/obic-codes/export.ts#L1"
+  },
+  {
+    "route": "/api/admin/users/:id",
+    "method": "ANY",
+    "locator": "REPO-01:src/pages/api/admin/users/[id].ts#L1"
+  },
+  {
+    "route": "/api/admin/users/count",
+    "method": "ANY",
+    "locator": "REPO-01:src/pages/api/admin/users/count.ts#L1"
+  },
+  {
+    "route": "/api/admin/users",
+    "method": "ANY",
+    "locator": "REPO-01:src/pages/api/admin/users/index.ts#L1"
+  },
+  {
+    "route": "/api/app-settings/:settingKey",
+    "method": "ANY",
+    "locator": "REPO-01:src/pages/api/app-settings/[settingKey].ts#L1"
+  },
+  {
+    "route": "/api/app-settings/ip-whitelist",
+    "method": "ANY",
+    "locator": "REPO-01:src/pages/api/app-settings/ip-whitelist.ts#L1"
+  },
+  {
+    "route": "/api/auth/:nextauth*",
+    "method": "ANY",
+    "locator": "REPO-01:src/pages/api/auth/[...nextauth].ts#L1"
+  },
+  {
+    "route": "/api/auth/change-email",
+    "method": "ANY",
+    "locator": "REPO-01:src/pages/api/auth/change-email.ts#L1"
+  },
+  {
+    "route": "/api/auth/change-password",
+    "method": "ANY",
+    "locator": "REPO-01:src/pages/api/auth/change-password.ts#L1"
+  },
+  {
+    "route": "/api/auth/check-admin-credentials",
+    "method": "ANY",
+    "locator": "REPO-01:src/pages/api/auth/check-admin-credentials.ts#L1"
+  },
+  {
+    "route": "/api/auth/fetch-access-token",
+    "method": "ANY",
+    "locator": "REPO-01:src/pages/api/auth/fetch-access-token.ts#L1"
+  },
+  {
+    "route": "/api/auth/forgot-password",
+    "method": "ANY",
+    "locator": "REPO-01:src/pages/api/auth/forgot-password.ts#L1"
+  },
+  {
+    "route": "/api/auth/request-unlock-account",
+    "method": "ANY",
+    "locator": "REPO-01:src/pages/api/auth/request-unlock-account.ts#L1"
+  },
+  {
+    "route": "/api/auth/resend-verification-email",
+    "method": "ANY",
+    "locator": "REPO-01:src/pages/api/auth/resend-verification-email.ts#L1"
+  },
+  {
+    "route": "/api/auth/reset-password",
+    "method": "ANY",
+    "locator": "REPO-01:src/pages/api/auth/reset-password.ts#L1"
+  },
+  {
+    "route": "/api/auth/security-questions",
+    "method": "ANY",
+    "locator": "REPO-01:src/pages/api/auth/security-questions.ts#L1"
+  },
+  {
+    "route": "/api/auth/signup",
+    "method": "ANY",
+    "locator": "REPO-01:src/pages/api/auth/signup.ts#L1"
+  },
+  {
+    "route": "/api/auth/unlock-account",
+    "method": "ANY",
+    "locator": "REPO-01:src/pages/api/auth/unlock-account.ts#L1"
+  },
+  {
+    "route": "/api/auth/update-password",
+    "method": "ANY",
+    "locator": "REPO-01:src/pages/api/auth/update-password.ts#L1"
+  },
+  {
+    "route": "/api/auth/verify/:token",
+    "method": "ANY",
+    "locator": "REPO-01:src/pages/api/auth/verify/[token].ts#L1"
+  },
+  {
+    "route": "/api/bookings/check-monthly-ticket-already-used",
+    "method": "ANY",
+    "locator": "REPO-01:src/pages/api/bookings/check-monthly-ticket-already-used.ts#L1"
+  },
+  {
+    "route": "/api/bookings/check-same-date-booking-exists",
+    "method": "ANY",
+    "locator": "REPO-01:src/pages/api/bookings/check-same-date-booking-exists.ts#L1"
+  },
+  {
+    "route": "/api/bookings",
+    "method": "ANY",
+    "locator": "REPO-01:src/pages/api/bookings/index.ts#L1"
+  },
+  {
+    "route": "/api/bookings/main-bookings/:id",
+    "method": "ANY",
+    "locator": "REPO-01:src/pages/api/bookings/main-bookings/[id].ts#L1"
+  },
+  {
+    "route": "/api/bookings/status",
+    "method": "ANY",
+    "locator": "REPO-01:src/pages/api/bookings/status.ts#L1"
+  },
+  {
+    "route": "/api/bookings/transaction/:id",
+    "method": "ANY",
+    "locator": "REPO-01:src/pages/api/bookings/transaction/[id].ts#L1"
+  },
+  {
+    "route": "/api/bookings/use-in-day",
+    "method": "ANY",
+    "locator": "REPO-01:src/pages/api/bookings/use-in-day.ts#L1"
+  },
+  {
+    "route": "/api/bookings/vacancies/status",
+    "method": "ANY",
+    "locator": "REPO-01:src/pages/api/bookings/vacancies/status.ts#L1"
+  },
+  {
+    "route": "/api/cron-job/daily",
+    "method": "ANY",
+    "locator": "REPO-01:src/pages/api/cron-job/daily.ts#L1"
+  },
+  {
+    "route": "/api/cron-job/process-overdue-calling-booking",
+    "method": "ANY",
+    "locator": "REPO-01:src/pages/api/cron-job/process-overdue-calling-booking.ts#L1"
+  },
+  {
+    "route": "/api/cron-job/process-overdue-no-waiting-booking",
+    "method": "ANY",
+    "locator": "REPO-01:src/pages/api/cron-job/process-overdue-no-waiting-booking.ts#L1"
+  },
+  {
+    "route": "/api/cron-job/reconcile-smaregi-transactions",
+    "method": "ANY",
+    "locator": "REPO-01:src/pages/api/cron-job/reconcile-smaregi-transactions.ts#L1"
+  },
+  {
+    "route": "/api/cron-job/remind-booking-expired",
+    "method": "ANY",
+    "locator": "REPO-01:src/pages/api/cron-job/remind-booking-expired.ts#L1"
+  },
+  {
+    "route": "/api/cron-job/remind-one-day-booking",
+    "method": "ANY",
+    "locator": "REPO-01:src/pages/api/cron-job/remind-one-day-booking.ts#L1"
+  },
+  {
+    "route": "/api/cron-job/remind-using-booking",
+    "method": "ANY",
+    "locator": "REPO-01:src/pages/api/cron-job/remind-using-booking.ts#L1"
+  },
+  {
+    "route": "/api/disclaimers",
+    "method": "ANY",
+    "locator": "REPO-01:src/pages/api/disclaimers.ts#L1"
+  },
+  {
+    "route": "/api/error-report",
+    "method": "ANY",
+    "locator": "REPO-01:src/pages/api/error-report.ts#L1"
+  },
+  {
+    "route": "/api/gmo/callback",
+    "method": "ANY",
+    "locator": "REPO-01:src/pages/api/gmo/callback.ts#L1"
+  },
+  {
+    "route": "/api/health",
+    "method": "ANY",
+    "locator": "REPO-01:src/pages/api/health.ts#L1"
+  },
+  {
+    "route": "/api/migration/add-security-questions",
+    "method": "ANY",
+    "locator": "REPO-01:src/pages/api/migration/add-security-questions.ts#L1"
+  },
+  {
+    "route": "/api/migration/email-settings/add-unlock-account",
+    "method": "ANY",
+    "locator": "REPO-01:src/pages/api/migration/email-settings/add-unlock-account.ts#L1"
+  },
+  {
+    "route": "/api/migration/fill-first-checked-out-booking-id-for-users",
+    "method": "ANY",
+    "locator": "REPO-01:src/pages/api/migration/fill-first-checked-out-booking-id-for-users.ts#L1"
+  },
+  {
+    "route": "/api/migration/fill-gmo-id-for-tenant",
+    "method": "ANY",
+    "locator": "REPO-01:src/pages/api/migration/fill-gmo-id-for-tenant.ts#L1"
+  },
+  {
+    "route": "/api/migration/fill-ticket-booking-schedule-id-for-booking",
+    "method": "ANY",
+    "locator": "REPO-01:src/pages/api/migration/fill-ticket-booking-schedule-id-for-booking.ts#L1"
+  },
+  {
+    "route": "/api/migration/fill-ticket-group-id",
+    "method": "ANY",
+    "locator": "REPO-01:src/pages/api/migration/fill-ticket-group-id.ts#L1"
+  },
+  {
+    "route": "/api/migration/migrate-discount-setting",
+    "method": "ANY",
+    "locator": "REPO-01:src/pages/api/migration/migrate-discount-setting.ts#L1"
+  },
+  {
+    "route": "/api/news",
+    "method": "ANY",
+    "locator": "REPO-01:src/pages/api/news/index.ts#L1"
+  },
+  {
+    "route": "/api/pos/bookings/calculate-pay-amount",
+    "method": "ANY",
+    "locator": "REPO-01:src/pages/api/pos/bookings/calculate-pay-amount.ts#L1"
+  },
+  {
+    "route": "/api/pos/bookings/check-in",
+    "method": "ANY",
+    "locator": "REPO-01:src/pages/api/pos/bookings/check-in.ts#L1"
+  },
+  {
+    "route": "/api/pos/bookings/check-out",
+    "method": "ANY",
+    "locator": "REPO-01:src/pages/api/pos/bookings/check-out.ts#L1"
+  },
+  {
+    "route": "/api/pos/bookings",
+    "method": "ANY",
+    "locator": "REPO-01:src/pages/api/pos/bookings/index.ts#L1"
+  },
+  {
+    "route": "/api/pos/test",
+    "method": "ANY",
+    "locator": "REPO-01:src/pages/api/pos/test.ts#L1"
+  },
+  {
+    "route": "/api/smaregi/webhook-transactions",
+    "method": "ANY",
+    "locator": "REPO-01:src/pages/api/smaregi/webhook-transactions.ts#L1"
+  },
+  {
+    "route": "/api/status",
+    "method": "ANY",
+    "locator": "REPO-01:src/pages/api/status.ts#L1"
+  },
+  {
+    "route": "/api/tenants/:code",
+    "method": "ANY",
+    "locator": "REPO-01:src/pages/api/tenants/[code].ts#L1"
+  },
+  {
+    "route": "/api/tenants/count",
+    "method": "ANY",
+    "locator": "REPO-01:src/pages/api/tenants/count.ts#L1"
+  },
+  {
+    "route": "/api/tenants",
+    "method": "ANY",
+    "locator": "REPO-01:src/pages/api/tenants/index.ts#L1"
+  },
+  {
+    "route": "/api/tickets-supported/:masterTicketId",
+    "method": "ANY",
+    "locator": "REPO-01:src/pages/api/tickets-supported/[masterTicketId].ts#L1"
+  },
+  {
+    "route": "/api/tickets/:id",
+    "method": "ANY",
+    "locator": "REPO-01:src/pages/api/tickets/[id].ts#L1"
+  },
+  {
+    "route": "/api/tickets",
+    "method": "ANY",
+    "locator": "REPO-01:src/pages/api/tickets/index.ts#L1"
+  },
+  {
+    "route": "/api/upload",
+    "method": "ANY",
+    "locator": "REPO-01:src/pages/api/upload.ts#L1"
+  },
+  {
+    "route": "/api/user/bookings/:id",
+    "method": "ANY",
+    "locator": "REPO-01:src/pages/api/user/bookings/[id]/index.ts#L1"
+  },
+  {
+    "route": "/api/user/bookings/:id/payment-status",
+    "method": "ANY",
+    "locator": "REPO-01:src/pages/api/user/bookings/[id]/payment-status.ts#L1"
+  },
+  {
+    "route": "/api/user/bookings/cancel",
+    "method": "ANY",
+    "locator": "REPO-01:src/pages/api/user/bookings/cancel.ts#L1"
+  },
+  {
+    "route": "/api/user/bookings",
+    "method": "ANY",
+    "locator": "REPO-01:src/pages/api/user/bookings/index.ts#L1"
+  },
+  {
+    "route": "/api/user/bookings/last-booking",
+    "method": "ANY",
+    "locator": "REPO-01:src/pages/api/user/bookings/last-booking.ts#L1"
+  },
+  {
+    "route": "/api/user/bookings/monthly-tickets/check-already-used-across-tenants",
+    "method": "ANY",
+    "locator": "REPO-01:src/pages/api/user/bookings/monthly-tickets/check-already-used-across-tenants.ts#L1"
+  },
+  {
+    "route": "/api/user/bookings/monthly-tickets/count",
+    "method": "ANY",
+    "locator": "REPO-01:src/pages/api/user/bookings/monthly-tickets/count.ts#L1"
+  },
+  {
+    "route": "/api/user/bookings/monthly-tickets/extra-info",
+    "method": "ANY",
+    "locator": "REPO-01:src/pages/api/user/bookings/monthly-tickets/extra-info.ts#L1"
+  },
+  {
+    "route": "/api/user/bookings/monthly-tickets",
+    "method": "ANY",
+    "locator": "REPO-01:src/pages/api/user/bookings/monthly-tickets/index.ts#L1"
+  },
+  {
+    "route": "/api/user/bookings/partial-checkout/:id",
+    "method": "ANY",
+    "locator": "REPO-01:src/pages/api/user/bookings/partial-checkout/[id].ts#L1"
+  },
+  {
+    "route": "/api/user/bookings/request-re-check-in",
+    "method": "ANY",
+    "locator": "REPO-01:src/pages/api/user/bookings/request-re-check-in.ts#L1"
+  },
+  {
+    "route": "/api/user/bookings/times-limit-tickets/count",
+    "method": "ANY",
+    "locator": "REPO-01:src/pages/api/user/bookings/times-limit-tickets/count.ts#L1"
+  },
+  {
+    "route": "/api/user/bookings/times-limit-tickets",
+    "method": "ANY",
+    "locator": "REPO-01:src/pages/api/user/bookings/times-limit-tickets/index.ts#L1"
+  },
+  {
+    "route": "/api/user/check-existing-email",
+    "method": "ANY",
+    "locator": "REPO-01:src/pages/api/user/check-existing-email.ts#L1"
+  },
+  {
+    "route": "/api/user/check-required-info",
+    "method": "ANY",
+    "locator": "REPO-01:src/pages/api/user/check-required-info.ts#L1"
+  },
+  {
+    "route": "/api/user/credit-card/delete",
+    "method": "ANY",
+    "locator": "REPO-01:src/pages/api/user/credit-card/delete.ts#L1"
+  },
+  {
+    "route": "/api/user/credit-card/save",
+    "method": "ANY",
+    "locator": "REPO-01:src/pages/api/user/credit-card/save.ts#L1"
+  },
+  {
+    "route": "/api/user/credit-card/search",
+    "method": "ANY",
+    "locator": "REPO-01:src/pages/api/user/credit-card/search.ts#L1"
+  },
+  {
+    "route": "/api/user/edit-email",
+    "method": "ANY",
+    "locator": "REPO-01:src/pages/api/user/edit-email/index.ts#L1"
+  },
+  {
+    "route": "/api/user",
+    "method": "ANY",
+    "locator": "REPO-01:src/pages/api/user/index.ts#L1"
+  },
+  {
+    "route": "/api/user/notifications/stream",
+    "method": "ANY",
+    "locator": "REPO-01:src/pages/api/user/notifications/stream.ts#L1"
+  },
+  {
+    "route": "/api/user/tenant-favorites/:tenantCode",
+    "method": "ANY",
+    "locator": "REPO-01:src/pages/api/user/tenant-favorites/[tenantCode].ts#L1"
+  },
+  {
+    "route": "/api/user/tenant-favorites/count",
+    "method": "ANY",
+    "locator": "REPO-01:src/pages/api/user/tenant-favorites/count.ts#L1"
+  },
+  {
+    "route": "/api/user/tenant-favorites",
+    "method": "ANY",
+    "locator": "REPO-01:src/pages/api/user/tenant-favorites/index.ts#L1"
+  },
+  {
+    "route": "/*",
+    "method": "ANY",
+    "locator": "REPO-01:src/server.js#L66"
+  },
+  {
+    "route": "/403",
+    "method": "PAGE",
+    "locator": "REPO-01:src/pages/403.tsx#L1"
+  },
+  {
+    "route": "/error",
+    "method": "PAGE",
+    "locator": "REPO-01:src/pages/error.tsx#L1"
+  },
+  {
+    "route": "/forgot-password",
+    "method": "PAGE",
+    "locator": "REPO-01:src/pages/forgot-password.tsx#L1"
+  },
+  {
+    "route": "/",
+    "method": "PAGE",
+    "locator": "REPO-01:src/pages/index.tsx#L1"
+  },
+  {
+    "route": "/maintenance",
+    "method": "PAGE",
+    "locator": "REPO-01:src/pages/maintenance.tsx#L1"
+  },
+  {
+    "route": "/privacy-policy",
+    "method": "PAGE",
+    "locator": "REPO-01:src/pages/privacy-policy.tsx#L1"
+  },
+  {
+    "route": "/signin",
+    "method": "PAGE",
+    "locator": "REPO-01:src/pages/signin.tsx#L1"
+  },
+  {
+    "route": "/signup-success",
+    "method": "PAGE",
+    "locator": "REPO-01:src/pages/signup-success.tsx#L1"
+  },
+  {
+    "route": "/signup",
+    "method": "PAGE",
+    "locator": "REPO-01:src/pages/signup.tsx#L1"
+  },
+  {
+    "route": "/tenant-list",
+    "method": "PAGE",
+    "locator": "REPO-01:src/pages/tenant-list.tsx#L1"
+  },
+  {
+    "route": "/admin/app-settings",
+    "method": "PAGE",
+    "locator": "REPO-01:src/pages/admin/app-settings.tsx#L1"
+  },
+  {
+    "route": "/admin/barcode-scanner",
+    "method": "PAGE",
+    "locator": "REPO-01:src/pages/admin/barcode-scanner.tsx#L1"
+  },
+  {
+    "route": "/admin/change-email",
+    "method": "PAGE",
+    "locator": "REPO-01:src/pages/admin/change-email.tsx#L1"
+  },
+  {
+    "route": "/admin/change-password",
+    "method": "PAGE",
+    "locator": "REPO-01:src/pages/admin/change-password.tsx#L1"
+  },
+  {
+    "route": "/admin/dashboard",
+    "method": "PAGE",
+    "locator": "REPO-01:src/pages/admin/dashboard.tsx#L1"
+  },
+  {
+    "route": "/admin/disclaimer-management",
+    "method": "PAGE",
+    "locator": "REPO-01:src/pages/admin/disclaimer-management.tsx#L1"
+  },
+  {
+    "route": "/admin/forgot-password",
+    "method": "PAGE",
+    "locator": "REPO-01:src/pages/admin/forgot-password.tsx#L1"
+  },
+  {
+    "route": "/admin",
+    "method": "PAGE",
+    "locator": "REPO-01:src/pages/admin/index.tsx#L1"
+  },
+  {
+    "route": "/admin/revenue-management",
+    "method": "PAGE",
+    "locator": "REPO-01:src/pages/admin/revenue-management.tsx#L1"
+  },
+  {
+    "route": "/admin/signin",
+    "method": "PAGE",
+    "locator": "REPO-01:src/pages/admin/signin.tsx#L1"
+  },
+  {
+    "route": "/admin/waiting-time-management",
+    "method": "PAGE",
+    "locator": "REPO-01:src/pages/admin/waiting-time-management.tsx#L1"
+  },
+  {
+    "route": "/admin/booking-management",
+    "method": "PAGE",
+    "locator": "REPO-01:src/pages/admin/booking-management/index.tsx#L1"
+  },
+  {
+    "route": "/admin/booking-management/details/:id",
+    "method": "PAGE",
+    "locator": "REPO-01:src/pages/admin/booking-management/details/[id].tsx#L1"
+  },
+  {
+    "route": "/admin/booking-management/partial-checkout/:id",
+    "method": "PAGE",
+    "locator": "REPO-01:src/pages/admin/booking-management/partial-checkout/[id].tsx#L1"
+  },
+  {
+    "route": "/admin/booking-management/update/:id",
+    "method": "PAGE",
+    "locator": "REPO-01:src/pages/admin/booking-management/update/[id].tsx#L1"
+  },
+  {
+    "route": "/admin/booking-queue",
+    "method": "PAGE",
+    "locator": "REPO-01:src/pages/admin/booking-queue/index.tsx#L1"
+  },
+  {
+    "route": "/admin/booking-vacancies",
+    "method": "PAGE",
+    "locator": "REPO-01:src/pages/admin/booking-vacancies/index.tsx#L1"
+  },
+  {
+    "route": "/admin/email-settings",
+    "method": "PAGE",
+    "locator": "REPO-01:src/pages/admin/email-settings/index.tsx#L1"
+  },
+  {
+    "route": "/admin/email-settings/edit/:emailKey",
+    "method": "PAGE",
+    "locator": "REPO-01:src/pages/admin/email-settings/edit/[emailKey].tsx#L1"
+  },
+  {
+    "route": "/admin/gmo-settings/create",
+    "method": "PAGE",
+    "locator": "REPO-01:src/pages/admin/gmo-settings/create.tsx#L1"
+  },
+  {
+    "route": "/admin/gmo-settings",
+    "method": "PAGE",
+    "locator": "REPO-01:src/pages/admin/gmo-settings/index.tsx#L1"
+  },
+  {
+    "route": "/admin/gmo-settings/edit/:id",
+    "method": "PAGE",
+    "locator": "REPO-01:src/pages/admin/gmo-settings/edit/[id].tsx#L1"
+  },
+  {
+    "route": "/admin/gmo-settings/view/:id",
+    "method": "PAGE",
+    "locator": "REPO-01:src/pages/admin/gmo-settings/view/[id].tsx#L1"
+  },
+  {
+    "route": "/admin/news-management/create",
+    "method": "PAGE",
+    "locator": "REPO-01:src/pages/admin/news-management/create.tsx#L1"
+  },
+  {
+    "route": "/admin/news-management",
+    "method": "PAGE",
+    "locator": "REPO-01:src/pages/admin/news-management/index.tsx#L1"
+  },
+  {
+    "route": "/admin/news-management/edit/:newsId",
+    "method": "PAGE",
+    "locator": "REPO-01:src/pages/admin/news-management/edit/[newsId].tsx#L1"
+  },
+  {
+    "route": "/admin/reset-password/:token",
+    "method": "PAGE",
+    "locator": "REPO-01:src/pages/admin/reset-password/[token].tsx#L1"
+  },
+  {
+    "route": "/admin/scan-management",
+    "method": "PAGE",
+    "locator": "REPO-01:src/pages/admin/scan-management/index.tsx#L1"
+  },
+  {
+    "route": "/admin/staff-management/create",
+    "method": "PAGE",
+    "locator": "REPO-01:src/pages/admin/staff-management/create.tsx#L1"
+  },
+  {
+    "route": "/admin/staff-management",
+    "method": "PAGE",
+    "locator": "REPO-01:src/pages/admin/staff-management/index.tsx#L1"
+  },
+  {
+    "route": "/admin/staff-management/edit/:id",
+    "method": "PAGE",
+    "locator": "REPO-01:src/pages/admin/staff-management/edit/[id].tsx#L1"
+  },
+  {
+    "route": "/admin/tenant-management/create",
+    "method": "PAGE",
+    "locator": "REPO-01:src/pages/admin/tenant-management/create.tsx#L1"
+  },
+  {
+    "route": "/admin/tenant-management",
+    "method": "PAGE",
+    "locator": "REPO-01:src/pages/admin/tenant-management/index.tsx#L1"
+  },
+  {
+    "route": "/admin/tenant-management/edit/:tenantCode",
+    "method": "PAGE",
+    "locator": "REPO-01:src/pages/admin/tenant-management/edit/[tenantCode].tsx#L1"
+  },
+  {
+    "route": "/admin/tenant-management/view/:tenantCode",
+    "method": "PAGE",
+    "locator": "REPO-01:src/pages/admin/tenant-management/view/[tenantCode].tsx#L1"
+  },
+  {
+    "route": "/admin/ticket-management/create",
+    "method": "PAGE",
+    "locator": "REPO-01:src/pages/admin/ticket-management/create.tsx#L1"
+  },
+  {
+    "route": "/admin/ticket-management",
+    "method": "PAGE",
+    "locator": "REPO-01:src/pages/admin/ticket-management/index.tsx#L1"
+  },
+  {
+    "route": "/admin/ticket-management/edit/:ticketId",
+    "method": "PAGE",
+    "locator": "REPO-01:src/pages/admin/ticket-management/edit/[ticketId].tsx#L1"
+  },
+  {
+    "route": "/admin/ticket-management/view/:ticketId",
+    "method": "PAGE",
+    "locator": "REPO-01:src/pages/admin/ticket-management/view/[ticketId].tsx#L1"
+  },
+  {
+    "route": "/admin/unlock-account/:token",
+    "method": "PAGE",
+    "locator": "REPO-01:src/pages/admin/unlock-account/[token].tsx#L1"
+  },
+  {
+    "route": "/admin/user-management/create",
+    "method": "PAGE",
+    "locator": "REPO-01:src/pages/admin/user-management/create.tsx#L1"
+  },
+  {
+    "route": "/admin/user-management",
+    "method": "PAGE",
+    "locator": "REPO-01:src/pages/admin/user-management/index.tsx#L1"
+  },
+  {
+    "route": "/admin/user-management/edit/:userId",
+    "method": "PAGE",
+    "locator": "REPO-01:src/pages/admin/user-management/edit/[userId].tsx#L1"
+  },
+  {
+    "route": "/admin/user-management/view/:userId",
+    "method": "PAGE",
+    "locator": "REPO-01:src/pages/admin/user-management/view/[userId].tsx#L1"
+  },
+  {
+    "route": "/admin/vacancies-status",
+    "method": "PAGE",
+    "locator": "REPO-01:src/pages/admin/vacancies-status/index.tsx#L1"
+  },
+  {
+    "route": "/booking/buy-monthly-ticket",
+    "method": "PAGE",
+    "locator": "REPO-01:src/pages/booking/buy-monthly-ticket.tsx#L1"
+  },
+  {
+    "route": "/booking/buy-times-limit-ticket",
+    "method": "PAGE",
+    "locator": "REPO-01:src/pages/booking/buy-times-limit-ticket.tsx#L1"
+  },
+  {
+    "route": "/booking/payment-online-failure",
+    "method": "PAGE",
+    "locator": "REPO-01:src/pages/booking/payment-online-failure.tsx#L1"
+  },
+  {
+    "route": "/booking/payment-online-monthly-ticket-success",
+    "method": "PAGE",
+    "locator": "REPO-01:src/pages/booking/payment-online-monthly-ticket-success.tsx#L1"
+  },
+  {
+    "route": "/booking/payment-online-success",
+    "method": "PAGE",
+    "locator": "REPO-01:src/pages/booking/payment-online-success.tsx#L1"
+  },
+  {
+    "route": "/booking/payment-online",
+    "method": "PAGE",
+    "locator": "REPO-01:src/pages/booking/payment-online.tsx#L1"
+  },
+  {
+    "route": "/booking/use-in-day",
+    "method": "PAGE",
+    "locator": "REPO-01:src/pages/booking/use-in-day.tsx#L1"
+  },
+  {
+    "route": "/commercial-law",
+    "method": "PAGE",
+    "locator": "REPO-01:src/pages/commercial-law/index.tsx#L1"
+  },
+  {
+    "route": "/price-list",
+    "method": "PAGE",
+    "locator": "REPO-01:src/pages/price-list/index.tsx#L1"
+  },
+  {
+    "route": "/reset-password/:token",
+    "method": "PAGE",
+    "locator": "REPO-01:src/pages/reset-password/[token].tsx#L1"
+  },
+  {
+    "route": "/reset-password/success",
+    "method": "PAGE",
+    "locator": "REPO-01:src/pages/reset-password/success.tsx#L1"
+  },
+  {
+    "route": "/tenant/:code",
+    "method": "PAGE",
+    "locator": "REPO-01:src/pages/tenant/[code].tsx#L1"
+  },
+  {
+    "route": "/terms-of-use",
+    "method": "PAGE",
+    "locator": "REPO-01:src/pages/terms-of-use/index.tsx#L1"
+  },
+  {
+    "route": "/user/my-page/delete-account",
+    "method": "PAGE",
+    "locator": "REPO-01:src/pages/user/my-page/delete-account.tsx#L1"
+  },
+  {
+    "route": "/user/my-page/favorite-tenants",
+    "method": "PAGE",
+    "locator": "REPO-01:src/pages/user/my-page/favorite-tenants.tsx#L1"
+  },
+  {
+    "route": "/user/my-page",
+    "method": "PAGE",
+    "locator": "REPO-01:src/pages/user/my-page/index.tsx#L1"
+  },
+  {
+    "route": "/user/my-page/monthly-ticket-status",
+    "method": "PAGE",
+    "locator": "REPO-01:src/pages/user/my-page/monthly-ticket-status.tsx#L1"
+  },
+  {
+    "route": "/user/my-page/times-limit-ticket-status",
+    "method": "PAGE",
+    "locator": "REPO-01:src/pages/user/my-page/times-limit-ticket-status.tsx#L1"
+  },
+  {
+    "route": "/user/my-page/booking-history/:id",
+    "method": "PAGE",
+    "locator": "REPO-01:src/pages/user/my-page/booking-history/[id].tsx#L1"
+  },
+  {
+    "route": "/user/my-page/booking-history/cancel-success",
+    "method": "PAGE",
+    "locator": "REPO-01:src/pages/user/my-page/booking-history/cancel-success.tsx#L1"
+  },
+  {
+    "route": "/user/my-page/booking-history",
+    "method": "PAGE",
+    "locator": "REPO-01:src/pages/user/my-page/booking-history/index.tsx#L1"
+  },
+  {
+    "route": "/user/my-page/booking-history/partial-checkout/:id",
+    "method": "PAGE",
+    "locator": "REPO-01:src/pages/user/my-page/booking-history/partial-checkout/[id].tsx#L1"
+  },
+  {
+    "route": "/user/my-page/booking-history/partial-checkout/success",
+    "method": "PAGE",
+    "locator": "REPO-01:src/pages/user/my-page/booking-history/partial-checkout/success.tsx#L1"
+  },
+  {
+    "route": "/user/my-page/booking-history/update/:id",
+    "method": "PAGE",
+    "locator": "REPO-01:src/pages/user/my-page/booking-history/update/[id].tsx#L1"
+  },
+  {
+    "route": "/user/my-page/booking-history/update",
+    "method": "PAGE",
+    "locator": "REPO-01:src/pages/user/my-page/booking-history/update/index.tsx#L1"
+  },
+  {
+    "route": "/user/my-page/booking-history/update/completed",
+    "method": "PAGE",
+    "locator": "REPO-01:src/pages/user/my-page/booking-history/update/completed/index.tsx#L1"
+  },
+  {
+    "route": "/user/my-page/personal-info/change-password",
+    "method": "PAGE",
+    "locator": "REPO-01:src/pages/user/my-page/personal-info/change-password.tsx#L1"
+  },
+  {
+    "route": "/user/my-page/personal-info",
+    "method": "PAGE",
+    "locator": "REPO-01:src/pages/user/my-page/personal-info/index.tsx#L1"
+  },
+  {
+    "route": "/user/my-page/personal-info/change-credit-card/delete",
+    "method": "PAGE",
+    "locator": "REPO-01:src/pages/user/my-page/personal-info/change-credit-card/delete.tsx#L1"
+  },
+  {
+    "route": "/user/my-page/personal-info/change-credit-card",
+    "method": "PAGE",
+    "locator": "REPO-01:src/pages/user/my-page/personal-info/change-credit-card/index.tsx#L1"
+  },
+  {
+    "route": "/user/my-page/personal-info/change-credit-card/success",
+    "method": "PAGE",
+    "locator": "REPO-01:src/pages/user/my-page/personal-info/change-credit-card/success.tsx#L1"
+  },
+  {
+    "route": "/user/my-page/personal-info/update-information",
+    "method": "PAGE",
+    "locator": "REPO-01:src/pages/user/my-page/personal-info/update-information/index.tsx#L1"
+  },
+  {
+    "route": "/user/my-page/personal-info/update-information/success",
+    "method": "PAGE",
+    "locator": "REPO-01:src/pages/user/my-page/personal-info/update-information/success.tsx#L1"
+  },
+  {
+    "route": "/user/my-page/personal-info/update-information/verify-edit-email/:token",
+    "method": "PAGE",
+    "locator": "REPO-01:src/pages/user/my-page/personal-info/update-information/verify-edit-email/[token].tsx#L1"
+  },
+  {
+    "route": "/user/my-page/personal-info/update-password/:token",
+    "method": "PAGE",
+    "locator": "REPO-01:src/pages/user/my-page/personal-info/update-password/[token].tsx#L1"
+  },
+  {
+    "route": "/user/my-page/personal-info/update-password/success",
+    "method": "PAGE",
+    "locator": "REPO-01:src/pages/user/my-page/personal-info/update-password/success.tsx#L1"
+  },
+  {
+    "route": "/vacancy-status",
+    "method": "PAGE",
+    "locator": "REPO-01:src/pages/vacancy-status/index.tsx#L1"
+  },
+  {
+    "route": "/verify/:token",
+    "method": "PAGE",
+    "locator": "REPO-01:src/pages/verify/[token].tsx#L1"
+  }
+]

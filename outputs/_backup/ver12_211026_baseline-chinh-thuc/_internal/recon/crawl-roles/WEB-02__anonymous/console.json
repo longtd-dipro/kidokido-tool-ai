@@ -1,0 +1,92 @@
+[
+  {
+    "url": "https://dhxkf93d45vp4.cloudfront.net/booking/buy-monthly-ticket",
+    "text": "Failed to load resource: the server responded with a status of 401 ()",
+    "at": "2026-10-02T06:11:42.567Z"
+  },
+  {
+    "url": "https://dhxkf93d45vp4.cloudfront.net/booking/buy-times-limit-ticket",
+    "text": "Failed to load resource: the server responded with a status of 401 ()",
+    "at": "2026-10-02T06:11:44.361Z"
+  },
+  {
+    "url": "https://dhxkf93d45vp4.cloudfront.net/booking/use-in-day",
+    "text": "Failed to load resource: the server responded with a status of 401 ()",
+    "at": "2026-10-02T06:11:45.528Z"
+  },
+  {
+    "url": "https://dhxkf93d45vp4.cloudfront.net/user/my-page/favorite-tenants",
+    "text": "Failed to load resource: the server responded with a status of 401 ()",
+    "at": "2026-10-02T06:12:07.081Z"
+  },
+  {
+    "url": "https://dhxkf93d45vp4.cloudfront.net/user/my-page/monthly-ticket-status",
+    "text": "Failed to load resource: the server responded with a status of 401 ()",
+    "at": "2026-10-02T06:12:08.079Z"
+  },
+  {
+    "url": "https://dhxkf93d45vp4.cloudfront.net/user/my-page/monthly-ticket-status",
+    "text": "Failed to load resource: the server responded with a status of 401 ()",
+    "at": "2026-10-02T06:12:08.083Z"
+  },
+  {
+    "url": "https://dhxkf93d45vp4.cloudfront.net/user/my-page/times-limit-ticket-status",
+    "text": "Failed to load resource: the server responded with a status of 401 ()",
+    "at": "2026-10-02T06:12:16.418Z"
+  },
+  {
+    "url": "https://dhxkf93d45vp4.cloudfront.net/user/my-page/times-limit-ticket-status",
+    "text": "Failed to load resource: the server responded with a status of 401 ()",
+    "at": "2026-10-02T06:12:16.420Z"
+  },
+  {
+    "url": "https://dhxkf93d45vp4.cloudfront.net/booking/use-in-day?tenantCode=ST",
+    "text": "Failed to load resource: the server responded with a status of 401 ()",
+    "at": "2026-10-02T06:12:21.908Z"
+  },
+  {
+    "url": "https://dhxkf93d45vp4.cloudfront.net/booking/use-in-day?tenantCode=ST",
+    "text": "Failed to load resource: the server responded with a status of 401 ()",
+    "at": "2026-10-02T06:12:22.180Z"
+  },
+  {
+    "url": "https://dhxkf93d45vp4.cloudfront.net/booking/use-in-day?tenantCode=KL",
+    "text": "Failed to load resource: the server responded with a status of 401 ()",
+    "at": "2026-10-02T06:12:25.050Z"
+  },
+  {
+    "url": "https://dhxkf93d45vp4.cloudfront.net/booking/use-in-day?tenantCode=KL",
+    "text": "Failed to load resource: the server responded with a status of 401 ()",
+    "at": "2026-10-02T06:12:25.345Z"
+  },
+  {
+    "url": "https://dhxkf93d45vp4.cloudfront.net/booking/use-in-day?tenantCode=0702",
+    "text": "Failed to load resource: the server responded with a status of 401 ()",
+    "at": "2026-10-02T06:12:27.443Z"
+  },
+  {
+    "url": "https://dhxkf93d45vp4.cloudfront.net/booking/use-in-day?tenantCode=0702",
+    "text": "Failed to load resource: the server responded with a status of 401 ()",
+    "at": "2026-10-02T06:12:27.701Z"
+  },
+  {
+    "url": "https://dhxkf93d45vp4.cloudfront.net/booking/use-in-day?tenantCode=SMAGE",
+    "text": "Failed to load resource: the server responded with a status of 401 ()",
+    "at": "2026-10-02T06:12:30.917Z"
+  },
+  {
+    "url": "https://dhxkf93d45vp4.cloudfront.net/booking/use-in-day?tenantCode=SMAGE",
+    "text": "Failed to load resource: the server responded with a status of 401 ()",
+    "at": "2026-10-02T06:12:31.200Z"
+  },
+  {
+    "url": "https://dhxkf93d45vp4.cloudfront.net/booking/use-in-day?tenantCode=T",
+    "text": "Failed to load resource: the server responded with a status of 401 ()",
+    "at": "2026-10-02T06:12:33.282Z"
+  },
+  {
+    "url": "https://dhxkf93d45vp4.cloudfront.net/booking/use-in-day?tenantCode=T",
+    "text": "Failed to load resource: the server responded with a status of 401 ()",
+    "at": "2026-10-02T06:12:33.564Z"
+  }
+]

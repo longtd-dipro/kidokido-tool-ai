@@ -1,0 +1,903 @@
+{
+  "/403": [
+    "src/pages/403.tsx"
+  ],
+  "/error": [
+    "src/pages/error.tsx"
+  ],
+  "/forgot-password": [
+    "src/pages/forgot-password.tsx",
+    "src/components/common/Fields/TextInputField/index.tsx",
+    "src/components/common/Error/index.tsx",
+    "src/components/common/Buttons/Button/index.tsx",
+    "src/components/common/ErrorDialog/index.tsx",
+    "src/components/ForgotPassword/ForgotPasswordSuccess.tsx"
+  ],
+  "/": [
+    "src/pages/index.tsx",
+    "src/components/common/NotificationDialog/index.tsx",
+    "src/components/TopPage/News/index.tsx",
+    "src/components/TopPage/News/NewsItem.tsx",
+    "src/components/TopPage/News/NewsItemDialog.tsx",
+    "src/components/common/Spinner/index.tsx",
+    "src/components/common/Error/index.tsx",
+    "src/components/TopPage/SearchTenantArea.tsx",
+    "src/components/WarningLoginDialog/index.tsx",
+    "src/components/common/Buttons/Button/index.tsx"
+  ],
+  "/maintenance": [
+    "src/pages/maintenance.tsx"
+  ],
+  "/privacy-policy": [
+    "src/pages/privacy-policy.tsx"
+  ],
+  "/signin": [
+    "src/pages/signin.tsx",
+    "src/components/common/Fields/TextInputField/index.tsx",
+    "src/components/common/Error/index.tsx",
+    "src/components/common/Fields/PasswordInputField/index.tsx",
+    "src/components/common/Buttons/Button/index.tsx",
+    "src/components/common/ErrorDialog/index.tsx",
+    "src/components/common/EmailNotVerifiedDialog/index.tsx"
+  ],
+  "/signup-success": [
+    "src/pages/signup-success.tsx",
+    "src/components/common/Buttons/Button/index.tsx"
+  ],
+  "/signup": [
+    "src/pages/signup.tsx",
+    "src/components/common/Error/index.tsx",
+    "src/components/common/ErrorDialog/index.tsx",
+    "src/components/common/Buttons/Button/index.tsx",
+    "src/components/common/EmailNotVerifiedDialog/index.tsx",
+    "src/components/User/ConfirmInfoUser/index.tsx",
+    "src/components/common/Admin/LabelFontLight/index.tsx",
+    "src/components/common/Fields/TextInputField/index.tsx",
+    "src/components/common/Fields/PasswordInputField/index.tsx",
+    "src/components/common/Fields/DatePickerField/index.tsx",
+    "src/statics/images/components/CalendarIcon.tsx",
+    "src/components/common/Fields/RadioButtonsField/index.tsx",
+    "src/components/common/Fields/AutocompleteField/index.tsx"
+  ],
+  "/tenant-list": [
+    "src/pages/tenant-list.tsx",
+    "src/components/TopPage/SearchTenantArea.tsx",
+    "src/components/common/Error/index.tsx",
+    "src/components/common/Spinner/index.tsx",
+    "src/components/TopPage/TenantTopPage/index.tsx",
+    "src/components/TopPage/TenantTopPage/TenantTopPageNote.tsx"
+  ],
+  "/admin/app-settings": [
+    "src/pages/admin/app-settings.tsx",
+    "src/components/common/Error/index.tsx",
+    "src/components/common/ConfirmationDialog/index.tsx",
+    "src/components/common/Buttons/AdminButton/index.tsx",
+    "src/components/common/Buttons/LoadingButton/index.tsx",
+    "src/components/CreateOrUpdateAppSetting/index.tsx",
+    "src/components/common/Fields/TextInputField/index.tsx",
+    "src/components/common/Fields/AutocompleteField/index.tsx",
+    "src/components/common/Fields/RichTextEditorField/index.tsx"
+  ],
+  "/admin/barcode-scanner": [
+    "src/pages/admin/barcode-scanner.tsx",
+    "src/components/User/NotificationDialog/index.tsx"
+  ],
+  "/admin/change-email": [
+    "src/pages/admin/change-email.tsx",
+    "src/components/common/Fields/TextInputField/index.tsx",
+    "src/components/common/Error/index.tsx",
+    "src/components/common/Buttons/AdminButton/index.tsx"
+  ],
+  "/admin/change-password": [
+    "src/pages/admin/change-password.tsx",
+    "src/components/common/Fields/TextInputField/index.tsx",
+    "src/components/common/Error/index.tsx",
+    "src/components/common/Buttons/AdminButton/index.tsx"
+  ],
+  "/admin/dashboard": [
+    "src/pages/admin/dashboard.tsx",
+    "src/components/common/Error/index.tsx",
+    "src/components/Chart/AverageStayDurationLineChart/index.tsx",
+    "src/components/common/Admin/Label/index.tsx",
+    "src/statics/images/components/CalendarIcon.tsx",
+    "src/components/Chart/AverageBookingTimesColumnChart/index.tsx",
+    "src/components/Chart/TotalBookingsWithTimesColumnChart/index.tsx",
+    "src/components/Chart/TotalNewAndOldBookingUsersColumnChart/index.tsx",
+    "src/components/Chart/TotalBookingsWithTicketColumnChart/index.tsx"
+  ],
+  "/admin/disclaimer-management": [
+    "src/pages/admin/disclaimer-management.tsx",
+    "src/components/common/Error/index.tsx",
+    "src/components/CreateOrUpdateDisclaimers/index.tsx",
+    "src/components/CreateOrUpdateDisclaimers/DisclaimerGroup/index.tsx",
+    "src/components/common/Admin/Label/index.tsx",
+    "src/components/common/Fields/TextAreaField/index.tsx",
+    "src/components/common/Buttons/AdminButton/index.tsx",
+    "src/components/common/Buttons/LoadingButton/index.tsx"
+  ],
+  "/admin/forgot-password": [
+    "src/pages/admin/forgot-password.tsx",
+    "src/components/common/Fields/TextInputField/index.tsx",
+    "src/components/common/Error/index.tsx",
+    "src/components/common/Buttons/AdminButton/index.tsx"
+  ],
+  "/admin": [
+    "src/pages/admin/index.tsx",
+    "src/components/common/Spinner/index.tsx"
+  ],
+  "/admin/revenue-management": [
+    "src/pages/admin/revenue-management.tsx",
+    "src/components/common/Error/index.tsx",
+    "src/components/common/Fields/AutocompleteField/index.tsx",
+    "src/components/common/Fields/DatePickerField/index.tsx",
+    "src/statics/images/components/CalendarIcon.tsx",
+    "src/components/common/Buttons/AdminButton/index.tsx",
+    "src/components/common/Admin/LoadingSpinner/index.tsx",
+    "src/components/common/DataGridPagination/IndependencePagination.tsx",
+    "src/components/RevenueManagement/ViewRevenueDialog/index.tsx",
+    "src/components/common/ErrorDialog/index.tsx",
+    "src/components/common/Buttons/Button/index.tsx"
+  ],
+  "/admin/signin": [
+    "src/pages/admin/signin.tsx",
+    "src/components/common/Fields/TextInputField/index.tsx",
+    "src/components/common/Error/index.tsx",
+    "src/components/common/Fields/PasswordInputField/index.tsx",
+    "src/components/common/Buttons/AdminButton/index.tsx",
+    "src/components/common/WarningDialog/index.tsx",
+    "src/components/common/Buttons/Button/index.tsx",
+    "src/components/AdminConfirmSecurityAnswerDialog/index.tsx",
+    "src/components/common/Spinner/index.tsx",
+    "src/components/common/Admin/Label/index.tsx",
+    "src/components/common/Fields/AutocompleteField/index.tsx",
+    "src/components/common/Buttons/LoadingButton/index.tsx"
+  ],
+  "/admin/waiting-time-management": [
+    "src/pages/admin/waiting-time-management.tsx",
+    "src/components/common/Admin/LabelFontLight/index.tsx",
+    "src/components/common/Fields/TextInputField/index.tsx",
+    "src/components/common/Error/index.tsx",
+    "src/components/common/Buttons/AdminButton/index.tsx"
+  ],
+  "/admin/booking-management": [
+    "src/pages/admin/booking-management/index.tsx",
+    "src/components/common/Error/index.tsx",
+    "src/components/common/Fields/TextInputField/index.tsx",
+    "src/components/common/Fields/AutocompleteField/index.tsx",
+    "src/components/common/Fields/DatePickerField/index.tsx",
+    "src/statics/images/components/CalendarIcon.tsx",
+    "src/components/common/Buttons/AdminButton/index.tsx",
+    "src/components/common/Admin/LoadingSpinner/index.tsx",
+    "src/components/common/DataGridPagination/IndependencePagination.tsx",
+    "src/components/common/PasswordConfirmationDialog/index.tsx",
+    "src/components/common/Fields/PasswordInputField/index.tsx",
+    "src/components/AdminCancelBookingDialog/index.tsx",
+    "src/components/AdminUpdateBookingFormBeforeCheckIn/AdminBookingConfirmDialog.tsx",
+    "src/components/common/Buttons/Button/index.tsx",
+    "src/components/common/Spinner/index.tsx",
+    "src/components/AdminCancelBookingDialog/AdminCancelBookingReviewDialog.tsx",
+    "src/components/User/NotificationDialog/index.tsx",
+    "src/components/common/WarningDialog/index.tsx",
+    "src/components/AdminUpdateBookingStatusToCancelledDialog/index.tsx",
+    "src/components/AdminRefundBookingDialogs/index.tsx",
+    "src/components/AdminUpdateBookingFormBeforeCheckIn/AdminBookingCreditCardDialog.tsx"
+  ],
+  "/admin/booking-management/details/:id": [
+    "src/pages/admin/booking-management/details/[id].tsx",
+    "src/components/common/Error/index.tsx",
+    "src/components/common/Buttons/AdminButton/index.tsx",
+    "src/components/common/Spinner/index.tsx"
+  ],
+  "/admin/booking-management/partial-checkout/:id": [
+    "src/pages/admin/booking-management/partial-checkout/[id].tsx"
+  ],
+  "/admin/booking-management/update/:id": [
+    "src/pages/admin/booking-management/update/[id].tsx",
+    "src/components/AdminUpdateBookingAfterCheckIn/index.tsx",
+    "src/components/AdminUpdateBookingAfterCheckIn/AdminUpdateAfterCheckInBookingForm.tsx",
+    "src/components/PartialCheckoutQuantityForm/ChildAgeItemCheckbox/index.tsx",
+    "src/components/common/Buttons/Button/index.tsx",
+    "src/components/common/Error/index.tsx",
+    "src/components/AdminUpdateBookingFormBeforeCheckIn/AdminUpdateBookingReviewDialog.tsx",
+    "src/components/AdminUpdateBookingFormBeforeCheckIn/AdminBookingCreditCardDialog.tsx",
+    "src/components/AdminUpdateBookingFormBeforeCheckIn/AdminBookingConfirmDialog.tsx",
+    "src/components/common/Spinner/index.tsx",
+    "src/components/User/NotificationDialog/index.tsx",
+    "src/components/AdminUpdateBookingFormBeforeCheckIn/index.tsx",
+    "src/components/CreateBooking/QuantityAndAgesInfoFields/index.tsx",
+    "src/components/common/Fields/AutocompleteField/index.tsx",
+    "src/components/common/Fields/DatePickerField/index.tsx",
+    "src/statics/images/components/CalendarIcon.tsx"
+  ],
+  "/admin/booking-queue": [
+    "src/pages/admin/booking-queue/index.tsx",
+    "src/components/common/Error/index.tsx",
+    "src/components/BookingQueue/Calling.tsx",
+    "src/components/common/Buttons/AdminButton/index.tsx",
+    "src/components/BookingQueue/Waiting.tsx",
+    "src/components/BookingQueue/SystemCancelled.tsx"
+  ],
+  "/admin/booking-vacancies": [
+    "src/pages/admin/booking-vacancies/index.tsx",
+    "src/components/common/Error/index.tsx",
+    "src/components/common/Buttons/AdminButton/index.tsx",
+    "src/components/common/Admin/LoadingSpinner/index.tsx",
+    "src/components/common/DataGridPagination/IndependencePagination.tsx",
+    "src/components/BookingVacancies/ManageVacanciesDialog/index.tsx",
+    "src/components/common/Buttons/Button/index.tsx"
+  ],
+  "/admin/email-settings": [
+    "src/pages/admin/email-settings/index.tsx",
+    "src/components/common/Error/index.tsx",
+    "src/components/common/Admin/LoadingSpinner/index.tsx",
+    "src/components/common/DataGridPagination/index.tsx"
+  ],
+  "/admin/email-settings/edit/:emailKey": [
+    "src/pages/admin/email-settings/edit/[emailKey].tsx",
+    "src/components/common/Error/index.tsx",
+    "src/components/CreateOrUpdateEmailSetting/index.tsx",
+    "src/components/common/Fields/TextInputField/index.tsx",
+    "src/components/common/Admin/LabelFontLight/index.tsx",
+    "src/components/common/Fields/RichTextEditorField/index.tsx",
+    "src/components/common/Buttons/AdminButton/index.tsx",
+    "src/components/CreateOrUpdateEmailSetting/EmailPreviewDialog/index.tsx",
+    "src/components/common/Spinner/index.tsx",
+    "src/components/common/Admin/Label/index.tsx",
+    "src/components/common/Barcode/index.tsx",
+    "src/components/common/Buttons/Button/index.tsx"
+  ],
+  "/admin/gmo-settings/create": [
+    "src/pages/admin/gmo-settings/create.tsx",
+    "src/components/GMOSetting/CreateOrUpdateGMOSetting/index.tsx",
+    "src/components/common/Error/index.tsx",
+    "src/components/common/Admin/LabelFontLight/index.tsx",
+    "src/components/common/Fields/TextInputField/index.tsx",
+    "src/components/common/Buttons/AdminButton/index.tsx",
+    "src/components/common/ErrorDialog/index.tsx",
+    "src/components/common/Buttons/Button/index.tsx"
+  ],
+  "/admin/gmo-settings": [
+    "src/pages/admin/gmo-settings/index.tsx",
+    "src/components/common/Error/index.tsx",
+    "src/components/common/Buttons/AdminButton/index.tsx",
+    "src/components/common/Admin/LoadingSpinner/index.tsx",
+    "src/components/common/DataGridPagination/index.tsx",
+    "src/components/common/ConfirmationDialog/index.tsx",
+    "src/components/common/Buttons/LoadingButton/index.tsx",
+    "src/components/common/ErrorDialog/index.tsx",
+    "src/components/common/Buttons/Button/index.tsx"
+  ],
+  "/admin/gmo-settings/edit/:id": [
+    "src/pages/admin/gmo-settings/edit/[id].tsx",
+    "src/components/common/Error/index.tsx",
+    "src/components/GMOSetting/CreateOrUpdateGMOSetting/index.tsx",
+    "src/components/common/Admin/LabelFontLight/index.tsx",
+    "src/components/common/Fields/TextInputField/index.tsx",
+    "src/components/common/Buttons/AdminButton/index.tsx",
+    "src/components/common/ErrorDialog/index.tsx",
+    "src/components/common/Buttons/Button/index.tsx"
+  ],
+  "/admin/gmo-settings/view/:id": [
+    "src/pages/admin/gmo-settings/view/[id].tsx",
+    "src/components/common/Error/index.tsx",
+    "src/components/GMOSetting/ViewGMOSetting/index.tsx",
+    "src/components/common/PasswordConfirmationDialog/index.tsx",
+    "src/components/common/Fields/PasswordInputField/index.tsx",
+    "src/components/common/Buttons/AdminButton/index.tsx"
+  ],
+  "/admin/news-management/create": [
+    "src/pages/admin/news-management/create.tsx",
+    "src/components/CreateOrUpdateNews/index.tsx",
+    "src/components/common/Error/index.tsx",
+    "src/components/common/Admin/LabelFontLight/index.tsx",
+    "src/components/common/Fields/DatePickerField/index.tsx",
+    "src/statics/images/components/CalendarIcon.tsx",
+    "src/components/common/Fields/TextInputField/index.tsx",
+    "src/components/common/Fields/RichTextEditorField/index.tsx",
+    "src/components/common/Buttons/AdminButton/index.tsx"
+  ],
+  "/admin/news-management": [
+    "src/pages/admin/news-management/index.tsx",
+    "src/components/common/Error/index.tsx",
+    "src/components/common/Buttons/AdminButton/index.tsx",
+    "src/components/common/Admin/LoadingSpinner/index.tsx",
+    "src/components/common/DataGridPagination/index.tsx",
+    "src/components/common/ConfirmationDialog/index.tsx",
+    "src/components/common/Buttons/LoadingButton/index.tsx"
+  ],
+  "/admin/news-management/edit/:newsId": [
+    "src/pages/admin/news-management/edit/[newsId].tsx",
+    "src/components/common/Error/index.tsx",
+    "src/components/CreateOrUpdateNews/index.tsx",
+    "src/components/common/Admin/LabelFontLight/index.tsx",
+    "src/components/common/Fields/DatePickerField/index.tsx",
+    "src/statics/images/components/CalendarIcon.tsx",
+    "src/components/common/Fields/TextInputField/index.tsx",
+    "src/components/common/Fields/RichTextEditorField/index.tsx",
+    "src/components/common/Buttons/AdminButton/index.tsx"
+  ],
+  "/admin/reset-password/:token": [
+    "src/pages/admin/reset-password/[token].tsx",
+    "src/components/common/Fields/PasswordInputField/index.tsx",
+    "src/components/common/Error/index.tsx",
+    "src/components/common/Buttons/AdminButton/index.tsx",
+    "src/components/ResetPasswordAdmin/ResetPasswordSuccess.tsx"
+  ],
+  "/admin/scan-management": [
+    "src/pages/admin/scan-management/index.tsx",
+    "src/components/common/Error/index.tsx",
+    "src/components/common/Fields/AutocompleteField/index.tsx",
+    "src/components/common/Fields/TextInputField/index.tsx",
+    "src/components/common/Fields/DatePickerField/index.tsx",
+    "src/statics/images/components/CalendarIcon.tsx",
+    "src/components/common/Buttons/AdminButton/index.tsx",
+    "src/components/common/Admin/LoadingSpinner/index.tsx",
+    "src/components/common/DataGridPagination/IndependencePagination.tsx",
+    "src/components/AdminCancelBookingDialog/index.tsx",
+    "src/components/AdminUpdateBookingFormBeforeCheckIn/AdminBookingConfirmDialog.tsx",
+    "src/components/common/Buttons/Button/index.tsx",
+    "src/components/common/Spinner/index.tsx",
+    "src/components/AdminCancelBookingDialog/AdminCancelBookingReviewDialog.tsx",
+    "src/components/User/NotificationDialog/index.tsx",
+    "src/components/common/WarningDialog/index.tsx",
+    "src/components/AdminChangePaymentStatusDialog/index.tsx"
+  ],
+  "/admin/staff-management/create": [
+    "src/pages/admin/staff-management/create.tsx",
+    "src/components/StaffManagement/CreateOrUpdateStaff/index.tsx",
+    "src/components/common/Admin/Label/index.tsx",
+    "src/components/common/Fields/AutocompleteField/index.tsx",
+    "src/components/common/Error/index.tsx",
+    "src/components/common/Fields/TextInputField/index.tsx",
+    "src/components/common/Fields/PasswordInputField/index.tsx",
+    "src/components/common/Buttons/AdminButton/index.tsx",
+    "src/components/common/Buttons/LoadingButton/index.tsx",
+    "src/components/common/Spinner/index.tsx"
+  ],
+  "/admin/staff-management": [
+    "src/pages/admin/staff-management/index.tsx",
+    "src/components/AdminCredentialsConfirmation/index.tsx",
+    "src/components/common/Fields/TextInputField/index.tsx",
+    "src/components/common/Error/index.tsx",
+    "src/components/common/Fields/PasswordInputField/index.tsx",
+    "src/components/common/Buttons/AdminButton/index.tsx"
+  ],
+  "/admin/staff-management/edit/:id": [
+    "src/pages/admin/staff-management/edit/[id].tsx",
+    "src/components/common/Error/index.tsx",
+    "src/components/StaffManagement/CreateOrUpdateStaff/index.tsx",
+    "src/components/common/Admin/Label/index.tsx",
+    "src/components/common/Fields/AutocompleteField/index.tsx",
+    "src/components/common/Fields/TextInputField/index.tsx",
+    "src/components/common/Fields/PasswordInputField/index.tsx",
+    "src/components/common/Buttons/AdminButton/index.tsx",
+    "src/components/common/Buttons/LoadingButton/index.tsx",
+    "src/components/common/Spinner/index.tsx"
+  ],
+  "/admin/tenant-management/create": [
+    "src/pages/admin/tenant-management/create.tsx",
+    "src/components/Tenant/CreateOrUpdateTenant/index.tsx",
+    "src/components/common/Admin/Label/index.tsx",
+    "src/components/common/Fields/TextInputField/index.tsx",
+    "src/components/common/Error/index.tsx",
+    "src/components/common/Fields/PasswordInputField/index.tsx",
+    "src/components/common/Fields/RadioButtonsField/index.tsx",
+    "src/components/common/Fields/TextAreaField/index.tsx",
+    "src/components/common/Fields/TimePickerField/index.tsx",
+    "src/components/common/Fields/AutocompleteField/index.tsx",
+    "src/components/common/Buttons/AdminButton/index.tsx",
+    "src/components/common/ErrorDialog/index.tsx",
+    "src/components/common/Buttons/Button/index.tsx"
+  ],
+  "/admin/tenant-management": [
+    "src/pages/admin/tenant-management/index.tsx",
+    "src/components/common/Error/index.tsx",
+    "src/components/common/Fields/TextInputField/index.tsx",
+    "src/components/common/Buttons/AdminButton/index.tsx",
+    "src/components/common/Admin/LoadingSpinner/index.tsx",
+    "src/components/common/DataGridPagination/IndependencePagination.tsx",
+    "src/components/common/ConfirmationDialog/index.tsx",
+    "src/components/common/Buttons/LoadingButton/index.tsx"
+  ],
+  "/admin/tenant-management/edit/:tenantCode": [
+    "src/pages/admin/tenant-management/edit/[tenantCode].tsx",
+    "src/components/common/Error/index.tsx",
+    "src/components/Tenant/CreateOrUpdateTenant/index.tsx",
+    "src/components/common/Admin/Label/index.tsx",
+    "src/components/common/Fields/TextInputField/index.tsx",
+    "src/components/common/Fields/PasswordInputField/index.tsx",
+    "src/components/common/Fields/RadioButtonsField/index.tsx",
+    "src/components/common/Fields/TextAreaField/index.tsx",
+    "src/components/common/Fields/TimePickerField/index.tsx",
+    "src/components/common/Fields/AutocompleteField/index.tsx",
+    "src/components/common/Buttons/AdminButton/index.tsx",
+    "src/components/common/ErrorDialog/index.tsx",
+    "src/components/common/Buttons/Button/index.tsx"
+  ],
+  "/admin/tenant-management/view/:tenantCode": [
+    "src/pages/admin/tenant-management/view/[tenantCode].tsx",
+    "src/components/common/Error/index.tsx",
+    "src/components/Tenant/ViewTenant/index.tsx",
+    "src/components/common/PasswordConfirmationDialog/index.tsx",
+    "src/components/common/Fields/PasswordInputField/index.tsx",
+    "src/components/common/Buttons/AdminButton/index.tsx"
+  ],
+  "/admin/ticket-management/create": [
+    "src/pages/admin/ticket-management/create.tsx",
+    "src/components/common/Error/index.tsx",
+    "src/components/Ticket/CreateOrEditTicketStepper/index.tsx",
+    "src/components/Ticket/CreateOrEditTicketStepper/CreateOrEditTicketForm/index.tsx",
+    "src/components/common/Fields/TextInputField/index.tsx",
+    "src/components/common/Fields/FileUploadField/index.tsx",
+    "src/components/common/Buttons/AdminButton/index.tsx",
+    "src/components/common/Spinner/index.tsx",
+    "src/components/common/Admin/Label/index.tsx",
+    "src/components/Ticket/CreateOrEditTicketStepper/ChooseTicketTypeRadioButtonsField/index.tsx",
+    "src/components/common/Fields/DatePickerField/index.tsx",
+    "src/statics/images/components/CalendarIcon.tsx",
+    "src/components/common/Fields/AutocompleteField/index.tsx",
+    "src/components/common/Fields/RadioButtonsField/index.tsx",
+    "src/components/common/Fields/TimePickerField/index.tsx",
+    "src/components/common/Fields/SelectField/index.tsx",
+    "src/components/Ticket/CreateOrEditTicketStepper/CreateOrEditTicketForm/DiscountSettingForm.tsx",
+    "src/components/common/Buttons/Button/index.tsx",
+    "src/components/Ticket/CreateOrEditTicketStepper/CreateOrEditTicketForm/InsertNewDiscountSetting.tsx",
+    "src/components/common/Buttons/LoadingButton/index.tsx",
+    "src/components/Ticket/CreateOrEditTicketStepper/TicketBookingScheduleManager/index.tsx",
+    "src/components/Ticket/CreateOrEditTicketStepper/TicketBookingScheduleManager/TicketBookingFrameForm/index.tsx"
+  ],
+  "/admin/ticket-management": [
+    "src/pages/admin/ticket-management/index.tsx",
+    "src/components/common/RequiredPermission/index.tsx",
+    "src/components/common/Error/index.tsx",
+    "src/components/common/Fields/AutocompleteField/index.tsx",
+    "src/components/common/Buttons/AdminButton/index.tsx",
+    "src/statics/images/components/CalendarIcon.tsx",
+    "src/components/common/Admin/LoadingSpinner/index.tsx",
+    "src/components/common/DataGridPagination/index.tsx",
+    "src/components/common/ConfirmationDialog/index.tsx",
+    "src/components/common/Buttons/LoadingButton/index.tsx"
+  ],
+  "/admin/ticket-management/edit/:ticketId": [
+    "src/pages/admin/ticket-management/edit/[ticketId].tsx",
+    "src/components/common/Error/index.tsx",
+    "src/components/Ticket/CreateOrEditTicketStepper/index.tsx",
+    "src/components/Ticket/CreateOrEditTicketStepper/CreateOrEditTicketForm/index.tsx",
+    "src/components/common/Fields/TextInputField/index.tsx",
+    "src/components/common/Fields/FileUploadField/index.tsx",
+    "src/components/common/Buttons/AdminButton/index.tsx",
+    "src/components/common/Spinner/index.tsx",
+    "src/components/common/Admin/Label/index.tsx",
+    "src/components/Ticket/CreateOrEditTicketStepper/ChooseTicketTypeRadioButtonsField/index.tsx",
+    "src/components/common/Fields/DatePickerField/index.tsx",
+    "src/statics/images/components/CalendarIcon.tsx",
+    "src/components/common/Fields/AutocompleteField/index.tsx",
+    "src/components/common/Fields/RadioButtonsField/index.tsx",
+    "src/components/common/Fields/TimePickerField/index.tsx",
+    "src/components/common/Fields/SelectField/index.tsx",
+    "src/components/Ticket/CreateOrEditTicketStepper/CreateOrEditTicketForm/DiscountSettingForm.tsx",
+    "src/components/common/Buttons/Button/index.tsx",
+    "src/components/Ticket/CreateOrEditTicketStepper/CreateOrEditTicketForm/InsertNewDiscountSetting.tsx",
+    "src/components/common/Buttons/LoadingButton/index.tsx",
+    "src/components/Ticket/CreateOrEditTicketStepper/TicketBookingScheduleManager/index.tsx",
+    "src/components/Ticket/CreateOrEditTicketStepper/TicketBookingScheduleManager/TicketBookingFrameForm/index.tsx"
+  ],
+  "/admin/ticket-management/view/:ticketId": [
+    "src/pages/admin/ticket-management/view/[ticketId].tsx",
+    "src/components/common/Error/index.tsx",
+    "src/components/Ticket/ViewTicket/index.tsx",
+    "src/components/Ticket/ViewTicket/components/GroupTicketPrice.tsx",
+    "src/components/Ticket/ViewTicket/components/DiscountSetting.tsx",
+    "src/components/Ticket/ViewTicket/components/SmaregiQRCode.tsx",
+    "src/components/Ticket/ViewTicket/components/BookingScheduleRow.tsx",
+    "src/components/Ticket/ViewTicket/components/BookingSchedulePrice.tsx",
+    "src/components/common/Spinner/index.tsx",
+    "src/components/common/Buttons/AdminButton/index.tsx"
+  ],
+  "/admin/unlock-account/:token": [
+    "src/pages/admin/unlock-account/[token].tsx",
+    "src/components/common/Admin/LoadingSpinner/index.tsx",
+    "src/components/common/Error/index.tsx",
+    "src/components/common/Buttons/Button/index.tsx"
+  ],
+  "/admin/user-management/create": [
+    "src/pages/admin/user-management/create.tsx",
+    "src/components/User/CreateOrUpdateUser/index.tsx",
+    "src/components/common/Admin/Label/index.tsx",
+    "src/components/common/Fields/TextInputField/index.tsx",
+    "src/components/common/Error/index.tsx",
+    "src/components/common/Fields/PasswordInputField/index.tsx",
+    "src/components/common/Fields/DatePickerField/index.tsx",
+    "src/statics/images/components/CalendarIcon.tsx",
+    "src/components/common/Fields/RadioButtonsField/index.tsx",
+    "src/components/common/Fields/AutocompleteField/index.tsx",
+    "src/components/common/Buttons/AdminButton/index.tsx"
+  ],
+  "/admin/user-management": [
+    "src/pages/admin/user-management/index.tsx",
+    "src/components/common/Error/index.tsx",
+    "src/components/common/Buttons/AdminButton/index.tsx",
+    "src/components/common/Fields/TextInputField/index.tsx",
+    "src/components/common/Fields/DatePickerField/index.tsx",
+    "src/statics/images/components/CalendarIcon.tsx",
+    "src/components/common/RequiredPermission/index.tsx",
+    "src/components/common/Admin/LoadingSpinner/index.tsx",
+    "src/components/common/DataGridPagination/index.tsx",
+    "src/components/common/DataGridPagination/IndependencePagination.tsx",
+    "src/components/common/ConfirmationDialog/index.tsx",
+    "src/components/common/Buttons/LoadingButton/index.tsx",
+    "src/components/common/ErrorDialog/index.tsx",
+    "src/components/common/Buttons/Button/index.tsx"
+  ],
+  "/admin/user-management/edit/:userId": [
+    "src/pages/admin/user-management/edit/[userId].tsx",
+    "src/components/common/Error/index.tsx",
+    "src/components/User/CreateOrUpdateUser/index.tsx",
+    "src/components/common/Admin/Label/index.tsx",
+    "src/components/common/Fields/TextInputField/index.tsx",
+    "src/components/common/Fields/PasswordInputField/index.tsx",
+    "src/components/common/Fields/DatePickerField/index.tsx",
+    "src/statics/images/components/CalendarIcon.tsx",
+    "src/components/common/Fields/RadioButtonsField/index.tsx",
+    "src/components/common/Fields/AutocompleteField/index.tsx",
+    "src/components/common/Buttons/AdminButton/index.tsx"
+  ],
+  "/admin/user-management/view/:userId": [
+    "src/pages/admin/user-management/view/[userId].tsx",
+    "src/components/common/Error/index.tsx",
+    "src/components/User/ViewUser/index.tsx",
+    "src/components/common/PasswordConfirmationDialog/index.tsx",
+    "src/components/common/Fields/PasswordInputField/index.tsx",
+    "src/components/common/Buttons/AdminButton/index.tsx"
+  ],
+  "/admin/vacancies-status": [
+    "src/pages/admin/vacancies-status/index.tsx",
+    "src/components/common/Error/index.tsx",
+    "src/components/BookingVacancies/index.tsx",
+    "src/components/BookingVacancies/Vacancy.tsx",
+    "src/components/common/ErrorDialog/index.tsx",
+    "src/components/common/Buttons/Button/index.tsx",
+    "src/components/common/Spinner/index.tsx"
+  ],
+  "/booking/buy-monthly-ticket": [
+    "src/pages/booking/buy-monthly-ticket.tsx",
+    "src/components/CreateBooking/MonthlyBookingForm/index.tsx",
+    "src/components/common/ExpiredCreditCardDialog/index.tsx",
+    "src/components/common/Buttons/AdminButton/index.tsx",
+    "src/components/common/Buttons/LoadingButton/index.tsx",
+    "src/components/common/Fields/AutocompleteField/index.tsx",
+    "src/components/common/Error/index.tsx",
+    "src/components/common/Fields/DatePickerField/index.tsx",
+    "src/statics/images/components/CalendarIcon.tsx",
+    "src/components/CreateBooking/BookingQuantityPriceAndTotalAmountInfo/index.tsx",
+    "src/components/CreateBooking/QuantityAndAgesInfoFields/index.tsx",
+    "src/components/User/ConfirmationDialogUser/index.tsx",
+    "src/components/common/Buttons/Button/index.tsx",
+    "src/components/CreateBooking/CreditCardForm/index.tsx",
+    "src/components/common/Spinner/index.tsx",
+    "src/components/common/Admin/Label/index.tsx",
+    "src/components/common/Fields/TextInputField/index.tsx",
+    "src/components/common/Fields/PasswordInputField/index.tsx",
+    "src/components/CreateBooking/BookingConfirmation/index.tsx",
+    "src/components/CreateBooking/BookingCompletion/BookingCompletionMonthly.tsx",
+    "src/components/common/RequiredLoginDialog/index.tsx",
+    "src/components/common/SameDayBookingWarningDialog/index.tsx"
+  ],
+  "/booking/buy-times-limit-ticket": [
+    "src/pages/booking/buy-times-limit-ticket.tsx",
+    "src/components/CreateBooking/TimesLimitBookingForm/index.tsx",
+    "src/components/common/ExpiredCreditCardDialog/index.tsx",
+    "src/components/common/Buttons/AdminButton/index.tsx",
+    "src/components/common/Buttons/LoadingButton/index.tsx",
+    "src/components/common/Fields/AutocompleteField/index.tsx",
+    "src/components/common/Error/index.tsx",
+    "src/components/common/Fields/DatePickerField/index.tsx",
+    "src/statics/images/components/CalendarIcon.tsx",
+    "src/components/CreateBooking/BookingQuantityPriceAndTotalAmountInfo/index.tsx",
+    "src/components/CreateBooking/QuantityAndAgesInfoFields/index.tsx",
+    "src/components/User/ConfirmationDialogUser/index.tsx",
+    "src/components/common/Buttons/Button/index.tsx",
+    "src/components/CreateBooking/CreditCardForm/index.tsx",
+    "src/components/common/Spinner/index.tsx",
+    "src/components/common/Admin/Label/index.tsx",
+    "src/components/common/Fields/TextInputField/index.tsx",
+    "src/components/common/Fields/PasswordInputField/index.tsx",
+    "src/components/CreateBooking/BookingConfirmation/index.tsx",
+    "src/components/CreateBooking/BookingCompletion/BookingCompletionTimesLimit.tsx",
+    "src/components/common/RequiredLoginDialog/index.tsx"
+  ],
+  "/booking/payment-online-failure": [
+    "src/pages/booking/payment-online-failure.tsx",
+    "src/components/CreateBooking/BookingCompletion/index.tsx",
+    "src/components/common/Buttons/Button/index.tsx"
+  ],
+  "/booking/payment-online-monthly-ticket-success": [
+    "src/pages/booking/payment-online-monthly-ticket-success.tsx",
+    "src/components/CreateBooking/BookingCompletion/BookingCompletionMonthly.tsx",
+    "src/components/common/Buttons/Button/index.tsx"
+  ],
+  "/booking/payment-online-success": [
+    "src/pages/booking/payment-online-success.tsx",
+    "src/components/CreateBooking/BookingCompletion/index.tsx",
+    "src/components/common/Buttons/Button/index.tsx"
+  ],
+  "/booking/payment-online": [
+    "src/pages/booking/payment-online.tsx",
+    "src/components/CreateBooking/PaymentOnlineBookingForm/index.tsx",
+    "src/components/common/ExpiredCreditCardDialog/index.tsx",
+    "src/components/common/Buttons/AdminButton/index.tsx",
+    "src/components/common/Buttons/LoadingButton/index.tsx",
+    "src/components/common/Spinner/index.tsx",
+    "src/components/common/Fields/SpecialSelectField/index.tsx",
+    "src/components/common/Error/index.tsx",
+    "src/components/BookingVacancies/index.tsx",
+    "src/components/BookingVacancies/Vacancy.tsx",
+    "src/components/common/ErrorDialog/index.tsx",
+    "src/components/common/Buttons/Button/index.tsx",
+    "src/components/CreateBooking/BookingQuantityPriceAndTotalAmountInfo/index.tsx",
+    "src/components/CreateBooking/QuantityAndAgesInfoFields/index.tsx",
+    "src/components/common/Fields/AutocompleteField/index.tsx",
+    "src/components/CreateBooking/CreditCardForm/index.tsx",
+    "src/components/common/Admin/Label/index.tsx",
+    "src/components/common/Fields/TextInputField/index.tsx",
+    "src/components/common/Fields/DatePickerField/index.tsx",
+    "src/statics/images/components/CalendarIcon.tsx",
+    "src/components/common/Fields/PasswordInputField/index.tsx",
+    "src/components/CreateBooking/BookingConfirmation/index.tsx",
+    "src/components/CreateBooking/BookingCompletion/index.tsx",
+    "src/components/CreateBooking/GuideVideoDialog/index.tsx",
+    "src/components/CreateBooking/DisclaimerTermsCheckboxDialog/index.tsx",
+    "src/components/CreateBooking/DisclaimerTermsCheckboxGroup/index.tsx",
+    "src/components/CreateBooking/DisclaimerTermsCheckbox/index.tsx",
+    "src/components/common/SameDayBookingWarningDialog/index.tsx",
+    "src/components/common/RequiredLoginDialog/index.tsx"
+  ],
+  "/booking/use-in-day": [
+    "src/pages/booking/use-in-day.tsx",
+    "src/components/CreateBooking/PaymentOfflineBookingForm/index.tsx",
+    "src/components/common/Fields/SpecialSelectField/index.tsx",
+    "src/components/common/Error/index.tsx",
+    "src/components/BookingVacancies/BookingVacancyIconHints/index.tsx",
+    "src/components/BookingVacancies/UseInDayBookingVacancies.tsx",
+    "src/components/common/Spinner/index.tsx",
+    "src/components/InDayVacancies/InformationDialog/index.tsx",
+    "src/components/common/Buttons/Button/index.tsx",
+    "src/components/CreateBooking/PaymentOfflineBookingForm/TicketPriceDialog.tsx",
+    "src/components/CreateBooking/PaymentOfflineBookingForm/UserMonthlyBookingForm.tsx",
+    "src/components/common/Fields/AutocompleteField/index.tsx",
+    "src/components/InsertNewBookingButton/index.tsx",
+    "src/components/CreateBooking/PaymentOfflineBookingForm/UserTimesLimitBookingForm.tsx",
+    "src/components/CreateBooking/PaymentOfflineBookingForm/BookingForm.tsx",
+    "src/components/CreateBooking/PaymentOfflineBookingForm/TotalBookingInfo.tsx",
+    "src/components/CreateBooking/PaymentOfflineBookingForm/PaymentOfflineBookingConfirmation.tsx",
+    "src/components/common/Buttons/LoadingButton/index.tsx",
+    "src/components/CreateBooking/BookingCompletion/index.tsx",
+    "src/components/CreateBooking/GuideVideoDialog/index.tsx",
+    "src/components/CreateBooking/DisclaimerTermsCheckboxDialog/index.tsx",
+    "src/components/CreateBooking/DisclaimerTermsCheckboxGroup/index.tsx",
+    "src/components/CreateBooking/DisclaimerTermsCheckbox/index.tsx",
+    "src/components/common/ErrorDialog/index.tsx",
+    "src/components/common/RequiredLoginDialog/index.tsx",
+    "src/components/CreateBooking/PaymentOfflineBookingForm/WarningMustWaitingDialog.tsx",
+    "src/components/CreateBooking/PaymentOfflineBookingForm/WarningMonthlyTicketDialog.tsx"
+  ],
+  "/commercial-law": [
+    "src/pages/commercial-law/index.tsx"
+  ],
+  "/price-list": [
+    "src/pages/price-list/index.tsx",
+    "src/components/common/Fields/AutocompleteField/index.tsx",
+    "src/components/common/Error/index.tsx",
+    "src/components/PriceTicket/index.tsx",
+    "src/components/PriceTicketMobile/index.tsx",
+    "src/components/common/Spinner/index.tsx"
+  ],
+  "/reset-password/:token": [
+    "src/pages/reset-password/[token].tsx",
+    "src/components/common/Fields/PasswordInputField/index.tsx",
+    "src/components/common/Error/index.tsx",
+    "src/components/common/Buttons/Button/index.tsx"
+  ],
+  "/reset-password/success": [
+    "src/pages/reset-password/success.tsx",
+    "src/components/common/Buttons/Button/index.tsx"
+  ],
+  "/tenant/:code": [
+    "src/pages/tenant/[code].tsx",
+    "src/components/common/Error/index.tsx",
+    "src/components/common/Buttons/LoadingButton/index.tsx",
+    "src/components/BookingVacancies/index.tsx",
+    "src/components/BookingVacancies/Vacancy.tsx",
+    "src/components/common/ErrorDialog/index.tsx",
+    "src/components/common/Buttons/Button/index.tsx",
+    "src/components/common/Spinner/index.tsx",
+    "src/components/InDayVacancies/InformationDialog/index.tsx",
+    "src/components/common/RequiredLoginDialog/index.tsx"
+  ],
+  "/terms-of-use": [
+    "src/pages/terms-of-use/index.tsx"
+  ],
+  "/user/my-page/delete-account": [
+    "src/pages/user/my-page/delete-account.tsx",
+    "src/components/common/Buttons/Button/index.tsx",
+    "src/components/User/ConfirmationDialogUser/index.tsx",
+    "src/components/common/Buttons/LoadingButton/index.tsx",
+    "src/components/common/Error/index.tsx"
+  ],
+  "/user/my-page/favorite-tenants": [
+    "src/pages/user/my-page/favorite-tenants.tsx",
+    "src/components/common/Error/index.tsx",
+    "src/components/common/Spinner/index.tsx",
+    "src/components/TopPage/TenantTopPage/index.tsx",
+    "src/components/TopPage/TenantTopPage/TenantTopPageNote.tsx"
+  ],
+  "/user/my-page": [
+    "src/pages/user/my-page/index.tsx",
+    "src/components/common/Spinner/index.tsx"
+  ],
+  "/user/my-page/monthly-ticket-status": [
+    "src/pages/user/my-page/monthly-ticket-status.tsx",
+    "src/components/common/Error/index.tsx",
+    "src/components/common/Admin/LoadingSpinner/index.tsx",
+    "src/components/User/MonthlyStatusTicketCard/index.tsx",
+    "src/components/common/WarningDialog/index.tsx",
+    "src/components/common/Buttons/Button/index.tsx"
+  ],
+  "/user/my-page/times-limit-ticket-status": [
+    "src/pages/user/my-page/times-limit-ticket-status.tsx",
+    "src/components/common/Error/index.tsx",
+    "src/components/common/Admin/LoadingSpinner/index.tsx",
+    "src/components/User/TimesLimitTicketStatusCard/index.tsx",
+    "src/components/common/WarningDialog/index.tsx",
+    "src/components/common/Buttons/Button/index.tsx"
+  ],
+  "/user/my-page/booking-history/:id": [
+    "src/pages/user/my-page/booking-history/[id].tsx",
+    "src/components/common/Spinner/index.tsx",
+    "src/components/User/SmaregiBarcodeSection.tsx",
+    "src/components/common/Barcode/index.tsx",
+    "src/components/common/WarningDialog/index.tsx",
+    "src/components/common/Buttons/Button/index.tsx",
+    "src/components/User/NotificationDialog/index.tsx",
+    "src/components/User/ConfirmationCancelBookingDialog/index.tsx",
+    "src/components/User/CreditCardFormDialog/index.tsx",
+    "src/components/common/OnlyReadCreditCardForm/index.tsx",
+    "src/components/common/Admin/Label/index.tsx",
+    "src/components/common/Fields/TextInputField/index.tsx",
+    "src/components/common/Error/index.tsx",
+    "src/components/common/Fields/DatePickerField/index.tsx",
+    "src/statics/images/components/CalendarIcon.tsx",
+    "src/components/common/ErrorDialog/index.tsx"
+  ],
+  "/user/my-page/booking-history/cancel-success": [
+    "src/pages/user/my-page/booking-history/cancel-success.tsx",
+    "src/components/common/Buttons/Button/index.tsx"
+  ],
+  "/user/my-page/booking-history": [
+    "src/pages/user/my-page/booking-history/index.tsx",
+    "src/components/common/Error/index.tsx",
+    "src/components/User/BookingHistoryList/index.tsx",
+    "src/components/common/Barcode/index.tsx",
+    "src/components/common/Buttons/Button/index.tsx",
+    "src/components/common/ErrorDialog/index.tsx",
+    "src/components/CreateBooking/PaymentOfflineBookingForm/WarningMustWaitingDialog.tsx",
+    "src/components/common/WarningDialog/index.tsx"
+  ],
+  "/user/my-page/booking-history/partial-checkout/:id": [
+    "src/pages/user/my-page/booking-history/partial-checkout/[id].tsx",
+    "src/components/PartialCheckoutQuantityForm/index.tsx",
+    "src/components/PartialCheckoutQuantityForm/ChildAgeItemCheckbox/index.tsx",
+    "src/components/common/Buttons/Button/index.tsx",
+    "src/components/common/Error/index.tsx",
+    "src/components/User/ConfirmationDialogUser/index.tsx",
+    "src/components/common/Buttons/LoadingButton/index.tsx",
+    "src/components/common/ErrorDialog/index.tsx"
+  ],
+  "/user/my-page/booking-history/partial-checkout/success": [
+    "src/pages/user/my-page/booking-history/partial-checkout/success.tsx",
+    "src/components/common/Buttons/Button/index.tsx"
+  ],
+  "/user/my-page/booking-history/update/:id": [
+    "src/pages/user/my-page/booking-history/update/[id].tsx",
+    "src/components/common/Buttons/Button/index.tsx",
+    "src/components/common/Error/index.tsx",
+    "src/components/CreateBooking/QuantityAndAgesInfoFields/index.tsx",
+    "src/components/common/Fields/AutocompleteField/index.tsx",
+    "src/components/common/Fields/DatePickerField/index.tsx",
+    "src/statics/images/components/CalendarIcon.tsx",
+    "src/components/User/BookingChangeReviewDialog/index.tsx",
+    "src/components/User/BookingChangePaymentDialog/index.tsx",
+    "src/components/common/OnlyReadCreditCardForm/index.tsx",
+    "src/components/common/Admin/Label/index.tsx",
+    "src/components/common/Fields/TextInputField/index.tsx",
+    "src/components/User/ConfirmationDialogUser/index.tsx",
+    "src/components/common/Buttons/LoadingButton/index.tsx",
+    "src/components/User/NotificationDialog/index.tsx"
+  ],
+  "/user/my-page/booking-history/update": [
+    "src/pages/user/my-page/booking-history/update/index.tsx"
+  ],
+  "/user/my-page/booking-history/update/completed": [
+    "src/pages/user/my-page/booking-history/update/completed/index.tsx",
+    "src/components/common/Buttons/Button/index.tsx"
+  ],
+  "/user/my-page/personal-info/change-password": [
+    "src/pages/user/my-page/personal-info/change-password.tsx",
+    "src/components/common/Admin/Label/index.tsx",
+    "src/components/common/Fields/TextInputField/index.tsx",
+    "src/components/common/Error/index.tsx",
+    "src/components/common/Buttons/Button/index.tsx",
+    "src/components/common/ErrorDialog/index.tsx"
+  ],
+  "/user/my-page/personal-info": [
+    "src/pages/user/my-page/personal-info/index.tsx",
+    "src/components/common/Error/index.tsx",
+    "src/components/common/Spinner/index.tsx",
+    "src/components/User/UserCreditCards/index.tsx",
+    "src/components/User/UserCreditCardItem/index.tsx",
+    "src/components/common/WarningDialog/index.tsx",
+    "src/components/common/Buttons/Button/index.tsx"
+  ],
+  "/user/my-page/personal-info/change-credit-card/delete": [
+    "src/pages/user/my-page/personal-info/change-credit-card/delete.tsx",
+    "src/components/common/Buttons/Button/index.tsx"
+  ],
+  "/user/my-page/personal-info/change-credit-card": [
+    "src/pages/user/my-page/personal-info/change-credit-card/index.tsx",
+    "src/components/User/UpdateCreditCardForm/index.tsx",
+    "src/components/common/Spinner/index.tsx",
+    "src/components/common/Admin/Label/index.tsx",
+    "src/components/common/Fields/TextInputField/index.tsx",
+    "src/components/common/Error/index.tsx",
+    "src/components/common/Fields/DatePickerField/index.tsx",
+    "src/statics/images/components/CalendarIcon.tsx",
+    "src/components/common/Fields/PasswordInputField/index.tsx",
+    "src/components/common/Buttons/Button/index.tsx"
+  ],
+  "/user/my-page/personal-info/change-credit-card/success": [
+    "src/pages/user/my-page/personal-info/change-credit-card/success.tsx",
+    "src/components/common/Buttons/Button/index.tsx"
+  ],
+  "/user/my-page/personal-info/update-information": [
+    "src/pages/user/my-page/personal-info/update-information/index.tsx"
+  ],
+  "/user/my-page/personal-info/update-information/success": [
+    "src/pages/user/my-page/personal-info/update-information/success.tsx",
+    "src/components/common/Buttons/Button/index.tsx"
+  ],
+  "/user/my-page/personal-info/update-information/verify-edit-email/:token": [
+    "src/pages/user/my-page/personal-info/update-information/verify-edit-email/[token].tsx",
+    "src/components/common/Buttons/Button/index.tsx",
+    "src/components/common/Error/index.tsx",
+    "src/components/common/Spinner/index.tsx"
+  ],
+  "/user/my-page/personal-info/update-password/:token": [
+    "src/pages/user/my-page/personal-info/update-password/[token].tsx",
+    "src/components/common/Fields/PasswordInputField/index.tsx",
+    "src/components/common/Error/index.tsx",
+    "src/components/common/Buttons/Button/index.tsx"
+  ],
+  "/user/my-page/personal-info/update-password/success": [
+    "src/pages/user/my-page/personal-info/update-password/success.tsx",
+    "src/components/common/Buttons/Button/index.tsx"
+  ],
+  "/vacancy-status": [
+    "src/pages/vacancy-status/index.tsx",
+    "src/components/common/Spinner/index.tsx",
+    "src/components/InDayVacancies/index.tsx",
+    "src/components/InDayVacancies/DetailVacancyDialog/index.tsx",
+    "src/components/InDayVacancies/InformationDialog/index.tsx",
+    "src/components/common/Buttons/Button/index.tsx",
+    "src/components/TenantVacancies/index.tsx",
+    "src/components/TenantVacancies/Vacancy.tsx",
+    "src/components/TenantVacancies/TenantVacancyDetailDialog/index.tsx",
+    "src/components/common/RequiredLoginDialog/index.tsx",
+    "src/components/common/Error/index.tsx"
+  ],
+  "/verify/:token": [
+    "src/pages/verify/[token].tsx",
+    "src/components/common/Admin/LoadingSpinner/index.tsx",
+    "src/components/common/Buttons/Button/index.tsx",
+    "src/components/common/Error/index.tsx"
+  ]
+}
