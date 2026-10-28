@@ -1,6 +1,6 @@
 > **SOURCE:** `ba-kit/requirement-to-flow/.claude/ba-agent/figma-outputs/output-1-flow.md` @ a8509b9 — copy self-contained cho kit system-to-doc. Đọc kèm `o5-figma.md` (bảng thay SPEC.md → inventory). Sửa quy tắc vẽ chung thì sửa CẢ HAI nơi.
 
-> ## ⚠ KIT NÀY ĐÃ ĐỔI Output 1 sang dạng USE CASE (feedback 20/10/2026 — đã áp dụng cả `ba-kit` requirement-to-flow / system-to-doc)
+> ## ⚠ Output 1 dạng USE CASE (feedback 20/10/2026 — áp dụng cả `requirement-to-flow`)
 >
 > Phần dưới mục này **thắng** mọi chỗ mâu thuẫn ở phần copy phía sau (Phần A 5 cột, Sitemap 4 level có "Hành động").
 >
@@ -10,10 +10,10 @@
 > | **B — Technology Stack** | Giữ nguyên bảng 2 cột bên phải (x = 1800) | — |
 > | **C — Sitemap** | **Site → Actor / vai trò → Nhóm chức năng → Màn**. Nhóm = danh từ dễ hiểu (VD Admin → Xác thực → Trang đăng nhập / Trang quên mật khẩu / Trang đặt lại mật khẩu); vai trò ghi trong nhóm; màn viết tên dễ hiểu, màn chưa quan sát chữ tím "(chưa quan sát)". Mã màn **không hiện chữ** — ghi trong tên layer `GROUP · <nhóm> · SC-001,SC-002` để máy kiểm phủ | Level "Hành động verb-first", endpoint, route, tag `#N` hiện trên hình |
 >
-> - **Không hiện chữ `UNKNOWN` trên Figma** (Output 1 · Output 2 · CR-1 · CR-2 — feedback 20/10/2026): điều chưa rõ viết bằng lời — "chưa quan sát", "chưa xác định", "màn chưa có tiêu đề", "thông báo: chưa quan sát", "chờ khách hàng xác nhận" — kèm khung tím nét đứt To verify. Nhãn `UNKNOWN` chỉ dùng trong xlsx / inventory / Evidence Ledger. Kiểm: quét chữ trên frame `UNKNOWN` = 0 (CR: `render-cr-figma.py` từ chối).
+> - **Không hiện mã trạng thái thô trên Figma** (Output 1 · Output 2 · CR-1 · CR-2 — feedback 20/10/2026 · D1): điều chưa rõ viết bằng lời — "Cần xác nhận — Q-xxx", "chưa quan sát", "màn chưa có tiêu đề", "chờ khách hàng xác nhận" — kèm khung tím nét đứt To verify. Mã `To verify` / `Inferred` chỉ dùng trong xlsx / inventory / Evidence Ledger. Kiểm: recheck Tiêu chí 10 = 0 (CR: `render-cr-figma.py` từ chối chữ cũ).
 > - Mỗi lane bắt buộc: 1 actor · ≥ 1 điểm bắt đầu · ≥ 1 ✓ kết thúc · ≥ 1 non-happy (hoặc ghi lý do N/A) · NG nào cũng đi tiếp tới kết thúc / bước khác. Tối đa 6 cột vị trí; dài hơn → gộp bước.
 > - **GATE phủ màn (thay GATE FR COVERAGE trên Sitemap):** `set(SC trong 02_Screen) − set(SC ghi trong tên layer GROUP · … / SITE · …) = ∅` — in `SITEMAP COVERAGE — n/N SC · THIẾU: []` trước khi báo xong.
-> - Mẫu đã vẽ: KidoKido ver9 (`outputs/ver9_201026_flow-usecase`, frame "Output 1 Use case tổng quan"). CR-1 của Luồng 2 dùng cùng dạng lane (`figma/cr-view.md`, renderer `render-cr-figma.py`).
+> - CR-1 của Luồng 2 dùng cùng dạng lane (`figma/cr-view.md`, renderer `render-cr-figma.py`).
 
 
 # Ba Agent — Output 1: Flow Tổng Quan

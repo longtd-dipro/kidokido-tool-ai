@@ -1,4 +1,4 @@
-> **SOURCE:** `designer-kit/prototype-to-figma/.claude/designer-agent/design-system-format.md` — copy self-contained cho kit system-to-doc; **đây là chuẩn chung** của design system giữa 2 kit. Sửa chuẩn thì sửa CẢ HAI nơi + `skills/system-analyst/scripts/ds_roles.py` (danh sách token vai trò / component bắt buộc mà gate V-DS kiểm). Ở kit này: thư mục là `04_DesignSystem/` (thay `design-system/`), cách lấy dữ liệu từ hệ thống đang chạy ở `../outputs/o4-design-system.md`.
+> **SOURCE:** `designer-kit/document-to-figma/.claude/designer-agent/design-system-format.md` — copy self-contained cho kit system-to-doc; **đây là chuẩn chung** của design system giữa 2 kit. Sửa chuẩn thì sửa CẢ HAI nơi + `skills/system-analyst/scripts/ds_roles.py` (danh sách token vai trò / component bắt buộc mà gate V-DS kiểm). Ở kit này: thư mục là `04_DesignSystem/` (thay `design-system/`), cách lấy dữ liệu từ hệ thống đang chạy ở `../outputs/o4-design-system.md`.
 
 # Định dạng Design System (chuẩn bắt buộc)
 
@@ -52,7 +52,7 @@ design-system/
   },
   "blobs": {},
   "docs": { "readme": "project/README.md", "sections": [] },
-  "lastChange": { "by": "<tên user>", "at": "<ISO-8601>", "via": "Claude · prototype-to-figma", "note": "<1 dòng>" }
+  "lastChange": { "by": "<tên user>", "at": "<ISO-8601>", "via": "Claude · document-to-figma", "note": "<1 dòng>" }
 }
 ```
 
@@ -109,6 +109,8 @@ design-system/
 | D7 | size | `viewport-<platform>` (vd. `viewport-web` 1440px; chiều cao ghi trong usage) · `header-height` · `sidebar-width` / `sidebar-collapsed` hoặc `tabbar-height` · `nav-item-height` · `control-sm/md/lg` · `table-header-height` · `table-row-height` · `modal-width` · `content-max` |
 
 Nguồn không có giá trị cho token bắt buộc → **không bịa**: bỏ token đó, ghi `TBD` vào `STATUS.md` (§ Thiếu).
+
+**Base Design System** (`.claude/base-design-system/` của kit — chuẩn UI Nhật DADS, đã đặt sẵn tên vai trò §3.3): token bắt buộc nguồn không có có thể **lấy giá trị base** thay cho TBD khi user đồng ý — `usage` mở đầu `[base]` + tên DADS gốc, liệt kê ở `STATUS.md` § `Lấy từ base (chờ xác nhận)`. Không bao giờ đè giá trị nguồn bằng giá trị base.
 
 ## 4. `README.md` — brand book
 

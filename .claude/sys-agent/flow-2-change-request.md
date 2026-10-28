@@ -54,21 +54,31 @@
 | 6 | Figma view CR (§5 + `figma/cr-view.md`; **> 1 site → mỗi site 1 Section riêng, site → flow → màn, CR-3 nền `#9DA5AD`**): CR-1 Flow (Output 1, **có NON-HAPPY mỗi lane**) · CR-2 Screen Flow (Output 2, **có màn / popup lỗi, Screen Index có Loại, ⑦ Error/Popup Index**) · CR Change Table (thống kê) · CR-3 màn đề xuất (**format Output 3: mockup trái + mô tả / ITEMS / ERROR SCENARIOS phải; NEW + UPD tô màu phần đổi + popup lỗi**; đọc Design System trước) | 🟡 **CR-2 · CR-3 · CR-3b** · 🔴 **V-CR-FIGMA** |
 | 7 | `detect-pii.js --scan <ver>` · `build-version-index.py <ver>` · run-log · report | 🔴 H06 |
 
-### CR-0 — xác nhận baseline (AskUserQuestion)
+### CR-0 — xác nhận bản khảo sát dùng để đối chiếu (AskUserQuestion)
+<!-- Mã CR / ver / baseline chỉ để agent tra; câu hỏi viết theo writing-style.md, quy tắc gom câu: preflight-questions.md §0 -->
 ```
-CR: "<tiêu đề>" — <n> item. Đối chiếu với baseline ver<K>_<...> (<ngày>): <a> site · <m> màn · <p> API · <t> bảng.
-CR đang mở sau baseline: <CR-xxx (ver..), ...> hoặc "không có".
-Feedback chưa xử lý: <ver.. — tóm tắt> hoặc "không có".   CR này đã có bản trước: <ver..> → chạy lại từ bản đó / "chưa có".
-  [A] Đúng baseline này, mã CR = CR-<id>  (Other: đổi mã/tiêu đề)
-  [B] Hệ thống đã đổi so với baseline — chạy Luồng 1 DELTA trước
-  [C] Dùng baseline khác — chỉ định
+Yêu cầu "<tiêu đề>" có <n> ý. Tôi sẽ so với bản khảo sát hệ thống ngày <DD/MM/YYYY>: <a> website · <m> màn hình · <p> chức năng phía máy chủ · <t> bảng dữ liệu.
+Yêu cầu thay đổi khác đang mở: <tên> hoặc "không có". Góp ý chưa xử lý: <tóm tắt> hoặc "không có".
+Yêu cầu này đã phân tích lần trước: <ngày> → tôi làm tiếp từ bản đó / "chưa".
+  [A] Đúng bản khảo sát này — đặt mã yêu cầu là <CR-001>  (Other: đổi mã / tiêu đề)
+  [B] Hệ thống đã đổi so với bản khảo sát — cập nhật bản khảo sát trước
+  [C] Dùng bản khảo sát khác — chỉ định
 ```
+<!-- [A] tiếp tục · [B] Luồng 1 DELTA trước · [C] chỉ định baseline -->
 
-### CR-4 — 見積書 (AskUserQuestion, 1 lượt, trước bước 5b)
-Hỏi: (a) chia **Step 1 / Step 2** thế nào (mặc định: bắt buộc = Step 1, mở rộng / Option = Step 2) · (b) phương án thay thế nào đưa vào báo giá (mặc định: mọi phương án KH nêu + 1 phương án đơn giản hơn nếu có) · (c) ai duyệt `function-rates.json` (DRAFT → V-EST WARN, ghi tên vai trò vào run-log). User bỏ qua → dùng mặc định, ghi rõ trong run-log.
+### CR-4 — báo giá (AskUserQuestion, 1 lượt 3 câu, trước bước 5b)
+```
+1. Báo giá chia 2 giai đoạn thế nào?
+   [A] Giai đoạn 1 = phần bắt buộc, giai đoạn 2 = phần mở rộng / tuỳ chọn  (đề xuất)  [B] Gộp 1 giai đoạn  (Other: chia khác)
+2. Đưa những phương án nào vào báo giá?
+   [A] Mọi phương án khách nêu + 1 phương án đơn giản hơn nếu có  (đề xuất)  [B] Chỉ phương án khách nêu
+3. Bảng đơn giá theo chức năng do ai duyệt? (chưa duyệt thì báo giá ghi "ước lượng sơ bộ")
+   [A] PM  [B] Tech Lead  [C] Chưa ai duyệt
+```
+<!-- 1 = Step 1 / Step 2 · 2 = combos · 3 = function-rates.json DRAFT → V-EST WARN, ghi tên VAI TRÒ vào run-log. Người dùng bỏ qua → dùng đề xuất, ghi rõ trong run-log -->
 
-### CR-1 — làm rõ (chỉ khi cần, ≤ 4 câu / lượt)
-Hỏi đúng chỗ thiếu. User không trả lời được → câu hỏi `CQ-xxx` trong `cr.json`, dòng impact liên quan `Xung đột = UNKNOWN`, **không** tự chọn đáp án.
+### CR-1 — làm rõ (chỉ khi cần; quy tắc gom câu theo chủ đề, tối đa 4 câu / lượt — `preflight-questions.md` §0)
+Hỏi đúng chỗ thiếu, theo điều người dùng thấy và làm, có lựa chọn rõ "A hay B?" — ví dụ: *"Mã giảm giá nhập ở màn 「注文確認」 hay ở giỏ hàng?"*, không *"IMP-003 gắn SC-014 hay SC-009?"*. Người dùng không trả lời được → câu hỏi `CQ-xxx` trong `cr.json`, dòng impact liên quan `Xung đột = To verify` (chữ trong xlsx: "Cần xác nhận — CQ-xxx" ở cột Câu hỏi), **không** tự chọn đáp án.
 
 ---
 
@@ -81,7 +91,7 @@ Hỏi đúng chỗ thiếu. User không trả lời được → câu hỏi `CQ-
 | **CR** | Thoả ≥ 1 tiêu chí C1–C6 (§3.2) | Giải trình (§3.3) + hạng mục impact (§4) |
 | **BUG** | Khách mô tả hành vi *đúng như baseline đã ghi là phải có* (`Confirmed` / tài liệu đã duyệt) nhưng hệ thống chạy sai | Không phải CR → `not_cr`, đề nghị đưa vào bug list |
 | **QUESTION** | Hỏi hệ thống đang làm gì | Trả lời từ baseline (ID + evidence) → `not_cr`; baseline không có → CQ |
-| **CHƯA RÕ** | Vùng baseline `UNKNOWN` / `To verify` | Hỏi CR-1, **không** tự chọn nhãn |
+| **CHƯA RÕ** | Vùng baseline `To verify` ("Cần xác nhận") | Hỏi CR-1, **không** tự chọn nhãn |
 
 ### 3.2 Tiêu chí CR (định nghĩa ở `inv_schema.CR_CRITERIA` — chỉnh từ C1–C6 của requirement-to-flow cho chiều AS-IS)
 
@@ -125,7 +135,7 @@ Integration ──Used By──▶ Function / API
 Screen ──Entry From──▶ màn dẫn tới nó
 ```
 3. Thứ **bị sửa** → `NEW` / `UPD` / `DEL`. Thứ **không sửa nhưng bị kéo theo** (màn khác gọi cùng API vừa đổi, báo cáo đọc bảng vừa đổi…) → **`IMPACT`** (kiểm lại / chỉnh nhỏ) — ghi rõ **qua liên kết nào**.
-4. Liên kết trong baseline là `Inferred` / `To verify` → `Xung đột = UNKNOWN` + câu hỏi.
+4. Liên kết trong baseline là `Inferred` / `To verify` → `Xung đột = To verify` + câu hỏi.
 
 ### 4.2 Nguồn dữ liệu: `<ver>/_internal/cr.json` (agent viết) → script render xlsx
 
@@ -137,7 +147,7 @@ Screen ──Entry From──▶ màn dẫn tới nó
  "no_impact_axes": [{"axis":"ThirdParty","reason":"Không thêm / đổi liên kết nào — CR chỉ chạm màn và DB nội bộ"}],
  "questions": [{"id":"CQ-001","question","why","axis","owner","status"}],
  "impacts": [{"id":"IMP-001","axis","change_type":"NEW|UPD|DEL|IMPACT","baseline_ref","item","change",
-              "why_change","impact_on_current","conflict":"Yes|No|UNKNOWN","conflict_detail","risk",
+              "why_change","impact_on_current","conflict":"Yes|No|To verify","conflict_detail","risk",
               "rate_code","qty","md_note","evidence","question",
               "cr_item":"CR-001.3","option":false}]}
 ```
@@ -203,7 +213,7 @@ Giữ letterhead / logo / header / validation / ◆前提条件; bỏ dữ liệ
 - **CR-1 Flow** = Output 1 dạng use case (lane `FL-xx` bị chạm: Actor → đường đi → ✓ kết thúc · non-happy hàng dưới → ✗ kết thúc · chip CHƯA CHỐT) + bảng Technology bên phải (feedback 20/10/2026). **CR-2 Screen Flow** = Output 2 (Group · Start · Screen · Decision · System · NG inline · Terminal · Edge/Exceptional · ④ Screen Index). Mọi node nối bằng **mũi tên thật**.
 - **Phạm vi — POLICY:** chỉ hạng mục có dòng Impact + hàng xóm **đúng 1 bước** / lane `FL-xx` baseline làm ngữ cảnh (`AS-IS`).
 - **CR Change Table = THỐNG KÊ**: số đối tượng NEW / UPD / DEL / IMPACT (Màn hình · API · Bảng DB · Cột DB · …) + 実装 MD · 総工数 人日 · 人月 · 最小改修案 / 拡張案. **Không** liệt kê lại từng hạng mục (đã có trong xlsx).
-- **CR-3 màn đề xuất**: **đọc Design System trước** (README → tokens.json → component README → STATUS.md, khai vào `screens.ds_read`) → chỉ token / component của DS; thiếu → theo CR-3b. Máy kiểm màu ⊆ token.
+- **CR-3 màn đề xuất**: **đọc Design System trước** (README → tokens.json → component README → STATUS.md, khai vào `screens.ds_read`) → chỉ token / component của DS; thiếu → theo CR-3b. Máy kiểm màu ⊆ token. **Baseline không có DS** → Base Design System tạm (`.claude/base-design-system/`, `figma/cr-view.md` §4 bước 7) copy vào `$V/04_DesignSystem/<WEB-xx>/`, chạy `--ds-baseline $V`.
 - Mỗi node đúng 1 badge, tên `<BADGE> · <REF> · <nhãn>`, `setSharedPluginData("crkit", "kind", …)` (Figma bắt buộc namespace ≥ 3 ký tự).
 - **Không tự viết JS vẽ**: agent viết `_internal/cr-figma.json` → `render-cr-figma.py` sinh JS → `use_figma` → `99-readback.js` → `verify-cr-figma.py` `FAIL = 0`.
 - Ghi link node vào `<ver>/05_Figma/figma-links.md`.
@@ -213,7 +223,7 @@ Giữ letterhead / logo / header / validation / ◆前提条件; bỏ dữ liệ
 ## 6. Thành phẩm folder CR
 
 ```
-ver<N>_<DDMMYY>_CR-<id>-<slug>/
+CR-<id>_<DDMMYY>_<slug>/       (folder cũ ver<N>_<DDMMYY>_CR-<id>-<slug>/ vẫn đọc được)
 ├── README.md                  mục lục (build-version-index)
 ├── run-log.md                 baseline: ver<K>_…
 ├── input/                     CR nguyên văn
