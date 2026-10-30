@@ -8,37 +8,19 @@
   "outputs": [
     {
       "id": "O1",
-      "name": "Basic Design WEB-01",
-      "content": "Thiết kế cơ bản từng màn hình của site WEB-01",
+      "name": "Overview",
+      "content": "Tài liệu tóm tắt khảo sát (docx)",
       "files": [
-        "01_Screens/BasicDesign_WEB-01_ver1.xlsx"
+        "01_Overview/Overview_KidoKido_ver1.docx"
       ],
-      "count": "45 sheet màn hình",
+      "count": "1 tài liệu",
       "exists": true,
-      "site": "WEB-01",
-      "count_value": 45,
-      "gate": "WARN",
-      "gate_detail": "v-bd-WEB-01.md 17/19 PASS",
-      "status": "warn",
-      "reason": "gate có cảnh báo",
-      "status_text": "⚠️ gate có cảnh báo"
-    },
-    {
-      "id": "O1",
-      "name": "Basic Design WEB-02",
-      "content": "Thiết kế cơ bản từng màn hình của site WEB-02",
-      "files": [
-        "01_Screens/BasicDesign_WEB-02_ver1.xlsx"
-      ],
-      "count": "48 sheet màn hình",
-      "exists": true,
-      "site": "WEB-02",
-      "count_value": 48,
-      "gate": "WARN",
-      "gate_detail": "v-bd-WEB-02.md 17/19 PASS",
-      "status": "warn",
-      "reason": "gate có cảnh báo",
-      "status_text": "⚠️ gate có cảnh báo"
+      "count_value": 1,
+      "gate": "PASS",
+      "gate_detail": "v3.md 15/15 PASS",
+      "status": "ok",
+      "reason": "",
+      "status_text": "✅"
     },
     {
       "id": "O2",
@@ -75,52 +57,10 @@
     },
     {
       "id": "O4",
-      "name": "Design System WEB-01",
-      "content": "Token, kiểu chữ, component, icon (format artifact Design System)",
-      "files": [
-        "04_DesignSystem/WEB-01/project/",
-        "04_DesignSystem/WEB-01/STATUS.md",
-        "https://claude.ai/artifact/L6VfhzcbZmpfo1wfpYoD2E"
-      ],
-      "count": "76 màu · 18 style chữ · 20 component · 61 icon · 12 TBD · DRAFT",
-      "exists": true,
-      "count_value": 76,
-      "ds_status": "DRAFT",
-      "site": "WEB-01",
-      "link": "https://claude.ai/artifact/L6VfhzcbZmpfo1wfpYoD2E",
-      "gate": "WARN",
-      "gate_detail": "v-ds.md 31/35 PASS",
-      "status": "warn",
-      "reason": "gate có cảnh báo",
-      "status_text": "⚠️ gate có cảnh báo"
-    },
-    {
-      "id": "O4",
-      "name": "Design System WEB-02",
-      "content": "Token, kiểu chữ, component, icon (format artifact Design System)",
-      "files": [
-        "04_DesignSystem/WEB-02/project/",
-        "04_DesignSystem/WEB-02/STATUS.md",
-        "https://claude.ai/artifact/QubGWoAQ3dLzTbNSQxG9i3"
-      ],
-      "count": "43 màu · 19 style chữ · 15 component · 11 icon · 25 TBD · DRAFT",
-      "exists": true,
-      "count_value": 43,
-      "ds_status": "DRAFT",
-      "site": "WEB-02",
-      "link": "https://claude.ai/artifact/QubGWoAQ3dLzTbNSQxG9i3",
-      "gate": "WARN",
-      "gate_detail": "v-ds.md 31/35 PASS",
-      "status": "warn",
-      "reason": "gate có cảnh báo",
-      "status_text": "⚠️ gate có cảnh báo"
-    },
-    {
-      "id": "O5",
       "name": "Figma",
       "content": "Link node Figma của màn hình/thành phần",
       "files": [
-        "05_Figma/figma-links.md"
+        "04_Figma/figma-links.md"
       ],
       "count": "4 link",
       "exists": true,
@@ -132,43 +72,93 @@
       "status_text": "⚠️ chưa chạy gate"
     },
     {
-      "id": "O6",
-      "name": "Overview",
-      "content": "Tài liệu tóm tắt khảo sát (docx)",
+      "id": "O5",
+      "name": "Basic Design WEB-01",
+      "content": "Thiết kế cơ bản từng màn hình của site WEB-01",
       "files": [
-        "06_Overview/Overview_KidoKido_ver1.docx"
+        "05_Basic_Design/BasicDesign_WEB-01_ver1.xlsx"
       ],
-      "count": "1 tài liệu",
+      "count": "42 sheet màn hình",
       "exists": true,
-      "count_value": 1,
+      "site": "WEB-01",
+      "count_value": 42,
       "gate": "PASS",
-      "gate_detail": "v3.md 14/14 PASS",
+      "gate_detail": "v-bd-WEB-01.md 24/24 PASS",
       "status": "ok",
       "reason": "",
       "status_text": "✅"
+    },
+    {
+      "id": "O5",
+      "name": "Basic Design WEB-02",
+      "content": "Thiết kế cơ bản từng màn hình của site WEB-02",
+      "files": [
+        "05_Basic_Design/BasicDesign_WEB-02_ver1.xlsx"
+      ],
+      "count": "42 sheet màn hình",
+      "exists": true,
+      "site": "WEB-02",
+      "count_value": 42,
+      "gate": "PASS",
+      "gate_detail": "v-bd-WEB-02.md 24/24 PASS",
+      "status": "ok",
+      "reason": "",
+      "status_text": "✅"
+    },
+    {
+      "id": "O6",
+      "name": "Design System WEB-01",
+      "content": "Token, kiểu chữ, component, icon (format artifact Design System)",
+      "files": [],
+      "count": "—",
+      "exists": true,
+      "count_value": 76,
+      "ds_status": "DRAFT",
+      "site": "WEB-01",
+      "link": "https://claude.ai/artifact/L6VfhzcbZmpfo1wfpYoD2E",
+      "gate": "—",
+      "gate_detail": "v-ds.md 31/35 PASS",
+      "status": "skip",
+      "reason": "chờ giai đoạn 2 — bản hiện có lấy từ lần quét website trước",
+      "status_text": "⬜ Không chạy — chờ giai đoạn 2 — bản hiện có lấy từ lần quét website trước"
+    },
+    {
+      "id": "O6",
+      "name": "Design System WEB-02",
+      "content": "Token, kiểu chữ, component, icon (format artifact Design System)",
+      "files": [],
+      "count": "—",
+      "exists": true,
+      "count_value": 43,
+      "ds_status": "DRAFT",
+      "site": "WEB-02",
+      "link": "https://claude.ai/artifact/QubGWoAQ3dLzTbNSQxG9i3",
+      "gate": "—",
+      "gate_detail": "v-ds.md 31/35 PASS",
+      "status": "skip",
+      "reason": "chờ giai đoạn 2 — bản hiện có lấy từ lần quét website trước",
+      "status_text": "⬜ Không chạy — chờ giai đoạn 2 — bản hiện có lấy từ lần quét website trước"
     },
     {
       "id": "O7",
       "name": "Bug List",
       "content": "Lỗi mức High trở lên ảnh hưởng thao tác người dùng",
-      "files": [
-        "07_BugList/BugList_KidoKido_ver1.xlsx"
-      ],
-      "count": "0 bug",
+      "files": [],
+      "count": "—",
       "exists": true,
       "count_value": 0,
-      "gate": "PASS",
+      "gate": "—",
       "gate_detail": "v8.md 12/12 PASS",
-      "status": "ok",
-      "reason": "",
-      "status_text": "✅"
+      "status": "skip",
+      "reason": "chờ giai đoạn 2 — bản hiện có lấy từ lần quét website trước",
+      "status_text": "⬜ Không chạy — chờ giai đoạn 2 — bản hiện có lấy từ lần quét website trước"
     },
     {
-      "id": "O9",
+      "id": "O8",
       "name": "Dev setup",
       "content": "Hướng dẫn chạy local + môi trường cho dev (md)",
       "files": [
-        "09_DevSetup/DevSetup_KidoKido_ver1.md"
+        "08_Huong_dan_chay_local/DevSetup_KidoKido_ver1.md"
       ],
       "count": "1 tài liệu",
       "exists": true,

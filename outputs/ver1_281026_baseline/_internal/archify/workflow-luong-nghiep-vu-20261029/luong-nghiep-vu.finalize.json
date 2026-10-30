@@ -1,0 +1,380 @@
+{
+  "schemaVersion": 1,
+  "ok": false,
+  "command": "finalize",
+  "status": "fail",
+  "type": "workflow",
+  "quality": "showcase",
+  "startedAt": "2026-10-29T03:51:25.307Z",
+  "specification": {
+    "path": "/Users/longtd/Desktop/WORK/Project Kidokido/KIDO_system-to-doc/outputs/ver1_281026_baseline/_internal/archify/workflow-luong-nghiep-vu-20261029/candidate.json",
+    "sha256": "1f97a149910e4ce0b10c103c94dd08c4953dbe8bce9703fca8ba30de042afd7b",
+    "bytes": 6596
+  },
+  "artifact": {
+    "path": "/Users/longtd/Desktop/WORK/Project Kidokido/KIDO_system-to-doc/outputs/ver1_281026_baseline/_internal/archify/workflow-luong-nghiep-vu-20261029/luong-nghiep-vu.html",
+    "sha256": "b246c0a4a572b349c9d6692b4a41b6315f80b9d65d25f7d1d99875da976cf0a1",
+    "bytes": 769319
+  },
+  "stages": {
+    "validate": {
+      "status": "pass",
+      "exitCode": 0,
+      "durationMs": null,
+      "execution": "embedded-in-deliver",
+      "command": [
+        "/opt/homebrew/Cellar/node/26.12.1_1/bin/node",
+        "/Users/longtd/.agents/skills/archify/bin/archify.mjs",
+        "deliver",
+        "workflow",
+        "/Users/longtd/Desktop/WORK/Project Kidokido/KIDO_system-to-doc/outputs/ver1_281026_baseline/_internal/archify/workflow-luong-nghiep-vu-20261029/candidate.json",
+        "/Users/longtd/Desktop/WORK/Project Kidokido/KIDO_system-to-doc/outputs/ver1_281026_baseline/_internal/archify/workflow-luong-nghiep-vu-20261029/luong-nghiep-vu.html",
+        "--quality",
+        "showcase",
+        "--json"
+      ],
+      "receipt": {
+        "schemaVersion": 1,
+        "ok": true,
+        "command": "validate",
+        "specification": {
+          "sha256": "1f97a149910e4ce0b10c103c94dd08c4953dbe8bce9703fca8ba30de042afd7b",
+          "bytes": 6596
+        },
+        "validation": {
+          "checksPassed": 9,
+          "checkCount": 9,
+          "compositionProfile": "showcase",
+          "compositionStatus": "pass",
+          "errors": 0,
+          "warnings": 0
+        }
+      }
+    },
+    "deliver": {
+      "status": "pass",
+      "exitCode": 0,
+      "durationMs": 250,
+      "command": [
+        "/opt/homebrew/Cellar/node/26.12.1_1/bin/node",
+        "/Users/longtd/.agents/skills/archify/bin/archify.mjs",
+        "deliver",
+        "workflow",
+        "/Users/longtd/Desktop/WORK/Project Kidokido/KIDO_system-to-doc/outputs/ver1_281026_baseline/_internal/archify/workflow-luong-nghiep-vu-20261029/candidate.json",
+        "/Users/longtd/Desktop/WORK/Project Kidokido/KIDO_system-to-doc/outputs/ver1_281026_baseline/_internal/archify/workflow-luong-nghiep-vu-20261029/luong-nghiep-vu.html",
+        "--quality",
+        "showcase",
+        "--json"
+      ],
+      "receipt": {
+        "schemaVersion": 1,
+        "receiptId": "e6d390fc-0d34-42a0-a0f8-929d70df1721",
+        "ok": true,
+        "command": "deliver",
+        "type": "workflow",
+        "input": "/Users/longtd/Desktop/WORK/Project Kidokido/KIDO_system-to-doc/outputs/ver1_281026_baseline/_internal/archify/workflow-luong-nghiep-vu-20261029/candidate.json",
+        "output": "/Users/longtd/Desktop/WORK/Project Kidokido/KIDO_system-to-doc/outputs/ver1_281026_baseline/_internal/archify/workflow-luong-nghiep-vu-20261029/luong-nghiep-vu.html",
+        "specification": {
+          "sha256": "1f97a149910e4ce0b10c103c94dd08c4953dbe8bce9703fca8ba30de042afd7b",
+          "bytes": 6596
+        },
+        "artifact": {
+          "sha256": "b246c0a4a572b349c9d6692b4a41b6315f80b9d65d25f7d1d99875da976cf0a1",
+          "bytes": 769319
+        },
+        "validation": {
+          "checksPassed": 9,
+          "checkCount": 9,
+          "compositionProfile": "showcase",
+          "compositionStatus": "pass",
+          "errors": 0,
+          "warnings": 0
+        },
+        "update": {
+          "status": "unavailable",
+          "installedVersion": null,
+          "availableVersion": null,
+          "releaseNotes": null,
+          "checkedAt": null,
+          "source": null,
+          "noticeRequired": false,
+          "noticeText": null,
+          "reason": "disabled"
+        }
+      }
+    },
+    "check": {
+      "status": "pass",
+      "exitCode": 0,
+      "durationMs": 152,
+      "command": [
+        "/opt/homebrew/Cellar/node/26.12.1_1/bin/node",
+        "/Users/longtd/.agents/skills/archify/bin/archify.mjs",
+        "check",
+        "/Users/longtd/Desktop/WORK/Project Kidokido/KIDO_system-to-doc/outputs/ver1_281026_baseline/_internal/archify/workflow-luong-nghiep-vu-20261029/luong-nghiep-vu.html",
+        "--require-provenance"
+      ],
+      "receipt": {
+        "ok": true,
+        "file": "/Users/longtd/Desktop/WORK/Project Kidokido/KIDO_system-to-doc/outputs/ver1_281026_baseline/_internal/archify/workflow-luong-nghiep-vu-20261029/luong-nghiep-vu.html",
+        "artifact": {
+          "sha256": "b246c0a4a572b349c9d6692b4a41b6315f80b9d65d25f7d1d99875da976cf0a1",
+          "bytes": 769319
+        },
+        "checks": [
+          {
+            "name": "single_svg",
+            "ok": true,
+            "details": [
+              "found 1 <svg> block(s)"
+            ]
+          },
+          {
+            "name": "finite_svg",
+            "ok": true,
+            "details": []
+          },
+          {
+            "name": "orthogonal_arrows",
+            "ok": true,
+            "details": []
+          },
+          {
+            "name": "label_route_clearance",
+            "ok": true,
+            "details": []
+          },
+          {
+            "name": "relationship_crossings",
+            "ok": true,
+            "details": []
+          },
+          {
+            "name": "relationship_corridors",
+            "ok": true,
+            "details": []
+          },
+          {
+            "name": "container_border_runs",
+            "ok": true,
+            "details": []
+          },
+          {
+            "name": "route_rhythm",
+            "ok": true,
+            "details": []
+          },
+          {
+            "name": "legend_clearance",
+            "ok": true,
+            "details": []
+          }
+        ],
+        "composition": {
+          "schemaVersion": 1,
+          "profile": "showcase",
+          "status": "pass",
+          "summary": {
+            "errors": 0,
+            "warnings": 0
+          },
+          "metrics": {
+            "properCrossings": 0,
+            "resolvedCrossovers": 0,
+            "ambiguousCorridors": 0,
+            "arrowheadCollisions": 0,
+            "containerBorderRuns": 0,
+            "labelRouteClearanceIssues": 0,
+            "labelCanvasOverflowIssues": 0,
+            "minLabelRouteClearance": 25.1,
+            "desktopReadabilityIssues": 0,
+            "viewportHeightIssues": 0,
+            "minProjectedNodeTextPx": 6.146086956521739,
+            "maxBends": 3,
+            "routesOverSuggestedBends": 1,
+            "maxStretch": 1,
+            "routesOverSuggestedStretch": 0,
+            "minSegmentPx": 16,
+            "minInteriorSegmentPx": 77,
+            "shortSegmentCount": 0,
+            "shortEndpointSegmentCount": 0,
+            "shortInteriorSegmentCount": 0,
+            "microSegmentCount": 0
+          },
+          "suggestedLimits": {
+            "bendsPerRelationship": 2,
+            "stretch": 1.35,
+            "segmentPx": 16,
+            "microSegmentPx": 8
+          },
+          "routeReview": {
+            "crossings": [],
+            "detours": [
+              {
+                "relationship": {
+                  "id": "e7",
+                  "from": "e_gmo",
+                  "to": "s_code",
+                  "label": "đã thanh toán",
+                  "collectionIndex": 10,
+                  "artifactIndex": 11
+                },
+                "bends": 3,
+                "stretch": 1
+              }
+            ]
+          },
+          "leadingSpace": {
+            "measured": false,
+            "reviewSuggested": false
+          },
+          "desktopReadability": {
+            "budgetBasis": "legacy-930",
+            "readerContract": "declared-wide-v1",
+            "availableDiagramWidth": 930,
+            "actualBudgetPx": 930,
+            "limit": "legacy",
+            "requestedTargetPx": null,
+            "requestedTargetMet": null,
+            "hardFloorPx": 6,
+            "hardFloorMet": true,
+            "minimumOwner": {
+              "kind": "node",
+              "id": "c_view"
+            },
+            "minimumSourceTextPx": 7.6,
+            "minimumProjectedTextPx": 6.146086956521739,
+            "semanticTextCount": 34
+          },
+          "issues": []
+        },
+        "provenance": "current",
+        "deliveryReceiptId": "e6d390fc-0d34-42a0-a0f8-929d70df1721"
+      }
+    },
+    "browser-check": {
+      "status": "fail",
+      "exitCode": 1,
+      "durationMs": 5,
+      "command": [
+        "/opt/homebrew/Cellar/node/26.12.1_1/bin/node",
+        "/Users/longtd/.agents/skills/archify/bin/archify.mjs",
+        "browser-check",
+        "/Users/longtd/Desktop/WORK/Project Kidokido/KIDO_system-to-doc/outputs/ver1_281026_baseline/_internal/archify/workflow-luong-nghiep-vu-20261029/luong-nghiep-vu.html",
+        "--json",
+        "--require-provenance"
+      ],
+      "execution": "in-process",
+      "receipt": {
+        "schemaVersion": 1,
+        "ok": false,
+        "command": "browser-check",
+        "evidenceKind": "automated-browser",
+        "status": "fail",
+        "visualReview": "not-requested",
+        "provenance": "current",
+        "deliveryReceiptId": "e6d390fc-0d34-42a0-a0f8-929d70df1721",
+        "artifact": {
+          "path": "/Users/longtd/Desktop/WORK/Project Kidokido/KIDO_system-to-doc/outputs/ver1_281026_baseline/_internal/archify/workflow-luong-nghiep-vu-20261029/luong-nghiep-vu.html",
+          "sha256": "b246c0a4a572b349c9d6692b4a41b6315f80b9d65d25f7d1d99875da976cf0a1",
+          "bytes": 769319
+        },
+        "state": {
+          "detail": "read",
+          "motion": "still"
+        },
+        "chrome": {
+          "status": "not-checked",
+          "executable": null
+        },
+        "diagnostics": [
+          {
+            "code": "viewer/evidence-path-conflict",
+            "severity": "error",
+            "message": "browser-check will not replace the existing unowned evidence path \"/Users/longtd/Desktop/WORK/Project Kidokido/KIDO_system-to-doc/outputs/ver1_281026_baseline/_internal/archify/workflow-luong-nghiep-vu-20261029/luong-nghiep-vu.browser-check.json\".",
+            "subject": {
+              "artifact": "/Users/longtd/Desktop/WORK/Project Kidokido/KIDO_system-to-doc/outputs/ver1_281026_baseline/_internal/archify/workflow-luong-nghiep-vu-20261029/luong-nghiep-vu.html",
+              "evidencePath": "/Users/longtd/Desktop/WORK/Project Kidokido/KIDO_system-to-doc/outputs/ver1_281026_baseline/_internal/archify/workflow-luong-nghiep-vu-20261029/luong-nghiep-vu.browser-check.json"
+            },
+            "evidence": {
+              "reason": {
+                "code": "ownership-artifact-mismatch"
+              }
+            },
+            "supportedFixes": [
+              "move the conflicting file aside, or choose a separate --out-dir, then rerun browser-check"
+            ]
+          }
+        ],
+        "containment": {
+          "status": "fail",
+          "policy": "fit-or-reader-declared-readable-vertical-scroll",
+          "viewports": []
+        },
+        "themeStates": {
+          "status": "fail",
+          "viewports": []
+        },
+        "readability": {
+          "status": "fail",
+          "minimumProjectedNodeTextPx": 6,
+          "viewports": []
+        },
+        "viewerChrome": {
+          "status": "fail",
+          "viewports": []
+        },
+        "captures": {
+          "status": "not-requested",
+          "screenshots": [],
+          "contactSheet": null
+        },
+        "sidecars": {
+          "receipt": "luong-nghiep-vu.browser-check.json",
+          "files": []
+        },
+        "error": "browser-check will not replace the existing unowned evidence path \"/Users/longtd/Desktop/WORK/Project Kidokido/KIDO_system-to-doc/outputs/ver1_281026_baseline/_internal/archify/workflow-luong-nghiep-vu-20261029/luong-nghiep-vu.browser-check.json\"."
+      }
+    }
+  },
+  "diagnostics": [
+    {
+      "code": "viewer/evidence-path-conflict",
+      "severity": "error",
+      "message": "browser-check will not replace the existing unowned evidence path \"/Users/longtd/Desktop/WORK/Project Kidokido/KIDO_system-to-doc/outputs/ver1_281026_baseline/_internal/archify/workflow-luong-nghiep-vu-20261029/luong-nghiep-vu.browser-check.json\".",
+      "subject": {
+        "artifact": "/Users/longtd/Desktop/WORK/Project Kidokido/KIDO_system-to-doc/outputs/ver1_281026_baseline/_internal/archify/workflow-luong-nghiep-vu-20261029/luong-nghiep-vu.html",
+        "evidencePath": "/Users/longtd/Desktop/WORK/Project Kidokido/KIDO_system-to-doc/outputs/ver1_281026_baseline/_internal/archify/workflow-luong-nghiep-vu-20261029/luong-nghiep-vu.browser-check.json"
+      },
+      "evidence": {
+        "reason": {
+          "code": "ownership-artifact-mismatch"
+        }
+      },
+      "supportedFixes": [
+        "move the conflicting file aside, or choose a separate --out-dir, then rerun browser-check"
+      ]
+    }
+  ],
+  "evidence": {
+    "receipt": "/Users/longtd/Desktop/WORK/Project Kidokido/KIDO_system-to-doc/outputs/ver1_281026_baseline/_internal/archify/workflow-luong-nghiep-vu-20261029/luong-nghiep-vu.finalize.json",
+    "summaryReceipt": "/Users/longtd/Desktop/WORK/Project Kidokido/KIDO_system-to-doc/outputs/ver1_281026_baseline/_internal/archify/workflow-luong-nghiep-vu-20261029/luong-nghiep-vu.finalize-summary.json",
+    "browserCheckReceipt": "/Users/longtd/Desktop/WORK/Project Kidokido/KIDO_system-to-doc/outputs/ver1_281026_baseline/_internal/archify/workflow-luong-nghiep-vu-20261029/luong-nghiep-vu.browser-check.json"
+  },
+  "visualReview": "not-requested",
+  "failedStage": "browser-check",
+  "finishedAt": "2026-10-29T03:51:25.816Z",
+  "durationMs": 509,
+  "update": {
+    "status": "update_available",
+    "installedVersion": "3.0.1",
+    "availableVersion": "3.2.0",
+    "releaseNotes": "https://github.com/tt-a1i/archify/releases/tag/v3.2.0",
+    "severity": "normal",
+    "checkedAt": "2026-10-28T07:40:12.430Z",
+    "source": "cache",
+    "noticeRequired": true,
+    "noticeText": "Archify update: 3.0.1 → 3.2.0. A previous check at 2026-10-28T07:40:12.430Z found a newer release. Release notes: https://github.com/tt-a1i/archify/releases/tag/v3.2.0. The installed Skill has not changed; ask to snooze or ignore this reminder.",
+    "eventKey": "archify@sha256:70e210265c59f24dcbdf2a502ff671104b5454e7ee7d3554aecd86bad32384f5"
+  }
+}

@@ -1,0 +1,746 @@
+[
+  {
+    "route": "/403",
+    "component": "src/pages/403.tsx",
+    "file": "src/pages/403.tsx",
+    "framework": "next-pages",
+    "locator": "REPO-01:src/pages/403.tsx#L1",
+    "ev": "EV-0877"
+  },
+  {
+    "route": "/error",
+    "component": "src/pages/error.tsx",
+    "file": "src/pages/error.tsx",
+    "framework": "next-pages",
+    "locator": "REPO-01:src/pages/error.tsx#L1",
+    "ev": "EV-0878"
+  },
+  {
+    "route": "/forgot-password",
+    "component": "src/pages/forgot-password.tsx",
+    "file": "src/pages/forgot-password.tsx",
+    "framework": "next-pages",
+    "locator": "REPO-01:src/pages/forgot-password.tsx#L1",
+    "ev": "EV-0879"
+  },
+  {
+    "route": "/",
+    "component": "src/pages/index.tsx",
+    "file": "src/pages/index.tsx",
+    "framework": "next-pages",
+    "locator": "REPO-01:src/pages/index.tsx#L1",
+    "ev": "EV-0880"
+  },
+  {
+    "route": "/maintenance",
+    "component": "src/pages/maintenance.tsx",
+    "file": "src/pages/maintenance.tsx",
+    "framework": "next-pages",
+    "locator": "REPO-01:src/pages/maintenance.tsx#L1",
+    "ev": "EV-0881"
+  },
+  {
+    "route": "/privacy-policy",
+    "component": "src/pages/privacy-policy.tsx",
+    "file": "src/pages/privacy-policy.tsx",
+    "framework": "next-pages",
+    "locator": "REPO-01:src/pages/privacy-policy.tsx#L1",
+    "ev": "EV-0882"
+  },
+  {
+    "route": "/signin",
+    "component": "src/pages/signin.tsx",
+    "file": "src/pages/signin.tsx",
+    "framework": "next-pages",
+    "locator": "REPO-01:src/pages/signin.tsx#L1",
+    "ev": "EV-0883"
+  },
+  {
+    "route": "/signup-success",
+    "component": "src/pages/signup-success.tsx",
+    "file": "src/pages/signup-success.tsx",
+    "framework": "next-pages",
+    "locator": "REPO-01:src/pages/signup-success.tsx#L1",
+    "ev": "EV-0884"
+  },
+  {
+    "route": "/signup",
+    "component": "src/pages/signup.tsx",
+    "file": "src/pages/signup.tsx",
+    "framework": "next-pages",
+    "locator": "REPO-01:src/pages/signup.tsx#L1",
+    "ev": "EV-0885"
+  },
+  {
+    "route": "/tenant-list",
+    "component": "src/pages/tenant-list.tsx",
+    "file": "src/pages/tenant-list.tsx",
+    "framework": "next-pages",
+    "locator": "REPO-01:src/pages/tenant-list.tsx#L1",
+    "ev": "EV-0886"
+  },
+  {
+    "route": "/admin/app-settings",
+    "component": "src/pages/admin/app-settings.tsx",
+    "file": "src/pages/admin/app-settings.tsx",
+    "framework": "next-pages",
+    "locator": "REPO-01:src/pages/admin/app-settings.tsx#L1",
+    "ev": "EV-0887"
+  },
+  {
+    "route": "/admin/barcode-scanner",
+    "component": "src/pages/admin/barcode-scanner.tsx",
+    "file": "src/pages/admin/barcode-scanner.tsx",
+    "framework": "next-pages",
+    "locator": "REPO-01:src/pages/admin/barcode-scanner.tsx#L1",
+    "ev": "EV-0888"
+  },
+  {
+    "route": "/admin/change-email",
+    "component": "src/pages/admin/change-email.tsx",
+    "file": "src/pages/admin/change-email.tsx",
+    "framework": "next-pages",
+    "locator": "REPO-01:src/pages/admin/change-email.tsx#L1",
+    "ev": "EV-0889"
+  },
+  {
+    "route": "/admin/change-password",
+    "component": "src/pages/admin/change-password.tsx",
+    "file": "src/pages/admin/change-password.tsx",
+    "framework": "next-pages",
+    "locator": "REPO-01:src/pages/admin/change-password.tsx#L1",
+    "ev": "EV-0890"
+  },
+  {
+    "route": "/admin/dashboard",
+    "component": "src/pages/admin/dashboard.tsx",
+    "file": "src/pages/admin/dashboard.tsx",
+    "framework": "next-pages",
+    "locator": "REPO-01:src/pages/admin/dashboard.tsx#L1",
+    "ev": "EV-0891"
+  },
+  {
+    "route": "/admin/disclaimer-management",
+    "component": "src/pages/admin/disclaimer-management.tsx",
+    "file": "src/pages/admin/disclaimer-management.tsx",
+    "framework": "next-pages",
+    "locator": "REPO-01:src/pages/admin/disclaimer-management.tsx#L1",
+    "ev": "EV-0892"
+  },
+  {
+    "route": "/admin/forgot-password",
+    "component": "src/pages/admin/forgot-password.tsx",
+    "file": "src/pages/admin/forgot-password.tsx",
+    "framework": "next-pages",
+    "locator": "REPO-01:src/pages/admin/forgot-password.tsx#L1",
+    "ev": "EV-0893"
+  },
+  {
+    "route": "/admin",
+    "component": "src/pages/admin/index.tsx",
+    "file": "src/pages/admin/index.tsx",
+    "framework": "next-pages",
+    "locator": "REPO-01:src/pages/admin/index.tsx#L1",
+    "ev": "EV-0894"
+  },
+  {
+    "route": "/admin/revenue-management",
+    "component": "src/pages/admin/revenue-management.tsx",
+    "file": "src/pages/admin/revenue-management.tsx",
+    "framework": "next-pages",
+    "locator": "REPO-01:src/pages/admin/revenue-management.tsx#L1",
+    "ev": "EV-0895"
+  },
+  {
+    "route": "/admin/signin",
+    "component": "src/pages/admin/signin.tsx",
+    "file": "src/pages/admin/signin.tsx",
+    "framework": "next-pages",
+    "locator": "REPO-01:src/pages/admin/signin.tsx#L1",
+    "ev": "EV-0896"
+  },
+  {
+    "route": "/admin/waiting-time-management",
+    "component": "src/pages/admin/waiting-time-management.tsx",
+    "file": "src/pages/admin/waiting-time-management.tsx",
+    "framework": "next-pages",
+    "locator": "REPO-01:src/pages/admin/waiting-time-management.tsx#L1",
+    "ev": "EV-0897"
+  },
+  {
+    "route": "/admin/booking-management",
+    "component": "src/pages/admin/booking-management/index.tsx",
+    "file": "src/pages/admin/booking-management/index.tsx",
+    "framework": "next-pages",
+    "locator": "REPO-01:src/pages/admin/booking-management/index.tsx#L1",
+    "ev": "EV-0898"
+  },
+  {
+    "route": "/admin/booking-management/details/:id",
+    "component": "src/pages/admin/booking-management/details/[id].tsx",
+    "file": "src/pages/admin/booking-management/details/[id].tsx",
+    "framework": "next-pages",
+    "locator": "REPO-01:src/pages/admin/booking-management/details/[id].tsx#L1",
+    "ev": "EV-0899"
+  },
+  {
+    "route": "/admin/booking-management/partial-checkout/:id",
+    "component": "src/pages/admin/booking-management/partial-checkout/[id].tsx",
+    "file": "src/pages/admin/booking-management/partial-checkout/[id].tsx",
+    "framework": "next-pages",
+    "locator": "REPO-01:src/pages/admin/booking-management/partial-checkout/[id].tsx#L1",
+    "ev": "EV-0900"
+  },
+  {
+    "route": "/admin/booking-management/update/:id",
+    "component": "src/pages/admin/booking-management/update/[id].tsx",
+    "file": "src/pages/admin/booking-management/update/[id].tsx",
+    "framework": "next-pages",
+    "locator": "REPO-01:src/pages/admin/booking-management/update/[id].tsx#L1",
+    "ev": "EV-0901"
+  },
+  {
+    "route": "/admin/booking-queue",
+    "component": "src/pages/admin/booking-queue/index.tsx",
+    "file": "src/pages/admin/booking-queue/index.tsx",
+    "framework": "next-pages",
+    "locator": "REPO-01:src/pages/admin/booking-queue/index.tsx#L1",
+    "ev": "EV-0902"
+  },
+  {
+    "route": "/admin/booking-vacancies",
+    "component": "src/pages/admin/booking-vacancies/index.tsx",
+    "file": "src/pages/admin/booking-vacancies/index.tsx",
+    "framework": "next-pages",
+    "locator": "REPO-01:src/pages/admin/booking-vacancies/index.tsx#L1",
+    "ev": "EV-0903"
+  },
+  {
+    "route": "/admin/email-settings",
+    "component": "src/pages/admin/email-settings/index.tsx",
+    "file": "src/pages/admin/email-settings/index.tsx",
+    "framework": "next-pages",
+    "locator": "REPO-01:src/pages/admin/email-settings/index.tsx#L1",
+    "ev": "EV-0904"
+  },
+  {
+    "route": "/admin/email-settings/edit/:emailKey",
+    "component": "src/pages/admin/email-settings/edit/[emailKey].tsx",
+    "file": "src/pages/admin/email-settings/edit/[emailKey].tsx",
+    "framework": "next-pages",
+    "locator": "REPO-01:src/pages/admin/email-settings/edit/[emailKey].tsx#L1",
+    "ev": "EV-0905"
+  },
+  {
+    "route": "/admin/gmo-settings/create",
+    "component": "src/pages/admin/gmo-settings/create.tsx",
+    "file": "src/pages/admin/gmo-settings/create.tsx",
+    "framework": "next-pages",
+    "locator": "REPO-01:src/pages/admin/gmo-settings/create.tsx#L1",
+    "ev": "EV-0906"
+  },
+  {
+    "route": "/admin/gmo-settings",
+    "component": "src/pages/admin/gmo-settings/index.tsx",
+    "file": "src/pages/admin/gmo-settings/index.tsx",
+    "framework": "next-pages",
+    "locator": "REPO-01:src/pages/admin/gmo-settings/index.tsx#L1",
+    "ev": "EV-0907"
+  },
+  {
+    "route": "/admin/gmo-settings/edit/:id",
+    "component": "src/pages/admin/gmo-settings/edit/[id].tsx",
+    "file": "src/pages/admin/gmo-settings/edit/[id].tsx",
+    "framework": "next-pages",
+    "locator": "REPO-01:src/pages/admin/gmo-settings/edit/[id].tsx#L1",
+    "ev": "EV-0908"
+  },
+  {
+    "route": "/admin/gmo-settings/view/:id",
+    "component": "src/pages/admin/gmo-settings/view/[id].tsx",
+    "file": "src/pages/admin/gmo-settings/view/[id].tsx",
+    "framework": "next-pages",
+    "locator": "REPO-01:src/pages/admin/gmo-settings/view/[id].tsx#L1",
+    "ev": "EV-0909"
+  },
+  {
+    "route": "/admin/news-management/create",
+    "component": "src/pages/admin/news-management/create.tsx",
+    "file": "src/pages/admin/news-management/create.tsx",
+    "framework": "next-pages",
+    "locator": "REPO-01:src/pages/admin/news-management/create.tsx#L1",
+    "ev": "EV-0910"
+  },
+  {
+    "route": "/admin/news-management",
+    "component": "src/pages/admin/news-management/index.tsx",
+    "file": "src/pages/admin/news-management/index.tsx",
+    "framework": "next-pages",
+    "locator": "REPO-01:src/pages/admin/news-management/index.tsx#L1",
+    "ev": "EV-0911"
+  },
+  {
+    "route": "/admin/news-management/edit/:newsId",
+    "component": "src/pages/admin/news-management/edit/[newsId].tsx",
+    "file": "src/pages/admin/news-management/edit/[newsId].tsx",
+    "framework": "next-pages",
+    "locator": "REPO-01:src/pages/admin/news-management/edit/[newsId].tsx#L1",
+    "ev": "EV-0912"
+  },
+  {
+    "route": "/admin/reset-password/:token",
+    "component": "src/pages/admin/reset-password/[token].tsx",
+    "file": "src/pages/admin/reset-password/[token].tsx",
+    "framework": "next-pages",
+    "locator": "REPO-01:src/pages/admin/reset-password/[token].tsx#L1",
+    "ev": "EV-0913"
+  },
+  {
+    "route": "/admin/scan-management",
+    "component": "src/pages/admin/scan-management/index.tsx",
+    "file": "src/pages/admin/scan-management/index.tsx",
+    "framework": "next-pages",
+    "locator": "REPO-01:src/pages/admin/scan-management/index.tsx#L1",
+    "ev": "EV-0914"
+  },
+  {
+    "route": "/admin/staff-management/create",
+    "component": "src/pages/admin/staff-management/create.tsx",
+    "file": "src/pages/admin/staff-management/create.tsx",
+    "framework": "next-pages",
+    "locator": "REPO-01:src/pages/admin/staff-management/create.tsx#L1",
+    "ev": "EV-0915"
+  },
+  {
+    "route": "/admin/staff-management",
+    "component": "src/pages/admin/staff-management/index.tsx",
+    "file": "src/pages/admin/staff-management/index.tsx",
+    "framework": "next-pages",
+    "locator": "REPO-01:src/pages/admin/staff-management/index.tsx#L1",
+    "ev": "EV-0916"
+  },
+  {
+    "route": "/admin/staff-management/edit/:id",
+    "component": "src/pages/admin/staff-management/edit/[id].tsx",
+    "file": "src/pages/admin/staff-management/edit/[id].tsx",
+    "framework": "next-pages",
+    "locator": "REPO-01:src/pages/admin/staff-management/edit/[id].tsx#L1",
+    "ev": "EV-0917"
+  },
+  {
+    "route": "/admin/tenant-management/create",
+    "component": "src/pages/admin/tenant-management/create.tsx",
+    "file": "src/pages/admin/tenant-management/create.tsx",
+    "framework": "next-pages",
+    "locator": "REPO-01:src/pages/admin/tenant-management/create.tsx#L1",
+    "ev": "EV-0918"
+  },
+  {
+    "route": "/admin/tenant-management",
+    "component": "src/pages/admin/tenant-management/index.tsx",
+    "file": "src/pages/admin/tenant-management/index.tsx",
+    "framework": "next-pages",
+    "locator": "REPO-01:src/pages/admin/tenant-management/index.tsx#L1",
+    "ev": "EV-0919"
+  },
+  {
+    "route": "/admin/tenant-management/edit/:tenantCode",
+    "component": "src/pages/admin/tenant-management/edit/[tenantCode].tsx",
+    "file": "src/pages/admin/tenant-management/edit/[tenantCode].tsx",
+    "framework": "next-pages",
+    "locator": "REPO-01:src/pages/admin/tenant-management/edit/[tenantCode].tsx#L1",
+    "ev": "EV-0920"
+  },
+  {
+    "route": "/admin/tenant-management/view/:tenantCode",
+    "component": "src/pages/admin/tenant-management/view/[tenantCode].tsx",
+    "file": "src/pages/admin/tenant-management/view/[tenantCode].tsx",
+    "framework": "next-pages",
+    "locator": "REPO-01:src/pages/admin/tenant-management/view/[tenantCode].tsx#L1",
+    "ev": "EV-0921"
+  },
+  {
+    "route": "/admin/ticket-management/create",
+    "component": "src/pages/admin/ticket-management/create.tsx",
+    "file": "src/pages/admin/ticket-management/create.tsx",
+    "framework": "next-pages",
+    "locator": "REPO-01:src/pages/admin/ticket-management/create.tsx#L1",
+    "ev": "EV-0922"
+  },
+  {
+    "route": "/admin/ticket-management",
+    "component": "src/pages/admin/ticket-management/index.tsx",
+    "file": "src/pages/admin/ticket-management/index.tsx",
+    "framework": "next-pages",
+    "locator": "REPO-01:src/pages/admin/ticket-management/index.tsx#L1",
+    "ev": "EV-0923"
+  },
+  {
+    "route": "/admin/ticket-management/edit/:ticketId",
+    "component": "src/pages/admin/ticket-management/edit/[ticketId].tsx",
+    "file": "src/pages/admin/ticket-management/edit/[ticketId].tsx",
+    "framework": "next-pages",
+    "locator": "REPO-01:src/pages/admin/ticket-management/edit/[ticketId].tsx#L1",
+    "ev": "EV-0924"
+  },
+  {
+    "route": "/admin/ticket-management/view/:ticketId",
+    "component": "src/pages/admin/ticket-management/view/[ticketId].tsx",
+    "file": "src/pages/admin/ticket-management/view/[ticketId].tsx",
+    "framework": "next-pages",
+    "locator": "REPO-01:src/pages/admin/ticket-management/view/[ticketId].tsx#L1",
+    "ev": "EV-0925"
+  },
+  {
+    "route": "/admin/unlock-account/:token",
+    "component": "src/pages/admin/unlock-account/[token].tsx",
+    "file": "src/pages/admin/unlock-account/[token].tsx",
+    "framework": "next-pages",
+    "locator": "REPO-01:src/pages/admin/unlock-account/[token].tsx#L1",
+    "ev": "EV-0926"
+  },
+  {
+    "route": "/admin/user-management/create",
+    "component": "src/pages/admin/user-management/create.tsx",
+    "file": "src/pages/admin/user-management/create.tsx",
+    "framework": "next-pages",
+    "locator": "REPO-01:src/pages/admin/user-management/create.tsx#L1",
+    "ev": "EV-0927"
+  },
+  {
+    "route": "/admin/user-management",
+    "component": "src/pages/admin/user-management/index.tsx",
+    "file": "src/pages/admin/user-management/index.tsx",
+    "framework": "next-pages",
+    "locator": "REPO-01:src/pages/admin/user-management/index.tsx#L1",
+    "ev": "EV-0928"
+  },
+  {
+    "route": "/admin/user-management/edit/:userId",
+    "component": "src/pages/admin/user-management/edit/[userId].tsx",
+    "file": "src/pages/admin/user-management/edit/[userId].tsx",
+    "framework": "next-pages",
+    "locator": "REPO-01:src/pages/admin/user-management/edit/[userId].tsx#L1",
+    "ev": "EV-0929"
+  },
+  {
+    "route": "/admin/user-management/view/:userId",
+    "component": "src/pages/admin/user-management/view/[userId].tsx",
+    "file": "src/pages/admin/user-management/view/[userId].tsx",
+    "framework": "next-pages",
+    "locator": "REPO-01:src/pages/admin/user-management/view/[userId].tsx#L1",
+    "ev": "EV-0930"
+  },
+  {
+    "route": "/admin/vacancies-status",
+    "component": "src/pages/admin/vacancies-status/index.tsx",
+    "file": "src/pages/admin/vacancies-status/index.tsx",
+    "framework": "next-pages",
+    "locator": "REPO-01:src/pages/admin/vacancies-status/index.tsx#L1",
+    "ev": "EV-0931"
+  },
+  {
+    "route": "/booking/buy-monthly-ticket",
+    "component": "src/pages/booking/buy-monthly-ticket.tsx",
+    "file": "src/pages/booking/buy-monthly-ticket.tsx",
+    "framework": "next-pages",
+    "locator": "REPO-01:src/pages/booking/buy-monthly-ticket.tsx#L1",
+    "ev": "EV-0932"
+  },
+  {
+    "route": "/booking/buy-times-limit-ticket",
+    "component": "src/pages/booking/buy-times-limit-ticket.tsx",
+    "file": "src/pages/booking/buy-times-limit-ticket.tsx",
+    "framework": "next-pages",
+    "locator": "REPO-01:src/pages/booking/buy-times-limit-ticket.tsx#L1",
+    "ev": "EV-0933"
+  },
+  {
+    "route": "/booking/payment-online-failure",
+    "component": "src/pages/booking/payment-online-failure.tsx",
+    "file": "src/pages/booking/payment-online-failure.tsx",
+    "framework": "next-pages",
+    "locator": "REPO-01:src/pages/booking/payment-online-failure.tsx#L1",
+    "ev": "EV-0934"
+  },
+  {
+    "route": "/booking/payment-online-monthly-ticket-success",
+    "component": "src/pages/booking/payment-online-monthly-ticket-success.tsx",
+    "file": "src/pages/booking/payment-online-monthly-ticket-success.tsx",
+    "framework": "next-pages",
+    "locator": "REPO-01:src/pages/booking/payment-online-monthly-ticket-success.tsx#L1",
+    "ev": "EV-0935"
+  },
+  {
+    "route": "/booking/payment-online-success",
+    "component": "src/pages/booking/payment-online-success.tsx",
+    "file": "src/pages/booking/payment-online-success.tsx",
+    "framework": "next-pages",
+    "locator": "REPO-01:src/pages/booking/payment-online-success.tsx#L1",
+    "ev": "EV-0936"
+  },
+  {
+    "route": "/booking/payment-online",
+    "component": "src/pages/booking/payment-online.tsx",
+    "file": "src/pages/booking/payment-online.tsx",
+    "framework": "next-pages",
+    "locator": "REPO-01:src/pages/booking/payment-online.tsx#L1",
+    "ev": "EV-0937"
+  },
+  {
+    "route": "/booking/use-in-day",
+    "component": "src/pages/booking/use-in-day.tsx",
+    "file": "src/pages/booking/use-in-day.tsx",
+    "framework": "next-pages",
+    "locator": "REPO-01:src/pages/booking/use-in-day.tsx#L1",
+    "ev": "EV-0938"
+  },
+  {
+    "route": "/commercial-law",
+    "component": "src/pages/commercial-law/index.tsx",
+    "file": "src/pages/commercial-law/index.tsx",
+    "framework": "next-pages",
+    "locator": "REPO-01:src/pages/commercial-law/index.tsx#L1",
+    "ev": "EV-0939"
+  },
+  {
+    "route": "/price-list",
+    "component": "src/pages/price-list/index.tsx",
+    "file": "src/pages/price-list/index.tsx",
+    "framework": "next-pages",
+    "locator": "REPO-01:src/pages/price-list/index.tsx#L1",
+    "ev": "EV-0940"
+  },
+  {
+    "route": "/reset-password/:token",
+    "component": "src/pages/reset-password/[token].tsx",
+    "file": "src/pages/reset-password/[token].tsx",
+    "framework": "next-pages",
+    "locator": "REPO-01:src/pages/reset-password/[token].tsx#L1",
+    "ev": "EV-0941"
+  },
+  {
+    "route": "/reset-password/success",
+    "component": "src/pages/reset-password/success.tsx",
+    "file": "src/pages/reset-password/success.tsx",
+    "framework": "next-pages",
+    "locator": "REPO-01:src/pages/reset-password/success.tsx#L1",
+    "ev": "EV-0942"
+  },
+  {
+    "route": "/tenant/:code",
+    "component": "src/pages/tenant/[code].tsx",
+    "file": "src/pages/tenant/[code].tsx",
+    "framework": "next-pages",
+    "locator": "REPO-01:src/pages/tenant/[code].tsx#L1",
+    "ev": "EV-0943"
+  },
+  {
+    "route": "/terms-of-use",
+    "component": "src/pages/terms-of-use/index.tsx",
+    "file": "src/pages/terms-of-use/index.tsx",
+    "framework": "next-pages",
+    "locator": "REPO-01:src/pages/terms-of-use/index.tsx#L1",
+    "ev": "EV-0944"
+  },
+  {
+    "route": "/user/my-page/delete-account",
+    "component": "src/pages/user/my-page/delete-account.tsx",
+    "file": "src/pages/user/my-page/delete-account.tsx",
+    "framework": "next-pages",
+    "locator": "REPO-01:src/pages/user/my-page/delete-account.tsx#L1",
+    "ev": "EV-0945"
+  },
+  {
+    "route": "/user/my-page/favorite-tenants",
+    "component": "src/pages/user/my-page/favorite-tenants.tsx",
+    "file": "src/pages/user/my-page/favorite-tenants.tsx",
+    "framework": "next-pages",
+    "locator": "REPO-01:src/pages/user/my-page/favorite-tenants.tsx#L1",
+    "ev": "EV-0946"
+  },
+  {
+    "route": "/user/my-page",
+    "component": "src/pages/user/my-page/index.tsx",
+    "file": "src/pages/user/my-page/index.tsx",
+    "framework": "next-pages",
+    "locator": "REPO-01:src/pages/user/my-page/index.tsx#L1",
+    "ev": "EV-0947"
+  },
+  {
+    "route": "/user/my-page/monthly-ticket-status",
+    "component": "src/pages/user/my-page/monthly-ticket-status.tsx",
+    "file": "src/pages/user/my-page/monthly-ticket-status.tsx",
+    "framework": "next-pages",
+    "locator": "REPO-01:src/pages/user/my-page/monthly-ticket-status.tsx#L1",
+    "ev": "EV-0948"
+  },
+  {
+    "route": "/user/my-page/times-limit-ticket-status",
+    "component": "src/pages/user/my-page/times-limit-ticket-status.tsx",
+    "file": "src/pages/user/my-page/times-limit-ticket-status.tsx",
+    "framework": "next-pages",
+    "locator": "REPO-01:src/pages/user/my-page/times-limit-ticket-status.tsx#L1",
+    "ev": "EV-0949"
+  },
+  {
+    "route": "/user/my-page/booking-history/:id",
+    "component": "src/pages/user/my-page/booking-history/[id].tsx",
+    "file": "src/pages/user/my-page/booking-history/[id].tsx",
+    "framework": "next-pages",
+    "locator": "REPO-01:src/pages/user/my-page/booking-history/[id].tsx#L1",
+    "ev": "EV-0950"
+  },
+  {
+    "route": "/user/my-page/booking-history/cancel-success",
+    "component": "src/pages/user/my-page/booking-history/cancel-success.tsx",
+    "file": "src/pages/user/my-page/booking-history/cancel-success.tsx",
+    "framework": "next-pages",
+    "locator": "REPO-01:src/pages/user/my-page/booking-history/cancel-success.tsx#L1",
+    "ev": "EV-0951"
+  },
+  {
+    "route": "/user/my-page/booking-history",
+    "component": "src/pages/user/my-page/booking-history/index.tsx",
+    "file": "src/pages/user/my-page/booking-history/index.tsx",
+    "framework": "next-pages",
+    "locator": "REPO-01:src/pages/user/my-page/booking-history/index.tsx#L1",
+    "ev": "EV-0952"
+  },
+  {
+    "route": "/user/my-page/booking-history/partial-checkout/:id",
+    "component": "src/pages/user/my-page/booking-history/partial-checkout/[id].tsx",
+    "file": "src/pages/user/my-page/booking-history/partial-checkout/[id].tsx",
+    "framework": "next-pages",
+    "locator": "REPO-01:src/pages/user/my-page/booking-history/partial-checkout/[id].tsx#L1",
+    "ev": "EV-0953"
+  },
+  {
+    "route": "/user/my-page/booking-history/partial-checkout/success",
+    "component": "src/pages/user/my-page/booking-history/partial-checkout/success.tsx",
+    "file": "src/pages/user/my-page/booking-history/partial-checkout/success.tsx",
+    "framework": "next-pages",
+    "locator": "REPO-01:src/pages/user/my-page/booking-history/partial-checkout/success.tsx#L1",
+    "ev": "EV-0954"
+  },
+  {
+    "route": "/user/my-page/booking-history/update/:id",
+    "component": "src/pages/user/my-page/booking-history/update/[id].tsx",
+    "file": "src/pages/user/my-page/booking-history/update/[id].tsx",
+    "framework": "next-pages",
+    "locator": "REPO-01:src/pages/user/my-page/booking-history/update/[id].tsx#L1",
+    "ev": "EV-0955"
+  },
+  {
+    "route": "/user/my-page/booking-history/update",
+    "component": "src/pages/user/my-page/booking-history/update/index.tsx",
+    "file": "src/pages/user/my-page/booking-history/update/index.tsx",
+    "framework": "next-pages",
+    "locator": "REPO-01:src/pages/user/my-page/booking-history/update/index.tsx#L1",
+    "ev": "EV-0956"
+  },
+  {
+    "route": "/user/my-page/booking-history/update/completed",
+    "component": "src/pages/user/my-page/booking-history/update/completed/index.tsx",
+    "file": "src/pages/user/my-page/booking-history/update/completed/index.tsx",
+    "framework": "next-pages",
+    "locator": "REPO-01:src/pages/user/my-page/booking-history/update/completed/index.tsx#L1",
+    "ev": "EV-0957"
+  },
+  {
+    "route": "/user/my-page/personal-info/change-password",
+    "component": "src/pages/user/my-page/personal-info/change-password.tsx",
+    "file": "src/pages/user/my-page/personal-info/change-password.tsx",
+    "framework": "next-pages",
+    "locator": "REPO-01:src/pages/user/my-page/personal-info/change-password.tsx#L1",
+    "ev": "EV-0958"
+  },
+  {
+    "route": "/user/my-page/personal-info",
+    "component": "src/pages/user/my-page/personal-info/index.tsx",
+    "file": "src/pages/user/my-page/personal-info/index.tsx",
+    "framework": "next-pages",
+    "locator": "REPO-01:src/pages/user/my-page/personal-info/index.tsx#L1",
+    "ev": "EV-0959"
+  },
+  {
+    "route": "/user/my-page/personal-info/change-credit-card/delete",
+    "component": "src/pages/user/my-page/personal-info/change-credit-card/delete.tsx",
+    "file": "src/pages/user/my-page/personal-info/change-credit-card/delete.tsx",
+    "framework": "next-pages",
+    "locator": "REPO-01:src/pages/user/my-page/personal-info/change-credit-card/delete.tsx#L1",
+    "ev": "EV-0960"
+  },
+  {
+    "route": "/user/my-page/personal-info/change-credit-card",
+    "component": "src/pages/user/my-page/personal-info/change-credit-card/index.tsx",
+    "file": "src/pages/user/my-page/personal-info/change-credit-card/index.tsx",
+    "framework": "next-pages",
+    "locator": "REPO-01:src/pages/user/my-page/personal-info/change-credit-card/index.tsx#L1",
+    "ev": "EV-0961"
+  },
+  {
+    "route": "/user/my-page/personal-info/change-credit-card/success",
+    "component": "src/pages/user/my-page/personal-info/change-credit-card/success.tsx",
+    "file": "src/pages/user/my-page/personal-info/change-credit-card/success.tsx",
+    "framework": "next-pages",
+    "locator": "REPO-01:src/pages/user/my-page/personal-info/change-credit-card/success.tsx#L1",
+    "ev": "EV-0962"
+  },
+  {
+    "route": "/user/my-page/personal-info/update-information",
+    "component": "src/pages/user/my-page/personal-info/update-information/index.tsx",
+    "file": "src/pages/user/my-page/personal-info/update-information/index.tsx",
+    "framework": "next-pages",
+    "locator": "REPO-01:src/pages/user/my-page/personal-info/update-information/index.tsx#L1",
+    "ev": "EV-0963"
+  },
+  {
+    "route": "/user/my-page/personal-info/update-information/success",
+    "component": "src/pages/user/my-page/personal-info/update-information/success.tsx",
+    "file": "src/pages/user/my-page/personal-info/update-information/success.tsx",
+    "framework": "next-pages",
+    "locator": "REPO-01:src/pages/user/my-page/personal-info/update-information/success.tsx#L1",
+    "ev": "EV-0964"
+  },
+  {
+    "route": "/user/my-page/personal-info/update-information/verify-edit-email/:token",
+    "component": "src/pages/user/my-page/personal-info/update-information/verify-edit-email/[token].tsx",
+    "file": "src/pages/user/my-page/personal-info/update-information/verify-edit-email/[token].tsx",
+    "framework": "next-pages",
+    "locator": "REPO-01:src/pages/user/my-page/personal-info/update-information/verify-edit-email/[token].tsx#L1",
+    "ev": "EV-0965"
+  },
+  {
+    "route": "/user/my-page/personal-info/update-password/:token",
+    "component": "src/pages/user/my-page/personal-info/update-password/[token].tsx",
+    "file": "src/pages/user/my-page/personal-info/update-password/[token].tsx",
+    "framework": "next-pages",
+    "locator": "REPO-01:src/pages/user/my-page/personal-info/update-password/[token].tsx#L1",
+    "ev": "EV-0966"
+  },
+  {
+    "route": "/user/my-page/personal-info/update-password/success",
+    "component": "src/pages/user/my-page/personal-info/update-password/success.tsx",
+    "file": "src/pages/user/my-page/personal-info/update-password/success.tsx",
+    "framework": "next-pages",
+    "locator": "REPO-01:src/pages/user/my-page/personal-info/update-password/success.tsx#L1",
+    "ev": "EV-0967"
+  },
+  {
+    "route": "/vacancy-status",
+    "component": "src/pages/vacancy-status/index.tsx",
+    "file": "src/pages/vacancy-status/index.tsx",
+    "framework": "next-pages",
+    "locator": "REPO-01:src/pages/vacancy-status/index.tsx#L1",
+    "ev": "EV-0968"
+  },
+  {
+    "route": "/verify/:token",
+    "component": "src/pages/verify/[token].tsx",
+    "file": "src/pages/verify/[token].tsx",
+    "framework": "next-pages",
+    "locator": "REPO-01:src/pages/verify/[token].tsx#L1",
+    "ev": "EV-0969"
+  }
+]

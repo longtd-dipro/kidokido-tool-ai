@@ -1,0 +1,53 @@
+{
+  "note": "Chi ten file — KHONG doc noi dung (rules/SECURITY.md)",
+  "skipped": [
+    {
+      "path": "src/pages/api/admin/admin-credentials-confirmation.ts",
+      "reason": "name-keyword"
+    },
+    {
+      "path": "src/pages/api/admin/credentials-confirmation.ts",
+      "reason": "name-keyword"
+    },
+    {
+      "path": "src/pages/api/admin/password-confirmation.ts",
+      "reason": "name-keyword"
+    },
+    {
+      "path": "src/pages/api/auth/change-password.ts",
+      "reason": "name-keyword"
+    },
+    {
+      "path": "src/pages/api/auth/check-admin-credentials.ts",
+      "reason": "name-keyword"
+    },
+    {
+      "path": "src/pages/api/auth/fetch-access-token.ts",
+      "reason": "name-keyword"
+    },
+    {
+      "path": "src/pages/api/auth/forgot-password.ts",
+      "reason": "name-keyword"
+    },
+    {
+      "path": "src/pages/api/auth/reset-password.ts",
+      "reason": "name-keyword"
+    },
+    {
+      "path": "src/pages/api/auth/update-password.ts",
+      "reason": "name-keyword"
+    },
+    {
+      "path": "src/pages/api/auth/verify/[token].ts",
+      "reason": "name-keyword"
+    },
+    {
+      "path": "src/stores/reducers/credentials-confirmation.ts",
+      "reason": "name-keyword"
+    },
+    {
+      "path": "src/stores/reducers/password-confirmation.ts",
+      "reason": "name-keyword"
+    }
+  ]
+}

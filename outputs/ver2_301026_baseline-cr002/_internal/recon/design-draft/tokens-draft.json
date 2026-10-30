@@ -1,0 +1,2500 @@
+{
+  "note": "OBSERVED data only (crawl computed-style + source CSS). Not a design system. count=0 -> chi thay trong code.",
+  "crawlFiles": [],
+  "cssRoots": {
+    "REPO-01": 373
+  },
+  "colors": [
+    {
+      "hex": "#000000",
+      "count": 0,
+      "roles": [],
+      "sources": [
+        "REPO-01:src/styles/_variables.scss#L8"
+      ],
+      "codeNames": [
+        "$black-color"
+      ],
+      "alpha": [
+        1.0
+      ],
+      "observedOnSite": false,
+      "neutral": true
+    },
+    {
+      "hex": "#0068B7",
+      "count": 0,
+      "roles": [],
+      "sources": [
+        "REPO-01:src/styles/_user-base.scss#L8",
+        "REPO-01:src/styles/_user-base.scss#L21"
+      ],
+      "codeNames": [
+        "$blue-color",
+        "$button-bg-color"
+      ],
+      "alpha": [
+        1.0
+      ],
+      "observedOnSite": false,
+      "neutral": false
+    },
+    {
+      "hex": "#006DC6",
+      "count": 0,
+      "roles": [],
+      "sources": [
+        "REPO-01:src/styles/_admin-base.scss#L14"
+      ],
+      "codeNames": [
+        "$ad-blue-color"
+      ],
+      "alpha": [
+        1.0
+      ],
+      "observedOnSite": false,
+      "neutral": false
+    },
+    {
+      "hex": "#00A63C",
+      "count": 0,
+      "roles": [],
+      "sources": [
+        "REPO-01:src/styles/_variables.scss#L4"
+      ],
+      "codeNames": [
+        "$positive-color"
+      ],
+      "alpha": [
+        1.0
+      ],
+      "observedOnSite": false,
+      "neutral": false
+    },
+    {
+      "hex": "#00B900",
+      "count": 0,
+      "roles": [],
+      "sources": [
+        "REPO-01:src/styles/_admin-base.scss#L27"
+      ],
+      "codeNames": [
+        "$ad-text-green-color"
+      ],
+      "alpha": [
+        1.0
+      ],
+      "observedOnSite": false,
+      "neutral": false
+    },
+    {
+      "hex": "#11065E",
+      "count": 0,
+      "roles": [],
+      "sources": [
+        "REPO-01:src/styles/_variables.scss#L2"
+      ],
+      "codeNames": [
+        "$primary-color"
+      ],
+      "alpha": [
+        1.0
+      ],
+      "observedOnSite": false,
+      "neutral": false
+    },
+    {
+      "hex": "#11CAA1",
+      "count": 0,
+      "roles": [],
+      "sources": [
+        "REPO-01:src/styles/_variables.scss#L5"
+      ],
+      "codeNames": [
+        "$positive-color-light"
+      ],
+      "alpha": [
+        1.0
+      ],
+      "observedOnSite": false,
+      "neutral": false
+    },
+    {
+      "hex": "#167BD1",
+      "count": 0,
+      "roles": [],
+      "sources": [
+        "REPO-01:src/styles/_user-base.scss#L9"
+      ],
+      "codeNames": [
+        "$blue-dark-color"
+      ],
+      "alpha": [
+        1.0
+      ],
+      "observedOnSite": false,
+      "neutral": false
+    },
+    {
+      "hex": "#17C1CE",
+      "count": 0,
+      "roles": [],
+      "sources": [
+        "REPO-01:src/styles/_variables.scss#L3"
+      ],
+      "codeNames": [
+        "$secondary-color"
+      ],
+      "alpha": [
+        1.0
+      ],
+      "observedOnSite": false,
+      "neutral": false
+    },
+    {
+      "hex": "#242424",
+      "count": 0,
+      "roles": [],
+      "sources": [
+        "REPO-01:src/styles/_variables.scss#L14"
+      ],
+      "codeNames": [
+        "$header-black-color"
+      ],
+      "alpha": [
+        1.0
+      ],
+      "observedOnSite": false,
+      "neutral": true
+    },
+    {
+      "hex": "#262627",
+      "count": 0,
+      "roles": [],
+      "sources": [
+        "REPO-01:src/styles/_admin-base.scss#L6"
+      ],
+      "codeNames": [
+        "$ad-text-color"
+      ],
+      "alpha": [
+        1.0
+      ],
+      "observedOnSite": false,
+      "neutral": true
+    },
+    {
+      "hex": "#2CABF3",
+      "count": 0,
+      "roles": [],
+      "sources": [
+        "REPO-01:src/styles/_admin-base.scss#L26"
+      ],
+      "codeNames": [
+        "$ad-text-link"
+      ],
+      "alpha": [
+        1.0
+      ],
+      "observedOnSite": false,
+      "neutral": false
+    },
+    {
+      "hex": "#313035",
+      "count": 0,
+      "roles": [],
+      "sources": [
+        "REPO-01:src/styles/_admin-base.scss#L8"
+      ],
+      "codeNames": [
+        "$ad-text-color-3"
+      ],
+      "alpha": [
+        1.0
+      ],
+      "observedOnSite": false,
+      "neutral": true
+    },
+    {
+      "hex": "#313131",
+      "count": 0,
+      "roles": [],
+      "sources": [
+        "REPO-01:src/styles/_user-base.scss#L5"
+      ],
+      "codeNames": [
+        "$text-color"
+      ],
+      "alpha": [
+        1.0
+      ],
+      "observedOnSite": false,
+      "neutral": true
+    },
+    {
+      "hex": "#3F3F46",
+      "count": 0,
+      "roles": [],
+      "sources": [
+        "REPO-01:src/styles/_variables.scss#L12"
+      ],
+      "codeNames": [
+        "$submit-hover-color"
+      ],
+      "alpha": [
+        1.0
+      ],
+      "observedOnSite": false,
+      "neutral": true
+    },
+    {
+      "hex": "#505050",
+      "count": 0,
+      "roles": [],
+      "sources": [
+        "REPO-01:src/styles/_variables.scss#L11"
+      ],
+      "codeNames": [
+        "$submit-color"
+      ],
+      "alpha": [
+        1.0
+      ],
+      "observedOnSite": false,
+      "neutral": true
+    },
+    {
+      "hex": "#5AA7F2",
+      "count": 0,
+      "roles": [],
+      "sources": [
+        "REPO-01:src/styles/_admin-base.scss#L30"
+      ],
+      "codeNames": [
+        "$ad-button-bg-color"
+      ],
+      "alpha": [
+        1.0
+      ],
+      "observedOnSite": false,
+      "neutral": false
+    },
+    {
+      "hex": "#676767",
+      "count": 0,
+      "roles": [],
+      "sources": [
+        "REPO-01:src/styles/_admin-base.scss#L7"
+      ],
+      "codeNames": [
+        "$ad-text-color-2"
+      ],
+      "alpha": [
+        1.0
+      ],
+      "observedOnSite": false,
+      "neutral": true
+    },
+    {
+      "hex": "#68B5FF",
+      "count": 0,
+      "roles": [],
+      "sources": [
+        "REPO-01:src/styles/_admin-base.scss#L32"
+      ],
+      "codeNames": [
+        "$ad-button-side-bar-active-bg-color"
+      ],
+      "alpha": [
+        1.0
+      ],
+      "observedOnSite": false,
+      "neutral": false
+    },
+    {
+      "hex": "#92E4CD",
+      "count": 0,
+      "roles": [],
+      "sources": [
+        "REPO-01:src/styles/_admin-base.scss#L18",
+        "REPO-01:src/styles/_user-base.scss#L19"
+      ],
+      "codeNames": [
+        "$ad-green-color",
+        "$radio-blue-color"
+      ],
+      "alpha": [
+        1.0
+      ],
+      "observedOnSite": false,
+      "neutral": false
+    },
+    {
+      "hex": "#979797",
+      "count": 0,
+      "roles": [],
+      "sources": [
+        "REPO-01:src/styles/_user-base.scss#L6",
+        "REPO-01:src/styles/_user-base.scss#L11",
+        "REPO-01:src/styles/_user-base.scss#L27"
+      ],
+      "codeNames": [
+        "$text-color-placeholder",
+        "$disable-color",
+        "$blue-card-header-border-color"
+      ],
+      "alpha": [
+        1.0
+      ],
+      "observedOnSite": false,
+      "neutral": true
+    },
+    {
+      "hex": "#9AE9FF",
+      "count": 0,
+      "roles": [],
+      "sources": [
+        "REPO-01:src/styles/_admin-base.scss#L15"
+      ],
+      "codeNames": [
+        "$ad-blue-color-2"
+      ],
+      "alpha": [
+        1.0
+      ],
+      "observedOnSite": false,
+      "neutral": false
+    },
+    {
+      "hex": "#B4B2B7",
+      "count": 0,
+      "roles": [],
+      "sources": [
+        "REPO-01:src/styles/_admin-base.scss#L9"
+      ],
+      "codeNames": [
+        "$ad-text-color-placeholder"
+      ],
+      "alpha": [
+        1.0
+      ],
+      "observedOnSite": false,
+      "neutral": true
+    },
+    {
+      "hex": "#B4B4B4",
+      "count": 0,
+      "roles": [],
+      "sources": [
+        "REPO-01:src/styles/_user-base.scss#L23"
+      ],
+      "codeNames": [
+        "$popup-backdrop-color"
+      ],
+      "alpha": [
+        0.2
+      ],
+      "observedOnSite": false,
+      "neutral": true
+    },
+    {
+      "hex": "#CAF0F8",
+      "count": 0,
+      "roles": [],
+      "sources": [
+        "REPO-01:src/styles/_admin-base.scss#L34"
+      ],
+      "codeNames": [
+        "$ad-highlight-color"
+      ],
+      "alpha": [
+        1.0
+      ],
+      "observedOnSite": false,
+      "neutral": false
+    },
+    {
+      "hex": "#D9D9D9",
+      "count": 0,
+      "roles": [],
+      "sources": [
+        "REPO-01:src/styles/_admin-base.scss#L11",
+        "REPO-01:src/styles/_admin-base.scss#L13",
+        "REPO-01:src/styles/_user-base.scss#L14"
+      ],
+      "codeNames": [
+        "$ad-line-color",
+        "$ad-disable-bg",
+        "$disable-bg"
+      ],
+      "alpha": [
+        1.0
+      ],
+      "observedOnSite": false,
+      "neutral": true
+    },
+    {
+      "hex": "#D9DDE1",
+      "count": 0,
+      "roles": [],
+      "sources": [
+        "REPO-01:src/styles/_admin-base.scss#L12"
+      ],
+      "codeNames": [
+        "$ad-disable-color"
+      ],
+      "alpha": [
+        1.0
+      ],
+      "observedOnSite": false,
+      "neutral": true
+    },
+    {
+      "hex": "#DC0404",
+      "count": 0,
+      "roles": [],
+      "sources": [
+        "REPO-01:src/styles/_admin-base.scss#L17",
+        "REPO-01:src/styles/_user-base.scss#L10"
+      ],
+      "codeNames": [
+        "$ad-red-color",
+        "$red-color"
+      ],
+      "alpha": [
+        1.0
+      ],
+      "observedOnSite": false,
+      "neutral": false
+    },
+    {
+      "hex": "#E0F4CB",
+      "count": 0,
+      "roles": [],
+      "sources": [
+        "REPO-01:src/styles/_admin-base.scss#L19"
+      ],
+      "codeNames": [
+        "$ad-green-color-2"
+      ],
+      "alpha": [
+        1.0
+      ],
+      "observedOnSite": false,
+      "neutral": false
+    },
+    {
+      "hex": "#E9FAFF",
+      "count": 0,
+      "roles": [],
+      "sources": [
+        "REPO-01:src/styles/_admin-base.scss#L16"
+      ],
+      "codeNames": [
+        "$ad-blue-color-3"
+      ],
+      "alpha": [
+        1.0
+      ],
+      "observedOnSite": false,
+      "neutral": true
+    },
+    {
+      "hex": "#EF4444",
+      "count": 0,
+      "roles": [],
+      "sources": [
+        "REPO-01:src/styles/_variables.scss#L10"
+      ],
+      "codeNames": [
+        "$red-color"
+      ],
+      "alpha": [
+        1.0
+      ],
+      "observedOnSite": false,
+      "neutral": false
+    },
+    {
+      "hex": "#F3F4F6",
+      "count": 0,
+      "roles": [],
+      "sources": [
+        "REPO-01:src/styles/_variables.scss#L13"
+      ],
+      "codeNames": [
+        "$back-hover-color"
+      ],
+      "alpha": [
+        1.0
+      ],
+      "observedOnSite": false,
+      "neutral": true
+    },
+    {
+      "hex": "#F3FAFF",
+      "count": 0,
+      "roles": [],
+      "sources": [
+        "REPO-01:src/styles/_user-base.scss#L16"
+      ],
+      "codeNames": [
+        "$item-bg"
+      ],
+      "alpha": [
+        1.0
+      ],
+      "observedOnSite": false,
+      "neutral": true
+    },
+    {
+      "hex": "#F4FAFF",
+      "count": 0,
+      "roles": [],
+      "sources": [
+        "REPO-01:src/styles/_admin-base.scss#L29",
+        "REPO-01:src/styles/_user-base.scss#L17",
+        "REPO-01:src/styles/_user-base.scss#L26"
+      ],
+      "codeNames": [
+        "$ad-bg",
+        "$bar-bg",
+        "$blue-card-color"
+      ],
+      "alpha": [
+        1.0
+      ],
+      "observedOnSite": false,
+      "neutral": true
+    },
+    {
+      "hex": "#F5F5F5",
+      "count": 0,
+      "roles": [],
+      "sources": [
+        "REPO-01:src/styles/_admin-base.scss#L10"
+      ],
+      "codeNames": [
+        "$ad-white-color"
+      ],
+      "alpha": [
+        1.0
+      ],
+      "observedOnSite": false,
+      "neutral": true
+    },
+    {
+      "hex": "#FA003E",
+      "count": 0,
+      "roles": [],
+      "sources": [
+        "REPO-01:src/styles/_variables.scss#L6"
+      ],
+      "codeNames": [
+        "$negative-color"
+      ],
+      "alpha": [
+        1.0
+      ],
+      "observedOnSite": false,
+      "neutral": false
+    },
+    {
+      "hex": "#FAFAFA",
+      "count": 0,
+      "roles": [],
+      "sources": [
+        "REPO-01:src/styles/_user-base.scss#L18"
+      ],
+      "codeNames": [
+        "$bar-bg-gray"
+      ],
+      "alpha": [
+        1.0
+      ],
+      "observedOnSite": false,
+      "neutral": true
+    },
+    {
+      "hex": "#FF3F7A",
+      "count": 0,
+      "roles": [],
+      "sources": [
+        "REPO-01:src/styles/_admin-base.scss#L24"
+      ],
+      "codeNames": [
+        "$ad-pink-color"
+      ],
+      "alpha": [
+        1.0
+      ],
+      "observedOnSite": false,
+      "neutral": false
+    },
+    {
+      "hex": "#FF8100",
+      "count": 0,
+      "roles": [],
+      "sources": [
+        "REPO-01:src/styles/_admin-base.scss#L20"
+      ],
+      "codeNames": [
+        "$ad-orange-color"
+      ],
+      "alpha": [
+        1.0
+      ],
+      "observedOnSite": false,
+      "neutral": false
+    },
+    {
+      "hex": "#FF8E8E",
+      "count": 0,
+      "roles": [],
+      "sources": [
+        "REPO-01:src/styles/_variables.scss#L7"
+      ],
+      "codeNames": [
+        "$negative-color-light"
+      ],
+      "alpha": [
+        1.0
+      ],
+      "observedOnSite": false,
+      "neutral": false
+    },
+    {
+      "hex": "#FFD098",
+      "count": 0,
+      "roles": [],
+      "sources": [
+        "REPO-01:src/styles/_admin-base.scss#L21"
+      ],
+      "codeNames": [
+        "$ad-orange-color-2"
+      ],
+      "alpha": [
+        1.0
+      ],
+      "observedOnSite": false,
+      "neutral": false
+    },
+    {
+      "hex": "#FFD4D5",
+      "count": 0,
+      "roles": [],
+      "sources": [
+        "REPO-01:src/styles/_admin-base.scss#L25"
+      ],
+      "codeNames": [
+        "$ad-pink-color-2"
+      ],
+      "alpha": [
+        1.0
+      ],
+      "observedOnSite": false,
+      "neutral": false
+    },
+    {
+      "hex": "#FFE732",
+      "count": 0,
+      "roles": [],
+      "sources": [
+        "REPO-01:src/styles/_admin-base.scss#L22",
+        "REPO-01:src/styles/_user-base.scss#L7"
+      ],
+      "codeNames": [
+        "$ad-yellow-color",
+        "$text-highlight-color"
+      ],
+      "alpha": [
+        1.0
+      ],
+      "observedOnSite": false,
+      "neutral": false
+    },
+    {
+      "hex": "#FFF8E0",
+      "count": 0,
+      "roles": [],
+      "sources": [
+        "REPO-01:src/styles/_user-base.scss#L25"
+      ],
+      "codeNames": [
+        "$yellow-card-color"
+      ],
+      "alpha": [
+        1.0
+      ],
+      "observedOnSite": false,
+      "neutral": false
+    },
+    {
+      "hex": "#FFFBBF",
+      "count": 0,
+      "roles": [],
+      "sources": [
+        "REPO-01:src/styles/_admin-base.scss#L23"
+      ],
+      "codeNames": [
+        "$ad-yellow-color-2"
+      ],
+      "alpha": [
+        1.0
+      ],
+      "observedOnSite": false,
+      "neutral": false
+    },
+    {
+      "hex": "#FFFBF8",
+      "count": 0,
+      "roles": [],
+      "sources": [
+        "REPO-01:src/styles/_user-base.scss#L15"
+      ],
+      "codeNames": [
+        "$side-bar-bg"
+      ],
+      "alpha": [
+        1.0
+      ],
+      "observedOnSite": false,
+      "neutral": true
+    },
+    {
+      "hex": "#FFFFFF",
+      "count": 0,
+      "roles": [],
+      "sources": [
+        "REPO-01:src/styles/_variables.scss#L9",
+        "REPO-01:src/styles/_admin-base.scss#L31",
+        "REPO-01:src/styles/_user-base.scss#L12",
+        "REPO-01:src/styles/_user-base.scss#L22"
+      ],
+      "codeNames": [
+        "$white-color",
+        "$ad-button-text-color",
+        "$button-text-color"
+      ],
+      "alpha": [
+        1.0
+      ],
+      "observedOnSite": false,
+      "neutral": true
+    }
+  ],
+  "primaryCandidates": [],
+  "fonts": [
+    {
+      "family": "\"Courier New\", monospace",
+      "count": 1,
+      "roles": [],
+      "sources": [
+        "REPO-01:src/components/BarcodeScanner/barcode-scanner.styles.tsx#L210"
+      ],
+      "primary": "Courier New",
+      "names": [
+        "Courier New",
+        "monospace"
+      ]
+    },
+    {
+      "family": "\"Noto Sans JP\", sans-serif",
+      "count": 1,
+      "roles": [],
+      "sources": [
+        "REPO-01:src/components/BarcodeScanner/barcode-scanner.styles.tsx#L113"
+      ],
+      "primary": "Noto Sans JP",
+      "names": [
+        "Noto Sans JP",
+        "sans-serif"
+      ]
+    },
+    {
+      "family": "\"ヒラギノ角ゴ Pro W3\", \"Hiragino Kaku Gothic Pro\", \"メイリオ\", \"Meiryo\", \"Helvetica Neue\", \"Helvetica\", \"Arial\", \"verdana\", \"Osaka\",",
+      "count": 1,
+      "roles": [],
+      "sources": [
+        "REPO-01:src/styles/_variables.scss#L17"
+      ],
+      "primary": "ヒラギノ角ゴ Pro W3",
+      "names": [
+        "ヒラギノ角ゴ Pro W3",
+        "Hiragino Kaku Gothic Pro",
+        "メイリオ",
+        "Meiryo",
+        "Helvetica Neue",
+        "Helvetica",
+        "Arial",
+        "verdana",
+        "Osaka"
+      ]
+    },
+    {
+      "family": "Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,",
+      "count": 1,
+      "roles": [],
+      "sources": [
+        "REPO-01:src/styles/index.module.scss#L48"
+      ],
+      "primary": "Menlo",
+      "names": [
+        "Menlo",
+        "Monaco",
+        "Lucida Console",
+        "Liberation Mono",
+        "DejaVu Sans Mono"
+      ]
+    }
+  ],
+  "fontSizes": [
+    {
+      "value": "0.8rem",
+      "count": 1,
+      "roles": [
+        "code:$font-size-xxxxsmall"
+      ],
+      "sources": [
+        "REPO-01:src/styles/_variables.scss#L33"
+      ]
+    },
+    {
+      "value": "1.1rem",
+      "count": 1,
+      "roles": [
+        "code:$font-size-xxsmall"
+      ],
+      "sources": [
+        "REPO-01:src/styles/_variables.scss#L31"
+      ]
+    },
+    {
+      "value": "1.2rem",
+      "count": 1,
+      "roles": [
+        "code:$font-size-xsmall"
+      ],
+      "sources": [
+        "REPO-01:src/styles/_variables.scss#L30"
+      ]
+    },
+    {
+      "value": "1.3rem",
+      "count": 1,
+      "roles": [
+        "code:$font-size-small"
+      ],
+      "sources": [
+        "REPO-01:src/styles/_variables.scss#L29"
+      ]
+    },
+    {
+      "value": "1.4rem",
+      "count": 1,
+      "roles": [
+        "code:$font-size-medium"
+      ],
+      "sources": [
+        "REPO-01:src/styles/_variables.scss#L28"
+      ]
+    },
+    {
+      "value": "1.6rem",
+      "count": 1,
+      "roles": [
+        "code:$font-size-large"
+      ],
+      "sources": [
+        "REPO-01:src/styles/_variables.scss#L27"
+      ]
+    },
+    {
+      "value": "1.8rem",
+      "count": 1,
+      "roles": [
+        "code:$font-size-xlarge"
+      ],
+      "sources": [
+        "REPO-01:src/styles/_variables.scss#L26"
+      ]
+    },
+    {
+      "value": "1rem",
+      "count": 1,
+      "roles": [
+        "code:$font-size-xxxsmall"
+      ],
+      "sources": [
+        "REPO-01:src/styles/_variables.scss#L32"
+      ]
+    },
+    {
+      "value": "2.2rem",
+      "count": 1,
+      "roles": [
+        "code:$font-size-xxxlarge"
+      ],
+      "sources": [
+        "REPO-01:src/styles/_variables.scss#L24"
+      ]
+    },
+    {
+      "value": "2.4rem",
+      "count": 1,
+      "roles": [
+        "code:$font-size-xxxxlarge"
+      ],
+      "sources": [
+        "REPO-01:src/styles/_variables.scss#L23"
+      ]
+    },
+    {
+      "value": "2rem",
+      "count": 1,
+      "roles": [
+        "code:$font-size-xxlarge"
+      ],
+      "sources": [
+        "REPO-01:src/styles/_variables.scss#L25"
+      ]
+    }
+  ],
+  "fontWeights": [],
+  "lineHeights": [],
+  "radii": [],
+  "spacings": [],
+  "heights": [],
+  "shadows": [
+    {
+      "value": "none",
+      "count": 0,
+      "roles": [
+        "code:--tw-ring-shadow"
+      ],
+      "sources": [
+        "REPO-01:src/styles/_user-base.scss#L96"
+      ]
+    }
+  ],
+  "maxWidths": [],
+  "viewports": {},
+  "uiLabels": {},
+  "cssVars": [
+    {
+      "name": "$remSize",
+      "value": "$size / $pixels-for-a-rem",
+      "kind": "scss-var",
+      "category": null,
+      "source": "REPO-01:src/styles/_functions.scss#L4"
+    },
+    {
+      "name": "$primary-color",
+      "value": "#11065e",
+      "kind": "scss-var",
+      "category": "colors",
+      "source": "REPO-01:src/styles/_variables.scss#L2"
+    },
+    {
+      "name": "$secondary-color",
+      "value": "#17c1ce",
+      "kind": "scss-var",
+      "category": "colors",
+      "source": "REPO-01:src/styles/_variables.scss#L3"
+    },
+    {
+      "name": "$positive-color",
+      "value": "#00a63c",
+      "kind": "scss-var",
+      "category": "colors",
+      "source": "REPO-01:src/styles/_variables.scss#L4"
+    },
+    {
+      "name": "$positive-color-light",
+      "value": "#11caa1",
+      "kind": "scss-var",
+      "category": "colors",
+      "source": "REPO-01:src/styles/_variables.scss#L5"
+    },
+    {
+      "name": "$negative-color",
+      "value": "#fa003e",
+      "kind": "scss-var",
+      "category": "colors",
+      "source": "REPO-01:src/styles/_variables.scss#L6"
+    },
+    {
+      "name": "$negative-color-light",
+      "value": "#ff8e8e",
+      "kind": "scss-var",
+      "category": "colors",
+      "source": "REPO-01:src/styles/_variables.scss#L7"
+    },
+    {
+      "name": "$black-color",
+      "value": "#000000",
+      "kind": "scss-var",
+      "category": "colors",
+      "source": "REPO-01:src/styles/_variables.scss#L8"
+    },
+    {
+      "name": "$white-color",
+      "value": "#ffffff",
+      "kind": "scss-var",
+      "category": "colors",
+      "source": "REPO-01:src/styles/_variables.scss#L9"
+    },
+    {
+      "name": "$red-color",
+      "value": "#ef4444",
+      "kind": "scss-var",
+      "category": "colors",
+      "source": "REPO-01:src/styles/_variables.scss#L10"
+    },
+    {
+      "name": "$submit-color",
+      "value": "#505050",
+      "kind": "scss-var",
+      "category": "colors",
+      "source": "REPO-01:src/styles/_variables.scss#L11"
+    },
+    {
+      "name": "$submit-hover-color",
+      "value": "#3f3f46",
+      "kind": "scss-var",
+      "category": "colors",
+      "source": "REPO-01:src/styles/_variables.scss#L12"
+    },
+    {
+      "name": "$back-hover-color",
+      "value": "#f3f4f6",
+      "kind": "scss-var",
+      "category": "colors",
+      "source": "REPO-01:src/styles/_variables.scss#L13"
+    },
+    {
+      "name": "$header-black-color",
+      "value": "#242424",
+      "kind": "scss-var",
+      "category": "colors",
+      "source": "REPO-01:src/styles/_variables.scss#L14"
+    },
+    {
+      "name": "$primary-font",
+      "value": "\"ヒラギノ角ゴ Pro W3\", \"Hiragino Kaku Gothic Pro\", \"メイリオ\", \"Meiryo\", \"Helvetica Neue\", \"Helvetica\", \"Arial\", \"verdana\", \"Osaka",
+      "kind": "scss-var",
+      "category": "fonts",
+      "source": "REPO-01:src/styles/_variables.scss#L17"
+    },
+    {
+      "name": "$pixels-for-a-rem",
+      "value": "10px",
+      "kind": "scss-var",
+      "category": null,
+      "source": "REPO-01:src/styles/_variables.scss#L21"
+    },
+    {
+      "name": "$font-size-xxxxlarge",
+      "value": "2.4rem",
+      "kind": "scss-var",
+      "category": "fontSizes",
+      "source": "REPO-01:src/styles/_variables.scss#L23"
+    },
+    {
+      "name": "$font-size-xxxlarge",
+      "value": "2.2rem",
+      "kind": "scss-var",
+      "category": "fontSizes",
+      "source": "REPO-01:src/styles/_variables.scss#L24"
+    },
+    {
+      "name": "$font-size-xxlarge",
+      "value": "2rem",
+      "kind": "scss-var",
+      "category": "fontSizes",
+      "source": "REPO-01:src/styles/_variables.scss#L25"
+    },
+    {
+      "name": "$font-size-xlarge",
+      "value": "1.8rem",
+      "kind": "scss-var",
+      "category": "fontSizes",
+      "source": "REPO-01:src/styles/_variables.scss#L26"
+    },
+    {
+      "name": "$font-size-large",
+      "value": "1.6rem",
+      "kind": "scss-var",
+      "category": "fontSizes",
+      "source": "REPO-01:src/styles/_variables.scss#L27"
+    },
+    {
+      "name": "$font-size-medium",
+      "value": "1.4rem",
+      "kind": "scss-var",
+      "category": "fontSizes",
+      "source": "REPO-01:src/styles/_variables.scss#L28"
+    },
+    {
+      "name": "$font-size-small",
+      "value": "1.3rem",
+      "kind": "scss-var",
+      "category": "fontSizes",
+      "source": "REPO-01:src/styles/_variables.scss#L29"
+    },
+    {
+      "name": "$font-size-xsmall",
+      "value": "1.2rem",
+      "kind": "scss-var",
+      "category": "fontSizes",
+      "source": "REPO-01:src/styles/_variables.scss#L30"
+    },
+    {
+      "name": "$font-size-xxsmall",
+      "value": "1.1rem",
+      "kind": "scss-var",
+      "category": "fontSizes",
+      "source": "REPO-01:src/styles/_variables.scss#L31"
+    },
+    {
+      "name": "$font-size-xxxsmall",
+      "value": "1rem",
+      "kind": "scss-var",
+      "category": "fontSizes",
+      "source": "REPO-01:src/styles/_variables.scss#L32"
+    },
+    {
+      "name": "$font-size-xxxxsmall",
+      "value": "0.8rem",
+      "kind": "scss-var",
+      "category": "fontSizes",
+      "source": "REPO-01:src/styles/_variables.scss#L33"
+    },
+    {
+      "name": "$font-size-default",
+      "value": "$font-size-medium",
+      "kind": "scss-var",
+      "category": "fontSizes",
+      "source": "REPO-01:src/styles/_variables.scss#L35"
+    },
+    {
+      "name": "$grid-breakpoints",
+      "value": "(",
+      "kind": "scss-var",
+      "category": null,
+      "source": "REPO-01:src/styles/_variables.scss#L38"
+    },
+    {
+      "name": "$device-breakpoints",
+      "value": "(",
+      "kind": "scss-var",
+      "category": null,
+      "source": "REPO-01:src/styles/_variables.scss#L46"
+    },
+    {
+      "name": "$orientation-landscape",
+      "value": "landscape",
+      "kind": "scss-var",
+      "category": null,
+      "source": "REPO-01:src/styles/_variables.scss#L54"
+    },
+    {
+      "name": "$orientation-portrait",
+      "value": "portrait",
+      "kind": "scss-var",
+      "category": null,
+      "source": "REPO-01:src/styles/_variables.scss#L55"
+    },
+    {
+      "name": "$ad-text-color",
+      "value": "#262627",
+      "kind": "scss-var",
+      "category": "colors",
+      "source": "REPO-01:src/styles/_admin-base.scss#L6"
+    },
+    {
+      "name": "$ad-text-color-2",
+      "value": "#676767",
+      "kind": "scss-var",
+      "category": "colors",
+      "source": "REPO-01:src/styles/_admin-base.scss#L7"
+    },
+    {
+      "name": "$ad-text-color-3",
+      "value": "#313035",
+      "kind": "scss-var",
+      "category": "colors",
+      "source": "REPO-01:src/styles/_admin-base.scss#L8"
+    },
+    {
+      "name": "$ad-text-color-placeholder",
+      "value": "#b4b2b7",
+      "kind": "scss-var",
+      "category": "colors",
+      "source": "REPO-01:src/styles/_admin-base.scss#L9"
+    },
+    {
+      "name": "$ad-white-color",
+      "value": "#f5f5f5",
+      "kind": "scss-var",
+      "category": "colors",
+      "source": "REPO-01:src/styles/_admin-base.scss#L10"
+    },
+    {
+      "name": "$ad-line-color",
+      "value": "#d9d9d9",
+      "kind": "scss-var",
+      "category": "colors",
+      "source": "REPO-01:src/styles/_admin-base.scss#L11"
+    },
+    {
+      "name": "$ad-disable-color",
+      "value": "#d9dde1",
+      "kind": "scss-var",
+      "category": "colors",
+      "source": "REPO-01:src/styles/_admin-base.scss#L12"
+    },
+    {
+      "name": "$ad-disable-bg",
+      "value": "#d9d9d9",
+      "kind": "scss-var",
+      "category": "colors",
+      "source": "REPO-01:src/styles/_admin-base.scss#L13"
+    },
+    {
+      "name": "$ad-blue-color",
+      "value": "#006dc6",
+      "kind": "scss-var",
+      "category": "colors",
+      "source": "REPO-01:src/styles/_admin-base.scss#L14"
+    },
+    {
+      "name": "$ad-blue-color-2",
+      "value": "#9ae9ff",
+      "kind": "scss-var",
+      "category": "colors",
+      "source": "REPO-01:src/styles/_admin-base.scss#L15"
+    },
+    {
+      "name": "$ad-blue-color-3",
+      "value": "#e9faff",
+      "kind": "scss-var",
+      "category": "colors",
+      "source": "REPO-01:src/styles/_admin-base.scss#L16"
+    },
+    {
+      "name": "$ad-red-color",
+      "value": "#dc0404",
+      "kind": "scss-var",
+      "category": "colors",
+      "source": "REPO-01:src/styles/_admin-base.scss#L17"
+    },
+    {
+      "name": "$ad-green-color",
+      "value": "#92e4cd",
+      "kind": "scss-var",
+      "category": "colors",
+      "source": "REPO-01:src/styles/_admin-base.scss#L18"
+    },
+    {
+      "name": "$ad-green-color-2",
+      "value": "#e0f4cb",
+      "kind": "scss-var",
+      "category": "colors",
+      "source": "REPO-01:src/styles/_admin-base.scss#L19"
+    },
+    {
+      "name": "$ad-orange-color",
+      "value": "#ff8100",
+      "kind": "scss-var",
+      "category": "colors",
+      "source": "REPO-01:src/styles/_admin-base.scss#L20"
+    },
+    {
+      "name": "$ad-orange-color-2",
+      "value": "#ffd098",
+      "kind": "scss-var",
+      "category": "colors",
+      "source": "REPO-01:src/styles/_admin-base.scss#L21"
+    },
+    {
+      "name": "$ad-yellow-color",
+      "value": "#ffe732",
+      "kind": "scss-var",
+      "category": "colors",
+      "source": "REPO-01:src/styles/_admin-base.scss#L22"
+    },
+    {
+      "name": "$ad-yellow-color-2",
+      "value": "#fffbbf",
+      "kind": "scss-var",
+      "category": "colors",
+      "source": "REPO-01:src/styles/_admin-base.scss#L23"
+    },
+    {
+      "name": "$ad-pink-color",
+      "value": "#ff3f7a",
+      "kind": "scss-var",
+      "category": "colors",
+      "source": "REPO-01:src/styles/_admin-base.scss#L24"
+    },
+    {
+      "name": "$ad-pink-color-2",
+      "value": "#ffd4d5",
+      "kind": "scss-var",
+      "category": "colors",
+      "source": "REPO-01:src/styles/_admin-base.scss#L25"
+    },
+    {
+      "name": "$ad-text-link",
+      "value": "#2cabf3",
+      "kind": "scss-var",
+      "category": "colors",
+      "source": "REPO-01:src/styles/_admin-base.scss#L26"
+    },
+    {
+      "name": "$ad-text-green-color",
+      "value": "#00b900",
+      "kind": "scss-var",
+      "category": "colors",
+      "source": "REPO-01:src/styles/_admin-base.scss#L27"
+    },
+    {
+      "name": "$ad-bg",
+      "value": "#f4faff",
+      "kind": "scss-var",
+      "category": "colors",
+      "source": "REPO-01:src/styles/_admin-base.scss#L29"
+    },
+    {
+      "name": "$ad-button-bg-color",
+      "value": "linear-gradient(180deg, #5aa7f2 0%, #006dc6 100%)",
+      "kind": "scss-var",
+      "category": "colors",
+      "source": "REPO-01:src/styles/_admin-base.scss#L30"
+    },
+    {
+      "name": "$ad-button-text-color",
+      "value": "#ffffff",
+      "kind": "scss-var",
+      "category": "colors",
+      "source": "REPO-01:src/styles/_admin-base.scss#L31"
+    },
+    {
+      "name": "$ad-button-side-bar-active-bg-color",
+      "value": "linear-gradient(270deg, #68b5ff 0%, #1a7dce 100%)",
+      "kind": "scss-var",
+      "category": "colors",
+      "source": "REPO-01:src/styles/_admin-base.scss#L32"
+    },
+    {
+      "name": "$ad-highlight-color",
+      "value": "#caf0f8",
+      "kind": "scss-var",
+      "category": "colors",
+      "source": "REPO-01:src/styles/_admin-base.scss#L34"
+    },
+    {
+      "name": "$text-color",
+      "value": "#313131",
+      "kind": "scss-var",
+      "category": "colors",
+      "source": "REPO-01:src/styles/_user-base.scss#L5"
+    },
+    {
+      "name": "$text-color-placeholder",
+      "value": "#979797",
+      "kind": "scss-var",
+      "category": "colors",
+      "source": "REPO-01:src/styles/_user-base.scss#L6"
+    },
+    {
+      "name": "$text-highlight-color",
+      "value": "#ffe732",
+      "kind": "scss-var",
+      "category": "colors",
+      "source": "REPO-01:src/styles/_user-base.scss#L7"
+    },
+    {
+      "name": "$blue-color",
+      "value": "#0068b7",
+      "kind": "scss-var",
+      "category": "colors",
+      "source": "REPO-01:src/styles/_user-base.scss#L8"
+    },
+    {
+      "name": "$blue-dark-color",
+      "value": "#167bd1",
+      "kind": "scss-var",
+      "category": "colors",
+      "source": "REPO-01:src/styles/_user-base.scss#L9"
+    },
+    {
+      "name": "$red-color",
+      "value": "#dc0404",
+      "kind": "scss-var",
+      "category": "colors",
+      "source": "REPO-01:src/styles/_user-base.scss#L10"
+    },
+    {
+      "name": "$disable-color",
+      "value": "#979797",
+      "kind": "scss-var",
+      "category": "colors",
+      "source": "REPO-01:src/styles/_user-base.scss#L11"
+    },
+    {
+      "name": "$white-color",
+      "value": "#ffffff",
+      "kind": "scss-var",
+      "category": "colors",
+      "source": "REPO-01:src/styles/_user-base.scss#L12"
+    },
+    {
+      "name": "$disable-bg",
+      "value": "#d9d9d9",
+      "kind": "scss-var",
+      "category": "colors",
+      "source": "REPO-01:src/styles/_user-base.scss#L14"
+    },
+    {
+      "name": "$side-bar-bg",
+      "value": "#fffbf8",
+      "kind": "scss-var",
+      "category": "colors",
+      "source": "REPO-01:src/styles/_user-base.scss#L15"
+    },
+    {
+      "name": "$item-bg",
+      "value": "#f3faff",
+      "kind": "scss-var",
+      "category": "colors",
+      "source": "REPO-01:src/styles/_user-base.scss#L16"
+    },
+    {
+      "name": "$bar-bg",
+      "value": "#f4faff",
+      "kind": "scss-var",
+      "category": "colors",
+      "source": "REPO-01:src/styles/_user-base.scss#L17"
+    },
+    {
+      "name": "$bar-bg-gray",
+      "value": "#fafafa",
+      "kind": "scss-var",
+      "category": "colors",
+      "source": "REPO-01:src/styles/_user-base.scss#L18"
+    },
+    {
+      "name": "$radio-blue-color",
+      "value": "#92e4cd",
+      "kind": "scss-var",
+      "category": "colors",
+      "source": "REPO-01:src/styles/_user-base.scss#L19"
+    },
+    {
+      "name": "$button-bg-color",
+      "value": "#0068b7",
+      "kind": "scss-var",
+      "category": "colors",
+      "source": "REPO-01:src/styles/_user-base.scss#L21"
+    },
+    {
+      "name": "$button-text-color",
+      "value": "#ffffff",
+      "kind": "scss-var",
+      "category": "colors",
+      "source": "REPO-01:src/styles/_user-base.scss#L22"
+    },
+    {
+      "name": "$popup-backdrop-color",
+      "value": "rgba(180, 180, 180, 0.2)",
+      "kind": "scss-var",
+      "category": "colors",
+      "source": "REPO-01:src/styles/_user-base.scss#L23"
+    },
+    {
+      "name": "$yellow-card-color",
+      "value": "#FFF8E0",
+      "kind": "scss-var",
+      "category": "colors",
+      "source": "REPO-01:src/styles/_user-base.scss#L25"
+    },
+    {
+      "name": "$blue-card-color",
+      "value": "#f4faff",
+      "kind": "scss-var",
+      "category": "colors",
+      "source": "REPO-01:src/styles/_user-base.scss#L26"
+    },
+    {
+      "name": "$blue-card-header-border-color",
+      "value": "#979797",
+      "kind": "scss-var",
+      "category": "colors",
+      "source": "REPO-01:src/styles/_user-base.scss#L27"
+    },
+    {
+      "name": "--tw-ring-shadow",
+      "value": "none",
+      "kind": "css-var",
+      "category": "shadows",
+      "source": "REPO-01:src/styles/_user-base.scss#L96"
+    },
+    {
+      "name": "$remSize",
+      "value": "$size / $pixels-for-a-rem",
+      "kind": "scss-var",
+      "category": null,
+      "source": "REPO-01:src/styles/_functions.scss#L4"
+    },
+    {
+      "name": "$primary-color",
+      "value": "#11065e",
+      "kind": "scss-var",
+      "category": "colors",
+      "source": "REPO-01:src/styles/_variables.scss#L2"
+    },
+    {
+      "name": "$secondary-color",
+      "value": "#17c1ce",
+      "kind": "scss-var",
+      "category": "colors",
+      "source": "REPO-01:src/styles/_variables.scss#L3"
+    },
+    {
+      "name": "$positive-color",
+      "value": "#00a63c",
+      "kind": "scss-var",
+      "category": "colors",
+      "source": "REPO-01:src/styles/_variables.scss#L4"
+    },
+    {
+      "name": "$positive-color-light",
+      "value": "#11caa1",
+      "kind": "scss-var",
+      "category": "colors",
+      "source": "REPO-01:src/styles/_variables.scss#L5"
+    },
+    {
+      "name": "$negative-color",
+      "value": "#fa003e",
+      "kind": "scss-var",
+      "category": "colors",
+      "source": "REPO-01:src/styles/_variables.scss#L6"
+    },
+    {
+      "name": "$negative-color-light",
+      "value": "#ff8e8e",
+      "kind": "scss-var",
+      "category": "colors",
+      "source": "REPO-01:src/styles/_variables.scss#L7"
+    },
+    {
+      "name": "$black-color",
+      "value": "#000000",
+      "kind": "scss-var",
+      "category": "colors",
+      "source": "REPO-01:src/styles/_variables.scss#L8"
+    },
+    {
+      "name": "$white-color",
+      "value": "#ffffff",
+      "kind": "scss-var",
+      "category": "colors",
+      "source": "REPO-01:src/styles/_variables.scss#L9"
+    },
+    {
+      "name": "$red-color",
+      "value": "#ef4444",
+      "kind": "scss-var",
+      "category": "colors",
+      "source": "REPO-01:src/styles/_variables.scss#L10"
+    },
+    {
+      "name": "$submit-color",
+      "value": "#505050",
+      "kind": "scss-var",
+      "category": "colors",
+      "source": "REPO-01:src/styles/_variables.scss#L11"
+    },
+    {
+      "name": "$submit-hover-color",
+      "value": "#3f3f46",
+      "kind": "scss-var",
+      "category": "colors",
+      "source": "REPO-01:src/styles/_variables.scss#L12"
+    },
+    {
+      "name": "$back-hover-color",
+      "value": "#f3f4f6",
+      "kind": "scss-var",
+      "category": "colors",
+      "source": "REPO-01:src/styles/_variables.scss#L13"
+    },
+    {
+      "name": "$header-black-color",
+      "value": "#242424",
+      "kind": "scss-var",
+      "category": "colors",
+      "source": "REPO-01:src/styles/_variables.scss#L14"
+    },
+    {
+      "name": "$primary-font",
+      "value": "\"ヒラギノ角ゴ Pro W3\", \"Hiragino Kaku Gothic Pro\", \"メイリオ\", \"Meiryo\", \"Helvetica Neue\", \"Helvetica\", \"Arial\", \"verdana\", \"Osaka",
+      "kind": "scss-var",
+      "category": "fonts",
+      "source": "REPO-01:src/styles/_variables.scss#L17"
+    },
+    {
+      "name": "$pixels-for-a-rem",
+      "value": "10px",
+      "kind": "scss-var",
+      "category": null,
+      "source": "REPO-01:src/styles/_variables.scss#L21"
+    },
+    {
+      "name": "$font-size-xxxxlarge",
+      "value": "2.4rem",
+      "kind": "scss-var",
+      "category": "fontSizes",
+      "source": "REPO-01:src/styles/_variables.scss#L23"
+    },
+    {
+      "name": "$font-size-xxxlarge",
+      "value": "2.2rem",
+      "kind": "scss-var",
+      "category": "fontSizes",
+      "source": "REPO-01:src/styles/_variables.scss#L24"
+    },
+    {
+      "name": "$font-size-xxlarge",
+      "value": "2rem",
+      "kind": "scss-var",
+      "category": "fontSizes",
+      "source": "REPO-01:src/styles/_variables.scss#L25"
+    },
+    {
+      "name": "$font-size-xlarge",
+      "value": "1.8rem",
+      "kind": "scss-var",
+      "category": "fontSizes",
+      "source": "REPO-01:src/styles/_variables.scss#L26"
+    },
+    {
+      "name": "$font-size-large",
+      "value": "1.6rem",
+      "kind": "scss-var",
+      "category": "fontSizes",
+      "source": "REPO-01:src/styles/_variables.scss#L27"
+    },
+    {
+      "name": "$font-size-medium",
+      "value": "1.4rem",
+      "kind": "scss-var",
+      "category": "fontSizes",
+      "source": "REPO-01:src/styles/_variables.scss#L28"
+    },
+    {
+      "name": "$font-size-small",
+      "value": "1.3rem",
+      "kind": "scss-var",
+      "category": "fontSizes",
+      "source": "REPO-01:src/styles/_variables.scss#L29"
+    },
+    {
+      "name": "$font-size-xsmall",
+      "value": "1.2rem",
+      "kind": "scss-var",
+      "category": "fontSizes",
+      "source": "REPO-01:src/styles/_variables.scss#L30"
+    },
+    {
+      "name": "$font-size-xxsmall",
+      "value": "1.1rem",
+      "kind": "scss-var",
+      "category": "fontSizes",
+      "source": "REPO-01:src/styles/_variables.scss#L31"
+    },
+    {
+      "name": "$font-size-xxxsmall",
+      "value": "1rem",
+      "kind": "scss-var",
+      "category": "fontSizes",
+      "source": "REPO-01:src/styles/_variables.scss#L32"
+    },
+    {
+      "name": "$font-size-xxxxsmall",
+      "value": "0.8rem",
+      "kind": "scss-var",
+      "category": "fontSizes",
+      "source": "REPO-01:src/styles/_variables.scss#L33"
+    },
+    {
+      "name": "$font-size-default",
+      "value": "$font-size-medium",
+      "kind": "scss-var",
+      "category": "fontSizes",
+      "source": "REPO-01:src/styles/_variables.scss#L35"
+    },
+    {
+      "name": "$grid-breakpoints",
+      "value": "(",
+      "kind": "scss-var",
+      "category": null,
+      "source": "REPO-01:src/styles/_variables.scss#L38"
+    },
+    {
+      "name": "$device-breakpoints",
+      "value": "(",
+      "kind": "scss-var",
+      "category": null,
+      "source": "REPO-01:src/styles/_variables.scss#L46"
+    },
+    {
+      "name": "$orientation-landscape",
+      "value": "landscape",
+      "kind": "scss-var",
+      "category": null,
+      "source": "REPO-01:src/styles/_variables.scss#L54"
+    },
+    {
+      "name": "$orientation-portrait",
+      "value": "portrait",
+      "kind": "scss-var",
+      "category": null,
+      "source": "REPO-01:src/styles/_variables.scss#L55"
+    },
+    {
+      "name": "$ad-text-color",
+      "value": "#262627",
+      "kind": "scss-var",
+      "category": "colors",
+      "source": "REPO-01:src/styles/_admin-base.scss#L6"
+    },
+    {
+      "name": "$ad-text-color-2",
+      "value": "#676767",
+      "kind": "scss-var",
+      "category": "colors",
+      "source": "REPO-01:src/styles/_admin-base.scss#L7"
+    },
+    {
+      "name": "$ad-text-color-3",
+      "value": "#313035",
+      "kind": "scss-var",
+      "category": "colors",
+      "source": "REPO-01:src/styles/_admin-base.scss#L8"
+    },
+    {
+      "name": "$ad-text-color-placeholder",
+      "value": "#b4b2b7",
+      "kind": "scss-var",
+      "category": "colors",
+      "source": "REPO-01:src/styles/_admin-base.scss#L9"
+    },
+    {
+      "name": "$ad-white-color",
+      "value": "#f5f5f5",
+      "kind": "scss-var",
+      "category": "colors",
+      "source": "REPO-01:src/styles/_admin-base.scss#L10"
+    },
+    {
+      "name": "$ad-line-color",
+      "value": "#d9d9d9",
+      "kind": "scss-var",
+      "category": "colors",
+      "source": "REPO-01:src/styles/_admin-base.scss#L11"
+    },
+    {
+      "name": "$ad-disable-color",
+      "value": "#d9dde1",
+      "kind": "scss-var",
+      "category": "colors",
+      "source": "REPO-01:src/styles/_admin-base.scss#L12"
+    },
+    {
+      "name": "$ad-disable-bg",
+      "value": "#d9d9d9",
+      "kind": "scss-var",
+      "category": "colors",
+      "source": "REPO-01:src/styles/_admin-base.scss#L13"
+    },
+    {
+      "name": "$ad-blue-color",
+      "value": "#006dc6",
+      "kind": "scss-var",
+      "category": "colors",
+      "source": "REPO-01:src/styles/_admin-base.scss#L14"
+    },
+    {
+      "name": "$ad-blue-color-2",
+      "value": "#9ae9ff",
+      "kind": "scss-var",
+      "category": "colors",
+      "source": "REPO-01:src/styles/_admin-base.scss#L15"
+    },
+    {
+      "name": "$ad-blue-color-3",
+      "value": "#e9faff",
+      "kind": "scss-var",
+      "category": "colors",
+      "source": "REPO-01:src/styles/_admin-base.scss#L16"
+    },
+    {
+      "name": "$ad-red-color",
+      "value": "#dc0404",
+      "kind": "scss-var",
+      "category": "colors",
+      "source": "REPO-01:src/styles/_admin-base.scss#L17"
+    },
+    {
+      "name": "$ad-green-color",
+      "value": "#92e4cd",
+      "kind": "scss-var",
+      "category": "colors",
+      "source": "REPO-01:src/styles/_admin-base.scss#L18"
+    },
+    {
+      "name": "$ad-green-color-2",
+      "value": "#e0f4cb",
+      "kind": "scss-var",
+      "category": "colors",
+      "source": "REPO-01:src/styles/_admin-base.scss#L19"
+    },
+    {
+      "name": "$ad-orange-color",
+      "value": "#ff8100",
+      "kind": "scss-var",
+      "category": "colors",
+      "source": "REPO-01:src/styles/_admin-base.scss#L20"
+    },
+    {
+      "name": "$ad-orange-color-2",
+      "value": "#ffd098",
+      "kind": "scss-var",
+      "category": "colors",
+      "source": "REPO-01:src/styles/_admin-base.scss#L21"
+    },
+    {
+      "name": "$ad-yellow-color",
+      "value": "#ffe732",
+      "kind": "scss-var",
+      "category": "colors",
+      "source": "REPO-01:src/styles/_admin-base.scss#L22"
+    },
+    {
+      "name": "$ad-yellow-color-2",
+      "value": "#fffbbf",
+      "kind": "scss-var",
+      "category": "colors",
+      "source": "REPO-01:src/styles/_admin-base.scss#L23"
+    },
+    {
+      "name": "$ad-pink-color",
+      "value": "#ff3f7a",
+      "kind": "scss-var",
+      "category": "colors",
+      "source": "REPO-01:src/styles/_admin-base.scss#L24"
+    },
+    {
+      "name": "$ad-pink-color-2",
+      "value": "#ffd4d5",
+      "kind": "scss-var",
+      "category": "colors",
+      "source": "REPO-01:src/styles/_admin-base.scss#L25"
+    },
+    {
+      "name": "$ad-text-link",
+      "value": "#2cabf3",
+      "kind": "scss-var",
+      "category": "colors",
+      "source": "REPO-01:src/styles/_admin-base.scss#L26"
+    },
+    {
+      "name": "$ad-text-green-color",
+      "value": "#00b900",
+      "kind": "scss-var",
+      "category": "colors",
+      "source": "REPO-01:src/styles/_admin-base.scss#L27"
+    },
+    {
+      "name": "$ad-bg",
+      "value": "#f4faff",
+      "kind": "scss-var",
+      "category": "colors",
+      "source": "REPO-01:src/styles/_admin-base.scss#L29"
+    },
+    {
+      "name": "$ad-button-bg-color",
+      "value": "linear-gradient(180deg, #5aa7f2 0%, #006dc6 100%)",
+      "kind": "scss-var",
+      "category": "colors",
+      "source": "REPO-01:src/styles/_admin-base.scss#L30"
+    },
+    {
+      "name": "$ad-button-text-color",
+      "value": "#ffffff",
+      "kind": "scss-var",
+      "category": "colors",
+      "source": "REPO-01:src/styles/_admin-base.scss#L31"
+    },
+    {
+      "name": "$ad-button-side-bar-active-bg-color",
+      "value": "linear-gradient(270deg, #68b5ff 0%, #1a7dce 100%)",
+      "kind": "scss-var",
+      "category": "colors",
+      "source": "REPO-01:src/styles/_admin-base.scss#L32"
+    },
+    {
+      "name": "$ad-highlight-color",
+      "value": "#caf0f8",
+      "kind": "scss-var",
+      "category": "colors",
+      "source": "REPO-01:src/styles/_admin-base.scss#L34"
+    },
+    {
+      "name": "$text-color",
+      "value": "#313131",
+      "kind": "scss-var",
+      "category": "colors",
+      "source": "REPO-01:src/styles/_user-base.scss#L5"
+    },
+    {
+      "name": "$text-color-placeholder",
+      "value": "#979797",
+      "kind": "scss-var",
+      "category": "colors",
+      "source": "REPO-01:src/styles/_user-base.scss#L6"
+    },
+    {
+      "name": "$text-highlight-color",
+      "value": "#ffe732",
+      "kind": "scss-var",
+      "category": "colors",
+      "source": "REPO-01:src/styles/_user-base.scss#L7"
+    },
+    {
+      "name": "$blue-color",
+      "value": "#0068b7",
+      "kind": "scss-var",
+      "category": "colors",
+      "source": "REPO-01:src/styles/_user-base.scss#L8"
+    },
+    {
+      "name": "$blue-dark-color",
+      "value": "#167bd1",
+      "kind": "scss-var",
+      "category": "colors",
+      "source": "REPO-01:src/styles/_user-base.scss#L9"
+    },
+    {
+      "name": "$red-color",
+      "value": "#dc0404",
+      "kind": "scss-var",
+      "category": "colors",
+      "source": "REPO-01:src/styles/_user-base.scss#L10"
+    },
+    {
+      "name": "$disable-color",
+      "value": "#979797",
+      "kind": "scss-var",
+      "category": "colors",
+      "source": "REPO-01:src/styles/_user-base.scss#L11"
+    },
+    {
+      "name": "$white-color",
+      "value": "#ffffff",
+      "kind": "scss-var",
+      "category": "colors",
+      "source": "REPO-01:src/styles/_user-base.scss#L12"
+    },
+    {
+      "name": "$disable-bg",
+      "value": "#d9d9d9",
+      "kind": "scss-var",
+      "category": "colors",
+      "source": "REPO-01:src/styles/_user-base.scss#L14"
+    },
+    {
+      "name": "$side-bar-bg",
+      "value": "#fffbf8",
+      "kind": "scss-var",
+      "category": "colors",
+      "source": "REPO-01:src/styles/_user-base.scss#L15"
+    },
+    {
+      "name": "$item-bg",
+      "value": "#f3faff",
+      "kind": "scss-var",
+      "category": "colors",
+      "source": "REPO-01:src/styles/_user-base.scss#L16"
+    },
+    {
+      "name": "$bar-bg",
+      "value": "#f4faff",
+      "kind": "scss-var",
+      "category": "colors",
+      "source": "REPO-01:src/styles/_user-base.scss#L17"
+    },
+    {
+      "name": "$bar-bg-gray",
+      "value": "#fafafa",
+      "kind": "scss-var",
+      "category": "colors",
+      "source": "REPO-01:src/styles/_user-base.scss#L18"
+    },
+    {
+      "name": "$radio-blue-color",
+      "value": "#92e4cd",
+      "kind": "scss-var",
+      "category": "colors",
+      "source": "REPO-01:src/styles/_user-base.scss#L19"
+    },
+    {
+      "name": "$button-bg-color",
+      "value": "#0068b7",
+      "kind": "scss-var",
+      "category": "colors",
+      "source": "REPO-01:src/styles/_user-base.scss#L21"
+    },
+    {
+      "name": "$button-text-color",
+      "value": "#ffffff",
+      "kind": "scss-var",
+      "category": "colors",
+      "source": "REPO-01:src/styles/_user-base.scss#L22"
+    },
+    {
+      "name": "$popup-backdrop-color",
+      "value": "rgba(180, 180, 180, 0.2)",
+      "kind": "scss-var",
+      "category": "colors",
+      "source": "REPO-01:src/styles/_user-base.scss#L23"
+    },
+    {
+      "name": "$yellow-card-color",
+      "value": "#FFF8E0",
+      "kind": "scss-var",
+      "category": "colors",
+      "source": "REPO-01:src/styles/_user-base.scss#L25"
+    },
+    {
+      "name": "$blue-card-color",
+      "value": "#f4faff",
+      "kind": "scss-var",
+      "category": "colors",
+      "source": "REPO-01:src/styles/_user-base.scss#L26"
+    },
+    {
+      "name": "$blue-card-header-border-color",
+      "value": "#979797",
+      "kind": "scss-var",
+      "category": "colors",
+      "source": "REPO-01:src/styles/_user-base.scss#L27"
+    },
+    {
+      "name": "--tw-ring-shadow",
+      "value": "none",
+      "kind": "css-var",
+      "category": "shadows",
+      "source": "REPO-01:src/styles/_user-base.scss#L96"
+    }
+  ],
+  "pages": [],
+  "typeStyles": [],
+  "components": {},
+  "perSite": {
+    "WEB-01": {
+      "observed": {
+        "colors": {
+          "#000000": [
+            1.0
+          ],
+          "#0068b7": [
+            1.0
+          ],
+          "#006dc6": [
+            1.0
+          ],
+          "#00a63c": [
+            1.0
+          ],
+          "#00b900": [
+            1.0
+          ],
+          "#11065e": [
+            1.0
+          ],
+          "#11caa1": [
+            1.0
+          ],
+          "#167bd1": [
+            1.0
+          ],
+          "#17c1ce": [
+            1.0
+          ],
+          "#242424": [
+            1.0
+          ],
+          "#262627": [
+            1.0
+          ],
+          "#2cabf3": [
+            1.0
+          ],
+          "#313035": [
+            1.0
+          ],
+          "#313131": [
+            1.0
+          ],
+          "#3f3f46": [
+            1.0
+          ],
+          "#505050": [
+            1.0
+          ],
+          "#5aa7f2": [
+            1.0
+          ],
+          "#676767": [
+            1.0
+          ],
+          "#68b5ff": [
+            1.0
+          ],
+          "#92e4cd": [
+            1.0
+          ],
+          "#979797": [
+            1.0
+          ],
+          "#9ae9ff": [
+            1.0
+          ],
+          "#b4b2b7": [
+            1.0
+          ],
+          "#b4b4b4": [
+            0.2
+          ],
+          "#caf0f8": [
+            1.0
+          ],
+          "#d9d9d9": [
+            1.0
+          ],
+          "#d9dde1": [
+            1.0
+          ],
+          "#dc0404": [
+            1.0
+          ],
+          "#e0f4cb": [
+            1.0
+          ],
+          "#e9faff": [
+            1.0
+          ],
+          "#ef4444": [
+            1.0
+          ],
+          "#f3f4f6": [
+            1.0
+          ],
+          "#f3faff": [
+            1.0
+          ],
+          "#f4faff": [
+            1.0
+          ],
+          "#f5f5f5": [
+            1.0
+          ],
+          "#fa003e": [
+            1.0
+          ],
+          "#fafafa": [
+            1.0
+          ],
+          "#ff3f7a": [
+            1.0
+          ],
+          "#ff8100": [
+            1.0
+          ],
+          "#ff8e8e": [
+            1.0
+          ],
+          "#ffd098": [
+            1.0
+          ],
+          "#ffd4d5": [
+            1.0
+          ],
+          "#ffe732": [
+            1.0
+          ],
+          "#fff8e0": [
+            1.0
+          ],
+          "#fffbbf": [
+            1.0
+          ],
+          "#fffbf8": [
+            1.0
+          ],
+          "#ffffff": [
+            1.0
+          ]
+        },
+        "fontNames": [
+          "arial",
+          "courier new",
+          "dejavu sans mono",
+          "helvetica",
+          "helvetica neue",
+          "hiragino kaku gothic pro",
+          "liberation mono",
+          "lucida console",
+          "meiryo",
+          "menlo",
+          "monaco",
+          "monospace",
+          "noto sans jp",
+          "osaka",
+          "sans-serif",
+          "verdana",
+          "ヒラギノ角ゴ pro w3",
+          "メイリオ"
+        ]
+      }
+    },
+    "WEB-02": {
+      "observed": {
+        "colors": {
+          "#000000": [
+            1.0
+          ],
+          "#0068b7": [
+            1.0
+          ],
+          "#006dc6": [
+            1.0
+          ],
+          "#00a63c": [
+            1.0
+          ],
+          "#00b900": [
+            1.0
+          ],
+          "#11065e": [
+            1.0
+          ],
+          "#11caa1": [
+            1.0
+          ],
+          "#167bd1": [
+            1.0
+          ],
+          "#17c1ce": [
+            1.0
+          ],
+          "#242424": [
+            1.0
+          ],
+          "#262627": [
+            1.0
+          ],
+          "#2cabf3": [
+            1.0
+          ],
+          "#313035": [
+            1.0
+          ],
+          "#313131": [
+            1.0
+          ],
+          "#3f3f46": [
+            1.0
+          ],
+          "#505050": [
+            1.0
+          ],
+          "#5aa7f2": [
+            1.0
+          ],
+          "#676767": [
+            1.0
+          ],
+          "#68b5ff": [
+            1.0
+          ],
+          "#92e4cd": [
+            1.0
+          ],
+          "#979797": [
+            1.0
+          ],
+          "#9ae9ff": [
+            1.0
+          ],
+          "#b4b2b7": [
+            1.0
+          ],
+          "#b4b4b4": [
+            0.2
+          ],
+          "#caf0f8": [
+            1.0
+          ],
+          "#d9d9d9": [
+            1.0
+          ],
+          "#d9dde1": [
+            1.0
+          ],
+          "#dc0404": [
+            1.0
+          ],
+          "#e0f4cb": [
+            1.0
+          ],
+          "#e9faff": [
+            1.0
+          ],
+          "#ef4444": [
+            1.0
+          ],
+          "#f3f4f6": [
+            1.0
+          ],
+          "#f3faff": [
+            1.0
+          ],
+          "#f4faff": [
+            1.0
+          ],
+          "#f5f5f5": [
+            1.0
+          ],
+          "#fa003e": [
+            1.0
+          ],
+          "#fafafa": [
+            1.0
+          ],
+          "#ff3f7a": [
+            1.0
+          ],
+          "#ff8100": [
+            1.0
+          ],
+          "#ff8e8e": [
+            1.0
+          ],
+          "#ffd098": [
+            1.0
+          ],
+          "#ffd4d5": [
+            1.0
+          ],
+          "#ffe732": [
+            1.0
+          ],
+          "#fff8e0": [
+            1.0
+          ],
+          "#fffbbf": [
+            1.0
+          ],
+          "#fffbf8": [
+            1.0
+          ],
+          "#ffffff": [
+            1.0
+          ]
+        },
+        "fontNames": [
+          "arial",
+          "courier new",
+          "dejavu sans mono",
+          "helvetica",
+          "helvetica neue",
+          "hiragino kaku gothic pro",
+          "liberation mono",
+          "lucida console",
+          "meiryo",
+          "menlo",
+          "monaco",
+          "monospace",
+          "noto sans jp",
+          "osaka",
+          "sans-serif",
+          "verdana",
+          "ヒラギノ角ゴ pro w3",
+          "メイリオ"
+        ]
+      }
+    }
+  },
+  "contrast": [],
+  "fontFaces": [],
+  "fontLinks": [],
+  "assets": {
+    "sites": {},
+    "logos": 0,
+    "icons": 0,
+    "iconFonts": {}
+  },
+  "dsLayout": {
+    "mode": "single",
+    "auto": "single",
+    "forced": false,
+    "reason": "2 website giong nhau ca mau -> 1 DS, 1 theme light",
+    "sites": [
+      "WEB-01",
+      "WEB-02"
+    ],
+    "tolerances": {
+      "px": 1.0,
+      "box": "max(2px, 5%)",
+      "jaccard": 0.6
+    },
+    "diffs": [],
+    "fingerprints": {
+      "WEB-01": {
+        "font": "Courier New",
+        "type": [],
+        "spacing": [],
+        "radius": [],
+        "roles": {},
+        "colors": {
+          "primary": null,
+          "page-bg": null,
+          "nav-bg": null,
+          "header-bg": null,
+          "link": null
+        }
+      },
+      "WEB-02": {
+        "font": "Courier New",
+        "type": [],
+        "spacing": [],
+        "radius": [],
+        "roles": {},
+        "colors": {
+          "primary": null,
+          "page-bg": null,
+          "nav-bg": null,
+          "header-bg": null,
+          "link": null
+        }
+      }
+    }
+  },
+  "codeOnly": true
+}

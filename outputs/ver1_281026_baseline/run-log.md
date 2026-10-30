@@ -153,3 +153,102 @@ Lỗi kit còn lại sau bản sửa: (a) `build-basic-design.py` chưa tra đư
 - O7 Bug list: 1 sheet `Bug List`, chỉ High / Urgent. 8 lỗi ứng viên cũ (BUG-001…008) đều mức Medium → không đưa vào; sheet chỉ có tiêu đề. Bỏ 288 dòng quan sát kỹ thuật nội bộ (vẫn còn trong `_internal/history/20261028-1036/`). Gate V8 12/12 PASS.
 - Bỏ sơ đồ API (code map): xoá `02_API/CodeMap_*`, dòng trong `figma-links.md`, section Figma node 17024:6780.
 - O4 Design System giữ nguyên (dùng lại từ ver12); từ nay O4 là tuỳ chọn.
+
+## Đổi số thứ tự output 29/10/2026 (theo yêu cầu người dùng)
+
+Tài liệu tổng hợp lên đầu, Figma trước Design System, lấp chỗ trống O8. Chỉ đổi số + tên thư mục, không đổi nội dung:
+
+| Mới | Output | Thư mục | Cũ |
+|---|---|---|---|
+| O1 | Tài liệu tổng hợp | `01_Overview` | O6 · `06_Overview` |
+| O2 | Danh sách màn hình | `02_Screens` | O1 · `01_Screens` |
+| O3 | API Documentation | `03_API` | O2 · `02_API` |
+| O4 | Database Documentation | `04_DB` | O3 · `03_DB` |
+| O5 | Figma | `05_Figma` | O5 (giữ) |
+| O6 | Design System (tuỳ chọn) | `06_DesignSystem` | O4 · `04_DesignSystem` |
+| O7 | Bug list (tuỳ chọn) | `07_BugList` | O7 (giữ) |
+| O8 | Hướng dẫn chạy local | `08_DevSetup` | O9 · `09_DevSetup` |
+
+Chạy lại sau khi đổi: O1 (render + V3 14/14) · V-BD WEB-01 / WEB-02 (17 PASS · 2 WARN, như cũ) · V-DS (31 PASS · 4 WARN, như cũ) · README. Các mục log phía trên giữ số / thư mục cũ tại thời điểm ghi.
+
+## Đổi số thứ tự output lần 2 — 29/10/2026 (theo yêu cầu người dùng)
+
+| Mới | Output | Thư mục | Trước đó |
+|---|---|---|---|
+| O1 | Tài liệu tổng hợp | `01_Overview` | giữ |
+| O2 | API Documentation | `02_API` | O3 · `03_API` |
+| O3 | Database Documentation | `03_DB` | O4 · `04_DB` |
+| O4 | Figma (Output 1 · Output 2 · ERD) | `04_Figma` | O5 · `05_Figma` |
+| O5 | Basic Design (danh sách màn hình) | `05_BasicDesign` | O2 · `02_Screens` |
+| O6 | Design System (tuỳ chọn) | `06_DesignSystem` | giữ |
+| O7 | Bug list (tuỳ chọn) | `07_BugList` | giữ |
+| O8 | Hướng dẫn chạy local | `08_DevSetup` | giữ |
+
+Chạy lại: O1 (V3 14/14) · V-BD WEB-01 / WEB-02 (17 PASS · 2 WARN, như cũ) · README. Nội dung các file không đổi.
+
+## Chạy lại 29/10/2026 — Phase 1 theo cấu trúc 2 phase (feedback "Cấu trúc output & cách đọc nguồn")
+
+- Snapshot trước khi ghi đè: `_internal/history/20261029-1100/`.
+- Thư mục mới: `05_Basic_Design` · `06_Design_System` · `07_Bug_List` · `08_Huong_dan_chay_local`.
+- **O1:** chương 1 đổi thành "Tổng quan hệ thống", chèn Hình 1 luồng nghiệp vụ vẽ bằng Archify (`_internal/archify/workflow-luong-nghiep-vu-20261029/`, finalize PASS 4 gate). Gate V3 15/15.
+- **O5 Basic Design:** viết lại spec 93 màn từ source code (`_internal/bd/WEB-0x.json`, bản cũ `*.before-phase1.json`):
+  - WEB-01: 45 màn · 737 item · 408 lỗi. WEB-02: 48 màn · 438 item · 215 lỗi.
+  - Tên sheet là tên màn (không còn SC-xxx). Item là thứ người dùng thấy, không còn tên hàm. Required / maxlength lấy từ code. Mô tả theo nghiệp vụ ("押下 → 「…」へ遷移"). Bỏ cột Status / DRAFT. Thông báo lỗi không còn ô trống.
+  - Chuẩn hoá 36 ô "ー" của ô nhập: required → "No", maxlength ô chữ / số → "制限なし" (code không đặt giới hạn).
+  - Gate V-BD `--phase 1` WEB-01 / WEB-02: 24/24 PASS.
+- **Câu hỏi:** bỏ 86 câu Basic Design cũ (Q-037…Q-122), thêm 92 câu mới (Q-037…Q-128). Tổng 131 câu Open.
+- **O6 · O7:** giữ bản hiện có (từ lần quét website trước). Phase 2 (`/verify-system`) sẽ đối chiếu và làm mới, đồng thời chèn ảnh màn hình đánh số vào O5.
+- **Nghi vấn lỗi đọc từ code** (chưa vào Bug list, chờ Phase 2 tái hiện):
+  - Xoá người dùng báo thành công kể cả khi xoá lỗi.
+  - Màn chi tiết GMO hiện mật khẩu cửa hàng dạng chữ thường.
+  - Thẻ để trống hạn sử dụng thì hiện sai thông báo; chưa chọn cửa hàng thì hiện thông báo tiếng Anh.
+  - Thông báo lỗi giữ chỗ 「日本語で」.
+  - 5 màn người dùng không kiểm tra đăng nhập ở code trang.
+- Cấu trúc chạy: 1 lệnh `/analyze-system`, 2 giai đoạn — Phase 1 (bản này) → **điểm dừng** để xem trước → Phase 2 AI Playwright. README đánh dấu O6 · O7 "chờ Phase 2"; lần gọi `/analyze-system` sau AI sẽ đề xuất chạy tiếp Phase 2.
+- 29/10/2026: đổi cách gọi "Phase 1 / 2" thành "giai đoạn 1 / 2"; README có mục "Giai đoạn 2 — chưa chạy" liệt kê 7 việc giai đoạn 2 sẽ làm. Dựng lại O5 (V-BD WEB-01 / WEB-02 24/24).
+
+## 29/10/2026 — Basic Design giai đoạn 1: thêm bộ trích AST (feedback "Setup AST env")
+
+- Môi trường: `ensure-env.py --flow 1` tự `npm ci` trong `.claude/skills/system-analyst/scripts/ast/` (ts-morph 28.0.0, ~15 MB, không cài vào source khách). Node có sẵn trên máy.
+- S1: `scan-sensitive.py --high-list _internal/gates/high-files.txt --sensitive-memory outputs/_project/preflight-memory.json`.
+  - 11 file vẫn chặn (README, seed, `.yarnrc.yml`, 8 file có mẫu giá trị).
+  - File bạn đã phân loại "báo nhầm" mà chỉ bị bắt vì tên file / tên hằng (vd `route.ts`) được mở lại.
+- Bộ trích `ast/extract-screen.mjs` chạy 93 màn trong ~4 giây → `_internal/ast/WEB-0x/`. Chạy thử 3 màn SC-066 · SC-068 · SC-072 trước để đối chiếu.
+- O5 = spec LLM (nội dung nghiệp vụ) + `--ast-spec` (dữ kiện code):
+  - Thêm 76 + 95 thông báo lỗi nguyên văn từ code (yup / setErrorDialogMsg…), đã dịch VN (`_internal/ast/error-translations.json`).
+  - Lấp 19 giá trị bắt buộc / độ dài / màn chuyển tới.
+  - V-BD WEB-01 / WEB-02: 24/24 PASS.
+- Bản chỉ AST (mức B, không LLM) để đối chiếu: `_internal/ast/WEB-0x/BD_AST_WEB-0x.xlsx` — WEB-01 24/24; WEB-02 23/24 (1 màn không có tiêu đề trong code → cần LLM đặt tên).
+- Câu hỏi: 164 Open (Basic Design Q-037…Q-161).
+
+## 29/10/2026 — Basic Design: chèn tạm ảnh cũ (người dùng đồng ý)
+
+- Snapshot trước khi ghi đè: `_internal/history/20261029-1352/`.
+- Chèn 60 ảnh từ lần quét website 02/10/2026 (môi trường dev, tài khoản test; P11 = không có dữ liệu thật): WEB-01 29/45 màn · WEB-02 31/48 màn. 33 màn không có ảnh cũ vẫn ghi "Chưa có ảnh — bổ sung ở giai đoạn 2".
+- Ảnh **chưa đánh số**, có thể không khớp giao diện hiện tại; ô A9 ghi rõ "ảnh chưa đánh số (quét website 02/10/2026) — giai đoạn 2 thay bằng ảnh mới có đánh số".
+- Gate V-BD WEB-01 / WEB-02: 23 PASS · 0 FAIL · 1 WARN (check 13: ảnh chưa đánh số — cảnh báo đúng, hết khi chạy giai đoạn 2).
+
+## 30/10/2026 — feedback v3 (ảnh đánh số · gom theo màn · Figma Screen Index · CR Estimation · CR Figma CR-3)
+
+Snapshot: `_internal/history/20261030-1325/`.
+
+- **Basic Design — ảnh đánh số tạm:** builder nay tự đánh số TẠM dọc cạnh trái cho ảnh cũ chưa có vị trí (môi trường dev, P11 = không dữ liệu thật). A9 ghi rõ "TẠM · giai đoạn 2 đánh đúng vị trí". WEB-01 29 ảnh · WEB-02 30 ảnh. V-BD cả 2 site: **24/24 PASS**.
+- **Basic Design — gom theo màn:** spec thêm 2 trường (A) `"group"` cho từng item → banner cụm "▸ <nhóm>" trong sheet · (B) `"merged_from": ["SC-xxx"]` ở màn chính → dồn item + lỗi SC con vào, SC con mất khỏi Screen Index. KIDO chưa có spec `group` / `merged_from` nào — bạn chỉ thêm khi cần.
+- **CR Estimation — cột căn cứ:** đổi từ `SCR-UPD-L × 1 = 3.0` sang `N API mới · M API cập nhật · Mức ảnh hưởng: X · <code> × <qty> = <impl>`. Lấy từ `cr.json.impacts` (axis + change_type + risk). KIDO không có CR mở → không chạy lại được bản thật, chỉ self-test estimate 24/24 PASS.
+- **CR Figma CR-3 — thao tác:** JS vẽ thêm 1 dòng "Thao tác tới server: X API tạo mới · Y API cập nhật" khi spec item có `api_new` / `api_upd`.
+- **O4 Figma Output 2 — Screen Index:** spec `output-2-screen-flow.md` §④ đã viết lại cột `# · Site · Role · Màn · Loại · Mô tả`, chia Site rồi Role (dùng cột `Actor` của 02_Screen); nhóm `Chung` cho màn nhiều Role. **Chưa vẽ lại trên Figma** — bạn gọi lại khi muốn.
+
+Self-test (kit): gates 76 · docs 29 · cr-impact 88 · basic-design 21 · version 19 · estimate 24 · design-system 53 · ast 20 — PASS.
+
+## 30/10/2026 — Feedback round 2 (ảnh badge nhỏ · gom màn · Figma Screen Index tại chỗ · CR Estimation · CR-3)
+
+Snapshot: _internal/history/20261030-13xx (từ bản trước); feedback round 2 không snapshot thêm vì chỉ sửa O5 + ảnh.
+
+1. **Basic Design — ảnh badge nhỏ:** đổi `annotate-ui-image.py` từ `d=max(28, W*0.045)` sang `d=max(18, W*0.015)` (~22px / 1440) theo mẫu `AI_Source/base-design-system/sample.png`. Áp dụng cho WEB-01 26 ảnh · WEB-02 24 ảnh. V-BD cả 2 site: **24/24 PASS**.
+2. **Basic Design — gom màn (merged_from):** rule "List là chính; không có List → SC-id nhỏ nhất":
+   - WEB-01: SC-028 gộp SC-029 (従業員管理) · SC-035 gộp SC-036 (商品管理) · SC-040 gộp SC-041 (ユーザー管理). ダッシュボード (SC-001 / SC-012) GIỮ RIÊNG vì quy mô khác nhau.
+   - WEB-02: SC-070 gộp SC-069, SC-071, SC-076 (予約履歴 — danh sách + chi tiết + chỉnh sửa) · SC-085 gộp SC-086, SC-087, SC-090 (アカウント情報の編集 — 4 bước).
+   - Tổng sheet: WEB-01 42 (45-3) · WEB-02 42 (48-6). Màn gộp mất khỏi Screen Index xlsx; item + lỗi dồn vào sheet SC chính, mỗi SC con thành 1 `group` riêng. `expect-screens-WEB-0x.txt` đã cập nhật.
+3. **O4 Figma Screen Index — ghi đè tại chỗ:** xoá section mới `17055:398`, ẩn frame cũ `17019:8771` (`visible=false`, prefix "[cũ — đã ẩn]"), chèn bảng mới `17058:398` vào đầu section `17019:8769`. Tên layer `cell` + `Text` thay bằng " " (bỏ chữ thừa trên Layers panel). 84 dòng (gộp màn còn 84 so với 93 thô).
+4. **CR Estimation — ver6 CR-001:** mở `outputs/_backup/ver6_141026_CR-001-group-booking-r3/CR-001_Impact.xlsx` (snapshot `CR-001_Impact.before-30102026.xlsx`). Cột 17 "Căn cứ 実装" đổi từ `API-UPD × 2 = 1 MD (0.5 MD/API)` sang `2 API cập nhật · Mức ảnh hưởng: Nhỏ · API-UPD × 2 = 1 MD`. Phụ: 29 impact có `conflict=UNKNOWN` sửa sang `To verify` (D1 enum).
+5. **CR Figma CR-3 — ghi đè tại chỗ:** sửa trực tiếp 17 DESC panel trong 2 section `16954:2776` (WEB-01, 7 panel) + `16945:398` (WEB-02, 10 panel). Thêm vào dòng "Loại · Site · Vào từ..." đoạn `· Thao tác tới server: Cần xác nhận — nhập số API tạo mới / cập nhật` (màu xanh, đậm). CR-002 không có `cr.json` để đếm số thật → placeholder, người soạn CR nhập số sau.

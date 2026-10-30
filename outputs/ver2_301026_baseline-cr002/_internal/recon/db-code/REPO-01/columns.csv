@@ -1,0 +1,324 @@
+Table,Column,Type,PK,FK,Nullable,Default,Max Length,Format,Constraint,Meaning,Used By,Evidence,Confidence
+accounts,id,TEXT,Yes,—,NO,cuid(),unlimited,text,—,Cần xác nhận,Cần xác nhận,EV-0709,Low
+accounts,user_id,INTEGER,No,users.id,NO,—,—,integer,—,Cần xác nhận,Cần xác nhận,EV-0709,Low
+accounts,type,TEXT,No,—,NO,—,unlimited,text,—,Cần xác nhận,Cần xác nhận,EV-0709,Low
+accounts,provider,TEXT,No,—,NO,—,unlimited,text,"UNIQUE(provider,provider_account_id)",Cần xác nhận,Cần xác nhận,EV-0709,Low
+accounts,provider_account_id,TEXT,No,—,NO,—,unlimited,text,"UNIQUE(provider,provider_account_id)",Cần xác nhận,Cần xác nhận,EV-0709,Low
+accounts,refresh_token,TEXT,No,—,YES,—,unlimited,text,—,Cần xác nhận,Cần xác nhận,EV-0709,Low
+accounts,access_token,TEXT,No,—,YES,—,unlimited,text,—,Cần xác nhận,Cần xác nhận,EV-0709,Low
+accounts,expires_at,INTEGER,No,—,YES,—,—,integer,—,Cần xác nhận,Cần xác nhận,EV-0709,Low
+accounts,token_type,TEXT,No,—,YES,—,unlimited,text,—,Cần xác nhận,Cần xác nhận,EV-0709,Low
+accounts,scope,TEXT,No,—,YES,—,unlimited,text,—,Cần xác nhận,Cần xác nhận,EV-0709,Low
+accounts,id_token,TEXT,No,—,YES,—,unlimited,text,—,Cần xác nhận,Cần xác nhận,EV-0709,Low
+accounts,session_state,TEXT,No,—,YES,—,unlimited,text,—,Cần xác nhận,Cần xác nhận,EV-0709,Low
+admin_activity_logs,id,SERIAL,Yes,—,NO,—,—,integer,SERIAL,Cần xác nhận,Cần xác nhận,EV-0710,Low
+admin_activity_logs,user_id,INTEGER,No,users.id,NO,—,—,integer,—,Cần xác nhận,Cần xác nhận,EV-0710,Low
+admin_activity_logs,staff_id,TEXT,No,staffs.id,YES,—,unlimited,text,—,Cần xác nhận,Cần xác nhận,EV-0710,Low
+admin_activity_logs,activity_type,TEXT,No,—,NO,—,unlimited,text,—,Cần xác nhận,Cần xác nhận,EV-0710,Low
+admin_activity_logs,details,TEXT,No,—,YES,—,unlimited,text,—,Cần xác nhận,Cần xác nhận,EV-0710,Low
+admin_activity_logs,reference,TEXT,No,—,YES,—,unlimited,text,—,Cần xác nhận,Cần xác nhận,EV-0710,Low
+admin_activity_logs,created_at,TIMESTAMP(3),No,—,YES,CURRENT_TIMESTAMP,—,YYYY-MM-DD HH:MM:SS.fff,—,Cần xác nhận,Cần xác nhận,EV-0710,Low
+admins_tenants,user_id,INTEGER,Yes,users.id,NO,—,—,integer,UNIQUE,Cần xác nhận,Cần xác nhận,EV-0711,Low
+admins_tenants,tenant_code,TEXT,Yes,tenants.code,NO,—,unlimited,text,UNIQUE,Cần xác nhận,Cần xác nhận,EV-0711,Low
+app_settings,setting_key,TEXT,Yes,—,NO,—,unlimited,text,—,Cần xác nhận,Cần xác nhận,EV-0712,Low
+app_settings,name,TEXT,No,—,NO,—,unlimited,text,—,Cần xác nhận,Cần xác nhận,EV-0712,Low
+app_settings,value,TEXT,No,—,NO,—,unlimited,text,—,Cần xác nhận,Cần xác nhận,EV-0712,Low
+app_settings,data_type,"""DataType""",No,—,NO,—,—,enum,ENUM: Text | Number | RichText,Cần xác nhận,Cần xác nhận,EV-0712,Low
+app_settings,created_at,TIMESTAMP(3),No,—,NO,CURRENT_TIMESTAMP,—,YYYY-MM-DD HH:MM:SS.fff,—,Cần xác nhận,Cần xác nhận,EV-0712,Low
+app_settings,updated_at,TIMESTAMP(3),No,—,NO,—,—,YYYY-MM-DD HH:MM:SS.fff,ON UPDATE @updatedAt (Prisma),Cần xác nhận,Cần xác nhận,EV-0712,Low
+booking_child_age_infos,id,SERIAL,Yes,—,NO,—,—,integer,SERIAL,Cần xác nhận,Cần xác nhận,EV-0713,Low
+booking_child_age_infos,booking_id,INTEGER,No,bookings.id,NO,—,—,integer,—,Cần xác nhận,Cần xác nhận,EV-0713,Low
+booking_child_age_infos,child_age_in_month,INTEGER,No,—,NO,—,—,integer,—,Cần xác nhận,Cần xác nhận,EV-0713,Low
+booking_obic_codes,id,SERIAL,Yes,—,NO,—,—,integer,SERIAL,Cần xác nhận,Cần xác nhận,EV-0714,Low
+booking_obic_codes,booking_id,INTEGER,No,bookings.id,NO,—,—,integer,—,Cần xác nhận,Cần xác nhận,EV-0714,Low
+booking_obic_codes,kind,ObicCodeKind,No,—,NO,—,—,enum,ENUM: Base | ExtendedPeriod | Discount | HourlyExtraTimeDiscount,Cần xác nhận,Cần xác nhận,EV-0714,Low
+booking_obic_codes,audience,ObicAudience,No,—,NO,—,—,enum,ENUM: Adult | Child,Cần xác nhận,Cần xác nhận,EV-0714,Low
+booking_obic_codes,obic_code,VARCHAR(255),No,—,NO,—,255,text,—,Cần xác nhận,Cần xác nhận,EV-0714,Low
+booking_obic_codes,source_field,ObicSourceField,No,—,NO,—,—,enum,ENUM: TD_adultObicCode | TD_adultObicCode1stBooking | TD_childObicCode | TD_childObicCode1stBooking | TD_discountAdultObicCode | TD_discountChildObicCode | TBS_baseAdultObicCode | TBS_baseChildObicCode | TBS_extendedAdultObicCode | TBS_extendedChildObicCode | TDS_hourlyExtraTime_adultObicCode | TDS_hourlyExtraTime_childObicCode | TDS_discountTier_adultObicCode | TDS_discountTier_childObicCode,Cần xác nhận,Cần xác nhận,EV-0714,Low
+booking_obic_codes,source_tier_index,INTEGER,No,—,YES,—,—,integer,—,Cần xác nhận,Cần xác nhận,EV-0714,Low
+booking_obic_codes,amount,"DECIMAL(10,2)",No,—,NO,—,—,"10,2",—,Cần xác nhận,Cần xác nhận,EV-0714,Low
+booking_obic_codes,quantity,INTEGER,No,—,NO,1,—,integer,—,Cần xác nhận,Cần xác nhận,EV-0714,Low
+booking_obic_codes,line_index,INTEGER,No,—,NO,—,—,integer,—,Cần xác nhận,Cần xác nhận,EV-0714,Low
+booking_obic_codes,is_pending,BOOLEAN,No,—,NO,false,—,bool,—,Cần xác nhận,Cần xác nhận,EV-0714,Low
+booking_obic_codes,revision,INTEGER,No,—,NO,1,—,integer,—,Cần xác nhận,Cần xác nhận,EV-0714,Low
+booking_obic_codes,computed_at,TIMESTAMP(3),No,—,NO,CURRENT_TIMESTAMP,—,YYYY-MM-DD HH:MM:SS.fff,—,Cần xác nhận,Cần xác nhận,EV-0714,Low
+booking_obic_codes,deleted,BOOLEAN,No,—,NO,false,—,bool,—,Cần xác nhận,Cần xác nhận,EV-0714,Low
+bookings,id,SERIAL,Yes,—,NO,—,—,integer,SERIAL,Cần xác nhận,Cần xác nhận,EV-0715,Low
+bookings,tenant_code,TEXT,No,tenants.code,NO,—,unlimited,text,—,Cần xác nhận,Cần xác nhận,EV-0715,Low
+bookings,ticket_id,INTEGER,No,tickets.id,NO,—,—,integer,—,Cần xác nhận,Cần xác nhận,EV-0715,Low
+bookings,adult_quantity,INTEGER,No,—,NO,—,—,integer,—,Cần xác nhận,Cần xác nhận,EV-0715,Low
+bookings,adult_price,"DECIMAL(65,30)",No,—,YES,—,—,"65,30",—,Cần xác nhận,Cần xác nhận,EV-0715,Low
+bookings,child_quantity,INTEGER,No,—,NO,—,—,integer,—,Cần xác nhận,Cần xác nhận,EV-0715,Low
+bookings,child_price,"DECIMAL(65,30)",No,—,YES,—,—,"65,30",—,Cần xác nhận,Cần xác nhận,EV-0715,Low
+bookings,total_amount,"DECIMAL(65,30)",No,—,YES,—,—,"65,30",—,Cần xác nhận,Cần xác nhận,EV-0715,Low
+bookings,status,"""BookingStatus_new""",No,—,NO,E'Successful',—,enum,ENUM: Pending | Completed | Cancelled | Waiting | CheckedIn | CheckedOut | Calling | SystemCancelled,Cần xác nhận,Cần xác nhận,EV-0715,Low
+bookings,payment_status,"""PaymentStatus_new""",No,—,NO,'Pending',—,enum,ENUM: Pending | Completed | Partial | Refunded | Error,Cần xác nhận,Cần xác nhận,EV-0715,Low
+bookings,bar_code,TEXT,No,—,NO,—,unlimited,text,UNIQUE,Cần xác nhận,Cần xác nhận,EV-0715,Low
+bookings,sub_email,TEXT,No,—,YES,—,unlimited,text,—,Cần xác nhận,Cần xác nhận,EV-0715,Low
+bookings,checked_in_at,TIMESTAMP(3),No,—,YES,CURRENT_TIMESTAMP,—,YYYY-MM-DD HH:MM:SS.fff,—,Cần xác nhận,Cần xác nhận,EV-0715,Low
+bookings,checked_out_at,TIMESTAMP(3),No,—,YES,CURRENT_TIMESTAMP,—,YYYY-MM-DD HH:MM:SS.fff,—,Cần xác nhận,Cần xác nhận,EV-0715,Low
+bookings,created_at,TIMESTAMP(3),No,—,NO,CURRENT_TIMESTAMP,—,YYYY-MM-DD HH:MM:SS.fff,—,Cần xác nhận,Cần xác nhận,EV-0715,Low
+bookings,updated_at,TIMESTAMP(3),No,—,NO,—,—,YYYY-MM-DD HH:MM:SS.fff,ON UPDATE @updatedAt (Prisma),Cần xác nhận,Cần xác nhận,EV-0715,Low
+bookings,user_id,INTEGER,No,users.id,YES,—,—,integer,—,Cần xác nhận,Cần xác nhận,EV-0715,Low
+bookings,first_checked_in_at,TIMESTAMP(3),No,—,YES,—,—,YYYY-MM-DD HH:MM:SS.fff,—,Cần xác nhận,Cần xác nhận,EV-0715,Low
+bookings,date,DATE,No,—,YES,—,—,YYYY-MM-DD,—,Cần xác nhận,Cần xác nhận,EV-0715,Low
+bookings,parent_booking_id,INTEGER,No,—,YES,—,—,integer,—,Cần xác nhận,Cần xác nhận,EV-0715,Low
+bookings,coupons,JSONB,No,—,YES,—,—,json,—,Cần xác nhận,Cần xác nhận,EV-0715,Low
+bookings,waiting_order,INTEGER,No,—,YES,—,—,integer,—,Cần xác nhận,Cần xác nhận,EV-0715,Low
+bookings,calling_at,TIMESTAMP(3),No,—,YES,—,—,YYYY-MM-DD HH:MM:SS.fff,—,Cần xác nhận,Cần xác nhận,EV-0715,Low
+bookings,reminded_at,TIMESTAMP(3),No,—,YES,—,—,YYYY-MM-DD HH:MM:SS.fff,—,Cần xác nhận,Cần xác nhận,EV-0715,Low
+bookings,ticket_booking_schedule_id,INTEGER,No,ticket_booking_schedules.id,YES,—,—,integer,—,Cần xác nhận,Cần xác nhận,EV-0715,Low
+bookings,cancelled_at,TIMESTAMP(3),No,—,YES,—,—,YYYY-MM-DD HH:MM:SS.fff,—,Cần xác nhận,Cần xác nhận,EV-0715,Low
+bookings,requested_re_check_in_at,TIMESTAMP(3),No,—,YES,—,—,YYYY-MM-DD HH:MM:SS.fff,—,Cần xác nhận,Cần xác nhận,EV-0715,Low
+bookings,partial_checked_out_adult_quantity,INTEGER,No,—,YES,—,—,integer,—,Cần xác nhận,Cần xác nhận,EV-0715,Low
+bookings,partial_checked_out_child_quantity,INTEGER,No,—,YES,—,—,integer,—,Cần xác nhận,Cần xác nhận,EV-0715,Low
+bookings,re_check_in_count,INTEGER,No,—,YES,0,—,integer,—,Cần xác nhận,Cần xác nhận,EV-0715,Low
+bookings,GMO_transaction_id,TEXT,No,—,YES,—,unlimited,text,—,Cần xác nhận,Cần xác nhận,EV-0715,Low
+bookings,waiting_at,TIMESTAMP(3),No,—,YES,—,—,YYYY-MM-DD HH:MM:SS.fff,—,Cần xác nhận,Cần xác nhận,EV-0715,Low
+bookings,last_stay_duration,INTEGER,No,—,YES,—,—,integer,—,Cần xác nhận,Cần xác nhận,EV-0715,Low
+bookings,stay_duration,INTEGER,No,—,YES,—,—,integer,—,Cần xác nhận,Cần xác nhận,EV-0715,Low
+bookings,partial_checked_out_at,TIMESTAMP(3),No,—,YES,—,—,YYYY-MM-DD HH:MM:SS.fff,—,Cần xác nhận,Cần xác nhận,EV-0715,Low
+bookings,expiration_reminded_at,TIMESTAMP(3),No,—,YES,—,—,YYYY-MM-DD HH:MM:SS.fff,—,Cần xác nhận,Cần xác nhận,EV-0715,Low
+bookings,pos_total_amount,"DECIMAL(65,30)",No,—,YES,—,—,"65,30",—,Cần xác nhận,Cần xác nhận,EV-0715,Low
+bookings,smaregi_qr_codes,JSONB,No,—,YES,—,—,json,—,Cần xác nhận,Cần xác nhận,EV-0715,Low
+bookings,web_total_amount,"DECIMAL(65,30)",No,—,YES,—,—,"65,30",—,Cần xác nhận,Cần xác nhận,EV-0715,Low
+bookings,is_smaregi_scanned,BOOLEAN,No,—,NO,false,—,bool,—,Cần xác nhận,Cần xác nhận,EV-0715,Low
+bookings,temp_checkout_at,TIMESTAMP(3),No,—,YES,—,—,YYYY-MM-DD HH:MM:SS.fff,—,Cần xác nhận,Cần xác nhận,EV-0715,Low
+bookings,smaregi_confirmed_transaction_head_id,TEXT,No,—,YES,—,unlimited,text,—,Cần xác nhận,Cần xác nhận,EV-0715,Low
+bookings,smaregi_confirmed_transaction_at,TIMESTAMP(3),No,—,YES,—,—,YYYY-MM-DD HH:MM:SS.fff,—,Cần xác nhận,Cần xác nhận,EV-0715,Low
+bookings,smaregi_confirmed_transaction_cancelled_at,TIMESTAMP(3),No,—,YES,—,—,YYYY-MM-DD HH:MM:SS.fff,—,Cần xác nhận,Cần xác nhận,EV-0715,Low
+bookings,first_checkout_at,TIMESTAMP(3),No,—,YES,—,—,YYYY-MM-DD HH:MM:SS.fff,—,Cần xác nhận,Cần xác nhận,EV-0715,Low
+disclaimer_options,id,SERIAL,Yes,—,NO,—,—,integer,SERIAL,Cần xác nhận,Cần xác nhận,EV-0716,Low
+disclaimer_options,disclaimer_id,INTEGER,No,disclaimers.id,NO,—,—,integer,—,Cần xác nhận,Cần xác nhận,EV-0716,Low
+disclaimer_options,content,TEXT,No,—,NO,—,unlimited,text,—,Cần xác nhận,Cần xác nhận,EV-0716,Low
+disclaimer_options,created_at,TIMESTAMP(3),No,—,NO,CURRENT_TIMESTAMP,—,YYYY-MM-DD HH:MM:SS.fff,—,Cần xác nhận,Cần xác nhận,EV-0716,Low
+disclaimer_options,updated_at,TIMESTAMP(3),No,—,NO,—,—,YYYY-MM-DD HH:MM:SS.fff,ON UPDATE @updatedAt (Prisma),Cần xác nhận,Cần xác nhận,EV-0716,Low
+disclaimers,id,SERIAL,Yes,—,NO,—,—,integer,SERIAL,Cần xác nhận,Cần xác nhận,EV-0717,Low
+disclaimers,title,TEXT,No,—,NO,—,unlimited,text,—,Cần xác nhận,Cần xác nhận,EV-0717,Low
+disclaimers,created_at,TIMESTAMP(3),No,—,NO,CURRENT_TIMESTAMP,—,YYYY-MM-DD HH:MM:SS.fff,—,Cần xác nhận,Cần xác nhận,EV-0717,Low
+disclaimers,updated_at,TIMESTAMP(3),No,—,NO,—,—,YYYY-MM-DD HH:MM:SS.fff,ON UPDATE @updatedAt (Prisma),Cần xác nhận,Cần xác nhận,EV-0717,Low
+email_settings,email_key,TEXT,Yes,—,NO,—,unlimited,text,—,Cần xác nhận,Cần xác nhận,EV-0718,Low
+email_settings,name,TEXT,No,—,NO,—,unlimited,text,—,Cần xác nhận,Cần xác nhận,EV-0718,Low
+email_settings,title,TEXT,No,—,NO,—,unlimited,text,—,Cần xác nhận,Cần xác nhận,EV-0718,Low
+email_settings,content,TEXT,No,—,NO,—,unlimited,text,—,Cần xác nhận,Cần xác nhận,EV-0718,Low
+email_settings,created_at,TIMESTAMP(3),No,—,NO,CURRENT_TIMESTAMP,—,YYYY-MM-DD HH:MM:SS.fff,—,Cần xác nhận,Cần xác nhận,EV-0718,Low
+email_settings,updated_at,TIMESTAMP(3),No,—,NO,—,—,YYYY-MM-DD HH:MM:SS.fff,ON UPDATE @updatedAt (Prisma),Cần xác nhận,Cần xác nhận,EV-0718,Low
+email_settings,active,BOOLEAN,No,—,YES,true,—,bool,—,Cần xác nhận,Cần xác nhận,EV-0718,Low
+gmo_settings,id,SERIAL,Yes,—,NO,—,—,integer,SERIAL,Cần xác nhận,Cần xác nhận,EV-0719,Low
+gmo_settings,name,TEXT,No,—,NO,—,unlimited,text,—,Cần xác nhận,Cần xác nhận,EV-0719,Low
+gmo_settings,shop_id,TEXT,No,—,NO,—,unlimited,text,UNIQUE,Cần xác nhận,Cần xác nhận,EV-0719,Low
+gmo_settings,shop_pass,TEXT,No,—,NO,—,unlimited,text,—,Cần xác nhận,Cần xác nhận,EV-0719,Low
+gmo_settings,created_at,TIMESTAMP(3),No,—,NO,CURRENT_TIMESTAMP,—,YYYY-MM-DD HH:MM:SS.fff,—,Cần xác nhận,Cần xác nhận,EV-0719,Low
+gmo_settings,updated_at,TIMESTAMP(3),No,—,NO,—,—,YYYY-MM-DD HH:MM:SS.fff,ON UPDATE @updatedAt (Prisma),Cần xác nhận,Cần xác nhận,EV-0719,Low
+news,id,SERIAL,Yes,—,NO,—,—,integer,SERIAL,Cần xác nhận,Cần xác nhận,EV-0720,Low
+news,date,DATE,No,—,NO,—,—,YYYY-MM-DD,—,Cần xác nhận,Cần xác nhận,EV-0720,Low
+news,title,TEXT,No,—,NO,—,unlimited,text,—,Cần xác nhận,Cần xác nhận,EV-0720,Low
+news,content,TEXT,No,—,NO,—,unlimited,text,—,Cần xác nhận,Cần xác nhận,EV-0720,Low
+news,created_at,TIMESTAMP(3),No,—,NO,CURRENT_TIMESTAMP,—,YYYY-MM-DD HH:MM:SS.fff,—,Cần xác nhận,Cần xác nhận,EV-0720,Low
+news,updated_at,TIMESTAMP(3),No,—,NO,—,—,YYYY-MM-DD HH:MM:SS.fff,ON UPDATE @updatedAt (Prisma),Cần xác nhận,Cần xác nhận,EV-0720,Low
+partial_checkouts,id,SERIAL,Yes,—,NO,—,—,integer,SERIAL,Cần xác nhận,Cần xác nhận,EV-0721,Low
+partial_checkouts,booking_id,INTEGER,No,bookings.id,NO,—,—,integer,—,Cần xác nhận,Cần xác nhận,EV-0721,Low
+partial_checkouts,checked_out_at,TIMESTAMP(3),No,—,NO,—,—,YYYY-MM-DD HH:MM:SS.fff,—,Cần xác nhận,Cần xác nhận,EV-0721,Low
+partial_checkouts,is_adult,BOOLEAN,No,—,NO,—,—,bool,—,Cần xác nhận,Cần xác nhận,EV-0721,Low
+partial_checkouts,quantity,INTEGER,No,—,NO,—,—,integer,—,Cần xác nhận,Cần xác nhận,EV-0721,Low
+partial_checkouts,booking_child_age_info_id,INTEGER,No,booking_child_age_infos.id,YES,—,—,integer,—,Cần xác nhận,Cần xác nhận,EV-0721,Low
+partial_checkouts,deleted,BOOLEAN,No,—,YES,false,—,bool,—,Cần xác nhận,Cần xác nhận,EV-0721,Low
+security_questions,id,SERIAL,Yes,—,NO,—,—,integer,SERIAL,Cần xác nhận,Cần xác nhận,EV-0722,Low
+security_questions,question,TEXT,No,—,NO,—,unlimited,text,—,Cần xác nhận,Cần xác nhận,EV-0722,Low
+security_questions,answer,TEXT,No,—,YES,—,unlimited,text,—,Cần xác nhận,Cần xác nhận,EV-0722,Low
+smaregi_temporary_transactions,id,SERIAL,Yes,—,NO,—,—,integer,SERIAL,Cần xác nhận,Cần xác nhận,EV-0723,Low
+smaregi_temporary_transactions,bar_code,TEXT,No,—,NO,—,unlimited,text,—,Cần xác nhận,Cần xác nhận,EV-0723,Low
+smaregi_temporary_transactions,temporary_transaction_head_id,TEXT,No,—,YES,—,unlimited,text,—,Cần xác nhận,Cần xác nhận,EV-0723,Low
+smaregi_temporary_transactions,temporary_transaction_barcode,TEXT,No,—,YES,—,unlimited,text,UNIQUE,Cần xác nhận,Cần xác nhận,EV-0723,Low
+smaregi_temporary_transactions,pre_registration_name,TEXT,No,—,YES,—,unlimited,text,—,Cần xác nhận,Cần xác nhận,EV-0723,Low
+smaregi_temporary_transactions,store_id,TEXT,No,—,YES,—,unlimited,text,—,Cần xác nhận,Cần xác nhận,EV-0723,Low
+smaregi_temporary_transactions,terminal_id,TEXT,No,—,YES,—,unlimited,text,—,Cần xác nhận,Cần xác nhận,EV-0723,Low
+smaregi_temporary_transactions,total,"DECIMAL(10,2)",No,—,YES,—,—,"10,2",—,Cần xác nhận,Cần xác nhận,EV-0723,Low
+smaregi_temporary_transactions,status,SmaregiTemporaryStatus,No,—,NO,'Normal',—,enum,ENUM: Normal | Completed | Cancelled,Cần xác nhận,Cần xác nhận,EV-0723,Low
+smaregi_temporary_transactions,sync_error,TEXT,No,—,YES,—,unlimited,text,—,Cần xác nhận,Cần xác nhận,EV-0723,Low
+smaregi_temporary_transactions,synced_at,TIMESTAMP(3),No,—,YES,—,—,YYYY-MM-DD HH:MM:SS.fff,—,Cần xác nhận,Cần xác nhận,EV-0723,Low
+smaregi_temporary_transactions,deleted_at,TIMESTAMP(3),No,—,YES,—,—,YYYY-MM-DD HH:MM:SS.fff,—,Cần xác nhận,Cần xác nhận,EV-0723,Low
+smaregi_temporary_transactions,created_at,TIMESTAMP(3),No,—,NO,CURRENT_TIMESTAMP,—,YYYY-MM-DD HH:MM:SS.fff,—,Cần xác nhận,Cần xác nhận,EV-0723,Low
+smaregi_temporary_transactions,updated_at,TIMESTAMP(3),No,—,NO,—,—,YYYY-MM-DD HH:MM:SS.fff,ON UPDATE @updatedAt (Prisma),Cần xác nhận,Cần xác nhận,EV-0723,Low
+smaregi_temporary_transactions,checked_in_at,TIMESTAMP(3),No,—,YES,—,—,YYYY-MM-DD HH:MM:SS.fff,—,Cần xác nhận,Cần xác nhận,EV-0723,Low
+smaregi_temporary_transactions,settled_transaction_head_id,TEXT,No,—,YES,—,unlimited,text,—,Cần xác nhận,Cần xác nhận,EV-0723,Low
+smaregi_transactions,id,SERIAL,Yes,—,NO,—,—,integer,SERIAL,Cần xác nhận,Cần xác nhận,EV-0724,Low
+smaregi_transactions,transaction_head_id,TEXT,No,—,NO,—,unlimited,text,UNIQUE,Cần xác nhận,Cần xác nhận,EV-0724,Low
+smaregi_transactions,contract_id,TEXT,No,—,YES,—,unlimited,text,—,Cần xác nhận,Cần xác nhận,EV-0724,Low
+smaregi_transactions,store_id,TEXT,No,—,YES,—,unlimited,text,—,Cần xác nhận,Cần xác nhận,EV-0724,Low
+smaregi_transactions,action,TEXT,No,—,NO,—,unlimited,text,—,Cần xác nhận,Cần xác nhận,EV-0724,Low
+smaregi_transactions,total,"DECIMAL(65,30)",No,—,YES,—,—,"65,30",—,Cần xác nhận,Cần xác nhận,EV-0724,Low
+smaregi_transactions,raw_payload,JSONB,No,—,NO,—,—,json,—,Cần xác nhận,Cần xác nhận,EV-0724,Low
+smaregi_transactions,affected_booking_ids,JSONB,No,—,YES,—,—,json,—,Cần xác nhận,Cần xác nhận,EV-0724,Low
+smaregi_transactions,source,TEXT,No,—,NO,'Webhook',unlimited,text,—,Cần xác nhận,Cần xác nhận,EV-0724,Low
+smaregi_transactions,processed_at,TIMESTAMP(3),No,—,NO,CURRENT_TIMESTAMP,—,YYYY-MM-DD HH:MM:SS.fff,—,Cần xác nhận,Cần xác nhận,EV-0724,Low
+sse_notifications,id,SERIAL,Yes,—,NO,—,—,integer,SERIAL,Cần xác nhận,Cần xác nhận,EV-0725,Low
+sse_notifications,user_id,INTEGER,No,—,NO,—,—,integer,—,Cần xác nhận,Cần xác nhận,EV-0725,Low
+sse_notifications,payload,JSONB,No,—,NO,—,—,json,—,Cần xác nhận,Cần xác nhận,EV-0725,Low
+sse_notifications,created_at,TIMESTAMP(3),No,—,NO,CURRENT_TIMESTAMP,—,YYYY-MM-DD HH:MM:SS.fff,—,Cần xác nhận,Cần xác nhận,EV-0725,Low
+staffs,id,TEXT,Yes,—,NO,—,unlimited,text,—,Cần xác nhận,Cần xác nhận,EV-0726,Low
+staffs,password,TEXT,No,—,NO,—,unlimited,text,—,Cần xác nhận,Cần xác nhận,EV-0726,Low
+staffs,name,TEXT,No,—,YES,—,unlimited,text,—,Cần xác nhận,Cần xác nhận,EV-0726,Low
+staffs,first_name,TEXT,No,—,YES,—,unlimited,text,—,Cần xác nhận,Cần xác nhận,EV-0726,Low
+staffs,last_name,TEXT,No,—,YES,—,unlimited,text,—,Cần xác nhận,Cần xác nhận,EV-0726,Low
+staffs,first_name_furigana,TEXT,No,—,YES,—,unlimited,text,—,Cần xác nhận,Cần xác nhận,EV-0726,Low
+staffs,last_name_furigana,TEXT,No,—,YES,—,unlimited,text,—,Cần xác nhận,Cần xác nhận,EV-0726,Low
+staffs,role,Role,No,—,NO,—,—,enum,ENUM: User | Admin | SuperAdmin | Staff,Cần xác nhận,Cần xác nhận,EV-0726,Low
+staffs,tenant_code,TEXT,No,tenants.code,NO,—,unlimited,text,UNIQUE,Cần xác nhận,Cần xác nhận,EV-0726,Low
+staffs,created_at,TIMESTAMP(3),No,—,NO,CURRENT_TIMESTAMP,—,YYYY-MM-DD HH:MM:SS.fff,—,Cần xác nhận,Cần xác nhận,EV-0726,Low
+staffs,updated_at,TIMESTAMP(3),No,—,NO,—,—,YYYY-MM-DD HH:MM:SS.fff,ON UPDATE @updatedAt (Prisma),Cần xác nhận,Cần xác nhận,EV-0726,Low
+tenants,code,TEXT,Yes,—,NO,—,unlimited,text,UNIQUE,Cần xác nhận,Cần xác nhận,EV-0727,Low
+tenants,name,TEXT,No,—,NO,—,unlimited,text,—,Cần xác nhận,Cần xác nhận,EV-0727,Low
+tenants,address,TEXT,No,—,NO,—,unlimited,text,—,Cần xác nhận,Cần xác nhận,EV-0727,Low
+tenants,opened_at,TIME,No,—,YES,—,—,HH:MM:SS,—,Cần xác nhận,Cần xác nhận,EV-0727,Low
+tenants,closed_at,TIME,No,—,YES,—,—,HH:MM:SS,—,Cần xác nhận,Cần xác nhận,EV-0727,Low
+tenants,active,BOOLEAN,No,—,NO,true,—,bool,—,Cần xác nhận,Cần xác nhận,EV-0727,Low
+tenants,created_at,TIMESTAMP(3),No,—,NO,CURRENT_TIMESTAMP,—,YYYY-MM-DD HH:MM:SS.fff,—,Cần xác nhận,Cần xác nhận,EV-0727,Low
+tenants,updated_at,TIMESTAMP(3),No,—,NO,—,—,YYYY-MM-DD HH:MM:SS.fff,ON UPDATE @updatedAt (Prisma),Cần xác nhận,Cần xác nhận,EV-0727,Low
+tenants,guide,TEXT,No,—,YES,—,unlimited,text,—,Cần xác nhận,Cần xác nhận,EV-0727,Low
+tenants,image_url,TEXT,No,—,YES,—,unlimited,text,—,Cần xác nhận,Cần xác nhận,EV-0727,Low
+tenants,phone,TEXT,No,—,YES,—,unlimited,text,—,Cần xác nhận,Cần xác nhận,EV-0727,Low
+tenants,post_code,TEXT,No,—,YES,—,unlimited,text,—,Cần xác nhận,Cần xác nhận,EV-0727,Low
+tenants,province,TEXT,No,—,YES,—,unlimited,text,—,Cần xác nhận,Cần xác nhận,EV-0727,Low
+tenants,served_util,TIME,No,—,YES,—,—,HH:MM:SS,—,Cần xác nhận,Cần xác nhận,EV-0727,Low
+tenants,site_url,TEXT,No,—,YES,—,unlimited,text,—,Cần xác nhận,Cần xác nhận,EV-0727,Low
+tenants,deleted,BOOLEAN,No,—,YES,false,—,bool,—,Cần xác nhận,Cần xác nhận,EV-0727,Low
+tenants,note,TEXT,No,—,YES,—,unlimited,text,—,Cần xác nhận,Cần xác nhận,EV-0727,Low
+tenants,gmo_id,INTEGER,No,gmo_settings.id,YES,—,—,integer,—,Cần xác nhận,Cần xác nhận,EV-0727,Low
+tenants,allowed_version,"""TenantVersion_new""",No,—,NO,'v2',—,enum,ENUM: v0 | v1 | v2,Cần xác nhận,Cần xác nhận,EV-0727,Low
+tenants,smaregi_store_id,VARCHAR(100),No,—,YES,—,100,text,—,Cần xác nhận,Cần xác nhận,EV-0727,Low
+tenants,smaregi_contract_id,VARCHAR(100),No,—,YES,—,100,text,—,Cần xác nhận,Cần xác nhận,EV-0727,Low
+tenants,smaregi_terminal_id,VARCHAR(100),No,—,YES,—,100,text,—,Cần xác nhận,Cần xác nhận,EV-0727,Low
+ticket_booking_schedules,id,SERIAL,Yes,—,NO,—,—,integer,SERIAL,Cần xác nhận,Cần xác nhận,EV-0728,Low
+ticket_booking_schedules,ticket_id,INTEGER,No,tickets.id,NO,—,—,integer,"UNIQUE; UNIQUE(ticket_id,start_time,end_time); UNIQUE(ticket_id,valid_from,valid_to); UNIQUE(ticket_id,from,to); UNIQUE(ticket_id,date_from,date_to)",Cần xác nhận,Cần xác nhận,EV-0728,Low
+ticket_booking_schedules,base_adult_period,"DECIMAL(65,30)",No,—,YES,—,—,"65,30",—,Cần xác nhận,Cần xác nhận,EV-0728,Low
+ticket_booking_schedules,base_adult_period_price,"DECIMAL(65,30)",No,—,YES,—,—,"65,30",—,Cần xác nhận,Cần xác nhận,EV-0728,Low
+ticket_booking_schedules,base_adult_period_unit,"""PriceUnit_new""",No,—,YES,—,—,enum,ENUM: Minute | Hour | Day,Cần xác nhận,Cần xác nhận,EV-0728,Low
+ticket_booking_schedules,base_child_period,"DECIMAL(65,30)",No,—,YES,—,—,"65,30",—,Cần xác nhận,Cần xác nhận,EV-0728,Low
+ticket_booking_schedules,base_child_period_price,"DECIMAL(65,30)",No,—,YES,—,—,"65,30",—,Cần xác nhận,Cần xác nhận,EV-0728,Low
+ticket_booking_schedules,base_child_period_unit,"""PriceUnit_new""",No,—,YES,—,—,enum,ENUM: Minute | Hour | Day,Cần xác nhận,Cần xác nhận,EV-0728,Low
+ticket_booking_schedules,end_sale_at,TIMESTAMP(3),No,—,YES,—,—,YYYY-MM-DD HH:MM:SS.fff,—,Cần xác nhận,Cần xác nhận,EV-0728,Low
+ticket_booking_schedules,extended_adult_period,"DECIMAL(65,30)",No,—,YES,—,—,"65,30",—,Cần xác nhận,Cần xác nhận,EV-0728,Low
+ticket_booking_schedules,extended_adult_period_price,"DECIMAL(65,30)",No,—,YES,—,—,"65,30",—,Cần xác nhận,Cần xác nhận,EV-0728,Low
+ticket_booking_schedules,extended_adult_period_unit,"""PriceUnit_new""",No,—,YES,—,—,enum,ENUM: Minute | Hour | Day,Cần xác nhận,Cần xác nhận,EV-0728,Low
+ticket_booking_schedules,extended_child_period,"DECIMAL(65,30)",No,—,YES,—,—,"65,30",—,Cần xác nhận,Cần xác nhận,EV-0728,Low
+ticket_booking_schedules,extended_child_period_price,"DECIMAL(65,30)",No,—,YES,—,—,"65,30",—,Cần xác nhận,Cần xác nhận,EV-0728,Low
+ticket_booking_schedules,extended_child_period_unit,"""PriceUnit_new""",No,—,YES,—,—,enum,ENUM: Minute | Hour | Day,Cần xác nhận,Cần xác nhận,EV-0728,Low
+ticket_booking_schedules,max_booking_people,INTEGER,No,—,YES,—,—,integer,—,Cần xác nhận,Cần xác nhận,EV-0728,Low
+ticket_booking_schedules,max_booking_times,INTEGER,No,—,YES,1,—,integer,—,Cần xác nhận,Cần xác nhận,EV-0728,Low
+ticket_booking_schedules,remind_at,TIME,No,—,YES,—,—,HH:MM:SS,—,Cần xác nhận,Cần xác nhận,EV-0728,Low
+ticket_booking_schedules,remind_before_in_day,INTEGER,No,—,YES,—,—,integer,—,Cần xác nhận,Cần xác nhận,EV-0728,Low
+ticket_booking_schedules,start_sale_at,TIMESTAMP(3),No,—,NO,—,—,YYYY-MM-DD HH:MM:SS.fff,—,Cần xác nhận,Cần xác nhận,EV-0728,Low
+ticket_booking_schedules,date_from,DATE,No,—,NO,—,—,YYYY-MM-DD,"UNIQUE(ticket_id,date_from,date_to)",Cần xác nhận,Cần xác nhận,EV-0728,Low
+ticket_booking_schedules,date_to,DATE,No,—,YES,—,—,YYYY-MM-DD,"UNIQUE(ticket_id,date_from,date_to)",Cần xác nhận,Cần xác nhận,EV-0728,Low
+ticket_booking_schedules,time_from,TIME,No,—,YES,—,—,HH:MM:SS,—,Cần xác nhận,Cần xác nhận,EV-0728,Low
+ticket_booking_schedules,time_to,TIME,No,—,YES,—,—,HH:MM:SS,—,Cần xác nhận,Cần xác nhận,EV-0728,Low
+ticket_booking_schedules,can_booking_before_in_day,INTEGER,No,—,NO,—,—,integer,—,Cần xác nhận,Cần xác nhận,EV-0728,Low
+ticket_booking_schedules,can_booking_util,TIME,No,—,NO,—,—,HH:MM:SS,—,Cần xác nhận,Cần xác nhận,EV-0728,Low
+ticket_booking_schedules,can_cancel_or_change_before_in_day,INTEGER,No,—,NO,—,—,integer,—,Cần xác nhận,Cần xác nhận,EV-0728,Low
+ticket_booking_schedules,can_cancel_or_change_util,TIME,No,—,NO,—,—,HH:MM:SS,—,Cần xác nhận,Cần xác nhận,EV-0728,Low
+ticket_booking_schedules,enable_remind,BOOLEAN,No,—,NO,—,—,bool,—,Cần xác nhận,Cần xác nhận,EV-0728,Low
+ticket_booking_schedules,max_booking_people_accumulative,BOOLEAN,No,—,YES,—,—,bool,—,Cần xác nhận,Cần xác nhận,EV-0728,Low
+ticket_booking_schedules,can_booking_from,TIME,No,—,YES,—,—,HH:MM:SS,—,Cần xác nhận,Cần xác nhận,EV-0728,Low
+ticket_booking_schedules,invisible_when_reached_max_booking_people,BOOLEAN,No,—,YES,—,—,bool,—,Cần xác nhận,Cần xác nhận,EV-0728,Low
+ticket_booking_schedules,deleted,BOOLEAN,No,—,YES,false,—,bool,—,Cần xác nhận,Cần xác nhận,EV-0728,Low
+ticket_booking_schedules,created_at,TIMESTAMP(3),No,—,NO,CURRENT_TIMESTAMP,—,YYYY-MM-DD HH:MM:SS.fff,—,Cần xác nhận,Cần xác nhận,EV-0728,Low
+ticket_booking_schedules,is_schedule_in_future_deleted,BOOLEAN,No,—,YES,false,—,bool,—,Cần xác nhận,Cần xác nhận,EV-0728,Low
+ticket_booking_schedules,updated_at,TIMESTAMP(3),No,—,NO,CURRENT_TIMESTAMP,—,YYYY-MM-DD HH:MM:SS.fff,—,Cần xác nhận,Cần xác nhận,EV-0728,Low
+ticket_booking_schedules,enable_expiration_remind,BOOLEAN,No,—,YES,—,—,bool,—,Cần xác nhận,Cần xác nhận,EV-0728,Low
+ticket_booking_schedules,expiration_remind_at,TIME,No,—,YES,—,—,HH:MM:SS,—,Cần xác nhận,Cần xác nhận,EV-0728,Low
+ticket_booking_schedules,expiration_remind_before_in_day,INTEGER,No,—,YES,—,—,integer,—,Cần xác nhận,Cần xác nhận,EV-0728,Low
+ticket_booking_schedules,base_adult_smaregi_qrcode_url,VARCHAR(255),No,—,YES,—,255,text,—,Cần xác nhận,Cần xác nhận,EV-0728,Low
+ticket_booking_schedules,base_child_smaregi_qrcode_url,VARCHAR(255),No,—,YES,—,255,text,—,Cần xác nhận,Cần xác nhận,EV-0728,Low
+ticket_booking_schedules,extended_adult_smaregi_qrcode_url,VARCHAR(255),No,—,YES,—,255,text,—,Cần xác nhận,Cần xác nhận,EV-0728,Low
+ticket_booking_schedules,extended_child_smaregi_qrcode_url,VARCHAR(255),No,—,YES,—,255,text,—,Cần xác nhận,Cần xác nhận,EV-0728,Low
+ticket_booking_schedules,base_adult_obic_code,VARCHAR(255),No,—,YES,—,255,text,—,Cần xác nhận,Cần xác nhận,EV-0728,Low
+ticket_booking_schedules,base_child_obic_code,VARCHAR(255),No,—,YES,—,255,text,—,Cần xác nhận,Cần xác nhận,EV-0728,Low
+ticket_booking_schedules,extended_adult_obic_code,VARCHAR(255),No,—,YES,—,255,text,—,Cần xác nhận,Cần xác nhận,EV-0728,Low
+ticket_booking_schedules,extended_child_obic_code,VARCHAR(255),No,—,YES,—,255,text,—,Cần xác nhận,Cần xác nhận,EV-0728,Low
+ticket_details,id,SERIAL,Yes,—,NO,—,—,integer,SERIAL,Cần xác nhận,Cần xác nhận,EV-0729,Low
+ticket_details,ticket_id,INTEGER,No,tickets.id,NO,—,—,integer,UNIQUE,Cần xác nhận,Cần xác nhận,EV-0729,Low
+ticket_details,required_agreement,BOOLEAN,No,—,YES,—,—,bool,—,Cần xác nhận,Cần xác nhận,EV-0729,Low
+ticket_details,created_at,TIMESTAMP(3),No,—,NO,CURRENT_TIMESTAMP,—,YYYY-MM-DD HH:MM:SS.fff,—,Cần xác nhận,Cần xác nhận,EV-0729,Low
+ticket_details,updated_at,TIMESTAMP(3),No,—,NO,—,—,YYYY-MM-DD HH:MM:SS.fff,ON UPDATE @updatedAt (Prisma),Cần xác nhận,Cần xác nhận,EV-0729,Low
+ticket_details,adult_price,"DECIMAL(65,30)",No,—,YES,—,—,"65,30",—,Cần xác nhận,Cần xác nhận,EV-0729,Low
+ticket_details,child_price,"DECIMAL(65,30)",No,—,YES,—,—,"65,30",—,Cần xác nhận,Cần xác nhận,EV-0729,Low
+ticket_details,enable_discount,BOOLEAN,No,—,YES,—,—,bool,—,Cần xác nhận,Cần xác nhận,EV-0729,Low
+ticket_details,total_days_in_use_from_start,INTEGER,No,—,YES,—,—,integer,—,Cần xác nhận,Cần xác nhận,EV-0729,Low
+ticket_details,discount_adult_amount,"DECIMAL(65,30)",No,—,YES,—,—,"65,30",—,Cần xác nhận,Cần xác nhận,EV-0729,Low
+ticket_details,discount_child_amount,"DECIMAL(65,30)",No,—,YES,—,—,"65,30",—,Cần xác nhận,Cần xác nhận,EV-0729,Low
+ticket_details,discount_adult_threshold,"DECIMAL(65,30)",No,—,YES,—,—,"65,30",—,Cần xác nhận,Cần xác nhận,EV-0729,Low
+ticket_details,discount_child_threshold,"DECIMAL(65,30)",No,—,YES,—,—,"65,30",—,Cần xác nhận,Cần xác nhận,EV-0729,Low
+ticket_details,end_sale_at,DATE,No,—,YES,—,—,YYYY-MM-DD,—,Cần xác nhận,Cần xác nhận,EV-0729,Low
+ticket_details,start_sale_at,DATE,No,—,YES,—,—,YYYY-MM-DD,—,Cần xác nhận,Cần xác nhận,EV-0729,Low
+ticket_details,extra_times,INTEGER,No,—,YES,—,—,integer,—,Cần xác nhận,Cần xác nhận,EV-0729,Low
+ticket_details,limit_times,INTEGER,No,—,YES,—,—,integer,—,Cần xác nhận,Cần xác nhận,EV-0729,Low
+ticket_details,adult_smaregi_qrcode_url,VARCHAR(255),No,—,YES,—,255,text,—,Cần xác nhận,Cần xác nhận,EV-0729,Low
+ticket_details,child_smaregi_qrcode_url,VARCHAR(255),No,—,YES,—,255,text,—,Cần xác nhận,Cần xác nhận,EV-0729,Low
+ticket_details,discount_adult_smaregi_qrcode_url,VARCHAR(255),No,—,YES,—,255,text,—,Cần xác nhận,Cần xác nhận,EV-0729,Low
+ticket_details,discount_child_smaregi_qrcode_url,VARCHAR(255),No,—,YES,—,255,text,—,Cần xác nhận,Cần xác nhận,EV-0729,Low
+ticket_details,adult_smaregi_qrcode_url_1st_booking,VARCHAR(255),No,—,YES,—,255,text,—,Cần xác nhận,Cần xác nhận,EV-0729,Low
+ticket_details,child_smaregi_qrcode_url_1st_booking,VARCHAR(255),No,—,YES,—,255,text,—,Cần xác nhận,Cần xác nhận,EV-0729,Low
+ticket_details,adult_obic_code,VARCHAR(255),No,—,YES,—,255,text,—,Cần xác nhận,Cần xác nhận,EV-0729,Low
+ticket_details,adult_obic_code_1st_booking,VARCHAR(255),No,—,YES,—,255,text,—,Cần xác nhận,Cần xác nhận,EV-0729,Low
+ticket_details,child_obic_code,VARCHAR(255),No,—,YES,—,255,text,—,Cần xác nhận,Cần xác nhận,EV-0729,Low
+ticket_details,child_obic_code_1st_booking,VARCHAR(255),No,—,YES,—,255,text,—,Cần xác nhận,Cần xác nhận,EV-0729,Low
+ticket_details,discount_adult_obic_code,VARCHAR(255),No,—,YES,—,255,text,—,Cần xác nhận,Cần xác nhận,EV-0729,Low
+ticket_details,discount_child_obic_code,VARCHAR(255),No,—,YES,—,255,text,—,Cần xác nhận,Cần xác nhận,EV-0729,Low
+ticket_discount_settings,id,SERIAL,Yes,—,NO,—,—,integer,SERIAL,Cần xác nhận,Cần xác nhận,EV-0730,Low
+ticket_discount_settings,ticket_id,INTEGER,No,tickets.id,NO,—,—,integer,UNIQUE,Cần xác nhận,Cần xác nhận,EV-0730,Low
+ticket_discount_settings,setting,JSONB,No,—,YES,—,—,json,—,Cần xác nhận,Cần xác nhận,EV-0730,Low
+ticket_discount_settings,created_at,TIMESTAMP(3),No,—,NO,CURRENT_TIMESTAMP,—,YYYY-MM-DD HH:MM:SS.fff,—,Cần xác nhận,Cần xác nhận,EV-0730,Low
+ticket_discount_settings,updated_at,TIMESTAMP(3),No,—,NO,—,—,YYYY-MM-DD HH:MM:SS.fff,ON UPDATE @updatedAt (Prisma),Cần xác nhận,Cần xác nhận,EV-0730,Low
+ticket_discount_settings,hourly_extra_time_setting,JSONB,No,—,YES,—,—,json,—,Cần xác nhận,Cần xác nhận,EV-0730,Low
+tickets,id,SERIAL,Yes,—,NO,—,—,integer,SERIAL,Cần xác nhận,Cần xác nhận,EV-0731,Low
+tickets,name,TEXT,No,—,NO,—,unlimited,text,—,Cần xác nhận,Cần xác nhận,EV-0731,Low
+tickets,video_url,TEXT,No,—,YES,—,unlimited,text,—,Cần xác nhận,Cần xác nhận,EV-0731,Low
+tickets,payment_type,PaymentType,No,—,NO,—,—,enum,ENUM: Online | Offline,Cần xác nhận,Cần xác nhận,EV-0731,Low
+tickets,ticket_type,"""TicketType_new""",No,—,NO,—,—,enum,ENUM: Baby | Gift | Hour | Date | Monthly | Other | MasterMonthly | HourlyTimesLimit | DailyTimesLimit,Cần xác nhận,Cần xác nhận,EV-0731,Low
+tickets,visibility,BOOLEAN,No,—,NO,true,—,bool,—,Cần xác nhận,Cần xác nhận,EV-0731,Low
+tickets,max_child_per_adult,INTEGER,No,—,NO,—,—,integer,—,Cần xác nhận,Cần xác nhận,EV-0731,Low
+tickets,created_at,TIMESTAMP(3),No,—,NO,CURRENT_TIMESTAMP,—,YYYY-MM-DD HH:MM:SS.fff,—,Cần xác nhận,Cần xác nhận,EV-0731,Low
+tickets,updated_at,TIMESTAMP(3),No,—,NO,—,—,YYYY-MM-DD HH:MM:SS.fff,ON UPDATE @updatedAt (Prisma),Cần xác nhận,Cần xác nhận,EV-0731,Low
+tickets,child_age_limit_from,INTEGER,No,—,NO,—,—,integer,—,Cần xác nhận,Cần xác nhận,EV-0731,Low
+tickets,child_age_limit_to,INTEGER,No,—,NO,—,—,integer,—,Cần xác nhận,Cần xác nhận,EV-0731,Low
+tickets,adult_ticket_code,INTEGER,No,—,YES,—,—,integer,—,Cần xác nhận,Cần xác nhận,EV-0731,Low
+tickets,child_ticket_code,INTEGER,No,—,YES,—,—,integer,—,Cần xác nhận,Cần xác nhận,EV-0731,Low
+tickets,tenant_code,TEXT,No,tenants.code,YES,—,unlimited,text,—,Cần xác nhận,Cần xác nhận,EV-0731,Low
+tickets,can_book_in_advance,BOOLEAN,No,—,NO,—,—,bool,—,Cần xác nhận,Cần xác nhận,EV-0731,Low
+tickets,display_order,INTEGER,No,—,YES,—,—,integer,—,Cần xác nhận,Cần xác nhận,EV-0731,Low
+tickets,is_promotion,BOOLEAN,No,—,NO,false,—,bool,—,Cần xác nhận,Cần xác nhận,EV-0731,Low
+tickets,master_ticket_id,INTEGER,No,—,YES,—,—,integer,—,Cần xác nhận,Cần xác nhận,EV-0731,Low
+tickets,group_id,TEXT,No,—,YES,—,unlimited,text,—,Cần xác nhận,Cần xác nhận,EV-0731,Low
+users,id,SERIAL,Yes,—,NO,—,—,integer,SERIAL,Cần xác nhận,Cần xác nhận,EV-0732,Low
+users,password,TEXT,No,—,YES,—,unlimited,text,—,Cần xác nhận,Cần xác nhận,EV-0732,Low
+users,email,TEXT,No,—,YES,—,unlimited,text,UNIQUE,Cần xác nhận,Cần xác nhận,EV-0732,Low
+users,image,TEXT,No,—,YES,—,unlimited,text,—,Cần xác nhận,Cần xác nhận,EV-0732,Low
+users,created_at,TIMESTAMP(3),No,—,NO,CURRENT_TIMESTAMP,—,YYYY-MM-DD HH:MM:SS.fff,—,Cần xác nhận,Cần xác nhận,EV-0732,Low
+users,updated_at,TIMESTAMP(3),No,—,NO,CURRENT_TIMESTAMP,—,YYYY-MM-DD HH:MM:SS.fff,ON UPDATE @updatedAt (Prisma),Cần xác nhận,Cần xác nhận,EV-0732,Low
+users,token,TEXT,No,—,YES,—,unlimited,text,UNIQUE,Cần xác nhận,Cần xác nhận,EV-0732,Low
+users,email_verified,TIMESTAMP(3),No,—,YES,—,—,YYYY-MM-DD HH:MM:SS.fff,—,Cần xác nhận,Cần xác nhận,EV-0732,Low
+users,allowed_newsletter,BOOLEAN,No,—,NO,true,—,bool,—,Cần xác nhận,Cần xác nhận,EV-0732,Low
+users,is_blacklist,BOOLEAN,No,—,NO,false,—,bool,—,Cần xác nhận,Cần xác nhận,EV-0732,Low
+users,phone,TEXT,No,—,YES,—,unlimited,text,—,Cần xác nhận,Cần xác nhận,EV-0732,Low
+users,post_code,TEXT,No,—,YES,—,unlimited,text,—,Cần xác nhận,Cần xác nhận,EV-0732,Low
+users,role,Role,No,—,NO,E'User',—,enum,ENUM: User | Admin | SuperAdmin | Staff,Cần xác nhận,Cần xác nhận,EV-0732,Low
+users,first_name,TEXT,No,—,YES,—,unlimited,text,—,Cần xác nhận,Cần xác nhận,EV-0732,Low
+users,first_name_furigana,TEXT,No,—,YES,—,unlimited,text,—,Cần xác nhận,Cần xác nhận,EV-0732,Low
+users,gender,BOOLEAN,No,—,YES,true,—,bool,—,Cần xác nhận,Cần xác nhận,EV-0732,Low
+users,last_name,TEXT,No,—,YES,—,unlimited,text,—,Cần xác nhận,Cần xác nhận,EV-0732,Low
+users,last_name_furigana,TEXT,No,—,YES,—,unlimited,text,—,Cần xác nhận,Cần xác nhận,EV-0732,Low
+users,name,TEXT,No,—,YES,—,unlimited,text,—,Cần xác nhận,Cần xác nhận,EV-0732,Low
+users,birthday,DATE,No,—,YES,—,—,YYYY-MM-DD,—,Cần xác nhận,Cần xác nhận,EV-0732,Low
+users,address,TEXT,No,—,YES,—,unlimited,text,—,Cần xác nhận,Cần xác nhận,EV-0732,Low
+users,province,TEXT,No,—,YES,—,unlimited,text,—,Cần xác nhận,Cần xác nhận,EV-0732,Low
+users,deleted,BOOLEAN,No,—,YES,false,—,bool,—,Cần xác nhận,Cần xác nhận,EV-0732,Low
+users,locked,BOOLEAN,No,—,YES,false,—,bool,—,Cần xác nhận,Cần xác nhận,EV-0732,Low
+users,login_attempts,INTEGER,No,—,YES,—,—,integer,—,Cần xác nhận,Cần xác nhận,EV-0732,Low
+users,first_checked_out_booking_id,INTEGER,No,—,YES,—,—,integer,—,Cần xác nhận,Cần xác nhận,EV-0732,Low
+users,deleted_at,TIMESTAMP(3),No,—,YES,—,—,YYYY-MM-DD HH:MM:SS.fff,—,Cần xác nhận,Cần xác nhận,EV-0732,Low
+users,deleted_by,TEXT,No,—,YES,—,unlimited,text,—,Cần xác nhận,Cần xác nhận,EV-0732,Low
+users,line_user_id,TEXT,No,—,YES,—,unlimited,text,—,Cần xác nhận,Cần xác nhận,EV-0732,Low
+users_tenants_favorites,user_id,INTEGER,Yes,users.id,NO,—,—,integer,UNIQUE,Cần xác nhận,Cần xác nhận,EV-0733,Low
+users_tenants_favorites,tenant_code,TEXT,Yes,tenants.code,NO,—,unlimited,text,UNIQUE,Cần xác nhận,Cần xác nhận,EV-0733,Low
+users_tenants_favorites,created_at,TIMESTAMP(3),No,—,YES,CURRENT_TIMESTAMP,—,YYYY-MM-DD HH:MM:SS.fff,—,Cần xác nhận,Cần xác nhận,EV-0733,Low

@@ -1,0 +1,457 @@
+[
+ {
+  "url": "https://dhxkf93d45vp4.cloudfront.net/admin",
+  "text": "Failed to load resource: net::ERR_FAILED",
+  "at": "2026-10-02T06:27:56.756Z",
+  "noise": "read-only-block"
+ },
+ {
+  "url": "https://dhxkf93d45vp4.cloudfront.net/admin",
+  "text": "Failed to load resource: net::ERR_FAILED",
+  "at": "2026-10-02T06:27:56.757Z",
+  "noise": "read-only-block"
+ },
+ {
+  "url": "https://dhxkf93d45vp4.cloudfront.net/admin",
+  "text": "Failed to load resource: net::ERR_FAILED",
+  "at": "2026-10-02T06:27:57.522Z",
+  "noise": "read-only-block"
+ },
+ {
+  "url": "https://dhxkf93d45vp4.cloudfront.net/admin",
+  "text": "Failed to load resource: net::ERR_FAILED",
+  "at": "2026-10-02T06:27:57.528Z",
+  "noise": "read-only-block"
+ },
+ {
+  "url": "https://dhxkf93d45vp4.cloudfront.net/admin/app-settings",
+  "text": "Failed to load resource: net::ERR_FAILED",
+  "at": "2026-10-02T06:27:59.531Z",
+  "noise": "read-only-block"
+ },
+ {
+  "url": "https://dhxkf93d45vp4.cloudfront.net/admin/app-settings",
+  "text": "Failed to load resource: net::ERR_FAILED",
+  "at": "2026-10-02T06:27:59.532Z",
+  "noise": "read-only-block"
+ },
+ {
+  "url": "https://dhxkf93d45vp4.cloudfront.net/admin/app-settings",
+  "text": "Failed to load resource: net::ERR_FAILED",
+  "at": "2026-10-02T06:28:00.337Z",
+  "noise": "read-only-block"
+ },
+ {
+  "url": "https://dhxkf93d45vp4.cloudfront.net/admin/barcode-scanner",
+  "text": "Failed to load resource: net::ERR_FAILED",
+  "at": "2026-10-02T06:28:00.911Z",
+  "noise": "read-only-block"
+ },
+ {
+  "url": "https://dhxkf93d45vp4.cloudfront.net/admin/barcode-scanner",
+  "text": "Failed to load resource: net::ERR_FAILED",
+  "at": "2026-10-02T06:28:00.912Z",
+  "noise": "read-only-block"
+ },
+ {
+  "url": "https://dhxkf93d45vp4.cloudfront.net/admin/booking-management",
+  "text": "Failed to load resource: net::ERR_FAILED",
+  "at": "2026-10-02T06:28:02.964Z",
+  "noise": "read-only-block"
+ },
+ {
+  "url": "https://dhxkf93d45vp4.cloudfront.net/admin/booking-management",
+  "text": "Failed to load resource: net::ERR_FAILED",
+  "at": "2026-10-02T06:28:02.965Z",
+  "noise": "read-only-block"
+ },
+ {
+  "url": "https://dhxkf93d45vp4.cloudfront.net/admin/booking-queue",
+  "text": "Failed to load resource: net::ERR_FAILED",
+  "at": "2026-10-02T06:28:05.114Z",
+  "noise": "read-only-block"
+ },
+ {
+  "url": "https://dhxkf93d45vp4.cloudfront.net/admin/booking-queue",
+  "text": "Failed to load resource: net::ERR_FAILED",
+  "at": "2026-10-02T06:28:05.116Z",
+  "noise": "read-only-block"
+ },
+ {
+  "url": "https://dhxkf93d45vp4.cloudfront.net/admin/booking-vacancies",
+  "text": "Failed to load resource: net::ERR_FAILED",
+  "at": "2026-10-02T06:28:07.191Z",
+  "noise": "read-only-block"
+ },
+ {
+  "url": "https://dhxkf93d45vp4.cloudfront.net/admin/booking-vacancies",
+  "text": "Failed to load resource: net::ERR_FAILED",
+  "at": "2026-10-02T06:28:07.191Z",
+  "noise": "read-only-block"
+ },
+ {
+  "url": "https://dhxkf93d45vp4.cloudfront.net/admin/change-email",
+  "text": "Failed to load resource: net::ERR_FAILED",
+  "at": "2026-10-02T06:28:09.460Z",
+  "noise": "read-only-block"
+ },
+ {
+  "url": "https://dhxkf93d45vp4.cloudfront.net/admin/change-email",
+  "text": "Failed to load resource: net::ERR_FAILED",
+  "at": "2026-10-02T06:28:09.461Z",
+  "noise": "read-only-block"
+ },
+ {
+  "url": "https://dhxkf93d45vp4.cloudfront.net/admin/change-email",
+  "text": "Failed to load resource: net::ERR_FAILED",
+  "at": "2026-10-02T06:28:09.814Z",
+  "noise": "read-only-block"
+ },
+ {
+  "url": "https://dhxkf93d45vp4.cloudfront.net/admin/change-password",
+  "text": "Failed to load resource: net::ERR_FAILED",
+  "at": "2026-10-02T06:28:10.459Z",
+  "noise": "read-only-block"
+ },
+ {
+  "url": "https://dhxkf93d45vp4.cloudfront.net/admin/change-password",
+  "text": "Failed to load resource: net::ERR_FAILED",
+  "at": "2026-10-02T06:28:10.460Z",
+  "noise": "read-only-block"
+ },
+ {
+  "url": "https://dhxkf93d45vp4.cloudfront.net/admin/change-password",
+  "text": "Failed to load resource: net::ERR_FAILED",
+  "at": "2026-10-02T06:28:10.936Z",
+  "noise": "read-only-block"
+ },
+ {
+  "url": "https://dhxkf93d45vp4.cloudfront.net/admin/dashboard",
+  "text": "Failed to load resource: net::ERR_FAILED",
+  "at": "2026-10-02T06:28:11.510Z",
+  "noise": "read-only-block"
+ },
+ {
+  "url": "https://dhxkf93d45vp4.cloudfront.net/admin/dashboard",
+  "text": "Failed to load resource: net::ERR_FAILED",
+  "at": "2026-10-02T06:28:11.510Z",
+  "noise": "read-only-block"
+ },
+ {
+  "url": "https://dhxkf93d45vp4.cloudfront.net/admin/dashboard",
+  "text": "Failed to load resource: net::ERR_FAILED",
+  "at": "2026-10-02T06:28:12.008Z",
+  "noise": "read-only-block"
+ },
+ {
+  "url": "https://dhxkf93d45vp4.cloudfront.net/admin/disclaimer-management",
+  "text": "Failed to load resource: net::ERR_FAILED",
+  "at": "2026-10-02T06:28:12.550Z",
+  "noise": "read-only-block"
+ },
+ {
+  "url": "https://dhxkf93d45vp4.cloudfront.net/admin/disclaimer-management",
+  "text": "Failed to load resource: net::ERR_FAILED",
+  "at": "2026-10-02T06:28:12.551Z",
+  "noise": "read-only-block"
+ },
+ {
+  "url": "https://dhxkf93d45vp4.cloudfront.net/admin/disclaimer-management",
+  "text": "Failed to load resource: net::ERR_FAILED",
+  "at": "2026-10-02T06:28:13.032Z",
+  "noise": "read-only-block"
+ },
+ {
+  "url": "https://dhxkf93d45vp4.cloudfront.net/admin/email-settings",
+  "text": "Failed to load resource: net::ERR_FAILED",
+  "at": "2026-10-02T06:28:13.508Z",
+  "noise": "read-only-block"
+ },
+ {
+  "url": "https://dhxkf93d45vp4.cloudfront.net/admin/email-settings",
+  "text": "Failed to load resource: net::ERR_FAILED",
+  "at": "2026-10-02T06:28:13.509Z",
+  "noise": "read-only-block"
+ },
+ {
+  "url": "https://dhxkf93d45vp4.cloudfront.net/admin/email-settings",
+  "text": "Failed to load resource: net::ERR_FAILED",
+  "at": "2026-10-02T06:28:13.864Z",
+  "noise": "read-only-block"
+ },
+ {
+  "url": "https://dhxkf93d45vp4.cloudfront.net/admin/forgot-password",
+  "text": "Failed to load resource: net::ERR_FAILED",
+  "at": "2026-10-02T06:28:14.589Z",
+  "noise": "read-only-block"
+ },
+ {
+  "url": "https://dhxkf93d45vp4.cloudfront.net/admin/forgot-password",
+  "text": "Failed to load resource: net::ERR_FAILED",
+  "at": "2026-10-02T06:28:14.590Z",
+  "noise": "read-only-block"
+ },
+ {
+  "url": "https://dhxkf93d45vp4.cloudfront.net/admin/gmo-settings",
+  "text": "Failed to load resource: net::ERR_FAILED",
+  "at": "2026-10-02T06:28:16.254Z",
+  "noise": "read-only-block"
+ },
+ {
+  "url": "https://dhxkf93d45vp4.cloudfront.net/admin/gmo-settings",
+  "text": "Failed to load resource: net::ERR_FAILED",
+  "at": "2026-10-02T06:28:16.254Z",
+  "noise": "read-only-block"
+ },
+ {
+  "url": "https://dhxkf93d45vp4.cloudfront.net/admin/gmo-settings",
+  "text": "Failed to load resource: net::ERR_FAILED",
+  "at": "2026-10-02T06:28:16.477Z",
+  "noise": "read-only-block"
+ },
+ {
+  "url": "https://dhxkf93d45vp4.cloudfront.net/admin/gmo-settings/create",
+  "text": "Failed to load resource: net::ERR_FAILED",
+  "at": "2026-10-02T06:28:17.292Z",
+  "noise": "read-only-block"
+ },
+ {
+  "url": "https://dhxkf93d45vp4.cloudfront.net/admin/gmo-settings/create",
+  "text": "Failed to load resource: net::ERR_FAILED",
+  "at": "2026-10-02T06:28:17.292Z",
+  "noise": "read-only-block"
+ },
+ {
+  "url": "https://dhxkf93d45vp4.cloudfront.net/admin/news-management",
+  "text": "Failed to load resource: net::ERR_FAILED",
+  "at": "2026-10-02T06:28:19.874Z",
+  "noise": "read-only-block"
+ },
+ {
+  "url": "https://dhxkf93d45vp4.cloudfront.net/admin/news-management",
+  "text": "Failed to load resource: net::ERR_FAILED",
+  "at": "2026-10-02T06:28:19.875Z",
+  "noise": "read-only-block"
+ },
+ {
+  "url": "https://dhxkf93d45vp4.cloudfront.net/admin/news-management",
+  "text": "Failed to load resource: net::ERR_FAILED",
+  "at": "2026-10-02T06:28:19.944Z",
+  "noise": "read-only-block"
+ },
+ {
+  "url": "https://dhxkf93d45vp4.cloudfront.net/admin/news-management/create",
+  "text": "Failed to load resource: net::ERR_FAILED",
+  "at": "2026-10-02T06:28:20.845Z",
+  "noise": "read-only-block"
+ },
+ {
+  "url": "https://dhxkf93d45vp4.cloudfront.net/admin/news-management/create",
+  "text": "Failed to load resource: net::ERR_FAILED",
+  "at": "2026-10-02T06:28:20.847Z",
+  "noise": "read-only-block"
+ },
+ {
+  "url": "https://dhxkf93d45vp4.cloudfront.net/admin/revenue-management",
+  "text": "Failed to load resource: net::ERR_FAILED",
+  "at": "2026-10-02T06:28:23.593Z",
+  "noise": "read-only-block"
+ },
+ {
+  "url": "https://dhxkf93d45vp4.cloudfront.net/admin/revenue-management",
+  "text": "Failed to load resource: net::ERR_FAILED",
+  "at": "2026-10-02T06:28:23.594Z",
+  "noise": "read-only-block"
+ },
+ {
+  "url": "https://dhxkf93d45vp4.cloudfront.net/admin/scan-management",
+  "text": "Failed to load resource: net::ERR_FAILED",
+  "at": "2026-10-02T06:28:25.566Z",
+  "noise": "read-only-block"
+ },
+ {
+  "url": "https://dhxkf93d45vp4.cloudfront.net/admin/scan-management",
+  "text": "Failed to load resource: net::ERR_FAILED",
+  "at": "2026-10-02T06:28:25.566Z",
+  "noise": "read-only-block"
+ },
+ {
+  "url": "https://dhxkf93d45vp4.cloudfront.net/admin/signin",
+  "text": "Failed to load resource: net::ERR_FAILED",
+  "at": "2026-10-02T06:28:27.637Z",
+  "noise": "read-only-block"
+ },
+ {
+  "url": "https://dhxkf93d45vp4.cloudfront.net/admin/signin",
+  "text": "Failed to load resource: net::ERR_FAILED",
+  "at": "2026-10-02T06:28:27.648Z",
+  "noise": "read-only-block"
+ },
+ {
+  "url": "https://dhxkf93d45vp4.cloudfront.net/admin/signin",
+  "text": "Failed to load resource: net::ERR_FAILED",
+  "at": "2026-10-02T06:28:28.538Z",
+  "noise": "read-only-block"
+ },
+ {
+  "url": "https://dhxkf93d45vp4.cloudfront.net/admin/signin",
+  "text": "Failed to load resource: net::ERR_FAILED",
+  "at": "2026-10-02T06:28:28.541Z",
+  "noise": "read-only-block"
+ },
+ {
+  "url": "https://dhxkf93d45vp4.cloudfront.net/admin/staff-management",
+  "text": "Failed to load resource: net::ERR_FAILED",
+  "at": "2026-10-02T06:28:28.850Z",
+  "noise": "read-only-block"
+ },
+ {
+  "url": "https://dhxkf93d45vp4.cloudfront.net/admin/staff-management",
+  "text": "Failed to load resource: net::ERR_FAILED",
+  "at": "2026-10-02T06:28:28.854Z",
+  "noise": "read-only-block"
+ },
+ {
+  "url": "https://dhxkf93d45vp4.cloudfront.net/admin/staff-management",
+  "text": "Failed to load resource: net::ERR_FAILED",
+  "at": "2026-10-02T06:28:29.196Z",
+  "noise": "read-only-block"
+ },
+ {
+  "url": "https://dhxkf93d45vp4.cloudfront.net/admin/staff-management",
+  "text": "Failed to load resource: net::ERR_FAILED",
+  "at": "2026-10-02T06:28:29.197Z",
+  "noise": "read-only-block"
+ },
+ {
+  "url": "https://dhxkf93d45vp4.cloudfront.net/admin/staff-management/create",
+  "text": "Failed to load resource: net::ERR_FAILED",
+  "at": "2026-10-02T06:28:31.198Z",
+  "noise": "read-only-block"
+ },
+ {
+  "url": "https://dhxkf93d45vp4.cloudfront.net/admin/staff-management/create",
+  "text": "Failed to load resource: net::ERR_FAILED",
+  "at": "2026-10-02T06:28:31.199Z",
+  "noise": "read-only-block"
+ },
+ {
+  "url": "https://dhxkf93d45vp4.cloudfront.net/admin/tenant-management",
+  "text": "Failed to load resource: net::ERR_FAILED",
+  "at": "2026-10-02T06:28:33.141Z",
+  "noise": "read-only-block"
+ },
+ {
+  "url": "https://dhxkf93d45vp4.cloudfront.net/admin/tenant-management",
+  "text": "Failed to load resource: net::ERR_FAILED",
+  "at": "2026-10-02T06:28:33.142Z",
+  "noise": "read-only-block"
+ },
+ {
+  "url": "https://dhxkf93d45vp4.cloudfront.net/admin/tenant-management",
+  "text": "Failed to load resource: net::ERR_FAILED",
+  "at": "2026-10-02T06:28:33.894Z",
+  "noise": "read-only-block"
+ },
+ {
+  "url": "https://dhxkf93d45vp4.cloudfront.net/admin/tenant-management/create",
+  "text": "Failed to load resource: net::ERR_FAILED",
+  "at": "2026-10-02T06:28:34.481Z",
+  "noise": "read-only-block"
+ },
+ {
+  "url": "https://dhxkf93d45vp4.cloudfront.net/admin/tenant-management/create",
+  "text": "Failed to load resource: net::ERR_FAILED",
+  "at": "2026-10-02T06:28:34.482Z",
+  "noise": "read-only-block"
+ },
+ {
+  "url": "https://dhxkf93d45vp4.cloudfront.net/admin/tenant-management/create",
+  "text": "Failed to load resource: net::ERR_FAILED",
+  "at": "2026-10-02T06:28:34.924Z",
+  "noise": "read-only-block"
+ },
+ {
+  "url": "https://dhxkf93d45vp4.cloudfront.net/admin/ticket-management",
+  "text": "Failed to load resource: net::ERR_FAILED",
+  "at": "2026-10-02T06:28:35.524Z",
+  "noise": "read-only-block"
+ },
+ {
+  "url": "https://dhxkf93d45vp4.cloudfront.net/admin/ticket-management",
+  "text": "Failed to load resource: net::ERR_FAILED",
+  "at": "2026-10-02T06:28:35.525Z",
+  "noise": "read-only-block"
+ },
+ {
+  "url": "https://dhxkf93d45vp4.cloudfront.net/admin/ticket-management/create",
+  "text": "Failed to load resource: net::ERR_FAILED",
+  "at": "2026-10-02T06:28:37.595Z",
+  "noise": "read-only-block"
+ },
+ {
+  "url": "https://dhxkf93d45vp4.cloudfront.net/admin/ticket-management/create",
+  "text": "Failed to load resource: net::ERR_FAILED",
+  "at": "2026-10-02T06:28:37.596Z",
+  "noise": "read-only-block"
+ },
+ {
+  "url": "https://dhxkf93d45vp4.cloudfront.net/admin/user-management",
+  "text": "Failed to load resource: net::ERR_FAILED",
+  "at": "2026-10-02T06:28:39.701Z",
+  "noise": "read-only-block"
+ },
+ {
+  "url": "https://dhxkf93d45vp4.cloudfront.net/admin/user-management",
+  "text": "Failed to load resource: net::ERR_FAILED",
+  "at": "2026-10-02T06:28:39.702Z",
+  "noise": "read-only-block"
+ },
+ {
+  "url": "https://dhxkf93d45vp4.cloudfront.net/admin/user-management/create",
+  "text": "Failed to load resource: net::ERR_FAILED",
+  "at": "2026-10-02T06:28:41.792Z",
+  "noise": "read-only-block"
+ },
+ {
+  "url": "https://dhxkf93d45vp4.cloudfront.net/admin/user-management/create",
+  "text": "Failed to load resource: net::ERR_FAILED",
+  "at": "2026-10-02T06:28:41.794Z",
+  "noise": "read-only-block"
+ },
+ {
+  "url": "https://dhxkf93d45vp4.cloudfront.net/admin/user-management/create",
+  "text": "Failed to load resource: the server responded with a status of 404 ()",
+  "at": "2026-10-02T06:28:42.734Z"
+ },
+ {
+  "url": "https://dhxkf93d45vp4.cloudfront.net/admin/vacancies-status",
+  "text": "Failed to load resource: net::ERR_FAILED",
+  "at": "2026-10-02T06:28:44.102Z",
+  "noise": "read-only-block"
+ },
+ {
+  "url": "https://dhxkf93d45vp4.cloudfront.net/admin/vacancies-status",
+  "text": "Failed to load resource: net::ERR_FAILED",
+  "at": "2026-10-02T06:28:44.104Z",
+  "noise": "read-only-block"
+ },
+ {
+  "url": "https://dhxkf93d45vp4.cloudfront.net/admin/waiting-time-management",
+  "text": "Failed to load resource: net::ERR_FAILED",
+  "at": "2026-10-02T06:28:46.501Z",
+  "noise": "read-only-block"
+ },
+ {
+  "url": "https://dhxkf93d45vp4.cloudfront.net/admin/waiting-time-management",
+  "text": "Failed to load resource: net::ERR_FAILED",
+  "at": "2026-10-02T06:28:46.502Z",
+  "noise": "read-only-block"
+ },
+ {
+  "url": "https://dhxkf93d45vp4.cloudfront.net/admin/waiting-time-management",
+  "text": "Failed to load resource: net::ERR_FAILED",
+  "at": "2026-10-02T06:28:46.697Z",
+  "noise": "read-only-block"
+ }
+]

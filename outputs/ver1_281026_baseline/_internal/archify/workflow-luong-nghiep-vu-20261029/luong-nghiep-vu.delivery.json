@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "receiptId": "e6d390fc-0d34-42a0-a0f8-929d70df1721",
+  "status": "current",
+  "command": "deliver",
+  "type": "workflow",
+  "input": "/Users/longtd/Desktop/WORK/Project Kidokido/KIDO_system-to-doc/outputs/ver1_281026_baseline/_internal/archify/workflow-luong-nghiep-vu-20261029/candidate.json",
+  "output": "/Users/longtd/Desktop/WORK/Project Kidokido/KIDO_system-to-doc/outputs/ver1_281026_baseline/_internal/archify/workflow-luong-nghiep-vu-20261029/luong-nghiep-vu.html",
+  "specification": {
+    "sha256": "1f97a149910e4ce0b10c103c94dd08c4953dbe8bce9703fca8ba30de042afd7b",
+    "bytes": 6596
+  },
+  "artifact": {
+    "sha256": "b246c0a4a572b349c9d6692b4a41b6315f80b9d65d25f7d1d99875da976cf0a1",
+    "bytes": 769319
+  }
+}

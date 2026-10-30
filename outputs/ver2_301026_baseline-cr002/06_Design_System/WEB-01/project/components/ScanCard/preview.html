@@ -1,0 +1,15 @@
+<!-- @dsCard group="Feedback" height=520 -->
+<!doctype html>
+<html>
+<head><meta charset="utf-8"><style>
+body{margin:0;padding:16px;background:var(--page-bg);font-family:var(--font-sans)}
+.stack{display:flex;flex-direction:column;gap:16px}
+</style></head>
+<body>
+<div id="root" class="kka-root"></div>
+<script>
+var D = window.KidoKidoAdmin, h = React.createElement;
+ReactDOM.createRoot(document.getElementById('root')).render(h(D.ScanCard,{mode:'camera',result:true}, h(D.InlineMessage,{tone:'success',title:'チェックイン完了',rows:[['商品名','年間チケットAT'],['人数','おとな1名子ども1名']]})));
+</script>
+</body>
+</html>

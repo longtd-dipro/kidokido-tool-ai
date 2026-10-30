@@ -1,8 +1,8 @@
-# Gate V-DS — Design System (outputs/ver1_281026_baseline/04_DesignSystem)
+# Gate V-DS — Design System (outputs/ver1_281026_baseline/06_DesignSystem)
 
 | # | Check | Ket qua | Chi tiet |
 |---|---|---|---|
-| 0 | Bo cuc 04_DesignSystem khop dsLayout.mode cua tokens-draft (1 thu muc hoac WEB-xx/ moi website) [mode per-site] | PASS |  |
+| 0 | Bo cuc 06_DesignSystem khop dsLayout.mode cua tokens-draft (1 thu muc hoac WEB-xx/ moi website) [mode per-site] | PASS |  |
 | WEB-01.1 | [WEB-01] Du file STATUS.md + project/ (design-system.json, tokens.json, README.md, Cover tran, khong _Example) | PASS |  |
 | WEB-01.2 | [WEB-01] Index design-system.json dung shape (v3, files, marker, namespace, assetGroups, lastChange) | PASS |  |
 | WEB-01.3 | [WEB-01] tokens.json dung grammar format.md (list, ten, mau, alias, theme, type, cap) | PASS |  |

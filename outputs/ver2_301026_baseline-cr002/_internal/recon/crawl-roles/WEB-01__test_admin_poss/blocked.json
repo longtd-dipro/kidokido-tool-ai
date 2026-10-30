@@ -1,0 +1,555 @@
+[
+  {
+    "kind": "request",
+    "method": "POST",
+    "url": "https://md-eecad2978f7a43f5b7838c919258e6de.ecs.us-east-2.on.aws/events?cee=no",
+    "page": "https://dhxkf93d45vp4.cloudfront.net/admin",
+    "at": "2026-10-02T06:28:49.213Z"
+  },
+  {
+    "kind": "request",
+    "method": "POST",
+    "url": "https://bded8a3c6ae-1-1053047382554.us-central1.run.app/events?cee=no",
+    "page": "https://dhxkf93d45vp4.cloudfront.net/admin",
+    "at": "2026-10-02T06:28:49.215Z"
+  },
+  {
+    "kind": "request",
+    "method": "POST",
+    "url": "https://md-eecad2978f7a43f5b7838c919258e6de.ecs.us-east-2.on.aws/events?cee=no",
+    "page": "https://dhxkf93d45vp4.cloudfront.net/admin",
+    "at": "2026-10-02T06:28:49.903Z"
+  },
+  {
+    "kind": "request",
+    "method": "POST",
+    "url": "https://bded8a3c6ae-1-1053047382554.us-central1.run.app/events?cee=no",
+    "page": "https://dhxkf93d45vp4.cloudfront.net/admin",
+    "at": "2026-10-02T06:28:49.925Z"
+  },
+  {
+    "kind": "request",
+    "method": "POST",
+    "url": "https://md-eecad2978f7a43f5b7838c919258e6de.ecs.us-east-2.on.aws/events?cee=no",
+    "page": "https://dhxkf93d45vp4.cloudfront.net/admin/app-settings",
+    "at": "2026-10-02T06:28:51.916Z"
+  },
+  {
+    "kind": "request",
+    "method": "POST",
+    "url": "https://bded8a3c6ae-1-1053047382554.us-central1.run.app/events?cee=no",
+    "page": "https://dhxkf93d45vp4.cloudfront.net/admin/app-settings",
+    "at": "2026-10-02T06:28:51.918Z"
+  },
+  {
+    "kind": "request",
+    "method": "POST",
+    "url": "https://dhxkf93d45vp4.cloudfront.net/api/auth/signout",
+    "page": "https://dhxkf93d45vp4.cloudfront.net/admin/app-settings",
+    "at": "2026-10-02T06:28:52.656Z"
+  },
+  {
+    "kind": "request",
+    "method": "POST",
+    "url": "https://md-eecad2978f7a43f5b7838c919258e6de.ecs.us-east-2.on.aws/events?cee=no",
+    "page": "https://dhxkf93d45vp4.cloudfront.net/admin/barcode-scanner",
+    "at": "2026-10-02T06:28:53.770Z"
+  },
+  {
+    "kind": "request",
+    "method": "POST",
+    "url": "https://bded8a3c6ae-1-1053047382554.us-central1.run.app/events?cee=no",
+    "page": "https://dhxkf93d45vp4.cloudfront.net/admin/barcode-scanner",
+    "at": "2026-10-02T06:28:53.772Z"
+  },
+  {
+    "kind": "request",
+    "method": "POST",
+    "url": "https://md-eecad2978f7a43f5b7838c919258e6de.ecs.us-east-2.on.aws/events?cee=no",
+    "page": "https://dhxkf93d45vp4.cloudfront.net/admin/barcode-scanner",
+    "at": "2026-10-02T06:28:53.948Z"
+  },
+  {
+    "kind": "request",
+    "method": "POST",
+    "url": "https://bded8a3c6ae-1-1053047382554.us-central1.run.app/events?cee=no",
+    "page": "https://dhxkf93d45vp4.cloudfront.net/admin/barcode-scanner",
+    "at": "2026-10-02T06:28:53.950Z"
+  },
+  {
+    "kind": "request",
+    "method": "POST",
+    "url": "https://md-eecad2978f7a43f5b7838c919258e6de.ecs.us-east-2.on.aws/events?cee=no",
+    "page": "https://dhxkf93d45vp4.cloudfront.net/admin/booking-management",
+    "at": "2026-10-02T06:28:54.922Z"
+  },
+  {
+    "kind": "request",
+    "method": "POST",
+    "url": "https://bded8a3c6ae-1-1053047382554.us-central1.run.app/events?cee=no",
+    "page": "https://dhxkf93d45vp4.cloudfront.net/admin/booking-management",
+    "at": "2026-10-02T06:28:54.925Z"
+  },
+  {
+    "kind": "request",
+    "method": "POST",
+    "url": "https://md-eecad2978f7a43f5b7838c919258e6de.ecs.us-east-2.on.aws/events?cee=no",
+    "page": "https://dhxkf93d45vp4.cloudfront.net/admin/booking-queue",
+    "at": "2026-10-02T06:28:57.177Z"
+  },
+  {
+    "kind": "request",
+    "method": "POST",
+    "url": "https://bded8a3c6ae-1-1053047382554.us-central1.run.app/events?cee=no",
+    "page": "https://dhxkf93d45vp4.cloudfront.net/admin/booking-queue",
+    "at": "2026-10-02T06:28:57.178Z"
+  },
+  {
+    "kind": "request",
+    "method": "POST",
+    "url": "https://md-eecad2978f7a43f5b7838c919258e6de.ecs.us-east-2.on.aws/events?cee=no",
+    "page": "https://dhxkf93d45vp4.cloudfront.net/admin/booking-vacancies",
+    "at": "2026-10-02T06:28:59.767Z"
+  },
+  {
+    "kind": "request",
+    "method": "POST",
+    "url": "https://bded8a3c6ae-1-1053047382554.us-central1.run.app/events?cee=no",
+    "page": "https://dhxkf93d45vp4.cloudfront.net/admin/booking-vacancies",
+    "at": "2026-10-02T06:28:59.769Z"
+  },
+  {
+    "kind": "request",
+    "method": "POST",
+    "url": "https://md-eecad2978f7a43f5b7838c919258e6de.ecs.us-east-2.on.aws/events?cee=no",
+    "page": "https://dhxkf93d45vp4.cloudfront.net/admin/change-email",
+    "at": "2026-10-02T06:29:01.894Z"
+  },
+  {
+    "kind": "request",
+    "method": "POST",
+    "url": "https://bded8a3c6ae-1-1053047382554.us-central1.run.app/events?cee=no",
+    "page": "https://dhxkf93d45vp4.cloudfront.net/admin/change-email",
+    "at": "2026-10-02T06:29:01.896Z"
+  },
+  {
+    "kind": "request",
+    "method": "POST",
+    "url": "https://dhxkf93d45vp4.cloudfront.net/api/auth/signout",
+    "page": "https://dhxkf93d45vp4.cloudfront.net/admin/change-email",
+    "at": "2026-10-02T06:29:02.347Z"
+  },
+  {
+    "kind": "request",
+    "method": "POST",
+    "url": "https://md-eecad2978f7a43f5b7838c919258e6de.ecs.us-east-2.on.aws/events?cee=no",
+    "page": "https://dhxkf93d45vp4.cloudfront.net/admin/change-password",
+    "at": "2026-10-02T06:29:02.927Z"
+  },
+  {
+    "kind": "request",
+    "method": "POST",
+    "url": "https://bded8a3c6ae-1-1053047382554.us-central1.run.app/events?cee=no",
+    "page": "https://dhxkf93d45vp4.cloudfront.net/admin/change-password",
+    "at": "2026-10-02T06:29:02.928Z"
+  },
+  {
+    "kind": "request",
+    "method": "POST",
+    "url": "https://dhxkf93d45vp4.cloudfront.net/api/auth/signout",
+    "page": "https://dhxkf93d45vp4.cloudfront.net/admin/change-password",
+    "at": "2026-10-02T06:29:03.392Z"
+  },
+  {
+    "kind": "request",
+    "method": "POST",
+    "url": "https://md-eecad2978f7a43f5b7838c919258e6de.ecs.us-east-2.on.aws/events?cee=no",
+    "page": "https://dhxkf93d45vp4.cloudfront.net/admin/dashboard",
+    "at": "2026-10-02T06:29:03.968Z"
+  },
+  {
+    "kind": "request",
+    "method": "POST",
+    "url": "https://bded8a3c6ae-1-1053047382554.us-central1.run.app/events?cee=no",
+    "page": "https://dhxkf93d45vp4.cloudfront.net/admin/dashboard",
+    "at": "2026-10-02T06:29:03.969Z"
+  },
+  {
+    "kind": "request",
+    "method": "POST",
+    "url": "https://dhxkf93d45vp4.cloudfront.net/api/auth/signout",
+    "page": "https://dhxkf93d45vp4.cloudfront.net/admin/dashboard",
+    "at": "2026-10-02T06:29:04.317Z"
+  },
+  {
+    "kind": "request",
+    "method": "POST",
+    "url": "https://md-eecad2978f7a43f5b7838c919258e6de.ecs.us-east-2.on.aws/events?cee=no",
+    "page": "https://dhxkf93d45vp4.cloudfront.net/admin/disclaimer-management",
+    "at": "2026-10-02T06:29:05.037Z"
+  },
+  {
+    "kind": "request",
+    "method": "POST",
+    "url": "https://bded8a3c6ae-1-1053047382554.us-central1.run.app/events?cee=no",
+    "page": "https://dhxkf93d45vp4.cloudfront.net/admin/disclaimer-management",
+    "at": "2026-10-02T06:29:05.038Z"
+  },
+  {
+    "kind": "request",
+    "method": "POST",
+    "url": "https://dhxkf93d45vp4.cloudfront.net/api/auth/signout",
+    "page": "https://dhxkf93d45vp4.cloudfront.net/admin/disclaimer-management",
+    "at": "2026-10-02T06:29:05.335Z"
+  },
+  {
+    "kind": "request",
+    "method": "POST",
+    "url": "https://md-eecad2978f7a43f5b7838c919258e6de.ecs.us-east-2.on.aws/events?cee=no",
+    "page": "https://dhxkf93d45vp4.cloudfront.net/admin/email-settings",
+    "at": "2026-10-02T06:29:06.035Z"
+  },
+  {
+    "kind": "request",
+    "method": "POST",
+    "url": "https://bded8a3c6ae-1-1053047382554.us-central1.run.app/events?cee=no",
+    "page": "https://dhxkf93d45vp4.cloudfront.net/admin/email-settings",
+    "at": "2026-10-02T06:29:06.038Z"
+  },
+  {
+    "kind": "request",
+    "method": "POST",
+    "url": "https://dhxkf93d45vp4.cloudfront.net/api/auth/signout",
+    "page": "https://dhxkf93d45vp4.cloudfront.net/admin/email-settings",
+    "at": "2026-10-02T06:29:06.395Z"
+  },
+  {
+    "kind": "request",
+    "method": "POST",
+    "url": "https://md-eecad2978f7a43f5b7838c919258e6de.ecs.us-east-2.on.aws/events?cee=no",
+    "page": "https://dhxkf93d45vp4.cloudfront.net/admin/forgot-password",
+    "at": "2026-10-02T06:29:07.165Z"
+  },
+  {
+    "kind": "request",
+    "method": "POST",
+    "url": "https://bded8a3c6ae-1-1053047382554.us-central1.run.app/events?cee=no",
+    "page": "https://dhxkf93d45vp4.cloudfront.net/admin/forgot-password",
+    "at": "2026-10-02T06:29:07.166Z"
+  },
+  {
+    "kind": "request",
+    "method": "POST",
+    "url": "https://md-eecad2978f7a43f5b7838c919258e6de.ecs.us-east-2.on.aws/events?cee=no",
+    "page": "https://dhxkf93d45vp4.cloudfront.net/admin/gmo-settings",
+    "at": "2026-10-02T06:29:08.576Z"
+  },
+  {
+    "kind": "request",
+    "method": "POST",
+    "url": "https://bded8a3c6ae-1-1053047382554.us-central1.run.app/events?cee=no",
+    "page": "https://dhxkf93d45vp4.cloudfront.net/admin/gmo-settings",
+    "at": "2026-10-02T06:29:08.578Z"
+  },
+  {
+    "kind": "request",
+    "method": "POST",
+    "url": "https://dhxkf93d45vp4.cloudfront.net/api/auth/signout",
+    "page": "https://dhxkf93d45vp4.cloudfront.net/admin/gmo-settings",
+    "at": "2026-10-02T06:29:09.009Z"
+  },
+  {
+    "kind": "request",
+    "method": "POST",
+    "url": "https://md-eecad2978f7a43f5b7838c919258e6de.ecs.us-east-2.on.aws/events?cee=no",
+    "page": "https://dhxkf93d45vp4.cloudfront.net/admin/gmo-settings/create",
+    "at": "2026-10-02T06:29:09.610Z"
+  },
+  {
+    "kind": "request",
+    "method": "POST",
+    "url": "https://bded8a3c6ae-1-1053047382554.us-central1.run.app/events?cee=no",
+    "page": "https://dhxkf93d45vp4.cloudfront.net/admin/gmo-settings/create",
+    "at": "2026-10-02T06:29:09.612Z"
+  },
+  {
+    "kind": "request",
+    "method": "POST",
+    "url": "https://dhxkf93d45vp4.cloudfront.net/api/auth/signout",
+    "page": "https://dhxkf93d45vp4.cloudfront.net/admin/news-management",
+    "at": "2026-10-02T06:29:12.600Z"
+  },
+  {
+    "kind": "request",
+    "method": "POST",
+    "url": "https://md-eecad2978f7a43f5b7838c919258e6de.ecs.us-east-2.on.aws/events?cee=no",
+    "page": "https://dhxkf93d45vp4.cloudfront.net/admin/news-management",
+    "at": "2026-10-02T06:29:12.617Z"
+  },
+  {
+    "kind": "request",
+    "method": "POST",
+    "url": "https://bded8a3c6ae-1-1053047382554.us-central1.run.app/events?cee=no",
+    "page": "https://dhxkf93d45vp4.cloudfront.net/admin/news-management",
+    "at": "2026-10-02T06:29:12.619Z"
+  },
+  {
+    "kind": "request",
+    "method": "POST",
+    "url": "https://md-eecad2978f7a43f5b7838c919258e6de.ecs.us-east-2.on.aws/events?cee=no",
+    "page": "https://dhxkf93d45vp4.cloudfront.net/admin/news-management/create",
+    "at": "2026-10-02T06:29:14.144Z"
+  },
+  {
+    "kind": "request",
+    "method": "POST",
+    "url": "https://bded8a3c6ae-1-1053047382554.us-central1.run.app/events?cee=no",
+    "page": "https://dhxkf93d45vp4.cloudfront.net/admin/news-management/create",
+    "at": "2026-10-02T06:29:14.145Z"
+  },
+  {
+    "kind": "request",
+    "method": "POST",
+    "url": "https://md-eecad2978f7a43f5b7838c919258e6de.ecs.us-east-2.on.aws/events?cee=no",
+    "page": "https://dhxkf93d45vp4.cloudfront.net/admin/revenue-management",
+    "at": "2026-10-02T06:29:16.443Z"
+  },
+  {
+    "kind": "request",
+    "method": "POST",
+    "url": "https://bded8a3c6ae-1-1053047382554.us-central1.run.app/events?cee=no",
+    "page": "https://dhxkf93d45vp4.cloudfront.net/admin/revenue-management",
+    "at": "2026-10-02T06:29:16.444Z"
+  },
+  {
+    "kind": "request",
+    "method": "POST",
+    "url": "https://md-eecad2978f7a43f5b7838c919258e6de.ecs.us-east-2.on.aws/events?cee=no",
+    "page": "https://dhxkf93d45vp4.cloudfront.net/admin/scan-management",
+    "at": "2026-10-02T06:29:18.642Z"
+  },
+  {
+    "kind": "request",
+    "method": "POST",
+    "url": "https://bded8a3c6ae-1-1053047382554.us-central1.run.app/events?cee=no",
+    "page": "https://dhxkf93d45vp4.cloudfront.net/admin/scan-management",
+    "at": "2026-10-02T06:29:18.644Z"
+  },
+  {
+    "kind": "request",
+    "method": "POST",
+    "url": "https://md-eecad2978f7a43f5b7838c919258e6de.ecs.us-east-2.on.aws/events?cee=no",
+    "page": "https://dhxkf93d45vp4.cloudfront.net/admin/signin",
+    "at": "2026-10-02T06:29:19.352Z"
+  },
+  {
+    "kind": "request",
+    "method": "POST",
+    "url": "https://bded8a3c6ae-1-1053047382554.us-central1.run.app/events?cee=no",
+    "page": "https://dhxkf93d45vp4.cloudfront.net/admin/signin",
+    "at": "2026-10-02T06:29:19.354Z"
+  },
+  {
+    "kind": "request",
+    "method": "POST",
+    "url": "https://md-eecad2978f7a43f5b7838c919258e6de.ecs.us-east-2.on.aws/events?cee=no",
+    "page": "https://dhxkf93d45vp4.cloudfront.net/admin/signin",
+    "at": "2026-10-02T06:29:19.776Z"
+  },
+  {
+    "kind": "request",
+    "method": "POST",
+    "url": "https://bded8a3c6ae-1-1053047382554.us-central1.run.app/events?cee=no",
+    "page": "https://dhxkf93d45vp4.cloudfront.net/admin/signin",
+    "at": "2026-10-02T06:29:19.786Z"
+  },
+  {
+    "kind": "request",
+    "method": "POST",
+    "url": "https://md-eecad2978f7a43f5b7838c919258e6de.ecs.us-east-2.on.aws/events?cee=no",
+    "page": "https://dhxkf93d45vp4.cloudfront.net/admin/signin",
+    "at": "2026-10-02T06:29:20.329Z"
+  },
+  {
+    "kind": "request",
+    "method": "POST",
+    "url": "https://bded8a3c6ae-1-1053047382554.us-central1.run.app/events?cee=no",
+    "page": "https://dhxkf93d45vp4.cloudfront.net/admin/signin",
+    "at": "2026-10-02T06:29:20.339Z"
+  },
+  {
+    "kind": "request",
+    "method": "POST",
+    "url": "https://md-eecad2978f7a43f5b7838c919258e6de.ecs.us-east-2.on.aws/events?cee=no",
+    "page": "https://dhxkf93d45vp4.cloudfront.net/admin/signin",
+    "at": "2026-10-02T06:29:20.965Z"
+  },
+  {
+    "kind": "request",
+    "method": "POST",
+    "url": "https://bded8a3c6ae-1-1053047382554.us-central1.run.app/events?cee=no",
+    "page": "https://dhxkf93d45vp4.cloudfront.net/admin/signin",
+    "at": "2026-10-02T06:29:20.985Z"
+  },
+  {
+    "kind": "request",
+    "method": "POST",
+    "url": "https://md-eecad2978f7a43f5b7838c919258e6de.ecs.us-east-2.on.aws/events?cee=no",
+    "page": "https://dhxkf93d45vp4.cloudfront.net/admin/staff-management",
+    "at": "2026-10-02T06:29:22.679Z"
+  },
+  {
+    "kind": "request",
+    "method": "POST",
+    "url": "https://bded8a3c6ae-1-1053047382554.us-central1.run.app/events?cee=no",
+    "page": "https://dhxkf93d45vp4.cloudfront.net/admin/staff-management",
+    "at": "2026-10-02T06:29:22.681Z"
+  },
+  {
+    "kind": "request",
+    "method": "POST",
+    "url": "https://md-eecad2978f7a43f5b7838c919258e6de.ecs.us-east-2.on.aws/events?cee=no",
+    "page": "https://dhxkf93d45vp4.cloudfront.net/admin/staff-management/create",
+    "at": "2026-10-02T06:29:25.053Z"
+  },
+  {
+    "kind": "request",
+    "method": "POST",
+    "url": "https://bded8a3c6ae-1-1053047382554.us-central1.run.app/events?cee=no",
+    "page": "https://dhxkf93d45vp4.cloudfront.net/admin/staff-management/create",
+    "at": "2026-10-02T06:29:25.054Z"
+  },
+  {
+    "kind": "request",
+    "method": "POST",
+    "url": "https://md-eecad2978f7a43f5b7838c919258e6de.ecs.us-east-2.on.aws/events?cee=no",
+    "page": "https://dhxkf93d45vp4.cloudfront.net/admin/tenant-management",
+    "at": "2026-10-02T06:29:27.444Z"
+  },
+  {
+    "kind": "request",
+    "method": "POST",
+    "url": "https://bded8a3c6ae-1-1053047382554.us-central1.run.app/events?cee=no",
+    "page": "https://dhxkf93d45vp4.cloudfront.net/admin/tenant-management",
+    "at": "2026-10-02T06:29:27.445Z"
+  },
+  {
+    "kind": "request",
+    "method": "POST",
+    "url": "https://dhxkf93d45vp4.cloudfront.net/api/auth/signout",
+    "page": "https://dhxkf93d45vp4.cloudfront.net/admin/tenant-management",
+    "at": "2026-10-02T06:29:27.740Z"
+  },
+  {
+    "kind": "request",
+    "method": "POST",
+    "url": "https://md-eecad2978f7a43f5b7838c919258e6de.ecs.us-east-2.on.aws/events?cee=no",
+    "page": "https://dhxkf93d45vp4.cloudfront.net/admin/tenant-management/create",
+    "at": "2026-10-02T06:29:28.610Z"
+  },
+  {
+    "kind": "request",
+    "method": "POST",
+    "url": "https://bded8a3c6ae-1-1053047382554.us-central1.run.app/events?cee=no",
+    "page": "https://dhxkf93d45vp4.cloudfront.net/admin/tenant-management/create",
+    "at": "2026-10-02T06:29:28.611Z"
+  },
+  {
+    "kind": "request",
+    "method": "POST",
+    "url": "https://dhxkf93d45vp4.cloudfront.net/api/auth/signout",
+    "page": "https://dhxkf93d45vp4.cloudfront.net/admin/tenant-management/create",
+    "at": "2026-10-02T06:29:28.985Z"
+  },
+  {
+    "kind": "request",
+    "method": "POST",
+    "url": "https://md-eecad2978f7a43f5b7838c919258e6de.ecs.us-east-2.on.aws/events?cee=no",
+    "page": "https://dhxkf93d45vp4.cloudfront.net/admin/ticket-management",
+    "at": "2026-10-02T06:29:29.862Z"
+  },
+  {
+    "kind": "request",
+    "method": "POST",
+    "url": "https://bded8a3c6ae-1-1053047382554.us-central1.run.app/events?cee=no",
+    "page": "https://dhxkf93d45vp4.cloudfront.net/admin/ticket-management",
+    "at": "2026-10-02T06:29:29.864Z"
+  },
+  {
+    "kind": "request",
+    "method": "POST",
+    "url": "https://md-eecad2978f7a43f5b7838c919258e6de.ecs.us-east-2.on.aws/events?cee=no",
+    "page": "https://dhxkf93d45vp4.cloudfront.net/admin/ticket-management/create",
+    "at": "2026-10-02T06:29:32.329Z"
+  },
+  {
+    "kind": "request",
+    "method": "POST",
+    "url": "https://bded8a3c6ae-1-1053047382554.us-central1.run.app/events?cee=no",
+    "page": "https://dhxkf93d45vp4.cloudfront.net/admin/ticket-management/create",
+    "at": "2026-10-02T06:29:32.330Z"
+  },
+  {
+    "kind": "request",
+    "method": "POST",
+    "url": "https://md-eecad2978f7a43f5b7838c919258e6de.ecs.us-east-2.on.aws/events?cee=no",
+    "page": "https://dhxkf93d45vp4.cloudfront.net/admin/user-management",
+    "at": "2026-10-02T06:29:34.717Z"
+  },
+  {
+    "kind": "request",
+    "method": "POST",
+    "url": "https://bded8a3c6ae-1-1053047382554.us-central1.run.app/events?cee=no",
+    "page": "https://dhxkf93d45vp4.cloudfront.net/admin/user-management",
+    "at": "2026-10-02T06:29:34.719Z"
+  },
+  {
+    "kind": "request",
+    "method": "POST",
+    "url": "https://md-eecad2978f7a43f5b7838c919258e6de.ecs.us-east-2.on.aws/events?cee=no",
+    "page": "https://dhxkf93d45vp4.cloudfront.net/admin/user-management/create",
+    "at": "2026-10-02T06:29:36.964Z"
+  },
+  {
+    "kind": "request",
+    "method": "POST",
+    "url": "https://bded8a3c6ae-1-1053047382554.us-central1.run.app/events?cee=no",
+    "page": "https://dhxkf93d45vp4.cloudfront.net/admin/user-management/create",
+    "at": "2026-10-02T06:29:36.966Z"
+  },
+  {
+    "kind": "request",
+    "method": "POST",
+    "url": "https://md-eecad2978f7a43f5b7838c919258e6de.ecs.us-east-2.on.aws/events?cee=no",
+    "page": "https://dhxkf93d45vp4.cloudfront.net/admin/vacancies-status",
+    "at": "2026-10-02T06:29:40.593Z"
+  },
+  {
+    "kind": "request",
+    "method": "POST",
+    "url": "https://bded8a3c6ae-1-1053047382554.us-central1.run.app/events?cee=no",
+    "page": "https://dhxkf93d45vp4.cloudfront.net/admin/vacancies-status",
+    "at": "2026-10-02T06:29:40.594Z"
+  },
+  {
+    "kind": "request",
+    "method": "POST",
+    "url": "https://md-eecad2978f7a43f5b7838c919258e6de.ecs.us-east-2.on.aws/events?cee=no",
+    "page": "https://dhxkf93d45vp4.cloudfront.net/admin/waiting-time-management",
+    "at": "2026-10-02T06:29:42.630Z"
+  },
+  {
+    "kind": "request",
+    "method": "POST",
+    "url": "https://bded8a3c6ae-1-1053047382554.us-central1.run.app/events?cee=no",
+    "page": "https://dhxkf93d45vp4.cloudfront.net/admin/waiting-time-management",
+    "at": "2026-10-02T06:29:42.631Z"
+  },
+  {
+    "kind": "request",
+    "method": "POST",
+    "url": "https://dhxkf93d45vp4.cloudfront.net/api/auth/signout",
+    "page": "https://dhxkf93d45vp4.cloudfront.net/admin/waiting-time-management",
+    "at": "2026-10-02T06:29:42.859Z"
+  }
+]
