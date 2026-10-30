@@ -1,0 +1,167 @@
+{
+ "複数のバーコードが検出されました。バーコードを1つだけ表示して、再度スキャンしてください。": [
+  "Phát hiện nhiều mã vạch. Hãy chỉ hiển thị 1 mã vạch rồi quét lại.",
+  "バーコードを1つだけ表示して再スキャンする",
+  "Chỉ đưa 1 mã vạch vào camera rồi quét lại"
+ ],
+ "video要素が見つかりません": [
+  "Không tìm thấy vùng hiển thị camera.",
+  "画面を再読み込みする（要確認）",
+  "Tải lại màn hình (cần xác nhận cách xử lý)"
+ ],
+ "カメラへのアクセスが拒否されました": [
+  "Quyền truy cập camera bị từ chối.",
+  "ブラウザでカメラの使用を許可する",
+  "Cho phép trình duyệt dùng camera"
+ ],
+ "ご入力いただいた項目に不備があります。再度ご確認とご入力の上で次に進んでください。": [
+  "Nội dung nhập còn thiếu sót. Vui lòng kiểm tra, nhập lại rồi tiếp tục.",
+  "入力内容を確認・修正して次へ進む",
+  "Kiểm tra, sửa nội dung nhập rồi tiếp tục"
+ ],
+ "大人の方1名に対し、お子様は最大（値）名までのご入場となります。もう一度予約内容をご確認ください。": [
+  "Mỗi người lớn chỉ đi kèm tối đa （値） trẻ em. Vui lòng kiểm tra lại nội dung đặt chỗ.",
+  "人数構成を見直して再度操作する",
+  "Điều chỉnh số người lớn / trẻ em rồi thao tác lại"
+ ],
+ "予約できる回数を上回っているため、受付できません": [
+  "Đã vượt số lần được đặt chỗ nên không thể tiếp nhận.",
+  "予約内容を見直す",
+  "Xem lại nội dung đặt chỗ"
+ ],
+ "ご利用される店舗と選択した店舗を同一してください": [
+  "Vui lòng chọn cùng cửa hàng với cửa hàng sẽ sử dụng.",
+  "利用する店舗を選び直す",
+  "Chọn lại đúng cửa hàng sẽ sử dụng"
+ ],
+ "（値）の商品は既に予約されているため、他の商品を選択してください。": [
+  "Sản phẩm （値） đã được đặt, vui lòng chọn sản phẩm khác.",
+  "他の商品を選択する",
+  "Chọn sản phẩm khác"
+ ],
+ "前回にご予約した商品の期限が切れており、他の商品を選択してください": [
+  "Sản phẩm đã đặt lần trước đã hết hạn, vui lòng chọn sản phẩm khác.",
+  "他の商品を選択する",
+  "Chọn sản phẩm khác"
+ ],
+ "前回に予約された商品の予約できる回数は1回に限ります。お手数ですが、他の商品をお使いください。": [
+  "Sản phẩm đã đặt lần trước chỉ được đặt 1 lần. Vui lòng dùng sản phẩm khác.",
+  "他の商品を選択する",
+  "Chọn sản phẩm khác"
+ ],
+ "半角英数字４桁を入力してください": [
+  "Vui lòng nhập 4 ký tự chữ số / chữ cái nửa độ rộng.",
+  null,
+  null
+ ],
+ "完売しましたので、他の日程を選択してください": [
+  "Đã bán hết, vui lòng chọn ngày khác.",
+  "他の日程を選択する",
+  "Chọn ngày khác"
+ ],
+ "カード番号は正しく入力してください": [
+  "Vui lòng nhập đúng số thẻ.",
+  null,
+  null
+ ],
+ "利用できない日程です。他の日程を選択してください。": [
+  "Ngày này không sử dụng được. Vui lòng chọn ngày khác.",
+  "他の日程を選択する",
+  "Chọn ngày khác"
+ ],
+ "商品を選択してください": [
+  "Vui lòng chọn sản phẩm.",
+  null,
+  null
+ ],
+ "子どもの年齢を選択してください": [
+  "Vui lòng chọn tuổi của trẻ.",
+  null,
+  null
+ ],
+ "入場中の利用者は0人にできません。\n全員退場される際は通常の退場手続きを\n行ってください。": [
+  "Không thể đặt số người đang ở trong khu về 0. Khi tất cả ra về, hãy làm thủ tục ra về thông thường.",
+  "通常の退場手続きを行う",
+  "Làm thủ tục ra về thông thường"
+ ],
+ "正しい番号を入力してください。": [
+  "Vui lòng nhập đúng số.",
+  null,
+  null
+ ],
+ "カード番号を入力してください": [
+  "Vui lòng nhập số thẻ.",
+  null,
+  null
+ ],
+ "利用スタート希望日を選択してください": [
+  "Vui lòng chọn ngày muốn bắt đầu sử dụng.",
+  null,
+  null
+ ],
+ "半角英数字3-４桁を入力してください": [
+  "Vui lòng nhập 3–4 ký tự chữ số / chữ cái nửa độ rộng.",
+  null,
+  null
+ ],
+ "セキュリティコードを入力してください": [
+  "Vui lòng nhập mã bảo mật.",
+  null,
+  null
+ ],
+ "アカウント名を必ず入力してください": [
+  "Vui lòng nhập tên tài khoản.",
+  null,
+  null
+ ],
+ "ショップパスワードを必ず入力してください": [
+  "Vui lòng nhập mật khẩu cửa hàng (shop).",
+  null,
+  null
+ ],
+ "カード名義人を入力してください": [
+  "Vui lòng nhập tên chủ thẻ.",
+  null,
+  null
+ ],
+ "Email Key is Required!": [
+  "Bắt buộc nhập khoá email (thông báo gốc tiếng Anh).",
+  null,
+  null
+ ],
+ "ショップIDを必ず入力してください": [
+  "Vui lòng nhập mã cửa hàng (shop ID).",
+  null,
+  null
+ ],
+ "従業員IDを入力してください": [
+  "Vui lòng nhập mã nhân viên.",
+  null,
+  null
+ ],
+ "メールアドレスは正しく入力してください": [
+  "Vui lòng nhập đúng địa chỉ email.",
+  null,
+  null
+ ],
+ "パスワードを入力してください": [
+  "Vui lòng nhập mật khẩu.",
+  null,
+  null
+ ],
+ "Name Email is Required!": [
+  "Bắt buộc nhập tên email (thông báo gốc tiếng Anh).",
+  null,
+  null
+ ],
+ "有効期限を正しく入力してください": [
+  "Vui lòng nhập đúng hạn sử dụng của thẻ.",
+  null,
+  null
+ ],
+ "Required": [
+  "Bắt buộc nhập (thông báo gốc tiếng Anh).",
+  null,
+  null
+ ]
+}

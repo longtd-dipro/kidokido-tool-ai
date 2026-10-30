@@ -1,4 +1,4 @@
-> **SOURCE:** `ba-kit/requirement-to-flow/.claude/ba-agent/figma-outputs/output-2-screen-flow.md` @ a4cfc01 — copy self-contained cho kit system-to-doc. Đọc kèm `o5-figma.md` (bảng thay SPEC.md → inventory). Sửa quy tắc vẽ chung thì sửa CẢ HAI nơi. **Đã tách khỏi bản gốc (D1, 27/10/2026):** phân loại `To verify` của bản gốc ở kit này ghi là `To verify` (+ Open Question); chữ hiển thị "Cần xác nhận — Q-xxx".
+> **SOURCE:** `ba-kit/requirement-to-flow/.claude/ba-agent/figma-outputs/output-2-screen-flow.md` @ a4cfc01 — copy self-contained cho kit system-to-doc. Đọc kèm `o4-figma.md` (bảng thay SPEC.md → inventory). Sửa quy tắc vẽ chung thì sửa CẢ HAI nơi. **Đã tách khỏi bản gốc (D1, 27/10/2026):** phân loại `To verify` của bản gốc ở kit này ghi là `To verify` (+ Open Question); chữ hiển thị "Cần xác nhận — Q-xxx".
 
 > ## ⚠ KIT NÀY: bố cục Output 2 = **site → use case → section** (feedback 20/10/2026 — áp dụng cả `requirement-to-flow`)
 >
@@ -157,16 +157,25 @@ Group U2 — Regist & Đăng nhập (phân nhánh gộp: Happy · NG · Edge · 
 
 ## ④ BẢNG SCREEN INDEX (bên phải, spanning toàn frame — DUY NHẤT)
 
-BẮT BUỘC — bảng liệt kê TẤT CẢ màn hình (kể cả Popup) với 3 cột:
+BẮT BUỘC — bảng liệt kê TẤT CẢ màn hình (kể cả Popup). **Chia nhóm theo Site → Role (Actor)** rồi mới liệt kê màn (feedback 29/10/2026). Mỗi Site = 1 banner header; trong Site chia theo Role sử dụng (lấy cột `Actor` của `02_Screen`); các màn chung nhiều Role đặt ở nhóm `Chung` cuối Site. Cột:
 
-| # | Màn hình | Loại | Mô tả chức năng màn hình |
-|---|---|---|---|
-| 1 | AX_FEAT_001 — Company List | List | Hiển thị danh sách công ty, cho phép chọn để gọi |
-| 2 | AX_FEAT_002 — Company Detail | Detail | Xem thông tin + khởi tạo cuộc gọi |
-| 3 | AX_FEAT_003 — Outgoing Call | Modal | Chờ đối phương nhận máy (30s) |
-| ... | ... | ... | ... |
-| 9 | [Popup] Mic Permission | **Popup** | Yêu cầu quyền microphone khi tap Gọi |
-| 10 | [Popup] Confirm Cancel | **Popup** | Xác nhận hủy cuộc gọi giữa chừng |
+| # | Site | Role | Màn hình | Loại | Mô tả chức năng màn hình |
+|---|---|---|---|---|---|
+| ━━ | **WEB-01 — Admin** (45 màn) | | | | |
+| | | **Super Admin** (12 màn) | | | |
+| 1 | | | SC-001 — Dashboard | List | Trang chủ quản trị |
+| 2 | | | SC-004 — Cài đặt hệ thống | Form | Chỉnh cấu hình chung |
+| ... | | | ... | ... | ... |
+| | | **Admin Tenant** (18 màn) | | | |
+| ... | | | ... | ... | ... |
+| | | **Chung** (nhiều Role) (5 màn) | | | |
+| ━━ | **WEB-02 — User** (48 màn) | | | | |
+| | | **User** (48 màn) | | | |
+| ... | | | ... | ... | ... |
+
+Màn nhiều Role: chọn Role chính (`Primary Actor` nếu có) hoặc đặt vào `Chung`. Role không có màn → bỏ nhóm. In `Tổng N màn` dưới mỗi banner Site để đối chiếu.
+
+**Tên layer trên Figma:** mỗi `FRAME` cell, `TEXT` chú thích đặt `name = " "` (khoảng trắng) để không hiện chữ `cell`/`Text` thừa trong Layers panel (feedback 30/10/2026). Chỉ SECTION và FRAME container cần tên đọc được.
 
 **⚠️ QUY TẮC ĐẾM TOTAL:**
 - **Popup CŨNG LÀ MÀN HÌNH** — PHẢI đưa vào bảng và đếm vào total

@@ -1,0 +1,480 @@
+Q ID,Type,Item,Reason / Evidence,Required Action,Owner,Status,Note
+Q-900,Thiếu thông tin,"SC-001 — ghép nút với lời gọi API (cột S, tham chiếu cho dev)",Hành vi đã mô tả từ code ở cột P/Q; fe-api-calls.csv không có nhãn nút để ghép,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-901,Thiếu thông tin,SC-001 「こちら」 — màn đích sau khi bấm (/signup),Màn đích không có trong 02_Screen,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-902,Thiếu thông tin,SC-001 — lỗi E_SC001_001: thiếu message (VN),Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-903,Thiếu thông tin,SC-001 — lỗi E_SC001_002: thiếu message (VN),Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-904,Thiếu thông tin,"SC-002 — ghép nút với lời gọi API (cột S, tham chiếu cho dev)",Hành vi đã mô tả từ code ở cột P/Q; fe-api-calls.csv không có nhãn nút để ghép,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-905,Thiếu thông tin,SC-002 「こちら」 — màn đích sau khi bấm (/signup),Màn đích không có trong 02_Screen,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-906,Thiếu thông tin,SC-002 — lỗi E_SC002_001: thiếu message (VN),Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-907,Thiếu thông tin,SC-002 — lỗi E_SC002_002: thiếu message (VN),Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-908,Thiếu thông tin,SC-002 — lỗi E_SC002_003: thiếu message (VN),Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-909,Thiếu thông tin,SC-002 — lỗi E_SC002_004: thiếu message (VN),Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-910,Thiếu thông tin,"SC-003 — ghép nút với lời gọi API (cột S, tham chiếu cho dev)",Hành vi đã mô tả từ code ở cột P/Q; fe-api-calls.csv không có nhãn nút để ghép,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-911,Thiếu thông tin,SC-003 「こちら」 — màn đích sau khi bấm (/signup),Màn đích không có trong 02_Screen,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-912,Thiếu thông tin,"SC-003 — lỗi E_SC003_S_001: thiếu cách hiển thị, message (VN), thao tác người dùng (JP), thao tác người dùng (VN)",Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-913,Thiếu thông tin,"SC-003 — lỗi E_SC003_S_002: thiếu cách hiển thị, message (VN), thao tác người dùng (JP), thao tác người dùng (VN)",Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-914,Thiếu thông tin,"SC-003 — lỗi E_SC003_S_003: thiếu cách hiển thị, message (VN), thao tác người dùng (JP), thao tác người dùng (VN)",Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-915,Thiếu thông tin,SC-003 — lỗi E_SC003_004: thiếu message (VN),Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-916,Thiếu thông tin,SC-003 — lỗi E_SC003_005: thiếu message (VN),Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-917,Thiếu thông tin,"SC-004 — ghép nút với lời gọi API (cột S, tham chiếu cho dev)",Hành vi đã mô tả từ code ở cột P/Q; fe-api-calls.csv không có nhãn nút để ghép,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-918,Thiếu thông tin,SC-004 「こちら」 — màn đích sau khi bấm (/signup),Màn đích không có trong 02_Screen,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-919,Thiếu thông tin,SC-004 「フリーパス購入を希望の方はこちら」 — màn đích sau khi bấm (/booking/buy-monthly-ticket),Màn đích không có trong 02_Screen,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-920,Thiếu thông tin,"SC-004 — lỗi E_SC004_S_001: thiếu message (VN), thao tác người dùng (JP), thao tác người dùng (VN)",Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-921,Thiếu thông tin,"SC-004 — lỗi E_SC004_S_002: thiếu message (VN), thao tác người dùng (JP), thao tác người dùng (VN)",Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-922,Thiếu thông tin,"SC-004 — lỗi E_SC004_S_003: thiếu message (VN), thao tác người dùng (JP), thao tác người dùng (VN)",Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-923,Thiếu thông tin,"SC-004 — lỗi E_SC004_S_004: thiếu message (VN), thao tác người dùng (JP), thao tác người dùng (VN)",Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-924,Thiếu thông tin,"SC-004 — lỗi E_SC004_S_005: thiếu message (VN), thao tác người dùng (JP), thao tác người dùng (VN)",Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-925,Thiếu thông tin,"SC-004 — lỗi E_SC004_S_006: thiếu message (VN), thao tác người dùng (JP), thao tác người dùng (VN)",Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-926,Thiếu thông tin,"SC-004 — lỗi E_SC004_S_007: thiếu message (VN), thao tác người dùng (JP), thao tác người dùng (VN)",Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-927,Thiếu thông tin,SC-004 — lỗi E_SC004_008: thiếu message (VN),Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-928,Thiếu thông tin,SC-004 — lỗi E_SC004_009: thiếu message (VN),Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-929,Thiếu thông tin,SC-004 — lỗi E_SC004_010: thiếu message (VN),Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-930,Thiếu thông tin,SC-004 — lỗi E_SC004_011: thiếu message (VN),Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-931,Thiếu thông tin,"SC-005 — ghép nút với lời gọi API (cột S, tham chiếu cho dev)",Hành vi đã mô tả từ code ở cột P/Q; fe-api-calls.csv không có nhãn nút để ghép,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-932,Thiếu thông tin,SC-005 「こちら」 — màn đích sau khi bấm (/signup),Màn đích không có trong 02_Screen,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-933,Thiếu thông tin,SC-005 「フリーパス購入を希望の方はこちら」 — màn đích sau khi bấm (/booking/buy-monthly-ticket),Màn đích không có trong 02_Screen,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-934,Thiếu thông tin,"SC-005 — lỗi E_SC005_S_001: thiếu message (VN), thao tác người dùng (JP), thao tác người dùng (VN)",Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-935,Thiếu thông tin,"SC-005 — lỗi E_SC005_S_002: thiếu message (VN), thao tác người dùng (JP), thao tác người dùng (VN)",Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-936,Thiếu thông tin,"SC-005 — lỗi E_SC005_S_003: thiếu message (VN), thao tác người dùng (JP), thao tác người dùng (VN)",Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-937,Thiếu thông tin,"SC-005 — lỗi E_SC005_S_004: thiếu message (VN), thao tác người dùng (JP), thao tác người dùng (VN)",Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-938,Thiếu thông tin,"SC-005 — lỗi E_SC005_S_005: thiếu message (VN), thao tác người dùng (JP), thao tác người dùng (VN)",Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-939,Thiếu thông tin,"SC-005 — lỗi E_SC005_S_006: thiếu message (VN), thao tác người dùng (JP), thao tác người dùng (VN)",Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-940,Thiếu thông tin,"SC-005 — lỗi E_SC005_S_007: thiếu message (VN), thao tác người dùng (JP), thao tác người dùng (VN)",Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-941,Thiếu thông tin,SC-005 — lỗi E_SC005_008: thiếu message (VN),Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-942,Thiếu thông tin,SC-005 — lỗi E_SC005_009: thiếu message (VN),Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-943,Thiếu thông tin,"SC-006 — ghép nút với lời gọi API (cột S, tham chiếu cho dev)",Hành vi đã mô tả từ code ở cột P/Q; fe-api-calls.csv không có nhãn nút để ghép,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-944,Thiếu thông tin,SC-006 「こちら」 — màn đích sau khi bấm (/signup),Màn đích không có trong 02_Screen,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-945,Thiếu thông tin,"SC-006 — lỗi E_SC006_S_001: thiếu cách hiển thị, message (VN), thao tác người dùng (JP), thao tác người dùng (VN)",Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-946,Thiếu thông tin,SC-006 — lỗi E_SC006_002: thiếu message (VN),Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-947,Thiếu thông tin,SC-006 — lỗi E_SC006_003: thiếu message (VN),Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-948,Thiếu thông tin,"SC-007 — ghép nút với lời gọi API (cột S, tham chiếu cho dev)",Hành vi đã mô tả từ code ở cột P/Q; fe-api-calls.csv không có nhãn nút để ghép,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-949,Thiếu thông tin,SC-007 「こちら」 — màn đích sau khi bấm (/signup),Màn đích không có trong 02_Screen,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-950,Thiếu thông tin,SC-007 — lỗi E_SC007_001: thiếu message (VN),Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-951,Thiếu thông tin,SC-007 — lỗi E_SC007_002: thiếu message (VN),Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-952,Thiếu thông tin,SC-007 — lỗi E_SC007_003: thiếu message (VN),Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-953,Thiếu thông tin,"SC-008 — ghép nút với lời gọi API (cột S, tham chiếu cho dev)",Hành vi đã mô tả từ code ở cột P/Q; fe-api-calls.csv không có nhãn nút để ghép,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-954,Thiếu thông tin,SC-008 「こちら」 — màn đích sau khi bấm (/signup),Màn đích không có trong 02_Screen,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-955,Thiếu thông tin,SC-008 「フリーパス購入を希望の方はこちら」 — màn đích sau khi bấm (/booking/buy-monthly-ticket),Màn đích không có trong 02_Screen,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-956,Thiếu thông tin,"SC-008 — lỗi E_SC008_S_001: thiếu message (VN), thao tác người dùng (JP), thao tác người dùng (VN)",Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-957,Thiếu thông tin,"SC-008 — lỗi E_SC008_S_002: thiếu message (VN), thao tác người dùng (JP), thao tác người dùng (VN)",Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-958,Thiếu thông tin,"SC-008 — lỗi E_SC008_S_003: thiếu message (VN), thao tác người dùng (JP), thao tác người dùng (VN)",Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-959,Thiếu thông tin,"SC-008 — lỗi E_SC008_S_004: thiếu message (VN), thao tác người dùng (JP), thao tác người dùng (VN)",Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-960,Thiếu thông tin,"SC-008 — lỗi E_SC008_S_005: thiếu message (VN), thao tác người dùng (JP), thao tác người dùng (VN)",Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-961,Thiếu thông tin,"SC-008 — lỗi E_SC008_S_006: thiếu message (VN), thao tác người dùng (JP), thao tác người dùng (VN)",Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-962,Thiếu thông tin,"SC-008 — lỗi E_SC008_S_007: thiếu message (VN), thao tác người dùng (JP), thao tác người dùng (VN)",Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-963,Thiếu thông tin,SC-008 — lỗi E_SC008_008: thiếu message (VN),Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-964,Thiếu thông tin,SC-008 — lỗi E_SC008_009: thiếu message (VN),Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-965,Thiếu thông tin,"SC-009 — ghép nút với lời gọi API (cột S, tham chiếu cho dev)",Hành vi đã mô tả từ code ở cột P/Q; fe-api-calls.csv không có nhãn nút để ghép,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-966,Thiếu thông tin,SC-009 「こちら」 — màn đích sau khi bấm (/signup),Màn đích không có trong 02_Screen,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-967,Thiếu thông tin,SC-009 — lỗi E_SC009_001: thiếu message (VN),Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-968,Thiếu thông tin,SC-009 — lỗi E_SC009_002: thiếu message (VN),Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-969,Thiếu thông tin,"SC-010 — ghép nút với lời gọi API (cột S, tham chiếu cho dev)",Hành vi đã mô tả từ code ở cột P/Q; fe-api-calls.csv không có nhãn nút để ghép,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-970,Thiếu thông tin,SC-010 「こちら」 — màn đích sau khi bấm (/signup),Màn đích không có trong 02_Screen,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-971,Thiếu thông tin,SC-010 — lỗi E_SC010_001: thiếu message (VN),Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-972,Thiếu thông tin,SC-010 — lỗi E_SC010_002: thiếu message (VN),Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-973,Thiếu thông tin,SC-010 — lỗi E_SC010_003: thiếu message (VN),Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-974,Thiếu thông tin,SC-010 — lỗi E_SC010_004: thiếu message (VN),Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-975,Thiếu thông tin,"SC-011 — ghép nút với lời gọi API (cột S, tham chiếu cho dev)",Hành vi đã mô tả từ code ở cột P/Q; fe-api-calls.csv không có nhãn nút để ghép,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-976,Thiếu thông tin,SC-011 「こちら」 — màn đích sau khi bấm (/signup),Màn đích không có trong 02_Screen,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-977,Thiếu thông tin,SC-011 — lỗi E_SC011_001: thiếu message (VN),Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-978,Thiếu thông tin,SC-011 — lỗi E_SC011_002: thiếu message (VN),Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-979,Thiếu thông tin,SC-011 — lỗi E_SC011_003: thiếu message (VN),Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-980,Thiếu thông tin,SC-011 — lỗi E_SC011_004: thiếu message (VN),Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-981,Thiếu thông tin,SC-011 — lỗi E_SC011_005: thiếu message (VN),Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-982,Thiếu thông tin,SC-011 — lỗi E_SC011_006: thiếu message (VN),Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-983,Thiếu thông tin,SC-011 — lỗi E_SC011_007: thiếu message (VN),Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-984,Thiếu thông tin,"SC-012 — ghép nút với lời gọi API (cột S, tham chiếu cho dev)",Hành vi đã mô tả từ code ở cột P/Q; fe-api-calls.csv không có nhãn nút để ghép,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-985,Thiếu thông tin,SC-012 「こちら」 — màn đích sau khi bấm (/signup),Màn đích không có trong 02_Screen,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-986,Thiếu thông tin,SC-012 — lỗi E_SC012_001: thiếu message (VN),Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-987,Thiếu thông tin,SC-012 — lỗi E_SC012_002: thiếu message (VN),Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-988,Thiếu thông tin,"SC-013 — ghép nút với lời gọi API (cột S, tham chiếu cho dev)",Hành vi đã mô tả từ code ở cột P/Q; fe-api-calls.csv không có nhãn nút để ghép,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-989,Thiếu thông tin,SC-013 「こちら」 — màn đích sau khi bấm (/signup),Màn đích không có trong 02_Screen,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-990,Thiếu thông tin,SC-013 — lỗi E_SC013_001: thiếu message (VN),Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-991,Thiếu thông tin,SC-013 — lỗi E_SC013_002: thiếu message (VN),Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-992,Thiếu thông tin,SC-013 — lỗi E_SC013_003: thiếu message (VN),Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-993,Thiếu thông tin,SC-013 — lỗi E_SC013_004: thiếu message (VN),Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-994,Thiếu thông tin,SC-013 — lỗi E_SC013_005: thiếu message (VN),Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-995,Thiếu thông tin,SC-013 — lỗi E_SC013_006: thiếu message (VN),Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-996,Thiếu thông tin,SC-013 — lỗi E_SC013_007: thiếu message (VN),Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-997,Thiếu thông tin,SC-013 — lỗi E_SC013_008: thiếu message (VN),Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-998,Thiếu thông tin,"SC-014 — ghép nút với lời gọi API (cột S, tham chiếu cho dev)",Hành vi đã mô tả từ code ở cột P/Q; fe-api-calls.csv không có nhãn nút để ghép,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-999,Thiếu thông tin,SC-014 「こちら」 — màn đích sau khi bấm (/signup),Màn đích không có trong 02_Screen,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1000,Thiếu thông tin,SC-014 — lỗi E_SC014_001: thiếu message (VN),Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1001,Thiếu thông tin,SC-014 — lỗi E_SC014_002: thiếu message (VN),Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1002,Thiếu thông tin,"SC-015 — ghép nút với lời gọi API (cột S, tham chiếu cho dev)",Hành vi đã mô tả từ code ở cột P/Q; fe-api-calls.csv không có nhãn nút để ghép,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1003,Thiếu thông tin,SC-015 「こちら」 — màn đích sau khi bấm (/signup),Màn đích không có trong 02_Screen,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1004,Thiếu thông tin,SC-015 — lỗi E_SC015_001: thiếu message (VN),Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1005,Thiếu thông tin,SC-015 — lỗi E_SC015_002: thiếu message (VN),Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1006,Thiếu thông tin,SC-015 — lỗi E_SC015_003: thiếu message (VN),Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1007,Thiếu thông tin,SC-015 — lỗi E_SC015_004: thiếu message (VN),Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1008,Thiếu thông tin,SC-015 — lỗi E_SC015_005: thiếu message (VN),Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1009,Thiếu thông tin,SC-015 — lỗi E_SC015_006: thiếu message (VN),Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1010,Thiếu thông tin,SC-015 — lỗi E_SC015_007: thiếu message (VN),Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1011,Thiếu thông tin,SC-015 — lỗi E_SC015_008: thiếu message (VN),Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1012,Thiếu thông tin,"SC-016 — ghép nút với lời gọi API (cột S, tham chiếu cho dev)",Hành vi đã mô tả từ code ở cột P/Q; fe-api-calls.csv không có nhãn nút để ghép,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1013,Thiếu thông tin,SC-016 「こちら」 — màn đích sau khi bấm (/signup),Màn đích không có trong 02_Screen,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1014,Thiếu thông tin,SC-016 — lỗi E_SC016_001: thiếu message (VN),Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1015,Thiếu thông tin,SC-016 — lỗi E_SC016_002: thiếu message (VN),Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1016,Thiếu thông tin,"SC-017 — ghép nút với lời gọi API (cột S, tham chiếu cho dev)",Hành vi đã mô tả từ code ở cột P/Q; fe-api-calls.csv không có nhãn nút để ghép,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1017,Thiếu thông tin,SC-017 「こちら」 — màn đích sau khi bấm (/signup),Màn đích không có trong 02_Screen,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1018,Thiếu thông tin,SC-017 — lỗi E_SC017_001: thiếu message (VN),Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1019,Thiếu thông tin,SC-017 — lỗi E_SC017_002: thiếu message (VN),Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1020,Thiếu thông tin,SC-017 — lỗi E_SC017_003: thiếu message (VN),Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1021,Thiếu thông tin,SC-017 — lỗi E_SC017_004: thiếu message (VN),Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1022,Thiếu thông tin,SC-017 — lỗi E_SC017_005: thiếu message (VN),Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1023,Thiếu thông tin,"SC-018 — ghép nút với lời gọi API (cột S, tham chiếu cho dev)",Hành vi đã mô tả từ code ở cột P/Q; fe-api-calls.csv không có nhãn nút để ghép,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1024,Thiếu thông tin,SC-018 「こちら」 — màn đích sau khi bấm (/signup),Màn đích không có trong 02_Screen,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1025,Thiếu thông tin,SC-018 — lỗi E_SC018_001: thiếu message (VN),Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1026,Thiếu thông tin,SC-018 — lỗi E_SC018_002: thiếu message (VN),Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1027,Thiếu thông tin,SC-018 — lỗi E_SC018_003: thiếu message (VN),Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1028,Thiếu thông tin,SC-018 — lỗi E_SC018_004: thiếu message (VN),Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1029,Thiếu thông tin,SC-018 — lỗi E_SC018_005: thiếu message (VN),Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1030,Thiếu thông tin,"SC-019 — ghép nút với lời gọi API (cột S, tham chiếu cho dev)",Hành vi đã mô tả từ code ở cột P/Q; fe-api-calls.csv không có nhãn nút để ghép,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1031,Thiếu thông tin,SC-019 「こちら」 — màn đích sau khi bấm (/signup),Màn đích không có trong 02_Screen,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1032,Thiếu thông tin,SC-019 — lỗi E_SC019_001: thiếu message (VN),Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1033,Thiếu thông tin,SC-019 — lỗi E_SC019_002: thiếu message (VN),Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1034,Thiếu thông tin,SC-019 — lỗi E_SC019_003: thiếu message (VN),Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1035,Thiếu thông tin,SC-019 — lỗi E_SC019_004: thiếu message (VN),Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1036,Thiếu thông tin,SC-019 — lỗi E_SC019_005: thiếu message (VN),Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1037,Thiếu thông tin,"SC-020 — ghép nút với lời gọi API (cột S, tham chiếu cho dev)",Hành vi đã mô tả từ code ở cột P/Q; fe-api-calls.csv không có nhãn nút để ghép,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1038,Thiếu thông tin,SC-020 「こちら」 — màn đích sau khi bấm (/signup),Màn đích không có trong 02_Screen,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1039,Thiếu thông tin,SC-020 — lỗi E_SC020_001: thiếu message (VN),Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1040,Thiếu thông tin,SC-020 — lỗi E_SC020_002: thiếu message (VN),Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1041,Thiếu thông tin,SC-020 — lỗi E_SC020_003: thiếu message (VN),Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1042,Thiếu thông tin,SC-020 — lỗi E_SC020_004: thiếu message (VN),Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1043,Thiếu thông tin,SC-020 — lỗi E_SC020_005: thiếu message (VN),Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1044,Thiếu thông tin,"SC-021 — ghép nút với lời gọi API (cột S, tham chiếu cho dev)",Hành vi đã mô tả từ code ở cột P/Q; fe-api-calls.csv không có nhãn nút để ghép,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1045,Thiếu thông tin,SC-021 「こちら」 — màn đích sau khi bấm (/signup),Màn đích không có trong 02_Screen,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1046,Thiếu thông tin,SC-021 — lỗi E_SC021_001: thiếu message (VN),Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1047,Thiếu thông tin,SC-021 — lỗi E_SC021_002: thiếu message (VN),Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1048,Thiếu thông tin,"SC-022 — ghép nút với lời gọi API (cột S, tham chiếu cho dev)",Hành vi đã mô tả từ code ở cột P/Q; fe-api-calls.csv không có nhãn nút để ghép,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1049,Thiếu thông tin,SC-022 「こちら」 — màn đích sau khi bấm (/signup),Màn đích không có trong 02_Screen,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1050,Thiếu thông tin,SC-022 — lỗi E_SC022_001: thiếu message (VN),Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1051,Thiếu thông tin,SC-022 — lỗi E_SC022_002: thiếu message (VN),Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1052,Thiếu thông tin,SC-022 — lỗi E_SC022_003: thiếu message (VN),Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1053,Thiếu thông tin,SC-022 — lỗi E_SC022_004: thiếu message (VN),Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1054,Thiếu thông tin,SC-022 — lỗi E_SC022_005: thiếu message (VN),Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1055,Thiếu thông tin,"SC-023 — ghép nút với lời gọi API (cột S, tham chiếu cho dev)",Hành vi đã mô tả từ code ở cột P/Q; fe-api-calls.csv không có nhãn nút để ghép,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1056,Thiếu thông tin,SC-023 「こちら」 — màn đích sau khi bấm (/signup),Màn đích không có trong 02_Screen,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1057,Thiếu thông tin,SC-023 — lỗi E_SC023_001: thiếu message (VN),Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1058,Thiếu thông tin,SC-023 — lỗi E_SC023_002: thiếu message (VN),Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1059,Thiếu thông tin,SC-023 — lỗi E_SC023_003: thiếu message (VN),Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1060,Thiếu thông tin,SC-023 — lỗi E_SC023_004: thiếu message (VN),Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1061,Thiếu thông tin,SC-023 — lỗi E_SC023_005: thiếu message (VN),Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1062,Thiếu thông tin,"SC-024 — ghép nút với lời gọi API (cột S, tham chiếu cho dev)",Hành vi đã mô tả từ code ở cột P/Q; fe-api-calls.csv không có nhãn nút để ghép,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1063,Thiếu thông tin,SC-024 「こちら」 — màn đích sau khi bấm (/signup),Màn đích không có trong 02_Screen,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1064,Thiếu thông tin,SC-024 — lỗi E_SC024_001: thiếu message (VN),Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1065,Thiếu thông tin,SC-024 — lỗi E_SC024_002: thiếu message (VN),Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1066,Thiếu thông tin,SC-024 — lỗi E_SC024_003: thiếu message (VN),Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1067,Thiếu thông tin,SC-024 — lỗi E_SC024_004: thiếu message (VN),Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1068,Thiếu thông tin,"SC-025 — ghép nút với lời gọi API (cột S, tham chiếu cho dev)",Hành vi đã mô tả từ code ở cột P/Q; fe-api-calls.csv không có nhãn nút để ghép,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1069,Thiếu thông tin,SC-025 「こちら」 — màn đích sau khi bấm (/signup),Màn đích không có trong 02_Screen,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1070,Thiếu thông tin,SC-025 「フリーパス購入を希望の方はこちら」 — màn đích sau khi bấm (/booking/buy-monthly-ticket),Màn đích không có trong 02_Screen,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1071,Thiếu thông tin,"SC-025 — lỗi E_SC025_S_001: thiếu message (VN), thao tác người dùng (JP), thao tác người dùng (VN)",Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1072,Thiếu thông tin,"SC-025 — lỗi E_SC025_S_002: thiếu message (VN), thao tác người dùng (JP), thao tác người dùng (VN)",Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1073,Thiếu thông tin,"SC-025 — lỗi E_SC025_S_003: thiếu message (VN), thao tác người dùng (JP), thao tác người dùng (VN)",Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1074,Thiếu thông tin,"SC-025 — lỗi E_SC025_S_004: thiếu message (VN), thao tác người dùng (JP), thao tác người dùng (VN)",Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1075,Thiếu thông tin,"SC-025 — lỗi E_SC025_S_005: thiếu message (VN), thao tác người dùng (JP), thao tác người dùng (VN)",Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1076,Thiếu thông tin,"SC-025 — lỗi E_SC025_S_006: thiếu message (VN), thao tác người dùng (JP), thao tác người dùng (VN)",Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1077,Thiếu thông tin,"SC-025 — lỗi E_SC025_S_007: thiếu message (VN), thao tác người dùng (JP), thao tác người dùng (VN)",Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1078,Thiếu thông tin,SC-025 — lỗi E_SC025_008: thiếu message (VN),Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1079,Thiếu thông tin,SC-025 — lỗi E_SC025_009: thiếu message (VN),Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1080,Thiếu thông tin,"SC-026 — ghép nút với lời gọi API (cột S, tham chiếu cho dev)",Hành vi đã mô tả từ code ở cột P/Q; fe-api-calls.csv không có nhãn nút để ghép,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1081,Thiếu thông tin,SC-026 「こちら」 — màn đích sau khi bấm (/signup),Màn đích không có trong 02_Screen,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1082,Thiếu thông tin,SC-026 「フリーパス購入を希望の方はこちら」 — màn đích sau khi bấm (/booking/buy-monthly-ticket),Màn đích không có trong 02_Screen,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1083,Thiếu thông tin,"SC-026 — lỗi E_SC026_S_001: thiếu message (VN), thao tác người dùng (JP), thao tác người dùng (VN)",Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1084,Thiếu thông tin,"SC-026 — lỗi E_SC026_S_002: thiếu message (VN), thao tác người dùng (JP), thao tác người dùng (VN)",Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1085,Thiếu thông tin,"SC-026 — lỗi E_SC026_S_003: thiếu message (VN), thao tác người dùng (JP), thao tác người dùng (VN)",Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1086,Thiếu thông tin,"SC-026 — lỗi E_SC026_S_004: thiếu message (VN), thao tác người dùng (JP), thao tác người dùng (VN)",Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1087,Thiếu thông tin,"SC-026 — lỗi E_SC026_S_005: thiếu message (VN), thao tác người dùng (JP), thao tác người dùng (VN)",Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1088,Thiếu thông tin,"SC-026 — lỗi E_SC026_S_006: thiếu message (VN), thao tác người dùng (JP), thao tác người dùng (VN)",Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1089,Thiếu thông tin,"SC-026 — lỗi E_SC026_S_007: thiếu message (VN), thao tác người dùng (JP), thao tác người dùng (VN)",Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1090,Thiếu thông tin,SC-026 — lỗi E_SC026_008: thiếu message (VN),Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1091,Thiếu thông tin,SC-026 — lỗi E_SC026_009: thiếu message (VN),Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1092,Thiếu thông tin,SC-026 — lỗi E_SC026_010: thiếu message (VN),Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1093,Thiếu thông tin,SC-026 — lỗi E_SC026_011: thiếu message (VN),Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1094,Thiếu thông tin,SC-026 — lỗi E_SC026_012: thiếu message (VN),Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1095,Thiếu thông tin,SC-026 — lỗi E_SC026_013: thiếu message (VN),Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1096,Thiếu thông tin,SC-026 — lỗi E_SC026_014: thiếu message (VN),Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1097,Thiếu thông tin,"SC-027 — ghép nút với lời gọi API (cột S, tham chiếu cho dev)",Hành vi đã mô tả từ code ở cột P/Q; fe-api-calls.csv không có nhãn nút để ghép,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1098,Thiếu thông tin,SC-027 「こちら」 — màn đích sau khi bấm (/signup),Màn đích không có trong 02_Screen,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1099,Thiếu thông tin,SC-027 — lỗi E_SC027_001: thiếu message (VN),Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1100,Thiếu thông tin,SC-027 — lỗi E_SC027_002: thiếu message (VN),Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1101,Thiếu thông tin,"SC-028 — ghép nút với lời gọi API (cột S, tham chiếu cho dev)",Hành vi đã mô tả từ code ở cột P/Q; fe-api-calls.csv không có nhãn nút để ghép,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1102,Thiếu thông tin,SC-028 「こちら」 — màn đích sau khi bấm (/signup),Màn đích không có trong 02_Screen,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1103,Thiếu thông tin,SC-028 — lỗi E_SC028_001: thiếu message (VN),Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1104,Thiếu thông tin,SC-028 — lỗi E_SC028_002: thiếu message (VN),Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1105,Thiếu thông tin,SC-028 — lỗi E_SC028_003: thiếu message (VN),Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1106,Thiếu thông tin,SC-028 — lỗi E_SC028_004: thiếu message (VN),Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1107,Thiếu thông tin,"SC-029 — ghép nút với lời gọi API (cột S, tham chiếu cho dev)",Hành vi đã mô tả từ code ở cột P/Q; fe-api-calls.csv không có nhãn nút để ghép,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1108,Thiếu thông tin,SC-029 「こちら」 — màn đích sau khi bấm (/signup),Màn đích không có trong 02_Screen,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1109,Thiếu thông tin,SC-029 — lỗi E_SC029_001: thiếu message (VN),Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1110,Thiếu thông tin,SC-029 — lỗi E_SC029_002: thiếu message (VN),Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1111,Thiếu thông tin,SC-029 — lỗi E_SC029_003: thiếu message (VN),Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1112,Thiếu thông tin,SC-029 — lỗi E_SC029_004: thiếu message (VN),Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1113,Thiếu thông tin,SC-029 — lỗi E_SC029_005: thiếu message (VN),Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1114,Thiếu thông tin,SC-029 — lỗi E_SC029_006: thiếu message (VN),Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1115,Thiếu thông tin,SC-029 — lỗi E_SC029_007: thiếu message (VN),Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1116,Thiếu thông tin,SC-029 — lỗi E_SC029_008: thiếu message (VN),Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1117,Thiếu thông tin,SC-029 — lỗi E_SC029_009: thiếu message (VN),Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1118,Thiếu thông tin,SC-029 — lỗi E_SC029_010: thiếu message (VN),Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1119,Thiếu thông tin,SC-029 — lỗi E_SC029_011: thiếu message (VN),Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1120,Thiếu thông tin,"SC-030 — ghép nút với lời gọi API (cột S, tham chiếu cho dev)",Hành vi đã mô tả từ code ở cột P/Q; fe-api-calls.csv không có nhãn nút để ghép,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1121,Thiếu thông tin,SC-030 「こちら」 — màn đích sau khi bấm (/signup),Màn đích không có trong 02_Screen,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1122,Thiếu thông tin,SC-030 — lỗi E_SC030_001: thiếu message (VN),Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1123,Thiếu thông tin,SC-030 — lỗi E_SC030_002: thiếu message (VN),Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1124,Thiếu thông tin,SC-030 — lỗi E_SC030_003: thiếu message (VN),Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1125,Thiếu thông tin,SC-030 — lỗi E_SC030_004: thiếu message (VN),Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1126,Thiếu thông tin,SC-030 — lỗi E_SC030_005: thiếu message (VN),Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1127,Thiếu thông tin,SC-030 — lỗi E_SC030_006: thiếu message (VN),Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1128,Thiếu thông tin,SC-030 — lỗi E_SC030_007: thiếu message (VN),Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1129,Thiếu thông tin,SC-030 — lỗi E_SC030_008: thiếu message (VN),Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1130,Thiếu thông tin,SC-030 — lỗi E_SC030_009: thiếu message (VN),Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1131,Thiếu thông tin,SC-030 — lỗi E_SC030_010: thiếu message (VN),Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1132,Thiếu thông tin,SC-030 — lỗi E_SC030_011: thiếu message (VN),Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1133,Thiếu thông tin,"SC-031 — ghép nút với lời gọi API (cột S, tham chiếu cho dev)",Hành vi đã mô tả từ code ở cột P/Q; fe-api-calls.csv không có nhãn nút để ghép,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1134,Thiếu thông tin,SC-031 「こちら」 — màn đích sau khi bấm (/signup),Màn đích không có trong 02_Screen,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1135,Thiếu thông tin,SC-031 — lỗi E_SC031_001: thiếu message (VN),Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1136,Thiếu thông tin,SC-031 — lỗi E_SC031_002: thiếu message (VN),Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1137,Thiếu thông tin,"SC-032 — ghép nút với lời gọi API (cột S, tham chiếu cho dev)",Hành vi đã mô tả từ code ở cột P/Q; fe-api-calls.csv không có nhãn nút để ghép,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1138,Thiếu thông tin,SC-032 「こちら」 — màn đích sau khi bấm (/signup),Màn đích không có trong 02_Screen,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1139,Thiếu thông tin,SC-032 — lỗi E_SC032_001: thiếu message (VN),Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1140,Thiếu thông tin,SC-032 — lỗi E_SC032_002: thiếu message (VN),Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1141,Thiếu thông tin,"SC-033 — ghép nút với lời gọi API (cột S, tham chiếu cho dev)",Hành vi đã mô tả từ code ở cột P/Q; fe-api-calls.csv không có nhãn nút để ghép,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1142,Thiếu thông tin,SC-033 「こちら」 — màn đích sau khi bấm (/signup),Màn đích không có trong 02_Screen,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1143,Thiếu thông tin,SC-033 — lỗi E_SC033_001: thiếu message (VN),Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1144,Thiếu thông tin,SC-033 — lỗi E_SC033_002: thiếu message (VN),Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1145,Thiếu thông tin,"SC-034 — ghép nút với lời gọi API (cột S, tham chiếu cho dev)",Hành vi đã mô tả từ code ở cột P/Q; fe-api-calls.csv không có nhãn nút để ghép,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1146,Thiếu thông tin,SC-034 「こちら」 — màn đích sau khi bấm (/signup),Màn đích không có trong 02_Screen,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1147,Thiếu thông tin,SC-034 — lỗi E_SC034_001: thiếu message (VN),Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1148,Thiếu thông tin,SC-034 — lỗi E_SC034_002: thiếu message (VN),Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1149,Thiếu thông tin,"SC-035 — ghép nút với lời gọi API (cột S, tham chiếu cho dev)",Hành vi đã mô tả từ code ở cột P/Q; fe-api-calls.csv không có nhãn nút để ghép,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1150,Thiếu thông tin,SC-035 「こちら」 — màn đích sau khi bấm (/signup),Màn đích không có trong 02_Screen,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1151,Thiếu thông tin,SC-035 — lỗi E_SC035_001: thiếu message (VN),Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1152,Thiếu thông tin,SC-035 — lỗi E_SC035_002: thiếu message (VN),Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1153,Thiếu thông tin,"SC-036 — ghép nút với lời gọi API (cột S, tham chiếu cho dev)",Hành vi đã mô tả từ code ở cột P/Q; fe-api-calls.csv không có nhãn nút để ghép,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1154,Thiếu thông tin,SC-036 「こちら」 — màn đích sau khi bấm (/signup),Màn đích không có trong 02_Screen,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1155,Thiếu thông tin,SC-036 「フリーパス購入を希望の方はこちら」 — màn đích sau khi bấm (/booking/buy-monthly-ticket),Màn đích không có trong 02_Screen,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1156,Thiếu thông tin,"SC-036 — lỗi E_SC036_S_001: thiếu message (VN), thao tác người dùng (JP), thao tác người dùng (VN)",Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1157,Thiếu thông tin,"SC-036 — lỗi E_SC036_S_002: thiếu message (VN), thao tác người dùng (JP), thao tác người dùng (VN)",Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1158,Thiếu thông tin,"SC-036 — lỗi E_SC036_S_003: thiếu message (VN), thao tác người dùng (JP), thao tác người dùng (VN)",Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1159,Thiếu thông tin,"SC-036 — lỗi E_SC036_S_004: thiếu message (VN), thao tác người dùng (JP), thao tác người dùng (VN)",Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1160,Thiếu thông tin,"SC-036 — lỗi E_SC036_S_005: thiếu message (VN), thao tác người dùng (JP), thao tác người dùng (VN)",Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1161,Thiếu thông tin,"SC-036 — lỗi E_SC036_S_006: thiếu message (VN), thao tác người dùng (JP), thao tác người dùng (VN)",Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1162,Thiếu thông tin,"SC-036 — lỗi E_SC036_S_007: thiếu message (VN), thao tác người dùng (JP), thao tác người dùng (VN)",Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1163,Thiếu thông tin,SC-036 — lỗi E_SC036_008: thiếu message (VN),Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1164,Thiếu thông tin,SC-036 — lỗi E_SC036_009: thiếu message (VN),Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1165,Thiếu thông tin,SC-036 — lỗi E_SC036_010: thiếu message (VN),Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1166,Thiếu thông tin,SC-036 — lỗi E_SC036_011: thiếu message (VN),Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1167,Thiếu thông tin,SC-036 — lỗi E_SC036_012: thiếu message (VN),Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1168,Thiếu thông tin,SC-036 — lỗi E_SC036_013: thiếu message (VN),Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1169,Thiếu thông tin,SC-036 — lỗi E_SC036_014: thiếu message (VN),Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1170,Thiếu thông tin,SC-036 — lỗi E_SC036_015: thiếu message (VN),Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1171,Thiếu thông tin,SC-036 — lỗi E_SC036_016: thiếu message (VN),Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1172,Thiếu thông tin,SC-036 — lỗi E_SC036_017: thiếu message (VN),Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1173,Thiếu thông tin,SC-036 — lỗi E_SC036_018: thiếu message (VN),Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1174,Thiếu thông tin,SC-036 — lỗi E_SC036_019: thiếu message (VN),Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1175,Thiếu thông tin,SC-036 — lỗi E_SC036_020: thiếu message (VN),Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1176,Thiếu thông tin,SC-036 — lỗi E_SC036_021: thiếu message (VN),Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1177,Thiếu thông tin,"SC-036 — lỗi E_SC036_022: thiếu vị trí lỗi, message (VN)",Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1178,Thiếu thông tin,"SC-036 — lỗi E_SC036_023: thiếu vị trí lỗi, message (VN)",Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1179,Thiếu thông tin,SC-036 — lỗi E_SC036_024: thiếu message (VN),Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1180,Thiếu thông tin,SC-036 — lỗi E_SC036_025: thiếu message (VN),Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1181,Thiếu thông tin,SC-036 — lỗi E_SC036_026: thiếu message (VN),Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1182,Thiếu thông tin,SC-036 — lỗi E_SC036_027: thiếu message (VN),Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1183,Thiếu thông tin,SC-036 — lỗi E_SC036_028: thiếu message (VN),Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1184,Thiếu thông tin,SC-036 — lỗi E_SC036_029: thiếu message (VN),Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1185,Thiếu thông tin,SC-036 — lỗi E_SC036_030: thiếu message (VN),Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1186,Thiếu thông tin,SC-036 — lỗi E_SC036_031: thiếu message (VN),Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1187,Thiếu thông tin,"SC-036 — lỗi E_SC036_032: thiếu vị trí lỗi, message (VN)",Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1188,Thiếu thông tin,SC-036 — lỗi E_SC036_033: thiếu message (VN),Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1189,Thiếu thông tin,SC-036 — lỗi E_SC036_034: thiếu message (VN),Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1190,Thiếu thông tin,SC-036 — lỗi E_SC036_035: thiếu message (VN),Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1191,Thiếu thông tin,SC-036 — lỗi E_SC036_036: thiếu message (VN),Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1192,Thiếu thông tin,SC-036 — lỗi E_SC036_037: thiếu message (VN),Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1193,Thiếu thông tin,SC-036 — lỗi E_SC036_038: thiếu message (VN),Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1194,Thiếu thông tin,SC-036 — lỗi E_SC036_039: thiếu message (VN),Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1195,Thiếu thông tin,"SC-036 — lỗi E_SC036_040: thiếu vị trí lỗi, message (VN)",Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1196,Thiếu thông tin,"SC-036 — lỗi E_SC036_041: thiếu vị trí lỗi, message (VN)",Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1197,Thiếu thông tin,SC-036 — lỗi E_SC036_042: thiếu message (VN),Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1198,Thiếu thông tin,SC-036 — lỗi E_SC036_043: thiếu message (VN),Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1199,Thiếu thông tin,SC-036 — lỗi E_SC036_044: thiếu message (VN),Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1200,Thiếu thông tin,SC-036 — lỗi E_SC036_045: thiếu message (VN),Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1201,Thiếu thông tin,SC-036 — lỗi E_SC036_046: thiếu message (VN),Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1202,Thiếu thông tin,SC-036 — lỗi E_SC036_047: thiếu message (VN),Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1203,Thiếu thông tin,SC-036 — lỗi E_SC036_048: thiếu message (VN),Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1204,Thiếu thông tin,SC-036 — lỗi E_SC036_049: thiếu message (VN),Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1205,Thiếu thông tin,SC-036 — lỗi E_SC036_050: thiếu message (VN),Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1206,Thiếu thông tin,SC-036 — lỗi E_SC036_051: thiếu message (VN),Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1207,Thiếu thông tin,SC-036 — lỗi E_SC036_052: thiếu message (VN),Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1208,Thiếu thông tin,SC-036 — lỗi E_SC036_053: thiếu message (VN),Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1209,Thiếu thông tin,SC-036 — lỗi E_SC036_054: thiếu message (VN),Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1210,Thiếu thông tin,SC-036 — lỗi E_SC036_055: thiếu message (VN),Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1211,Thiếu thông tin,SC-036 — lỗi E_SC036_056: thiếu message (VN),Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1212,Thiếu thông tin,SC-036 — lỗi E_SC036_057: thiếu message (VN),Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1213,Thiếu thông tin,SC-036 — lỗi E_SC036_058: thiếu message (VN),Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1214,Thiếu thông tin,SC-036 — lỗi E_SC036_059: thiếu message (VN),Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1215,Thiếu thông tin,SC-036 — lỗi E_SC036_060: thiếu message (VN),Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1216,Thiếu thông tin,SC-036 — lỗi E_SC036_061: thiếu message (VN),Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1217,Thiếu thông tin,SC-036 — lỗi E_SC036_062: thiếu message (VN),Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1218,Thiếu thông tin,SC-036 — lỗi E_SC036_063: thiếu message (VN),Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1219,Thiếu thông tin,SC-036 — lỗi E_SC036_064: thiếu message (VN),Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1220,Thiếu thông tin,SC-036 — lỗi E_SC036_065: thiếu message (VN),Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1221,Thiếu thông tin,SC-036 — lỗi E_SC036_066: thiếu message (VN),Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1222,Thiếu thông tin,SC-036 — lỗi E_SC036_067: thiếu message (VN),Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1223,Thiếu thông tin,SC-036 — lỗi E_SC036_068: thiếu message (VN),Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1224,Thiếu thông tin,SC-036 — lỗi E_SC036_069: thiếu message (VN),Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1225,Thiếu thông tin,SC-036 — lỗi E_SC036_070: thiếu message (VN),Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1226,Thiếu thông tin,SC-036 — lỗi E_SC036_071: thiếu message (VN),Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1227,Thiếu thông tin,"SC-036 — lỗi E_SC036_072: thiếu vị trí lỗi, message (VN)",Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1228,Thiếu thông tin,"SC-036 — lỗi E_SC036_073: thiếu vị trí lỗi, message (VN)",Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1229,Thiếu thông tin,SC-036 — lỗi E_SC036_074: thiếu message (VN),Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1230,Thiếu thông tin,SC-036 — lỗi E_SC036_075: thiếu message (VN),Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1231,Thiếu thông tin,SC-036 — lỗi E_SC036_076: thiếu message (VN),Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1232,Thiếu thông tin,SC-036 — lỗi E_SC036_077: thiếu message (VN),Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1233,Thiếu thông tin,SC-036 — lỗi E_SC036_078: thiếu message (VN),Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1234,Thiếu thông tin,SC-036 — lỗi E_SC036_079: thiếu message (VN),Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1235,Thiếu thông tin,SC-036 — lỗi E_SC036_080: thiếu message (VN),Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1236,Thiếu thông tin,SC-036 — lỗi E_SC036_081: thiếu message (VN),Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1237,Thiếu thông tin,SC-036 — lỗi E_SC036_082: thiếu message (VN),Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1238,Thiếu thông tin,SC-036 — lỗi E_SC036_083: thiếu message (VN),Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1239,Thiếu thông tin,"SC-037 — ghép nút với lời gọi API (cột S, tham chiếu cho dev)",Hành vi đã mô tả từ code ở cột P/Q; fe-api-calls.csv không có nhãn nút để ghép,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1240,Thiếu thông tin,SC-037 「こちら」 — màn đích sau khi bấm (/signup),Màn đích không có trong 02_Screen,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1241,Thiếu thông tin,SC-037 「フリーパス購入を希望の方はこちら」 — màn đích sau khi bấm (/booking/buy-monthly-ticket),Màn đích không có trong 02_Screen,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1242,Thiếu thông tin,"SC-037 — lỗi E_SC037_S_001: thiếu cách hiển thị, message (VN), thao tác người dùng (JP), thao tác người dùng (VN)",Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1243,Thiếu thông tin,"SC-037 — lỗi E_SC037_S_002: thiếu message (VN), thao tác người dùng (JP), thao tác người dùng (VN)",Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1244,Thiếu thông tin,"SC-037 — lỗi E_SC037_S_003: thiếu message (VN), thao tác người dùng (JP), thao tác người dùng (VN)",Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1245,Thiếu thông tin,"SC-037 — lỗi E_SC037_S_004: thiếu message (VN), thao tác người dùng (JP), thao tác người dùng (VN)",Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1246,Thiếu thông tin,"SC-037 — lỗi E_SC037_S_005: thiếu message (VN), thao tác người dùng (JP), thao tác người dùng (VN)",Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1247,Thiếu thông tin,"SC-037 — lỗi E_SC037_S_006: thiếu message (VN), thao tác người dùng (JP), thao tác người dùng (VN)",Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1248,Thiếu thông tin,"SC-037 — lỗi E_SC037_S_007: thiếu message (VN), thao tác người dùng (JP), thao tác người dùng (VN)",Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1249,Thiếu thông tin,"SC-037 — lỗi E_SC037_S_008: thiếu message (VN), thao tác người dùng (JP), thao tác người dùng (VN)",Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1250,Thiếu thông tin,SC-037 — lỗi E_SC037_009: thiếu message (VN),Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1251,Thiếu thông tin,SC-037 — lỗi E_SC037_010: thiếu message (VN),Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1252,Thiếu thông tin,SC-037 — lỗi E_SC037_011: thiếu message (VN),Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1253,Thiếu thông tin,SC-037 — lỗi E_SC037_012: thiếu message (VN),Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1254,Thiếu thông tin,SC-037 — lỗi E_SC037_013: thiếu message (VN),Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1255,Thiếu thông tin,SC-037 — lỗi E_SC037_014: thiếu message (VN),Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1256,Thiếu thông tin,SC-037 — lỗi E_SC037_015: thiếu message (VN),Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1257,Thiếu thông tin,SC-037 — lỗi E_SC037_016: thiếu message (VN),Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1258,Thiếu thông tin,SC-037 — lỗi E_SC037_017: thiếu message (VN),Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1259,Thiếu thông tin,SC-037 — lỗi E_SC037_018: thiếu message (VN),Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1260,Thiếu thông tin,SC-037 — lỗi E_SC037_019: thiếu message (VN),Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1261,Thiếu thông tin,SC-037 — lỗi E_SC037_020: thiếu message (VN),Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1262,Thiếu thông tin,SC-037 — lỗi E_SC037_021: thiếu message (VN),Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1263,Thiếu thông tin,SC-037 — lỗi E_SC037_022: thiếu message (VN),Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1264,Thiếu thông tin,"SC-037 — lỗi E_SC037_023: thiếu vị trí lỗi, message (VN)",Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1265,Thiếu thông tin,"SC-037 — lỗi E_SC037_024: thiếu vị trí lỗi, message (VN)",Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1266,Thiếu thông tin,SC-037 — lỗi E_SC037_025: thiếu message (VN),Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1267,Thiếu thông tin,SC-037 — lỗi E_SC037_026: thiếu message (VN),Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1268,Thiếu thông tin,SC-037 — lỗi E_SC037_027: thiếu message (VN),Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1269,Thiếu thông tin,SC-037 — lỗi E_SC037_028: thiếu message (VN),Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1270,Thiếu thông tin,SC-037 — lỗi E_SC037_029: thiếu message (VN),Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1271,Thiếu thông tin,SC-037 — lỗi E_SC037_030: thiếu message (VN),Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1272,Thiếu thông tin,SC-037 — lỗi E_SC037_031: thiếu message (VN),Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1273,Thiếu thông tin,SC-037 — lỗi E_SC037_032: thiếu message (VN),Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1274,Thiếu thông tin,"SC-037 — lỗi E_SC037_033: thiếu vị trí lỗi, message (VN)",Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1275,Thiếu thông tin,SC-037 — lỗi E_SC037_034: thiếu message (VN),Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1276,Thiếu thông tin,SC-037 — lỗi E_SC037_035: thiếu message (VN),Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1277,Thiếu thông tin,SC-037 — lỗi E_SC037_036: thiếu message (VN),Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1278,Thiếu thông tin,SC-037 — lỗi E_SC037_037: thiếu message (VN),Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1279,Thiếu thông tin,SC-037 — lỗi E_SC037_038: thiếu message (VN),Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1280,Thiếu thông tin,SC-037 — lỗi E_SC037_039: thiếu message (VN),Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1281,Thiếu thông tin,SC-037 — lỗi E_SC037_040: thiếu message (VN),Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1282,Thiếu thông tin,"SC-037 — lỗi E_SC037_041: thiếu vị trí lỗi, message (VN)",Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1283,Thiếu thông tin,"SC-037 — lỗi E_SC037_042: thiếu vị trí lỗi, message (VN)",Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1284,Thiếu thông tin,SC-037 — lỗi E_SC037_043: thiếu message (VN),Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1285,Thiếu thông tin,SC-037 — lỗi E_SC037_044: thiếu message (VN),Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1286,Thiếu thông tin,SC-037 — lỗi E_SC037_045: thiếu message (VN),Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1287,Thiếu thông tin,SC-037 — lỗi E_SC037_046: thiếu message (VN),Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1288,Thiếu thông tin,SC-037 — lỗi E_SC037_047: thiếu message (VN),Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1289,Thiếu thông tin,SC-037 — lỗi E_SC037_048: thiếu message (VN),Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1290,Thiếu thông tin,SC-037 — lỗi E_SC037_049: thiếu message (VN),Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1291,Thiếu thông tin,SC-037 — lỗi E_SC037_050: thiếu message (VN),Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1292,Thiếu thông tin,SC-037 — lỗi E_SC037_051: thiếu message (VN),Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1293,Thiếu thông tin,SC-037 — lỗi E_SC037_052: thiếu message (VN),Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1294,Thiếu thông tin,SC-037 — lỗi E_SC037_053: thiếu message (VN),Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1295,Thiếu thông tin,SC-037 — lỗi E_SC037_054: thiếu message (VN),Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1296,Thiếu thông tin,SC-037 — lỗi E_SC037_055: thiếu message (VN),Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1297,Thiếu thông tin,SC-037 — lỗi E_SC037_056: thiếu message (VN),Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1298,Thiếu thông tin,SC-037 — lỗi E_SC037_057: thiếu message (VN),Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1299,Thiếu thông tin,SC-037 — lỗi E_SC037_058: thiếu message (VN),Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1300,Thiếu thông tin,SC-037 — lỗi E_SC037_059: thiếu message (VN),Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1301,Thiếu thông tin,SC-037 — lỗi E_SC037_060: thiếu message (VN),Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1302,Thiếu thông tin,SC-037 — lỗi E_SC037_061: thiếu message (VN),Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1303,Thiếu thông tin,SC-037 — lỗi E_SC037_062: thiếu message (VN),Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1304,Thiếu thông tin,SC-037 — lỗi E_SC037_063: thiếu message (VN),Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1305,Thiếu thông tin,SC-037 — lỗi E_SC037_064: thiếu message (VN),Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1306,Thiếu thông tin,SC-037 — lỗi E_SC037_065: thiếu message (VN),Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1307,Thiếu thông tin,SC-037 — lỗi E_SC037_066: thiếu message (VN),Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1308,Thiếu thông tin,SC-037 — lỗi E_SC037_067: thiếu message (VN),Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1309,Thiếu thông tin,SC-037 — lỗi E_SC037_068: thiếu message (VN),Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1310,Thiếu thông tin,SC-037 — lỗi E_SC037_069: thiếu message (VN),Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1311,Thiếu thông tin,SC-037 — lỗi E_SC037_070: thiếu message (VN),Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1312,Thiếu thông tin,SC-037 — lỗi E_SC037_071: thiếu message (VN),Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1313,Thiếu thông tin,SC-037 — lỗi E_SC037_072: thiếu message (VN),Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1314,Thiếu thông tin,"SC-037 — lỗi E_SC037_073: thiếu vị trí lỗi, message (VN)",Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1315,Thiếu thông tin,"SC-037 — lỗi E_SC037_074: thiếu vị trí lỗi, message (VN)",Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1316,Thiếu thông tin,SC-037 — lỗi E_SC037_075: thiếu message (VN),Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1317,Thiếu thông tin,SC-037 — lỗi E_SC037_076: thiếu message (VN),Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1318,Thiếu thông tin,SC-037 — lỗi E_SC037_077: thiếu message (VN),Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1319,Thiếu thông tin,SC-037 — lỗi E_SC037_078: thiếu message (VN),Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1320,Thiếu thông tin,SC-037 — lỗi E_SC037_079: thiếu message (VN),Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1321,Thiếu thông tin,SC-037 — lỗi E_SC037_080: thiếu message (VN),Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1322,Thiếu thông tin,SC-037 — lỗi E_SC037_081: thiếu message (VN),Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1323,Thiếu thông tin,SC-037 — lỗi E_SC037_082: thiếu message (VN),Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1324,Thiếu thông tin,SC-037 — lỗi E_SC037_083: thiếu message (VN),Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1325,Thiếu thông tin,SC-037 — lỗi E_SC037_084: thiếu message (VN),Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1326,Thiếu thông tin,"SC-038 — ghép nút với lời gọi API (cột S, tham chiếu cho dev)",Hành vi đã mô tả từ code ở cột P/Q; fe-api-calls.csv không có nhãn nút để ghép,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1327,Thiếu thông tin,SC-038 「こちら」 — màn đích sau khi bấm (/signup),Màn đích không có trong 02_Screen,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1328,Thiếu thông tin,SC-038 「フリーパス購入を希望の方はこちら」 — màn đích sau khi bấm (/booking/buy-monthly-ticket),Màn đích không có trong 02_Screen,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1329,Thiếu thông tin,"SC-038 — lỗi E_SC038_S_001: thiếu message (VN), thao tác người dùng (JP), thao tác người dùng (VN)",Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1330,Thiếu thông tin,"SC-038 — lỗi E_SC038_S_002: thiếu message (VN), thao tác người dùng (JP), thao tác người dùng (VN)",Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1331,Thiếu thông tin,"SC-038 — lỗi E_SC038_S_003: thiếu message (VN), thao tác người dùng (JP), thao tác người dùng (VN)",Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1332,Thiếu thông tin,"SC-038 — lỗi E_SC038_S_004: thiếu message (VN), thao tác người dùng (JP), thao tác người dùng (VN)",Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1333,Thiếu thông tin,"SC-038 — lỗi E_SC038_S_005: thiếu message (VN), thao tác người dùng (JP), thao tác người dùng (VN)",Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1334,Thiếu thông tin,"SC-038 — lỗi E_SC038_S_006: thiếu message (VN), thao tác người dùng (JP), thao tác người dùng (VN)",Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1335,Thiếu thông tin,"SC-038 — lỗi E_SC038_S_007: thiếu message (VN), thao tác người dùng (JP), thao tác người dùng (VN)",Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1336,Thiếu thông tin,SC-038 — lỗi E_SC038_008: thiếu message (VN),Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1337,Thiếu thông tin,SC-038 — lỗi E_SC038_009: thiếu message (VN),Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1338,Thiếu thông tin,"SC-039 — ghép nút với lời gọi API (cột S, tham chiếu cho dev)",Hành vi đã mô tả từ code ở cột P/Q; fe-api-calls.csv không có nhãn nút để ghép,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1339,Thiếu thông tin,SC-039 「こちら」 — màn đích sau khi bấm (/signup),Màn đích không có trong 02_Screen,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1340,Thiếu thông tin,"SC-040 — ghép nút với lời gọi API (cột S, tham chiếu cho dev)",Hành vi đã mô tả từ code ở cột P/Q; fe-api-calls.csv không có nhãn nút để ghép,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1341,Thiếu thông tin,SC-040 「こちら」 — màn đích sau khi bấm (/signup),Màn đích không có trong 02_Screen,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1342,Thiếu thông tin,"SC-040 — lỗi E_SC040_S_001: thiếu cách hiển thị, message (VN), thao tác người dùng (JP), thao tác người dùng (VN)",Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1343,Thiếu thông tin,SC-040 — lỗi E_SC040_002: thiếu message (VN),Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1344,Thiếu thông tin,SC-040 — lỗi E_SC040_003: thiếu message (VN),Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1345,Thiếu thông tin,"SC-041 — ghép nút với lời gọi API (cột S, tham chiếu cho dev)",Hành vi đã mô tả từ code ở cột P/Q; fe-api-calls.csv không có nhãn nút để ghép,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1346,Thiếu thông tin,SC-041 「こちら」 — màn đích sau khi bấm (/signup),Màn đích không có trong 02_Screen,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1347,Thiếu thông tin,SC-041 — lỗi E_SC041_001: thiếu message (VN),Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1348,Thiếu thông tin,SC-041 — lỗi E_SC041_002: thiếu message (VN),Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1349,Thiếu thông tin,"SC-042 — ghép nút với lời gọi API (cột S, tham chiếu cho dev)",Hành vi đã mô tả từ code ở cột P/Q; fe-api-calls.csv không có nhãn nút để ghép,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1350,Thiếu thông tin,SC-042 「こちら」 — màn đích sau khi bấm (/signup),Màn đích không có trong 02_Screen,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1351,Thiếu thông tin,SC-042 — lỗi E_SC042_001: thiếu message (VN),Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1352,Thiếu thông tin,SC-042 — lỗi E_SC042_002: thiếu message (VN),Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1353,Thiếu thông tin,"SC-043 — ghép nút với lời gọi API (cột S, tham chiếu cho dev)",Hành vi đã mô tả từ code ở cột P/Q; fe-api-calls.csv không có nhãn nút để ghép,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1354,Thiếu thông tin,SC-043 「こちら」 — màn đích sau khi bấm (/signup),Màn đích không có trong 02_Screen,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1355,Thiếu thông tin,SC-043 — lỗi E_SC043_001: thiếu message (VN),Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1356,Thiếu thông tin,SC-043 — lỗi E_SC043_002: thiếu message (VN),Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1357,Thiếu thông tin,"SC-044 — ghép nút với lời gọi API (cột S, tham chiếu cho dev)",Hành vi đã mô tả từ code ở cột P/Q; fe-api-calls.csv không có nhãn nút để ghép,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1358,Thiếu thông tin,SC-044 「こちら」 — màn đích sau khi bấm (/signup),Màn đích không có trong 02_Screen,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1359,Thiếu thông tin,"SC-044 — lỗi E_SC044_S_001: thiếu cách hiển thị, message (VN), thao tác người dùng (JP), thao tác người dùng (VN)",Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1360,Thiếu thông tin,"SC-044 — lỗi E_SC044_S_002: thiếu cách hiển thị, message (VN), thao tác người dùng (JP), thao tác người dùng (VN)",Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1361,Thiếu thông tin,SC-044 — lỗi E_SC044_003: thiếu message (VN),Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1362,Thiếu thông tin,SC-044 — lỗi E_SC044_004: thiếu message (VN),Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1363,Thiếu thông tin,"SC-045 — ghép nút với lời gọi API (cột S, tham chiếu cho dev)",Hành vi đã mô tả từ code ở cột P/Q; fe-api-calls.csv không có nhãn nút để ghép,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1364,Thiếu thông tin,SC-045 「こちら」 — màn đích sau khi bấm (/signup),Màn đích không có trong 02_Screen,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1365,Thiếu thông tin,SC-045 — lỗi E_SC045_001: thiếu message (VN),Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1366,Thiếu thông tin,SC-045 — lỗi E_SC045_002: thiếu message (VN),Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1367,Thiếu thông tin,SC-045 — lỗi E_SC045_003: thiếu message (VN),Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1368,Thiếu thông tin,SC-045 — lỗi E_SC045_004: thiếu message (VN),Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1369,Thiếu thông tin,SC-045 — lỗi E_SC045_005: thiếu message (VN),Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1370,Thiếu thông tin,SC-045 — lỗi E_SC045_006: thiếu message (VN),Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1371,Thiếu thông tin,SC-045 — lỗi E_SC045_007: thiếu message (VN),Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1372,Thiếu thông tin,SC-045 — lỗi E_SC045_008: thiếu message (VN),Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1373,Thiếu thông tin,SC-045 — lỗi E_SC045_009: thiếu message (VN),Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1374,Thiếu thông tin,SC-045 — lỗi E_SC045_010: thiếu message (VN),Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1375,Thiếu thông tin,SC-045 — lỗi E_SC045_011: thiếu message (VN),Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1376,Thiếu thông tin,SC-045 — lỗi E_SC045_012: thiếu message (VN),Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1377,Thiếu thông tin,SC-045 — lỗi E_SC045_013: thiếu message (VN),Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01
+Q-1378,Thiếu thông tin,SC-045 — lỗi E_SC045_014: thiếu message (VN),Không thấy trong code / i18n / trên web,Đọc handler trong code hoặc hỏi khách hàng,BrSE,Open,O5 Basic Design WEB-01

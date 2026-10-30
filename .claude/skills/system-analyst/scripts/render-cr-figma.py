@@ -42,7 +42,7 @@ Schema cr-figma.json:
  "tech": [{"badge","ref","label","sub"}],
  "screen_groups": [{"id": "G1", "title": "...", "site": "WEB-02", "nodes": [{"key","type": start|screen|decision|
             system|ng|terminal|edge, "badge","ref","label","sub"}], "edges": [["a","b","nhan","ng|"]]}],
- "screens": {"ds_read": ["outputs/<baseline>/04_DesignSystem/WEB-02/project/README.md", ...],
+ "screens": {"ds_read": ["outputs/<baseline>/06_Design_System/WEB-02/project/README.md", ...],
              "items": [{"badge","ref","site","shell": public|mypage|admin|auth|modal|mobile (mobile: + viewport_width, viewport_note khi DS chua co token viewport-mobile), "title","label","nav_active",
                         "blocks": [ {"t": "title"|"breadcrumb"|"section"|"text"|"field"|"field2"|"select"|"radio"|
                                      "checkbox"|"buttons"|"table"|"badge"|"card"|"steps"|"modal"|"search"|
@@ -83,9 +83,9 @@ SHELL_COMP = {"public": ["AppHeader"], "mypage": ["AppHeader", "SideNav"], "admi
 
 
 def load_tokens(bdir, site):
-    p = os.path.join(bdir, "04_DesignSystem", site, "project", "tokens.json")
+    p = os.path.join(bdir, "06_Design_System", site, "project", "tokens.json")
     if not os.path.isfile(p):
-        p = os.path.join(bdir, "04_DesignSystem", "project", "tokens.json")
+        p = os.path.join(bdir, "06_Design_System", "project", "tokens.json")
     t = C.load_json(p)
     themes = [th.get("id") for th in (t.get("color") or {}).get("themes") or []]
     flat = {}
@@ -645,7 +645,10 @@ function descPanel(it, x, y){
   p.setSharedPluginData(NS,"kind","desc"); p.setSharedPluginData(NS,"ref",it.ref);
   let yy = 20; const b = BADGE[it.badge];
   T(p, `${it.badge} · ${it.ref} · ${it.label}`, 24, yy, PW-48, 18, 700, b.s); yy += 30;
-  T(p, "Loại: " + it.stype + "   ·   Site: " + it.site + "   ·   Vào từ: " + (it.entry||"—") + (it.base ? "   ·   Màn AS-IS: " + it.base : ""), 24, yy, PW-48, 12, 500, "#57606A"); yy += 26;
+  T(p, "Loại: " + it.stype + "   ·   Site: " + it.site + "   ·   Vào từ: " + (it.entry||"—") + (it.base ? "   ·   Màn AS-IS: " + it.base : ""), 24, yy, PW-48, 12, 500, "#57606A"); yy += 20;
+  if (it.api_new || it.api_upd) {   // feedback: ghi so API moi / cap nhat trong phan thao tac
+    T(p, "Thao tác tới server: " + (it.api_new ? it.api_new + " API tạo mới" : "") + (it.api_new && it.api_upd ? " · " : "") + (it.api_upd ? it.api_upd + " API cập nhật" : ""), 24, yy, PW-48, 12, 600, "#0969DA"); yy += 22;
+  }
   const sec = (title, color) => { const t=T(p, title, 24, yy, PW-48, 13, 700, color||"#0969DA"); yy = t.y + t.height + 6; };
   const para = (s2) => { const t=T(p, s2, 24, yy, PW-48, 12, 400, "#1F2328"); yy = t.y + t.height + 12; };
   sec("■ Mục đích màn hình"); para(it.purpose);
@@ -660,8 +663,11 @@ function descPanel(it, x, y){
       rr.resize(PW-48, hm); ty2 += hm; });
     t.resize(PW-48, ty2); yy = t.y + ty2 + 18; return t; }
   sec("■ Bảng ITEMS (số ① trên mockup)");
-  table("ITEMS · " + it.ref, [["#",36],["Item",190],["Mô tả",290],["Action / Behavior",420],["Thay đổi",116]],
-        it.items.map(r=>({v:[CIRC[r.n]||r.n, r.title, r.desc, r.action, r.chg||it.badge], _chg:r.chg||(it.badge==="NEW"?"NEW":null)})), "#DAEEF3", "#FFFFFF", "#D0D7DE", "ITEM");
+  // feedback 30/10/2026: cot "Action / Behavior" -> "Thao tác / Ảnh hưởng". Co row.impact -> append bullet
+  // format giong cot Can cu Estimation: '· N API cập nhật\n· Mức ảnh hưởng: Nhỏ'. Khong co -> bo qua.
+  function actionImpact(r){ return r.impact ? (r.action + "\n\n" + r.impact) : r.action; }
+  table("ITEMS · " + it.ref, [["#",36],["Item",190],["Mô tả",290],["Thao tác / Ảnh hưởng",420],["Thay đổi",116]],
+        it.items.map(r=>({v:[CIRC[r.n]||r.n, r.title, r.desc, actionImpact(r), r.chg||it.badge], _chg:r.chg||(it.badge==="NEW"?"NEW":null)})), "#DAEEF3", "#FFFFFF", "#D0D7DE", "ITEM");
   sec("■ ERROR SCENARIOS — nếu lỗi thì hiển thị gì", "#CF222E");
   table("ERRORS · " + it.ref, [["#",36],["Trigger (nguyên nhân)",250],["Hiển thị",110],["Message + Action tiếp theo",656]],
         it.errors.map((r,k)=>({v:[String(k+1), r.trigger, r.display, r.msg]})), "#FFE3E3", "#FFFBFB", "#CF222E", "ERR");
@@ -852,14 +858,14 @@ def main():
     ap.add_argument("--template", default=None)
     ap.add_argument("--per-file", type=int, default=2, help="so man CR-3 moi file JS")
     ap.add_argument("--redraw", default=None, help="cr1,cr2 — ve lai CR-1 / CR-2 trong section da co (00-clear.js luu ban cu ra section luu tru, 98-restack.js xep lai)")
-    ap.add_argument("--ds-baseline", default=None, help="version chua 04_DesignSystem moi nhat (mac dinh = --baseline)")
+    ap.add_argument("--ds-baseline", default=None, help="version chua 06_Design_System moi nhat (mac dinh = --baseline)")
     a = ap.parse_args()
     cr = C.load_json(a.cr_json)
     view = C.load_json(a.view)
     _rm, rates = C.load_rates(a.rates)
     B = C.load_baseline(a.baseline)
     if a.ds_baseline:  # DS dung khi ve (DS moi hon, hoac Base Design System tam o version CR) thay DS cua baseline
-        B["ds"] = C.load_ds_sites(os.path.join(a.ds_baseline, "04_DesignSystem"))
+        B["ds"] = C.load_ds_sites(os.path.join(a.ds_baseline, "06_Design_System"))
         B["has_ds"] = bool(B["ds"])
     tpl = C.find_template(a.template, KIT)
     est = C.load_estimation_template(tpl)[1] if tpl else None
@@ -921,7 +927,7 @@ def main():
     items = scr.get("items") or []
     if items:
         for st in sites:
-            need = [os.path.join("04_DesignSystem", st, "project", f) for f in ("README.md", "tokens.json")]
+            need = [os.path.join("06_Design_System", st, "project", f) for f in ("README.md", "tokens.json")]
             for nd in need:
                 if not any(nd in p for p in ds_read):
                     errors.append("CR-3: chua khai da doc %s (screens.ds_read) — doc Design System TRUOC khi ve" % nd)

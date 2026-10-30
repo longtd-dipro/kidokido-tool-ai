@@ -1,0 +1,20 @@
+<!-- @dsCard group="Foundations" height=120 -->
+<!doctype html>
+<html>
+<head><meta charset="utf-8"><style>
+body{margin:0;padding:16px;background:var(--page-bg);font-family:var(--font-sans)}
+.row{display:flex;flex-wrap:wrap;gap:16px;align-items:center}
+.stack{display:flex;flex-direction:column;gap:16px}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:16px 32px}
+.note{font-size:12px;line-height:20px;color:var(--text-low)}
+</style></head>
+<body>
+<div id="root" class="kka-root"></div>
+<script>
+var D = window.KidoKidoAdmin, h = React.createElement;
+ReactDOM.createRoot(document.getElementById('root')).render(
+h('div',{className:'row',style:{color:'var(--icon-default)'}}, ['visibility','edit','delete','arrow-drop-down','navigate-before','navigate-next','add','add-circle','save-alt','keyboard-arrow-down','keyboard-arrow-up','clock'].map(function(n){return h(D.Icon,{key:n,name:n,label:n});}))
+);
+</script>
+</body>
+</html>

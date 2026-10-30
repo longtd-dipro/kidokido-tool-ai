@@ -1,0 +1,309 @@
+{
+  "schema_version": 2,
+  "diagram_type": "workflow",
+  "meta": {
+    "title": "KidoKido — Luồng nghiệp vụ chính",
+    "quality_profile": "showcase",
+    "output": "luong-nghiep-vu.html",
+    "legend": {
+      "entries": {
+        "frontend": {
+          "label": "Thao tác của khách"
+        },
+        "backend": {
+          "label": "Hệ thống xử lý"
+        },
+        "security": {
+          "label": "Thao tác của nhân viên"
+        },
+        "messagebus": {
+          "label": "Hàng chờ"
+        },
+        "external": {
+          "label": "Dịch vụ bên ngoài"
+        }
+      }
+    }
+  },
+  "lanes": [
+    {
+      "id": "cust",
+      "label": "Khách hàng (website người dùng)"
+    },
+    {
+      "id": "sys",
+      "label": "Hệ thống KidoKido"
+    },
+    {
+      "id": "ext",
+      "label": "Dịch vụ bên ngoài",
+      "variant": "exception"
+    },
+    {
+      "id": "staff",
+      "label": "Nhân viên cửa hàng (website quản trị)"
+    }
+  ],
+  "phases": [
+    {
+      "id": "p_book",
+      "label": "Đặt vé",
+      "fromCol": 0,
+      "toCol": 2
+    },
+    {
+      "id": "p_use",
+      "label": "Vào khu vui chơi",
+      "fromCol": 3,
+      "toCol": 3,
+      "variant": "emphasis"
+    },
+    {
+      "id": "p_out",
+      "label": "Ra về",
+      "fromCol": 4,
+      "toCol": 5,
+      "variant": "dashed"
+    }
+  ],
+  "mainPath": [
+    "c_view",
+    "c_login",
+    "c_book",
+    "s_check",
+    "s_code",
+    "t_in",
+    "t_out",
+    "s_close"
+  ],
+  "nodes": [
+    {
+      "id": "c_view",
+      "lane": "cust",
+      "col": 0,
+      "type": "frontend",
+      "label": "Xem cửa hàng",
+      "sublabel": "「店舗一覧」 chỗ trống, giờ chờ",
+      "width": 150
+    },
+    {
+      "id": "c_login",
+      "lane": "cust",
+      "col": 1,
+      "type": "frontend",
+      "label": "Đăng ký / đăng nhập",
+      "sublabel": "email hoặc LINE",
+      "width": 150
+    },
+    {
+      "id": "c_book",
+      "lane": "cust",
+      "col": 2,
+      "type": "frontend",
+      "label": "Đặt vé / mua vé",
+      "sublabel": "trong ngày · vé tháng · vé lượt",
+      "width": 150
+    },
+    {
+      "id": "s_queue",
+      "lane": "sys",
+      "col": 1,
+      "type": "messagebus",
+      "label": "Hàng chờ",
+      "sublabel": "khách xếp theo thứ tự",
+      "width": 150
+    },
+    {
+      "id": "s_check",
+      "lane": "sys",
+      "col": 2,
+      "type": "backend",
+      "label": "Kiểm tra chỗ",
+      "sublabel": "giới hạn lượt, vé còn hạn",
+      "width": 150
+    },
+    {
+      "id": "s_code",
+      "lane": "sys",
+      "col": 3,
+      "type": "backend",
+      "label": "Cấp mã vạch",
+      "sublabel": "lượt đặt: Đã đặt",
+      "width": 150
+    },
+    {
+      "id": "s_close",
+      "lane": "sys",
+      "col": 4,
+      "type": "backend",
+      "label": "Tính phí, ghi ra về",
+      "sublabel": "gửi mail, gọi khách kế tiếp",
+      "width": 150
+    },
+    {
+      "id": "e_gmo",
+      "lane": "ext",
+      "col": 2,
+      "type": "external",
+      "label": "Thanh toán GMO",
+      "sublabel": "thẻ, online",
+      "width": 150
+    },
+    {
+      "id": "e_smaregi",
+      "lane": "ext",
+      "col": 5,
+      "type": "external",
+      "label": "Máy bán hàng Smaregi",
+      "sublabel": "ghi doanh thu tại quầy",
+      "width": 150
+    },
+    {
+      "id": "t_call",
+      "lane": "staff",
+      "col": 1,
+      "type": "security",
+      "label": "Gọi khách đang chờ",
+      "sublabel": "「順番待ち管理」",
+      "width": 150
+    },
+    {
+      "id": "t_in",
+      "lane": "staff",
+      "col": 3,
+      "type": "security",
+      "label": "Quét mã khi vào",
+      "sublabel": "「バーコード読み取り」",
+      "width": 150
+    },
+    {
+      "id": "t_out",
+      "lane": "staff",
+      "col": 4,
+      "type": "security",
+      "label": "Quét mã khi ra",
+      "sublabel": "quét lại cùng mã vạch",
+      "width": 150
+    }
+  ],
+  "edges": [
+    {
+      "id": "e1",
+      "from": "c_view",
+      "to": "c_login",
+      "variant": "default"
+    },
+    {
+      "id": "e2",
+      "from": "c_login",
+      "to": "c_book",
+      "variant": "default"
+    },
+    {
+      "id": "e3",
+      "from": "c_book",
+      "to": "s_check",
+      "label": "gửi yêu cầu",
+      "variant": "emphasis"
+    },
+    {
+      "id": "e4",
+      "from": "s_check",
+      "to": "s_code",
+      "label": "còn chỗ",
+      "variant": "emphasis"
+    },
+    {
+      "id": "e5",
+      "from": "s_check",
+      "to": "s_queue",
+      "label": "hết chỗ",
+      "variant": "dashed",
+      "role": "branch"
+    },
+    {
+      "id": "e6",
+      "from": "s_check",
+      "to": "e_gmo",
+      "label": "vé tháng / lượt",
+      "variant": "default",
+      "role": "branch"
+    },
+    {
+      "id": "e7",
+      "from": "e_gmo",
+      "to": "s_code",
+      "label": "đã thanh toán",
+      "variant": "default"
+    },
+    {
+      "id": "e8",
+      "from": "s_queue",
+      "to": "t_call",
+      "label": "đến lượt",
+      "variant": "dashed",
+      "role": "branch",
+      "fromSide": "bottom",
+      "toSide": "top",
+      "route": "straight"
+    },
+    {
+      "id": "e9",
+      "from": "t_call",
+      "to": "t_in",
+      "label": "khách tới quầy",
+      "variant": "dashed"
+    },
+    {
+      "id": "e10",
+      "from": "s_code",
+      "to": "t_in",
+      "label": "khách đưa mã",
+      "variant": "emphasis",
+      "fromSide": "bottom",
+      "toSide": "top",
+      "route": "straight"
+    },
+    {
+      "id": "e11",
+      "from": "t_in",
+      "to": "t_out",
+      "label": "chơi xong",
+      "variant": "emphasis"
+    },
+    {
+      "id": "e12",
+      "from": "t_out",
+      "to": "s_close",
+      "variant": "emphasis",
+      "fromSide": "top",
+      "toSide": "bottom",
+      "route": "straight"
+    },
+    {
+      "id": "e13",
+      "from": "s_close",
+      "to": "e_smaregi",
+      "label": "ghi bán hàng",
+      "variant": "default"
+    }
+  ],
+  "cards": [
+    {
+      "dot": "cyan",
+      "title": "Quản trị",
+      "items": [
+        "Giá, lịch bán, khung giờ của vé đặt ở 「商品管理」 — dùng khi kiểm tra chỗ",
+        "Số khách đang trong khu xem ở 「入場状況管理」"
+      ]
+    },
+    {
+      "dot": "rose",
+      "title": "Cần xác nhận",
+      "items": [
+        "Khách được gọi không tới sau bao lâu thì tự huỷ — Q-186",
+        "Khách tự huỷ vé đã thanh toán được hoàn bao nhiêu — Q-188"
+      ]
+    }
+  ]
+}
