@@ -1,0 +1,77 @@
+{
+  "system": "KidoKido",
+  "version": "CR-005",
+  "version_folder": "CR-005_101126_gmo-cloud-migration",
+  "version_type": "CR",
+  "date": "10/11/2026",
+  "baseline_ref": "ver2_301026_baseline-cr002",
+  "outputs": [
+    {
+      "id": "CR",
+      "name": "CR Impact",
+      "content": "Công số + ảnh hưởng 6 trục (Summary · Estimation · Screen · API · Database · Figma · Q&A)",
+      "files": [
+        "CR-005_Impact.xlsx"
+      ],
+      "count": "21 hạng mục · 6 MD (đơn giá DRAFT)",
+      "exists": true,
+      "count_value": 21,
+      "md": 6.0,
+      "rates_status": "DRAFT",
+      "gate": "—",
+      "gate_detail": "chua chay gate",
+      "status": "warn",
+      "reason": "chưa chạy gate",
+      "status_text": "⚠️ chưa chạy gate"
+    },
+    {
+      "id": "EST",
+      "name": "見積書",
+      "content": "Báo giá theo chức năng — tiếng Nhật gửi KH (詳細見積書 + 前提条件・留意事項); bản vi nội bộ nếu có",
+      "files": [
+        "CR-005_見積書.xlsx"
+      ],
+      "count": "7 dòng chức năng · Step 1 4.59 · Step 2 7.62 人日 · 1 phương án (đơn giá DRAFT)",
+      "exists": true,
+      "gate": "—",
+      "gate_detail": "chua chay gate",
+      "status": "warn",
+      "reason": "chưa chạy gate",
+      "status_text": "⚠️ chưa chạy gate"
+    },
+    {
+      "id": "O4",
+      "name": "Figma (CR)",
+      "content": "Màn/luồng thay đổi theo CR (badge NEW/UPD/DEL/IMPACT/AS-IS)",
+      "files": [],
+      "count": "—",
+      "exists": false,
+      "count_value": 0,
+      "gate": "—",
+      "gate_detail": "chua chay gate",
+      "status": "skip",
+      "reason": "User không chọn vẽ CR-2 Screen Flow + CR-3 Screens; CR hạ tầng không đổi UI; CR-1 Flow + Change Table JS đã sinh sẵn ở _internal/figma-js/ chờ user chạy use_figma",
+      "status_text": "⬜ Không chạy — User không chọn vẽ CR-2 Screen Flow + CR-3 Screens; CR hạ tầng không đổi UI; CR-1 Flow + Change Table JS đã sinh sẵn ở _internal/figma-js/ chờ user chạy use_figma"
+    },
+    {
+      "id": "IN",
+      "name": "Input CR",
+      "content": "Tài liệu yêu cầu gốc",
+      "files": [
+        "input/"
+      ],
+      "count": "1 file",
+      "exists": true,
+      "count_value": 1,
+      "gate": "—",
+      "gate_detail": "chua chay gate",
+      "status": "ok",
+      "reason": "",
+      "status_text": "✅"
+    }
+  ],
+  "inventory_gate": {
+    "gate": "—",
+    "detail": "chua chay gate"
+  }
+}

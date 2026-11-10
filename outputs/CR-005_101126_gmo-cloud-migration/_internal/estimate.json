@@ -1,0 +1,474 @@
+{
+  "meta": {
+    "cr_id": "CR-005",
+    "title": {
+      "ja": "GMO決済センター クラウド化対応（ルート証明書切替・TLS暗号スイート・SNI必須化・IP変更）",
+      "vi": "Đối ứng GMO-PG chuyển sang Cloud (đổi root cert · TLS cipher · SNI bắt buộc · đổi IP)"
+    },
+    "customer": {
+      "ja": "株式会社TOKIWAGI",
+      "vi": "Công ty TOKIWAGI"
+    },
+    "date": "2026-11-10",
+    "valid_days": 30
+  },
+  "patterns": [],
+  "combos": [
+    {
+      "label": {
+        "ja": "基本対応（準備＋カットオーバー後の回帰確認）",
+        "vi": "Hạng mục bắt buộc (chuẩn bị + regression sau cutover)"
+      },
+      "patterns": []
+    }
+  ],
+  "rows": [
+    {
+      "section": "common",
+      "big": {
+        "ja": "Step 1 — 事前準備・影響確認",
+        "vi": "Step 1 — Chuẩn bị · xác nhận ảnh hưởng"
+      },
+      "mid": {
+        "ja": "ランタイム前提の確認",
+        "vi": "Xác nhận tiền đề runtime"
+      },
+      "small": {
+        "ja": "本番Node.js／OpenSSLバージョンの確認",
+        "vi": "Kiểm tra phiên bản Node.js / OpenSSL trên production"
+      },
+      "content": {
+        "ja": "【想定する対応内容】\n・本番環境で稼働しているNode.jsのバージョンと同梱OpenSSLのバージョンを確認します。\n・GMOクラウドが要求するTLS暗号スイート（TLS 1.2以上・最新スイート）に対応していることを確認します。\n【見積もり前提・確認事項】\n・現行がNode.js 16以上・OpenSSL 1.1.1以上であることを想定しています。下回る場合は、別途ランタイム更新のお見積を提示いたします。",
+        "vi": "【Nội dung dự kiến】\n・Kiểm tra phiên bản Node.js và OpenSSL đi kèm đang chạy trên môi trường production.\n・Xác nhận tương thích với bộ TLS Cipher Suite mà GMO Cloud yêu cầu (TLS 1.2+ và các cipher mới).\n【Tiền đề ước tính · cần xác nhận】\n・Giả định hiện đang chạy Node.js 16 trở lên · OpenSSL 1.1.1 trở lên. Nếu thấp hơn, xin được gửi báo giá riêng cho việc nâng runtime."
+      },
+      "confirm": null,
+      "reuse": "新規開発",
+      "must": "◉",
+      "step": "Step 1",
+      "pattern": null,
+      "code": "REGRESSION",
+      "qty": 1,
+      "req": true,
+      "impacts": [
+        "IMP-003"
+      ],
+      "impl_override": 0.25,
+      "override_note": {
+        "ja": "SRE作業（コマンド実行による確認）のみを想定し、工数を調整",
+        "vi": "Chỉ là thao tác SRE (chạy lệnh xác nhận) — điều chỉnh công số"
+      }
+    },
+    {
+      "section": "common",
+      "big": {
+        "ja": "Step 1 — 事前準備・影響確認",
+        "vi": "Step 1 — Chuẩn bị · xác nhận ảnh hưởng"
+      },
+      "mid": {
+        "ja": "SNI送信の確認",
+        "vi": "Xác nhận gửi SNI"
+      },
+      "small": {
+        "ja": "HTTPSクライアントコードのレビュー",
+        "vi": "Rà code HTTPS client"
+      },
+      "content": {
+        "ja": "【想定する対応内容】\n・GMO決済センターを呼び出すすべてのHTTPSクライアント実装（決済・カード保存・取引照会）を対象に、SNI送信有無をコードレビューします。\n・プロキシ・TLSターミネーター経由で通信している場合は、プロキシ側のSNI転送可否を確認します。\n・SNI拡張を含むハンドシェイクが成立することを openssl s_client で検証します。\n【見積もり前提・確認事項】\n・現行コードにカスタムhttps.Agentが存在せず、Node.js標準のSNI送信が有効であることを前提に算出しています。カスタムエージェントが見つかった場合は、別途改修のお見積を提示いたします。",
+        "vi": "【Nội dung dự kiến】\n・Rà toàn bộ code HTTPS client gọi tới decision center của GMO (thanh toán · lưu thẻ · tra giao dịch) để xác nhận có gửi SNI không.\n・Nếu giao tiếp đi qua proxy / TLS terminator → xác nhận proxy có forward SNI không.\n・Kiểm tra bằng openssl s_client để xác minh handshake có SNI thành công.\n【Tiền đề ước tính · cần xác nhận】\n・Giả định code hiện tại không có custom https.Agent, mặc định SNI của Node.js được bật. Nếu phát hiện custom agent, xin được gửi báo giá riêng cho phần sửa."
+      },
+      "confirm": null,
+      "reuse": "新規開発",
+      "must": "◉",
+      "step": "Step 1",
+      "pattern": null,
+      "code": "REGRESSION",
+      "qty": 1,
+      "req": true,
+      "impacts": [
+        "IMP-002"
+      ],
+      "impl_override": 0.5,
+      "override_note": {
+        "ja": "対象ファイル数（gmo.ts系・services）に基づく最小限の工数",
+        "vi": "Công số tối thiểu dựa trên số file liên quan (gmo.ts / services)"
+      }
+    },
+    {
+      "section": "common",
+      "big": {
+        "ja": "Step 1 — 事前準備・影響確認",
+        "vi": "Step 1 — Chuẩn bị · xác nhận ảnh hưởng"
+      },
+      "mid": {
+        "ja": "ルート証明書の整備",
+        "vi": "Chuẩn bị root certificate"
+      },
+      "small": {
+        "ja": "GlobalSign Root R46 の信頼追加（R3と併存）",
+        "vi": "Thêm GlobalSign Root R46 vào trust store (giữ song song với R3)"
+      },
+      "content": {
+        "ja": "【想定する対応内容】\n・サーバーOSのCAバンドルと、必要に応じて Node.js の NODE_EXTRA_CA_CERTS に GlobalSign Root R46 を追加します。\n・GlobalSign Root CA - R3 は 2028 年の切替完了まで削除しません。\n・本作業はテスト環境で先行実施し、GMO 側ホストへの TLS ハンドシェイクで R46 までチェーンが到達することを確認します。\n【見積もり前提・確認事項】\n・現行 OS（Amazon Linux 2 / Ubuntu など）および Node.js LTS の既定バンドルに R46 が含まれている場合、本工数は確認作業のみで足ります。含まれていない場合は、環境ごとに個別追加作業が必要となります。",
+        "vi": "【Nội dung dự kiến】\n・Thêm GlobalSign Root R46 vào OS CA bundle của máy chủ (nếu cần thì bổ sung thêm qua NODE_EXTRA_CA_CERTS của Node.js).\n・Giữ GlobalSign Root CA - R3 cho đến khi GMO hoàn tất chuyển đổi năm 2028, không xoá.\n・Chạy trước trên môi trường test; xác nhận TLS handshake tới host GMO đi đến R46 là tin cậy.\n【Tiền đề ước tính · cần xác nhận】\n・Nếu OS hiện tại (Amazon Linux 2 / Ubuntu v.v.) và Node.js LTS đã sẵn có R46 trong bundle mặc định, công số này chỉ dừng ở bước xác nhận. Nếu chưa có, cần thao tác bổ sung thủ công cho từng môi trường."
+      },
+      "confirm": null,
+      "reuse": "新規開発",
+      "must": "◉",
+      "step": "Step 1",
+      "pattern": null,
+      "code": "REGRESSION",
+      "qty": 1,
+      "req": true,
+      "impacts": [
+        "IMP-001"
+      ],
+      "impl_override": 1.0,
+      "override_note": {
+        "ja": "DevOps作業（テスト環境→本番準備）を含む工数",
+        "vi": "Công số bao gồm thao tác DevOps (môi trường test → chuẩn bị production)"
+      }
+    },
+    {
+      "section": "common",
+      "big": {
+        "ja": "Step 1 — 事前準備・影響確認",
+        "vi": "Step 1 — Chuẩn bị · xác nhận ảnh hưởng"
+      },
+      "mid": {
+        "ja": "ネットワーク疎通の確認",
+        "vi": "Xác nhận kết nối mạng"
+      },
+      "small": {
+        "ja": "アウトバウンドファイアウォール／NATのIP許可リスト確認",
+        "vi": "Rà danh sách IP cho phép của firewall / NAT outbound"
+      },
+      "content": {
+        "ja": "【想定する対応内容】\n・本番環境のAWS Security Group（Egress）、NACL、社内ファイアウォール設定を確認し、GMO決済センター宛て通信にIPアドレス指定の許可リストが存在するかを確認します。\n・存在する場合、GMOから提示される新IPリスト（添付ファイル）をもとに、カットオーバー前に許可リストを追加設定します。\n・ホスト名ベースで通信している場合は、追加対応不要です。\n【見積もり前提・確認事項】\n・インフラ側のアクセス権限・操作権限はクライアント様側のSRE担当にお願いしたく存じます。弊社は構成の確認とドキュメント化を担当いたします。",
+        "vi": "【Nội dung dự kiến】\n・Kiểm tra AWS Security Group (Egress), NACL, firewall nội bộ của môi trường production — xem có danh sách cho phép theo IP cụ thể cho giao tiếp tới decision center của GMO hay không.\n・Nếu có — dựa trên file IP mới GMO cung cấp, bổ sung IP mới vào danh sách cho phép trước cutover.\n・Nếu đang giao tiếp qua hostname (không giới hạn IP) — không cần sửa.\n【Tiền đề ước tính · cần xác nhận】\n・Quyền truy cập · thao tác phía hạ tầng xin nhờ SRE phía khách hàng. Phía chúng tôi phụ trách rà cấu hình và ghi lại tài liệu."
+      },
+      "confirm": null,
+      "reuse": "新規開発",
+      "must": "◉",
+      "step": "Step 1",
+      "pattern": null,
+      "code": "REGRESSION",
+      "qty": 1,
+      "req": true,
+      "impacts": [
+        "IMP-004"
+      ],
+      "impl_override": 0.5,
+      "override_note": {
+        "ja": "SREヒアリング＋設定確認（反映作業は顧客側SREが担当）",
+        "vi": "Trao đổi với SRE + xác nhận cấu hình (thao tác thay đổi do SRE của KH thực hiện)"
+      }
+    },
+    {
+      "section": "common",
+      "big": {
+        "ja": "Step 2 — 切替後の回帰確認",
+        "vi": "Step 2 — Regression sau cutover"
+      },
+      "mid": {
+        "ja": "テスト環境での回帰試験",
+        "vi": "Regression test trên môi trường test"
+      },
+      "small": {
+        "ja": "GMO関連 API・画面のスモーク試験（12 API ＋ 7 画面）",
+        "vi": "Smoke test API · màn liên quan GMO (12 API + 7 màn)"
+      },
+      "content": {
+        "ja": "【想定する対応内容】\n・テスト環境カットオーバー日（2026/11/18）以降、GMOクラウドに接続した状態で、決済（EntryTran／ExecTran／3DS）、取引照会（SearchTrade）、キャンセル・返金、金額変更、カード登録／検索／削除の全フローを通してスモーク試験を実施します。\n・テストカード（GMO提供）を用い、成功系／失敗系／3DS Y・A・C のケースを確認します。\n・結果はテストエビデンスとしてまとめてご報告いたします。\n【見積もり前提・確認事項】\n・GMOのテスト用ショップID／パスワードが、テスト環境のカットオーバースケジュールに合わせて使える状態であることを前提としています。使えない場合、試験時期の調整が必要となります。",
+        "vi": "【Nội dung dự kiến】\n・Sau ngày cutover test (2026-11-18), kết nối tới GMO Cloud và chạy smoke test đầy đủ các luồng: thanh toán (EntryTran · ExecTran · 3DS), tra giao dịch (SearchTrade), huỷ · hoàn tiền, đổi số tiền, lưu / tra / xoá thẻ.\n・Dùng thẻ test do GMO cung cấp, kiểm cả case thành công · thất bại · 3DS Y/A/C.\n・Kết quả được tổng hợp dưới dạng evidence test và báo cáo lại.\n【Tiền đề ước tính · cần xác nhận】\n・Giả định shopId / shopPass test của GMO sẵn sàng theo đúng lịch cutover test. Nếu không, thời điểm test cần được điều chỉnh."
+      },
+      "confirm": null,
+      "reuse": "新規開発",
+      "must": "◉",
+      "step": "Step 2",
+      "pattern": null,
+      "code": "REGRESSION",
+      "qty": 1,
+      "req": true,
+      "impacts": [
+        "IMP-005",
+        "IMP-006",
+        "IMP-007",
+        "IMP-008",
+        "IMP-009",
+        "IMP-010",
+        "IMP-011",
+        "IMP-012",
+        "IMP-013",
+        "IMP-014",
+        "IMP-015",
+        "IMP-016",
+        "IMP-017",
+        "IMP-018",
+        "IMP-019",
+        "IMP-020"
+      ],
+      "impl_override": 2.0,
+      "override_note": {
+        "ja": "12 API × 5 画面 ×（成功・失敗・3DS）シナリオを想定した試験工数",
+        "vi": "Công số test dự tính cho 12 API × 5 màn × (thành công · thất bại · 3DS)"
+      }
+    },
+    {
+      "section": "common",
+      "big": {
+        "ja": "Step 2 — 切替後の回帰確認",
+        "vi": "Step 2 — Regression sau cutover"
+      },
+      "mid": {
+        "ja": "本番環境での回帰確認",
+        "vi": "Regression confirm trên production"
+      },
+      "small": {
+        "ja": "本番カットオーバー直後のスモーク試験",
+        "vi": "Smoke test ngay sau cutover production"
+      },
+      "content": {
+        "ja": "【想定する対応内容】\n・本番カットオーバー（2026/12/07、ショップ／サイト管理画面）以降、本番の決済・カード保存の主要フロー（決済成功／失敗、3DS、カード保存・削除）を優先度1のスモーク試験で確認します。\n・SRE監視ログと合わせ、ハンドシェイクエラー／タイムアウトの有無をチェックします。\n・問題が検知された場合は即時エスカレーションし、別途緊急対応のお見積を提示いたします。\n【見積もり前提・確認事項】\n・本番スモーク試験は本番用テストカード（GMOご承認済み）を用い、最小限の実取引で行います。追加の長期モニタリングは本見積に含みません。",
+        "vi": "【Nội dung dự kiến】\n・Sau cutover production (2026-12-07 cho Shop/Site 管理画面), chạy smoke test ưu tiên 1 các luồng chính (thanh toán thành công / thất bại, 3DS, lưu / xoá thẻ).\n・Kết hợp với log giám sát của SRE để kiểm handshake error · timeout.\n・Nếu phát hiện lỗi, escalate ngay và gửi báo giá riêng cho đối ứng khẩn.\n【Tiền đề ước tính · cần xác nhận】\n・Smoke test production dùng thẻ test production (đã được GMO chấp thuận), chạy giao dịch thật tối thiểu. Monitoring dài hạn thêm không nằm trong báo giá này."
+      },
+      "confirm": null,
+      "reuse": "新規開発",
+      "must": "◉",
+      "step": "Step 2",
+      "pattern": null,
+      "code": "REGRESSION",
+      "qty": 1,
+      "req": true,
+      "impacts": [
+        "IMP-005",
+        "IMP-006",
+        "IMP-014",
+        "IMP-015",
+        "IMP-016"
+      ],
+      "impl_override": 1.0,
+      "override_note": {
+        "ja": "本番スモークは Priority 1 のみ、実運用は最小限",
+        "vi": "Smoke prod chỉ chạy Priority 1, thao tác thực tế tối thiểu"
+      }
+    },
+    {
+      "section": "common",
+      "big": {
+        "ja": "Step 2 — 切替後の回帰確認",
+        "vi": "Step 2 — Regression sau cutover"
+      },
+      "mid": {
+        "ja": "ショップ／サイト管理画面 カットオーバー調整",
+        "vi": "Điều phối cutover Shop/Site 管理画面"
+      },
+      "small": {
+        "ja": "運用スケジュール周知（テスト 2026/11/18 ・本番 2026/12/07）",
+        "vi": "Thông báo lịch vận hành (test 2026-11-18 · production 2026-12-07)"
+      },
+      "content": {
+        "ja": "【想定する対応内容】\n・ショップ／サイト管理画面のクラウド化（テスト 2026/11/18、本番 2026/12/07）につき、クライアント様社内の運用担当者様に事前周知するためのスケジュール案内を弊社側で作成・ご提出します。\n・ブックマーク・内部ドキュメントの切替有無は、クライアント様側にてご確認・ご対応をお願いいたします。\n【見積もり前提・確認事項】\n・本項目はクライアント様側運用体制への周知サポートが中心であり、開発工数は発生しません。",
+        "vi": "【Nội dung dự kiến】\n・Về việc Shop/Site 管理画面 chuyển sang Cloud (test 2026-11-18, production 2026-12-07) — phía chúng tôi soạn và nộp lịch thông báo cho nhân sự vận hành nội bộ của khách hàng.\n・Việc kiểm tra · chuyển bookmark · tài liệu nội bộ xin nhờ phía khách hàng xử lý.\n【Tiền đề ước tính · cần xác nhận】\n・Hạng mục này tập trung vào hỗ trợ truyền đạt cho khối vận hành của khách hàng, không phát sinh công số lập trình."
+      },
+      "confirm": null,
+      "reuse": "新規開発",
+      "must": "◯",
+      "step": "Step 2",
+      "pattern": null,
+      "code": "EXISTING-CONFIRM",
+      "qty": 1,
+      "req": true,
+      "impacts": [
+        "IMP-021"
+      ]
+    }
+  ],
+  "premises": {
+    "前提条件": [
+      {
+        "ja": "本対応は GMOペイメントゲートウェイ社からのご案内（2026/11/05 および 2026/11/09 再送）に基づく、インフラ層の切替対応です。業務仕様・画面仕様・DB スキーマの変更は含まれません。",
+        "vi": "Đối ứng này dựa trên thông báo của GMO Payment Gateway (2026-11-05 và 2026-11-09 gửi lại) — là đối ứng ở tầng hạ tầng. Không bao gồm thay đổi nghiệp vụ, không đổi màn, không đổi schema DB."
+      },
+      {
+        "ja": "現行システムの Node.js は 16 以上、OpenSSL は 1.1.1 以上であることを前提とします。これを下回る場合は、ランタイム更新のお見積を別途ご提示いたします。",
+        "vi": "Giả định Node.js hiện tại ≥ 16 và OpenSSL ≥ 1.1.1. Nếu thấp hơn sẽ gửi báo giá nâng runtime riêng."
+      },
+      {
+        "ja": "GMO 決済センターへの接続はホスト名ベースで行っており、送信元ネットワークに IP 単位の許可リストが存在しないことを前提とします。IP 許可リストがある場合は、クライアント様 SRE による新 IP の追加作業が別途必要です。",
+        "vi": "Giả định hiện đang gọi decision center của GMO qua hostname, mạng nguồn không có danh sách cho phép theo IP. Nếu có IP whitelist → cần SRE phía KH bổ sung IP mới."
+      },
+      {
+        "ja": "GMO から提示された接続方式別の切替スケジュール詳細資料（URL 添付あり）がカットオーバー前に入手できていることを前提とします。",
+        "vi": "Giả định tài liệu chi tiết lịch chuyển theo phương thức GMO cung cấp (file đính kèm URL trong mail) sẽ có trước cutover."
+      }
+    ],
+    "既存システムへの影響": [
+      {
+        "ja": "本対応により決済処理・カード保存／削除／照会・取引キャンセル・金額変更のすべてが GMO クラウド経由となります。業務仕様自体は変わりませんが、接続先・暗号化方式・SNI 必須化の影響で、障害発生時の原因切り分け手順は従来から更新する必要がございます。",
+        "vi": "Sau đối ứng, toàn bộ thanh toán · lưu / xoá / tra thẻ · huỷ giao dịch · đổi số tiền sẽ đi qua GMO Cloud. Nghiệp vụ không đổi; nhưng do đích kết nối · phương thức mã hoá · bắt buộc SNI thay đổi, quy trình điều tra sự cố cần được cập nhật so với trước."
+      },
+      {
+        "ja": "ショップ／サイト管理画面（GMO 側 UI）はクラウド化スケジュールが前倒しとなりました（テスト 2026/11/18、本番 2026/12/07）。KidoKido 側に既存ブックマーク／ドキュメントがある場合は、クライアント様側にて更新をご確認ください。",
+        "vi": "Lịch chuyển sang Cloud của Shop/Site 管理画面 (UI phía GMO) đã được đẩy lên sớm (test 2026-11-18, production 2026-12-07). Nếu phía KidoKido đang có bookmark · tài liệu — nhờ KH kiểm và cập nhật."
+      }
+    ],
+    "クライアント側で事前に決定・準備が必要な事項": [
+      {
+        "ja": "本番環境の Node.js／OpenSSL のバージョン情報をご提供願います（コマンド例：node --version、node -p process.versions.openssl）。",
+        "vi": "Xin cung cấp thông tin phiên bản Node.js / OpenSSL trên môi trường production (câu lệnh ví dụ: node --version, node -p process.versions.openssl)."
+      },
+      {
+        "ja": "GMO 新 IP アドレス一覧／接続方式別カットオーバー時刻は、添付ファイル（willap.jp 経由）をご共有ください。",
+        "vi": "Xin chia sẻ danh sách IP mới · lịch cutover theo phương thức kết nối (file đính kèm qua willap.jp)."
+      },
+      {
+        "ja": "テスト用 GMO ショップ ID／パスワードがテスト環境カットオーバー日（2026/11/18）に合わせて利用可能かをご確認願います。",
+        "vi": "Xin xác nhận giúp shopId / shopPass test của GMO có sẵn sàng theo lịch cutover test (2026-11-18) hay không."
+      },
+      {
+        "ja": "ショップ／サイト管理画面の切替（テスト 2026/11/18 ／ 本番 2026/12/07）につき、運用ご担当者様への周知・ブックマーク更新をお願いいたします。",
+        "vi": "Việc chuyển Shop/Site 管理画面 (test 2026-11-18 / production 2026-12-07) — xin thông báo cho nhân sự vận hành và cập nhật bookmark."
+      }
+    ],
+    "想定されるリスク": [
+      {
+        "ja": "本番環境の Node.js／OpenSSL が想定を下回る場合、TLS ハンドシェイクが成立せず決済が停止する恐れがあります。本見積はランタイム更新作業を含みません。",
+        "vi": "Nếu Node.js / OpenSSL ở production thấp hơn giả định, TLS handshake có thể không thành — thanh toán dừng. Báo giá này không bao gồm thao tác nâng runtime."
+      },
+      {
+        "ja": "アウトバウンドファイアウォールに IP 許可リストが残っている場合、GMO の新 IP を追加しないままカットオーバーを迎えると通信がタイムアウトします。クライアント様 SRE による事前更新をお願いいたします。",
+        "vi": "Nếu firewall outbound còn danh sách cho phép theo IP mà không bổ sung IP mới của GMO trước cutover → giao tiếp sẽ timeout. Xin SRE phía KH cập nhật trước."
+      },
+      {
+        "ja": "中間に TLS ターミネーター（ALB、プロキシ）が存在する場合、SNI を転送しない構成のときに新クラウド側で証明書が正しく返却されないリスクがあります。構成確認が必要です。",
+        "vi": "Nếu có TLS terminator trung gian (ALB, proxy) không forward SNI, khi chuyển sang Cloud có rủi ro cert trả về sai. Cần xác nhận cấu hình."
+      },
+      {
+        "ja": "GlobalSign Root CA - R3 は 2028 年に廃止予定のため、本対応で追加した R46 と併せて、2028 年までの切替完了確認のタスクを別途計画する必要があります。",
+        "vi": "GlobalSign Root CA - R3 dự kiến bị khoá bỏ năm 2028; cần lập kế hoạch task kiểm tra chuyển đổi hoàn tất đến 2028 cho R46 đã thêm lần này."
+      }
+    ]
+  },
+  "questions": [
+    {
+      "id": "Q-001",
+      "group": {
+        "ja": "ランタイム前提",
+        "vi": "Tiền đề runtime"
+      },
+      "question": {
+        "ja": "本番環境で稼働している Node.js と OpenSSL の正確なバージョンをご共有いただけますでしょうか。（コマンド例：node --version ／ node -p process.versions.openssl）",
+        "vi": "Xin chia sẻ phiên bản chính xác của Node.js và OpenSSL đang chạy trên production. (Câu lệnh ví dụ: node --version / node -p process.versions.openssl)"
+      },
+      "why": {
+        "ja": "GMOクラウドが要求するTLS暗号スイート（最新スイート）を使えるかを事前に判断するために必要です。下回る場合はランタイム更新が別途発生します。",
+        "vi": "Để xác nhận trước có thể dùng được bộ TLS Cipher mới của GMO Cloud hay không. Nếu thấp hơn sẽ phát sinh thao tác nâng runtime riêng."
+      },
+      "proposal": {
+        "ja": "Node.js 16 以上・OpenSSL 1.1.1 以上であることを前提として算出しています。",
+        "vi": "Báo giá dựa trên giả định Node.js ≥ 16, OpenSSL ≥ 1.1.1."
+      },
+      "alt": {
+        "ja": "下回る場合は、Node.js を LTS に更新する作業を別お見積でご提示いたします。",
+        "vi": "Nếu thấp hơn, chúng tôi sẽ gửi báo giá riêng cho việc nâng Node.js lên LTS."
+      },
+      "due": "2026/11/14"
+    },
+    {
+      "id": "Q-002",
+      "group": {
+        "ja": "ファイアウォール構成",
+        "vi": "Cấu hình firewall"
+      },
+      "question": {
+        "ja": "本番環境のアウトバウンド通信において、GMO 決済センター宛てに IP アドレス指定の許可リストを使用していらっしゃいますか。使用している場合、新 IP への更新作業は弊社とクライアント様 SRE のどちらが担当するのが望ましいでしょうか。",
+        "vi": "Trong giao tiếp outbound của môi trường production, có đang dùng danh sách cho phép theo IP cho decision center của GMO không? Nếu có, thao tác cập nhật IP mới mong muốn phía chúng tôi hay SRE của KH phụ trách?"
+      },
+      "why": {
+        "ja": "インフラ権限の所在によって、本見積の対応範囲が変わります。",
+        "vi": "Tuỳ nơi nắm quyền hạ tầng, phạm vi đối ứng của báo giá sẽ thay đổi."
+      },
+      "proposal": {
+        "ja": "ホスト名ベース通信・IP 制限なしを想定し、弊社は構成確認のみ（0.5 人日）を見積に含めています。",
+        "vi": "Giả định giao tiếp theo hostname, không giới hạn IP; báo giá chỉ gồm công số rà cấu hình (0.5 人日)."
+      },
+      "alt": {
+        "ja": "IP 制限ありで、かつ更新作業を弊社に依頼される場合は、別途アクセス権限のご提供とお見積の追加をご相談させてください。",
+        "vi": "Nếu có giới hạn IP và nhờ phía chúng tôi cập nhật, xin được trao đổi về quyền truy cập và báo giá bổ sung."
+      },
+      "due": "2026/11/14"
+    },
+    {
+      "id": "Q-003",
+      "group": {
+        "ja": "切替スケジュール資料",
+        "vi": "Tài liệu lịch cutover"
+      },
+      "question": {
+        "ja": "GMO からご案内のあった、接続方式別の詳細スケジュール資料（willap.jp URL 添付）を共有いただけますでしょうか。API（プロトコルタイプ・トークン決済 V2）の正確な切替日が特定でき次第、Step 2 のテスト計画を確定いたします。",
+        "vi": "Xin chia sẻ tài liệu chi tiết lịch cutover theo phương thức kết nối mà GMO đã gửi (có link willap.jp đính kèm). Khi xác định được chính xác ngày chuyển của API (Protocol Type · Token Payment V2), chúng tôi sẽ chốt kế hoạch test Step 2."
+      },
+      "why": {
+        "ja": "ショップ／サイト管理画面以外のカットオーバー日が未確定の状態では、テスト・本番スモーク試験の実施時期が決められません。",
+        "vi": "Nếu chưa chốt được ngày cutover cho phương thức khác ngoài 管理画面, không thể định thời điểm chạy smoke test."
+      },
+      "proposal": {
+        "ja": "資料受領後、Step 2 のテスト日程を早急にご提示いたします。",
+        "vi": "Sau khi nhận tài liệu, chúng tôi sẽ sớm gửi lịch test Step 2."
+      },
+      "alt": {
+        "ja": "資料が入手困難な場合は、GMO カスタマーサポート窓口宛てに弊社名義で照会させていただくことも可能です。",
+        "vi": "Nếu khó lấy tài liệu, chúng tôi có thể liên hệ Customer Support của GMO dưới danh nghĩa của mình để hỏi."
+      },
+      "due": "2026/11/14"
+    },
+    {
+      "id": "Q-004",
+      "group": {
+        "ja": "テスト用 GMO ショップ ID",
+        "vi": "ShopId test của GMO"
+      },
+      "question": {
+        "ja": "テスト環境用の GMO ショップ ID／パスワードは、テスト環境カットオーバー日（2026/11/18）に合わせて新クラウドでご利用可能な状態になりますでしょうか。",
+        "vi": "ShopId / shopPass dùng cho môi trường test của GMO có sẵn sàng trên Cloud mới theo đúng lịch cutover test (2026-11-18) không?"
+      },
+      "why": {
+        "ja": "テスト用アカウントの切替が未完了の場合、Step 2 の回帰試験時期を調整する必要があります。",
+        "vi": "Nếu account test chưa được chuyển, cần điều chỉnh thời điểm regression test Step 2."
+      },
+      "proposal": {
+        "ja": "ご案内どおりテスト用アカウントも同時カットオーバーされる想定です。",
+        "vi": "Dự kiến account test cũng được chuyển đồng thời theo thông báo."
+      },
+      "alt": {
+        "ja": "切替時期が異なる場合は、テスト実施時期を調整いたします。",
+        "vi": "Nếu lịch khác nhau, chúng tôi sẽ điều chỉnh thời điểm test."
+      },
+      "due": "2026/11/14"
+    },
+    {
+      "id": "Q-005",
+      "group": {
+        "ja": "R3 廃止タスクの計画",
+        "vi": "Kế hoạch task bỏ R3"
+      },
+      "question": {
+        "ja": "GlobalSign Root CA - R3 は 2028 年の切替完了まで併存させる必要がありますが、2028 年の廃止タスクを今回の CR で合わせて計画するか、別途運用チケットとして立ち上げるか、ご方針をお聞かせください。",
+        "vi": "GlobalSign Root CA - R3 cần giữ song song cho đến khi GMO hoàn tất chuyển đổi năm 2028. Xin cho biết ý định: lập kế hoạch task bỏ R3 năm 2028 ngay trong CR này, hay tạo ticket vận hành riêng?"
+      },
+      "why": {
+        "ja": "長期タスクの所在を明確にしておくことで、担当者が変わっても漏れを防げます。",
+        "vi": "Xác định rõ nơi quản lý task dài hạn để tránh bỏ sót khi đổi người phụ trách."
+      },
+      "proposal": {
+        "ja": "別途運用チケットとして 2028 年に起案する方式を提案いたします（本 CR は完了クローズ）。",
+        "vi": "Đề xuất tạo ticket vận hành riêng để kick-off vào năm 2028 (CR này đóng ngay sau cutover)."
+      },
+      "alt": {
+        "ja": "本 CR に長期タスクを含めてご希望の場合は、該当項目を見積に追加いたします。",
+        "vi": "Nếu khách hàng muốn gộp task dài hạn vào CR này, chúng tôi sẽ bổ sung hạng mục tương ứng vào báo giá."
+      },
+      "due": "2026/11/14"
+    }
+  ]
+}

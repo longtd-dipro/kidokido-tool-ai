@@ -1,0 +1,78 @@
+{
+  "title": "Đối ứng GMO-PG chuyển sang Cloud (root cert R3→R46 · TLS cipher · SNI · IP)",
+  "site_order": ["WEB-02", "WEB-01"],
+  "site_labels": {
+    "WEB-02": "Màn hình người dùng (User)",
+    "WEB-01": "Trang quản trị (Admin)"
+  },
+  "flows": [
+    {
+      "lane": "CR-NEW-1",
+      "title": "Thanh toán online qua GMO Cloud — nghiệp vụ không đổi, chỉ chạm tầng kết nối",
+      "note": "Luồng nghiệp vụ: khách mở màn thanh toán → nhập thẻ → xác thực 3DS → thanh toán thành công / thất bại. Non-happy: kết nối tới GMO không thành (TLS / SNI / IP).",
+      "nodes": [
+        {"key": "a1", "type": "actor", "badge": "AS-IS", "ref": "SC-050", "label": "Khách đã đăng nhập"},
+        {"key": "s1", "type": "start", "pos": 1, "row": 0, "badge": "AS-IS", "ref": "SC-050", "label": "Mở màn thanh toán online"},
+        {"key": "p1", "type": "step", "pos": 2, "row": 0, "badge": "IMPACT", "ref": "IMP-016", "label": "Nhập thẻ (trong ứng dụng)"},
+        {"key": "p2", "type": "step", "pos": 3, "row": 0, "badge": "IMPACT", "ref": "IMP-005", "label": "Xác thực 3DS (nếu ngân hàng yêu cầu)"},
+        {"key": "e1", "type": "end", "pos": 5, "row": 0, "result": "ok", "badge": "AS-IS", "ref": "SC-053", "label": "Thanh toán thành công"},
+        {"key": "d2", "type": "decision", "pos": 2, "row": 1, "badge": "IMPACT", "ref": "IMP-001", "label": "Kết nối đến GMO Cloud ok?"},
+        {"key": "ng1", "type": "ng", "pos": 3, "row": 1, "badge": "IMPACT", "ref": "IMP-001", "label": "Không kết nối được (TLS / SNI / IP) → khách thấy màn thất bại"},
+        {"key": "e2", "type": "end", "pos": 5, "row": 1, "result": "fail", "badge": "AS-IS", "ref": "SC-051", "label": "Thanh toán thất bại"}
+      ],
+      "edges": [
+        ["a1", "s1", ""],
+        ["s1", "p1", ""],
+        ["p1", "p2", ""],
+        ["p2", "e1", ""],
+        ["p1", "d2", "chạm GMO"],
+        ["d2", "ng1", "Không", "ng"],
+        ["ng1", "e2", "", "ng"]
+      ]
+    },
+    {
+      "lane": "CR-NEW-2",
+      "title": "Lưu / tra / xoá thẻ qua GMO Cloud — nghiệp vụ không đổi, chạm tầng kết nối",
+      "note": "Luồng: khách lưu thẻ ở trang thông tin cá nhân → hệ thống gửi thẻ qua GMO lưu vào tài khoản. Xoá / tra thẻ tương tự. Non-happy: kết nối GMO Cloud fail.",
+      "nodes": [
+        {"key": "a3", "type": "actor", "badge": "AS-IS", "ref": "SC-082", "label": "Khách / nhân viên"},
+        {"key": "s3", "type": "start", "pos": 1, "row": 0, "badge": "AS-IS", "ref": "SC-082", "label": "Mở màn 「クレジットカード情報の編集」"},
+        {"key": "p4", "type": "step", "pos": 2, "row": 0, "badge": "IMPACT", "ref": "IMP-015", "label": "Nhập thẻ / chọn thẻ cần xoá"},
+        {"key": "p5", "type": "step", "pos": 3, "row": 0, "badge": "IMPACT", "ref": "IMP-015", "label": "Hệ thống xác nhận với GMO"},
+        {"key": "e3", "type": "end", "pos": 4, "row": 0, "result": "ok", "badge": "AS-IS", "ref": "SC-082", "label": "Cập nhật thẻ xong"},
+        {"key": "d3", "type": "decision", "pos": 2, "row": 1, "badge": "IMPACT", "ref": "IMP-001", "label": "Kết nối GMO Cloud ok?"},
+        {"key": "ng2", "type": "ng", "pos": 3, "row": 1, "badge": "IMPACT", "ref": "IMP-001", "label": "Không kết nối được → báo lỗi, giữ nguyên thẻ cũ"},
+        {"key": "e4", "type": "end", "pos": 4, "row": 1, "result": "fail", "badge": "AS-IS", "ref": "SC-082", "label": "Hiển thị lỗi tại chỗ"}
+      ],
+      "edges": [
+        ["a3", "s3", ""],
+        ["s3", "p4", ""],
+        ["p4", "p5", ""],
+        ["p5", "e3", ""],
+        ["p4", "d3", "chạm GMO"],
+        ["d3", "ng2", "Không", "ng"],
+        ["ng2", "e4", "", "ng"]
+      ]
+    }
+  ],
+  "tech": [
+    {"badge": "UPD", "ref": "EXT-001", "label": "GMO Payment Gateway (Protocol Type + Token V2)", "sub": "+ GlobalSign Root R46 trust · SNI bắt buộc · IP Cloud · TLS Cipher mới"},
+    {"badge": "IMPACT", "ref": "API-080", "label": "POST /api/bookings — EntryTran+ExecTran+3DS", "sub": "Regression test sau cutover"},
+    {"badge": "IMPACT", "ref": "API-095", "label": "POST /api/gmo/callback — 3DS SecureTran", "sub": "Regression test Y/A/C"},
+    {"badge": "IMPACT", "ref": "API-083", "label": "GET /api/bookings/transaction/:id — SearchTrade", "sub": "Regression test"},
+    {"badge": "IMPACT", "ref": "API-014", "label": "PUT /api/admin/bookings/cancel/:id", "sub": "Huỷ GMO sau cutover"},
+    {"badge": "IMPACT", "ref": "API-022", "label": "PUT /api/admin/bookings/status", "sub": "Hoàn tiền GMO"},
+    {"badge": "IMPACT", "ref": "API-121", "label": "POST /api/user/bookings/cancel", "sub": "Khách huỷ online"},
+    {"badge": "IMPACT", "ref": "API-016", "label": "PATCH decrease-quantity", "sub": "Đổi số tiền GMO"},
+    {"badge": "IMPACT", "ref": "API-119", "label": "ANY /api/user/bookings/:id", "sub": "Đổi số tiền GMO"},
+    {"badge": "IMPACT", "ref": "API-030", "label": "GET /api/admin/credit-cards/search/:userId", "sub": "SearchCard"},
+    {"badge": "IMPACT", "ref": "API-134", "label": "POST /api/user/credit-card/delete", "sub": "DeleteCard"},
+    {"badge": "IMPACT", "ref": "API-135", "label": "POST /api/user/credit-card/save", "sub": "SaveMember + SaveCard"},
+    {"badge": "IMPACT", "ref": "API-136", "label": "GET /api/user/credit-card/search", "sub": "SearchCard"}
+  ],
+  "screen_groups": [],
+  "screens": {
+    "ds_read": [],
+    "items": []
+  }
+}
