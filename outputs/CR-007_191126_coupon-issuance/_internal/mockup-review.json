@@ -1,0 +1,192 @@
+{
+  "round": 1,
+  "date": "2026-11-20",
+  "overall": "FIX",
+  "pass_count": 0,
+  "fix_count": 4,
+  "rebuild_count": 6,
+  "review_method": "DS-tokens + cr-figma.json cross-reference (no Playwright, no Figma screenshots)",
+  "common_issues": [
+    "crkit:src empty on all 10 screens — V-CR-FIGMA check 15 FAIL",
+    "5 UPD screens not cloned from designer AS-IS frames (IMP-009, IMP-005, IMP-006, IMP-007, IMP-008)",
+    "All WEB-02 mockups use WEB-01 success tokens #edfdf0/#1a7f37 not in WEB-02 tokens.json",
+    "7/10 screens have Vietnamese item titles",
+    "All 10 screens have ax/ay/w/h=null — no pin coordinates for HTML viewer"
+  ],
+  "designer_frames_to_clone": [
+    {"ref": "IMP-009", "baseline": "SC-003", "site": "WEB-01", "node_hint": "16190:446812", "reason": "ScanCard frame in DS tokens.json meta WEB-01"},
+    {"ref": "IMP-005", "baseline": "SC-050", "site": "WEB-02", "node_hint": "14487:209252", "reason": "WEB-02 DS tokens.json meta node"},
+    {"ref": "IMP-006", "baseline": "SC-032", "site": "WEB-02", "node_hint": "14487:209283", "reason": "WEB-02 DS tokens.json meta node"},
+    {"ref": "IMP-007", "baseline": "SC-048", "site": "WEB-02", "node_hint": "14487:209284", "reason": "WEB-02 DS tokens.json meta node"},
+    {"ref": "IMP-008", "baseline": "SC-049", "site": "WEB-02", "node_hint": "14487:209284", "reason": "WEB-02 DS tokens.json meta node"},
+    {"ref": "IMP-001", "baseline": "WEB-01", "site": "WEB-01", "node_hint": "1672:209122", "reason": "Admin list shell — same shell base"},
+    {"ref": "IMP-002", "baseline": "WEB-01", "site": "WEB-01", "node_hint": "2562:361522", "reason": "Admin form shell — same shell base"},
+    {"ref": "IMP-003", "baseline": "WEB-01", "site": "WEB-01", "node_hint": "2100:360305", "reason": "Admin detail shell — same shell base"},
+    {"ref": "IMP-004", "baseline": "WEB-02", "site": "WEB-02", "node_hint": "14487:209284", "reason": "MyPage shell — same shell base"},
+    {"ref": "IMP-010", "baseline": "WEB-02", "site": "WEB-02", "node_hint": "14487:209252", "reason": "WEB-02 modal/overlay reference"}
+  ],
+  "screens": [
+    {
+      "ref": "IMP-001",
+      "label": "クーポン一覧",
+      "badge": "NEW",
+      "site": "WEB-01",
+      "shell": "admin",
+      "scores": {"c1_shell": 1, "c2_component": 1, "c3_color": 2, "c4_content": 0, "c5_annotation": 1},
+      "score": 5,
+      "verdict": "FIX",
+      "fixes": [
+        "Clone admin list shell from WEB-01 node 1672:209122 as base; set crkit:src",
+        "Replace Vietnamese item titles with Japanese: 「クーポン一覧テーブル」「クーポンコード」「操作ボタン」",
+        "Fill ax/ay/w/h coordinates for each item",
+        "Remove Vietnamese from error message: change '(đề xuất)' and 'lý do' placeholders"
+      ]
+    },
+    {
+      "ref": "IMP-002",
+      "label": "クーポン作成/編集",
+      "badge": "NEW",
+      "site": "WEB-01",
+      "shell": "admin",
+      "scores": {"c1_shell": 1, "c2_component": 1, "c3_color": 2, "c4_content": 0, "c5_annotation": 1},
+      "score": 5,
+      "verdict": "FIX",
+      "fixes": [
+        "Clone admin form shell from WEB-01 node 2562:361522; set crkit:src",
+        "Replace Vietnamese item titles with Japanese: 「クーポン名入力」「クーポンコード」「割引設定」",
+        "Fill ax/ay/w/h coordinates",
+        "TextField must have no border (outlined removed) + radius-md 8px per WEB-01 DS"
+      ]
+    },
+    {
+      "ref": "IMP-003",
+      "label": "クーポン詳細+履歴",
+      "badge": "NEW",
+      "site": "WEB-01",
+      "shell": "admin",
+      "scores": {"c1_shell": 1, "c2_component": 1, "c3_color": 2, "c4_content": 0, "c5_annotation": 1},
+      "score": 5,
+      "verdict": "FIX",
+      "fixes": [
+        "Clone admin detail shell from WEB-01 node 2100:360305; set crkit:src",
+        "Replace Vietnamese item titles with Japanese: 「クーポン詳細情報」「登録履歴タブ」「使用履歴タブ」",
+        "Fill ax/ay/w/h coordinates",
+        "Tab labels must be 「登録履歴」「使用履歴」"
+      ]
+    },
+    {
+      "ref": "IMP-009",
+      "label": "バーコード読み取り",
+      "badge": "UPD",
+      "site": "WEB-01",
+      "shell": "admin",
+      "scores": {"c1_shell": 0, "c2_component": 1, "c3_color": 2, "c4_content": 2, "c5_annotation": 0},
+      "score": 5,
+      "verdict": "FIX",
+      "fixes": [
+        "Clone SC-003 designer frame at WEB-01 node 16190:446812 (ScanCard component); set crkit:src",
+        "Annotate only the new coupon badge area with dashed box + '① クーポン適用済みバッジ — NEW'",
+        "Must show AS-IS ScanCard + only annotate the added coupon display section",
+        "Fill ax/ay/w/h for the coupon badge item"
+      ]
+    },
+    {
+      "ref": "IMP-004",
+      "label": "MyPage マイクーポン",
+      "badge": "NEW",
+      "site": "WEB-02",
+      "shell": "mypage",
+      "scores": {"c1_shell": 1, "c2_component": 1, "c3_color": 1, "c4_content": 0, "c5_annotation": 1},
+      "score": 4,
+      "verdict": "REBUILD",
+      "fixes": [
+        "Clone MyPage shell from WEB-02 node 14487:209284 (SC-048 area) as base; set crkit:src",
+        "Replace WEB-01 success colors #edfdf0/#1a7f37 — not in WEB-02 tokens; declare new WEB-02 token or use primary-subtle+primary-text for status badges",
+        "Replace Vietnamese item titles with Japanese: 「クーポンカード」「クーポンコード」「このクーポンで予約するボタン」",
+        "Fill ax/ay/w/h coordinates",
+        "AppHeader WEB-02 must be 2-tier 216px (topbar 64px + nav-band 152px)"
+      ]
+    },
+    {
+      "ref": "IMP-007",
+      "label": "予約履歴",
+      "badge": "UPD",
+      "site": "WEB-02",
+      "shell": "mypage",
+      "scores": {"c1_shell": 0, "c2_component": 1, "c3_color": 1, "c4_content": 2, "c5_annotation": 0},
+      "score": 4,
+      "verdict": "REBUILD",
+      "fixes": [
+        "Clone SC-048 designer frame WEB-02 node 14487:209284; set crkit:src",
+        "Show full AS-IS 予約カード then add only the coupon badge — dashed box + '① クーポン適用済みバッジ — NEW'",
+        "Replace #edfdf0/#1a7f37 with WEB-02 compatible colors",
+        "Fill ax/ay/w/h for coupon badge item"
+      ]
+    },
+    {
+      "ref": "IMP-008",
+      "label": "予約詳細",
+      "badge": "UPD",
+      "site": "WEB-02",
+      "shell": "mypage",
+      "scores": {"c1_shell": 0, "c2_component": 1, "c3_color": 1, "c4_content": 2, "c5_annotation": 0},
+      "score": 4,
+      "verdict": "REBUILD",
+      "fixes": [
+        "Clone SC-049 designer frame WEB-02 node 14487:209284 area; set crkit:src",
+        "Show AS-IS booking detail then add only 「クーポン情報」 section — dashed box + number",
+        "Replace #edfdf0/#1a7f37 with WEB-02 compatible colors",
+        "Fill ax/ay/w/h coordinates"
+      ]
+    },
+    {
+      "ref": "IMP-010",
+      "label": "入場中クーポン適用モーダル",
+      "badge": "NEW",
+      "site": "WEB-02",
+      "shell": "modal",
+      "scores": {"c1_shell": 1, "c2_component": 1, "c3_color": 1, "c4_content": 0, "c5_annotation": 1},
+      "score": 4,
+      "verdict": "REBUILD",
+      "fixes": [
+        "Reference WEB-02 modal overlay style (overlay-scrim rgba(180,180,180,0.2))",
+        "Replace #edfdf0/#1a7f37 with WEB-02 compatible colors",
+        "Replace Vietnamese item titles: 「クーポンコード入力」「現在の見込み金額」「適用確認ボタン」",
+        "Fill ax/ay/w/h coordinates",
+        "Show expected final amount 「現在の見込み金額」 prominently"
+      ]
+    },
+    {
+      "ref": "IMP-005",
+      "label": "オンライン決済",
+      "badge": "UPD",
+      "site": "WEB-02",
+      "shell": "public",
+      "scores": {"c1_shell": 0, "c2_component": 1, "c3_color": 1, "c4_content": 2, "c5_annotation": 0},
+      "score": 4,
+      "verdict": "REBUILD",
+      "fixes": [
+        "Clone SC-050 designer frame WEB-02 node 14487:209252; set crkit:src",
+        "Show AS-IS payment screen then add coupon block — dashed box + '① クーポンブロック NEW', '② 3行金額表示 UPD'",
+        "Replace #edfdf0/#1a7f37 AND #fff9eb/#f4860c (also not in WEB-02 tokens)",
+        "Fill ax/ay/w/h coordinates for all 4 items"
+      ]
+    },
+    {
+      "ref": "IMP-006",
+      "label": "当日予約",
+      "badge": "UPD",
+      "site": "WEB-02",
+      "shell": "public",
+      "scores": {"c1_shell": 0, "c2_component": 1, "c3_color": 1, "c4_content": 2, "c5_annotation": 0},
+      "score": 4,
+      "verdict": "REBUILD",
+      "fixes": [
+        "Clone SC-032 designer frame WEB-02 node 14487:209283; set crkit:src",
+        "Show AS-IS same-day booking screen then add coupon block — same annotation pattern as IMP-005",
+        "Replace #edfdf0/#1a7f37 AND #fff9eb/#f4860c with WEB-02 tokens",
+        "Fill ax/ay/w/h coordinates"
+      ]
+    }
+  ]
+}
