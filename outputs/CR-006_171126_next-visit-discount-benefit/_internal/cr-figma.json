@@ -1,0 +1,3191 @@
+{
+  "title": "次回利用割引特典機能 (Ưu đãi cho lần sử dụng tiếp theo)",
+  "site_order": [
+    "WEB-01",
+    "WEB-02"
+  ],
+  "site_labels": {
+    "WEB-01": "管理画面",
+    "WEB-02": "予約サイト"
+  },
+  "flows": [
+    {
+      "lane": "FL-03",
+      "title": "Thiết lập vé & cấu hình — thêm chiến dịch ưu đãi (lane baseline + màn admin mới)",
+      "note": "CR-006.2 · nhân viên vận hành cấu hình chiến dịch cấp ưu đãi · NG = lỗi đã chốt / đề xuất; chưa chốt → panel EDGE",
+      "nodes": [
+        {
+          "key": "a",
+          "type": "actor",
+          "pos": 1,
+          "badge": "AS-IS",
+          "ref": "FL-03",
+          "label": "Admin / Super Admin",
+          "sub": "không đổi"
+        },
+        {
+          "key": "s",
+          "type": "start",
+          "pos": 2,
+          "badge": "NEW",
+          "ref": "IMP-001",
+          "label": "Mở màn 割引特典キャンペーン",
+          "sub": "/admin/discount-campaigns"
+        },
+        {
+          "key": "f",
+          "type": "step",
+          "pos": 3,
+          "badge": "NEW",
+          "ref": "IMP-002",
+          "label": "Tạo / sửa chiến dịch",
+          "sub": "điều kiện cấp · nội dung ưu đãi · thời hạn"
+        },
+        {
+          "key": "d",
+          "type": "decision",
+          "pos": 4,
+          "badge": "NEW",
+          "ref": "IMP-002",
+          "label": "Điều kiện hợp lệ?",
+          "sub": "validate thời gian · đối tượng · nội dung"
+        },
+        {
+          "key": "e1",
+          "type": "end",
+          "pos": 5,
+          "result": "ok",
+          "badge": "NEW",
+          "ref": "IMP-001",
+          "label": "Chiến dịch được lưu",
+          "sub": "trạng thái Active / Draft"
+        },
+        {
+          "key": "ng",
+          "type": "ng",
+          "pos": 4,
+          "row": 1,
+          "badge": "NEW",
+          "ref": "IMP-002",
+          "label": "Thiếu trường / thời gian sai → inline error",
+          "sub": "「<項目名>を入力してください」(đề xuất, cùng mẫu baseline) · ở lại form"
+        },
+        {
+          "key": "e2",
+          "type": "end",
+          "pos": 5,
+          "row": 1,
+          "result": "fail",
+          "badge": "NEW",
+          "ref": "IMP-002",
+          "label": "Người soạn sửa lại",
+          "sub": "nhập lại điều kiện"
+        },
+        {
+          "key": "e",
+          "type": "edge",
+          "pos": 6,
+          "badge": "NEW",
+          "ref": "IMP-002",
+          "label": "Thời điểm cấp (checkout / check-in / mua hàng) — CQ-001"
+        }
+      ],
+      "edges": [
+        [
+          "a",
+          "s",
+          ""
+        ],
+        [
+          "s",
+          "f",
+          "mở form"
+        ],
+        [
+          "f",
+          "d",
+          "lưu"
+        ],
+        [
+          "d",
+          "e1",
+          "YES"
+        ],
+        [
+          "d",
+          "ng",
+          "NO",
+          "ng"
+        ],
+        [
+          "ng",
+          "e2",
+          "",
+          "ng"
+        ]
+      ]
+    },
+    {
+      "lane": "CR-NEW-1",
+      "title": "Cấp ưu đãi tự động + xem ưu đãi trên MyPage (nghiệp vụ mới)",
+      "note": "CR-006.1 · CR-006.3 · batch cấp sau khi khách hoàn tất lượt khu vui chơi + section MyPage · NG = lỗi đã chốt / đề xuất; chưa chốt → panel EDGE",
+      "nodes": [
+        {
+          "key": "a",
+          "type": "actor",
+          "pos": 1,
+          "badge": "AS-IS",
+          "ref": "FL-09",
+          "label": "Khách hàng (user)",
+          "sub": "đã đăng nhập"
+        },
+        {
+          "key": "s",
+          "type": "start",
+          "pos": 2,
+          "badge": "NEW",
+          "ref": "IMP-015",
+          "label": "Hoàn tất lượt khu vui chơi",
+          "sub": "booking.checked_out_at ≠ null"
+        },
+        {
+          "key": "f",
+          "type": "step",
+          "pos": 3,
+          "badge": "NEW",
+          "ref": "IMP-015",
+          "label": "Batch quét + cấp ưu đãi",
+          "sub": "idempotent · cron 10 phút"
+        },
+        {
+          "key": "d",
+          "type": "decision",
+          "pos": 4,
+          "badge": "NEW",
+          "ref": "IMP-015",
+          "label": "Thuộc chiến dịch Active?",
+          "sub": "đối chiếu discount_campaigns"
+        },
+        {
+          "key": "f2",
+          "type": "step",
+          "pos": 5,
+          "badge": "NEW",
+          "ref": "IMP-005",
+          "label": "Khách xem ưu đãi trên MyPage",
+          "sub": "/user/my-page/discounts"
+        },
+        {
+          "key": "e1",
+          "type": "end",
+          "pos": 6,
+          "result": "ok",
+          "badge": "NEW",
+          "ref": "IMP-005",
+          "label": "Ưu đãi ở trạng thái Available",
+          "sub": "sẵn sàng dùng lần sau"
+        },
+        {
+          "key": "ng",
+          "type": "ng",
+          "pos": 4,
+          "row": 1,
+          "badge": "NEW",
+          "ref": "IMP-015",
+          "label": "Không thuộc chiến dịch → không cấp",
+          "sub": "log + bỏ qua (đề xuất)"
+        },
+        {
+          "key": "e2",
+          "type": "end",
+          "pos": 5,
+          "row": 1,
+          "result": "fail",
+          "badge": "NEW",
+          "ref": "IMP-015",
+          "label": "Khách không nhận ưu đãi lần này",
+          "sub": "giữ trạng thái cũ"
+        },
+        {
+          "key": "e",
+          "type": "edge",
+          "pos": 6,
+          "badge": "NEW",
+          "ref": "IMP-015",
+          "label": "Thời điểm cấp + thời hạn — CQ-001 · CQ-002 · CQ-003"
+        }
+      ],
+      "edges": [
+        [
+          "a",
+          "s",
+          ""
+        ],
+        [
+          "s",
+          "f",
+          "trigger batch"
+        ],
+        [
+          "f",
+          "d",
+          "kiểm"
+        ],
+        [
+          "d",
+          "f2",
+          "YES"
+        ],
+        [
+          "f2",
+          "e1",
+          "xem"
+        ],
+        [
+          "d",
+          "ng",
+          "NO",
+          "ng"
+        ],
+        [
+          "ng",
+          "e2",
+          "",
+          "ng"
+        ]
+      ]
+    },
+    {
+      "lane": "FL-08",
+      "title": "Mua vé & thanh toán — thông báo ưu đãi + áp dụng khi thanh toán (lane baseline)",
+      "note": "CR-006.3 · CR-006.4 · SC-048/049 hiển thị thông báo ưu đãi · SC-050/054 áp dụng + checkbox 「このご予約では使わない」 · NG = lỗi đã chốt / đề xuất; chưa chốt → panel EDGE",
+      "nodes": [
+        {
+          "key": "a",
+          "type": "actor",
+          "pos": 1,
+          "badge": "AS-IS",
+          "ref": "FL-08",
+          "label": "Khách hàng",
+          "sub": "đã đăng nhập"
+        },
+        {
+          "key": "t",
+          "type": "start",
+          "pos": 2,
+          "badge": "UPD",
+          "ref": "SC-048",
+          "label": "Chọn vé (SC-048 / SC-049)",
+          "sub": "+ khối thông báo ưu đãi sẽ nhận"
+        },
+        {
+          "key": "f",
+          "type": "step",
+          "pos": 3,
+          "badge": "UPD",
+          "ref": "SC-050",
+          "label": "Màn thanh toán (SC-050 / SC-054)",
+          "sub": "+ 3 dòng giá · checkbox 「このご予約では使わない」"
+        },
+        {
+          "key": "d",
+          "type": "decision",
+          "pos": 4,
+          "badge": "NEW",
+          "ref": "IMP-012",
+          "label": "Có ưu đãi hợp lệ cho đơn?",
+          "sub": "query user_discounts"
+        },
+        {
+          "key": "f2",
+          "type": "step",
+          "pos": 5,
+          "badge": "UPD",
+          "ref": "SC-050",
+          "label": "Tự tick áp dụng + tính lại tổng",
+          "sub": "Holding + applied_user_discount_id"
+        },
+        {
+          "key": "e1",
+          "type": "end",
+          "pos": 6,
+          "result": "ok",
+          "badge": "UPD",
+          "ref": "SC-050",
+          "label": "Thanh toán xong, ưu đãi → Used",
+          "sub": "callback GMO cập nhật"
+        },
+        {
+          "key": "ng",
+          "type": "ng",
+          "pos": 4,
+          "row": 1,
+          "badge": "NEW",
+          "ref": "IMP-012",
+          "label": "Không có ưu đãi → bố cục 3 dòng ẩn",
+          "sub": "hiển thị 1 dòng tổng tiền như cũ"
+        },
+        {
+          "key": "e2",
+          "type": "end",
+          "pos": 5,
+          "row": 1,
+          "result": "fail",
+          "badge": "UPD",
+          "ref": "SC-050",
+          "label": "Thanh toán như baseline",
+          "sub": "không có khối giảm giá"
+        },
+        {
+          "key": "e",
+          "type": "edge",
+          "pos": 6,
+          "badge": "NEW",
+          "ref": "IMP-008",
+          "label": "Checkbox 「このご予約では使わない」 (phương án ①-A) — CQ-007"
+        }
+      ],
+      "edges": [
+        [
+          "a",
+          "t",
+          ""
+        ],
+        [
+          "t",
+          "f",
+          "tiếp tục"
+        ],
+        [
+          "f",
+          "d",
+          "kiểm"
+        ],
+        [
+          "d",
+          "f2",
+          "YES"
+        ],
+        [
+          "f2",
+          "e1",
+          "thanh toán"
+        ],
+        [
+          "d",
+          "ng",
+          "NO",
+          "ng"
+        ],
+        [
+          "ng",
+          "e2",
+          "",
+          "ng"
+        ]
+      ]
+    },
+    {
+      "lane": "CR-NEW-2",
+      "title": "Liên kết giảm giá sang Smaregi + tổng hợp OBIC (nghiệp vụ mới)",
+      "note": "CR-006.6 · CR-006.7 · gửi 「subtotalDiscountPrice」 + xuất OBIC mã Discount riêng · NG = lỗi đã chốt / đề xuất; chưa chốt → panel EDGE",
+      "nodes": [
+        {
+          "key": "a",
+          "type": "actor",
+          "pos": 1,
+          "badge": "AS-IS",
+          "ref": "FL-08",
+          "label": "Hệ thống (webhook)",
+          "sub": "sau khi callback GMO OK"
+        },
+        {
+          "key": "s",
+          "type": "start",
+          "pos": 2,
+          "badge": "UPD",
+          "ref": "IMP-013",
+          "label": "Gửi 仮販売登録 sang Smaregi",
+          "sub": "payload có booking + giảm giá"
+        },
+        {
+          "key": "f",
+          "type": "step",
+          "pos": 3,
+          "badge": "UPD",
+          "ref": "IMP-013",
+          "label": "Thêm subtotalDiscountPrice + tên ưu đãi",
+          "sub": "remark lưu tên chiến dịch"
+        },
+        {
+          "key": "d",
+          "type": "decision",
+          "pos": 4,
+          "badge": "UPD",
+          "ref": "IMP-013",
+          "label": "Smaregi phản hồi OK?",
+          "sub": "webhook response"
+        },
+        {
+          "key": "f2",
+          "type": "step",
+          "pos": 5,
+          "badge": "UPD",
+          "ref": "IMP-018",
+          "label": "Sinh dòng OBIC Discount",
+          "sub": "kind = Discount · user_discount_usage_id"
+        },
+        {
+          "key": "e1",
+          "type": "end",
+          "pos": 6,
+          "result": "ok",
+          "badge": "UPD",
+          "ref": "IMP-018",
+          "label": "OBIC CSV có dòng giảm giá",
+          "sub": "không chênh lệch với Receipt"
+        },
+        {
+          "key": "ng",
+          "type": "ng",
+          "pos": 4,
+          "row": 1,
+          "badge": "UPD",
+          "ref": "IMP-013",
+          "label": "Smaregi lỗi / gói không hỗ trợ",
+          "sub": "「Smaregi 連携エラー」(đề xuất) + retry"
+        },
+        {
+          "key": "e2",
+          "type": "end",
+          "pos": 5,
+          "row": 1,
+          "result": "fail",
+          "badge": "UPD",
+          "ref": "IMP-013",
+          "label": "Nhân viên quầy nhập giảm giá thủ công",
+          "sub": "fallback hiện tại"
+        },
+        {
+          "key": "e",
+          "type": "edge",
+          "pos": 6,
+          "badge": "NEW",
+          "ref": "IMP-013",
+          "label": "Gói hợp đồng Smaregi + API 仮販売登録 / 取引取得 — CQ-009 · CQ-011"
+        }
+      ],
+      "edges": [
+        [
+          "a",
+          "s",
+          ""
+        ],
+        [
+          "s",
+          "f",
+          "mở rộng payload"
+        ],
+        [
+          "f",
+          "d",
+          "gửi"
+        ],
+        [
+          "d",
+          "f2",
+          "YES"
+        ],
+        [
+          "f2",
+          "e1",
+          "xuất OBIC"
+        ],
+        [
+          "d",
+          "ng",
+          "NO",
+          "ng"
+        ],
+        [
+          "ng",
+          "e2",
+          "",
+          "ng"
+        ]
+      ]
+    },
+    {
+      "lane": "FL-09",
+      "title": "Quản lý trang cá nhân → quản lý trạng thái ưu đãi (lane baseline + màn user mới)",
+      "note": "CR-006.5 · trạng thái 5 tầng Available / Holding / Used / Expired / Cancelled · NG = lỗi đã chốt / đề xuất; chưa chốt → panel EDGE",
+      "nodes": [
+        {
+          "key": "a",
+          "type": "actor",
+          "pos": 1,
+          "badge": "AS-IS",
+          "ref": "FL-09",
+          "label": "Khách hàng",
+          "sub": "đã đăng nhập"
+        },
+        {
+          "key": "s",
+          "type": "start",
+          "pos": 2,
+          "badge": "NEW",
+          "ref": "IMP-005",
+          "label": "Vào MyPage → 割引特典一覧",
+          "sub": "menu MyPage mới"
+        },
+        {
+          "key": "f",
+          "type": "step",
+          "pos": 3,
+          "badge": "NEW",
+          "ref": "IMP-005",
+          "label": "Xem danh sách ưu đãi",
+          "sub": "theo trạng thái · thời hạn · sản phẩm"
+        },
+        {
+          "key": "d",
+          "type": "decision",
+          "pos": 4,
+          "badge": "NEW",
+          "ref": "IMP-016",
+          "label": "Đã hết hạn?",
+          "sub": "batch chạy 00:30 hằng ngày"
+        },
+        {
+          "key": "e1",
+          "type": "end",
+          "pos": 5,
+          "result": "ok",
+          "badge": "NEW",
+          "ref": "IMP-005",
+          "label": "Dùng được cho đặt chỗ sau",
+          "sub": "Available"
+        },
+        {
+          "key": "ng",
+          "type": "ng",
+          "pos": 4,
+          "row": 1,
+          "badge": "NEW",
+          "ref": "IMP-016",
+          "label": "Hết hạn → chuyển Expired",
+          "sub": "「有効期限切れ」(đề xuất) · hiển thị xám"
+        },
+        {
+          "key": "e2",
+          "type": "end",
+          "pos": 5,
+          "row": 1,
+          "result": "fail",
+          "badge": "NEW",
+          "ref": "IMP-016",
+          "label": "Không dùng được nữa",
+          "sub": "giữ trong lịch sử"
+        },
+        {
+          "key": "e",
+          "type": "edge",
+          "pos": 6,
+          "badge": "NEW",
+          "ref": "IMP-014",
+          "label": "Hoàn tiền sau khi đã dùng — xét thủ công? CQ-004 · CQ-005"
+        }
+      ],
+      "edges": [
+        [
+          "a",
+          "s",
+          ""
+        ],
+        [
+          "s",
+          "f",
+          "mở"
+        ],
+        [
+          "f",
+          "d",
+          "kiểm"
+        ],
+        [
+          "d",
+          "e1",
+          "NO"
+        ],
+        [
+          "d",
+          "ng",
+          "YES",
+          "ng"
+        ],
+        [
+          "ng",
+          "e2",
+          "",
+          "ng"
+        ]
+      ]
+    },
+    {
+      "lane": "FL-05",
+      "title": "Vận hành đặt chỗ → chi tiết ưu đãi trên booking + báo cáo chiến dịch (lane baseline)",
+      "note": "CR-006.5 · CR-006.12 · nhân viên xem ưu đãi đã dùng, kiểm tra đối soát · NG = lỗi đã chốt / đề xuất; chưa chốt → panel EDGE",
+      "nodes": [
+        {
+          "key": "a",
+          "type": "actor",
+          "pos": 1,
+          "badge": "AS-IS",
+          "ref": "FL-05",
+          "label": "Admin cửa hàng",
+          "sub": "đã đăng nhập"
+        },
+        {
+          "key": "s",
+          "type": "start",
+          "pos": 2,
+          "badge": "UPD",
+          "ref": "SC-005",
+          "label": "Mở 予約詳細 (SC-005)",
+          "sub": "+ khối ưu đãi đã dùng"
+        },
+        {
+          "key": "f",
+          "type": "step",
+          "pos": 3,
+          "badge": "NEW",
+          "ref": "IMP-003",
+          "label": "Mở 割引特典一覧 theo chiến dịch",
+          "sub": "/admin/discount-campaigns/:id/usages"
+        },
+        {
+          "key": "d",
+          "type": "decision",
+          "pos": 4,
+          "badge": "NEW",
+          "ref": "IMP-038",
+          "label": "Chạy báo cáo hiệu quả?",
+          "sub": "option CR-006.12"
+        },
+        {
+          "key": "f2",
+          "type": "step",
+          "pos": 5,
+          "badge": "NEW",
+          "ref": "IMP-038",
+          "label": "Mở 効果レポート",
+          "sub": "chỉ số khách quay lại, giá trị TB"
+        },
+        {
+          "key": "e1",
+          "type": "end",
+          "pos": 6,
+          "result": "ok",
+          "badge": "NEW",
+          "ref": "IMP-038",
+          "label": "Xuất CSV đánh giá",
+          "sub": "phục vụ ROI"
+        },
+        {
+          "key": "ng",
+          "type": "ng",
+          "pos": 3,
+          "row": 1,
+          "badge": "IMPACT",
+          "ref": "SC-005",
+          "label": "Khác tenant → 403",
+          "sub": "giữ quy tắc baseline"
+        },
+        {
+          "key": "e2",
+          "type": "end",
+          "pos": 5,
+          "row": 1,
+          "result": "fail",
+          "badge": "IMPACT",
+          "ref": "SC-005",
+          "label": "Không thấy dữ liệu đoàn khác",
+          "sub": "security baseline"
+        },
+        {
+          "key": "e",
+          "type": "edge",
+          "pos": 6,
+          "badge": "NEW",
+          "ref": "IMP-003",
+          "label": "Mã OBIC cho ưu đãi — CQ-011"
+        }
+      ],
+      "edges": [
+        [
+          "a",
+          "s",
+          ""
+        ],
+        [
+          "s",
+          "f",
+          "điều hướng"
+        ],
+        [
+          "f",
+          "d",
+          "chọn"
+        ],
+        [
+          "d",
+          "f2",
+          "YES"
+        ],
+        [
+          "f2",
+          "e1",
+          "xuất"
+        ],
+        [
+          "s",
+          "ng",
+          "khác tenant",
+          "ng"
+        ],
+        [
+          "ng",
+          "e2",
+          "",
+          "ng"
+        ]
+      ]
+    }
+  ],
+  "tech": [
+    {
+      "badge": "NEW",
+      "ref": "IMP-019",
+      "label": "discount_campaigns",
+      "sub": "bảng mới — cấu hình chiến dịch"
+    },
+    {
+      "badge": "NEW",
+      "ref": "IMP-020",
+      "label": "discount_campaign_targets",
+      "sub": "bảng mới — cửa hàng + sản phẩm"
+    },
+    {
+      "badge": "NEW",
+      "ref": "IMP-021",
+      "label": "user_discounts",
+      "sub": "bảng mới — ưu đãi khách nhận"
+    },
+    {
+      "badge": "NEW",
+      "ref": "IMP-022",
+      "label": "user_discount_usages",
+      "sub": "bảng mới — lịch sử dùng ưu đãi"
+    },
+    {
+      "badge": "UPD",
+      "ref": "table:bookings",
+      "label": "bookings — + applied_user_discount_id, discount_amount",
+      "sub": "2 cột mới nullable"
+    },
+    {
+      "badge": "UPD",
+      "ref": "table:booking_obic_codes",
+      "label": "booking_obic_codes — enum Discount",
+      "sub": "+ cột user_discount_usage_id"
+    },
+    {
+      "badge": "NEW",
+      "ref": "IMP-010",
+      "label": "Nhóm API admin discount-campaigns (CRUD + usages)",
+      "sub": "4 endpoint"
+    },
+    {
+      "badge": "NEW",
+      "ref": "IMP-011",
+      "label": "API user discounts + estimate",
+      "sub": "2 endpoint"
+    },
+    {
+      "badge": "UPD",
+      "ref": "API-080",
+      "label": "API-080 POST /api/bookings — tính giảm giá",
+      "sub": "3 điểm chạm, API phức tạp"
+    },
+    {
+      "badge": "UPD",
+      "ref": "API-095",
+      "label": "API-095 / API-121 / API-120 — cập nhật trạng thái ưu đãi",
+      "sub": "3 API callback"
+    },
+    {
+      "badge": "NEW",
+      "ref": "IMP-015",
+      "label": "Cron cấp ưu đãi (grant-next-visit-discount)",
+      "sub": "mỗi 10 phút"
+    },
+    {
+      "badge": "NEW",
+      "ref": "IMP-016",
+      "label": "Cron hết hạn ưu đãi (expire-user-discounts)",
+      "sub": "hằng ngày 00:30"
+    },
+    {
+      "badge": "UPD",
+      "ref": "EXT-006",
+      "label": "Smaregi (EXT-006) — subtotalDiscountPrice + with_coupons",
+      "sub": "mở rộng payload + tham số — CQ-009"
+    },
+    {
+      "badge": "IMPACT",
+      "ref": "EXT-002",
+      "label": "AWS SES / Nodemailer — mẫu mail thông báo ưu đãi",
+      "sub": "chờ CQ-012"
+    }
+  ],
+  "screen_groups": [
+    {
+      "id": "G-CR1",
+      "title": "Quản trị chiến dịch ưu đãi (admin)",
+      "site": "WEB-01",
+      "note": "CR-006.2 · CR-006.7 · nhân viên vận hành cấu hình chiến dịch, kiểm tra ưu đãi đã cấp",
+      "nodes": [
+        {
+          "key": "s",
+          "type": "start",
+          "badge": "AS-IS",
+          "ref": "SC-001",
+          "label": "Menu admin (ダッシュボード)"
+        },
+        {
+          "key": "n1",
+          "type": "screen",
+          "badge": "NEW",
+          "ref": "IMP-001",
+          "label": "割引特典キャンペーン一覧",
+          "sub": "/admin/discount-campaigns",
+          "stype": "List",
+          "desc": "Danh sách chiến dịch · filter trạng thái / thời gian"
+        },
+        {
+          "key": "n2",
+          "type": "screen",
+          "badge": "NEW",
+          "ref": "IMP-002",
+          "label": "キャンペーン作成 / 編集",
+          "sub": "/admin/discount-campaigns/create · /update/:id",
+          "stype": "Form",
+          "desc": "Form cấu hình điều kiện · nội dung · thời hạn · giới hạn"
+        },
+        {
+          "key": "n3",
+          "type": "screen",
+          "badge": "NEW",
+          "ref": "IMP-003",
+          "label": "特典付与履歴",
+          "sub": "/admin/discount-campaigns/:id/usages",
+          "stype": "List",
+          "desc": "Danh sách ưu đãi đã cấp theo chiến dịch"
+        },
+        {
+          "key": "d",
+          "type": "decision",
+          "badge": "NEW",
+          "ref": "IMP-002",
+          "label": "Điều kiện hợp lệ?"
+        },
+        {
+          "key": "ng",
+          "type": "ng",
+          "badge": "NEW",
+          "ref": "IMP-002",
+          "label": "Thiếu trường / thời gian sai",
+          "display": "Inline",
+          "parent": "IMP-002",
+          "trigger": "Lưu form thiếu hoặc sai",
+          "msg": "「<項目名>を入力してください」(đề xuất, cùng mẫu baseline)",
+          "next": "ở lại form"
+        },
+        {
+          "key": "p1",
+          "type": "popup",
+          "badge": "NEW",
+          "ref": "IMP-002",
+          "label": "Xác nhận dừng chiến dịch",
+          "display": "Modal",
+          "parent": "IMP-001",
+          "trigger": "Bấm 停止 trên dòng chiến dịch",
+          "msg": "「このキャンペーンを停止します。新規付与は止まります。よろしいですか？」(đề xuất)",
+          "next": "OK → trạng thái Stopped"
+        },
+        {
+          "key": "e1",
+          "type": "edge",
+          "badge": "NEW",
+          "ref": "IMP-002",
+          "label": "Thời điểm cấp + thời hạn tính từ ngày nào — CQ-001 · CQ-002 · CQ-003"
+        }
+      ],
+      "edges": [
+        [
+          "s",
+          "n1",
+          ""
+        ],
+        [
+          "n1",
+          "n2",
+          "新規 / 編集"
+        ],
+        [
+          "n1",
+          "n3",
+          "付与履歴"
+        ],
+        [
+          "n2",
+          "d",
+          "lưu"
+        ],
+        [
+          "d",
+          "n1",
+          "YES"
+        ],
+        [
+          "d",
+          "ng",
+          "NO",
+          "ng"
+        ],
+        [
+          "n1",
+          "p1",
+          "停止"
+        ]
+      ]
+    },
+    {
+      "id": "G-CR2",
+      "title": "Chi tiết đặt chỗ + báo cáo chiến dịch (admin)",
+      "site": "WEB-01",
+      "note": "CR-006.5 · CR-006.12 · nhân viên xem ưu đãi đã dùng trên booking + option báo cáo",
+      "nodes": [
+        {
+          "key": "s",
+          "type": "start",
+          "badge": "AS-IS",
+          "ref": "SC-004",
+          "label": "Vào từ 予約管理"
+        },
+        {
+          "key": "n1",
+          "type": "screen",
+          "badge": "UPD",
+          "ref": "SC-005",
+          "label": "予約詳細",
+          "sub": "+ khối ưu đãi đã dùng",
+          "stype": "Detail",
+          "desc": "予約詳細: + tên chiến dịch · số tiền giảm · trạng thái ưu đãi"
+        },
+        {
+          "key": "n2",
+          "type": "screen",
+          "badge": "NEW",
+          "ref": "IMP-038",
+          "label": "キャンペーン効果レポート (option)",
+          "sub": "/admin/discount-campaigns/:id/report",
+          "stype": "Dashboard",
+          "desc": "Chỉ số khách quay lại · giá trị trung bình · xuất CSV"
+        },
+        {
+          "key": "ng",
+          "type": "ng",
+          "badge": "IMPACT",
+          "ref": "SC-005",
+          "label": "Khác tenant → 403",
+          "display": "Full screen",
+          "parent": "SC-005",
+          "trigger": "Admin cố xem booking khác tenant",
+          "msg": "giữ quy tắc baseline (đã có)",
+          "next": "về 予約管理"
+        },
+        {
+          "key": "e1",
+          "type": "edge",
+          "badge": "NEW",
+          "ref": "IMP-038",
+          "label": "Mã OBIC cho ưu đãi — CQ-011"
+        }
+      ],
+      "edges": [
+        [
+          "s",
+          "n1",
+          ""
+        ],
+        [
+          "n1",
+          "n2",
+          "レポート"
+        ],
+        [
+          "n1",
+          "ng",
+          "khác tenant",
+          "ng"
+        ]
+      ]
+    },
+    {
+      "id": "G-CR3",
+      "title": "Xem ưu đãi trên MyPage (user)",
+      "site": "WEB-02",
+      "note": "CR-006.3 · khách xem ưu đãi đã nhận trên MyPage",
+      "nodes": [
+        {
+          "key": "s",
+          "type": "start",
+          "badge": "AS-IS",
+          "ref": "SC-069",
+          "label": "Vào từ MyPage (SC-069)"
+        },
+        {
+          "key": "n1",
+          "type": "screen",
+          "badge": "NEW",
+          "ref": "IMP-005",
+          "label": "MyPage — 割引特典一覧",
+          "sub": "/user/my-page/discounts",
+          "stype": "List",
+          "desc": "Danh sách ưu đãi của khách · trạng thái · thời hạn · cửa hàng + sản phẩm áp dụng"
+        },
+        {
+          "key": "d",
+          "type": "decision",
+          "badge": "NEW",
+          "ref": "IMP-016",
+          "label": "Ưu đãi còn hạn?"
+        },
+        {
+          "key": "ng",
+          "type": "ng",
+          "badge": "NEW",
+          "ref": "IMP-016",
+          "label": "Hết hạn → chuyển Expired",
+          "display": "Inline",
+          "parent": "IMP-005",
+          "trigger": "expires_at < now AND Available",
+          "msg": "「有効期限切れ」(đề xuất) · tô xám trong danh sách",
+          "next": "ở lại MyPage"
+        },
+        {
+          "key": "e1",
+          "type": "edge",
+          "badge": "NEW",
+          "ref": "IMP-005",
+          "label": "Thông báo email / push khi cấp — CQ-012"
+        }
+      ],
+      "edges": [
+        [
+          "s",
+          "n1",
+          ""
+        ],
+        [
+          "n1",
+          "d",
+          ""
+        ],
+        [
+          "d",
+          "ng",
+          "NO",
+          "ng"
+        ]
+      ]
+    },
+    {
+      "id": "G-CR4",
+      "title": "Mua vé & thanh toán — thông báo + áp dụng ưu đãi (user)",
+      "site": "WEB-02",
+      "note": "CR-006.3 · CR-006.4 · SC-048/049 thông báo ưu đãi; SC-050/054 áp dụng + checkbox 「このご予約では使わない」 (phương án ①-A, CQ-007)",
+      "nodes": [
+        {
+          "key": "s",
+          "type": "start",
+          "badge": "AS-IS",
+          "ref": "SC-067",
+          "label": "Vào từ 店舗詳細 / 料金プラン"
+        },
+        {
+          "key": "n48",
+          "type": "screen",
+          "badge": "UPD",
+          "ref": "SC-048",
+          "label": "フリーパス購入",
+          "sub": "+ khối thông báo ưu đãi sẽ nhận",
+          "stype": "Form",
+          "desc": "Mua free pass: + khối 「ご購入特典のお知らせ」 khi sản phẩm thuộc chiến dịch"
+        },
+        {
+          "key": "n49",
+          "type": "screen",
+          "badge": "UPD",
+          "ref": "SC-049",
+          "label": "回数券購入",
+          "sub": "+ khối thông báo ưu đãi sẽ nhận",
+          "stype": "Form",
+          "desc": "Mua 回数券: + khối 「ご購入特典のお知らせ」"
+        },
+        {
+          "key": "n50",
+          "type": "screen",
+          "badge": "UPD",
+          "ref": "SC-050",
+          "label": "オンライン決済",
+          "sub": "+ 3 dòng giá + checkbox 「このご予約では使わない」",
+          "stype": "Form",
+          "desc": "Màn thanh toán online: giá thông thường / 割引 / 支払金額 + checkbox bỏ áp dụng (phương án ①-A)"
+        },
+        {
+          "key": "n54",
+          "type": "screen",
+          "badge": "UPD",
+          "ref": "SC-054",
+          "label": "当日利用 (SC-054)",
+          "sub": "+ khối hiển thị giảm giá",
+          "stype": "Form",
+          "desc": "Màn dùng trong ngày: khối 3 dòng giá nếu có ưu đãi; thanh toán tại quầy chuyển sang Smaregi"
+        },
+        {
+          "key": "sys",
+          "type": "system",
+          "badge": "UPD",
+          "ref": "EXT-001",
+          "label": "GMO — thanh toán + callback",
+          "sub": "cập nhật trạng thái ưu đãi Holding → Used"
+        },
+        {
+          "key": "p1",
+          "type": "ng",
+          "badge": "UPD",
+          "ref": "EXT-001",
+          "label": "Thanh toán thẻ thất bại",
+          "display": "Full screen",
+          "parent": "SC-050",
+          "trigger": "GMO 3DS / thẻ lỗi",
+          "msg": "決済に失敗しました (dùng màn payment-online-failure hiện có) · ưu đãi khôi phục về Available",
+          "next": "quay lại SC-050"
+        },
+        {
+          "key": "p2",
+          "type": "popup",
+          "badge": "NEW",
+          "ref": "IMP-008",
+          "label": "Xác nhận không dùng ưu đãi lần này",
+          "display": "Modal",
+          "parent": "SC-050",
+          "trigger": "Bấm checkbox 「このご予約では使わない」",
+          "msg": "「今回のご予約には特典を適用しません。特典は次回まで保持されます。よろしいですか？」(đề xuất)",
+          "next": "OK → bỏ áp dụng, giữ ưu đãi"
+        },
+        {
+          "key": "e1",
+          "type": "edge",
+          "badge": "NEW",
+          "ref": "IMP-008",
+          "label": "CQ-007 chưa chốt — phương án ①-A (checkbox) làm mặc định, điều chỉnh sau khi KH xác nhận"
+        }
+      ],
+      "edges": [
+        [
+          "s",
+          "n48",
+          ""
+        ],
+        [
+          "s",
+          "n49",
+          ""
+        ],
+        [
+          "n48",
+          "n50",
+          "thanh toán"
+        ],
+        [
+          "n49",
+          "n50",
+          "thanh toán"
+        ],
+        [
+          "s",
+          "n54",
+          ""
+        ],
+        [
+          "n50",
+          "sys",
+          "決済"
+        ],
+        [
+          "sys",
+          "p1",
+          "NG",
+          "ng"
+        ],
+        [
+          "n50",
+          "p2",
+          "checkbox"
+        ]
+      ]
+    }
+  ],
+  "screens": {
+    "ds_read": [
+      "outputs/ver2_301026_baseline-cr002/06_Design_System/WEB-01/project/README.md",
+      "outputs/ver2_301026_baseline-cr002/06_Design_System/WEB-01/project/tokens.json",
+      "outputs/ver2_301026_baseline-cr002/06_Design_System/WEB-01/project/components/{Button,TextField,Select,Radio,Card,Table,Modal,PageHeader,SideNav,Pagination,Breadcrumb,StatusChip,Tabs,InlineMessage,Toast}/README.md",
+      "outputs/ver2_301026_baseline-cr002/06_Design_System/WEB-02/project/README.md",
+      "outputs/ver2_301026_baseline-cr002/06_Design_System/WEB-02/project/tokens.json",
+      "outputs/ver2_301026_baseline-cr002/06_Design_System/WEB-02/project/components/{Button,TextField,Select,Radio,Checkbox,Card,Badge,PageHeader,SideNav,AppHeader,Pagination,Breadcrumb,SearchBar}/README.md"
+    ],
+    "items": [
+      {
+        "badge": "NEW",
+        "ref": "IMP-001",
+        "site": "WEB-01",
+        "shell": "admin",
+        "label": "[WEB-01] 割引特典キャンペーン一覧",
+        "stype": "List",
+        "flow": "G-CR1",
+        "flow_title": "Quản trị chiến dịch ưu đãi (admin)",
+        "entry": "Menu admin → 割引特典キャンペーン",
+        "purpose": "Nhân viên vận hành xem / lọc / bật-dừng các chiến dịch ưu đãi đã cấu hình (CR-006.2).",
+        "happy": [
+          "Mở menu 「割引特典キャンペーン」 → danh sách các chiến dịch",
+          "Lọc theo trạng thái (Draft / Active / Stopped) + thời gian áp dụng",
+          "Bấm 「新規作成」 → mở màn tạo (IMP-002)",
+          "Bấm 1 dòng → mở màn sửa (IMP-002)",
+          "Bấm 「停止」 → modal xác nhận → chuyển trạng thái Stopped"
+        ],
+        "blocks": [
+          {
+            "t": "breadcrumb",
+            "items": [
+              "ダッシュボード",
+              "割引特典キャンペーン"
+            ],
+            "n": 1
+          },
+          {
+            "t": "title",
+            "text": "割引特典キャンペーン",
+            "n": 2
+          },
+          {
+            "t": "section",
+            "text": "絞り込み",
+            "n": 3
+          },
+          {
+            "t": "select",
+            "label": "ステータス",
+            "placeholder": "すべて",
+            "n": 4
+          },
+          {
+            "t": "field2",
+            "fields": [
+              {
+                "label": "適用期間 (開始)",
+                "placeholder": "YYYY/MM/DD"
+              },
+              {
+                "label": "適用期間 (終了)",
+                "placeholder": "YYYY/MM/DD"
+              }
+            ],
+            "n": 5
+          },
+          {
+            "t": "buttons",
+            "items": [
+              {
+                "text": "検索",
+                "variant": "solid"
+              },
+              {
+                "text": "クリア",
+                "variant": "outline"
+              }
+            ],
+            "n": 6
+          },
+          {
+            "t": "buttons",
+            "items": [
+              {
+                "text": "+ 新規作成",
+                "variant": "solid"
+              }
+            ],
+            "n": 7
+          },
+          {
+            "t": "table",
+            "cols": [
+              "ID",
+              "キャンペーン名",
+              "ステータス",
+              "適用期間",
+              "付与件数",
+              "操作"
+            ],
+            "rows": [
+              [
+                "1",
+                "初夏キャンペーン",
+                "Active",
+                "2026/06/01 - 2026/08/31",
+                "1,000",
+                "編集 / 停止"
+              ],
+              [
+                "2",
+                "秋プロモ",
+                "Draft",
+                "2026/09/01 - 2026/11/30",
+                "0",
+                "編集 / 削除"
+              ]
+            ],
+            "n": 8
+          },
+          {
+            "t": "pagination",
+            "n": 9
+          }
+        ],
+        "errors": [
+          {
+            "trigger": "API-010 trả lỗi 500",
+            "display": "Toast",
+            "msg": "「システムエラーが発生しました。しばらくしてから再度お試しください。」(thật, README WEB-01)"
+          },
+          {
+            "trigger": "Không có chiến dịch nào",
+            "display": "Empty state",
+            "msg": "「キャンペーンがまだ登録されていません。」+ nút 「+ 新規作成」 (đề xuất)"
+          },
+          {
+            "trigger": "Bộ lọc không có kết quả",
+            "display": "Empty state",
+            "msg": "「検索結果はありません。」(đề xuất)"
+          }
+        ],
+        "items": [
+          {
+            "n": 1,
+            "title": "Breadcrumb",
+            "desc": "ダッシュボード › 割引特典キャンペーン",
+            "action": "—",
+            "chg": "NEW"
+          },
+          {
+            "n": 2,
+            "title": "Tiêu đề trang 「割引特典キャンペーン」",
+            "desc": "PageHeader",
+            "action": "—",
+            "chg": "NEW"
+          },
+          {
+            "n": 3,
+            "title": "Tiêu đề nhóm",
+            "desc": "絞り込み",
+            "action": "—",
+            "chg": "NEW"
+          },
+          {
+            "n": 4,
+            "title": "ステータス",
+            "desc": "Select · tuỳ chọn",
+            "action": "TAP → chọn trạng thái → filter",
+            "chg": "NEW"
+          },
+          {
+            "n": 5,
+            "title": "適用期間 開始 / 終了",
+            "desc": "2 textbox ngày cùng hàng",
+            "action": "TAP → date picker",
+            "chg": "NEW"
+          },
+          {
+            "n": 6,
+            "title": "Nút 検索 / クリア",
+            "desc": "chính · phụ",
+            "action": "TAP 検索 → gọi GET /api/admin/discount-campaigns (IMP-010)",
+            "chg": "NEW"
+          },
+          {
+            "n": 7,
+            "title": "Nút + 新規作成",
+            "desc": "chính, phải trên bảng",
+            "action": "TAP → IMP-002 create",
+            "chg": "NEW"
+          },
+          {
+            "n": 8,
+            "title": "Bảng chiến dịch",
+            "desc": "6 cột · 10 dòng / trang",
+            "action": "TAP dòng → IMP-002 update. TAP 停止 → modal xác nhận.",
+            "chg": "NEW"
+          },
+          {
+            "n": 9,
+            "title": "Pagination",
+            "desc": "DS component",
+            "action": "TAP trang → reload",
+            "chg": "NEW"
+          }
+        ]
+      },
+      {
+        "badge": "NEW",
+        "ref": "IMP-002",
+        "site": "WEB-01",
+        "shell": "admin",
+        "label": "[WEB-01] 割引特典キャンペーン 作成 / 編集",
+        "stype": "Form",
+        "flow": "G-CR1",
+        "flow_title": "Quản trị chiến dịch ưu đãi (admin)",
+        "entry": "IMP-001 → + 新規作成 / bấm dòng",
+        "purpose": "Nhân viên cấu hình chiến dịch: điều kiện cấp, nội dung ưu đãi, thời hạn, giới hạn (CR-006.2).",
+        "happy": [
+          "Nhập tên + mô tả + trạng thái (Draft / Active)",
+          "Chọn thời gian áp dụng, nguồn thời gian (ngày mua / ngày đến), thời điểm cấp (sau check-out / check-in / mua hàng)",
+          "Chọn đối tượng: cửa hàng + sản phẩm",
+          "Chọn nội dung ưu đãi: số tiền cố định (mở rộng %)",
+          "Nhập thời hạn sử dụng + số lần cấp tối đa / hội viên",
+          "Lưu → quay lại IMP-001"
+        ],
+        "blocks": [
+          {
+            "t": "breadcrumb",
+            "items": [
+              "ダッシュボード",
+              "割引特典キャンペーン",
+              "新規作成"
+            ],
+            "n": 1
+          },
+          {
+            "t": "title",
+            "text": "キャンペーン新規作成",
+            "n": 2
+          },
+          {
+            "t": "section",
+            "text": "基本情報",
+            "n": 3
+          },
+          {
+            "t": "field",
+            "label": "キャンペーン名",
+            "required": true,
+            "placeholder": "初夏キャンペーン",
+            "n": 4
+          },
+          {
+            "t": "radio",
+            "label": "ステータス",
+            "options": [
+              "Draft",
+              "Active"
+            ],
+            "n": 6
+          },
+          {
+            "t": "section",
+            "text": "付与条件",
+            "n": 7
+          },
+          {
+            "t": "field2",
+            "fields": [
+              {
+                "label": "適用期間 (開始)",
+                "required": true,
+                "placeholder": "YYYY/MM/DD"
+              },
+              {
+                "label": "適用期間 (終了)",
+                "required": true,
+                "placeholder": "YYYY/MM/DD"
+              }
+            ],
+            "n": 8
+          },
+          {
+            "t": "radio",
+            "label": "付与タイミング",
+            "options": [
+              "利用完了後 (推奨)",
+              "チェックイン時",
+              "購入直後"
+            ],
+            "n": 10
+          },
+          {
+            "t": "select",
+            "label": "対象店舗",
+            "placeholder": "店舗を選択",
+            "n": 11
+          },
+          {
+            "t": "select",
+            "label": "対象商品",
+            "placeholder": "商品を選択",
+            "n": 12
+          },
+          {
+            "t": "section",
+            "text": "特典内容",
+            "n": 13
+          },
+          {
+            "t": "field",
+            "label": "割引金額",
+            "required": true,
+            "placeholder": "1,000",
+            "n": 15
+          },
+          {
+            "t": "section",
+            "text": "使用条件",
+            "n": 16
+          },
+          {
+            "t": "field",
+            "label": "有効期限 (日数)",
+            "required": true,
+            "placeholder": "30",
+            "n": 17
+          },
+          {
+            "t": "checkbox",
+            "label": "他の割引と併用可能",
+            "checked": false,
+            "n": 19,
+            "from": "WEB-02"
+          },
+          {
+            "t": "buttons",
+            "items": [
+              {
+                "text": "キャンセル",
+                "variant": "outline"
+              },
+              {
+                "text": "保存",
+                "variant": "solid"
+              }
+            ],
+            "n": 20
+          }
+        ],
+        "errors": [
+          {
+            "trigger": "Bỏ trống field bắt buộc",
+            "display": "Inline",
+            "msg": "「<項目名>を入力してください」(đề xuất, cùng mẫu baseline)"
+          },
+          {
+            "trigger": "Ngày kết thúc < ngày bắt đầu",
+            "display": "Inline",
+            "msg": "「終了日は開始日以降の日付を入力してください」(đề xuất)"
+          },
+          {
+            "trigger": "Chưa chọn cửa hàng / sản phẩm",
+            "display": "Inline",
+            "msg": "「対象店舗 / 対象商品を選択してください」(đề xuất)"
+          },
+          {
+            "trigger": "Lưu lỗi server",
+            "display": "Toast",
+            "msg": "「システムエラーが発生しました。」(thật) · giữ dữ liệu đã nhập"
+          }
+        ],
+        "items": [
+          {
+            "n": 1,
+            "title": "Breadcrumb",
+            "desc": "ダッシュボード › 割引特典キャンペーン › 新規作成",
+            "action": "—",
+            "chg": "NEW"
+          },
+          {
+            "n": 2,
+            "title": "Tiêu đề trang 「キャンペーン新規作成」",
+            "desc": "PageHeader",
+            "action": "—",
+            "chg": "NEW"
+          },
+          {
+            "n": 3,
+            "title": "Tiêu đề nhóm 基本情報",
+            "desc": "Section header",
+            "action": "—",
+            "chg": "NEW"
+          },
+          {
+            "n": 4,
+            "title": "キャンペーン名",
+            "desc": "Textbox · bắt buộc",
+            "action": "—",
+            "chg": "NEW"
+          },
+          {
+            "n": 6,
+            "title": "ステータス",
+            "desc": "Radio · Draft / Active",
+            "action": "—",
+            "chg": "NEW"
+          },
+          {
+            "n": 7,
+            "title": "Tiêu đề nhóm 付与条件",
+            "desc": "Section header",
+            "action": "—",
+            "chg": "NEW"
+          },
+          {
+            "n": 8,
+            "title": "適用期間 開始 / 終了",
+            "desc": "2 textbox ngày · bắt buộc",
+            "action": "TAP → date picker",
+            "chg": "NEW"
+          },
+          {
+            "n": 10,
+            "title": "付与タイミング",
+            "desc": "Radio · 3 lựa chọn",
+            "action": "CQ-001 — mặc định 利用完了後",
+            "chg": "NEW"
+          },
+          {
+            "n": 11,
+            "title": "対象店舗",
+            "desc": "Select",
+            "action": "TAP → chọn tenant",
+            "chg": "NEW"
+          },
+          {
+            "n": 12,
+            "title": "対象商品",
+            "desc": "Select multi",
+            "action": "TAP → chọn tickets thuộc tenant",
+            "chg": "NEW"
+          },
+          {
+            "n": 13,
+            "title": "Tiêu đề nhóm 特典内容",
+            "desc": "Section header",
+            "action": "—",
+            "chg": "NEW"
+          },
+          {
+            "n": 15,
+            "title": "割引金額",
+            "desc": "Textbox số · bắt buộc",
+            "action": "—",
+            "chg": "NEW"
+          },
+          {
+            "n": 16,
+            "title": "Tiêu đề nhóm 使用条件",
+            "desc": "Section header",
+            "action": "—",
+            "chg": "NEW"
+          },
+          {
+            "n": 17,
+            "title": "有効期限 日数",
+            "desc": "Textbox số · bắt buộc",
+            "action": "CQ-003 — tính từ ngày nào",
+            "chg": "NEW"
+          },
+          {
+            "n": 19,
+            "title": "Checkbox 他の割引と併用可能",
+            "desc": "CQ-006",
+            "action": "—",
+            "chg": "NEW"
+          },
+          {
+            "n": 20,
+            "title": "Nút キャンセル / 保存",
+            "desc": "phụ · chính",
+            "action": "TAP 保存 → POST /api/admin/discount-campaigns → IMP-001. Error → inline.",
+            "chg": "NEW"
+          }
+        ]
+      },
+      {
+        "badge": "NEW",
+        "ref": "IMP-003",
+        "site": "WEB-01",
+        "shell": "admin",
+        "label": "[WEB-01] 特典付与履歴",
+        "stype": "List",
+        "flow": "G-CR1",
+        "flow_title": "Quản trị chiến dịch ưu đãi (admin)",
+        "entry": "IMP-001 → bấm dòng → tab 付与履歴",
+        "purpose": "Nhân viên vận hành kiểm tra danh sách ưu đãi đã cấp cho chiến dịch cụ thể để đối soát, trả lời khách (CR-006.7).",
+        "happy": [
+          "Mở tab 付与履歴 của 1 chiến dịch",
+          "Lọc theo trạng thái (Available / Holding / Used / Expired / Cancelled)",
+          "Xem danh sách: khách, trạng thái, booking dùng, ngày dùng, số tiền giảm",
+          "Xuất CSV để đối soát với kế toán"
+        ],
+        "blocks": [
+          {
+            "t": "breadcrumb",
+            "items": [
+              "ダッシュボード",
+              "割引特典キャンペーン",
+              "初夏キャンペーン",
+              "付与履歴"
+            ],
+            "n": 1
+          },
+          {
+            "t": "title",
+            "text": "特典付与履歴 — 初夏キャンペーン",
+            "n": 2
+          },
+          {
+            "t": "section",
+            "text": "絞り込み",
+            "n": 3
+          },
+          {
+            "t": "select",
+            "label": "ステータス",
+            "placeholder": "すべて",
+            "n": 4
+          },
+          {
+            "t": "field",
+            "label": "会員名 / メール",
+            "placeholder": "検索キーワード",
+            "n": 5
+          },
+          {
+            "t": "buttons",
+            "items": [
+              {
+                "text": "検索",
+                "variant": "solid"
+              },
+              {
+                "text": "CSV出力",
+                "variant": "outline"
+              }
+            ],
+            "n": 6
+          },
+          {
+            "t": "table",
+            "cols": [
+              "ID",
+              "会員",
+              "ステータス",
+              "予約ID",
+              "利用日",
+              "割引額",
+              "付与日"
+            ],
+            "rows": [
+              [
+                "1",
+                "山田太郎",
+                "Used",
+                "BK-00123",
+                "2026/06/15",
+                "¥1,000",
+                "2026/06/01"
+              ],
+              [
+                "2",
+                "Nguyễn Văn A",
+                "Available",
+                "-",
+                "-",
+                "¥1,000",
+                "2026/06/02"
+              ]
+            ],
+            "n": 7
+          },
+          {
+            "t": "pagination",
+            "n": 8
+          }
+        ],
+        "errors": [
+          {
+            "trigger": "Chiến dịch chưa cấp ưu đãi nào",
+            "display": "Empty state",
+            "msg": "「付与実績がまだありません。」(đề xuất)"
+          },
+          {
+            "trigger": "API lỗi",
+            "display": "Toast",
+            "msg": "「システムエラーが発生しました。」(thật)"
+          }
+        ],
+        "items": [
+          {
+            "n": 1,
+            "title": "Breadcrumb",
+            "desc": "ダッシュボード › 割引特典キャンペーン › 初夏キャンペーン › 付与履歴",
+            "action": "—",
+            "chg": "NEW"
+          },
+          {
+            "n": 2,
+            "title": "Tiêu đề trang",
+            "desc": "PageHeader + tên chiến dịch",
+            "action": "—",
+            "chg": "NEW"
+          },
+          {
+            "n": 3,
+            "title": "Tiêu đề nhóm 絞り込み",
+            "desc": "Section header",
+            "action": "—",
+            "chg": "NEW"
+          },
+          {
+            "n": 4,
+            "title": "ステータス",
+            "desc": "Select · 5 giá trị",
+            "action": "TAP → filter",
+            "chg": "NEW"
+          },
+          {
+            "n": 5,
+            "title": "会員名 / メール",
+            "desc": "Textbox tìm kiếm",
+            "action": "—",
+            "chg": "NEW"
+          },
+          {
+            "n": 6,
+            "title": "Nút 検索 / CSV出力",
+            "desc": "chính · phụ",
+            "action": "TAP CSV → tải file",
+            "chg": "NEW"
+          },
+          {
+            "n": 7,
+            "title": "Bảng付与履歴",
+            "desc": "7 cột · 50 dòng / trang",
+            "action": "—",
+            "chg": "NEW"
+          },
+          {
+            "n": 8,
+            "title": "Pagination",
+            "desc": "DS component",
+            "action": "—",
+            "chg": "NEW"
+          }
+        ]
+      },
+      {
+        "badge": "UPD",
+        "ref": "IMP-004",
+        "base": "SC-005",
+        "site": "WEB-01",
+        "shell": "admin",
+        "label": "[WEB-01] 予約詳細 (SC-005) — + khối ưu đãi đã dùng",
+        "stype": "Detail",
+        "flow": "G-CR2",
+        "flow_title": "Chi tiết đặt chỗ + báo cáo chiến dịch (admin)",
+        "entry": "予約管理 (SC-004) → bấm 1 dòng",
+        "purpose": "Nhân viên quầy xem ưu đãi khách đã dùng cho booking, phục vụ trả lời khi có tranh chấp / hoàn tiền (CR-006.5).",
+        "changes": "Thêm khối 「適用済み割引特典」 ngay dưới khối thanh toán. Khi booking có hoàn tiền / thay đổi, hiển thị trạng thái ưu đãi (返却済 / 使用済 / 手動確認要).",
+        "happy": [
+          "Mở màn chi tiết booking",
+          "Nếu booking có applied_user_discount_id → hiển thị khối 適用済み割引特典 (tên chiến dịch · số tiền giảm · trạng thái)",
+          "Khi hoàn tiền / thay đổi: trạng thái cập nhật theo CQ-004 / CQ-005"
+        ],
+        "blocks": [
+          {
+            "t": "breadcrumb",
+            "items": [
+              "ダッシュボード",
+              "予約管理",
+              "予約詳細"
+            ],
+            "n": 1
+          },
+          {
+            "t": "title",
+            "text": "予約詳細 — BK-00123",
+            "n": 2
+          },
+          {
+            "t": "section",
+            "text": "基本情報",
+            "n": 3
+          },
+          {
+            "t": "text",
+            "text": "予約日: 2026/06/15 · 店舗: TOKIWAGI園 · 商品: フリーパス × 3",
+            "n": 4
+          },
+          {
+            "t": "section",
+            "text": "お支払い情報",
+            "n": 5
+          },
+          {
+            "t": "text",
+            "text": "通常料金 ¥3,000 · 支払金額 ¥2,000 · 支払方法: クレジットカード (GMO)",
+            "n": 6
+          },
+          {
+            "t": "section",
+            "text": "適用済み割引特典",
+            "n": 7,
+            "chg": "NEW"
+          },
+          {
+            "t": "card",
+            "title": "初夏キャンペーン",
+            "desc": "割引額 ¥1,000 · ステータス: 使用済 (2026/06/15) · 付与元予約: BK-00098",
+            "n": 8,
+            "chg": "NEW"
+          },
+          {
+            "t": "section",
+            "text": "変更・キャンセル履歴",
+            "n": 9
+          },
+          {
+            "t": "text",
+            "text": "変更なし",
+            "n": 10
+          }
+        ],
+        "errors": [
+          {
+            "trigger": "Booking không có ưu đãi",
+            "display": "Empty state",
+            "msg": "khối 適用済み割引特典 ẩn (đề xuất)"
+          },
+          {
+            "trigger": "Ưu đãi cần xét thủ công sau hoàn tiền",
+            "display": "Banner",
+            "msg": "「返金後の特典扱いについて手動確認が必要です」(đề xuất) — CQ-005"
+          },
+          {
+            "trigger": "Admin khác tenant → 403",
+            "display": "Full screen",
+            "msg": "giữ hành vi baseline"
+          }
+        ],
+        "items": [
+          {
+            "n": 1,
+            "title": "Breadcrumb",
+            "desc": "ダッシュボード › 予約管理 › 予約詳細",
+            "action": "—",
+            "chg": "AS-IS"
+          },
+          {
+            "n": 2,
+            "title": "Tiêu đề 予約詳細 + mã booking",
+            "desc": "PageHeader",
+            "action": "—",
+            "chg": "AS-IS"
+          },
+          {
+            "n": 3,
+            "title": "Nhóm 基本情報",
+            "desc": "Section header + nội dung booking",
+            "action": "—",
+            "chg": "AS-IS"
+          },
+          {
+            "n": 4,
+            "title": "Thông tin booking",
+            "desc": "Ngày · cửa hàng · sản phẩm · số người",
+            "action": "—",
+            "chg": "AS-IS"
+          },
+          {
+            "n": 5,
+            "title": "Nhóm お支払い情報",
+            "desc": "Section header",
+            "action": "—",
+            "chg": "AS-IS"
+          },
+          {
+            "n": 6,
+            "title": "Thông tin thanh toán",
+            "desc": "通常料金 / 支払金額 / 支払方法",
+            "action": "—",
+            "chg": "AS-IS"
+          },
+          {
+            "n": 7,
+            "title": "Nhóm 適用済み割引特典 (mới)",
+            "desc": "Section header mới",
+            "action": "—",
+            "chg": "NEW"
+          },
+          {
+            "n": 8,
+            "title": "Card ưu đãi đã dùng",
+            "desc": "Tên chiến dịch · số tiền · trạng thái · ngày dùng · booking nguồn",
+            "action": "TAP → link về 特典付与履歴 (IMP-003)",
+            "chg": "NEW"
+          },
+          {
+            "n": 9,
+            "title": "Nhóm 変更・キャンセル履歴",
+            "desc": "Section header",
+            "action": "—",
+            "chg": "AS-IS"
+          },
+          {
+            "n": 10,
+            "title": "Lịch sử thay đổi",
+            "desc": "Danh sách sự kiện",
+            "action": "—",
+            "chg": "AS-IS"
+          }
+        ]
+      },
+      {
+        "badge": "NEW",
+        "ref": "IMP-005",
+        "site": "WEB-02",
+        "shell": "mypage",
+        "label": "[WEB-02] MyPage — 割引特典一覧",
+        "stype": "List",
+        "flow": "G-CR3",
+        "flow_title": "Xem ưu đãi trên MyPage (user)",
+        "entry": "MyPage (SC-069) → menu 「割引特典」",
+        "purpose": "Khách xem danh sách ưu đãi đã nhận, biết dùng được khi nào, cho cửa hàng + sản phẩm nào (CR-006.3).",
+        "happy": [
+          "Vào MyPage → bấm menu 「割引特典」",
+          "Xem danh sách ưu đãi theo trạng thái (Available / Holding / Used / Expired)",
+          "Bấm 1 card → xem chi tiết chiến dịch (sản phẩm, cửa hàng, điều kiện)"
+        ],
+        "blocks": [
+          {
+            "t": "breadcrumb",
+            "items": [
+              "マイページ",
+              "割引特典"
+            ],
+            "n": 1
+          },
+          {
+            "t": "title",
+            "text": "割引特典一覧",
+            "n": 2
+          },
+          {
+            "t": "text",
+            "text": "ご利用いただける特典を一覧でご確認いただけます。",
+            "n": 3
+          },
+          {
+            "t": "select",
+            "label": "ステータス",
+            "placeholder": "すべて",
+            "n": 4
+          },
+          {
+            "t": "card",
+            "title": "初夏キャンペーン",
+            "desc": "割引額 ¥1,000 · 有効期限: 2026/09/30 · 対象店舗: TOKIWAGI園 · 対象商品: フリーパス · ステータス: 利用可能",
+            "n": 5
+          },
+          {
+            "t": "card",
+            "title": "秋プロモ",
+            "desc": "割引額 ¥500 · 有効期限: 2026/12/31 · ステータス: 予約BK-00234 で保持中",
+            "n": 6
+          },
+          {
+            "t": "card",
+            "title": "初春キャンペーン",
+            "desc": "割引額 ¥800 · 2026/04/10 利用済 · 予約BK-00050",
+            "n": 7
+          }
+        ],
+        "errors": [
+          {
+            "trigger": "Khách chưa có ưu đãi nào",
+            "display": "Empty state",
+            "msg": "「ご利用いただける特典はまだありません。」(đề xuất)"
+          },
+          {
+            "trigger": "Ưu đãi hết hạn",
+            "display": "Inline",
+            "msg": "trạng thái card = 「有効期限切れ」(đề xuất), card tô xám"
+          },
+          {
+            "trigger": "API lỗi",
+            "display": "Toast",
+            "msg": "「システムエラーが発生しました。」(thật)"
+          }
+        ],
+        "items": [
+          {
+            "n": 1,
+            "title": "Breadcrumb",
+            "desc": "マイページ › 割引特典",
+            "action": "—",
+            "chg": "NEW"
+          },
+          {
+            "n": 2,
+            "title": "Tiêu đề 「割引特典一覧」",
+            "desc": "PageHeader",
+            "action": "—",
+            "chg": "NEW"
+          },
+          {
+            "n": 3,
+            "title": "Câu hướng dẫn",
+            "desc": "Mô tả ngắn cho user",
+            "action": "—",
+            "chg": "NEW"
+          },
+          {
+            "n": 4,
+            "title": "Select ステータス",
+            "desc": "5 giá trị + すべて",
+            "action": "TAP → filter",
+            "chg": "NEW"
+          },
+          {
+            "n": 5,
+            "title": "Card ưu đãi 利用可能",
+            "desc": "Badge Available xanh · số tiền · thời hạn · cửa hàng + sản phẩm",
+            "action": "TAP → chi tiết chiến dịch",
+            "chg": "NEW"
+          },
+          {
+            "n": 6,
+            "title": "Card ưu đãi 保持中",
+            "desc": "Badge Holding cam · số tiền · booking đang giữ",
+            "action": "TAP → chi tiết + booking liên quan",
+            "chg": "NEW"
+          },
+          {
+            "n": 7,
+            "title": "Card ưu đãi 利用済",
+            "desc": "Badge Used xám · số tiền · booking đã dùng",
+            "action": "TAP → chi tiết",
+            "chg": "NEW"
+          }
+        ],
+        "sidebar_width": 265,
+        "sidebar_note": "baseline値 265px (Figma WEB-02 SideNav観察値) — デザイナー確認待ち"
+      },
+      {
+        "badge": "UPD",
+        "ref": "IMP-006",
+        "base": "SC-048",
+        "site": "WEB-02",
+        "shell": "public",
+        "label": "[WEB-02] フリーパス購入 (SC-048) — + khối thông báo ưu đãi",
+        "stype": "Form",
+        "flow": "G-CR4",
+        "flow_title": "Mua vé & thanh toán — thông báo + áp dụng ưu đãi (user)",
+        "entry": "店舗詳細 / 料金プラン → bấm フリーパス",
+        "purpose": "Trước khi khách mua, hiển thị thông báo ưu đãi sẽ nhận nếu sản phẩm thuộc chiến dịch (CR-006.3).",
+        "changes": "Thêm khối 「ご購入特典のお知らせ」 giữa phần mô tả sản phẩm và phần chọn ngày. Tự ẩn nếu sản phẩm không thuộc chiến dịch Active.",
+        "happy": [
+          "Mở màn フリーパス購入",
+          "Hệ thống kiểm tra sản phẩm có thuộc chiến dịch Active không",
+          "Có → hiển thị khối 「ご購入特典のお知らせ」 với nội dung + thời hạn + cửa hàng áp dụng",
+          "Khách tiếp tục chọn ngày → thanh toán (IMP-008)"
+        ],
+        "blocks": [
+          {
+            "t": "breadcrumb",
+            "items": [
+              "ホーム",
+              "店舗",
+              "フリーパス購入"
+            ],
+            "n": 1
+          },
+          {
+            "t": "title",
+            "text": "フリーパス購入",
+            "n": 2
+          },
+          {
+            "t": "section",
+            "text": "商品内容",
+            "n": 3
+          },
+          {
+            "t": "text",
+            "text": "フリーパス (大人) ¥3,000 · 1日間有効",
+            "n": 4
+          },
+          {
+            "t": "section",
+            "text": "ご購入特典のお知らせ",
+            "n": 5,
+            "chg": "NEW"
+          },
+          {
+            "t": "card",
+            "title": "初夏キャンペーン対象商品です",
+            "desc": "ご購入いただくと「次回利用時 ¥1,000 OFF」の特典を受け取れます。有効期限: ご購入日から30日間 · 対象店舗: TOKIWAGI園 · 対象商品: フリーパス全種",
+            "n": 6,
+            "chg": "NEW"
+          },
+          {
+            "t": "section",
+            "text": "ご利用日・ご人数",
+            "n": 7
+          },
+          {
+            "t": "field",
+            "label": "ご利用日",
+            "required": true,
+            "placeholder": "YYYY/MM/DD",
+            "n": 8
+          },
+          {
+            "t": "field2",
+            "fields": [
+              {
+                "label": "大人",
+                "placeholder": "1"
+              },
+              {
+                "label": "子ども",
+                "placeholder": "0"
+              }
+            ],
+            "n": 9
+          },
+          {
+            "t": "buttons",
+            "items": [
+              {
+                "text": "お支払いへ進む",
+                "variant": "solid"
+              }
+            ],
+            "n": 10
+          }
+        ],
+        "errors": [
+          {
+            "trigger": "Sản phẩm không thuộc chiến dịch",
+            "display": "Inline",
+            "msg": "khối 「ご購入特典のお知らせ」 ẩn (đề xuất)"
+          },
+          {
+            "trigger": "Chưa chọn ngày",
+            "display": "Inline",
+            "msg": "「ご利用日を選択してください」(đề xuất, cùng mẫu baseline)"
+          },
+          {
+            "trigger": "Hết chỗ",
+            "display": "Inline",
+            "msg": "「完売しましたので、他の日程を選択してください」(thật)"
+          }
+        ],
+        "items": [
+          {
+            "n": 1,
+            "title": "Breadcrumb",
+            "desc": "ホーム › 店舗 › フリーパス購入",
+            "action": "—",
+            "chg": "AS-IS"
+          },
+          {
+            "n": 2,
+            "title": "Tiêu đề フリーパス購入",
+            "desc": "PageHeader",
+            "action": "—",
+            "chg": "AS-IS"
+          },
+          {
+            "n": 3,
+            "title": "Nhóm 商品内容",
+            "desc": "Section header",
+            "action": "—",
+            "chg": "AS-IS"
+          },
+          {
+            "n": 4,
+            "title": "Mô tả sản phẩm + giá",
+            "desc": "フリーパス (大人) ¥3,000",
+            "action": "—",
+            "chg": "AS-IS"
+          },
+          {
+            "n": 5,
+            "title": "Nhóm ご購入特典のお知らせ (mới)",
+            "desc": "Section header mới, highlight",
+            "action": "—",
+            "chg": "NEW"
+          },
+          {
+            "n": 6,
+            "title": "Card thông báo ưu đãi",
+            "desc": "Tên chiến dịch · nội dung ưu đãi · thời hạn · cửa hàng + sản phẩm áp dụng",
+            "action": "TAP → chi tiết chiến dịch (option)",
+            "chg": "NEW"
+          },
+          {
+            "n": 7,
+            "title": "Nhóm ご利用日・ご人数",
+            "desc": "Section header",
+            "action": "—",
+            "chg": "AS-IS"
+          },
+          {
+            "n": 8,
+            "title": "ご利用日",
+            "desc": "Textbox ngày · bắt buộc",
+            "action": "TAP → date picker",
+            "chg": "AS-IS"
+          },
+          {
+            "n": 9,
+            "title": "大人 / 子ども",
+            "desc": "2 ô số cùng hàng",
+            "action": "—",
+            "chg": "AS-IS"
+          },
+          {
+            "n": 10,
+            "title": "Nút お支払いへ進む",
+            "desc": "chính",
+            "action": "TAP → SC-050 (IMP-008). Error nếu thiếu → inline.",
+            "chg": "AS-IS"
+          }
+        ]
+      },
+      {
+        "badge": "UPD",
+        "ref": "IMP-007",
+        "base": "SC-049",
+        "site": "WEB-02",
+        "shell": "public",
+        "label": "[WEB-02] 回数券購入 (SC-049) — + khối thông báo ưu đãi",
+        "stype": "Form",
+        "flow": "G-CR4",
+        "flow_title": "Mua vé & thanh toán — thông báo + áp dụng ưu đãi (user)",
+        "entry": "店舗詳細 / 料金プラン → bấm 回数券",
+        "purpose": "Giống IMP-006 nhưng cho vé 回数券 — hiển thị ưu đãi sẽ nhận (CR-006.3).",
+        "changes": "Thêm khối 「ご購入特典のお知らせ」 giống IMP-006.",
+        "happy": [
+          "Mở màn 回数券購入",
+          "Nếu sản phẩm thuộc chiến dịch Active → hiển thị khối thông báo",
+          "Khách chọn số lần + thanh toán (IMP-008)"
+        ],
+        "blocks": [
+          {
+            "t": "breadcrumb",
+            "items": [
+              "ホーム",
+              "店舗",
+              "回数券購入"
+            ],
+            "n": 1
+          },
+          {
+            "t": "title",
+            "text": "回数券購入",
+            "n": 2
+          },
+          {
+            "t": "section",
+            "text": "商品内容",
+            "n": 3
+          },
+          {
+            "t": "text",
+            "text": "回数券 10回分 ¥25,000 · 6ヶ月有効",
+            "n": 4
+          },
+          {
+            "t": "section",
+            "text": "ご購入特典のお知らせ",
+            "n": 5,
+            "chg": "NEW"
+          },
+          {
+            "t": "card",
+            "title": "初夏キャンペーン対象商品です",
+            "desc": "ご購入いただくと「次回利用時 ¥1,000 OFF」の特典を受け取れます。有効期限: 30日間 · 対象店舗: TOKIWAGI園",
+            "n": 6,
+            "chg": "NEW"
+          },
+          {
+            "t": "section",
+            "text": "枚数・ご購入者",
+            "n": 7
+          },
+          {
+            "t": "select",
+            "label": "枚数プラン",
+            "placeholder": "10回券 / 20回券",
+            "n": 8
+          },
+          {
+            "t": "buttons",
+            "items": [
+              {
+                "text": "お支払いへ進む",
+                "variant": "solid"
+              }
+            ],
+            "n": 9
+          }
+        ],
+        "errors": [
+          {
+            "trigger": "Sản phẩm không thuộc chiến dịch",
+            "display": "Inline",
+            "msg": "khối ưu đãi ẩn (đề xuất)"
+          },
+          {
+            "trigger": "Chưa chọn plan",
+            "display": "Inline",
+            "msg": "「枚数プランを選択してください」(đề xuất)"
+          },
+          {
+            "trigger": "Lỗi server",
+            "display": "Toast",
+            "msg": "「システムエラーが発生しました。」(thật)"
+          }
+        ],
+        "items": [
+          {
+            "n": 1,
+            "title": "Breadcrumb",
+            "desc": "ホーム › 店舗 › 回数券購入",
+            "action": "—",
+            "chg": "AS-IS"
+          },
+          {
+            "n": 2,
+            "title": "Tiêu đề 回数券購入",
+            "desc": "PageHeader",
+            "action": "—",
+            "chg": "AS-IS"
+          },
+          {
+            "n": 3,
+            "title": "Nhóm 商品内容",
+            "desc": "Section header",
+            "action": "—",
+            "chg": "AS-IS"
+          },
+          {
+            "n": 4,
+            "title": "Mô tả sản phẩm + giá",
+            "desc": "回数券 10回分 ¥25,000",
+            "action": "—",
+            "chg": "AS-IS"
+          },
+          {
+            "n": 5,
+            "title": "Nhóm ご購入特典のお知らせ (mới)",
+            "desc": "Section header mới",
+            "action": "—",
+            "chg": "NEW"
+          },
+          {
+            "n": 6,
+            "title": "Card thông báo ưu đãi",
+            "desc": "Tên chiến dịch · nội dung · thời hạn · cửa hàng áp dụng",
+            "action": "TAP → chi tiết (option)",
+            "chg": "NEW"
+          },
+          {
+            "n": 7,
+            "title": "Nhóm 枚数・ご購入者",
+            "desc": "Section header",
+            "action": "—",
+            "chg": "AS-IS"
+          },
+          {
+            "n": 8,
+            "title": "枚数プラン",
+            "desc": "Select · 10 / 20 lần",
+            "action": "—",
+            "chg": "AS-IS"
+          },
+          {
+            "n": 9,
+            "title": "Nút お支払いへ進む",
+            "desc": "chính",
+            "action": "TAP → SC-050 (IMP-008)",
+            "chg": "AS-IS"
+          }
+        ]
+      },
+      {
+        "badge": "UPD",
+        "ref": "IMP-008",
+        "base": "SC-050",
+        "site": "WEB-02",
+        "shell": "public",
+        "label": "[WEB-02] オンライン決済 (SC-050) — + 3 dòng giá + checkbox 「このご予約では使わない」",
+        "stype": "Form",
+        "flow": "G-CR4",
+        "flow_title": "Mua vé & thanh toán — thông báo + áp dụng ưu đãi (user)",
+        "entry": "SC-048 / SC-049 → お支払いへ進む",
+        "purpose": "Tự động áp dụng ưu đãi hợp lệ, hiển thị 3 dòng giá rõ ràng, cho khách chọn không dùng lần này (CR-006.4). CQ-007 chưa chốt — dùng phương án ①-A (có nút ẩn) làm mặc định cho mockup; điều chỉnh sau khi KH xác nhận.",
+        "changes": "Màn hiện có 1 dòng tổng tiền. Thay bằng khối 3 dòng: 通常料金 · 割引額 · 支払金額. Thêm checkbox 「このご予約では使わない」 (phương án ①-A) nếu khách có ưu đãi hợp lệ.",
+        "pattern": "①-A",
+        "happy": [
+          "Hệ thống gọi GET /api/user/bookings/estimate-discount (IMP-011)",
+          "Có ưu đãi hợp lệ → tự tick 適用, hiển thị khối 3 dòng + checkbox 使わない",
+          "Khách bấm 決済する → chuyển sang GMO",
+          "Callback OK → user_discount: Holding → Used, booking.applied_user_discount_id = ưu đãi"
+        ],
+        "blocks": [
+          {
+            "t": "breadcrumb",
+            "items": [
+              "ホーム",
+              "店舗",
+              "お支払い"
+            ],
+            "n": 1
+          },
+          {
+            "t": "title",
+            "text": "オンライン決済",
+            "n": 2
+          },
+          {
+            "t": "steps",
+            "items": [
+              "予約内容",
+              "お支払い",
+              "完了"
+            ],
+            "active": 1,
+            "n": 3
+          },
+          {
+            "t": "section",
+            "text": "ご予約内容",
+            "n": 4
+          },
+          {
+            "t": "text",
+            "text": "フリーパス (大人) × 3 · 2026/07/15 · TOKIWAGI園",
+            "n": 5
+          },
+          {
+            "t": "section",
+            "text": "お支払い金額",
+            "n": 6,
+            "chg": "UPD"
+          },
+          {
+            "t": "text",
+            "text": "通常料金                    ¥3,000",
+            "n": 7,
+            "chg": "UPD"
+          },
+          {
+            "t": "text",
+            "text": "割引額 (初夏キャンペーン)   -¥1,000",
+            "n": 8,
+            "chg": "NEW"
+          },
+          {
+            "t": "text",
+            "text": "お支払い金額                 ¥2,000",
+            "n": 9,
+            "chg": "UPD"
+          },
+          {
+            "t": "checkbox",
+            "label": "このご予約では特典を使わない (次回まで保持します)",
+            "checked": false,
+            "n": 10,
+            "chg": "NEW"
+          },
+          {
+            "t": "section",
+            "text": "お支払い方法",
+            "n": 11
+          },
+          {
+            "t": "radio",
+            "label": "お支払い方法",
+            "options": [
+              "クレジットカード"
+            ],
+            "n": 12
+          },
+          {
+            "t": "field",
+            "label": "カード番号",
+            "required": true,
+            "placeholder": "0000 0000 0000 0000",
+            "n": 13
+          },
+          {
+            "t": "buttons",
+            "items": [
+              {
+                "text": "戻る",
+                "variant": "outline"
+              },
+              {
+                "text": "決済する",
+                "variant": "solid"
+              }
+            ],
+            "n": 14
+          }
+        ],
+        "errors": [
+          {
+            "trigger": "Không có ưu đãi hợp lệ",
+            "display": "Inline",
+            "msg": "ẩn dòng 割引額 + checkbox, chỉ hiển thị 通常料金 = お支払い金額 (đề xuất)"
+          },
+          {
+            "trigger": "Tick checkbox 使わない",
+            "display": "Modal",
+            "msg": "「今回のご予約には特典を適用しません。特典は次回まで保持されます。よろしいですか？」(đề xuất) · OK → bỏ áp dụng, cập nhật lại 3 dòng"
+          },
+          {
+            "trigger": "Thanh toán thẻ thất bại (GMO 3DS)",
+            "display": "Full screen",
+            "msg": "決済に失敗しました (dùng màn payment-online-failure hiện có) · ưu đãi khôi phục Holding → Available"
+          },
+          {
+            "trigger": "Ưu đãi hết hạn trong lúc thao tác",
+            "display": "Toast",
+            "msg": "「特典の有効期限が切れました。もう一度ご確認ください。」(đề xuất)"
+          }
+        ],
+        "items": [
+          {
+            "n": 1,
+            "title": "Breadcrumb",
+            "desc": "ホーム › 店舗 › お支払い",
+            "action": "—",
+            "chg": "AS-IS"
+          },
+          {
+            "n": 2,
+            "title": "Tiêu đề オンライン決済",
+            "desc": "PageHeader",
+            "action": "—",
+            "chg": "AS-IS"
+          },
+          {
+            "n": 3,
+            "title": "Steps 予約内容 / お支払い / 完了",
+            "desc": "Progress indicator",
+            "action": "—",
+            "chg": "AS-IS"
+          },
+          {
+            "n": 4,
+            "title": "Nhóm ご予約内容",
+            "desc": "Section header",
+            "action": "—",
+            "chg": "AS-IS"
+          },
+          {
+            "n": 5,
+            "title": "Thông tin đặt chỗ",
+            "desc": "Sản phẩm · ngày · cửa hàng",
+            "action": "—",
+            "chg": "AS-IS"
+          },
+          {
+            "n": 6,
+            "title": "Nhóm お支払い金額 (sửa)",
+            "desc": "Section header, bố cục đổi thành 3 dòng",
+            "action": "—",
+            "chg": "UPD"
+          },
+          {
+            "n": 7,
+            "title": "Dòng 通常料金",
+            "desc": "Số tiền gốc",
+            "action": "—",
+            "chg": "UPD"
+          },
+          {
+            "n": 8,
+            "title": "Dòng 割引額 (mới)",
+            "desc": "Số tiền giảm · ghi tên chiến dịch",
+            "action": "—",
+            "chg": "NEW"
+          },
+          {
+            "n": 9,
+            "title": "Dòng お支払い金額",
+            "desc": "Số tiền khách phải trả",
+            "action": "—",
+            "chg": "UPD"
+          },
+          {
+            "n": 10,
+            "title": "Checkbox 使わない (mới)",
+            "desc": "Bỏ áp dụng ưu đãi lần này — phương án ①-A, CQ-007",
+            "action": "TAP → modal xác nhận → nếu OK: ưu đãi về Available, 3 dòng ẩn dòng 割引額",
+            "chg": "NEW"
+          },
+          {
+            "n": 11,
+            "title": "Nhóm お支払い方法",
+            "desc": "Section header",
+            "action": "—",
+            "chg": "AS-IS"
+          },
+          {
+            "n": 12,
+            "title": "Radio クレジットカード",
+            "desc": "1 lựa chọn",
+            "action": "—",
+            "chg": "AS-IS"
+          },
+          {
+            "n": 13,
+            "title": "カード番号",
+            "desc": "Textbox · bắt buộc",
+            "action": "—",
+            "chg": "AS-IS"
+          },
+          {
+            "n": 14,
+            "title": "Nút 戻る / 決済する",
+            "desc": "phụ · chính",
+            "action": "TAP 決済する → GMO 3DS. Callback OK → ưu đãi Used, booking paid.",
+            "chg": "AS-IS"
+          }
+        ]
+      },
+      {
+        "badge": "UPD",
+        "ref": "IMP-009",
+        "base": "SC-054",
+        "site": "WEB-02",
+        "shell": "public",
+        "label": "[WEB-02] 当日利用 (SC-054) — + khối hiển thị giảm giá",
+        "stype": "Form",
+        "flow": "G-CR4",
+        "flow_title": "Mua vé & thanh toán — thông báo + áp dụng ưu đãi (user)",
+        "entry": "店舗詳細 / 当日利用 URL",
+        "purpose": "Khách dùng vé trong ngày, thanh toán tại quầy — nếu có ưu đãi, hiển thị khối giảm giá; giảm giá được chuyển sang Smaregi (IMP-013). CQ-007 chưa chốt — dùng phương án ①-A cho mockup.",
+        "changes": "Thêm khối 3 dòng giá giống IMP-008 nếu khách có ưu đãi hợp lệ. Thanh toán tại quầy → khối giảm giá gửi kèm 仮販売登録 Smaregi (subtotalDiscountPrice).",
+        "pattern": "①-A",
+        "happy": [
+          "Khách mở màn 当日利用, chọn 店舗 + sản phẩm",
+          "Hệ thống kiểm tra ưu đãi hợp lệ → hiển thị khối 3 dòng giá",
+          "Khách xác nhận → hệ thống gửi 仮販売登録 Smaregi với subtotalDiscountPrice",
+          "Nhân viên quầy quét mã, POS hiển thị đúng số tiền đã giảm"
+        ],
+        "blocks": [
+          {
+            "t": "breadcrumb",
+            "items": [
+              "ホーム",
+              "店舗",
+              "当日利用"
+            ],
+            "n": 1
+          },
+          {
+            "t": "title",
+            "text": "当日利用",
+            "n": 2
+          },
+          {
+            "t": "section",
+            "text": "ご利用内容",
+            "n": 3
+          },
+          {
+            "t": "text",
+            "text": "フリーパス (大人) × 2 · 2026/07/15 · TOKIWAGI園",
+            "n": 4
+          },
+          {
+            "t": "section",
+            "text": "お支払い金額",
+            "n": 5,
+            "chg": "UPD"
+          },
+          {
+            "t": "text",
+            "text": "通常料金                    ¥2,000",
+            "n": 6,
+            "chg": "UPD"
+          },
+          {
+            "t": "text",
+            "text": "割引額 (初夏キャンペーン)     -¥1,000",
+            "n": 7,
+            "chg": "NEW"
+          },
+          {
+            "t": "text",
+            "text": "お支払い金額                 ¥1,000",
+            "n": 8,
+            "chg": "UPD"
+          },
+          {
+            "t": "checkbox",
+            "label": "今回は特典を使わない",
+            "checked": false,
+            "n": 9,
+            "chg": "NEW"
+          },
+          {
+            "t": "text",
+            "text": "※ お支払いは店頭にて承ります。",
+            "n": 10
+          },
+          {
+            "t": "buttons",
+            "items": [
+              {
+                "text": "QRコードを表示",
+                "variant": "solid"
+              }
+            ],
+            "n": 11
+          }
+        ],
+        "errors": [
+          {
+            "trigger": "Không có ưu đãi hợp lệ",
+            "display": "Inline",
+            "msg": "ẩn dòng 割引額 + checkbox, chỉ hiển thị 通常料金 = お支払い金額 (đề xuất)"
+          },
+          {
+            "trigger": "Smaregi gửi lỗi",
+            "display": "Toast",
+            "msg": "「POS連携エラー。店舗スタッフにお問い合わせください」(đề xuất) — fallback nhân viên nhập giảm giá thủ công"
+          },
+          {
+            "trigger": "Mã QR đã hết hạn / đã dùng",
+            "display": "Full screen",
+            "msg": "「このQRコードは利用できません」(đề xuất)"
+          }
+        ],
+        "items": [
+          {
+            "n": 1,
+            "title": "Breadcrumb",
+            "desc": "ホーム › 店舗 › 当日利用",
+            "action": "—",
+            "chg": "AS-IS"
+          },
+          {
+            "n": 2,
+            "title": "Tiêu đề 当日利用",
+            "desc": "PageHeader",
+            "action": "—",
+            "chg": "AS-IS"
+          },
+          {
+            "n": 3,
+            "title": "Nhóm ご利用内容",
+            "desc": "Section header",
+            "action": "—",
+            "chg": "AS-IS"
+          },
+          {
+            "n": 4,
+            "title": "Thông tin sử dụng",
+            "desc": "Sản phẩm · ngày · cửa hàng",
+            "action": "—",
+            "chg": "AS-IS"
+          },
+          {
+            "n": 5,
+            "title": "Nhóm お支払い金額 (sửa)",
+            "desc": "Section header, bố cục đổi 3 dòng",
+            "action": "—",
+            "chg": "UPD"
+          },
+          {
+            "n": 6,
+            "title": "Dòng 通常料金",
+            "desc": "Số tiền gốc",
+            "action": "—",
+            "chg": "UPD"
+          },
+          {
+            "n": 7,
+            "title": "Dòng 割引額 (mới)",
+            "desc": "Số tiền giảm · tên chiến dịch",
+            "action": "—",
+            "chg": "NEW"
+          },
+          {
+            "n": 8,
+            "title": "Dòng お支払い金額",
+            "desc": "Số tiền khách trả tại quầy",
+            "action": "—",
+            "chg": "UPD"
+          },
+          {
+            "n": 9,
+            "title": "Checkbox 使わない (mới)",
+            "desc": "Bỏ áp dụng lần này — phương án ①-A, CQ-007",
+            "action": "TAP → modal xác nhận → bỏ áp dụng",
+            "chg": "NEW"
+          },
+          {
+            "n": 10,
+            "title": "Ghi chú お支払いは店頭",
+            "desc": "Text ghi chú",
+            "action": "—",
+            "chg": "AS-IS"
+          },
+          {
+            "n": 11,
+            "title": "Nút QRコードを表示",
+            "desc": "chính",
+            "action": "TAP → sinh QR · gửi 仮販売登録 Smaregi (subtotalDiscountPrice)",
+            "chg": "AS-IS"
+          }
+        ]
+      },
+      {
+        "badge": "NEW",
+        "ref": "IMP-038",
+        "site": "WEB-01",
+        "shell": "admin",
+        "label": "[WEB-01] キャンペーン効果レポート (option)",
+        "stype": "Dashboard",
+        "flow": "G-CR2",
+        "flow_title": "Chi tiết đặt chỗ + báo cáo chiến dịch (admin)",
+        "entry": "IMP-001 → bấm 1 dòng → tab レポート",
+        "purpose": "Đánh giá hiệu quả chiến dịch: tỉ lệ khách lần đầu quay lại, giá trị trung bình, tổng chi tiêu tích luỹ. Phương án mở rộng (CR-006.12, option).",
+        "happy": [
+          "Mở tab レポート của 1 chiến dịch",
+          "Xem 4 chỉ số: 新規→再訪率 · 累計来場数 · 平均単価 · 累計売上",
+          "Chọn range ngày để lọc",
+          "Xuất CSV"
+        ],
+        "blocks": [
+          {
+            "t": "breadcrumb",
+            "items": [
+              "ダッシュボード",
+              "割引特典キャンペーン",
+              "初夏キャンペーン",
+              "レポート"
+            ],
+            "n": 1
+          },
+          {
+            "t": "title",
+            "text": "キャンペーン効果レポート — 初夏キャンペーン",
+            "n": 2
+          },
+          {
+            "t": "field2",
+            "fields": [
+              {
+                "label": "集計期間 (開始)",
+                "placeholder": "YYYY/MM/DD"
+              },
+              {
+                "label": "集計期間 (終了)",
+                "placeholder": "YYYY/MM/DD"
+              }
+            ],
+            "n": 3
+          },
+          {
+            "t": "buttons",
+            "items": [
+              {
+                "text": "更新",
+                "variant": "solid"
+              },
+              {
+                "text": "CSV出力",
+                "variant": "outline"
+              }
+            ],
+            "n": 4
+          },
+          {
+            "t": "section",
+            "text": "主要指標",
+            "n": 5
+          },
+          {
+            "t": "card",
+            "title": "新規→再訪率",
+            "desc": "42.5 %",
+            "n": 6
+          },
+          {
+            "t": "card",
+            "title": "累計来場数",
+            "desc": "1,245 回",
+            "n": 7
+          },
+          {
+            "t": "card",
+            "title": "平均単価",
+            "desc": "¥2,350",
+            "n": 8
+          },
+          {
+            "t": "card",
+            "title": "累計売上",
+            "desc": "¥2,926,250",
+            "n": 9
+          },
+          {
+            "t": "section",
+            "text": "月別推移",
+            "n": 10
+          },
+          {
+            "t": "text",
+            "text": "(グラフ — 準備中)",
+            "n": 11
+          }
+        ],
+        "errors": [
+          {
+            "trigger": "Chưa có dữ liệu trong range",
+            "display": "Empty state",
+            "msg": "「選択期間のデータがありません。」(đề xuất)"
+          },
+          {
+            "trigger": "Batch tính chỉ số chưa chạy",
+            "display": "Banner",
+            "msg": "「最新データは翌日反映されます。」(đề xuất)"
+          },
+          {
+            "trigger": "API lỗi",
+            "display": "Toast",
+            "msg": "「システムエラーが発生しました。」(thật)"
+          }
+        ],
+        "items": [
+          {
+            "n": 1,
+            "title": "Breadcrumb",
+            "desc": "ダッシュボード › 割引特典キャンペーン › 初夏キャンペーン › レポート",
+            "action": "—",
+            "chg": "NEW"
+          },
+          {
+            "n": 2,
+            "title": "Tiêu đề レポート + tên chiến dịch",
+            "desc": "PageHeader",
+            "action": "—",
+            "chg": "NEW"
+          },
+          {
+            "n": 3,
+            "title": "Range 集計期間",
+            "desc": "2 textbox ngày",
+            "action": "TAP → date picker",
+            "chg": "NEW"
+          },
+          {
+            "n": 4,
+            "title": "Nút 更新 / CSV出力",
+            "desc": "chính · phụ",
+            "action": "TAP CSV → tải file",
+            "chg": "NEW"
+          },
+          {
+            "n": 5,
+            "title": "Nhóm 主要指標",
+            "desc": "Section header",
+            "action": "—",
+            "chg": "NEW"
+          },
+          {
+            "n": 6,
+            "title": "Card 新規→再訪率",
+            "desc": "Chỉ số %",
+            "action": "—",
+            "chg": "NEW"
+          },
+          {
+            "n": 7,
+            "title": "Card 累計来場数",
+            "desc": "Số lần đến tích luỹ",
+            "action": "—",
+            "chg": "NEW"
+          },
+          {
+            "n": 8,
+            "title": "Card 平均単価",
+            "desc": "Giá trị trung bình / lượt",
+            "action": "—",
+            "chg": "NEW"
+          },
+          {
+            "n": 9,
+            "title": "Card 累計売上",
+            "desc": "Tổng chi tiêu tích luỹ",
+            "action": "—",
+            "chg": "NEW"
+          },
+          {
+            "n": 10,
+            "title": "Nhóm 月別推移",
+            "desc": "Section header biểu đồ",
+            "action": "—",
+            "chg": "NEW"
+          },
+          {
+            "n": 11,
+            "title": "Biểu đồ placeholder",
+            "desc": "Chart (準備中)",
+            "action": "—",
+            "chg": "NEW"
+          }
+        ]
+      }
+    ]
+  }
+}

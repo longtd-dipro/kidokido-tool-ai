@@ -9,7 +9,7 @@
     "received_date": "2026-11-10",
     "requested_by": "Khách hàng TOKIWAGI (qua PM) — chuyển tiếp thông báo của Công ty GMO Payment Gateway (mail 2026-11-05 và bản gửi lại 2026-11-09)",
     "overall_risk": "High",
-    "recommendation": "Yêu cầu thay đổi này nằm ở tầng hạ tầng. KHÔNG đổi màn, KHÔNG đổi cơ sở dữ liệu, KHÔNG đổi nghiệp vụ. Phạm vi gồm 4 việc: (1) cài thêm chứng chỉ gốc GlobalSign R46 vào kho chứng chỉ tin cậy của máy chủ (giữ song song chứng chỉ R3 cũ cho đến năm 2028 — khi GMO khoá hẳn R3); (2) xác nhận mã gọi HTTPS trong Node.js đang gửi cờ tên miền SNI (Node.js mặc định có bật, cần rà xem có chỗ nào tự tắt không); (3) xác nhận phiên bản Node.js trên máy production hỗ trợ bộ mã hoá mới của GMO Cloud; (4) nếu hạ tầng có chặn chiều đi ra theo danh sách IP thì bổ sung dải IP mới của GMO Cloud. Sau đó chạy lại các luồng thanh toán và lưu thẻ để xác nhận không phát sinh lỗi. Chia 2 giai đoạn: Giai đoạn 1 = chuẩn bị, rà soát trước ngày 2026-11-18 (môi trường test). Giai đoạn 2 = chạy lại các luồng cũ sau khi GMO chuyển môi trường test (2026-11-18) rồi tới production (2026-12-07 cho màn quản trị). Việc thông báo nhân sự TOKIWAGI về ngày chuyển sớm của màn quản trị GMO (2026-11-18 / 2026-12-07) là trách nhiệm phía khách, không phát sinh công số lập trình phía Dipro."
+    "recommendation": "Yêu cầu thay đổi này nằm ở tầng hạ tầng. KHÔNG đổi màn, KHÔNG đổi cơ sở dữ liệu, KHÔNG đổi nghiệp vụ. Phạm vi gồm 3 việc (đã bỏ bước kiểm Node runtime vì Dipro xác nhận production đang chạy Node.js v20 LTS — có đủ bộ mã hoá mới + chứng chỉ R46): (1) cài thêm chứng chỉ gốc GlobalSign R46 vào kho chứng chỉ tin cậy của máy chủ (giữ R3 song song đến năm 2028); (2) rà mã gọi HTTPS trong Node.js để chắc chắn đang gửi cờ tên miền SNI (Node.js mặc định có bật, chỉ cần rà không có chỗ nào tuỳ biến tắt); (3) nếu hạ tầng chặn chiều đi ra theo IP cụ thể thì bổ sung dải IP mới của GMO Cloud. Sau đó chạy lại các luồng thanh toán và lưu thẻ. Chia 2 giai đoạn: Giai đoạn 1 = chuẩn bị + rà soát trước 2026-11-18 (môi trường test). Giai đoạn 2 = chạy lại các luồng cũ sau khi GMO chuyển môi trường test rồi tới production (2026-12-07 cho màn quản trị)."
   },
   "justification": [
     {
@@ -36,14 +36,14 @@
       "item": "CR-005.2"
     },
     {
-      "request": "Xác nhận bộ mã hoá kết nối (TLS Cipher Suite) của Node.js trên máy production tương thích với bộ mã hoá mới của GMO Cloud (TLS 1.2 trở lên, các thuật toán mới).",
+      "request": "Xác nhận bộ mã hoá kết nối TLS tương thích với GMO Cloud (production đang chạy Node.js v20 LTS — có đủ TLS 1.3 + bộ mã hoá mới).",
       "baseline_ref": "EXT-001",
-      "baseline_quote": "Chưa có tài liệu khai phiên bản Node.js của máy production. Baseline ver2 chỉ ghi \"Node.js (Next.js 13)\" trong Overview — chưa đủ chi tiết. Cần Tech Lead hoặc SRE chạy lệnh trên máy production để lấy đúng phiên bản.",
+      "baseline_quote": "Dipro xác nhận production đang chạy Node.js v20 LTS, đi kèm OpenSSL 3.0+. Node.js v20 đã có đủ các thuật toán mã hoá mới (ECDHE-ECDSA-AES128-GCM-SHA256, TLS 1.3 AES-128-GCM-SHA256). Không cần nâng runtime.",
       "criteria": [
         "C2"
       ],
-      "why": "Mail GMO ngày 2026-11-09 mục 1 nêu đổi bộ mã hoá kết nối. Node.js từ phiên bản 16 trở lên đã có đủ các thuật toán mã hoá mới mà GMO Cloud yêu cầu. Nếu máy production đang chạy Node.js dưới 14 (đã hết hỗ trợ) hoặc thư viện mã hoá OpenSSL cũ hơn 1.1.1 thì có khả năng không khớp với GMO Cloud → kết nối mã hoá thất bại. Cần xác nhận Node.js từ 16 trở lên và OpenSSL từ 1.1.1 trở lên.",
-      "not_feedback": "Không có lỗi hiện tại — hệ thống đang chạy ổn với bộ mã hoá cũ.",
+      "why": "Mail GMO ngày 2026-11-09 mục 1 nêu đổi bộ mã hoá kết nối. Với Node.js v20 đang chạy, điều kiện tương thích đã đủ — chỉ cần chạy kiểm thử hồi quy sau khi GMO chuyển để xác nhận thực tế.",
+      "not_feedback": "Không có lỗi hiện tại. Với Node v20, đây chỉ là xác nhận trên giấy tờ.",
       "item": "CR-005.3"
     },
     {
@@ -98,18 +98,18 @@
   "questions": [
     {
       "id": "CQ-001",
-      "question": "Phiên bản Node.js đang chạy trên môi trường production là bao nhiêu? Phiên bản OpenSSL đi kèm là bao nhiêu? (Ảnh hưởng hạng mục CR-005.3 — nếu Node.js dưới 16 hoặc OpenSSL dưới 1.1.1 thì có rủi ro không khớp bộ mã hoá của GMO Cloud, buộc phải nâng Node.js trước ngày GMO chuyển.)",
-      "why": "Mail GMO yêu cầu bộ mã hoá mới. Baseline chỉ ghi \"Node.js (Next.js 13)\" không có chi tiết. Nhờ Tech Lead hoặc SRE chạy lệnh trên máy production và báo lại phiên bản chính xác.",
+      "question": "[ĐÃ ĐÓNG — Dipro xác nhận production đang chạy Node.js v20 LTS, OpenSSL 3.0+] — câu hỏi ban đầu: phiên bản Node.js / OpenSSL trên production?",
+      "why": "Đã có đáp án: Node.js v20 LTS. OpenSSL 3.0+ đi kèm có đủ TLS 1.3 và bộ cipher mới GMO yêu cầu. Không cần nâng runtime, không phát sinh CR phụ.",
       "axis": "System",
       "owner": "Tech Lead Dipro / SRE phía khách",
-      "status": "Open"
+      "status": "Closed"
     },
     {
       "id": "CQ-002",
       "question": "Hạ tầng production của KidoKido có đang chặn chiều đi ra theo danh sách IP cụ thể không (ví dụ quy tắc chiều đi ra của Security Group AWS, danh sách kiểm soát mạng NACL, firewall nội bộ)? Nếu có — bên Dipro hay bên SRE của khách sẽ phụ trách cập nhật IP mới của GMO Cloud? (Ảnh hưởng hạng mục CR-005.4.)",
       "why": "Nếu đang chặn chiều đi ra theo IP mà không bổ sung IP mới trước ngày GMO chuyển → mọi giao tiếp tới GMO sẽ bị chặn, thanh toán fail. Baseline chưa có tài liệu hạ tầng nên không biết chắc. File đính kèm trong mail GMO có danh sách IP mới của Cloud.",
       "axis": "System",
-      "owner": "SRE phía khách TOKIWAGI",
+      "owner": "SRE Dipro",
       "status": "Open"
     },
     {
@@ -125,7 +125,7 @@
       "question": "Có dùng proxy HTTP hoặc điểm gỡ mã hoá trung gian (ví dụ AWS ALB, proxy Nginx chuyển tiếp, proxy nội bộ công ty) nằm giữa máy chủ KidoKido và host GMO không? Nếu có — proxy đó có chuyển tiếp cờ tên miền SNI không?",
       "why": "Cờ tên miền SNI chỉ hoạt động nếu không có điểm gỡ mã hoá trung gian cắt mất. Proxy cũ có thể cắt mất SNI. Cần SRE của khách xác nhận.",
       "axis": "System",
-      "owner": "SRE phía khách TOKIWAGI",
+      "owner": "SRE Dipro",
       "status": "Open"
     },
     {
@@ -133,7 +133,7 @@
       "question": "Môi trường test của KidoKido có tài khoản GMO test riêng (mã cửa hàng, mật khẩu cửa hàng) không, và tài khoản test đó có được GMO chuyển lên Cloud cùng lịch (2026-11-18) không? Hay vẫn dùng chung mã cửa hàng với môi trường thật?",
       "why": "Để chạy kiểm thử hồi quy sau khi GMO chuyển môi trường test ngày 2026-11-18, phải có tài khoản test đã được chuyển lên Cloud. Nếu môi trường test đang dùng chung mã cửa hàng với môi trường thật → không thể test trước khi môi trường thật chuyển.",
       "axis": "ThirdParty",
-      "owner": "Khách hàng TOKIWAGI",
+      "owner": "SRE Dipro",
       "status": "Open"
     },
     {
@@ -162,7 +162,7 @@
       "qty": 1,
       "md_note": "Đa số hệ điều hành hiện đại và Node.js từ phiên bản 16 trở lên đã có sẵn chứng chỉ R46 trong bộ mặc định (phát hành từ khoảng năm 2020). Rủi ro cao chỉ khi production đang chạy Node.js cũ hoặc image hệ điều hành cũ — xem câu hỏi CQ-001.",
       "evidence": "File inputs/cr/GMO_thay_doi/request.md, dòng 61 đến 92 (nội dung đổi chứng chỉ gốc từ R3 sang R46) và dòng 263 đến 278 (lịch chuyển).",
-      "question": "CQ-001,CQ-006",
+      "question": "CQ-006",
       "cr_item": "CR-005.1",
       "option": false
     },
@@ -191,18 +191,18 @@
       "axis": "System",
       "change_type": "IMPACT",
       "baseline_ref": "EXT-001",
-      "item": "Phiên bản Node.js và OpenSSL trên production — xác nhận hỗ trợ bộ mã hoá mới của GMO Cloud",
-      "change": "Bên SRE chạy lệnh trên máy production để lấy phiên bản Node.js và OpenSSL. Yêu cầu Node.js từ 16 trở lên (LTS) với OpenSSL từ 1.1.1 trở lên. Nếu thấp hơn → đề xuất nâng Node.js LTS (nằm ngoài phạm vi CR này, cần ticket riêng).",
-      "why_change": "Hạng mục CR-005.3 — GMO Cloud yêu cầu bộ mã hoá mới. OpenSSL từ 1.1.1 trở lên đã có đủ các thuật toán mới.",
-      "impact_on_current": "Nếu phiên bản quá cũ thì bước bắt tay mã hoá sẽ thất bại với mọi thuật toán mới.",
-      "conflict": "To verify",
-      "conflict_detail": "Chờ CQ-001 trả lời để biết có cần nâng Node.js hay không.",
-      "risk": "Medium",
+      "item": "Node.js runtime production (đã xác nhận v20 LTS) — ghi nhận trong tài liệu baseline",
+      "change": "Ghi nhận production đang chạy Node.js v20 LTS, OpenSSL 3.0+. Không có việc thực hiện — đã đủ điều kiện tương thích GMO Cloud.",
+      "why_change": "CR-005.3 — xác nhận trên giấy tờ, không cần làm gì thêm.",
+      "impact_on_current": "Không. Runtime đã đủ.",
+      "conflict": "No",
+      "conflict_detail": "",
+      "risk": "Low",
       "rate_code": "SYS-IMP",
       "qty": 1,
-      "md_note": "KidoKido đang chạy Next.js 13 — thường đi với Node.js 16, 18 hoặc 20. Khả năng cao đã đủ. Nhưng phải xác nhận chính xác trên máy production.",
+      "md_note": "0 công số lập trình — chỉ là tài liệu.",
       "evidence": "File inputs/cr/GMO_thay_doi/request.md, dòng 295 đến 311 (nội dung đổi bộ mã hoá).",
-      "question": "CQ-001",
+      "question": "",
       "cr_item": "CR-005.3",
       "option": false
     },

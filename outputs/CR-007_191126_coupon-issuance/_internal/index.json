@@ -1,0 +1,79 @@
+{
+  "system": "KidoKido",
+  "version": "CR-007",
+  "version_folder": "CR-007_191126_coupon-issuance",
+  "version_type": "CR",
+  "date": "19/11/2026",
+  "baseline_ref": "ver2_301026_baseline-cr002",
+  "outputs": [
+    {
+      "id": "CR",
+      "name": "CR Impact",
+      "content": "Công số + ảnh hưởng 6 trục (Summary · Estimation · Screen · API · Database · Figma · Q&A)",
+      "files": [
+        "CR-007_Impact.xlsx"
+      ],
+      "count": "41 hạng mục · 45.25 MD (đơn giá DRAFT)",
+      "exists": true,
+      "count_value": 41,
+      "md": 45.25,
+      "rates_status": "DRAFT",
+      "gate": "—",
+      "gate_detail": "chua chay gate",
+      "status": "warn",
+      "reason": "chưa chạy gate",
+      "status_text": "⚠️ chưa chạy gate"
+    },
+    {
+      "id": "EST",
+      "name": "見積書",
+      "content": "Báo giá theo chức năng — tiếng Nhật gửi KH (詳細見積書 + 前提条件・留意事項); bản vi nội bộ nếu có",
+      "files": [
+        "CR-007_見積書.xlsx"
+      ],
+      "count": "22 dòng chức năng · Step 1 94.32 · Step 2 0 人日 · 0 phương án (đơn giá DRAFT)",
+      "exists": true,
+      "gate": "—",
+      "gate_detail": "chua chay gate",
+      "status": "warn",
+      "reason": "chưa chạy gate",
+      "status_text": "⚠️ chưa chạy gate"
+    },
+    {
+      "id": "O4",
+      "name": "Figma (CR)",
+      "content": "Màn/luồng thay đổi theo CR (badge NEW/UPD/DEL/IMPACT/AS-IS)",
+      "files": [
+        "04_Figma/figma-links.md"
+      ],
+      "count": "0 link",
+      "exists": true,
+      "count_value": 0,
+      "gate": "FAIL",
+      "gate_detail": "v-cr-figma.md 7/14 PASS",
+      "status": "fail",
+      "reason": "gate FAIL",
+      "status_text": "❌ gate FAIL"
+    },
+    {
+      "id": "IN",
+      "name": "Input CR",
+      "content": "Tài liệu yêu cầu gốc",
+      "files": [
+        "input/"
+      ],
+      "count": "0 file",
+      "exists": false,
+      "count_value": 0,
+      "gate": "—",
+      "gate_detail": "chua chay gate",
+      "status": "fail",
+      "reason": "chưa có file",
+      "status_text": "❌ chưa có file"
+    }
+  ],
+  "inventory_gate": {
+    "gate": "—",
+    "detail": "chua chay gate"
+  }
+}

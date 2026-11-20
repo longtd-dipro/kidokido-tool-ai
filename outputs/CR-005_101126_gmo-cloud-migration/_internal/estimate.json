@@ -30,41 +30,6 @@
         "vi": "Step 1 — Chuẩn bị · xác nhận ảnh hưởng"
       },
       "mid": {
-        "ja": "ランタイム前提の確認",
-        "vi": "Xác nhận tiền đề runtime"
-      },
-      "small": {
-        "ja": "本番Node.js／OpenSSLバージョンの確認",
-        "vi": "Kiểm tra phiên bản Node.js / OpenSSL trên production"
-      },
-      "content": {
-        "ja": "【想定する対応内容】\n・本番環境で稼働しているNode.jsのバージョンと同梱OpenSSLのバージョンを確認します。\n・GMOクラウドが要求するTLS暗号スイート（TLS 1.2以上・最新スイート）に対応していることを確認します。\n【見積もり前提・確認事項】\n・現行がNode.js 16以上・OpenSSL 1.1.1以上であることを想定しています。下回る場合は、別途ランタイム更新のお見積を提示いたします。",
-        "vi": "【Nội dung dự kiến】\n・Kiểm tra phiên bản Node.js và OpenSSL đi kèm đang chạy trên môi trường production.\n・Xác nhận tương thích với bộ TLS Cipher Suite mà GMO Cloud yêu cầu (TLS 1.2+ và các cipher mới).\n【Tiền đề ước tính · cần xác nhận】\n・Giả định hiện đang chạy Node.js 16 trở lên · OpenSSL 1.1.1 trở lên. Nếu thấp hơn, xin được gửi báo giá riêng cho việc nâng runtime."
-      },
-      "confirm": null,
-      "reuse": "新規開発",
-      "must": "◉",
-      "step": "Step 1",
-      "pattern": null,
-      "code": "REGRESSION",
-      "qty": 1,
-      "req": true,
-      "impacts": [
-        "IMP-003"
-      ],
-      "impl_override": 0.25,
-      "override_note": {
-        "ja": "SRE作業（コマンド実行による確認）のみを想定し、工数を調整",
-        "vi": "Chỉ là thao tác SRE (chạy lệnh xác nhận) — điều chỉnh công số"
-      }
-    },
-    {
-      "section": "common",
-      "big": {
-        "ja": "Step 1 — 事前準備・影響確認",
-        "vi": "Step 1 — Chuẩn bị · xác nhận ảnh hưởng"
-      },
-      "mid": {
         "ja": "SNI送信の確認",
         "vi": "Xác nhận gửi SNI"
       },
@@ -290,8 +255,8 @@
         "vi": "Đối ứng này dựa trên thông báo của GMO Payment Gateway (2026-11-05 và 2026-11-09 gửi lại) — là đối ứng ở tầng hạ tầng. Không bao gồm thay đổi nghiệp vụ, không đổi màn, không đổi schema DB."
       },
       {
-        "ja": "現行システムの Node.js は 16 以上、OpenSSL は 1.1.1 以上であることを前提とします。これを下回る場合は、ランタイム更新のお見積を別途ご提示いたします。",
-        "vi": "Giả định Node.js hiện tại ≥ 16 và OpenSSL ≥ 1.1.1. Nếu thấp hơn sẽ gửi báo giá nâng runtime riêng."
+        "ja": "本番環境は Node.js v20 LTS が稼働していることが確認済みです（OpenSSL 3.0 以上同梱）。GMO クラウドが要求する最新 TLS 暗号スイート・SNI・GlobalSign Root R46 のいずれも対応済みのため、ランタイム更新は本対応に含みません。",
+        "vi": "Dipro đã xác nhận môi trường production đang chạy Node.js v20 LTS (đi kèm OpenSSL 3.0 trở lên). Node v20 đã hỗ trợ đầy đủ bộ mã hoá TLS mới, SNI và chứng chỉ gốc GlobalSign Root R46 mà GMO Cloud yêu cầu. Việc nâng runtime không nằm trong phạm vi đối ứng này."
       },
       {
         "ja": "GMO 決済センターへの接続はホスト名ベースで行っており、送信元ネットワークに IP 単位の許可リストが存在しないことを前提とします。IP 許可リストがある場合は、クライアント様 SRE による新 IP の追加作業が別途必要です。",
@@ -313,10 +278,6 @@
       }
     ],
     "クライアント側で事前に決定・準備が必要な事項": [
-      {
-        "ja": "本番環境の Node.js／OpenSSL のバージョン情報をご提供願います（コマンド例：node --version、node -p process.versions.openssl）。",
-        "vi": "Xin cung cấp thông tin phiên bản Node.js / OpenSSL trên môi trường production (câu lệnh ví dụ: node --version, node -p process.versions.openssl)."
-      },
       {
         "ja": "GMO 新 IP アドレス一覧／接続方式別カットオーバー時刻は、添付ファイル（willap.jp 経由）をご共有ください。",
         "vi": "Xin chia sẻ danh sách IP mới · lịch cutover theo phương thức kết nối (file đính kèm qua willap.jp)."
@@ -357,20 +318,20 @@
         "vi": "Tiền đề runtime"
       },
       "question": {
-        "ja": "本番環境で稼働している Node.js と OpenSSL の正確なバージョンをご共有いただけますでしょうか。（コマンド例：node --version ／ node -p process.versions.openssl）",
-        "vi": "Xin chia sẻ phiên bản chính xác của Node.js và OpenSSL đang chạy trên production. (Câu lệnh ví dụ: node --version / node -p process.versions.openssl)"
+        "ja": "【確認済み — Node.js v20 LTS、本質問はクローズ】— 当初のご質問は弊社 SRE より回答済み。",
+        "vi": "[ĐÃ XÁC NHẬN — Node.js v20 LTS, không còn là câu hỏi mở] — câu hỏi ban đầu đã nhận đáp án từ SRE Dipro."
       },
       "why": {
         "ja": "GMOクラウドが要求するTLS暗号スイート（最新スイート）を使えるかを事前に判断するために必要です。下回る場合はランタイム更新が別途発生します。",
         "vi": "Để xác nhận trước có thể dùng được bộ TLS Cipher mới của GMO Cloud hay không. Nếu thấp hơn sẽ phát sinh thao tác nâng runtime riêng."
       },
       "proposal": {
-        "ja": "Node.js 16 以上・OpenSSL 1.1.1 以上であることを前提として算出しています。",
-        "vi": "Báo giá dựa trên giả định Node.js ≥ 16, OpenSSL ≥ 1.1.1."
+        "ja": "Node.js v20 LTS を維持し、本 CR の範囲内ではランタイム更新を行いません。",
+        "vi": "Giữ nguyên Node.js v20 LTS, không nâng runtime trong phạm vi CR này."
       },
       "alt": {
-        "ja": "下回る場合は、Node.js を LTS に更新する作業を別お見積でご提示いたします。",
-        "vi": "Nếu thấp hơn, chúng tôi sẽ gửi báo giá riêng cho việc nâng Node.js lên LTS."
+        "ja": "—",
+        "vi": "—"
       },
       "due": "2026/11/14"
     },

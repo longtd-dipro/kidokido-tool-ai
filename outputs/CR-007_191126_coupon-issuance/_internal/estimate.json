@@ -1,0 +1,944 @@
+{
+  "meta": {
+    "cr_id": "CR-007",
+    "title": {
+      "ja": "クーポン発行機能 ご提案・お見積書",
+      "vi": "Báo giá chức năng phát hành Coupon"
+    },
+    "customer": {
+      "ja": "株式会社TOKIWAGI 御中",
+      "vi": "Kính gửi: Công ty TOKIWAGI"
+    },
+    "date": "2026-11-19",
+    "valid_days": 30
+  },
+  "patterns": [],
+  "combos": [],
+  "rows": [
+    {
+      "section": "admin",
+      "big": {
+        "ja": "クーポン管理",
+        "vi": "Quản lý Coupon"
+      },
+      "mid": {
+        "ja": "クーポン一覧画面",
+        "vi": "Màn danh sách Coupon"
+      },
+      "small": {
+        "ja": "一覧・絞り込み・受付停止操作",
+        "vi": "Danh sách · lọc · dừng tiếp nhận"
+      },
+      "content": {
+        "ja": "【想定する対応内容】\n・管理画面にクーポン一覧画面を新設します（クーポン名、コード、公開/停止状態、適用期間、残数、操作ボタンを含む表）。\n・状態・期間・店舗による絞り込み機能、新規作成ボタンを備えます。\n・一覧表示API、受付停止/再開API（STATUS-ACTION）を新設します。",
+        "vi": "【Nội dung dự kiến】\n・Thêm màn danh sách Coupon trên trang quản trị (bảng gồm tên · mã · trạng thái 公開/停止 · thời hạn · số còn lại · nút thao tác).\n・Bộ lọc theo trạng thái · thời gian · cửa hàng, có nút tạo mới.\n・Thêm API lấy danh sách + API dừng/mở tiếp nhận đăng ký."
+      },
+      "confirm": null,
+      "reuse": "新規開発",
+      "must": "◉",
+      "step": "Step 1",
+      "pattern": null,
+      "code": "SCR-LIST-NEW",
+      "qty": 1,
+      "req": true,
+      "impacts": [
+        "IMP-001",
+        "IMP-011",
+        "IMP-038"
+      ]
+    },
+    {
+      "section": "admin",
+      "big": {
+        "ja": "クーポン管理",
+        "vi": "Quản lý Coupon"
+      },
+      "mid": {
+        "ja": "クーポン作成・編集画面",
+        "vi": "Màn tạo / sửa Coupon"
+      },
+      "small": {
+        "ja": "名称・コード・値引き・期間・条件",
+        "vi": "Tên · mã · giảm giá · thời hạn · điều kiện"
+      },
+      "content": {
+        "ja": "【想定する対応内容】\n・クーポン発行の各設定項目（名称、コード、適用店舗/商品、値引き額、発行枚数、有効期間、利用条件、併用可否）を入力するフォーム画面を新設します。\n・コード重複・期間・数量のバリデーションを行います。\n・作成/編集で画面共通化し、公開ボタンを設けます。",
+        "vi": "【Nội dung dự kiến】\n・Thêm màn form tạo / sửa Coupon với các mục: tên · mã · cửa hàng/sản phẩm áp dụng · số tiền giảm · số lượng phát hành · thời hạn · điều kiện (số lần/hội viên · kết hợp).\n・Validate trùng mã · thời gian · số lượng.\n・Dùng chung 1 màn cho create + edit, có nút 「公開」."
+      },
+      "confirm": null,
+      "reuse": "新規開発",
+      "must": "◉",
+      "step": "Step 1",
+      "pattern": null,
+      "code": "SCR-NEW-L",
+      "qty": 1,
+      "req": true,
+      "impacts": [
+        "IMP-002",
+        "IMP-011"
+      ]
+    },
+    {
+      "section": "admin",
+      "big": {
+        "ja": "クーポン管理",
+        "vi": "Quản lý Coupon"
+      },
+      "mid": {
+        "ja": "クーポン詳細＋登録・利用履歴画面",
+        "vi": "Màn chi tiết Coupon + lịch sử"
+      },
+      "small": {
+        "ja": "詳細・コードコピー・登録履歴・利用履歴",
+        "vi": "Chi tiết · sao chép mã · lịch sử"
+      },
+      "content": {
+        "ja": "【想定する対応内容】\n・クーポンの設定内容を表示し、コードコピーボタン、「登録履歴」・「利用履歴」タブを備える詳細画面を新設します。\n・履歴の一覧表示API、CSV出力APIを新設します。",
+        "vi": "【Nội dung dự kiến】\n・Thêm màn chi tiết Coupon: hiển thị cấu hình · nút sao chép mã · tab lịch sử đăng ký · tab lịch sử sử dụng.\n・API đọc 2 danh sách + API xuất CSV."
+      },
+      "confirm": null,
+      "reuse": "新規開発",
+      "must": "◉",
+      "step": "Step 1",
+      "pattern": null,
+      "code": "SCR-PAGE-NEW-M",
+      "qty": 1,
+      "req": true,
+      "impacts": [
+        "IMP-003",
+        "IMP-012"
+      ]
+    },
+    {
+      "section": "admin",
+      "big": {
+        "ja": "店舗運用画面",
+        "vi": "Màn vận hành cửa hàng"
+      },
+      "mid": {
+        "ja": "バーコード読み取り画面（既存）",
+        "vi": "Màn quét mã (hiện có)"
+      },
+      "small": {
+        "ja": "クーポン適用状況の表示",
+        "vi": "Hiển thị trạng thái coupon"
+      },
+      "content": {
+        "ja": "【想定する対応内容】\n・既存のバーコード読み取り画面にクーポン適用バッジを追加表示します。",
+        "vi": "【Nội dung dự kiến】\n・Thêm badge coupon đã áp dụng vào màn quét mã hiện có."
+      },
+      "confirm": null,
+      "reuse": "一部流用",
+      "must": "◉",
+      "step": "Step 1",
+      "pattern": null,
+      "code": "SCR-UPD-S",
+      "qty": 1,
+      "req": true,
+      "impacts": [
+        "IMP-009"
+      ]
+    },
+    {
+      "section": "user",
+      "big": {
+        "ja": "マイページ",
+        "vi": "MyPage"
+      },
+      "mid": {
+        "ja": "マイクーポン一覧画面",
+        "vi": "Màn danh sách Coupon của tôi"
+      },
+      "small": {
+        "ja": "登録済クーポン一覧・コード入力",
+        "vi": "Danh sách · nhập mã"
+      },
+      "content": {
+        "ja": "【想定する対応内容】\n・マイページに登録済クーポン一覧画面を新設します（名称・コード・値引内容・有効期限・状態、「このクーポンで予約する」ボタン、「コードを入力」ボタン）。\n・ユーザー向けクーポン登録API、一覧API、キャンセルAPIを新設します。",
+        "vi": "【Nội dung dự kiến】\n・Thêm màn MyPage danh sách Coupon (tên · mã · nội dung giảm · thời hạn · trạng thái, nút 「đặt chỗ bằng coupon này」, nút 「nhập mã」).\n・Thêm API user: đăng ký mã, xem danh sách, huỷ đăng ký."
+      },
+      "confirm": null,
+      "reuse": "新規開発",
+      "must": "◉",
+      "step": "Step 1",
+      "pattern": null,
+      "code": "SCR-PAGE-NEW-M",
+      "qty": 1,
+      "req": true,
+      "impacts": [
+        "IMP-004",
+        "IMP-013"
+      ]
+    },
+    {
+      "section": "user",
+      "big": {
+        "ja": "予約",
+        "vi": "Đặt chỗ"
+      },
+      "mid": {
+        "ja": "オンライン決済画面（既存）",
+        "vi": "Màn thanh toán online (hiện có)"
+      },
+      "small": {
+        "ja": "クーポン欄の追加・金額再計算",
+        "vi": "Thêm khối coupon · tính lại tiền"
+      },
+      "content": {
+        "ja": "【想定する対応内容】\n・既存のオンライン決済画面に「クーポン」欄を追加します（「コードを入力」・「登録済から選ぶ」の2タブ構成、3行金額表示：通常料金／クーポン割引／お支払い金額）。\n・利用不可時の理由表示、選び直し/解除時の金額再計算を行います。",
+        "vi": "【Nội dung dự kiến】\n・Sửa màn thanh toán online hiện có: thêm khối coupon với 2 tab (nhập mã / chọn từ danh sách đã đăng ký), hiển thị 3 dòng giá (giá gốc / giảm / thanh toán).\n・Hiển thị lý do khi không dùng được, cập nhật lại tiền khi chọn/huỷ coupon."
+      },
+      "confirm": null,
+      "reuse": "一部流用",
+      "must": "◉",
+      "step": "Step 1",
+      "pattern": null,
+      "code": "SCR-UPD-M",
+      "qty": 1,
+      "req": true,
+      "impacts": [
+        "IMP-005"
+      ]
+    },
+    {
+      "section": "user",
+      "big": {
+        "ja": "予約",
+        "vi": "Đặt chỗ"
+      },
+      "mid": {
+        "ja": "当日予約画面（既存）",
+        "vi": "Màn đặt chỗ trong ngày (hiện có)"
+      },
+      "small": {
+        "ja": "クーポン欄の追加・金額再計算",
+        "vi": "Thêm khối coupon · tính lại tiền"
+      },
+      "content": {
+        "ja": "【想定する対応内容】\n・当日予約画面にクーポン欄を追加します（オンライン決済画面と同様の構成）。",
+        "vi": "【Nội dung dự kiến】\n・Thêm khối coupon trên màn đặt chỗ trong ngày (cấu trúc giống màn thanh toán online)."
+      },
+      "confirm": null,
+      "reuse": "一部流用",
+      "must": "◉",
+      "step": "Step 1",
+      "pattern": null,
+      "code": "SCR-UPD-M",
+      "qty": 1,
+      "req": true,
+      "impacts": [
+        "IMP-006"
+      ]
+    },
+    {
+      "section": "user",
+      "big": {
+        "ja": "マイページ",
+        "vi": "MyPage"
+      },
+      "mid": {
+        "ja": "予約一覧画面（既存）",
+        "vi": "Màn danh sách đặt chỗ (hiện có)"
+      },
+      "small": {
+        "ja": "予約カードへのクーポンバッジ追加",
+        "vi": "Badge coupon trên thẻ đặt chỗ"
+      },
+      "content": {
+        "ja": "【想定する対応内容】\n・予約カードに「クーポン適用済み」バッジを追加し、予約済み・入場中の両状態で表示します。",
+        "vi": "【Nội dung dự kiến】\n・Thêm badge 「クーポン適用済み」 trên thẻ đặt chỗ, hiển thị cho cả trạng thái 予約済み và 入場中."
+      },
+      "confirm": null,
+      "reuse": "一部流用",
+      "must": "◉",
+      "step": "Step 1",
+      "pattern": null,
+      "code": "SCR-UPD-S",
+      "qty": 1,
+      "req": true,
+      "impacts": [
+        "IMP-007"
+      ]
+    },
+    {
+      "section": "user",
+      "big": {
+        "ja": "マイページ",
+        "vi": "MyPage"
+      },
+      "mid": {
+        "ja": "予約詳細画面（既存）",
+        "vi": "Màn chi tiết đặt chỗ (hiện có)"
+      },
+      "small": {
+        "ja": "クーポン情報セクション追加",
+        "vi": "Section thông tin coupon"
+      },
+      "content": {
+        "ja": "【想定する対応内容】\n・予約詳細にクーポン名・コード・値引内容・適用時刻を表示するセクションを追加します。",
+        "vi": "【Nội dung dự kiến】\n・Thêm section hiển thị tên coupon · mã · nội dung giảm · thời điểm áp dụng trên màn chi tiết."
+      },
+      "confirm": null,
+      "reuse": "一部流用",
+      "must": "◉",
+      "step": "Step 1",
+      "pattern": null,
+      "code": "SCR-UPD-S",
+      "qty": 1,
+      "req": true,
+      "impacts": [
+        "IMP-008"
+      ]
+    },
+    {
+      "section": "user",
+      "big": {
+        "ja": "入場中機能（オプション）",
+        "vi": "Chức năng khi đang 入場中 (Option)"
+      },
+      "mid": {
+        "ja": "入場中クーポン適用画面/モーダル",
+        "vi": "Màn/popup nhập coupon khi 入場中"
+      },
+      "small": {
+        "ja": "予約詳細からクーポン追加",
+        "vi": "Thêm coupon từ chi tiết đặt chỗ"
+      },
+      "content": {
+        "ja": "【想定する対応内容】\n・入場中のお客様が予約詳細画面からクーポンコードを入力し、当該予約に適用できる画面/モーダルを新設します。\n・現在の見込み金額を表示し、確認後に「適用済み」に遷移します。\n・適用APIを新設します。",
+        "vi": "【Nội dung dự kiến】\n・Thêm màn/popup cho khách đang 入場中 nhập coupon từ màn chi tiết đặt chỗ, áp dụng cho booking hiện tại.\n・Hiển thị 「số tiền ước tính hiện tại」, xác nhận → chuyển trạng thái 適用済み.\n・Thêm API apply-coupon riêng."
+      },
+      "confirm": null,
+      "reuse": "新規開発",
+      "must": "◯",
+      "step": "Step 1",
+      "pattern": null,
+      "code": "SCR-PAGE-NEW-M",
+      "qty": 1,
+      "req": false,
+      "impacts": [
+        "IMP-010",
+        "IMP-037"
+      ]
+    },
+    {
+      "section": "common",
+      "big": {
+        "ja": "予約・決済ロジック",
+        "vi": "Logic đặt chỗ · thanh toán"
+      },
+      "mid": {
+        "ja": "予約作成API（既存）",
+        "vi": "API đặt chỗ (hiện có)"
+      },
+      "small": {
+        "ja": "クーポン検証・金額計算・適用",
+        "vi": "Validate · tính tiền · gán coupon"
+      },
+      "content": {
+        "ja": "【想定する対応内容】\n・POST /api/bookings にクーポンIDを受け取る項目を追加します。\n・有効期間・適用条件・数量・併用可否・使用済みのチェック、割引計算、トランザクション内でのcoupon_redemption更新を実装します。",
+        "vi": "【Nội dung dự kiến】\n・Thêm trường coupon_id vào request của POST /api/bookings.\n・Validate thời hạn · điều kiện · số lượng · kết hợp · đã dùng; tính giảm giá; cập nhật coupon_redemption trong transaction."
+      },
+      "confirm": null,
+      "reuse": "一部流用",
+      "must": "◉",
+      "step": "Step 1",
+      "pattern": null,
+      "code": "LOGIC-M",
+      "qty": 1,
+      "req": true,
+      "impacts": [
+        "IMP-014",
+        "IMP-029",
+        "IMP-030"
+      ]
+    },
+    {
+      "section": "common",
+      "big": {
+        "ja": "予約・決済ロジック",
+        "vi": "Logic đặt chỗ · thanh toán"
+      },
+      "mid": {
+        "ja": "決済コールバック／キャンセルAPI（既存）",
+        "vi": "Callback thanh toán · huỷ booking (hiện có)"
+      },
+      "small": {
+        "ja": "クーポン状態の遷移・復元",
+        "vi": "Chuyển trạng thái · khôi phục coupon"
+      },
+      "content": {
+        "ja": "【想定する対応内容】\n・GMO 3DSコールバック（成功時「使用済み」、失敗時「登録済み」へ）とキャンセルAPIにクーポン状態遷移ロジックを追加します。\n・キャンセル時にはクーポン残数・会員利用回数の復元も実施します。",
+        "vi": "【Nội dung dự kiến】\n・Thêm xử lý chuyển trạng thái coupon vào callback GMO 3DS (thành công → 使用済み, thất bại → 登録済み) và API huỷ booking.\n・Khi huỷ: khôi phục số lượng coupon + số lần sử dụng của hội viên."
+      },
+      "confirm": null,
+      "reuse": "一部流用",
+      "must": "◉",
+      "step": "Step 1",
+      "pattern": null,
+      "code": "LOGIC-M",
+      "qty": 2,
+      "req": true,
+      "impacts": [
+        "IMP-015",
+        "IMP-016",
+        "IMP-027",
+        "IMP-031"
+      ]
+    },
+    {
+      "section": "common",
+      "big": {
+        "ja": "Smaregi 連携",
+        "vi": "Liên kết Smaregi"
+      },
+      "mid": {
+        "ja": "仮販売登録API payload（既存）",
+        "vi": "Payload 仮販売登録 (hiện có)"
+      },
+      "small": {
+        "ja": "subtotalDiscountPrice 送信",
+        "vi": "Gửi subtotalDiscountPrice"
+      },
+      "content": {
+        "ja": "【想定する対応内容】\n・Smaregi 仮販売登録APIの送信payloadに subtotalDiscountPrice とcouponNameを追加します。\n・既存のSmaregi連携ヘルパーを改修します。",
+        "vi": "【Nội dung dự kiến】\n・Thêm subtotalDiscountPrice + couponName vào payload 仮販売登録API gửi Smaregi.\n・Sửa helper liên kết Smaregi hiện có."
+      },
+      "confirm": null,
+      "reuse": "一部流用",
+      "must": "◉",
+      "step": "Step 1",
+      "pattern": null,
+      "code": "LOGIC-M",
+      "qty": 1,
+      "req": true,
+      "impacts": [
+        "IMP-017",
+        "IMP-032"
+      ]
+    },
+    {
+      "section": "common",
+      "big": {
+        "ja": "OBIC 連携",
+        "vi": "Liên kết OBIC"
+      },
+      "mid": {
+        "ja": "OBIC CSV出力（既存）",
+        "vi": "Xuất CSV OBIC (hiện có)"
+      },
+      "small": {
+        "ja": "クーポン割引行の追加",
+        "vi": "Thêm dòng giảm giá coupon"
+      },
+      "content": {
+        "ja": "【想定する対応内容】\n・既存のOBIC CSV出力ロジックに、クーポン値引き専用のコードを追加し、割引額を別行で出力します。\n・ObicCodeKind にCOUPON_DISCOUNTを追加します。",
+        "vi": "【Nội dung dự kiến】\n・Sửa logic xuất CSV OBIC hiện có: thêm mã giảm giá riêng cho coupon, xuất số tiền giảm thành dòng riêng.\n・Thêm giá trị COUPON_DISCOUNT vào enum ObicCodeKind."
+      },
+      "confirm": null,
+      "reuse": "一部流用",
+      "must": "◉",
+      "step": "Step 1",
+      "pattern": null,
+      "code": "CSV-EXPORT",
+      "qty": 1,
+      "req": true,
+      "impacts": [
+        "IMP-025",
+        "IMP-033"
+      ]
+    },
+    {
+      "section": "common",
+      "big": {
+        "ja": "数量管理",
+        "vi": "Quản lý số lượng"
+      },
+      "mid": {
+        "ja": "クーポン残数管理ロジック（新規）",
+        "vi": "Logic quản lý số lượng còn lại (mới)"
+      },
+      "small": {
+        "ja": "同時登録・重複防止",
+        "vi": "Concurrency + chống trùng"
+      },
+      "content": {
+        "ja": "【想定する対応内容】\n・同時登録でも発行数を超えない数量管理ロジック（行ロックまたはRedisロック）を実装します。\n・同一コードの再登録でも二重に数量を減らさない仕組みを導入します。\n・受付停止後の挙動は業務決定事項に従います。",
+        "vi": "【Nội dung dự kiến】\n・Thêm logic quản lý số lượng còn lại (row-level lock hoặc Redis) để chống vượt giới hạn khi nhiều người đăng ký cùng lúc.\n・Đăng ký lại cùng mã không trừ số lượng 2 lần.\n・Hành vi sau khi dừng tiếp nhận theo quy tắc nghiệp vụ đã chốt."
+      },
+      "confirm": null,
+      "reuse": "新規開発",
+      "must": "◉",
+      "step": "Step 1",
+      "pattern": null,
+      "code": "INVENTORY-SHARED",
+      "qty": 1,
+      "req": true,
+      "impacts": [
+        "IMP-028"
+      ]
+    },
+    {
+      "section": "common",
+      "big": {
+        "ja": "バッチ処理",
+        "vi": "Batch"
+      },
+      "mid": {
+        "ja": "クーポン有効期限切れバッチ（新規）",
+        "vi": "Batch hết hạn coupon (mới)"
+      },
+      "small": {
+        "ja": "期限切れへの一括遷移",
+        "vi": "Chuyển trạng thái expired"
+      },
+      "content": {
+        "ja": "【想定する対応内容】\n・毎日実行し、有効期限を過ぎた「登録済み」クーポンを「期限切れ」に一括遷移するバッチを新設します。",
+        "vi": "【Nội dung dự kiến】\n・Thêm cron chạy mỗi ngày: chuyển các coupon 「登録済み」 đã quá thời hạn sang 「期限切れ」."
+      },
+      "confirm": null,
+      "reuse": "新規開発",
+      "must": "◉",
+      "step": "Step 1",
+      "pattern": null,
+      "code": "BATCH-REMIND",
+      "qty": 1,
+      "req": true,
+      "impacts": [
+        "IMP-019"
+      ]
+    },
+    {
+      "section": "common",
+      "big": {
+        "ja": "データベース",
+        "vi": "Cơ sở dữ liệu"
+      },
+      "mid": {
+        "ja": "新規テーブル追加",
+        "vi": "Thêm bảng mới"
+      },
+      "small": {
+        "ja": "coupons, coupon_applicable_scopes, coupon_redemptions, coupon_usage_logs",
+        "vi": "4 bảng mới"
+      },
+      "content": {
+        "ja": "【想定する対応内容】\n・クーポン設定、適用対象、ユーザー別クーポン、履歴ログの4テーブルをPrismaマイグレーションで追加します。",
+        "vi": "【Nội dung dự kiến】\n・Thêm 4 bảng (coupons, coupon_applicable_scopes, coupon_redemptions, coupon_usage_logs) qua Prisma migration."
+      },
+      "confirm": null,
+      "reuse": "新規開発",
+      "must": "◉",
+      "step": "Step 1",
+      "pattern": null,
+      "code": "DB-TABLE-PAIR",
+      "qty": 4,
+      "req": true,
+      "impacts": [
+        "IMP-020",
+        "IMP-021",
+        "IMP-022",
+        "IMP-023"
+      ]
+    },
+    {
+      "section": "common",
+      "big": {
+        "ja": "データベース",
+        "vi": "Cơ sở dữ liệu"
+      },
+      "mid": {
+        "ja": "既存テーブルの列追加",
+        "vi": "Thêm cột vào bảng hiện có"
+      },
+      "small": {
+        "ja": "bookings に coupon_redemption_id / discount_amount / subtotal_amount",
+        "vi": "bookings thêm 3 cột"
+      },
+      "content": {
+        "ja": "【想定する対応内容】\n・bookings テーブルに coupon_redemption_id（FK, nullable）、discount_amount、subtotal_amount の3列を追加します。\n・既存データの subtotal_amount は total_amount で埋めるバックフィルを行います。",
+        "vi": "【Nội dung dự kiến】\n・Thêm 3 cột coupon_redemption_id (FK, nullable) · discount_amount · subtotal_amount vào bảng bookings.\n・Backfill subtotal_amount = total_amount cho các row hiện có."
+      },
+      "confirm": null,
+      "reuse": "一部流用",
+      "must": "◉",
+      "step": "Step 1",
+      "pattern": null,
+      "code": "DB-COLUMN",
+      "qty": 3,
+      "req": true,
+      "impacts": [
+        "IMP-024"
+      ]
+    },
+    {
+      "section": "common",
+      "big": {
+        "ja": "回帰試験",
+        "vi": "Hồi quy"
+      },
+      "mid": {
+        "ja": "POS実機試験",
+        "vi": "Kiểm thử trên POS thực tế"
+      },
+      "small": {
+        "ja": "C01-C05 を店舗×決済方法で実施",
+        "vi": "C01-C05 theo cửa hàng × phương thức thanh toán"
+      },
+      "content": {
+        "ja": "【想定する対応内容】\n・画面での利用、数量制限と重複防止、変更・キャンセル、POS連携、集計の5シナリオをPOS実機で検証します。\n・店舗・決済方法ごとに繰り返し実施します。",
+        "vi": "【Nội dung dự kiến】\n・Chạy 5 kịch bản C01-C05 (dùng trên màn, giới hạn số lượng + chống trùng, thay đổi/huỷ, POS liên kết, tổng hợp) trên POS thực tế.\n・Lặp lại theo từng cửa hàng và phương thức thanh toán."
+      },
+      "confirm": null,
+      "reuse": "一部流用",
+      "must": "◉",
+      "step": "Step 1",
+      "pattern": null,
+      "code": "REGRESSION",
+      "qty": 2,
+      "req": true,
+      "impacts": [
+        "IMP-040"
+      ]
+    },
+    {
+      "section": "common",
+      "big": {
+        "ja": "回帰試験",
+        "vi": "Hồi quy"
+      },
+      "mid": {
+        "ja": "既存機能への回帰試験",
+        "vi": "Hồi quy chức năng hiện có"
+      },
+      "small": {
+        "ja": "既存予約・決済フローの回帰",
+        "vi": "Flow đặt chỗ · thanh toán hiện có"
+      },
+      "content": {
+        "ja": "【想定する対応内容】\n・既存の予約・決済・キャンセルフローに対する回帰試験を実施します。",
+        "vi": "【Nội dung dự kiến】\n・Chạy hồi quy luồng đặt chỗ · thanh toán · huỷ hiện có."
+      },
+      "confirm": null,
+      "reuse": "一部流用",
+      "must": "◯",
+      "step": "Step 1",
+      "pattern": null,
+      "code": "REGRESSION",
+      "qty": 1,
+      "req": false,
+      "impacts": [
+        "IMP-041"
+      ]
+    },
+    {
+      "section": "admin",
+      "big": {
+        "ja": "拡張オプション",
+        "vi": "Mở rộng Option"
+      },
+      "mid": {
+        "ja": "％割引対応",
+        "vi": "Hỗ trợ giảm giá %"
+      },
+      "small": {
+        "ja": "discount_type／max_discount の追加と計算ロジック",
+        "vi": "Thêm discount_type/max_discount + logic"
+      },
+      "content": {
+        "ja": "【想定する対応内容】\n・クーポンテーブルに discount_type（FIXED/PERCENT）とmax_discount列を追加し、％計算・上限・端数処理を実装します。",
+        "vi": "【Nội dung dự kiến】\n・Thêm cột discount_type (FIXED/PERCENT) và max_discount vào bảng coupons; thêm logic tính %, giới hạn trên, xử lý phần lẻ."
+      },
+      "confirm": null,
+      "reuse": "新規開発",
+      "must": "◯",
+      "step": "Step 1",
+      "pattern": null,
+      "code": "LOGIC-M",
+      "qty": 1,
+      "req": false,
+      "impacts": [
+        "IMP-039"
+      ]
+    },
+    {
+      "section": "common",
+      "big": {
+        "ja": "拡張オプション",
+        "vi": "Mở rộng Option"
+      },
+      "mid": {
+        "ja": "Smaregi 既存クーポン集計",
+        "vi": "Tổng hợp coupon Smaregi hiện có"
+      },
+      "small": {
+        "ja": "with_coupons=all 対応",
+        "vi": "Thêm tham số with_coupons=all"
+      },
+      "content": {
+        "ja": "【想定する対応内容】\n・既存のSmaregi取引取得バッチにwith_coupons=allパラメータを追加し、couponId・serialNumber・couponName・discountPriceを新テーブルに保存します。",
+        "vi": "【Nội dung dự kiến】\n・Thêm tham số with_coupons=all vào cron reconcile Smaregi hiện có; lưu couponId · serialNumber · couponName · discountPrice vào bảng mới."
+      },
+      "confirm": null,
+      "reuse": "一部流用",
+      "must": "◯",
+      "step": "Step 1",
+      "pattern": null,
+      "code": "LOGIC-M",
+      "qty": 1,
+      "req": false,
+      "impacts": [
+        "IMP-018",
+        "IMP-026"
+      ]
+    }
+  ],
+  "premises": {
+    "前提条件": [
+      "本見積はクーポン発行機能の初期提案バージョン（2026-11-05 v1.4）に基づきます。業務ルール確定後に再見積の可能性があります。",
+      "Smaregi 仮販売登録API の subtotalDiscountPrice フィールドが有効であることを前提とします（正式開発前にPOS実機で確認）。",
+      "OBIC に出力するクーポン値引き用の勘定コードはお客様側でご提供いただきます。",
+      "本見積は値引き金額（固定）を基本案とし、％割引（オプション）は分離して記載します。"
+    ],
+    "既存システムへの影響": [
+      "予約作成API・GMOコールバック・キャンセルAPIに改修が入ります（既存予約フローに回帰試験が必要）。",
+      "bookings テーブルに3列追加 + 既存データのバックフィルが発生します。",
+      "Smaregi 連携payloadの変更と OBIC 出力フォーマットの変更が発生するため、POS実機とOBIC突合試験が必要です。",
+      "CR-006 次回特典機能 と重複する改修箇所（Smaregi subtotalDiscountPrice、OBIC割引コード、bookings列、POS実機試験）があります。同時開発の場合はこれらを一度の工数で済ませることで総工数を削減できます。"
+    ],
+    "クライアント側で事前に決定・準備が必要な事項": [
+      "• 数量管理方式（登録時予約 vs 利用時減算）",
+      "• 受付停止後の挙動（登録済クーポンの扱い）",
+      "• キャンセル・返金時のクーポン復元ルール",
+      "• 会員ごとの利用回数制限",
+      "• 他特典との併用可否",
+      "• クーポンコードの発番方式（手動／自動／両方）",
+      "• LINE／メール配信機能の要否",
+      "• OBICに出力するクーポン値引き勘定コード",
+      "• CR-006と同時開発する場合の共通化範囲"
+    ],
+    "想定されるリスク": [
+      "POS実機での動作確認が十分でない場合、割引金額の不整合や二重値引きなどの事故が発生する可能性があります。",
+      "クーポンコードの発番方式が確定していないため、UX・運用性が後工程で変わる可能性があります。",
+      "数量管理の同時実行制御が未確定のため、構成によってはインフラ要件が変わる可能性があります。"
+    ]
+  },
+  "questions": [
+    {
+      "id": "CQ-001",
+      "group": {
+        "ja": "数量管理方式",
+        "vi": "Phương án quản lý số lượng"
+      },
+      "question": {
+        "ja": "数量管理は「登録時に席を予約する方式」と「利用時に減算する方式」のいずれを採用しますか。",
+        "vi": "Chọn phương án nào: giữ trước một suất khi khách đăng ký, hay chỉ trừ khi khách thực sự sử dụng?"
+      },
+      "why": {
+        "ja": "DBスキーマ（reserved_count列の要否）、同時実行制御、残数表示に影響するため、業務方針の確定が必要です。",
+        "vi": "Ảnh hưởng tới schema DB, logic kiểm tra số lượng và mô hình concurrency."
+      },
+      "proposal": {
+        "ja": "導入スピード重視で「利用時減算方式」をご提案いたします。残数表示の精度は若干下がりますが、コストを抑えつつ主要なユースケースを満たせます。",
+        "vi": "Để triển khai nhanh, đề xuất phương án 「trừ khi dùng」. Hiển thị số còn lại có thể kém chính xác hơn chút nhưng chi phí thấp, đủ dùng cho nhu cầu chính."
+      },
+      "alt": {
+        "ja": "登録時予約方式をご希望の場合は、残数表示の精度と引き換えにインフラ・DB設計の追加工数が発生いたします。",
+        "vi": "Nếu chọn giữ trước khi đăng ký: hiển thị số còn lại chính xác hơn nhưng phát sinh thêm chi phí DB/concurrency."
+      },
+      "due": "2026/11/28"
+    },
+    {
+      "id": "CQ-002",
+      "group": {
+        "ja": "受付停止後の挙動",
+        "vi": "Hành vi sau khi dừng tiếp nhận"
+      },
+      "question": {
+        "ja": "受付停止後、既に登録済みのクーポンはそのまま利用可能とするか、もしくは利用停止とするか、どちらにいたしますか。",
+        "vi": "Sau khi dừng tiếp nhận: coupon đã đăng ký vẫn cho dùng tiếp đến hết hạn, hay phải thu hồi?"
+      },
+      "why": {
+        "ja": "ユーザー苦情リスクに直結するため、クーポン状態遷移ルールと運用マニュアルに影響します。",
+        "vi": "Ảnh hưởng quy tắc trạng thái + rủi ro khiếu nại từ khách."
+      },
+      "proposal": {
+        "ja": "有効期限まで引き続き利用可能とすることをご提案いたします。苦情リスクを抑えられるためです。",
+        "vi": "Đề xuất cho dùng tiếp đến hết thời hạn để tránh khiếu nại."
+      },
+      "alt": {
+        "ja": "受付停止と同時に登録済クーポンも停止する場合は、お客様への事前告知と運用マニュアル整備をご相談させてください。",
+        "vi": "Nếu chọn thu hồi cả coupon đã đăng ký khi dừng tiếp nhận: cần thống nhất thông báo trước cho khách + tài liệu vận hành."
+      },
+      "due": "2026/11/28"
+    },
+    {
+      "id": "CQ-003",
+      "group": {
+        "ja": "キャンセル・返金時の復元",
+        "vi": "Khôi phục khi huỷ/hoàn tiền"
+      },
+      "question": {
+        "ja": "クーポン適用済みの予約をキャンセルした場合、クーポンは「登録済み」に戻しますか。決済完了後のキャンセルの場合はどのように扱いますか。",
+        "vi": "Khi huỷ booking đang áp dụng coupon: trả coupon về 「登録済み」 hay thu hồi? Trường hợp đã thanh toán + hoàn tiền thì xử lý thế nào?"
+      },
+      "why": {
+        "ja": "GMO返金処理とクーポン状態遷移を整合させる必要があるためです。",
+        "vi": "Phải đồng bộ hoàn tiền GMO với trạng thái coupon."
+      },
+      "proposal": {
+        "ja": "決済前キャンセルは「登録済み」に戻す、決済後キャンセルは「使用済み」のままとする方針をご提案いたします。",
+        "vi": "Đề xuất: huỷ trước thanh toán → trả về 「登録済み」; huỷ sau thanh toán → giữ nguyên 「使用済み」."
+      },
+      "alt": {
+        "ja": "返金処理と連動して自動返却するか、運営判断で個別対応するかなど、別途ご相談させてください。",
+        "vi": "Có thể trả tự động theo refund GMO, hoặc để admin xử lý case-by-case — xin được trao đổi riêng."
+      },
+      "due": "2026/11/28"
+    },
+    {
+      "id": "CQ-004",
+      "group": {
+        "ja": "利用回数制限",
+        "vi": "Giới hạn số lần sử dụng"
+      },
+      "question": {
+        "ja": "会員ごとの利用回数は「1クーポン／1会計／1会員1回」を基本としつつ、個別クーポン単位で設定変更を可能とする必要がございますか。",
+        "vi": "Mặc định 1 coupon/booking + 1 lần/hội viên; có cần cho phép cấu hình khác (ví dụ 3 lần/hội viên, nhiều coupon/giao dịch) không?"
+      },
+      "why": {
+        "ja": "設定画面のUIとバリデーションロジックに影響いたします。",
+        "vi": "Ảnh hưởng schema coupon + logic kiểm tra."
+      },
+      "proposal": {
+        "ja": "まずは基本ルールのみで運用を開始し、将来的に個別設定を追加する方針をご提案いたします。",
+        "vi": "Đề xuất chạy bằng quy tắc mặc định trước; mở rộng cấu hình riêng ở giai đoạn sau."
+      },
+      "alt": {
+        "ja": "個別設定を初期対応に含める場合、管理画面UIと検証ロジックが大きくなるため追加工数が発生いたします。",
+        "vi": "Nếu đưa cấu hình riêng vào ngay giai đoạn đầu: UI admin + validator phức tạp hơn, phát sinh thêm công số."
+      },
+      "due": "2026/11/28"
+    },
+    {
+      "id": "CQ-005",
+      "group": {
+        "ja": "他特典との併用",
+        "vi": "Kết hợp với ưu đãi khác"
+      },
+      "question": {
+        "ja": "本クーポンは他の特典（CR-006「次回特典」、ticket_discount_settings）との併用を禁止する方針でよろしいでしょうか。",
+        "vi": "Cấm kết hợp coupon này với các ưu đãi khác (CR-006 次回特典, ticket_discount_settings) có đúng ý không?"
+      },
+      "why": {
+        "ja": "金額計算ロジックと適用時バリデーションに影響いたします。",
+        "vi": "Ảnh hưởng logic tính tiền + validate khi áp dụng."
+      },
+      "proposal": {
+        "ja": "併用禁止を基本といたします。管理者設定で個別に例外を認められる方式をご提案いたします。",
+        "vi": "Đề xuất cấm kết hợp mặc định; admin có thể bật ngoại lệ cho từng coupon."
+      },
+      "alt": {
+        "ja": "条件付き併用を認める場合は、優先順位・計算順序の定義とUIの検討が別途必要です。",
+        "vi": "Nếu cho phép kết hợp có điều kiện: cần định nghĩa thứ tự ưu tiên tính toán + bổ sung UI tương ứng."
+      },
+      "due": "2026/11/28"
+    },
+    {
+      "id": "CQ-006",
+      "group": {
+        "ja": "コードの発番方式",
+        "vi": "Cách sinh mã coupon"
+      },
+      "question": {
+        "ja": "クーポンコードは管理者による手入力（例：\"SPRING2026\"）、システム自動生成（例：8桁英数）のいずれを採用しますか。両対応も可能です。",
+        "vi": "Mã Coupon sẽ do admin tự đặt (ví dụ 「SPRING2026」), hệ thống sinh tự động (8 ký tự A-Z0-9), hay cả 2 chế độ?"
+      },
+      "why": {
+        "ja": "バリデーションおよびUIに影響いたします。",
+        "vi": "Ảnh hưởng validator + UX nhập mã."
+      },
+      "proposal": {
+        "ja": "両対応をご提案いたします。手入力と自動生成を選択可能とすることで、運用柔軟性を高めつつ入力ミスも減らせます。",
+        "vi": "Đề xuất hỗ trợ cả 2 chế độ: admin tự đặt hoặc hệ thống sinh, để linh hoạt vận hành."
+      },
+      "alt": {
+        "ja": "手入力のみとする場合は実装が軽くなりますが、コード重複防止の運用負荷がお客様側に残ります。",
+        "vi": "Nếu chỉ hỗ trợ nhập tay: giảm công số dev nhưng khách phải tự quản lý chống trùng mã."
+      },
+      "due": "2026/11/28"
+    },
+    {
+      "id": "CQ-007",
+      "group": {
+        "ja": "LINE／メール送信",
+        "vi": "Gửi LINE / email"
+      },
+      "question": {
+        "ja": "管理画面からクーポンコードをLINE・メールで直接配信する機能は必要でしょうか。スコープ外でよろしければ別途お見積いたします。",
+        "vi": "Có cần chức năng gửi coupon trực tiếp qua LINE/email từ hệ thống không? Nếu ngoài phạm vi, chúng tôi báo giá riêng."
+      },
+      "why": {
+        "ja": "対象APIおよびUIが大きく変わるため、スコープと費用への影響が大きいためです。",
+        "vi": "Phạm vi + chi phí phụ thuộc trực tiếp vào câu trả lời này."
+      },
+      "proposal": {
+        "ja": "初期スコープでは「コード表示・コピー」までとし、配信機能は後続フェーズで検討することをご提案いたします。",
+        "vi": "Đề xuất phạm vi ban đầu chỉ dừng ở hiển thị + sao chép mã; chức năng gửi để giai đoạn sau."
+      },
+      "alt": {
+        "ja": "ご希望の場合は、LINE Messaging API または SES メール配信を用いた別オプションとしてお見積いたします。",
+        "vi": "Nếu cần: báo giá riêng dùng LINE Messaging API hoặc SES."
+      },
+      "due": "2026/11/28"
+    },
+    {
+      "id": "CQ-008",
+      "group": {
+        "ja": "OBIC割引コード",
+        "vi": "Mã OBIC giảm giá"
+      },
+      "question": {
+        "ja": "クーポン値引きをOBICに出力する際の勘定コードをご指定いただけますでしょうか。クーポン種別ごとに分けるか、一律コードで出力するかも含めご指定ください。",
+        "vi": "Mã OBIC gán cho dòng giảm giá Coupon: dùng mã nào? Có cần phân biệt coupon theo cửa hàng/loại giảm hay dùng 1 mã chung 「クーポン割引」?"
+      },
+      "why": {
+        "ja": "OBIC出力ロジックに直接影響するためです。",
+        "vi": "Ảnh hưởng dữ liệu xuất OBIC — cần KH xác nhận với bộ phận kế toán."
+      },
+      "proposal": {
+        "ja": "まずは一律コードで運用し、必要に応じてクーポン種別ごとに分ける方式をご提案いたします。",
+        "vi": "Đề xuất dùng 1 mã chung trước; nếu cần phân biệt theo loại coupon thì bổ sung sau."
+      },
+      "alt": {
+        "ja": "クーポン種別ごとに勘定コードを分ける場合、管理画面側にマスター管理機能の追加が必要となります。",
+        "vi": "Nếu phân biệt mã OBIC theo loại coupon: cần thêm chức năng quản lý master trên admin."
+      },
+      "due": "2026/11/28"
+    },
+    {
+      "id": "CQ-009",
+      "group": {
+        "ja": "CR-006との同時開発",
+        "vi": "Phát triển song song với CR-006"
+      },
+      "question": {
+        "ja": "CR-006「次回特典機能」と同時開発する場合の共通化範囲（Smaregi payload、OBICコード、bookings列、POS実機試験、割引計算ロジック）についてご意向をお聞かせください。",
+        "vi": "Nếu triển khai đồng thời với CR-006: phạm vi dùng chung (Smaregi payload, OBIC code, cột bookings, test POS, logic tính giảm giá) — ý kiến phía KH?"
+      },
+      "why": {
+        "ja": "総工数の削減可能性とリリース計画に影響いたします（CR発注書 第8章 R3）。",
+        "vi": "Ảnh hưởng tổng công số có thể giảm + lịch release (CR Chương 8 R3)."
+      },
+      "proposal": {
+        "ja": "両機能同時開発の場合、共通化によりPOS試験・Smaregi helper・OBIC出力・bookings列をまとめて実装し、約15〜20%のコスト削減が見込めます。詳細は正式ご発注後に試算いたします。",
+        "vi": "Đề xuất: nếu triển khai đồng thời, có thể gộp phần test POS · Smaregi helper · xuất OBIC · cột bookings → ước giảm khoảng 15–20% chi phí. Chi tiết sẽ tính lại sau khi chốt đơn hàng."
+      },
+      "alt": {
+        "ja": "同時開発を実施しない場合、CR-006が先行開発された段階で共通化部分を再利用できる形で設計いたします。",
+        "vi": "Nếu không triển khai đồng thời: thiết kế sẽ chuẩn bị sẵn để tái sử dụng khi CR-006 đã phát triển trước."
+      },
+      "due": "2026/11/28"
+    }
+  ]
+}
